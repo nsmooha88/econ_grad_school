@@ -1,0 +1,387 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+
+\series bold
+Referee Report
+\end_layout
+
+\begin_layout Subsection*
+Overview
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this paper, the author sets out to examine the impact of excise taces
+ on consumption and public health.
+ Since excise taxes are assesed to the manufacturers of tobacco products,
+ it is unclear how the taxes will impact producers and consumers, and who
+ will bear the incidence of the tax.
+ The author provides two explanations of how excise taxes on producers could
+ affect consumers: (1) tobacco production is altered, which changes the
+ type of tobacco products available in the retail market; (2) producers
+ simply pass on the burden of the tax by increasing prices.
+ The author claims that this paper offers the first analysis of the effect
+ of federal tobacco excise taxes on tobacco produciton.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In 2009, the federal excise tax rate changed as a result of CHIPRA.
+ So, the author measures the impact of this law change on different types
+ of tobacco production, including cigarettes, loose tobacco products, cigards,
+ and smokeless tobacco.
+ In order to measure the effect of CHIPRA on tobacco production, the author
+ estimates the counterfactual levels of tobacco production if CHIPRA was
+ never enacted.
+ To do this, he uses monthly data on Tobacco produciton from the U.S.
+ Alcohol and Tobacco Tax and Trade Bureau of the U.S.
+ Treasury.
+ The identifying assumption is that conditional on the included covariates,
+ the type of tobacco production in the pre-CHIPRA period would have remained
+ the same in the post-CHIPRA period.
+ To estimate the counterfactual levels of production, the author exploits
+ the variation in excise tax rates within states over time.
+ He also estimates how much of the tax is passed on too consumers in the
+ form of higher retail prices, as well as the price elasticity of taxable
+ sales of cigarettes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The author finds that both producers and consumers alter their behavior
+ in meaninful ways as a response to the change in the excise taxes caused
+ by CHIPRA.
+ Total produciton of tobacco decreased, and manfacturers shifted their productio
+n to substitute goods.
+ Moreover, the estimated range of the price elasticity of taxable sales
+ for cigarettes is in line with previous literature, and it is relatively
+ inelastic.
+ Consequently, consumers bear the entire incidence of the excise taxes in
+ the form of higher retail prices.
+ The author goes on to claim that excise taxes do, in fact, reduce tobacco
+ consumption, and this result could have a significant influence on policy
+ decisions.
+\end_layout
+
+\begin_layout Subsection*
+Contribution to the Literature
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+While this paper offers new insight by examining the effect of excise taxes
+ on tobacco production, I do not believe that the empirical results, nor
+ policy implicaitons, make an incredibly important contribution to the literatur
+e.
+ This is because tobacco producers simply transfer their factors of production
+ into substitutable goods, which was somewhat expected from the outset.
+ Furthermore, the implication that incidence of the excise taxes are extensively
+ transferred to consumers is not a surprising consequence.
+ In fact, Evans, Ringel, and Stech (1999) presented the same result by utitlizin
+g more convincing variable data and empirical methods.
+ Finally, in regards to the price elasticity of taxable sales, this paper
+ offers similar estimates from previous literature, even though it incorporates
+ the law changes caused by CHIPRA.
+ Above all, the empirical method implemented by the author, along with his
+ underlying identification strategy, are somewhat questionable.
+ If anything, this paper seems to be taking a structural approach as opposed
+ to reduced-form.
+ The main method the author implements is to estimate a counterfactual equation,
+ and then compare the estimated changes to the observed changes.
+ I have have seen very few reduced-form papers use this as a primary empirical
+ strategy.
+\end_layout
+
+\begin_layout Subsection*
+Critical Analysis
+\end_layout
+
+\begin_layout Subsubsection*
+The Impact of CHIPRA on Tobacca Production
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As stated previously, the author measures the effect of CHIPRA on tobacco
+ production by first estimating counterfactual levels of production for
+ tobacco products.
+ He estimates a linear parametric model that includes month dummies, a linear
+ time trend, and state-level cigarette excise rates prior to the CHIPRA
+ law change.
+ By estimating this equation, the author obtains the expected production
+ levels of tobacco conditional on the included covariates.
+ He can then compares the observed changes in the post-CHIPRA period with
+ the estimated expected levels of production.
+ The data he uses to estimate the counterfactual equation stretches over
+ 84 months, from April 2002 to March 2009.
+ The esimates are then used on 36 months following the law change.
+ But, the full data set runs from January 2000 through October 2013.
+ Why restrict the analysis to 84 months in the pre-period, and 36 months
+ in the post-period? No specific reason is given By including the additional
+ data, would the estimates have changed significantly? If possible, I would
+ have actually liked to see the estimation of the countefactual equation
+ incorporate all of the available data.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Remember, the author is identifying off of within-state variation of excise
+ tax rates over time.
+ However, how much variation could have actually occurred during a seven
+ year period? The author does not provide any extensive overview of the
+ data, nor an expository on whether there is an adequate level of variation,
+ i.e., there are many tax changes.
+ I suspect not enough tax changes occured in seven years to properly identify
+ the estimating equation.
+ It should be noted that Evans, Ringel, and Stech (1999) had ERS data for
+ 50 states over 30 years, so there were many tax changes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Moreover, the estimating equation excludes state dummies, which is a very
+ serious problem.
+ In fact, the variable corresponding to the state-level cigarette excise
+ rates offers no subscript to identify the specific state.
+ According to the author, this variable of interest is actually the consumption
+ weighted state cigarette excise tax rate in each year for all products.
+ The only subscript attached to this variable denotes time.
+ So, by excluding state dummies, it seems as though the author is actually
+ identifying off of time series variation.
+ Consequently, this implies that treatment is the only reason production
+ differs systematically from pre to post.
+ Obviously, this is a difficult assumption to believe since state specific
+ shocks are possible.
+ Finally, there is no mention of the assumptions associated with the standard
+ errors, how the standard errors are computed, and what is the level of
+ clustering.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The author does perform single robustness check by analyze periods that
+ omit months immediately preceding and following the enactment of CHIPRA.
+ But, why is there no mention of time-varying control variables associated
+ with production? The author could provide an additional robustness check
+ by showing how the estimates differ when including these controls.
+ Moving on, how do we know consumers and producers did not anticipate the
+ change in the law? Also, the change in the law took place during a recessionary
+ period, which could have unobserved effects on the production of tobacco
+ products.
+ So, the estimated effect of excise taxes on tobacco production could be
+ inconsistent.
+ Instead, the effect may have been driven by producer adjustments due the
+ recession.
+ To address this issue, the author could have conducted a permutation test
+ by utilizing all of his available data, changing the date CHIPRA was implemente
+d, obtaining estimates from the placebo treatment effects, and calculating
+ where the actual treatment effect lies in the empirical CDF.
+\end_layout
+
+\begin_layout Subsubsection*
+The Impact of Excise Taces on Cigarette Prices
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To measure the incidence excise taxes have on consumers in the form of higher
+ prices, the author utilizes annual state-level data from 2000 to 2012.
+ In the estimating equation, price is regressed on the exise tax of state
+ 
+\begin_inset Formula $i$
+\end_inset
+
+ in year 
+\begin_inset Formula $t$
+\end_inset
+
+ (the key variable of interest), state fixed effects, a flexible time trend,
+ and time-varying state-level characteristics.
+ The key identifying assumption is that the tax rate is exogenous to the
+ current retail price.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The author gives one explanation for why the identifying assumption may
+ be violated, and performs a robustness check to verify his persumption
+ is false.
+ However, shocks to supply and demand could also cause a change in retail
+ prices, and then lawmakers may respond as a result.
+ For example, the time frame of the data includes the recession.
+ It is quite plausible that due to the recession, more people attempted
+ to quit smoking in order to save money, which caused the retail price of
+ cigarettes to decrease.
+ Or, because of decreased investment in capital, producers scale back their
+ production lines, which also influences the retail price.
+ Then, lawmakers respond to the changes in prices accordingly.
+ Thus, it would be beneficial for the author to veryify that the recession
+ did not have a significant impact on retail cigarette prices.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Also, it is very difficult to follow his analysis concerning the pass through
+ of taxes to consumers.
+ I would uggest expounding on this section a bit more.
+ Remember, theory suggests that the pass through would be less at the national
+ level than at the state level since production at the national level is
+ more inelastic.
+ Moreover, Evans, Ringel, and Stech (1999) find 100% pass through at the
+ state level, but not at the national level.
+\end_layout
+
+\begin_layout Subsubsection*
+The Price Elasticity of Cigarettes
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this section, the author estimates the price elasticity of taxable cigarette
+ sales.
+ Once again, it would be quite helpful for the author to provide a brief
+ explanation concerning the price elasticity of taxable sales of cigarettes
+ To estimate the given equation, he includes the log price of cigarettes
+ in state 
+\begin_inset Formula $i$
+\end_inset
+
+ in period 
+\begin_inset Formula $t$
+\end_inset
+
+ (the key parameter of interest), state fixed effects, a flexible time trend,
+ and time-varying state-level characteristics.
+ For instrunmental variables, he uses two separate specifications: (1) the
+ combined state plus federal tax rate; (2) each of the terms separately.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+While taxes have been utilized as instrumental variables for prices in a
+ number of empirical papers, I would suggest including the standard robustness
+ checks and expository associated with IV estimation.
+ Show the first stage, demonstrating that the instruments are relevant and
+ not subject to the problems of weak instruments.
+ Also, include the reduced-form IV estimation.
+ Finally, explain why the IV estimates differ from the OLS estimates.
+\end_layout
+
+\end_body
+\end_document

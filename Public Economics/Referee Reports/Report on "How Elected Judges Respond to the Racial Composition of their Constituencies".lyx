@@ -1,0 +1,203 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\series bold
+Report on 
+\begin_inset Quotes eld
+\end_inset
+
+How Elected Judges Respond to the Racial Composition of their Constituencies
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This paper examines how the race of the defandant's community is related
+ to the incarceration and the sentence length.
+ The study takes advantage of the variation in the judicial selection system
+ to estimate the relationship between the percent of a district's population
+ that is of the defendant's race and the length of that defendant's sentence.
+ Judges who are elected serve as the treatment group, while judges who are
+ appointed serve as the control group.
+ The authors claim that elected judges are more responsive to the racial
+ composition of their constituents because they face reelection.
+ This will, in turn, directly affect the sentencing decisions of these judges.
+ Results indicate that African Americans facing an elected judge receive
+ shorter sentences as the percentage of the African American population
+ in their district rises, while the probability of incarceration is unaffected.
+ The relationship is insignifiant for defendants of other races or when
+ the defendant faces an appointed judge.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Comments and Concerns
+\end_layout
+
+\begin_layout Itemize
+What is the identifying assumption? No where in the paper is the identifying
+ assumption explicitly discussed.
+ The authors explain that they are taking advantage of the variation in
+ the judicial selection system.
+ However, states determined the method of their judicial selection years
+ prior, with some states even deciding to amend their constitutions in order
+ to change the method.
+ it is difficult to verify if this variation is truly exogenous.
+ Most importantly, how do the authors account for the states that opt for
+ a hybrid of elective and appointive positions, such as Colorado?
+\end_layout
+
+\begin_layout Itemize
+In order to estimate the effect racial composition of a district has on
+ sentence length, the authors compare judicial districts in which judges
+ are elected (treatment group) to judicial districts in which judges are
+ appointed (controlled).
+ By doing this, they implicitly assume that all observable and unobservable
+ characteristics of judicial districts are the same except for the method
+ of judicial selection.
+ Yet, the authors readily state that counties with elected judges have higher
+ mean population of blacks, and elected judges handle more black defendants.
+ For this reason, I believe the estimates corresponding to the African American
+ population are biased.
+ 
+\end_layout
+
+\begin_layout Itemize
+The data on court cases only account for around a third of U.S.
+ population, and about a half of all crime in the U.S.
+ So, the remaining two-thirds of the population is not even represented
+ in the data.
+ In addition, it is not unreasonable to believe that individuals in represented
+ counties could have easily committed crimes in any of the excluded judicial
+ districts.
+ To sum up, not having data for all of the U.S.
+ has the potential to bias the estimates.
+\end_layout
+
+\begin_layout Itemize
+What is the explanation for not including judicial district and/or region
+ fixed effects? Various counties and/or regions in the U.S.
+ probably have different crime rates, conviction rates, philosophies, political
+ biases, etc.
+ that could affect the incarceration rates and lengths of sentences.
+\end_layout
+
+\begin_layout Itemize
+What is the advantage of estimating a two-stage Heckman regression? Some
+ of the control variables used in the first stage estimation, but excluded
+ in the second stage, could in fact influence the second stage.
+ Moreover, the authors along account for trials overseen by judges, and
+ it seems trials by jury are simply overlooked.
+ The probability of conviction surely differs between trials by jury and
+ those simply oversoon by a judge, which, in turn, could lead to differening
+ probabilities of incarceration.
+\end_layout
+
+\end_body
+\end_document
