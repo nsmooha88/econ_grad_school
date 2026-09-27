@@ -1,0 +1,7134 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Macroeconomic Theory I Study Guide
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Abstract
+This study guide provides an overview of all the topics covered during the
+ Fall 2012 semester of Macroeconomic Theory I, Econ 636.
+ It outlines the lecture notes, theorems, proofs, and other material covered
+ during the course.
+\end_layout
+
+\begin_layout Section
+Overview
+\end_layout
+
+\begin_layout Enumerate
+Macroeconomics studies aggregate variables, such as aggregate consumtion,
+ aggregate investment, etc.
+\end_layout
+
+\begin_layout Enumerate
+Questions are typically dynamic, and hence, dynamic programming is useful.
+\end_layout
+
+\begin_layout Enumerate
+Today, many macro models have micro foundations, i.e., models where behavior
+ is derived from basic assumptions about consumers.
+\end_layout
+
+\begin_layout Enumerate
+There are two types of macro models: one generation where agents are infinitely
+ lived, and multiple generations where agents are finitely lived.
+\end_layout
+
+\begin_layout Enumerate
+There are two types of timing models: continuous time and discrete time
+\end_layout
+
+\begin_layout Standard
+In this class, we analyze discrete time models where agents are infinitely
+ lived.
+\end_layout
+
+\begin_layout Standard
+There are three steps used in studying Macroeconomics:
+\end_layout
+
+\begin_layout Enumerate
+Set up of macro models
+\end_layout
+
+\begin_layout Enumerate
+Use mathematical or numerical techniques, or a combination of the two, to
+ solve the models
+\end_layout
+
+\begin_layout Enumerate
+Extract real life data and make comparisons with the predictions obtained
+ from the model
+\end_layout
+
+\begin_layout Section
+A Finite Horizon Problem
+\end_layout
+
+\begin_layout Subsection
+The Social Planner's Problem
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this section, we present a discrete time, finite horizon example of the
+ neoclassic growth model, also known as the Solow growth model.
+ It is important to note that this finite horizon model is only being shown
+ for illustration since finite horizon models are not typically used for
+ macroeconomic analysis.
+ In this model, there is no government and there are no exports.
+ Here, we present a version of the social planner's problem in which there
+ is no market where individuals trade.
+ The constrained optimization problem is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{\left\{ c_{t},k_{t}\right\} _{t=0}^{T}}} & {\displaystyle \sum_{t=0}^{T}}\beta^{t}u(c_{t})\\
+\mbox{s.t.} & c_{t}+k_{t+1}\leq F(k_{t},L_{t})+(1-\delta)k_{t};\ \forall\ t=0,1,\ldots,T\\
+ & c_{t}\geq0;\ \forall\ t=0,1,\ldots,T\\
+ & k_{t+1}\geq0;\ \forall\ t=0,1,\ldots,T\\
+ & 0\leq L_{t}\leq1;\ \forall\ t=0,1,\ldots,T\\
+ & k_{0}>0\ \mbox{is given}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\beta\in(0,1)$
+\end_inset
+
+ is the called the discount factor, 
+\begin_inset Formula $\delta$
+\end_inset
+
+ is the depreciation rate, and 
+\begin_inset Formula $t$
+\end_inset
+
+ indicates the time period.
+ In each period, there is only one good, either for consumption or for investmen
+t.
+ We provide a brief explanation of the variables and functions that characterize
+ the model.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $c_{t}:$
+\end_inset
+
+ The amount of goods consumed in period 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Note that each 
+\begin_inset Formula $c$
+\end_inset
+
+ is the same good, but since we are maximizing utility over 
+\begin_inset Formula $T$
+\end_inset
+
+ periods, each 
+\begin_inset Formula $c_{t}$
+\end_inset
+
+ is distinct from the others.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k_{t+1}:$
+\end_inset
+
+ The amount of capital available next period, 
+\begin_inset Formula $t+1$
+\end_inset
+
+.
+ Note that the amount of goods invested in time 
+\begin_inset Formula $t$
+\end_inset
+
+, denoted 
+\begin_inset Formula $i_{t}$
+\end_inset
+
+, will always be turned into future capital.
+ So, the total amount of capital available in period 
+\begin_inset Formula $t+1$
+\end_inset
+
+ equals the amount of goods invested in time 
+\begin_inset Formula $t$
+\end_inset
+
+ plus the usable capital from the last period.
+ This situation is expressed by the equation 
+\begin_inset Formula 
+\[
+i_{t}=k_{t+1}-(1-\delta)k_{t}\iff k_{t+1}=i_{t}+(1-\delta)k_{t}
+\]
+
+\end_inset
+
+In this setup, 
+\begin_inset Formula $k_{t+1}$
+\end_inset
+
+ can also be thought of as the amount of capital saved for next period.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k_{t},L_{t}:$
+\end_inset
+
+ the amount of capital and labor in available in period 
+\begin_inset Formula $t$
+\end_inset
+
+, respectively.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F(k_{t},L_{t}):$
+\end_inset
+
+ This is the production function which uses 
+\begin_inset Formula $k_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{t}$
+\end_inset
+
+ as inputs.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(1-\delta)k_{t}:$
+\end_inset
+
+ The undepreciated capital available in time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Feasibility constraint: Consumption and investment in a given period 
+\begin_inset Formula $t$
+\end_inset
+
+ cannot exceed the amount of goods produced in that period, i.e.,
+\begin_inset Formula 
+\begin{eqnarray*}
+c_{t}+i_{t} & \leq & F(k_{t},L_{t})\\
+c_{t}+(k_{t+1}-(1-\delta)k_{t}) & \leq & F(k_{t},L_{t})\\
+c_{t}+k_{t+1} & \leq & F(k_{t},L_{t})+(1-\delta)k_{t}
+\end{eqnarray*}
+
+\end_inset
+
+It does not matter whether the constraint has an equality or a strict inequality.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Since the amount of 
+\begin_inset Quotes eld
+\end_inset
+
+leisure
+\begin_inset Quotes erd
+\end_inset
+
+ does not affect utility, then the amount of labor used in production does
+ not matter, so we will set 
+\begin_inset Formula $L_{t}=1$
+\end_inset
+
+ to increase output.
+ So, define 
+\begin_inset Formula $f(k_{t})\equiv F(k_{t},1)+(1-\delta)k_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Assumption
+\begin_inset Formula $u$
+\end_inset
+
+ is strictly increasing, differentiable, and concave.
+ 
+\begin_inset Formula $F(k,1)$
+\end_inset
+
+ is strictly increasing, differentiable, and concave.
+ 
+\begin_inset Formula $F(0,L)=F(k,0)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+First, since 
+\begin_inset Formula $F(k,1)$
+\end_inset
+
+ is strictly increasing, differentiable, and concave, then so is 
+\begin_inset Formula $f(k)$
+\end_inset
+
+.
+ Second, we know that 
+\begin_inset Formula $c_{t}+k_{t+1}<f(k_{t})$
+\end_inset
+
+ cannot be optimal.
+ The weak inequality just enlarges the feasibility set, but at the optimal,
+ the social planner will make the equation an equality since he does not
+ want to waste resources.
+ Hence, 
+\begin_inset Formula $c_{t}=f(k_{t})-k_{t+1}$
+\end_inset
+
+.
+ Then, we have what is known as the 
+\emph on
+Ramsey problem
+\emph default
+,
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{\left\{ k_{t+1}\right\} _{t=0}^{T}}} & {\displaystyle \sum_{t=0}^{T}}\beta^{t}u(f(k_{t})-k_{t+1})\\
+\mbox{s.t.} & 0\leq k_{t+1}\leq f(k_{t});\ \forall\ t=0,\ldots,T\\
+ & k_{0}>0\ \mbox{is given}
+\end{eqnarray*}
+
+\end_inset
+
+which is one specific setup of the neoclassic growth model.
+ Since 
+\begin_inset Formula $k_{t}$
+\end_inset
+
+ is essentially given (it signifies the capital saved from previous periods),
+ then to obtain the optimal 
+\begin_inset Formula $c_{t}$
+\end_inset
+
+, we must choose the optimal 
+\begin_inset Formula $k_{t+1}$
+\end_inset
+
+.
+ The constraint qualification condition (the gradients of binding constraints
+ are linearly independent) is not easily verifiable as we do not know which
+ ones bind in general.
+ To overcome this problem, economists use a simple trick.
+\end_layout
+
+\begin_layout Assumption
+
+\series bold
+\shape up
+(Inada condition on utility).
+
+\series default
+ 
+\begin_inset Formula ${\displaystyle \lim_{c\rightarrow0}}\ u^{\prime}(c)=\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Inada condition says that zero consumption is undesirable since marginal
+ utility is very high when 
+\begin_inset Formula $c$
+\end_inset
+
+ is increased by a small amount.
+ Hence, consumption in all periods must be positive.
+ For example, CRRA utility functions meet this condition.
+\end_layout
+
+\begin_layout Lemma
+Under the Inada condition on utility, the optimal solution is interior,
+ that is, 
+\begin_inset Formula $k_{T+1}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $0<k_{t+1}<f(k_{t})$
+\end_inset
+
+ for all 
+\begin_inset Formula $t=1,\ldots,T-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+First, we show that capital must be positive.
+ Suppose for contradiction that this is not true.
+ Let 
+\begin_inset Formula $t$
+\end_inset
+
+ be the period when capital starts to be zero, i.e., 
+\begin_inset Formula $k_{t}>0$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{t+1}=0$
+\end_inset
+
+.
+ Fix other capitals and only vary 
+\begin_inset Formula $x=k_{t+1}$
+\end_inset
+
+, then the objective function is
+\begin_inset Formula 
+\[
+\ldots+\beta^{t}u(f(k_{t})-x)+\beta^{t+1}u(f(x))+\ldots
+\]
+
+\end_inset
+
+The derivative of the above function with respect to 
+\begin_inset Formula $x$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+-\beta^{t}u^{\prime}(f(k_{t})-x)+\beta^{t+1}u^{\prime}(f(x))f^{\prime}(x)
+\]
+
+\end_inset
+
+which is infinity at 
+\begin_inset Formula $x=0$
+\end_inset
+
+ by the Inada condition.
+ This is a contradiction because the Kuhn-Tucker conditions are never satisfied.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Next, we show that consumption must be positive.
+ Suppose for contradiciton that this is not true.
+ Then, pick the last period when consumption is zero, i.e., 
+\begin_inset Formula $c_{t}=0$
+\end_inset
+
+ but 
+\begin_inset Formula $c_{t+1}>0$
+\end_inset
+
+.
+ The derivative is
+\begin_inset Formula 
+\[
+-\beta^{t}u^{\prime}(f(k_{t})-x)+\beta^{t+1}u^{\prime}(f(x)-k_{t+2})f^{\prime}(x)
+\]
+
+\end_inset
+
+which is negative infinity when 
+\begin_inset Formula $x=f(k_{t})$
+\end_inset
+
+.
+ This is a contradiction because the Kuhn-Tucker conditions are never satisfied.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, the Lagrangian of the optimization problem is
+\begin_inset Formula 
+\[
+L={\displaystyle \sum_{t=0}^{T}}\beta^{t}u(f(k_{t})-k_{t+1})
+\]
+
+\end_inset
+
+and the first-order conditions are
+\begin_inset Formula 
+\[
+\frac{\partial L}{\partial k_{t+1}}=-\beta^{t}u^{\prime}(f(k_{t})-k_{t+1})+\beta^{t+1}u^{\prime}(f(k_{t+1})-k_{t+1})f^{\prime}(k_{t+1})=0;\ \forall\ t=0,\ldots,T-1
+\]
+
+\end_inset
+
+The summary statement of the first-order conditions is then the Euler equation:
+\begin_inset Formula 
+\begin{gather*}
+u^{\prime}(c_{t})=\beta u^{\prime}(c_{t+1})f^{\prime}(k_{t+1});\ \forall\ t=0,\ldots,T-1\\
+k_{T+1}=0,\ k_{0}>0\ \mbox{is given}
+\end{gather*}
+
+\end_inset
+
+The economics intuition of the Euler equation is as follows: the utility
+ lose if you invest in one more unit, i.e., the marginal coast of saving (LHS)
+ equals the discounted utility increase next period per unit of increase
+ in 
+\begin_inset Formula $c$
+\end_inset
+
+ times the return on the invested unit, i.e., the marginal benefit of saving
+ (RHS).
+ Also, there are a few things that we should note about the Euler equation:
+\end_layout
+
+\begin_layout Enumerate
+The number of equations and unknowns are 
+\begin_inset Formula $T+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+It is a second order difference equation because there are two lags of capital.
+\end_layout
+
+\begin_layout Enumerate
+The first-order conditions are sufficient if the objective function is concave.
+\end_layout
+
+\begin_layout Standard
+To see the concavity of 
+\begin_inset Formula $\sum_{t=0}^{T}\beta^{t}u(f(k_{t})-k_{t+1})$
+\end_inset
+
+, it is sufficient to show that 
+\begin_inset Formula $u(f(k_{t})-k_{t+1})$
+\end_inset
+
+ is concave for all 
+\begin_inset Formula $t$
+\end_inset
+
+, as the sume of concave functions is still concave.
+ We have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial u}{\partial k_{t}} & = & u^{\prime}(c_{t})f^{\prime}(k_{t})\\
+\frac{\partial u}{\partial k_{t+1}} & = & -u^{\prime}(c_{t})\\
+\frac{\partial^{2}u}{\partial k_{t}^{2}} & = & u^{\prime\prime}(c_{t})(f^{\prime}(k_{t}))^{2}+u^{\prime}(c_{t})f^{\prime\prime}(k_{t})\leq0\\
+\frac{\partial^{2}u}{\partial k_{t+1}^{2}} & = & u^{\prime\prime}(c_{t})\leq0\\
+\frac{\partial^{2}u}{\partial k_{t}\partial k_{t+1}} & = & -u^{\prime\prime}(c_{t})f^{\prime}(k_{t})
+\end{eqnarray*}
+
+\end_inset
+
+Hence, the Hessian matrix of 
+\begin_inset Formula $u$
+\end_inset
+
+ is negative semi-definite since
+\begin_inset Formula 
+\[
+\frac{\partial^{2}u}{\partial k_{t}^{2}}\frac{\partial^{2}u}{\partial k_{t+1}^{2}}-\left(\frac{\partial^{2}u}{\partial k_{t}\partial k_{t+1}}\right)^{2}=u^{\prime}(c_{t})f^{\prime\prime}(k_{t})u^{\prime\prime}(c_{t})\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\emph on
+(Numerical exploration) 
+\emph default
+Let 
+\begin_inset Formula $u(c)=\log c$
+\end_inset
+
+, 
+\begin_inset Formula $f(k)=k^{\alpha}$
+\end_inset
+
+, 
+\begin_inset Formula $T=3$
+\end_inset
+
+, and 
+\begin_inset Formula $k_{0}=2$
+\end_inset
+
+ where 
+\begin_inset Formula $\alpha=\frac{1}{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta=0.1$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{k_{0}^{\alpha}+(1-\delta)k_{0}-k_{1}} & = & \frac{\beta\left(\alpha k_{1}^{\alpha-1}+1-\delta\right)}{k_{1}^{\alpha}+(1-\delta)k_{1}-k_{2}}\\
+\frac{1}{k_{1}^{\alpha}+(1-\delta)k_{1}-k_{2}} & = & \frac{\beta\left(\alpha k_{2}^{\alpha-1}+1-\delta\right)}{k_{2}^{\alpha}+(1-\delta)k_{2}-k_{3}}\\
+\frac{1}{k_{2}^{\alpha}+(1-\delta)k_{2}-k_{3}} & = & \frac{\beta\left(\alpha k_{3}^{\alpha-1}+1-\delta\right)}{k_{3}^{\alpha}+(1-\delta)k_{3}-k_{4}}\\
+k_{4} & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+If you know 
+\begin_inset Formula $k_{1}$
+\end_inset
+
+, you can solve for 
+\begin_inset Formula $k_{2}$
+\end_inset
+
+, and so on.
+ At then end, you must have 
+\begin_inset Formula $k_{4}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In the example above, you would use numerical methods to solve for 
+\begin_inset Formula $\{k_{t}\}_{t=0}^{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+
+\emph on
+(Analytical exploration)
+\emph default
+ Let us keep the same setup from the previous example, except now 
+\begin_inset Formula $t=0,\ldots,T$
+\end_inset
+
+ and 
+\begin_inset Formula $f(k)=Ak+(1-\delta)k=(A+(1-\delta))k=Rk$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Solve the linear difference equation
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{Rk_{t}-k_{t+1}} & = & \frac{\beta R}{Rk_{t+1}-k_{t+2}};\ t=0,\ldots,T-1\\
+k_{t+2}+Rk_{t+1}-\beta R(k_{t+1}-Rk_{t}) & = & 0;\ t=0,\ldots,T-1
+\end{eqnarray*}
+
+\end_inset
+
+The characteristic equation is
+\begin_inset Formula 
+\begin{eqnarray*}
+\lambda^{2}-R\lambda-\beta R(\lambda-R) & = & 0\\
+(\lambda-\beta R)(\lambda-R) & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+so its two roots are 
+\begin_inset Formula $\lambda_{1}=R$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{2}=\beta R$
+\end_inset
+
+.
+ So the solution takes the form of
+\begin_inset Formula 
+\[
+k_{t}=AR^{t}+B(\beta R)^{t}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are undetermined parameters.
+ For 
+\begin_inset Formula $k_{T+1}=0$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+AR^{T+1}+B(\beta R)^{T+1} & = & 0\\
+A+B\beta^{T+1} & = & 0\\
+A & = & -B\beta^{T+1}
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $A+B=k_{0}$
+\end_inset
+
+ when 
+\begin_inset Formula $t=0$
+\end_inset
+
+, then we obtain the following equations
+\begin_inset Formula 
+\begin{eqnarray*}
+A & = & \frac{-\beta^{T+1}}{1-\beta^{T+1}}k_{0}\\
+B & = & \frac{k_{0}}{1-\beta^{T+1}}
+\end{eqnarray*}
+
+\end_inset
+
+Finally, plugging these expressions into the equation for 
+\begin_inset Formula $c_{t}$
+\end_inset
+
+ we have
+\begin_inset Formula 
+\begin{eqnarray*}
+c_{t} & = & Rk_{t}-k_{t+1}\\
+ & = & R(AR^{t}+B(\beta R)^{t})-AR^{t+1}-B(\beta R)^{t+1}\\
+ & = & (B\beta^{t}-B\beta^{t+1})R^{t+1}\\
+ & = & \frac{k_{0}(1-\beta)\beta^{t}R^{t+1}}{1-\beta^{T+1}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Consolidate the 
+\begin_inset Formula $T+1$
+\end_inset
+
+ feasibility constraints and then solve for the multiplier conditions.
+ First, multiply the equation 
+\begin_inset Formula $\left[c_{t}+k_{t+1}=Rk_{t}\right]$
+\end_inset
+
+ by 
+\begin_inset Formula $R^{-t}$
+\end_inset
+
+ for 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+c_{0}+k_{1} & = & Rk_{0}\\
+c_{1}R^{-1}+k_{2}R^{-1} & = & k_{1}\\
+c_{2}R^{-2}+k_{3}R^{-2} & = & k_{2}R^{-1}\\
+ & \vdots\\
+c_{T}R^{-T}+K_{T+1}R^{-T} & = & Rk_{T}R^{-T}
+\end{eqnarray*}
+
+\end_inset
+
+Substracting common terms from the equations and taking summation we obtain
+ the single feasibility constraint
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{t=0}^{T}}R^{-t}c_{t}=Rk_{0}
+\]
+
+\end_inset
+
+where the LHS is the present-value of consumption stream, and 
+\begin_inset Formula $R$
+\end_inset
+
+ is the rate of return form saving capital.
+ Note, if we consolidated the constraints starting at 
+\begin_inset Formula $t=s$
+\end_inset
+
+, then we would have
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{t=s}^{T}}R^{-(t-s)}c_{t}=Rk_{s}
+\]
+
+\end_inset
+
+ Thus, starting from 
+\begin_inset Formula $t=0$
+\end_inset
+
+, the Lagrangian of the constrained optimization problem using this new
+ feasibility constraint is
+\begin_inset Formula 
+\[
+L={\displaystyle \sum_{t=0}^{T}}\beta^{t}\ln c_{t}+\lambda\left(Rk_{0}-{\displaystyle \sum_{t=0}^{T}}R^{-t}c_{t}-K_{T+1}R^{-T}\right)
+\]
+
+\end_inset
+
+The first-order condition is
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial L}{\partial c_{t}} & = & \frac{\beta}{c_{t}}-\lambda R^{-t}=0\\
+c_{t} & = & \frac{(\beta R)^{t}}{\lambda}
+\end{eqnarray*}
+
+\end_inset
+
+Now, we can obtain an expression for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \sum_{t=0}^{T}}\frac{\beta^{t}}{\lambda} & = & Rk_{0}\\
+\lambda & = & \frac{\sum_{t=0}^{T}\beta^{t}}{Rk_{0}}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+c_{t} & = & \frac{Rk_{0}(\beta R)^{t}}{\sum_{t=0}^{T}\beta^{t}}\\
+ & = & \frac{Rk_{0}}{\frac{1-\beta^{T+1}}{1-\beta}}\beta^{t}R^{t}\\
+ & = & \frac{Rk_{0}(1-\beta)\beta^{t}R^{t}}{1-\beta^{T+1}}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\sum_{t=0}^{T}\beta^{t}=\frac{1-\beta^{T+1}}{1-\beta}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Equilibrium With Sequential Trade
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this subsection, we turn our attention to the decentralized market economy.
+ We will show that the allocation achieved in decentralized trade will be
+ the same as the allocation in the social planner's problem.
+ In the social planner's economy, all variables were aggregate, while the
+ decentralized market economy has individual and aggregate variables.
+ For the decentralized market economy, we assume that there is a continuum
+ of identical consumers, and each decision maker is a price-taker that has
+ little influence on aggregate variables.
+\end_layout
+
+\begin_layout Subsubsection
+The Markets and Their Participants
+\end_layout
+
+\begin_layout Itemize
+Static Markets
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Goods Market: the price of the consumption good is normalized to 1, so it
+ known as the numeraire.
+ In this market, firms are sellers and households are buyers.
+\end_layout
+
+\begin_layout Itemize
+Labor Market: the wage rate is 
+\begin_inset Formula $w_{t}$
+\end_inset
+
+, which is the price of labor at 
+\begin_inset Formula $t$
+\end_inset
+
+ relative to (in terms of) consumption goods at 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ In this market, households are sellers and firms are buyers.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Dynamic Market
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Financial Market: This market links periods together.
+ 
+\begin_inset Formula $R_{t}$
+\end_inset
+
+ is the real rate of return from saving 
+\begin_inset Formula $(t-1\ \mbox{to}\ t)$
+\end_inset
+
+.
+ In this market, households are sellers and firms are buyers.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+The Consumer's Problem
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As was stated previously, the economy has a continuum of individuals who
+ are identical.
+ 
+\begin_inset Formula 
+\[
+L_{t}^{s}={\displaystyle \int_{0}^{1}}L_{t}^{s}(i)di
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+k_{t}^{s}={\displaystyle \int_{0}^{1}}k_{t}^{s}(i)di
+\]
+
+\end_inset
+
+Hence, this is a representative-agent economy, so we can describe all the
+ consumers in the economy using a representative agent.
+ Also, this is a perfect foresight model, which means that individuals know
+ what the future prices will be when making their decisions in period zero.
+ Thus, the representative agent solves his maximization problem at period
+ zero.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This consumer wishes to maximize his utility subject to his budget constraint.
+ So, his constrained maximization problem is
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle {\displaystyle \max_{\{k_{t+1}^{s},n_{t}^{s},c_{t}\}_{t=0}^{T}}}} & {\displaystyle \sum_{t=0}^{T}}\beta^{t}u(c_{t})\\
+\mbox{s.t.} & c_{t}+k_{t+1}^{s}\leq w_{t}n_{t}^{s}+R_{t}k_{t}^{s};\ \forall\ t=0,\ldots,T\\
+ & k_{0}>0\ \mbox{is given}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $n_{t}^{s}$
+\end_inset
+
+ is the amount of labor supplied by the consumer in period 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{t}^{s}$
+\end_inset
+
+ is the amount of funds supplied to the financial market by the consumer
+ in period 
+\begin_inset Formula $t-1$
+\end_inset
+
+.
+ The right side of the consumer's budget constraint represents his income.
+ The Lagrangian is given by
+\begin_inset Formula 
+\[
+L={\displaystyle \sum_{t=0}^{T}}\beta^{t}u(c_{t})+\sum_{t=0}^{T}\lambda_{t}(w_{t}n_{t}^{s}+R_{t}k_{t}^{s}-c_{t}-k_{t+1}^{s})
+\]
+
+\end_inset
+
+and the first-order conditions are
+\begin_inset Formula 
+\begin{gather*}
+\frac{\partial L}{\partial c_{t}}=0:\beta^{t}u^{\prime}(c_{t})=\lambda_{t}\\
+\frac{\partial L}{\partial k_{t+1}^{s}}=0:\lambda_{t}=\lambda_{t+1}R_{t+1}
+\end{gather*}
+
+\end_inset
+
+Thus, we can obtain the Euler equation for the consumer
+\begin_inset Formula 
+\[
+u^{\prime}(c_{t}^{*})=\beta u^{\prime}(c_{t+1}^{*})
+\]
+
+\end_inset
+
+Since the household can be thought of as the stockholder, or owner, of the
+ firm, profit from the firm should also be included in the consumer's income.
+ However, in a competitive equilibrium, the firm's profit equals zero.
+\end_layout
+
+\begin_layout Subsubsection
+The Firm's Problem
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The firm wishes to maximize its total profit per period.
+ So, its maximization problem is
+\begin_inset Formula 
+\[
+{\displaystyle \max_{k_{t}^{d},n_{t}^{d}}}\ F(k_{t}^{d},n_{t}^{d})+(1-\delta)k_{t}^{d}-w_{t}n_{t}^{d}-R_{t}k_{t}^{d}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $n_{t}^{d}$
+\end_inset
+
+ is the amount of labor employed by the firm in period 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{t}^{d}$
+\end_inset
+
+ is the capital borrowed by the firm in period 
+\begin_inset Formula $t-1$
+\end_inset
+
+.
+ The first-order conditions of the firm are
+\begin_inset Formula 
+\begin{eqnarray*}
+R_{t} & = & F_{k}(k_{t}^{d},n_{t}^{d})+(1-\delta)\\
+w_{t} & = & F_{n}(k_{t}^{d},n_{t}^{d})
+\end{eqnarray*}
+
+\end_inset
+
+In this setup, we focus on the case where the production function satisfies
+ constant returns to scale, so it is homogenous of degree one, i.e., 
+\begin_inset Formula $\forall\ \lambda>0:F(\lambda k,\lambda L)=\lambda F(k,L)$
+\end_inset
+
+.
+ Thus, a mathematical result says we can write the production function as
+ 
+\begin_inset Formula $F(k,L)=F_{k}\cdot k+F_{L}\cdot L$
+\end_inset
+
+.
+ Under CRS, the firm's profit equals zero in a competitive equilibrium.
+\end_layout
+
+\begin_layout Remark
+The number of firms is undetermined as long as we have many small firms
+ and the price-taking behavior can be justified.
+ Because of CRS, having 
+\begin_inset Formula $n$
+\end_inset
+
+ firms is equivalent to having 1 firm.
+\end_layout
+
+\begin_layout Subsubsection
+Characterizing the Competitive Equilibrium
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A competitive equilibrium is a sequence of prices and allocations such that
+\end_layout
+
+\begin_layout Enumerate
+All the decision makers maximize their utility and profit, respectively.
+\end_layout
+
+\begin_layout Enumerate
+Supply equals demand in every market.
+\end_layout
+
+\begin_layout Enumerate
+The allocation is feasible.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $c_{t}^{*},k_{t}^{s*},k_{t}^{d*},n_{t}^{s*},n_{t}^{d*}$
+\end_inset
+
+ and 
+\begin_inset Formula $R_{t}^{*},w_{t}^{*}$
+\end_inset
+
+ denote the competitive equilibrium allocations and prices, respectively.
+ Thus, by the definition above, we have
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\begin{gather*}
+c_{t}^{*},k_{t+1}^{s*},n_{t}^{s*}\in\arg\max\ {\displaystyle \sum_{t=0}^{T}}\beta^{t}u(c_{t})\\
+\mbox{s.t.}\ c_{t}+k_{t+1}^{s}=R_{t}^{*}k_{t}+w_{t}^{*}n_{t}\\
+k_{0}>0\ \mbox{is given}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+k_{t}^{d*},n_{t}^{d*}\in\arg\max\ F(k_{t}^{d},n_{t}^{d})+(1-\delta)k_{t}^{d}-w_{t}^{*}n_{t}^{d}-R_{t}^{*}k_{t}^{d}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $n_{t}^{s*}=n_{t}^{d*}=n_{t}^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $k_{t}^{d*}=k_{t}^{s*}=k_{t}^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Demand equals supply in the goods market, and 
+\begin_inset Formula $c_{t}^{*}+k_{t+1}^{s*}=F(k_{t}^{d*},n_{t}^{d*})+(1-\delta)k_{t}^{d*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let us analyze the conditions that characterize a competitive equilibrium.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $n_{t}^{s*}=n_{t}^{d*}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+First-order condition for a consumer
+\begin_inset Formula 
+\begin{eqnarray*}
+\beta^{t}u^{\prime}(c_{t}^{*}) & = & \lambda_{t}\\
+u^{\prime}(c_{t}^{*}) & = & \beta u^{\prime}(c_{t+1}^{*})R_{t+1}^{*}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+First-order condition for the firm
+\begin_inset Formula 
+\begin{eqnarray*}
+R_{t}^{*} & = & F_{k}(k_{t}^{*},1)+(1-\delta)\\
+w_{t}^{*} & = & F_{n}(k_{t}^{*},1)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+CRS implies that the firm's profit equals zero.
+ To show this, consider the firm's profit function
+\begin_inset Formula 
+\begin{gather*}
+F(k_{t}^{*},1)+(1-\delta)k_{t}^{*}-R_{t}^{*}k_{t}^{*}-w_{t}^{*}\\
+=F(k_{t}^{*},1)+(1-\delta)k_{t}^{*}-\left[F_{k}(k_{t}^{*},1)+(1-\delta)\right]k_{t}^{*}-F_{n}(k_{t}^{*},1)\\
+=\left[F_{k}(k_{t}^{*},1)\cdot k_{t}^{*}+F_{n}(k_{t}^{*},1)\right]+(1-\delta)k_{t}^{*}-\left[F_{k}(k_{t}^{*},1)+(1-\delta)\right]k_{t}^{*}-F_{n}(k_{t}^{*},1)\\
+=0
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The consumer's budget constraint is satisfied if and only if the feasibility
+ constraint in the social planner's problem is satisfied.
+ Since profits equal zero, then
+\begin_inset Formula 
+\[
+F(k_{t}^{*},1)+(1-\delta)k_{t}^{*}=R_{t}^{*}k_{t}^{*}+w_{t}^{*}
+\]
+
+\end_inset
+
+Thus, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+c_{t}^{*}+k_{t+1}^{*} & = & R_{t}^{*}k_{t}^{*}+w_{t}^{*}\\
+ & = & F(k_{t}^{*},1)+(1-\delta)k_{t}^{*}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The Euler equation in the social planner's problem holds, i.e.,
+\begin_inset Formula 
+\begin{eqnarray*}
+u^{\prime}(c_{t}^{*}) & = & \beta u^{\prime}(c_{t+1}^{*})R_{t+1}^{*}\\
+u^{\prime}(c_{t}^{*}) & = & \beta u^{\prime}(c_{t+1}^{*})\left[F_{k}(k_{t+1}^{*},1)+(1-\delta)\right]
+\end{eqnarray*}
+
+\end_inset
+
+The allocation for a CE is feasible in the social planner's problem, i.e.,
+ it satisfies the resource constraint, and it satsfies the Euler equation.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $K_{T+1}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\shape up
+(First Welfare Theorem).
+ 
+\series default
+\emph on
+Let 
+\begin_inset Formula $\{k_{t}^{*},L_{t}^{*},c_{t}^{*}\}_{t=0}^{T}$
+\end_inset
+
+ be the allocation in an arbitrary competitive equilibrium, then it is Pareto
+ efficient, i.e.
+ it solves the social planner's problem.
+\end_layout
+
+\begin_layout Remark
+Because there is a difference between the aggregate variables and individual
+ variables, the consumer's budget constraint is not the same as the feasibility
+ condition in the social planner's problem.
+ For the consumer, the budget constraint is linear in 
+\begin_inset Formula $k_{t}$
+\end_inset
+
+, which is an individual variable, 
+\begin_inset Formula $R_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $W_{t}$
+\end_inset
+
+ are fixed when 
+\begin_inset Formula $k_{t}$
+\end_inset
+
+ changes, and the marginal return of 
+\begin_inset Formula $k_{t}$
+\end_inset
+
+ is 
+\begin_inset Formula $R_{t}$
+\end_inset
+
+.
+ On the other hand, the feasibility constraint for the social planner is
+ typically non-linear in 
+\begin_inset Formula $K_{t}$
+\end_inset
+
+, which is an aggregate variable, 
+\begin_inset Formula $R_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $W_{t}$
+\end_inset
+
+ vary when 
+\begin_inset Formula $K_{t}$
+\end_inset
+
+ changes, and the marginal return is 
+\begin_inset Formula $F_{k}(K_{t},1)+(1-\delta)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Suppose 
+\begin_inset Formula $u(c)=\log(c)$
+\end_inset
+
+, 
+\begin_inset Formula $f(k)=k^{\alpha}$
+\end_inset
+
+, 
+\begin_inset Formula $T=1$
+\end_inset
+
+, 
+\begin_inset Formula $k_{0}=1$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha=\frac{1}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\delta=1$
+\end_inset
+
+, and 
+\begin_inset Formula $\beta=\frac{2}{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The social planner's feasibility set is 
+\begin_inset Formula $\left\{ (c_{0},c_{1}):c_{1}\leq(k_{0}^{\alpha}-c_{0})^{\alpha}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The solution is 
+\begin_inset Formula $c_{0}=\frac{1}{1+\alpha\beta}k_{0}^{\alpha}=\frac{3}{4}$
+\end_inset
+
+, 
+\begin_inset Formula $k_{1}=\frac{\alpha\beta}{1+\alpha\beta}k_{0}^{\alpha}=\frac{1}{4}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{1}=k_{1}^{\alpha}=\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The prices are 
+\begin_inset Formula $R_{1}=\alpha k_{1}^{\alpha-1}=1$
+\end_inset
+
+, 
+\begin_inset Formula $w_{1}=(1-\alpha)k_{1}^{\alpha}=\frac{1}{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The consumer's budset set is a triangle 
+\begin_inset Formula $\left\{ (c_{0},c_{1}):c_{0}+c_{1}\leq1+w_{1}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\shape up
+(Second Welfare Theorem).
+
+\series default
+ 
+\emph on
+If an allocation is Pareto efficient, then we can find prices such that
+ the prices and the allocation constitute a competitive equilibrium.
+\end_layout
+
+\begin_layout Remark
+The equivalence of the FWT and the SWT relies on the fact there are no distortio
+ns in the economy.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Infinite Horizon Problem
+\end_layout
+
+\begin_layout Subsection
+Preliminaries
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Why should macroeconomists study the case of an infinite time horizon?
+\end_layout
+
+\begin_layout Enumerate
+Evolution of the capital is distorted at the end of the model in the finite
+ version
+\end_layout
+
+\begin_layout Enumerate
+Simplicity: Dynamic programming makes the model easier to solve.
+ 
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(c_{t})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\beta\in(0,1)$
+\end_inset
+
+ is called the discount factor.
+\end_layout
+
+\begin_layout Standard
+This infinite sum is not necessarily convergent.
+ Under what conditions will the sum converge?
+\end_layout
+
+\begin_layout Subsubsection
+Preference Requirements
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+One general condition that guarantees the infinite sum will converge is
+ to assume that 
+\begin_inset Formula $0<\beta<1$
+\end_inset
+
+ and that 
+\begin_inset Formula $\{u(c_{t})\}_{t=0}^{\infty}$
+\end_inset
+
+ is a bounded sequence, i.e., there exists 
+\begin_inset Formula $B>0$
+\end_inset
+
+ such that 
+\begin_inset Formula $|u(c_{t})|\leq B\ \forall\ t$
+\end_inset
+
+.
+ In this case, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\left|{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(c_{t})\right| & \leq & {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}|u(c_{t})|\\
+ & \leq & {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}B\\
+ & = & \frac{B}{1-\beta}
+\end{eqnarray*}
+
+\end_inset
+
+For another example of the infinite sum converging, consider a plan specifying
+ a constant flow of consumption:
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(c_{t})={\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(\bar{c})
+\]
+
+\end_inset
+
+which is convergent if and only if 
+\begin_inset Formula $\beta<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Alternatively, consider a constantly increasing consumption stream:
+\begin_inset Formula 
+\[
+c_{t}=c_{0}(1+\gamma)^{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In some models, we will look at
+\begin_inset Formula 
+\[
+u(c_{t})=\begin{cases}
+\frac{c_{t}^{1-\sigma}-1}{1-\sigma} & \mbox{if}\ \sigma\neq1\\
+\log c & \mbox{if}\ \sigma=0
+\end{cases}
+\]
+
+\end_inset
+
+which is constant relative risk aversion (CRRA) utility function.
+ So, the model has the following setup
+\begin_inset Formula 
+\begin{gather*}
+{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\left[\frac{\left[c_{0}(1+\gamma)^{t}\right]^{1-\sigma}-1}{1-\sigma}\right]\\
+={\displaystyle \sum_{t=0}^{\infty}}\left[\beta(1+\gamma)^{1-\sigma}\right]^{t}\frac{c_{0}^{1-\sigma}}{1-\sigma}
+\end{gather*}
+
+\end_inset
+
+In the case of CES utility representation, boundedness required 
+\begin_inset Formula $0<|\beta(1+\gamma)^{1-\sigma}|<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Neoclassic Growth Model: The Social Planner's Problem
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We keep the same basic setup of the neoclassic, or Solow, growth model presented
+ in the previous section.
+ So, we have the 
+\emph on
+Ramsey problem
+\emph default
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{\{k_{t+1}\}_{t=0}^{\infty}}} & {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(c_{t})\\
+\mbox{s.t.} & c_{t}+k_{t+1}=f(k_{t});\ \forall\ t\\
+ & k_{0}>0\ \mbox{is given}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\beta\in(0,1)$
+\end_inset
+
+ and 
+\begin_inset Formula $f(k_{t})\equiv F(k_{t},1)+(1-\delta)k_{t}$
+\end_inset
+
+.
+ Remember, 
+\begin_inset Formula $u^{\prime}(c_{t})>0$
+\end_inset
+
+, 
+\begin_inset Formula $u^{\prime\prime}(c_{t})<0$
+\end_inset
+
+, 
+\begin_inset Formula $\lim_{c_{t}\rightarrow0}u^{\prime}(c_{t})=\infty$
+\end_inset
+
+, and 
+\begin_inset Formula $f^{\prime}(k_{t})>0$
+\end_inset
+
+ and 
+\begin_inset Formula $f^{\prime\prime}(k_{t})<0$
+\end_inset
+
+.
+ Important to note, if 
+\begin_inset Formula $u(c_{t})$
+\end_inset
+
+ is a bounded function, then the sum will converge.
+ However, 
+\begin_inset Formula $u(c_{t})$
+\end_inset
+
+ being bounded is only a sufficient condition for convergence, so the sum
+ can still converge even if 
+\begin_inset Formula $u(c_{t})$
+\end_inset
+
+ is unbounded.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There are also sufficient conditions to guarantee that an allocation derived
+ in the social planner's is optimal.
+ Under additional provisions, these conditions are also necessary, but in
+ general, we don't know if this is true and it is difficult to show.
+\end_layout
+
+\begin_layout Theorem
+If a feasible allocation in the social planner's problem, 
+\begin_inset Formula $\{k_{t+1}^{*}\}_{t=0}^{\infty}$
+\end_inset
+
+, satisfies
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The Euler equation
+\begin_inset Formula 
+\[
+u^{\prime}(f(k_{t}^{*})-k_{t+1}^{*})=\beta u^{\prime}(f(k_{t+1}^{*})-k_{t+2}^{*})f^{\prime}(k_{t+1}^{*});\ \forall\ t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+A transversality condition
+\begin_inset Formula 
+\[
+{\displaystyle \lim_{t\rightarrow\infty}}\ \beta^{t}u^{\prime}(c_{t}^{*})k_{t+1}^{*}=0
+\]
+
+\end_inset
+
+(an intuitive explanation of this condition: the 
+\begin_inset Quotes eld
+\end_inset
+
+value of savings
+\begin_inset Quotes erd
+\end_inset
+
+ is converging to zero as 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+then it is optimal, i.e., 
+\begin_inset Formula $\{k_{t+1}^{*}\}_{t=0}^{\infty}$
+\end_inset
+
+ solves the social planner's problem.
+\end_layout
+
+\begin_layout Proof
+The proof of this theorem can be found in Stokey, Lucas, and Prescott, denoted
+ Theorem 4.15, on page 98.
+ Here, we provide a brief outline it:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Since 
+\begin_inset Formula $u(f(k_{t})-k_{t+1})$
+\end_inset
+
+ is concave in 
+\begin_inset Formula $(k_{t},k_{t+1})$
+\end_inset
+
+, then after taking the Taylor expansion of the function around 
+\begin_inset Formula $(k_{t}^{*},k_{t+1}^{*})$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+u(f(k_{0})-k_{1}) & \leq & u(c_{0}^{*})-u^{\prime}(c_{0}^{*})(k_{1}-k_{1}^{*})\\
+\beta u(f(k_{1})-k_{2}) & \leq & \beta u(c_{1}^{*})+\beta u^{\prime}(c_{1}^{*})f^{\prime}(k_{1}^{*})(k_{1}-k_{1}^{*})-\beta u^{\prime}(c_{1}^{*})(k_{2}-k_{2}^{*})\\
+ & \vdots\\
+\beta^{T}u(f(k_{T})-k_{T+1}) & \leq & \beta^{T}u(c_{T}^{*})+\beta^{T}u^{\prime}(c_{T}^{*})f^{\prime}(k_{T})(k_{T}-k_{T}^{*})-\beta^{T}u^{\prime}(c_{T}^{*})(k_{T+1}-k_{T+1}^{*})
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+By using the Euler equation and taking summation of the inequalities, we
+ obtain
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \sum_{t=0}^{T}}\beta^{t}u(c_{t}) & \leq & {\displaystyle \sum_{t=0}^{T}}\beta^{t}u(c_{t}^{*})-\beta^{T}u^{\prime}(c_{T}^{*})(k_{T+1}-k_{T+1}^{*})\\
+ & \leq & {\displaystyle \sum_{t=0}^{T}}\beta^{t}u(c_{t}^{*})+\beta^{T}u^{\prime}(c_{T}^{*})k_{T+1}^{*}
+\end{eqnarray*}
+
+\end_inset
+
+Taking the limit as 
+\begin_inset Formula $T\rightarrow\infty$
+\end_inset
+
+ yields the desired result since 
+\begin_inset Formula $\lim_{t\rightarrow\infty}\beta^{T}u^{\prime}(c_{T}^{*})k_{T+1}^{*}=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+Let us consider the case of Cobb-Douglas transition and logarithmic preferences.
+ This example is used widely for applied purposes because it has an analytic
+ (closed form) solution.
+ We wish to find the optimal allocation that solves the following social
+ planner's problem
+\begin_inset Formula 
+\begin{eqnarray*}
+\max_{\{k_{t+1}\}_{t=0}^{\infty}} & {\displaystyle {\displaystyle \sum_{t=0}^{\infty}}}\beta^{t}\log(c_{t})\\
+\mbox{s.t.} & c_{t}+k_{t+1}=Ak_{t}^{\alpha}\\
+ & k_{0}>0\ \mbox{is given}
+\end{eqnarray*}
+
+\end_inset
+
+Note that we can substitute 
+\begin_inset Formula $c_{t}=Ak_{t}^{\alpha}-k_{t+1}$
+\end_inset
+
+ into the utility function.
+ We will look at the policy 
+\begin_inset Formula $k_{t+1}=\alpha\beta Ak_{t}^{\alpha}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The Euler equation for this problem is
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{(1-\alpha\beta)Ak_{t}^{\alpha}} & = & \frac{\beta\alpha Ak_{t+1}^{\alpha-1}}{(1-\alpha\beta)Ak_{t+1}^{\alpha}}\\
+(1-\alpha\beta)Ak_{t+1}^{\alpha} & = & \beta\alpha Ak_{t+1}^{\alpha-1}(1-\alpha\beta)Ak_{t}^{\alpha}\\
+k_{t+1} & = & \alpha\beta Ak_{t}^{\alpha}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the Euler equation is satisfied.
+\end_layout
+
+\begin_layout Enumerate
+Transveraslity condition
+\begin_inset Formula 
+\[
+{\displaystyle \lim_{t\rightarrow\infty}}\beta^{t}u^{\prime}(c_{t})k_{t+1}=0
+\]
+
+\end_inset
+
+We want to show that the policy coverges to a steady state, i.e., 
+\begin_inset Formula $k_{t}=k_{t+1}=k^{*}$
+\end_inset
+
+.
+ In fact, we even have global convergence so that everywhere in the state
+ space converges to 
+\begin_inset Formula $k^{*}$
+\end_inset
+
+, but this will be proved formally later.
+ At the steady state, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+k^{*} & = & \alpha\beta A\left(k^{*}\right)^{\alpha}\\
+k^{*} & = & \left(\alpha\beta A\right)^{\frac{1}{1-\alpha}}\\
+\log k^{*} & = & \frac{\log\left(\alpha\beta A\right)}{1-\alpha}
+\end{eqnarray*}
+
+\end_inset
+
+The law of motion for the state variable is
+\begin_inset Formula 
+\begin{equation}
+\log k_{t+1}=\log(\alpha\beta A)+\alpha\log k_{t}
+\end{equation}
+
+\end_inset
+
+while at the steady state we have
+\begin_inset Formula 
+\begin{equation}
+\log k^{*}=\log(\alpha\beta A)+\alpha\log k^{*}
+\end{equation}
+
+\end_inset
+
+Subtracting equation (2) from equation (1) we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\log k_{t+1}-\log k^{*} & = & \alpha\left(\log k_{t}-\log k^{*}\right)\\
+ & = & \alpha^{2}\left(\log k_{t-1}-\log k^{*}\right)\\
+ & \vdots\\
+ & = & \alpha^{t+1}\left(\log k_{0}-\log k^{*}\right)\\
+\log k_{t} & = & \log k^{*}+\alpha^{t}\left(\log k_{0}-\log k^{*}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $\log k_{t}$
+\end_inset
+
+ converges to 
+\begin_inset Formula $\log k^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{t}=(1-\alpha\beta)Ak_{t}^{\alpha}\rightarrow c^{*}=(1-\alpha\beta)A\left(k^{*}\right)^{\alpha}$
+\end_inset
+
+ as 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\[
+{\displaystyle \lim_{t\rightarrow\infty}}\beta^{t}u^{\prime}(c_{t})k_{t+1}=\beta^{\infty}u^{\prime}(c^{*})k^{*}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+Since both conditions are satisfied, then 
+\begin_inset Formula $k_{t+1}=\alpha\beta Ak_{t}^{\alpha}$
+\end_inset
+
+ is the optimal allocation.
+ In this example, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ can be thought of as the patience level of the agent.
+ A large 
+\begin_inset Formula $\beta$
+\end_inset
+
+ indicates that the consumer is more willing to save for the future.
+ If 
+\begin_inset Formula $\alpha\approx0$
+\end_inset
+
+, tomorrow's output is independent of today's savings, so the agent is more
+ inclined to save less.
+\end_layout
+
+\begin_layout Subsection
+Sequential Dynamic Programming
+\end_layout
+
+\begin_layout Subsubsection
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Our approach up to now has been to look for a sequence of real numbers 
+\begin_inset Formula $\{k_{t+1}\}_{t=0}^{\infty}$
+\end_inset
+
+ that generates an optimal consumption plan.
+ An alternative approach is called 
+\emph on
+dynamic programming
+\emph default
+.
+ The key to dynamic programming is to think of dynamic decisions being made
+ not once and for all, but recursively, i.e., time period by time period.
+ That is, the problem of
+\begin_inset Formula 
+\[
+{\displaystyle \max_{x_{1},x_{2}}}\ f(x_{1},x_{2})
+\]
+
+\end_inset
+
+is decomposed into subproblems:
+\begin_inset Formula 
+\[
+{\displaystyle \max_{x_{2}}}\ f(x_{1},x_{2}),\ \mbox{for fixed}\ x_{1}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\max_{x_{1}}\ f(x_{1},x_{2}^{*}(x_{1}))
+\]
+
+\end_inset
+
+In a sense, we are decomposing the the problem and using backward induction
+ to solve it.
+ Note that this may not work for all problems, but in for the problems we
+ solve, it does due to their special structure.
+ Now, we will present two separate formulations for a dynamic programming
+ problem.
+ Note that many economic problems can be constructed both ways, but this
+ may not always be the case.
+ To achieve the best results, choose the setup that makes the most sense
+ under the context of the problem.
+\end_layout
+
+\begin_layout Subsubsection
+Dynamic Programming Presented in Ljungqvist and Sargent (2004)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\beta\in(0,1)$
+\end_inset
+
+ be a discount factor.
+ We want to choose an infinite sequence of 
+\begin_inset Quotes eld
+\end_inset
+
+controls
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $\{u_{t}\}_{t=0}^{\infty}$
+\end_inset
+
+ to maximize
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}r(x_{t},u_{t})
+\end{equation}
+
+\end_inset
+
+subject to 
+\begin_inset Formula $x_{t+1}=g(x_{t},u_{t})$
+\end_inset
+
+, with 
+\begin_inset Formula $x_{0}\in\mathbb{R}^{n}$
+\end_inset
+
+ given.
+ We assume that the 
+\emph on
+per-period return function
+\emph default
+ 
+\begin_inset Formula $r(x_{t},u_{t})$
+\end_inset
+
+ is concave and that the set 
+\begin_inset Formula $\left\{ (x_{t+1},x_{t}):x_{t+1}\leq g(x_{t},u_{t}),u_{t}\in\mathbb{R}^{k}\right\} $
+\end_inset
+
+ is convex and compact.
+ Dynamic programming seeks a time-invariant 
+\emph on
+policy function
+\emph default
+ 
+\begin_inset Formula $h$
+\end_inset
+
+ mapping the 
+\emph on
+state
+\emph default
+ 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+ into the control 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+, such that the sequence 
+\begin_inset Formula $\{u_{s}\}_{s=0}^{\infty}$
+\end_inset
+
+ generated by iterating the two functions
+\begin_inset Formula 
+\begin{eqnarray}
+u_{t} & = & h(x_{t})\\
+x_{t+1} & = & g(x_{t},u_{t})
+\end{eqnarray}
+
+\end_inset
+
+starting from initial condition 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ at 
+\begin_inset Formula $t=0$
+\end_inset
+
+, solves the original problem.
+ A solution in the form of equations (4) and (5) is said to be 
+\emph on
+recursive
+\emph default
+.
+ To find the policy function 
+\begin_inset Formula $h$
+\end_inset
+
+ we need to know another function 
+\begin_inset Formula $V^{*}(x)$
+\end_inset
+
+ that expresses the optimal value of the original problem, starting from
+ an arbitrary initial condition 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+ This is called the 
+\emph on
+value function
+\emph default
+.
+ In particular, define
+\begin_inset Formula 
+\begin{equation}
+V^{*}(x_{0})={\displaystyle \max_{\{u_{s}\}_{s=0}^{\infty}}}\ {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}r(x_{t},u_{t})
+\end{equation}
+
+\end_inset
+
+where again the maximization is subject to 
+\begin_inset Formula $x_{t+1}=g(x_{t},u_{t})$
+\end_inset
+
+, with 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ given.
+ Of course, we cannot possibly expect to know 
+\begin_inset Formula $V^{*}(x_{0})$
+\end_inset
+
+ until after we have solved the problem, but let's proceed on faith.
+ If we knew 
+\begin_inset Formula $V^{*}(x_{0})$
+\end_inset
+
+, then the policy function 
+\begin_inset Formula $h$
+\end_inset
+
+ could be computed by solving for each 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ the problem
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \max_{u}}\ \left\{ r(x,u)+\beta V^{*}(\tilde{x})\right\} 
+\end{equation}
+
+\end_inset
+
+where the maximization is subject to 
+\begin_inset Formula $\tilde{x}=g(x,u)$
+\end_inset
+
+ with 
+\begin_inset Formula $x$
+\end_inset
+
+ given, and 
+\begin_inset Formula $\tilde{x}$
+\end_inset
+
+ denotes the state next period.
+ Thus, we have exchanged the original problem of finding an infinite 
+\emph on
+sequence
+\emph default
+ of controls that maximizes expression (3) for the problem of finding the
+ optimal value function 
+\begin_inset Formula $V(x)$
+\end_inset
+
+ and a function 
+\begin_inset Formula $h$
+\end_inset
+
+ that solves the continuum of maximum problems (7), one maximum problem
+ for each value of 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Our task has become jointly to solve for 
+\begin_inset Formula $V^{*}(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $h(x)$
+\end_inset
+
+, which are linked by the 
+\emph on
+Bellman equation
+\emph default
+
+\begin_inset Formula 
+\begin{equation}
+V^{*}(x)={\displaystyle \max_{u}}\ \left\{ r(x,u)+\beta V^{*}\left[g(x,u)\right]\right\} 
+\end{equation}
+
+\end_inset
+
+The maximizer of the right side of equation (8) is a 
+\emph on
+policy function
+\emph default
+ 
+\begin_inset Formula $h(x)$
+\end_inset
+
+ that satisfies
+\begin_inset Formula 
+\begin{equation}
+V^{*}(x)=r\left[x,h(x)\right]+\beta V^{*}\left\{ g\left[x,h(x)\right]\right\} 
+\end{equation}
+
+\end_inset
+
+Equation (8) or (9) is a 
+\emph on
+functional equation
+\emph default
+ to be solved for the pair of unknown functions 
+\begin_inset Formula $V^{*}(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $h(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In many problems, there is no unique way of defining states and controls,
+ and several alternative definitions lead to the same solution of the problem.
+\end_layout
+
+\begin_layout Example
+Here, we present two examples of formulating a dynamic programming problem.
+\end_layout
+
+\begin_layout Example
+
+\series bold
+Tree Cutting Problem
+\end_layout
+
+\begin_layout Example
+\begin_inset space \quad{}
+\end_inset
+
+Suppose a farm has a tree of size 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ denote the initial size of the tree, and let 
+\begin_inset Formula $p$
+\end_inset
+
+ be the the per-unit price of timber.
+ In each period 
+\begin_inset Formula $t$
+\end_inset
+
+, the farmer can choose either to cut the tree and sell it for 
+\begin_inset Formula $p\cdot x$
+\end_inset
+
+, or wait one more period.
+ If the farmer waits, then the tree grows according to 
+\begin_inset Formula $x_{t+1}=G(x_{t})$
+\end_inset
+
+, other wise 
+\begin_inset Formula $x_{t+1}=0$
+\end_inset
+
+.
+ The state space is 
+\begin_inset Formula $X=\mathbb{R}_{+}\cup\{0\}$
+\end_inset
+
+, and the state variable 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+ is the size of the tree at time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ The the control variable 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ denotes one of the two possible actions that can be taken, i.e., 
+\begin_inset Formula $u_{t}=\left\{ C,NC\right\} $
+\end_inset
+
+.
+ The transition of the state variable is
+\begin_inset Formula 
+\[
+x_{t+1}=g(x_{t},u_{t})=\begin{cases}
+G(x_{t}) & \mbox{if}\ u_{t}=NC\\
+0 & \mbox{if}\ u_{t}=C
+\end{cases}
+\]
+
+\end_inset
+
+while the per-period return function is
+\begin_inset Formula 
+\[
+r(x_{t},u_{t})=\begin{cases}
+0 & \mbox{if}\ u_{t}=NC\\
+x_{t} & \mbox{if}\ u_{t}=NC
+\end{cases}
+\]
+
+\end_inset
+
+
+\series bold
+Ramsey Problem
+\end_layout
+
+\begin_layout Example
+\begin_inset space \quad{}
+\end_inset
+
+The neoclassic growth model we have been studying can also be set up as
+ a dynamic programming problem.
+ The state space is 
+\begin_inset Formula $X=\mathbb{R}_{+}$
+\end_inset
+
+, and the state variable is 
+\begin_inset Formula $x_{t}=k_{t}$
+\end_inset
+
+, while 
+\begin_inset Formula $c_{t}$
+\end_inset
+
+ or 
+\begin_inset Formula $k_{t+1}$
+\end_inset
+
+ can be the control variable.
+ If 
+\begin_inset Formula $u_{t}=c_{t}$
+\end_inset
+
+, then 
+\begin_inset Formula $x_{t+1}=g(x_{t},u_{t})\equiv f(x_{t})-c_{t}$
+\end_inset
+
+, where 
+\begin_inset Formula $c_{t}$
+\end_inset
+
+ is variable.
+ If 
+\begin_inset Formula $u_{t}=k_{t+1}$
+\end_inset
+
+, then 
+\begin_inset Formula $x_{t+1}=g(u_{t})\equiv f(x_{t})-c_{t}$
+\end_inset
+
+, where 
+\begin_inset Formula $c_{t}$
+\end_inset
+
+ is constant.
+ The per-period return function is just the utility function, i.e., 
+\begin_inset Formula $r(x_{t},u_{t})=U(c_{t})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Under various particular assumptions about 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $g$
+\end_inset
+
+, it turns out that
+\end_layout
+
+\begin_layout Enumerate
+The functional equation (8) has a unique strictly concave solution.
+\end_layout
+
+\begin_layout Enumerate
+This solution is approached in the limit as 
+\begin_inset Formula $j\rightarrow\infty$
+\end_inset
+
+ by iterations on
+\begin_inset Formula 
+\[
+V_{j+1}(x)={\displaystyle \max_{u}}\left\{ r(x,u)+\beta V_{j}(\tilde{x})\right\} 
+\]
+
+\end_inset
+
+subject to 
+\begin_inset Formula $\tilde{x}=g(x,u)$
+\end_inset
+
+, 
+\begin_inset Formula $x$
+\end_inset
+
+ given, starting from any bounded and continuous intial 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+There is a unique and time-invariant optimal policy of the form 
+\begin_inset Formula $u_{t}=h(x_{t})$
+\end_inset
+
+, where 
+\begin_inset Formula $h$
+\end_inset
+
+ is chosen to maximize the right side of (6).
+\end_layout
+
+\begin_layout Enumerate
+Off corners, the limiting value function 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ is differentiable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Since the value function is differentiable, the first-order necessary condition
+ for problem (7) becomes
+\begin_inset Formula 
+\begin{equation}
+r_{u}(x,u)+\beta V^{*\prime}\left\{ g(x,u)\right\} g_{u}(x,u)=0
+\end{equation}
+
+\end_inset
+
+If we also assume that the policy function 
+\begin_inset Formula $h(x)$
+\end_inset
+
+ is differentiable, differentiation of expression (9) yields
+\begin_inset Formula 
+\begin{equation}
+V^{*\prime}(x)=r_{x}\left[x,h(x)\right]+r_{u}\left[x,h(x)\right]h^{\prime}(x)+\beta V^{*\prime}\left\{ g\left[x,h(x)\right]\right\} \left\{ g_{x}\left[x,h(x)\right]+g_{u}\left[x,h(x)\right]h^{\prime}(x)\right\} 
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+When the states and controls can be defined in such a way that only 
+\begin_inset Formula $u$
+\end_inset
+
+ appears in the transition equation, i.e., 
+\begin_inset Formula $\tilde{x}=g(u)$
+\end_inset
+
+: the derivative of the value function becomes, after substituting expression
+ (10) with 
+\begin_inset Formula $u=h(x)$
+\end_inset
+
+ into (11)
+\begin_inset Formula 
+\begin{equation}
+V^{*\prime}(x)=r_{x}\left[x,h(x)\right]
+\end{equation}
+
+\end_inset
+
+This is a version of a formula of Benveniste and Scheinkman (1979).
+ Moreover, the first-order condition for the problem on the right side of
+ the Bellman equation (expression (10)) in conjunction with the Beneveniste-Sche
+inkman formula (expression (12)) implies
+\begin_inset Formula 
+\[
+r_{u}(x_{t},u_{t})+\beta r_{x}(x_{t+1},u_{t+1})g^{\prime}(u_{t})=0,\ x_{t+1}=g(u_{t})
+\]
+
+\end_inset
+
+where the first equation is a version of the Euler equation.
+ Under circumstances in which the second equation can be inverted to yield
+ 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $x_{t+1}$
+\end_inset
+
+, using the second equation to eliminate 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ from the first equation produces a second-order difference equation in
+ 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+ since eliminating 
+\begin_inset Formula $u_{t+1}$
+\end_inset
+
+ brings in 
+\begin_inset Formula $x_{t+2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+
+\series bold
+A sample Euler equation
+\end_layout
+
+\begin_layout Example
+\begin_inset space \quad{}
+\end_inset
+
+As an example of an Euler equation, consider the Ramsey problem.
+ Let the state be 
+\begin_inset Formula $k$
+\end_inset
+
+ and the control be 
+\begin_inset Formula $k^{\prime}$
+\end_inset
+
+, where 
+\begin_inset Formula $k^{\prime}$
+\end_inset
+
+ denotes next period's value of 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ Substitute 
+\begin_inset Formula $c=f(k)-k^{\prime}$
+\end_inset
+
+ into the utility function and express the Bellman equation as
+\begin_inset Formula 
+\begin{equation}
+V^{*}(k)={\displaystyle \max_{\tilde{k}}}\left\{ u\left[f(k)-\tilde{k}\right]+\beta V^{*}(\tilde{k})\right\} 
+\end{equation}
+
+\end_inset
+
+Application of the Benveniste-Scheinkman formula gives
+\begin_inset Formula 
+\begin{equation}
+V^{*\prime}(k)=u^{\prime}\left[f(k)-\tilde{k}\right]f^{\prime}(k)
+\end{equation}
+
+\end_inset
+
+Notice that the first-order condition for the maximum problem on the right
+ side of equation (13) is 
+\begin_inset Formula $-u^{\prime}\left[f(k)-\tilde{k}\right]+\beta V^{\prime}(\tilde{k})=0$
+\end_inset
+
+, which, using equation (14), gives
+\begin_inset Formula 
+\begin{equation}
+u^{\prime}\left[f(k)-\tilde{k}\right]=\beta u^{\prime}\left[f(\tilde{k})-\hat{k}\right]f^{\prime}(k^{\prime})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{k}$
+\end_inset
+
+ denotes the two-period-ahead value of 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ Equation (15) can be expressed as
+\begin_inset Formula 
+\[
+1=\beta\frac{u^{\prime}(c_{t+1})}{u^{\prime}(c_{t})}f^{\prime}(k_{t+1})
+\]
+
+\end_inset
+
+an Euler equation that is exploited extensively in the theories of finance,
+ growth, and real business cycles.
+\end_layout
+
+\begin_layout Subsubsection
+Dyanmic Programming Presented in Class
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Formally, a dynamic progamming problem is a problem with the following structure
+: once can capture all relevant information for the decision maker in a
+ state variable.
+\end_layout
+
+\begin_layout Enumerate
+We have a state space 
+\begin_inset Formula $X$
+\end_inset
+
+, which must be low-dimension, and 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ is called a state variable.
+ There are three notable characteristics that the state variable must satisfy:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $x_{t}$
+\end_inset
+
+ must be relevant to the optimizaiton problem at 
+\begin_inset Formula $t$
+\end_inset
+
+, and it must contain all the relevant information of the history.
+\end_layout
+
+\begin_layout Enumerate
+Once the level of the state variable is known, it doesn't matter how it
+ is obtained in the past (a state variable is a sufficient statistic).
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $x_{t}=x_{s}$
+\end_inset
+
+ for 
+\begin_inset Formula $t\neq s$
+\end_inset
+
+, then the problem starting at 
+\begin_inset Formula $t$
+\end_inset
+
+ is the same as the problem starting at 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $s$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\Gamma(x_{t})$
+\end_inset
+
+ describes the feasibility set for 
+\begin_inset Formula $x_{t+1}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Gamma:X\rightrightarrows X$
+\end_inset
+
+ is known as the feasibility correspondence, and 
+\begin_inset Formula $x_{t+1}\in\Gamma(x_{t})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $F(x_{t},x_{t+1})$
+\end_inset
+
+ is known as the per-period return function.
+\end_layout
+
+\begin_layout Standard
+The value function of the sequential problem is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+V^{*}(x_{0})={\displaystyle \max_{\{x_{t+1}\}_{t=0}^{\infty}}} & {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}F(x_{t},x_{t+1})\\
+\mbox{s.t.} & x_{t+1}\in\Gamma(x_{t})\\
+ & x_{0}\ \mbox{is given}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula $V^{*}(x_{0})$
+\end_inset
+
+ is a system of equations, and the number of equations equals the number
+ of points in the state space.
+ So, there is an equation associated with every point in the state space.
+ 
+\begin_inset Formula $v(x_{0})$
+\end_inset
+
+ is necessary to find 
+\begin_inset Formula $V^{*}(x_{0})$
+\end_inset
+
+, which is the optimal value function, but it is not sufficient since 
+\begin_inset Formula $v(x_{0})$
+\end_inset
+
+ may not equal 
+\begin_inset Formula $V^{*}(x_{0})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+We present the same two examples from before, but under the context of the
+ new formulation that was just presented.
+\end_layout
+
+\begin_layout Example
+
+\series bold
+Tree Cutting Problem
+\end_layout
+
+\begin_layout Example
+\begin_inset space \quad{}
+\end_inset
+
+Suppose a farm has a tree of size 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ denote the initial size of the tree, and let 
+\begin_inset Formula $p$
+\end_inset
+
+ be the the per-unit price of timber.
+ In each period 
+\begin_inset Formula $t$
+\end_inset
+
+, the farmer can choose either to cut the tree and sell it for 
+\begin_inset Formula $p\cdot x$
+\end_inset
+
+, or wait one more period.
+ If the farmer waits, then the tree grows according to 
+\begin_inset Formula $x_{t+1}=G(x_{t})$
+\end_inset
+
+, other wise 
+\begin_inset Formula $x_{t+1}=0$
+\end_inset
+
+.
+ The state space is 
+\begin_inset Formula $X=\mathbb{R}_{+}\cup\{0\}$
+\end_inset
+
+, and the state variable 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+ is the size of the tree at time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ The feasibility correspondence is given by
+\begin_inset Formula 
+\[
+\Gamma(x_{t})=\begin{cases}
+\left\{ 0,G(x)\right\}  & \mbox{if}\ x_{t}>0\\
+\{0\} & \mbox{if}\ x_{t}=0
+\end{cases}
+\]
+
+\end_inset
+
+while the per-period return function is
+\begin_inset Formula 
+\[
+F(x_{t},x_{t+1})=\begin{cases}
+0 & \mbox{if}\ x_{t+1}=G(x)\\
+p\cdot x_{t} & \mbox{if}\ x_{t+1}=0
+\end{cases}
+\]
+
+\end_inset
+
+
+\series bold
+Ramsey Problem
+\end_layout
+
+\begin_layout Example
+\begin_inset space \quad{}
+\end_inset
+
+The neoclassic growth model we have been studying can also be set up as
+ a dynamic programming problem.
+ The state space is 
+\begin_inset Formula $X=\mathbb{R}_{+}$
+\end_inset
+
+, and the state variable is 
+\begin_inset Formula $x_{t}=k_{t}$
+\end_inset
+
+.
+ The feasibility set is 
+\begin_inset Formula $x_{t+1}\in\left[0,f(x_{t})\right]\equiv\Gamma(x_{t})$
+\end_inset
+
+, where 
+\begin_inset Formula $f(x_{t})\equiv F(x_{t},1)+(1-\delta)x_{t}$
+\end_inset
+
+, and the per-period return function is 
+\begin_inset Formula $F(x_{t},x_{t+1})=u(f(x_{t})-x_{t+1})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now turn our attention to the Bellman equaiton, which is also known as
+ the functional equation.
+ 
+\begin_inset Formula 
+\[
+v(x_{0})={\displaystyle \max_{x_{1}\in\Gamma(x_{0})}}F(x_{0},x_{1})+\beta v(x_{1});\ \forall\ x_{0}\in X
+\]
+
+\end_inset
+
+This represents a system of equations where the number of equations equals
+ the number of unknown variables.
+ Important to note, the value obtained from solving the problem 
+\begin_inset Quotes eld
+\end_inset
+
+once and for all
+\begin_inset Quotes erd
+\end_inset
+
+ equals the value obtained from the optimization of two decomposed parts.
+ Solving the Bellman equation helps to fund the optimal policy funciton
+ 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+, which depends only on 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+V^{*}(x_{0})={\displaystyle \max_{x_{1}\in\Gamma(x_{0})}}F(x_{0},x_{1})+\beta V^{*}(x_{1}),\ \forall\ x_{0}\in X
+\]
+
+\end_inset
+
+The collection of maximizers of the BE, 
+\begin_inset Formula $h(x_{0})$
+\end_inset
+
+, is called the policy correspondence.
+ When the maximizer is unique, it is called the policy function.
+ As shown before, we can use the Bellman equation, along with the Envelope
+ Theorem, to find the derivative of 
+\begin_inset Formula $V^{*}(x)$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ It is useful to obtain 
+\begin_inset Formula $V^{*\prime}(x)$
+\end_inset
+
+ because it can be used to help derive the steady state solution of the
+ optimal path, and it is sometimes used in numerical methods to calculate
+ 
+\begin_inset Formula $V^{*}(x)$
+\end_inset
+
+.
+ The first-order condition of the right side of the BE is
+\begin_inset Formula 
+\[
+\frac{\partial F(x_{0},x_{1})}{\partial x_{1}}+\beta V^{*\prime}(x_{1})=0;\ \forall\ x_{0}\in X
+\]
+
+\end_inset
+
+Then, taking the derivative with respect to 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ and applying the Envelope Theorem, we obtain 
+\begin_inset Formula 
+\begin{eqnarray*}
+V^{*\prime}(x_{0}) & = & \frac{\partial F(x_{0},x_{1})}{\partial x_{0}}+\frac{\partial F(x_{0},x_{1})}{\partial x_{1}}h^{\prime}(x_{0})+\beta V^{*^{\prime}}(x_{1})h^{\prime}(x_{0})\\
+ & = & \frac{\partial F(x_{0},x_{1})}{\partial x_{0}}+\left[\frac{\partial F(x_{0},x_{1})}{\partial x_{1}}+\beta V^{*^{\prime}}(x_{1})\right]h^{\prime}(x_{0})\\
+V^{*\prime}(x_{0}) & = & \frac{\partial F(x_{0},x_{1})}{\partial x_{0}}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{1}=h(x_{0})$
+\end_inset
+
+.
+ As shown in a past example, we can reproduce the Euler equation from the
+ growth model using the results above.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\shape up
+(Theorem 4.2 in Stokey, Lucas and Prescott (SLP)).
+
+\series default
+ 
+\emph on
+
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ satisfies the functional equation.
+\end_layout
+
+\begin_layout Example
+Let us consider the case of Cobb-Douglas transition and logarithmic preferences.
+ We want to find the optimal value function
+\begin_inset Formula 
+\begin{eqnarray*}
+V^{*}(k_{0})={\displaystyle \sup_{\{k_{t+1}\}_{t=0}^{\infty}}} & {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\log(Ak_{t}^{\alpha}-k_{t+1}) & {\displaystyle }\\
+\mbox{s.t.} & k_{t+1}\in\left[0,Ak_{t}^{\alpha}\right]\\
+ & k_{0}>0\ \mbox{is given}
+\end{eqnarray*}
+
+\end_inset
+
+and show that it satises the functional equation (FE).
+ In the previous subsection, we proved that 
+\begin_inset Formula $h(k_{t})=\alpha\beta Ak_{t}^{\alpha}$
+\end_inset
+
+ is the optimal policy function, and that it converges to a steady state,
+ i.e., 
+\begin_inset Formula $h(k^{*})=k^{*}$
+\end_inset
+
+.
+ It was also shown that 
+\begin_inset Formula $\log k_{t}-\log k^{*}=\alpha^{t}\left(\log k_{0}-\log k^{*}\right)$
+\end_inset
+
+.
+ So, we can compute the value function
+\begin_inset Formula 
+\begin{eqnarray*}
+V^{*}(k_{0}) & = & {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\log(Ak_{t}^{\alpha}-k_{t+1})\\
+ & = & {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\log\left((1-\alpha\beta)Ak_{t}^{\alpha}\right)\\
+ & = & {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\log\left((1-\alpha\beta)A\right)+{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\alpha\log k_{t}\\
+ & = & \frac{\log\left((1-\alpha\beta)A\right)}{1-\beta}+{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\alpha\left[\log k^{*}+\alpha^{t}\left(\log k_{0}-\log k^{*}\right)\right]\\
+ & = & \frac{\log\left((1-\alpha\beta)A\right)}{1-\beta}+\frac{\alpha\log k^{*}}{1-\beta}+{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\alpha\alpha^{t}\left(\log k_{0}-\log k^{*}\right)\\
+ & = & \frac{\log\left((1-\alpha\beta)A\right)}{1-\beta}+\frac{\alpha\log k^{*}}{1-\beta}+\frac{\alpha\left(\log k_{0}-\log k^{*}\right)}{1-\alpha\beta}\\
+ & = & \frac{\log\left((1-\alpha\beta)A\right)}{1-\beta}+\frac{\alpha\beta\log(\alpha\beta A)}{(1-\beta)(1-\alpha\beta)}+\frac{\alpha\log(k_{0})}{1-\alpha\beta}
+\end{eqnarray*}
+
+\end_inset
+
+which is the left side of the Bellman equation.
+ Now, we verify that it equals the right side
+\begin_inset Formula 
+\begin{eqnarray*}
+\mbox{right side} & = & {\displaystyle \max_{k^{\prime}}\left\{ \log\left(Ak_{0}^{\alpha}-k^{\prime}\right)+\beta\left[\frac{\log\left((1-\alpha\beta)A\right)}{1-\beta}+\frac{\alpha\beta\log(\alpha\beta A)}{(1-\beta)(1-\alpha\beta)}+\frac{\alpha\log(k^{\prime})}{1-\alpha\beta}\right]\right\} }\\
+ & = & \log\left((1-\alpha\beta)Ak^{\alpha}\right)+\beta\left[\frac{\log\left((1-\alpha\beta)A\right)}{1-\beta}+\frac{\alpha\beta\log(\alpha\beta A)}{(1-\beta)(1-\alpha\beta)}+\frac{\alpha\log(\alpha\beta Ak_{0}^{\alpha})}{1-\alpha\beta}\right]\\
+ & = & \frac{\log\left((1-\alpha\beta)A\right)}{1-\beta}+\alpha\log k_{0}+\beta\left[\frac{\alpha\beta\log(\alpha\beta A)}{(1-\beta)(1-\alpha\beta)}+\frac{\alpha\log(\alpha\beta A)}{1-\alpha\beta}+\frac{\alpha^{2}\log k_{0}}{1-\alpha\beta}\right]\\
+ & = & \frac{\log\left((1-\alpha\beta)A\right)}{1-\beta}+\frac{\alpha\beta\log(A\alpha\beta)}{(1-\beta)(1-\alpha\beta)}+\alpha\log k_{0}+\frac{\alpha^{2}\beta\log k_{0}}{1-\alpha\beta}\\
+ & = & \frac{\log\left((1-\alpha\beta)A\right)}{1-\beta}+\frac{\alpha\beta\log(A\alpha\beta)}{(1-\beta)(1-\alpha\beta)}+\frac{\alpha\log k_{0}}{1-\alpha\beta}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the optimal value function satisfies the Bellman equation (BE).
+\end_layout
+
+\begin_layout Remark
+In the example above, we began with the optimal policy function, then we
+ derived the optimal value function, and finally, we verified 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ satisfied the BE.
+ In general, we are unable to follow this progression.
+ For most dynamic programming problems, we use the BE to derive the optimal
+ value funciton, which express the optimal value of the original problem
+ starting from an arbitrary initial condition.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\shape up
+(Theorem 4.3 in SLP).
+ 
+\series default
+\emph on
+If 
+\begin_inset Formula $v$
+\end_inset
+
+ satisfies the FE and for all 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ and for all feasible sequences 
+\begin_inset Formula $(x_{0},x_{1},\ldots,x_{t},\ldots)\in\Pi(x_{0})$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+{\displaystyle \lim_{t\rightarrow\infty}}\ \beta^{t}v(x_{t})=0
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula $v=V^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+The transversality condition presented in Theorem 5 is much stronger than
+ the one given in the previous section.
+\end_layout
+
+\begin_layout Corollary
+If 
+\begin_inset Formula $v$
+\end_inset
+
+ is a bounded function that satisfies the FE, then 
+\begin_inset Formula $v=V^{*}$
+\end_inset
+
+ and this bounded solution is unique.
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $X=\mathbb{R}_{++}$
+\end_inset
+
+, 
+\begin_inset Formula $F(x_{t},x_{t+1})=0$
+\end_inset
+
+, 
+\begin_inset Formula $\Gamma(x_{t})=\left[x_{t},x_{t+1}\right]$
+\end_inset
+
+.
+ In this setup, 
+\begin_inset Formula $V^{*}=0$
+\end_inset
+
+, but the FE allows for other solutions besides 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+.
+ For instance, consider the following unbounded function that satisfies
+ the FE
+\begin_inset Formula 
+\[
+V(x)=\begin{cases}
+0 & \mbox{if}\ x=0\\
+1 & \mbox{if}\ 0<x\leq1\\
+\nicefrac{1}{\beta} & \mbox{if}\ 1<x\leq2\\
+\left(\nicefrac{1}{\beta}\right)^{n} & \mbox{if}\ n<x\leq n+1
+\end{cases}
+\]
+
+\end_inset
+
+However, 
+\begin_inset Formula $v\neq V^{*}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $v(x)$
+\end_inset
+
+ does not satisfy the transversality condition of Theorem 5.
+ In this example, the FE has a continuum of solutions, but only 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ is bounded.
+\end_layout
+
+\begin_layout Subsubsection
+Value Function Iteration
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The main type of computation methods for solving dynamic programs aims to
+ solve the functional equation.
+ The primary method is known as 
+\emph on
+value function iteration 
+\emph default
+(VFI) or 
+\emph on
+iterating on the Bellman equation
+\emph default
+.
+ It proceeds by constructing a sequence of value functions and associated
+ policy functions.
+ The sequence is created by iterating on the following equation, starting
+ from 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+, and continuing until 
+\begin_inset Formula $V_{j}$
+\end_inset
+
+ has converged:
+\begin_inset Formula 
+\begin{equation}
+V_{j+1}(x)={\displaystyle \max_{u}}\left\{ r(x,u)+\beta V_{j}(\tilde{x})\right\} 
+\end{equation}
+
+\end_inset
+
+subject to 
+\begin_inset Formula $\tilde{x}=g(x,u)$
+\end_inset
+
+, 
+\begin_inset Formula $x$
+\end_inset
+
+ given.
+\end_layout
+
+\begin_layout Definition
+The Contraction Mapper Operator 
+\begin_inset Formula $T:\{v:X\rightarrow\mathbb{R}\}\rightarrow\{v:X\rightarrow\mathbb{R}\}$
+\end_inset
+
+ is a function on a state space 
+\begin_inset Formula $X$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $v\rightarrow Tv$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+(Tv)(x)=\max_{y\in\Gamma(x)}F(x,y)+\beta v(y)
+\]
+
+\end_inset
+
+If 
+\begin_inset Formula $Tv=v$
+\end_inset
+
+, then 
+\begin_inset Formula $v$
+\end_inset
+
+ is a fixed point of the operator 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Important to note, 
+\begin_inset Formula $v$
+\end_inset
+
+ satisfies the BE if and only if 
+\begin_inset Formula $v$
+\end_inset
+
+ is a fixed point of operator 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+We now present three important properties of the contraction mapping operator.
+ These properties rely on the sufficient condition that the per-period return
+ function, 
+\begin_inset Formula $F:X\times X\rightarrow\mathbb{R}$
+\end_inset
+
+, is bounded.
+ So, we assume that 
+\begin_inset Formula $\exists\ B>0,\forall\ (x,y)\in X\times X:|F(x,y)|\leq B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ becomes a mapping from a bounded function to a bounded function, 
+\begin_inset Formula $T:B(x)\rightarrow B(x)$
+\end_inset
+
+, where the metric space 
+\begin_inset Formula $B(x)\equiv\left\{ v:X\rightarrow\mathbb{R}\right\} $
+\end_inset
+
+ is a collection of bounded functions.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P(Tv_{1},Tv_{2})\leq\beta\cdot P(v_{1},v_{2});\ \forall\ v_{1},v_{2}\in B(x)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P$
+\end_inset
+
+ is the metric function defined on the metric space 
+\begin_inset Formula $B(x)$
+\end_inset
+
+ that gives the distance between two functions, i.e., 
+\begin_inset Formula $P(v_{1},v_{2})=\max_{x\in X}\left\Vert v_{1}(x)-v_{2}(x)\right\Vert $
+\end_inset
+
+.
+ This property states that the distance between two transformed functions
+ is less than or equal to the distance between the two original functions.
+\end_layout
+
+\begin_layout Enumerate
+There is a unique fixed point of 
+\begin_inset Formula $T$
+\end_inset
+
+ in 
+\begin_inset Formula $B(x)$
+\end_inset
+
+, denoted as 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The assumption and its consequences are characterized in the following theorem.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\shape up
+(VFI).
+
+\series default
+ 
+\emph on
+If the per-period return function is bounded, then 
+\begin_inset Formula $T$
+\end_inset
+
+ maps from a bounded function to a bounded function, and 
+\begin_inset Formula $T^{j}(v)$
+\end_inset
+
+ converges to a fixed point of 
+\begin_inset Formula $T$
+\end_inset
+
+ uniformly for any bounded function 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ This fixed point of 
+\begin_inset Formula $T$
+\end_inset
+
+ in 
+\begin_inset Formula $B(x)$
+\end_inset
+
+ is unique and bounded, and hence, it is 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+We don't know 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+, so we need to establish a procedure to find it.
+ First, we start with an aribtrary value function 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+, and then we iterate on operator 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{gather*}
+v_{0}\\
+v_{0}=Tv_{0}\\
+v_{2}=Tv_{1}=T(Tv_{0})=T^{2}v_{0}\\
+\vdots\\
+v_{n+1}=T(v_{n})=T(T^{n-1}v_{0})=T^{n}v_{0}
+\end{gather*}
+
+\end_inset
+
+We can think of VFI as a type of backward induction: 
+\begin_inset Formula $v$
+\end_inset
+
+ is the value function of the last period, 
+\begin_inset Formula $Tv$
+\end_inset
+
+ is the value function with 1 period left, 
+\begin_inset Formula $T^{2}v$
+\end_inset
+
+ is the value function with 2 periods left, etc.
+ Also, 
+\begin_inset Formula $T$
+\end_inset
+
+ is just solving the maximization problem on the right side of the Bellman
+ equation.
+ According to Theorem 6, if the per-period function is bounded, then there
+ exists a fixed point (a function) 
+\begin_inset Formula $\bar{V}$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\lim_{n\rightarrow\infty}P\left(T^{n}v,\bar{V}\right)=\lim_{n\rightarrow\infty}\left\{ \max_{x\in X}\left\Vert T^{n}v(x)-\bar{V}(x)\right\Vert \right\} =0$
+\end_inset
+
+.
+ This means that the sequence of functions, 
+\begin_inset Formula $T^{n}v$
+\end_inset
+
+, uniformly converges to 
+\begin_inset Formula $\bar{V}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\bar{V}=T\bar{V}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\bar{V}$
+\end_inset
+
+is a fixed point of the operator 
+\begin_inset Formula $T$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\bar{V}=V^{*}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\bar{V}$
+\end_inset
+
+ is a solution of the BE and it equals the optimal value function.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+The number of iterations need to obtain 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ is unknown.
+ Also, if the per-period return function is unbounded, then Theorem 6 does
+ not hold, so the convergence of 
+\begin_inset Formula $T^{n}(v)$
+\end_inset
+
+ is not guaranteed.
+\end_layout
+
+\begin_layout Example
+Once again, we consider the growth model with Cobb-Douglas production and
+ logarithmic preferences.
+ Even though the utility function is unbounded, convergence still occurs.
+ In previous examples, we have derived the optimal value function, the optimal
+ policy function, and the steady state values.
+ However, in this example, we show how to employ the method of VFI, as well
+ as 
+\begin_inset Quotes eld
+\end_inset
+
+Guess and Verify,
+\begin_inset Quotes erd
+\end_inset
+
+ to achieve the desired results.
+\end_layout
+
+\begin_layout Example
+Let our initial guess be 
+\begin_inset Formula $v_{0}(k)=0$
+\end_inset
+
+.
+ Then, we solve the one period problem
+\begin_inset Formula 
+\begin{eqnarray*}
+Tv(k) & = & \max_{k^{\prime}\in\left[0,Ak^{\alpha}\right]}\log(Ak^{\alpha}-k^{\prime})+\beta v_{0}(k^{\prime})\\
+ & = & \max_{k^{\prime}\in\left[0,Ak^{\alpha}\right]}\log(Ak^{\alpha}-k^{\prime})
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $k^{\prime}$
+\end_inset
+
+ is next period's value and 
+\begin_inset Formula $k$
+\end_inset
+
+ is this period's value of the capital stock.
+ The solution is evidently to set 
+\begin_inset Formula $k^{\prime}=0$
+\end_inset
+
+, which produces an optimized value
+\begin_inset Formula 
+\begin{eqnarray}
+v_{1}(k) & = & \log A+\alpha\log k\nonumber \\
+ & = & E_{1}+F_{1}\log k
+\end{eqnarray}
+
+\end_inset
+
+Now, using the same structure of equation (17), suppose
+\begin_inset Formula 
+\begin{equation}
+v_{i}(k)=E_{i}+F_{i}\log k
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $E_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{i}$
+\end_inset
+
+ are undetermined constants and 
+\begin_inset Formula $T^{i}v_{0}(k)=v_{i}$
+\end_inset
+
+.
+ The left and right sides of equation (18) must agree for all values 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ So, the next iteration on the BE is
+\begin_inset Formula 
+\begin{equation}
+v_{i+1}(k)={\displaystyle \max_{k^{\prime}}}\left\{ \log(Ak^{\alpha}-k^{\prime})+\beta\left[E_{i}+F_{i}\log k^{\prime}\right]\right\} 
+\end{equation}
+
+\end_inset
+
+The first-order necessary conditions for the maximum problem on the right
+ side of equation (19) is
+\begin_inset Formula 
+\[
+\frac{1}{Ak^{\alpha}-k^{\prime}}-\beta\frac{F_{i}}{k^{\prime}}=0
+\]
+
+\end_inset
+
+which implies the following formula for the optimal policy 
+\begin_inset Formula $k^{\prime}=h(k)$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+k^{\prime}=\frac{\beta F_{i}}{1+\beta F_{i}}Ak^{\alpha}
+\end{equation}
+
+\end_inset
+
+For the next iteration of 
+\begin_inset Formula $T$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\begin{equation}
+Tv_{i}(k)=E_{i+1}+F_{i+1}\log k
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $Tv_{i}(k)=v_{i+1}$
+\end_inset
+
+.
+ Substitute equation (20) into the Bellman equation (19) and equate the
+ result to the right side of equation (21).
+\begin_inset Formula 
+\[
+E_{i+1}+F_{i+1}\log k=\log\left(\frac{A}{1+\beta F_{i}}\right)+\alpha\log k+\beta E_{i}+\beta F_{i}\log\left(\frac{\beta F_{i}A}{1+\beta F_{i}}\right)+\beta F_{i}\alpha\log k
+\]
+
+\end_inset
+
+Solving the resulting equation for 
+\begin_inset Formula $E_{i+1}$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{i+1}$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{i+1} & = & \log\left(\frac{A}{1+\beta F_{i}}\right)+\beta F_{i}\log\left(\frac{\beta F_{i}A}{1+\beta F_{i}}\right)+\beta E_{i}\\
+F_{i+1} & = & \alpha+\alpha\beta F_{i}
+\end{eqnarray*}
+
+\end_inset
+
+First, we solve for 
+\begin_inset Formula $F_{i}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{0} & = & 0\\
+\beta F_{1} & = & \alpha\beta\\
+\beta F_{2} & = & \alpha\beta+(\alpha\beta)^{2}\\
+ & \vdots\\
+\beta F_{n} & = & {\displaystyle \sum_{i=1}^{n}}\left(\alpha\beta\right)^{i}\\
+{\displaystyle \lim_{n\rightarrow\infty}}\ \beta F_{n} & = & \frac{\alpha\beta}{1-\alpha\beta}\\
+F_{\infty} & = & \frac{\alpha}{1-\beta}
+\end{eqnarray*}
+
+\end_inset
+
+Next, we solve for 
+\begin_inset Formula $E_{i}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{1} & = & \log A\\
+E_{2} & = & \log\left(\frac{A}{1+\beta F_{1}}\right)+\beta F_{1}\log\left(\frac{A\beta F_{1}}{1+\beta F_{1}}\right)+\beta\log A\\
+ & \vdots
+\end{eqnarray*}
+
+\end_inset
+
+In Assignment 3, we show that 
+\begin_inset Formula 
+\[
+{\displaystyle \lim_{n\rightarrow\infty}}\ E_{n}=\frac{\log\left(\frac{A}{1+\beta F_{\infty}}\right)}{1-\beta}+\frac{\beta F_{\infty}\log\left(\frac{A\beta F_{\infty}}{1+\beta F_{\infty}}\right)}{1-\beta}
+\]
+
+\end_inset
+
+Equation (20) shows that the optimal policy is to have capital move according
+ to the difference equation
+\begin_inset Formula 
+\[
+k_{t+1}=A\beta\alpha k_{t}^{\alpha}
+\]
+
+\end_inset
+
+That 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is less than 
+\begin_inset Formula $1$
+\end_inset
+
+ implies that 
+\begin_inset Formula $k_{t}$
+\end_inset
+
+ converges as 
+\begin_inset Formula $t$
+\end_inset
+
+ approaches infinity for any positive initial value 
+\begin_inset Formula $k_{0}$
+\end_inset
+
+.
+ The steady state, or stationary point, is given by the solution
+\begin_inset Formula 
+\begin{eqnarray*}
+k_{\infty} & = & A\beta\alpha k_{\infty}^{\alpha}\\
+k_{\infty} & = & \left(A\beta\alpha\right)^{\frac{1}{1-\alpha}}
+\end{eqnarray*}
+
+\end_inset
+
+In this example, we used VFI on the BE to obtain the optimal policy function,
+ 
+\begin_inset Formula $k^{\prime}=h(k)$
+\end_inset
+
+, and the optimal value function, 
+\begin_inset Formula $V^{*}(k_{0})$
+\end_inset
+
+, which is the proper method to solve a dynamic programming problem.
+\end_layout
+
+\begin_layout Remark
+In general, it is typically impossible analytically to compute even one
+ iteration for VFI.
+ This fact thrusts us into the domain of computational methods for approximating
+ solutions: pencil and paper are insufficient
+\end_layout
+
+\begin_layout Subsection
+Stochasic Control Problems
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now consider a modification of problem (3) to permit uncertainty.
+ Essentially, we add some well-placed shocks to the previous nonstochastic
+ problem.
+ So long as the shocks are either independently and identically distributed
+ or Markov, straightforward modifications of the method for handling the
+ nonstochastic problem will work.
+\end_layout
+
+\begin_layout Subsubsection
+Markov Chain
+\end_layout
+
+\begin_layout Definition
+A 
+\series bold
+Markov chain
+\series default
+, 
+\begin_inset Formula $\{s_{t}:t=1,2,\ldots\}$
+\end_inset
+
+ is a sequnce of random variables with a state space 
+\begin_inset Formula $\{\bar{s}_{i}:i=1,2,\ldots,n\}$
+\end_inset
+
+ and with their transitional probability described by a transition matrix
+ 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+; 
+\begin_inset Formula $\mbox{Pr}(s_{t+1}=\bar{s}_{j}|s_{t}=\bar{s}_{i})=\mathcal{P}_{ij}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{gather*}
+\mbox{Pr}(s_{0})\ \mbox{initial condition}\\
+\mbox{Pr}(s_{0},s_{1})=\mbox{Pr}(s_{0})\mbox{Pr}(s_{1}|s_{0})\\
+\mbox{Pr}(s_{0},s_{1},s_{2})=\mbox{Pr}(s_{0})\mbox{Pr}(s_{1}|s_{0})\mbox{Pr}(s_{2}|s_{1})\\
+\vdots
+\end{gather*}
+
+\end_inset
+
+The rows of the matrix signify the current state, while the columns are
+ the future state.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\left[\begin{array}{cc}
+0.8 & 0.2\\
+0.1 & 0.9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+If 
+\begin_inset Formula $\mbox{Pr}(1)=\mbox{Pr}(2)=0.5$
+\end_inset
+
+, then compute 
+\begin_inset Formula $\mbox{Pr}(1,1,1)$
+\end_inset
+
+, 
+\begin_inset Formula $\mbox{Pr}(2,2,2)$
+\end_inset
+
+, and 
+\begin_inset Formula $\mbox{Pr}(1,2,1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+(A Markov chain is memoryless)
+\series default
+ A Markov chain satisfies the property that
+\begin_inset Formula 
+\[
+\mbox{Pr}(s_{t+1}|s_{t},s_{t-1},\ldots,s_{1},s_{0})\equiv\frac{\mbox{Pr}(s_{0},s_{1},\ldots,s_{t-1},s_{t},s_{t+1})}{\mbox{Pr}(s_{0},s_{1},\ldots,s_{t-1},s_{t})}
+\]
+
+\end_inset
+
+does note depend on 
+\begin_inset Formula $(s_{0},s_{1},\ldots,s_{t-1})$
+\end_inset
+
+, i.e., it is independent of the histories, which is different from other
+ arbitrary stochastic processes.
+ This 
+\series bold
+memoryless
+\series default
+ property is an equivalent definition of a Markov chain.
+\end_layout
+
+\begin_layout Example
+i.i.d.
+ shocks is a Markov chain where 
+\begin_inset Formula $P_{ij}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ In general, however, Markov chains may not be able to be formulated as
+ i.i.d.
+ shocks.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The value function of the sequential problem with uncertainty becomes:
+\begin_inset Formula 
+\begin{eqnarray*}
+V^{*}(x_{0},s_{0})=\sup_{\{x_{t+1}\}_{t=0}^{\infty}} & {\displaystyle E\left[{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}F(x_{t},s_{t},x_{t+1})\right]}\\
+\mbox{s.t.} & x_{t+1}\in\Gamma(x_{t},s_{t})\\
+ & x_{0},s_{0}\ \mbox{are given}
+\end{eqnarray*}
+
+\end_inset
+
+and the Bellman equation can be written as
+\begin_inset Formula 
+\[
+V^{*}(x_{0},\bar{s}_{i})={\displaystyle \max_{x_{1}\in\Gamma(x_{0},\bar{s}_{i})}}F(x_{0},\bar{s}_{i},x_{1})+\beta{\displaystyle \sum_{j=1}^{n}}\mathcal{P}_{ij}V^{*}(x_{1},\bar{s}_{j});\ \forall\ x_{0},s_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Stochastic Dynamic Programming Presented in Ljungqvist and Sargent (2004)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Thus, we modify the transition equation and consider the problem of maximizing
+\begin_inset Formula 
+\begin{equation}
+E_{0}\left[{\displaystyle \sum_{i=1}^{n}}\beta^{t}r(x_{t},u_{t})\right],\ 0<\beta<1
+\end{equation}
+
+\end_inset
+
+subject to
+\begin_inset Formula 
+\begin{equation}
+x_{t+1}=g(x_{t},u_{t},\epsilon_{t+1})
+\end{equation}
+
+\end_inset
+
+with 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon_{0}$
+\end_inset
+
+ known and given at 
+\begin_inset Formula $t=0$
+\end_inset
+
+, where 
+\begin_inset Formula $\epsilon_{t}$
+\end_inset
+
+ is a sequence of independently and identically distributed random variables
+ with cumulative probablity distribution function 
+\begin_inset Formula $\mbox{prob}\{\epsilon_{t}\leq e\}=F(e)$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+; 
+\begin_inset Formula $E_{t}(y)$
+\end_inset
+
+ denotes the mathematical expectation of a random variable 
+\begin_inset Formula $y$
+\end_inset
+
+, given information known at 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ At time 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+ is assumed to be known, but 
+\begin_inset Formula $x_{t+j}$
+\end_inset
+
+, 
+\begin_inset Formula $j\geq1$
+\end_inset
+
+ is not known at 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ In problem (22)-(23), uncertainty is injected by assuming that 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+ follows a random difference equation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Problem (22)-(23) continues to have a recursive structure, stemming jointly
+ form the additive separability of the objective function (22) in pairs
+ 
+\begin_inset Formula $(x_{t},u_{t})$
+\end_inset
+
+ and from the difference equation characterization of the transition law
+ (23).
+ In particular, controls dated 
+\begin_inset Formula $t$
+\end_inset
+
+ affect returns 
+\begin_inset Formula $r(x_{s},u_{s})$
+\end_inset
+
+ for 
+\begin_inset Formula $s\geq t$
+\end_inset
+
+, but not earlier.
+ This feature implies that dynamic programming methods remain appropriate.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The problem is to maximize the expression (22) subject to equation (23)
+ by choice of a 
+\begin_inset Quotes eld
+\end_inset
+
+policy
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+contingency plan
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $u_{t}=h(x_{t})$
+\end_inset
+
+.
+ The Bellman equation becomes
+\begin_inset Formula 
+\begin{equation}
+V^{*}(x)={\displaystyle \max_{u}\left[r(x,u)+\beta E\left\{ V^{*}\left[g(x,u,\epsilon)\right]|x\right\} \right]}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $E\left\{ V^{*}\left[g(x,u,\epsilon)\right]|x\right\} =\int V^{*}\left[g(x,u,\epsilon)\right]dF(\epsilon)$
+\end_inset
+
+ and where 
+\begin_inset Formula $V^{*}(x)$
+\end_inset
+
+ is the optimal value of the problem starting from 
+\begin_inset Formula $x$
+\end_inset
+
+ at 
+\begin_inset Formula $t=0$
+\end_inset
+
+.
+ The solution 
+\begin_inset Formula $V^{*}(x)$
+\end_inset
+
+ of equation (24) can be compute by iterating on
+\begin_inset Formula 
+\begin{equation}
+V_{j+1}(x)={\displaystyle \max_{u}}\left[r(x,u)+\beta E\left\{ V_{j}\left[g(x,u,\epsilon)\right]|x\right\} \right]
+\end{equation}
+
+\end_inset
+
+starting from any bounded continuous initial 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+.
+ Under various particular regularily conditions, there obtian versions of
+ the same four properties listed earlier.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The first-order necessary condition for the problem on the right side of
+ equation (24) is
+\begin_inset Formula 
+\[
+r_{u}(x,u)+\beta E\left\{ V^{*\prime}\left[g(x,u,\epsilon)\right]g_{u}(x,u,\epsilon)|x\right\} =0
+\]
+
+\end_inset
+
+which we obtained simply by differentiating the right side of equation (24),
+ passing the differentiation operation under the 
+\begin_inset Formula $E$
+\end_inset
+
+ (an integration) operator.
+ Off corners, the value function satisfies
+\begin_inset Formula 
+\[
+V^{*\prime}(x)=r_{x}\left[x,h(x)\right]+r_{u}\left[x,h(x)\right]h^{\prime}(x)+\beta E\left\{ V^{*\prime}\left[g\left(x,h(x),\epsilon\right)\right]\left(g_{x}\left[x,h(x),\epsilon\right]+g_{u}\left[x,h(x),\epsilon\right]h^{\prime}(x)\right)|x\right\} 
+\]
+
+\end_inset
+
+When the states and controls can be defined in such a way that 
+\begin_inset Formula $x$
+\end_inset
+
+ does not appear in the transition equation, the formula for 
+\begin_inset Formula $V^{*\prime}(x)$
+\end_inset
+
+ becomes
+\begin_inset Formula 
+\[
+V^{*\prime}(x)=r_{x}\left[x,h(x)\right]
+\]
+
+\end_inset
+
+Substituting this formula into the first-order necessary condition for the
+ problem gives the stochastic Euler equation
+\begin_inset Formula 
+\[
+r_{u}(x,u)+\beta E\left\{ r_{x}(\tilde{x},\tilde{u})g_{u}(x,u,\epsilon)|x\right\} =0
+\]
+
+\end_inset
+
+where tildes over 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $u$
+\end_inset
+
+ denote next-period values.
+\end_layout
+
+\begin_layout Section
+Optimal Growth and Its Dynamics
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Before we begin our discussion of optimal growth, we will first prove that
+ the optimal value function, 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+, is strictly concave and strictly increasing.
+\end_layout
+
+\begin_layout Definition
+A function 
+\begin_inset Formula $f$
+\end_inset
+
+ is 
+\series bold
+strictly concave
+\series default
+ if for any 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ in the domain such that 
+\begin_inset Formula $x_{1}\neq x_{2}$
+\end_inset
+
+ and for all 
+\begin_inset Formula $\lambda\in(0,1)$
+\end_inset
+
+, 
+\begin_inset Formula $f(\lambda x_{1}+(1-\lambda)x_{2})>\lambda f(x_{1})+(1-\lambda)f(x_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\shape up
+(Strict Concavity).
+
+\series default
+ 
+\emph on
+If the utility function is strictly increasing and strictly concave, and
+ the production function, 
+\begin_inset Formula $F(k,1)$
+\end_inset
+
+, is strictly increasing in 
+\begin_inset Formula $k$
+\end_inset
+
+ and strictly concave, then the optimal value function, 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+, is strictly increasing and strictly concave.
+\end_layout
+
+\begin_layout Proof
+We prove the two results separately by following three steps, respectively.
+ 
+\end_layout
+
+\begin_layout Proof
+First, we show that 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ is strictly concave.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $v$
+\end_inset
+
+ is weakly concave, then 
+\begin_inset Formula $Tv$
+\end_inset
+
+ is strictly concave.
+ Take 
+\begin_inset Formula $\lambda\in(0,1)$
+\end_inset
+
+ and let 
+\begin_inset Formula $k_{2}>k_{1}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+Tv(k_{1}) & = & {\displaystyle \max_{k_{1}^{\prime}}}\ u(f(k_{1})-k_{1}^{\prime})+\beta v(k_{2}^{\prime})\\
+ & = & u(f(k_{1})-h(k_{1}))+\beta v(h(k_{1}))\\
+Tv(k_{2}) & = & {\displaystyle \max_{k_{2}^{\prime}}}\ u(f(k_{2})-k_{2}^{\prime})+\beta v(k_{2}^{\prime})\\
+ & = & u(f(k_{2})-h(k_{2}))+\beta v(h(k_{2}))
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $f(k)\equiv F(k,1)+(1-\delta)k$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $F(k,1)$
+\end_inset
+
+ is strictly concave and strictly increasing, then so is 
+\begin_inset Formula $f(k)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $h(\cdot)$
+\end_inset
+
+ is the optimal solution of the maximization problem.
+ So, we have found the policy function 
+\begin_inset Formula $h(\cdot)$
+\end_inset
+
+ such that 
+\begin_inset Formula $h(k_{1})=k_{1}^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $h(k_{2})=k_{2}^{\prime}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+Tv(\lambda k_{1}+(1-\lambda)k_{2}) & = & {\displaystyle \max_{\lambda k_{1}^{\prime}+(1-\lambda)k_{2}^{\prime}}}\ u\left(f\left[\lambda k_{1}+(1-\lambda)k_{2}\right]-\left[\lambda k_{1}^{\prime}+(1-\lambda)k_{2}^{\prime}\right]\right)\\
+ &  & +\beta v(\lambda k_{1}^{\prime}+(1-\lambda)k_{2}^{\prime})\\
+ & \geq & u\left(f\left[\lambda k_{1}+(1-\lambda)k_{2}\right]-\left[\lambda h(k_{1})+(1-\lambda)h(k_{2})\right]\right)\\
+ &  & +\beta v\left(\left[\lambda h(k_{1})+(1-\lambda)h(k_{2})\right]\right)\\
+ & > & u\left(\lambda f(k_{1})+(1-\lambda)f(k_{2})-\lambda h(k_{1})-(1-\lambda)h(k_{2})\right)\\
+ &  & +\beta v\left(\lambda h(k_{1})+(1-\lambda)h(k_{2})\right)\\
+ & > & \lambda u\left(f(k_{1})-h(k_{1})\right)+(1-\lambda)u\left(f(k_{2})-h(k_{2})\right)\\
+ &  & +\beta\lambda v(h(k_{1}))+\beta(1-\lambda)v(h(k_{2}))\\
+ & = & \lambda Tv(k_{1})+(1-\lambda)Tv(k_{2})
+\end{eqnarray*}
+
+\end_inset
+
+This result holds since 
+\begin_inset Formula $f(k)$
+\end_inset
+
+ and 
+\begin_inset Formula $u$
+\end_inset
+
+ are strictly concave.
+ Finally, we show that 
+\begin_inset Formula $\lambda h(k_{1})+(1-\lambda)h(k_{2})$
+\end_inset
+
+ is feasible.
+\begin_inset Formula 
+\begin{gather*}
+0\leq h(k_{1})\leq f(k_{1})\\
+0\leq h(k_{2})\leq f(k_{2})\\
+0\leq\lambda h(k_{1})+(1-\lambda)h(k_{2})\leq\lambda f(k_{1})+(1-\lambda)f(k_{2})
+\end{gather*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $f$
+\end_inset
+
+ is strictly concave, then
+\begin_inset Formula 
+\[
+\lambda f(k_{1})+(1-\lambda)f(k_{2})<f(\lambda k_{1}+(1-\lambda)k_{2})
+\]
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $\lambda h(k_{1})+(1-\lambda)h(k_{2})$
+\end_inset
+
+ is feasible.
+ Therefore, 
+\begin_inset Formula $Tv$
+\end_inset
+
+ is strictly concave.
+\end_layout
+
+\begin_layout Enumerate
+Pick 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+ to be a concave function.
+ We have shown that 
+\begin_inset Formula $T^{n}v_{0}$
+\end_inset
+
+ is strictly concave, and we know that 
+\begin_inset Formula $T^{n}v_{0}$
+\end_inset
+
+ uniformly converges to 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\left\Vert T^{n}v_{0}-V^{*}\right\Vert =0$
+\end_inset
+
+.
+ Since limits preserve weak inequalities, then 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ is weakly concave.
+\end_layout
+
+\begin_layout Enumerate
+Since 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ is a fixed point of 
+\begin_inset Formula $T$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $V^{*}=TV^{*}$
+\end_inset
+
+, then 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ is strictly concave.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+To show 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ is strictly increasing, follow the same three steps above.
+\end_layout
+
+\begin_layout Definition
+Inada condition on the production function: 
+\begin_inset Formula $\lim_{k\rightarrow0}F_{k}(k,1)=\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $\lim_{k\rightarrow\infty}F_{k}(k,1)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A steady state is a 
+\emph on
+constant
+\emph default
+ solution 
+\begin_inset Formula $k^{*}$
+\end_inset
+
+, such that if 
+\begin_inset Formula $k_{0}=k^{*}$
+\end_inset
+
+, then 
+\begin_inset Formula $\forall\ t:k_{t}=k^{*}$
+\end_inset
+
+.
+ At the steady state, 
+\begin_inset Formula $h(k^{*})=k^{*}$
+\end_inset
+
+, which means that the steady state value of capital is the fixed point
+ of 
+\begin_inset Formula $h(k)$
+\end_inset
+
+.
+ Consumption is also a constant sequence at the steady state.
+ So, if 
+\begin_inset Formula $c_{0}=c^{*}$
+\end_inset
+
+, then 
+\begin_inset Formula $\forall\ t:c_{t}=c^{*}$
+\end_inset
+
+.
+ The steady state values of capital and consumption must satisfy the Euler
+ equation:
+\begin_inset Formula 
+\[
+u^{\prime}(c^{*})=\beta u^{\prime}(c^{*})f^{\prime}(k^{*})
+\]
+
+\end_inset
+
+which reduces to
+\begin_inset Formula 
+\begin{eqnarray}
+f^{\prime}(k^{*}) & = & \frac{1}{\beta}\\
+F_{k}(k^{*},1) & = & \frac{1}{\beta}-(1-\delta)\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+This is the key condition for a steady state in the one-sector growth model.
+\end_layout
+
+\begin_layout Example
+Once more, we consider the growth model with Cobb-Douglas transition and
+ logarithmic preferences.
+ The production function is given by
+\begin_inset Formula 
+\[
+f(k)=Ak^{\alpha}
+\]
+
+\end_inset
+
+the derivative with respect to 
+\begin_inset Formula $k$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+f^{\prime}(k)=A\alpha k^{\alpha-1}
+\]
+
+\end_inset
+
+and the inverse of the derivative is
+\begin_inset Formula 
+\begin{equation}
+(f^{\prime})^{-1}(k)=\left[\frac{1}{A\alpha}\left(k\right)\right]^{\frac{1}{\alpha-1}}
+\end{equation}
+
+\end_inset
+
+From our previous examples, we found the optimal policy function to be 
+\begin_inset Formula $k^{\prime}=h(k)=\alpha\beta Ak^{\alpha}$
+\end_inset
+
+.
+ Thus, since 
+\begin_inset Formula $f$
+\end_inset
+
+ is invertible, we can derive the steady state by using equation (27)
+\begin_inset Formula 
+\[
+k^{*}=f^{\prime-1}\left(\frac{1}{\beta}\right)=\left[A\alpha\beta\right]^{\frac{1}{1-\alpha}}
+\]
+
+\end_inset
+
+ or solving for the steady state using the optimal policy function
+\begin_inset Formula 
+\begin{eqnarray*}
+k^{*} & = & h(k^{*})=\alpha\beta Ak^{*\alpha}\\
+k^{*} & = & \left[A\alpha\beta\right]^{\frac{1}{1-\alpha}}
+\end{eqnarray*}
+
+\end_inset
+
+Both methods lead to the unique steady state.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For the one-sector growth model, we want to show that 
+\begin_inset Formula $k_{t}$
+\end_inset
+
+ converges to a unique steady state, 
+\begin_inset Formula $k^{*}$
+\end_inset
+
+, as 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+.
+ This means that the sequence of state variables converges to 
+\begin_inset Formula $k^{*}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\lim_{t\rightarrow\infty}k_{t}=k^{*}$
+\end_inset
+
+.
+ So, in the steady state, the agent will consume and save the same amount
+ each period.
+ In order to prove global convergence to a unique steady state, we will
+ first state and prove some properties concerning the policy funciton 
+\begin_inset Formula $h$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $h(0)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $h(k)$
+\end_inset
+
+ is single-valued for all 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+For the Ramsey problem, since 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ are strictly concave, then their sum is strictly concave.
+ Thus, there is a unique maximizer to the right side of the Bellman equation,
+ such that
+\begin_inset Formula 
+\[
+h(k)\in\arg{\displaystyle \max_{0\leq k^{\prime}\leq f(k)}}\ u(f(k)-k^{\prime})+\beta V^{*}(k^{\prime})
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula $h(k)$
+\end_inset
+
+ is single-valued (i.e., it is a function).
+ Also, from the Inada condition on utility, we know that 
+\begin_inset Formula $0<h(k)<f(k)$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $h(k)$
+\end_inset
+
+ is an interior solution.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $h(k)$
+\end_inset
+
+ is strictly increasing.
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+Consider the Bellman equation
+\begin_inset Formula 
+\begin{equation}
+V^{*}(k)={\displaystyle \max_{0\leq k^{\prime}\leq f(k)}}u(f(k)-k^{\prime})+\beta V^{*}(k^{\prime})
+\end{equation}
+
+\end_inset
+
+The first-order condition of the right-hand side with respect to 
+\begin_inset Formula $k^{\prime}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+u^{\prime}(f(k)-k^{\prime})=\beta V^{*\prime}(k^{\prime})
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $k^{\prime}=h(k)$
+\end_inset
+
+ satisfies the first-order condition, so
+\begin_inset Formula 
+\begin{equation}
+u^{\prime}(f(k)-h(k))=\beta V^{*\prime}(h(k))
+\end{equation}
+
+\end_inset
+
+Differentiating equation (29) with respect to 
+\begin_inset Formula $k$
+\end_inset
+
+ we have
+\begin_inset Formula 
+\[
+u^{\prime\prime}(f(k)-h(k))(f^{\prime}(k)-h^{\prime}(k))=\beta V^{*\prime\prime}(h(k))h^{\prime}(k)
+\]
+
+\end_inset
+
+and then we solve for 
+\begin_inset Formula $h^{\prime}(k)$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+u^{\prime\prime}(c)f^{\prime}(k)-u^{\prime\prime}(c)h^{\prime}(k) & = & \beta V^{*^{\prime\prime}}h^{\prime}(k)\\
+u^{\prime\prime}(c)f^{\prime}(k) & = & (u^{\prime\prime}(c)+\beta V^{*\prime\prime})h^{\prime}(k)\\
+h^{\prime}(k) & = & \frac{u^{\prime\prime}(c)f^{\prime}(k)}{u^{\prime\prime}(c)+\beta V^{*\prime\prime}}
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $V$
+\end_inset
+
+ are strictly concave and 
+\begin_inset Formula $f$
+\end_inset
+
+ is strictly increasing, then we have 
+\begin_inset Formula $u^{\prime\prime}<0$
+\end_inset
+
+ and 
+\begin_inset Formula $V^{*\prime\prime}<0$
+\end_inset
+
+ and 
+\begin_inset Formula $f^{\prime}(k)>0$
+\end_inset
+
+, respectively.
+ Thus, 
+\begin_inset Formula $h^{\prime}(k)>0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Consumption as a function of 
+\begin_inset Formula $k$
+\end_inset
+
+, 
+\begin_inset Formula $c(k)=F(k,1)+(1-\delta)k-h(k)=f(k)-h(k)$
+\end_inset
+
+ is increasing in 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula $k_{2}>k_{1}$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $c(k_{2})>c(k_{1})$
+\end_inset
+
+.
+ From equation (29), we have
+\begin_inset Formula 
+\[
+u^{\prime}(c(k_{1}))=\beta V^{*\prime}(h(k_{1}))>\beta V^{*\prime}(h(k_{2}))=u^{\prime}(c(k_{2}))
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $h(k)$
+\end_inset
+
+ is strictly increasing and 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ are strictly concave, then 
+\begin_inset Formula $c(k_{2})>c(k_{1})$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, we prove global convergence to a unique steady state.
+\end_layout
+
+\begin_layout Proof
+First, from the Bellman equation (28), we can find the derivative with respect
+ to 
+\begin_inset Formula $k$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+V^{*\prime}(k)=u^{\prime}(f(k)-k^{\prime})f^{\prime}(k)
+\end{equation}
+
+\end_inset
+
+Combining equations (29) and (30), we have
+\begin_inset Formula 
+\begin{equation}
+V^{*\prime}(k)=\beta V^{*\prime}(h(k))f^{\prime}(k)
+\end{equation}
+
+\end_inset
+
+ We already know that if 
+\begin_inset Formula $k=k^{*}$
+\end_inset
+
+, then 
+\begin_inset Formula $h(k)=k\iff h(k^{*})=k^{*}$
+\end_inset
+
+.
+ So, we only need to consider two cases for 
+\begin_inset Formula $k$
+\end_inset
+
+ and 
+\begin_inset Formula $k^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Case
+\begin_inset Formula $k^{*}>k$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $h$
+\end_inset
+
+ is strictly increasing, then 
+\begin_inset Formula $h(k^{*})>h(k)$
+\end_inset
+
+.
+ By equation (26), since 
+\begin_inset Formula $f$
+\end_inset
+
+ is strictly concave, then 
+\begin_inset Formula $\beta f^{\prime}(k)>1$
+\end_inset
+
+.
+ So, from equation (31), we have 
+\begin_inset Formula $V^{*\prime}(k)>V^{*\prime}(h(k))$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $V^{*\prime}$
+\end_inset
+
+ is strictly concave, then 
+\begin_inset Formula $h(k)>k$
+\end_inset
+
+.
+ Thus, we have 
+\begin_inset Formula $k^{*}=h(k^{*})>h(k)>k$
+\end_inset
+
+.
+ Therefore, if 
+\begin_inset Formula $k^{*}>k$
+\end_inset
+
+, then 
+\begin_inset Formula $k^{*}>h(k)>k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $k^{*}<k$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $h$
+\end_inset
+
+ is strictly increasing, then 
+\begin_inset Formula $h(k^{*})<h(k)$
+\end_inset
+
+.
+ By equation (26), since 
+\begin_inset Formula $f$
+\end_inset
+
+ is strictly concave, then 
+\begin_inset Formula $\beta f^{\prime}(k)<1$
+\end_inset
+
+.
+ So, from equation (31), we have 
+\begin_inset Formula $V^{*\prime}(k)<V^{*\prime}(h(k))$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $V^{*\prime}$
+\end_inset
+
+ is strictly concave, then 
+\begin_inset Formula $h(k)<k$
+\end_inset
+
+.
+ Thus, we have 
+\begin_inset Formula $k^{*}=h(k^{*})<h(k)<k$
+\end_inset
+
+.
+ Therefore, if 
+\begin_inset Formula $k^{*}<k$
+\end_inset
+
+, then 
+\begin_inset Formula $k^{*}<h(k)<k$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Therefore, we have global convergence to a unique steady state.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To end this section, we provide some economic intuition concerning the results
+ that have just been derived.
+ From the Euler equation, we have
+\begin_inset Formula 
+\[
+u^{\prime}(c_{t})=\beta\left[\frac{\partial F(k,1)}{\partial k}+1-\delta\right]u^{\prime}(c_{t+1})
+\]
+
+\end_inset
+
+If 
+\begin_inset Formula $c_{t+1}>c_{t}$
+\end_inset
+
+, then 
+\begin_inset Formula $u^{\prime}(c_{t})>u^{\prime}(c_{t+1})$
+\end_inset
+
+, so
+\begin_inset Formula 
+\begin{gather*}
+\beta\left[\frac{\partial F(k,1)}{\partial k}+1-\delta\right]>1\\
+\frac{\partial F(k,1)}{\partial k}=\frac{1}{\beta}-(1-\delta)>0
+\end{gather*}
+
+\end_inset
+
+In addition, we can conclude that
+\begin_inset Formula 
+\begin{gather*}
+h(k)<k^{*}\iff h(k)>k\implies\mbox{the economy is growing}\\
+h(k)>k^{*}\iff h(k)<k\implies\mbox{the economy is shrinking}\\
+h(k)=k\iff h(k^{*})=k^{*}\implies\mbox{the economy stays the same}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Another Example of Dynamic Programming
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To provide a better understanding of dynamic programming and the Bellman
+ equation, we present an example of a job search model that uses the techniques
+ of Dynamic Programming to derive a solution.
+\end_layout
+
+\begin_layout Subsection
+McCall's Model of Intertemporal Job Search
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now consider an unemployed worker who is searching for a job under the
+ following circumstances: Each period the worker draws one offer 
+\begin_inset Formula $w$
+\end_inset
+
+ from the same wage distribution 
+\begin_inset Formula $F(W)=\mbox{prob}\{w\leq W\}$
+\end_inset
+
+, with 
+\begin_inset Formula $F(0)=0$
+\end_inset
+
+, 
+\begin_inset Formula $F(B)=1$
+\end_inset
+
+ for 
+\begin_inset Formula $B<\infty$
+\end_inset
+
+.
+ The worker has the option of rejecting the offer, in which case he or she
+ receives 
+\begin_inset Formula $c$
+\end_inset
+
+ this period in unemployment compensation and waits until next period to
+ draw another offer from 
+\begin_inset Formula $F$
+\end_inset
+
+; alternatively, the worker can accept the offer to work at 
+\begin_inset Formula $w$
+\end_inset
+
+, in which case he or she receives a wage of 
+\begin_inset Formula $w$
+\end_inset
+
+ per period forever.
+ Neither quitting nor firing is permitted.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ be the worker's income in period 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ We have 
+\begin_inset Formula $y_{t}=c$
+\end_inset
+
+ if the worker is unemployed and 
+\begin_inset Formula $y_{t}=w$
+\end_inset
+
+ if the worker is employed, or if he is unemployed and has accepted an offer
+ to work at wage 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ The worker devises a strategy to maximize 
+\begin_inset Formula $E\sum_{t=0}^{\infty}\beta^{t}y_{t}$
+\end_inset
+
+ where 
+\begin_inset Formula $0<\beta<1$
+\end_inset
+
+ is a discount factor.
+ Note that we can rewrite this model as a dynamic programming problem.
+ The endogenous state space is 
+\begin_inset Formula $x_{t}\in\{E,U\}$
+\end_inset
+
+, where 
+\begin_inset Formula $E$
+\end_inset
+
+ stands for 
+\begin_inset Quotes eld
+\end_inset
+
+employed,
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Formula $U$
+\end_inset
+
+ stands for 
+\begin_inset Quotes eld
+\end_inset
+
+unemployed.
+\begin_inset Quotes erd
+\end_inset
+
+ The exogenous state space is the i.i.d.
+ wage offers 
+\begin_inset Formula $\{w_{t}\}_{t=0}^{\infty}$
+\end_inset
+
+ .
+ The control variable, 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+, is the decision of the worker to accept or reject the wage offer.
+ If 
+\begin_inset Formula $w$
+\end_inset
+
+ is the wage time time 
+\begin_inset Formula $t$
+\end_inset
+
+, then the per-period return function is given by
+\begin_inset Formula 
+\[
+y_{t}=r(x_{t},y_{t},u_{t})=\begin{cases}
+w & \mbox{if}\ x_{t}=E\\
+w & \mbox{if}\ x_{t}=U,u_{t}=\mbox{"accept"}\\
+c & \mbox{if}\ x_{t}=U,u_{t}=\mbox{"reject"}
+\end{cases}
+\]
+
+\end_inset
+
+and the transition law is dictated by
+\begin_inset Formula 
+\[
+(x_{t+1},w_{t+1})=g(x_{t},w_{t},u_{t},w_{t+1})=\begin{cases}
+(E,w) & \mbox{if}\ x_{t}=E\\
+(E,w) & \mbox{if}\ x_{t}=U,u_{t}=\mbox{"accept"}\\
+(U,w_{t+1}) & \mbox{if}\ x_{t}=U,u_{t}=\mbox{"reject"}
+\end{cases}
+\]
+
+\end_inset
+
+When a worker is employed, his non-stochastic optimal value function is
+ 
+\begin_inset Formula $v(E,w)=w+\beta V(E,w)=\frac{w}{1-\beta}$
+\end_inset
+
+, so there is no need to solve the problem in this case.
+ Hence, we will focus on the situation when the worker is unemployed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $v(w)$
+\end_inset
+
+ be the expected value of 
+\begin_inset Formula $\sum_{t=0}^{\infty}\beta^{t}y_{t}$
+\end_inset
+
+ for an unemployed worker who has offer 
+\begin_inset Formula $w$
+\end_inset
+
+ in hand, who is deciding whether to accept or to reject it, and who behaves
+ optimally.
+ We assume no recall.
+ The value function 
+\begin_inset Formula $v(w)$
+\end_inset
+
+ satisfies the Bellman equation 
+\begin_inset Formula 
+\begin{equation}
+v(w)=\max\left\{ \frac{w}{1-\beta},c+\beta{\displaystyle \int}v(w^{\prime})dF(w^{\prime})\right\} 
+\end{equation}
+
+\end_inset
+
+where the maximization is over the two actions: (1) 
+\emph on
+accept
+\emph default
+ the wage offer 
+\begin_inset Formula $w$
+\end_inset
+
+ and work forever at wage 
+\begin_inset Formula $w$
+\end_inset
+
+, or (2) 
+\emph on
+reject
+\emph default
+ the offer, receive 
+\begin_inset Formula $c$
+\end_inset
+
+ this period, and draw a new offer 
+\begin_inset Formula $w^{\prime}$
+\end_inset
+
+ from distribution 
+\begin_inset Formula $F$
+\end_inset
+
+ next period.
+ Let 
+\begin_inset Formula $\bar{w}$
+\end_inset
+
+ be the reservation wage of the worker, such that if 
+\begin_inset Formula $w>\bar{w}$
+\end_inset
+
+, then the worker will accept the offer, or reject it otherwise.
+ Thus, the solution of the functional equation (32) will be of the form
+\begin_inset Formula 
+\begin{equation}
+v(w)=\begin{cases}
+\frac{\bar{w}}{1-\beta}=c+\beta{\displaystyle \int_{0}^{B}}v(w^{\prime})dF(w^{\prime}) & \mbox{if}\ w\leq\bar{w}\\
+\frac{w}{1-\beta} & \mbox{if}\ w>\bar{w}
+\end{cases}
+\end{equation}
+
+\end_inset
+
+Using equation (33), we can convert the functional equation (32) into an
+ ordinary equation in the reservation wage 
+\begin_inset Formula $\bar{w}$
+\end_inset
+
+.
+ Evaluating 
+\begin_inset Formula $v(\bar{w})$
+\end_inset
+
+ and using equation (33), we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\bar{w}}{1-\beta} & = & c+\beta{\displaystyle \int_{0}^{B}}v(w^{\prime})dF(w^{\prime})\\
+\frac{\bar{w}}{1-\beta}\left({\displaystyle \int_{0}^{\bar{w}}}dF(w^{\prime})+{\displaystyle \int_{\bar{w}}^{B}}dF(w^{\prime})\right) & = & c+\beta{\displaystyle \int_{0}^{\bar{w}}}\frac{\bar{w}}{1-\beta}dF(w^{\prime})+\beta{\displaystyle \int_{\bar{w}}^{B}}\frac{w^{\prime}}{1-\beta}dF(w^{\prime})\\
+\frac{\bar{w}}{1-\beta}{\displaystyle \int_{0}^{\bar{w}}}dF(w^{\prime})-\beta{\displaystyle \int_{0}^{\bar{w}}}\frac{\bar{w}}{1-\beta}dF(w^{\prime})-c & = & \beta{\displaystyle \int_{\bar{w}}^{B}}\frac{w^{\prime}}{1-\beta}dF(w^{\prime})-\frac{\bar{w}}{1-\beta}{\displaystyle \int_{\bar{w}}^{B}}dF(w^{\prime})\\
+\left(\frac{1}{1-\beta}-\frac{\beta}{1-\beta}\right)\bar{w}{\displaystyle \int_{0}^{\bar{w}}}dF(w^{\prime})-c & = & \frac{1}{1-\beta}{\displaystyle \int_{\bar{w}}^{B}}\beta w^{\prime}-\frac{1}{1-\beta}{\displaystyle \int_{\bar{w}}^{B}}\bar{w}dF(w^{\prime})\\
+\bar{w}{\displaystyle \int_{0}^{\bar{w}}}dF(w^{\prime})-c & = & \frac{1}{1-\beta}{\displaystyle \int_{\bar{w}}^{B}}(\beta w^{\prime}-\bar{w})dF(w^{\prime})
+\end{eqnarray*}
+
+\end_inset
+
+Adding 
+\begin_inset Formula $\bar{w}{\displaystyle \int_{\bar{w}}^{B}}dF(w^{\prime})$
+\end_inset
+
+ to both sides gives
+\begin_inset Formula 
+\begin{eqnarray}
+\bar{w}{\displaystyle \int_{0}^{\bar{w}}}dF(w^{\prime})+\bar{w}{\displaystyle \int_{\bar{w}}^{B}}dF(w^{\prime})-c & = & \frac{1}{1-\beta}{\displaystyle \int_{\bar{w}}^{B}}(\beta w^{\prime}-\bar{w})dF(w^{\prime})+\bar{w}{\displaystyle \int_{\bar{w}}^{B}}dF(w^{\prime})\nonumber \\
+\bar{w}\left({\displaystyle \int_{0}^{B}}dF(w^{\prime})\right)-c & = & \frac{1}{1-\beta}{\displaystyle \int_{\bar{w}}^{B}}(\beta w^{\prime}-\bar{w})dF(w^{\prime})+\frac{1}{1-\beta}{\displaystyle \int_{\bar{w}}^{B}}\bar{w}(1-\beta)dF(w^{\prime})\nonumber \\
+\bar{w}-c & = & \frac{1}{1-\beta}{\displaystyle \int_{\bar{w}}^{B}}(\beta w^{\prime}-\bar{w}+\bar{w}-\bar{w}\beta)dF(w^{\prime})\nonumber \\
+(\bar{w}-c) & = & \frac{\beta}{1-\beta}{\displaystyle \int_{\bar{w}}^{B}}(w^{\prime}-\bar{w})dF(w^{\prime})
+\end{eqnarray}
+
+\end_inset
+
+Equation (34) is often used to characterize the determination of the reservation
+ wage 
+\begin_inset Formula $\bar{w}$
+\end_inset
+
+.
+ The left side is the cost of searching one more time when an offer 
+\begin_inset Formula $\bar{w}$
+\end_inset
+
+ is in hand.
+ The right side is the expected benefit of searching one more time in terms
+ of the expected present value associated with drawing 
+\begin_inset Formula $w^{\prime}>\bar{w}$
+\end_inset
+
+.
+ Equation (34) instructs the agent to set 
+\begin_inset Formula $\bar{w}$
+\end_inset
+
+ so that the cost of searching one more time equals the benefit of accepting
+ the offer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let us define the funciton on the right side of equation (34) as
+\begin_inset Formula 
+\begin{equation}
+h(w)=\frac{\beta}{1-\beta}{\displaystyle \int_{w}^{B}}(w^{\prime}-w)dF(w^{\prime})
+\end{equation}
+
+\end_inset
+
+Notice that 
+\begin_inset Formula $h(0)=\frac{E(w)\beta}{1-\beta}$
+\end_inset
+
+, that 
+\begin_inset Formula $h(B)=0$
+\end_inset
+
+, and that 
+\begin_inset Formula $h(w)$
+\end_inset
+
+ is differentiable, with derivative given by
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+To compute 
+\begin_inset Formula $h^{\prime}(w)$
+\end_inset
+
+, we apply Leibniz' rule to equation (35).
+ Let 
+\begin_inset Formula $\phi(t)=\int_{\alpha(t)}^{\beta(t)}f(x,t)dx$
+\end_inset
+
+ for 
+\begin_inset Formula $t\in[c,d]$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $f_{t}$
+\end_inset
+
+ are continuouse and that 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ are differentiable on 
+\begin_inset Formula $[c,d]$
+\end_inset
+
+.
+ Then, Leibniz' rule asserts that 
+\begin_inset Formula $\phi(t)$
+\end_inset
+
+ is differentiable on 
+\begin_inset Formula $[c,d]$
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+\phi^{\prime}(t)=f\left[\beta(t),t\right]\beta^{\prime}(t)-f\left[\alpha(t),t\right]\alpha^{\prime}(t)+{\displaystyle \int_{\alpha(t)}^{\beta(t)}}f_{t}(x,t)dx
+\]
+
+\end_inset
+
+To apply this formula to the equation in the text, let 
+\begin_inset Formula $w$
+\end_inset
+
+ play the role of 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+h^{\prime}(w)=-\frac{\beta}{1-\beta}\left[1-F(w)\right]<0
+\]
+
+\end_inset
+
+We also have
+\begin_inset Formula 
+\[
+h^{\prime\prime}(w)=\frac{\beta}{1-\beta}F^{\prime}(w)>0
+\]
+
+\end_inset
+
+so that 
+\begin_inset Formula $h(w)$
+\end_inset
+
+ is decreasing and convex to the origin.
+ It is apparent that an increase in 
+\begin_inset Formula $c$
+\end_inset
+
+ leads to an increase in 
+\begin_inset Formula $\bar{w}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Firing
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now briefly consider a modifaction of the job search model in which each
+ period after the first period on the job the worker faces probability 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ of being fired, where 
+\begin_inset Formula $1>\alpha>0$
+\end_inset
+
+.
+ The probability 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ of being fired next period is assumed to be independent of tenure.
+ The worker continues to sample wage offers form a time-invariant and known
+ probability distribution 
+\begin_inset Formula $F$
+\end_inset
+
+ and to receive unemployment compensation in the amount 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ The worker receives a time-invariant wage 
+\begin_inset Formula $w$
+\end_inset
+
+ on a job until she is fired.
+ A worker who is fired becomes unemployed for one period before drawing
+ a new wage.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We let 
+\begin_inset Formula $v(w)$
+\end_inset
+
+ be the expected present value of income of a previously unemployed worker
+ who has offer 
+\begin_inset Formula $w$
+\end_inset
+
+ in hand and who behaves optimally.
+ If she rejects the offer, she receives 
+\begin_inset Formula $c$
+\end_inset
+
+ in unemployment compensation this period and next period draws a new offer
+ 
+\begin_inset Formula $w^{\prime}$
+\end_inset
+
+, whose value to her now is 
+\begin_inset Formula $\beta\int v(w^{\prime})dF(w^{\prime})$
+\end_inset
+
+.
+ If she rejects the offer, 
+\begin_inset Formula $v(w)=c+\beta\int v(w^{\prime})dF(w^{\prime})$
+\end_inset
+
+.
+ If she accepts the offer, she recevies 
+\begin_inset Formula $w$
+\end_inset
+
+ this period, with proability 
+\begin_inset Formula $1-\alpha$
+\end_inset
+
+ that she is not fired next period, in which case she receives 
+\begin_inset Formula $\beta v(w)$
+\end_inset
+
+ and with proability 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ that she is fired, and after one period of unemployment draws a new wage,
+ recieving 
+\begin_inset Formula $\beta\left[c+\beta\int v(w^{\prime})dF(w^{\prime})\right]$
+\end_inset
+
+.
+ Therefore, if she accepts the offer, 
+\begin_inset Formula $v(w)=w+\beta(1-\alpha)v(w)+\beta\alpha\left[c+\beta\int v(w^{\prime})dF(w^{\prime})\right]$
+\end_inset
+
+.
+ Thus, the Bellman equation becomes
+\begin_inset Formula 
+\[
+v(w)=\max\left\{ w+\beta(1-\alpha)v(w)+\beta\alpha\left[c+\beta Ev\right],c+\beta Ev\right\} 
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $Ev=\int v(w^{\prime})dF(w^{\prime})$
+\end_inset
+
+.
+ This equation has a solution of the form
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+That it takes this form can be established by guessing that 
+\begin_inset Formula $v(w)$
+\end_inset
+
+ is nondecreasing in 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ This guess implies the equation in the text for 
+\begin_inset Formula $v(w)$
+\end_inset
+
+, which is nondecreasing in 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ This argument verifies that 
+\begin_inset Formula $v(w)$
+\end_inset
+
+ is nondecreasing, given the uniqueness of the solution of the Bellman equation.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+v(w)=\begin{cases}
+\frac{w+\beta\alpha\left[c+\beta Ev\right]}{1-\beta(1-\alpha)} & \mbox{if}\ w>\bar{w}\\
+c+\beta Ev & \mbox{if}\ w\leq\bar{w}
+\end{cases}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\bar{w}$
+\end_inset
+
+ solves
+\begin_inset Formula 
+\begin{equation}
+\frac{\bar{w}+\beta\alpha\left[c+\beta Ev\right]}{1-\beta(1-\alpha)}=c+\beta Ev
+\end{equation}
+
+\end_inset
+
+The optimal policy is of the reservation wage form.
+ The reservation wage 
+\begin_inset Formula $\bar{w}$
+\end_inset
+
+ will not be characterized here as a function of 
+\begin_inset Formula $c$
+\end_inset
+
+, 
+\begin_inset Formula $F$
+\end_inset
+
+, and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Competitive Equilibrium
+\end_layout
+
+\begin_layout Subsection
+General Setup
+\end_layout
+
+\begin_layout Subsubsection
+Preliminaries
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this section, we turn our attention to the decentralized market economy.
+ We will show that the allocation achieved in decentralized trade will be
+ the same as the allocation in the social planner's problem.
+ In the social planner's economy, all variables were aggregate, while the
+ decentralized market economy has individual and aggregate variables.
+ For the decentralized market economy, we assume that each decision maker
+ is a price-taker that has little influence on aggregate variables.
+ Here is brief description of the different markets and their participants.
+\end_layout
+
+\begin_layout Itemize
+Static Markets
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Goods Market: the price of the consumption good is normalized to 1, so it
+ known as the numeraire.
+ In this market, firms are sellers and households are buyers.
+\end_layout
+
+\begin_layout Itemize
+Labor Market: the wage rate is 
+\begin_inset Formula $w_{t}$
+\end_inset
+
+, which is the price of labor at 
+\begin_inset Formula $t$
+\end_inset
+
+ relative to (in terms of) consumption goods at 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ In this market, households are sellers and firms are buyers.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Dynamic Market
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Financial Market: This market links periods together.
+ 
+\begin_inset Formula $R_{t}$
+\end_inset
+
+ is the real rate of return from saving 
+\begin_inset Formula $(t-1\ \mbox{to}\ t)$
+\end_inset
+
+.
+ In this market, households are sellers and firms are buyers.
+\end_layout
+
+\end_deeper
+\begin_layout Remark
+
+\emph on
+Exogenenous versus Endogenous Labor Supply:
+\emph default
+ Right now, the labor supply, 
+\begin_inset Formula $n_{t}$
+\end_inset
+
+, is exogenously set to 1, but we will soon let it be chosen endogenously.
+ In addition, we will later add growth to the model, as well as stochastic
+ shocks that will affect productivity.
+\end_layout
+
+\begin_layout Subsubsection
+The Household's Problem
+\end_layout
+
+\begin_layout Standard
+The household's constrained maximization problem is
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle {\displaystyle \max_{\{k_{t+1}^{s},n_{t}^{s},c_{t}\}_{t=0}^{\infty}}}} & {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(c_{t})\\
+\mbox{s.t.} & c_{t}+k_{t+1}^{s}\leq w_{t}n_{t}^{s}+R_{t}k_{t}^{s};\ \forall\ t\\
+ & k_{0}>0\ \mbox{is given}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $n_{t}^{s}$
+\end_inset
+
+ is the amount of labor supplied by the consumer in period 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{t}^{s}$
+\end_inset
+
+ is the amount of funds supplied to the financial market by the consumer
+ in period 
+\begin_inset Formula $t-1$
+\end_inset
+
+.
+ The right side of the consumer's budget constraint represents his income.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There are two different scenarios we can consider for the model:
+\end_layout
+
+\begin_layout Enumerate
+Homogenous agent model: All consumers are identical, so this is a representative
+-agent economy.
+ The representative agent can save, but he can't borrow.
+ So, we include the condition that 
+\begin_inset Formula $k_{t}^{s}\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Heterogeneous agent model: Consumers are allowed to differ.
+ In this model, borrowing is allowed, so the feasibility set for the consumer
+ is larger than in the homogenous agent model.
+ Thus, the budget constraint becomes
+\begin_inset Formula 
+\[
+c_{t}+A_{t+1}\leq w_{t}n_{t}+R_{t}A_{t}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $A_{t}\in\mathbb{R}$
+\end_inset
+
+.
+ However, we must impose a non-ponzi game condition to prevent agents from
+ borrowing forever.
+\begin_inset Formula 
+\[
+{\displaystyle \lim_{T\rightarrow\infty}}\ \frac{A_{T+1}}{\Pi_{s=1}^{T}R_{s}}\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The Firm's Problem
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The firm wishes to maximize its total profit each period.
+ So, its maximization problem is
+\begin_inset Formula 
+\[
+{\displaystyle \max_{k_{t}^{d},n_{t}^{d}}}\ F(k_{t}^{d},n_{t}^{d})+(1-\delta)k_{t}^{d}-w_{t}n_{t}^{d}-R_{t}k_{t}^{d}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $n_{t}^{d}$
+\end_inset
+
+ is the amount of labor employed by the firm in period 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{t}^{d}$
+\end_inset
+
+ is the capital borrowed by the firm in period 
+\begin_inset Formula $t-1$
+\end_inset
+
+.
+ The first-order conditions of the firm are
+\begin_inset Formula 
+\begin{eqnarray*}
+R_{t} & = & F_{k}(k_{t}^{d},n_{t}^{d})+(1-\delta)\\
+w_{t} & = & F_{n}(k_{t}^{d},n_{t}^{d})
+\end{eqnarray*}
+
+\end_inset
+
+In this setup, we focus on the case where the production function satisfies
+ constant returns to scale, so it is homogenous of degree one, i.e., 
+\begin_inset Formula $\forall\ \lambda>0:F(\lambda k,\lambda L)=\lambda F(k,L)$
+\end_inset
+
+.
+ Thus, a mathematical result says we can write the production function as
+ 
+\begin_inset Formula $F(k,L)=F_{k}\cdot k+F_{L}\cdot L$
+\end_inset
+
+.
+ Under CRS, the firm's profit equals zero in a competitive equilibrium.
+\end_layout
+
+\begin_layout Remark
+The number of firms is undetermined as long as we have many small firms
+ and the price-taking behavior can be justified.
+ Because of CRS, having 
+\begin_inset Formula $n$
+\end_inset
+
+ firms is equivalent to having 1 firm.
+\end_layout
+
+\begin_layout Subsection
+Characterizing a Competitive Equilibrium
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A competitive equilibrium is a sequence of allocations, 
+\begin_inset Formula $\{c_{t}^{*},k_{t}^{s*},k_{t}^{d*},n_{t}^{s*},n_{t}^{d*}\}_{t=0}^{\infty}$
+\end_inset
+
+, and prices, 
+\begin_inset Formula $\{R_{t}^{*},w_{t}^{*}\}_{t=0}^{\infty}$
+\end_inset
+
+, such that
+\end_layout
+
+\begin_layout Enumerate
+Utility maximization
+\begin_inset Formula 
+\begin{gather*}
+\{c_{t}^{*},k_{t+1}^{s*},n_{t}^{s*}\}_{t=0}^{\infty}\in\arg\max{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(c_{t})\\
+\mbox{s.t.}\ c_{t}^{*}+k_{t+1}^{s*}=w_{t}^{*}n_{t}^{s*}+R_{t}^{*}k_{t}^{s*};\ \forall\ t\\
+k_{0}^{s*}=k_{0}\ \mbox{is given}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Profit maximization
+\begin_inset Formula 
+\[
+k_{t}^{d*},n_{t}^{d*}\in\arg\max F(k_{t}^{d*},n_{t}^{d*})+(1-\delta)k_{t}^{d*}-w_{t}^{*}n_{t}^{d*}-R_{t}^{*}k_{t}^{d*}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $n_{t}^{s*}=n_{t}^{d*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $k_{t}^{s*}=k_{t}^{d*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the consolidated budget set of the household:
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{t=0}^{T}}\frac{c_{t}}{\Pi_{s=1}^{T}R_{s}^{*}}+\frac{k_{T+1}}{\Pi_{s=1}^{T}R_{s}^{*}}={\displaystyle \sum_{t=0}^{T}}\frac{w_{t}}{\Pi_{s=1}^{T}R_{s}^{*}}+R_{0}^{*}k_{0}
+\]
+
+\end_inset
+
+Under the non-ponzi game condition
+\begin_inset Formula 
+\[
+\lim_{T\rightarrow\infty}\ \frac{k_{T+1}}{\Pi_{s=1}^{T}R_{s}^{*}}\geq0
+\]
+
+\end_inset
+
+the budget constraint in the limit is
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{t=0}^{\infty}}\frac{c_{t}}{\Pi_{s=1}^{T}R_{s}^{*}}\leq{\displaystyle \sum_{t=0}^{T}}\frac{w_{t}}{\Pi_{s=1}^{T}R_{s}^{*}}+R_{0}^{*}k_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+An allocation solves the household's problem if and only if
+\begin_inset Formula 
+\begin{eqnarray}
+u^{\prime}(c_{t}^{*}) & = & \beta u^{\prime}(c_{t+1}^{*})R_{t+1}^{*};\ \forall\ t\\
+{\displaystyle \sum_{t=0}^{\infty}}\frac{c_{t}^{*}}{\Pi_{s=1}^{T}R_{s}^{*}} & = & {\displaystyle \sum_{t=0}^{T}}\frac{w_{t}}{\Pi_{s=1}^{T}R_{s}^{*}}+R_{0}^{*}k_{0}
+\end{eqnarray}
+
+\end_inset
+
+Equation (36) is the same as the transverality condition of the household
+\begin_inset Formula 
+\begin{equation}
+\lim_{T\rightarrow\infty}\ \frac{k_{T+1}^{*}}{\Pi_{s=1}^{T}R_{s}^{*}}=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+Equation (36) is the Euler equation of the household, which keeps the household'
+s consumption and saving smooth over time.
+ It is equivalent to the Euler equation of the social planner, which is
+\begin_inset Formula 
+\[
+u^{\prime}(c_{t})=\beta u^{\prime}(c_{t+1})f^{\prime}(k_{t+1})
+\]
+
+\end_inset
+
+ As stated in the Lemma, equation (38) is a type of transversality condition
+ of the household, and it can be shown that it is equivalent to the transversali
+ty condition of the social planner, which is
+\begin_inset Formula 
+\[
+{\displaystyle \lim_{t\rightarrow\infty}}\ \beta^{t}u^{\prime}(c_{t})k_{t+1}=0
+\]
+
+\end_inset
+
+The interpretation of equation (38) is that the present value of the long-run
+ savings is zero.
+ For an allocation to be optimal, the transversality condition requires
+ that a household must use all of its resources.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\emph on
+(First Welfare Theorem).
+ 
+\series default
+\emph default
+The allocation in a competitive equilibrium solves the social planner's
+ problem, i.e., it is Pareto efficient.
+\end_layout
+
+\begin_layout Proof
+Suppose for contradiction that the social planner's allocation is 
+\begin_inset Formula 
+\[
+k_{0},k_{1}^{*},k_{2}^{*},\ldots
+\]
+
+\end_inset
+
+ and the equilibrium allocaiton is different
+\begin_inset Formula 
+\[
+k_{0},k_{1},k_{2},\ldots;\ k_{1}\neq k_{1}^{*}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+If
+\begin_inset Formula $ $
+\end_inset
+
+ 
+\begin_inset Formula $k_{1}<k_{1}^{*}$
+\end_inset
+
+, then there is a contradiction to feasibility, which is explained below.
+ If 
+\begin_inset Formula $c_{0}>c_{o}^{*}$
+\end_inset
+
+, then 
+\begin_inset Formula $c_{1}>c_{1}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{1}<k_{1}^{*}$
+\end_inset
+
+.
+ Recursively, it follows from 
+\begin_inset Formula $c_{t}>c_{t}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{t}<k_{t}^{*}$
+\end_inset
+
+ that 
+\begin_inset Formula $c_{t+1}>c_{t+1}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{t+1}<k_{t+1}^{*}$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $t$
+\end_inset
+
+ is large, 
+\begin_inset Formula $f^{\prime}(k_{t})>\frac{\frac{1}{\beta}+1}{2}$
+\end_inset
+
+ as 
+\begin_inset Formula $\lim_{t\rightarrow\infty}f^{\prime}(k_{t})=\frac{1}{\beta}$
+\end_inset
+
+.
+ Hence, it follows that from 
+\begin_inset Formula $c_{t}>c_{t}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{t}<k_{t}^{*}$
+\end_inset
+
+ that
+\begin_inset Formula 
+\[
+\frac{\frac{1}{\beta}+1}{2}(k_{t}^{*}-k_{t})<k_{t+1}^{*}-k_{t+1}
+\]
+
+\end_inset
+
+This is a contradiction as
+\begin_inset Formula 
+\[
+\left(\frac{\frac{1}{\beta}+1}{2}\right)^{s}(k_{t}^{*}-k_{t})<k_{t+s}^{*}-k_{t+s}\leq k^{*}
+\]
+
+\end_inset
+
+cannot hold for large 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ The left side approaches 
+\begin_inset Formula $\infty$
+\end_inset
+
+ as 
+\begin_inset Formula $s\rightarrow\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $k_{1}>k_{1}^{*}$
+\end_inset
+
+, then there is a contradiction to the agent's transverality condition,
+ which is explained below.
+ If 
+\begin_inset Formula $c_{0}<c_{0}^{*}$
+\end_inset
+
+, then 
+\begin_inset Formula $c_{1}<c_{1}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{1}>k_{1}^{*}$
+\end_inset
+
+.
+ Recursively, from 
+\begin_inset Formula $c_{t}<c_{t}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{t}>k_{t}^{*}$
+\end_inset
+
+, we get 
+\begin_inset Formula $c_{t+1}<c_{t+1}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{t+1}>k_{t+1}^{*}$
+\end_inset
+
+.
+ Using the above technique, we can show that there exists a small 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ such that for large 
+\begin_inset Formula $t$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+k_{t}^{*}+\epsilon<k_{t}
+\]
+
+\end_inset
+
+Hence, the Euler equation implies 
+\begin_inset Formula $\lim_{t\rightarrow\infty}\ c_{t}=0$
+\end_inset
+
+.
+ It follolws that 
+\begin_inset Formula $\lim_{t\rightarrow\infty}\ k_{t}=\bar{k}$
+\end_inset
+
+ where 
+\begin_inset Formula $\bar{k}$
+\end_inset
+
+ satisfies 
+\begin_inset Formula $f(\bar{k})=\bar{k}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $R_{t}^{*}=f^{\prime}(k_{t})$
+\end_inset
+
+, we have 
+\begin_inset Formula $\lim_{t\rightarrow\infty}\ R_{t}^{*}=f^{\prime}(\bar{k})<1$
+\end_inset
+
+.
+ Hence,
+\begin_inset Formula 
+\begin{gather*}
+{\displaystyle \lim_{T\rightarrow\infty}}\ \Pi_{s=1}^{T}R_{s}^{*}=0\\
+\lim_{T\rightarrow\infty}\ \frac{k_{T+1}}{\Pi_{s=1}^{T}R_{s}^{*}}=\lim_{T\rightarrow\infty}\ \frac{\bar{k}}{\Pi_{s=1}^{T}R_{s}^{*}}=\infty
+\end{gather*}
+
+\end_inset
+
+contradicting the transversality condition of the household.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\shape up
+(Second Welfare Theorem).
+
+\series default
+ 
+\emph on
+If an allocation is Pareto efficient (i.e., it solves the social planner's
+ problem), then we can find prices such that the prices and the allocation
+ constitute a competitive equilibrium.
+\end_layout
+
+\begin_layout Section
+Growth
+\end_layout
+
+\begin_layout Subsection
+Endogenous Labor Supply
+\end_layout
+
+\begin_layout Subsubsection
+Social Planner's Problem
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We are changing the utility function to add 
+\begin_inset Quotes eld
+\end_inset
+
+leisure
+\begin_inset Quotes erd
+\end_inset
+
+ to the model.
+ As a result, the labor supply will no longer be exogenously set to 1.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $N_{t}:$
+\end_inset
+
+ labor supplied at time 
+\begin_inset Formula $t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L_{t}:$
+\end_inset
+
+ leisure 
+\begin_inset Quotes eld
+\end_inset
+
+consumed
+\begin_inset Quotes erd
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $N_{t}+L_{t}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With endogenous labor supply, the social planner's problem becomes
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{\{k_{t+1},N_{t}\}_{t=0}^{\infty}}} & {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(c_{t},L_{t})\\
+\mbox{s.t.} & c_{t}+k_{t+1}\leq F(k_{t},N_{t})+(1-\delta)k_{t}\\
+ & N_{t}+L_{t}=1\\
+ & k_{0}>0\ \mbox{is given}
+\end{eqnarray*}
+
+\end_inset
+
+so the Bellman equation is given by
+\begin_inset Formula 
+\[
+V(k_{t})={\displaystyle \max_{N_{t},k_{t+1}}u(c_{t},1-N_{t})+\beta V(k_{t+1})}
+\]
+
+\end_inset
+
+Setting up the Lagrangian, we have
+\begin_inset Formula 
+\[
+L={\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\left\{ u(c_{t},1-N_{t})+\lambda_{t}\left[F(k_{t},N_{t})+(1-\delta)k_{t}-c_{t}-k_{t+1}\right]\right\} 
+\]
+
+\end_inset
+
+and the first order conditions are listed below.
+\begin_inset Formula 
+\[
+(c_{t}):\ u_{c}(t)-\lambda_{t}=0
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $\lambda_{t}$
+\end_inset
+
+ known as the shadow price.
+ It measures the marginal utility of consumption at time 
+\begin_inset Formula $t$
+\end_inset
+
+, i.e., the approximate additional utility obtained from an extra unit of
+ consumption.
+\begin_inset Formula 
+\[
+(N_{t}):\ -u_{L}(t)+\lambda_{t}F_{N}(k_{t},N_{t})=0
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $-u_{L}(t)$
+\end_inset
+
+ is the marginal disutility of labor, i.e., it is the opportunity cost of
+ losing a unit of leisure.
+ 
+\begin_inset Formula $\lambda_{t}$
+\end_inset
+
+ is the approximate additional utility obtained from an extra unit of consumptio
+n, while 
+\begin_inset Formula $F_{N}(k_{t},N_{t})$
+\end_inset
+
+ is the marginal product of labor (MPL).
+ So, 
+\begin_inset Formula $\lambda_{t}F_{N}(k_{t},N_{t})$
+\end_inset
+
+ is the marginal utility product of labor, and it is approximately how much
+ utility the agent gains when he works an extra hour.
+ Thus, the marginal cost of labor equals the marginal benefit of labor.
+\begin_inset Formula 
+\[
+(K_{t+1}):\ \lambda_{t}(-1)+E_{t}\left\{ \beta\lambda_{t+1}\left[F_{k}(k_{t+1},N_{t+1})+(1-\delta)\right]\right\} =0
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(-\lambda_{t})$
+\end_inset
+
+ is the approximate reduction in utility if one unit of consumption is taken
+ away for investment, i.e., the marginal cost of investment.
+ 
+\begin_inset Formula $F_{k}(k_{t+1},N_{t+1})$
+\end_inset
+
+ is the marginal product of capital (MPK).
+ 
+\begin_inset Formula $(1-\delta)$
+\end_inset
+
+ tells us how much capital is left over after production.
+ 
+\begin_inset Formula $\lambda_{t+1}$
+\end_inset
+
+ is the approximate additional utility obtained from an extra unit of consumptio
+n in time 
+\begin_inset Formula $t+1$
+\end_inset
+
+.
+ Because the expression on the right side of the equation takes place in
+ 
+\begin_inset Formula $t+1$
+\end_inset
+
+, we must multiply it by the discount factor, 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Also, we take expectation of the right side because what happens in 
+\begin_inset Formula $t+1$
+\end_inset
+
+ is random.
+ So, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $E_{t}\left\{ \beta\lambda_{t+1}\left[F_{k}(k_{t+1},N_{t+1})+(1-\delta)\right]\right\} $
+\end_inset
+
+ can be thought of as the discounted expected marginal benefit of investment,
+ measured in utility.
+ Thus, the marginal cost of investment equals the discounted expected marginal
+ benefit of investment.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Along with the new transverality condition,
+\begin_inset Formula 
+\[
+{\displaystyle \lim_{t\rightarrow\infty}}\ \beta^{t}\frac{\partial u(c_{t},L_{t})}{\partial c_{t}}k_{t+1}=0
+\]
+
+\end_inset
+
+it can be shown that these conditions are necessary and sufficient.
+ Thus, a solution to the social planner's problem must satisfy all of them.
+\end_layout
+
+\begin_layout Subsubsection
+Consumer's Problem
+\end_layout
+
+\begin_layout Standard
+A competitive equilibrium allocaiton must solve the consumer's constrained
+ optimization problem
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{\{k_{t+1}^{s},N_{t}^{s}\}_{t=0}^{\infty}}} & {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(c_{t},L_{t})\\
+\mbox{s.t.} & c_{t}+k_{t+1}^{s}\leq R_{t}^{*}k_{t}+w_{t}^{*}N_{t}\\
+ & N_{t}+L_{t}=1
+\end{eqnarray*}
+
+\end_inset
+
+Setting up the Lagrangian, we have
+\begin_inset Formula 
+\[
+L={\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\left\{ u(c_{t},1-N_{t})+\lambda_{t}\left[R_{t}^{*}k_{t}+w_{t}^{*}N_{t}-c_{t}-k_{t+1}\right]\right\} 
+\]
+
+\end_inset
+
+and the first order conditions are
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial u(c_{t},1-N_{t})}{\partial c_{t}} & = & \lambda_{t}\\
+-\frac{\partial u(c_{t},1-N_{t})}{\partial L_{t}} & = & \lambda_{t}w_{t}^{*}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Facts About Growth
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the previous Ramsey models, growth was nonexistent since 
+\begin_inset Formula $k$
+\end_inset
+
+ converged to a steady state.
+ We will now add growth to the Ramsey model.
+ We will also formulare the model in such a way so that it mirrors the long-run
+ macroeconomic data of the U.S.
+ Here are some facts about empirical macroeconomic data since the Industrial
+ Revolution.
+ To simplify notation, total labor supply will be denoted 
+\begin_inset Formula $L$
+\end_inset
+
+ for the time being.
+\end_layout
+
+\begin_layout Enumerate
+U.S.
+ GDP grows at a constant rate.
+ 
+\begin_inset Formula $(Y=F(K,L):\mbox{GDP net of depreciation})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The growth rate of output, 
+\begin_inset Formula $\gamma_{y}$
+\end_inset
+
+, is a constant over time.
+ 
+\begin_inset Formula $(\frac{y_{t+1}}{y_{t}}\approx\mbox{a constant})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+With the total labor supply normalized to 
+\begin_inset Formula $1$
+\end_inset
+
+, hours worked is roughly constant around 
+\begin_inset Formula $\nicefrac{1}{3}$
+\end_inset
+
+, and the average hours worked equals the total hours worked.
+\end_layout
+
+\begin_layout Enumerate
+Labor shares of income is a constant.
+ 
+\begin_inset Formula $(\frac{WL}{Y}=\frac{2}{3})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The capital-labor ratio, 
+\begin_inset Formula $(\frac{K}{L})$
+\end_inset
+
+, grows at a constant rate.
+\end_layout
+
+\begin_layout Enumerate
+The capital shares of income is a constant.
+ 
+\begin_inset Formula $(\frac{K\cdot F_{K}(K,N)}{Y}\approx\mbox{a constant})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Capital-income ratio (capital-output ratio) is a constant (it does not depend
+ on time).
+ 
+\begin_inset Formula $(\frac{K}{Y}\approx2.5\ \mbox{to}\ 3)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Real rates of return are constant.
+\end_layout
+
+\begin_layout Subsection
+Feasibility of Growth
+\end_layout
+
+\begin_layout Subsubsection
+Feasibility Set
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The standard case is that of labor augmenting technological change:
+\begin_inset Formula 
+\[
+C_{t}+I_{t}=F_{t}(K_{t},N_{t})=F(K_{t},\gamma^{t}N_{t})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $I_{t}=K_{t+1}-(1-\delta)K_{t}$
+\end_inset
+
+ is investment at time 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $F$
+\end_inset
+
+ represents a constant returns to scale producation technology, and 
+\begin_inset Formula $\gamma>1$
+\end_inset
+
+ is the growth rate of efficiency units.
+ 
+\begin_inset Formula $\gamma^{t}n_{t}$
+\end_inset
+
+ signifies that the labor supply becomes more productive over time.
+ Note, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is chosen exogenously, and it represents better technology over time.
+ So, we have the assumption that the production funciton is imporved from
+ period to period.
+ Thus, the feasibility set becomes
+\begin_inset Formula 
+\begin{gather*}
+C_{t}+K_{t+1}=\leq F(K_{t},\gamma^{t}N_{t})+(1-\delta)K_{t}\\
+0\leq N_{t}\leq1
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Balanced Growth Path
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What kind of growth path do we need to have so the model is consistent with
+ the data? Our object of study is called balanced growth: all economic variables
+ grow at constant rates that could vary from one variable to another.
+ For this path to be feasible (i.e., it's an element of the set above), all
+ the variables must grow at the same rate, except 
+\begin_inset Formula $n$
+\end_inset
+
+ since it is bounded between 0 and 1.
+\begin_inset Formula 
+\begin{eqnarray*}
+Y_{t} & = & y_{0}g_{y}^{t}\\
+C_{t} & = & c_{0}g_{c}^{t}\\
+K_{t} & = & k_{0}g_{k}^{t}\\
+I_{t} & = & i_{0}g_{i}^{t}\\
+N_{t} & = & n_{0}g_{n}^{t}
+\end{eqnarray*}
+
+\end_inset
+
+Because 
+\begin_inset Formula $g_{n}$
+\end_inset
+
+ cannot exceed 1, we have 
+\begin_inset Formula $g_{n}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+From the capital accumulation law,
+\begin_inset Formula 
+\begin{gather*}
+K_{t+1}=(1-\delta)K_{t}+I_{t}\\
+g_{i}=\frac{I_{t+1}}{I_{t}}=\frac{K_{t+2}-(1-\delta)K_{t+1}}{K_{t+1}-(1-\delta)K_{t}}=g_{k}
+\end{gather*}
+
+\end_inset
+
+If both 
+\begin_inset Formula $I_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $K_{t}$
+\end_inset
+
+ grow at a constant rate, it must be the case that they both grow at the
+ same rate, i.e., 
+\begin_inset Formula $g_{k}=g_{i}$
+\end_inset
+
+.
+ By the same type of reasoning, from the resource constraint,
+\begin_inset Formula 
+\begin{gather*}
+C_{t}+I_{t}=Y_{t}\\
+g_{i}=\frac{I_{t+1}}{I_{t}}=\frac{Y_{t+1}-C_{t+1}}{Y_{t}-C_{t}}=\frac{(Y_{t}-C_{t})g_{y}}{Y_{t}-C_{t}}=g_{y}
+\end{gather*}
+
+\end_inset
+
+we must have that 
+\begin_inset Formula $g_{y}=g_{c}=g_{i}=g_{k}$
+\end_inset
+
+.
+ Next, using the fact that 
+\begin_inset Formula $F$
+\end_inset
+
+ represents a constant-returns-to-scale technology, we have that
+\begin_inset Formula 
+\[
+F(K_{t},N_{t}\gamma^{t})=Y_{t}=y_{0}g_{y}^{t}=F(k_{0},n_{0})g_{y}^{t}=F(K_{t},n_{0}g_{k}^{t})
+\]
+
+\end_inset
+
+Hence, we have 
+\begin_inset Formula $\gamma=g_{k}$
+\end_inset
+
+, so all other variables also grow at rate 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+The Nature of Technological Change
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+From the analysis in the previous section, it seems natural to ask whether
+ the assumption that the technological change is labor augmenting is relevant
+ or not.
+ First, what other kinds of technological change? Let us write the economy's
+ resource constraint with all the possible types of technological progress
+ taht the literature has talked about:
+\begin_inset Formula 
+\[
+C_{t}+\frac{I_{t}}{g_{i}^{t}}=g_{z}^{t}F(g_{k}^{t}K_{t},g_{n}^{t}N_{t})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If the production funciton is Cobb-Douglas, then all of the above technology
+ changes are equivalent to labor-augmenting growth after change of variables.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $F(\gamma^{t}K_{t},N_{t})=\left(\gamma^{t}K_{t}^{\alpha}\right)N_{t}^{1-\alpha}=K_{t}^{\alpha}\left(\left[\gamma^{\left(\nicefrac{\alpha}{1-\alpha}\right)}\right]^{t}N_{t}\right)^{1-\alpha}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\tilde{\gamma}=\gamma^{\left(\nicefrac{\alpha}{1-\alpha}\right)}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $K_{t}^{\alpha}(\tilde{\gamma}_{t}N_{t})^{1-\alpha}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\gamma^{t}F(K_{t},N_{t})=\gamma_{t}K_{t}^{\alpha}N_{t}^{1-\alpha}=K_{t}\left(\gamma^{\left(\nicefrac{t}{1-\alpha}\right)}N_{t}\right)^{1-\alpha}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\tilde{\gamma}=\gamma^{\left(\nicefrac{1}{1-\alpha}\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $C_{t}+\left(\frac{I_{t}}{\gamma^{t}}\right)=F(K_{t}N_{t})=C_{t}+\frac{K_{t+1}-(1-\delta)K_{t}}{\gamma^{t}}=K_{t}^{\alpha}N_{t}^{1-\alpha}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\tilde{K}_{t}=\frac{K_{t}}{\gamma^{t}}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $C_{t}+\gamma\tilde{K}_{t+1}=(\tilde{K}_{t}\gamma^{t})^{\alpha}N_{t}^{1-\alpha}+(1-\delta)\tilde{K}_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+The specific 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ in front of 
+\begin_inset Formula $N$
+\end_inset
+
+ determines the growth rate of the variables.
+ If the production function is not Cobb-Doublas, then only
+\begin_inset Formula 
+\[
+C_{t}+K_{t+1}=F(K_{t},\gamma^{t}N_{t})+(1-\delta)K_{t}
+\]
+
+\end_inset
+
+is consistent with a balanced growth path.
+\end_layout
+
+\begin_layout Subsection
+Choosing Growth
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The problem faced by the social planner will be of the form
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max} & {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(C_{t},1-N_{t})\\
+ & C_{t}+K_{t+1}\leq F(K_{t},\gamma^{t}N_{t})+(1-\delta)K_{t}\\
+ & 0\leq N_{t}\leq1\\
+ & k_{0}>0\ \mbox{is given}
+\end{eqnarray*}
+
+\end_inset
+
+As we showed in the previous subsection, a balanced growth path is consistent
+ (i.e., feasible) with the constraint.
+ For the balanced growth path to be optimal, we must impose restrictions
+ on the utility funciton.
+\end_layout
+
+\begin_layout Theorem
+Balanced growth is possible as a solution to the social planner's problem
+ if and only if
+\begin_inset Formula 
+\[
+u(C,L)=\frac{C^{1-\sigma}v(L)}{1-\sigma};\ \sigma>0
+\]
+
+\end_inset
+
+where time endowment is normalized to one as usual and 
+\begin_inset Formula $v(\cdot)$
+\end_inset
+
+ is a function with leisure, 
+\begin_inset Formula $L=1-N$
+\end_inset
+
+, as an argument.
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula $v$
+\end_inset
+
+ is an arbitrary function, but it must be concave and increasing.
+ Another common utility function is the King-Plosser-Rebello
+\begin_inset Formula 
+\[
+u(C,L)=\begin{cases}
+\frac{1}{1-\sigma}\left(\left[C\nu(L)\right]^{1-\sigma}-1\right) & \mbox{if}\ \sigma\neq1\\
+\ln C+v(L) & \mbox{if}\ \sigma=1
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Transforming the Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+How do we solve the new social planner's problem? We define the transformed
+ variables to 
+\begin_inset Quotes eld
+\end_inset
+
+eliminate
+\begin_inset Quotes erd
+\end_inset
+
+ growth from the model.
+\begin_inset Formula 
+\begin{eqnarray*}
+c_{t} & = & \frac{C_{t}}{\gamma^{t}}\\
+i_{t} & = & \frac{I_{t}}{\gamma^{t}}\\
+k_{t} & = & \frac{K_{t}}{\gamma^{t}}\\
+y_{t} & = & \frac{Y_{t}}{\gamma^{t}}\\
+N_{t} & = & N_{t}\\
+\hat{\beta} & = & \beta\gamma^{1-\sigma}
+\end{eqnarray*}
+
+\end_inset
+
+We are 
+\begin_inset Quotes eld
+\end_inset
+
+deflating
+\begin_inset Quotes erd
+\end_inset
+
+ the variables.
+ The transformed variables listed above will converge to a steady state.
+ Thus, obtain the transformed model.
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{\{C_{t},N_{t},K_{t+1}\}_{t=0}^{\infty}}} & {\displaystyle \sum_{t=0}^{t}}\hat{\beta}^{t}\frac{c_{t}^{1-\sigma}v(1-N_{t})}{1-\sigma}\\
+\mbox{s.t.} & c_{t}+\gamma k_{t+1}=F(k_{t},N_{t})+(1-\delta)k_{t}\\
+ & 0\leq N_{t}\leq1\\
+ & k_{0}>0\ \mbox{is given}
+\end{eqnarray*}
+
+\end_inset
+
+For this problem to be well defined, 
+\begin_inset Formula $\beta\gamma^{1-\sigma}<1$
+\end_inset
+
+ is a necessary requirment.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Therefore, with the stated assumptions on preferences and on technology,
+ the model converges to a balanced growth path, in which all variables grow
+ at rate 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+ This rate is exogenously determined; it is a parameter in the model.
+ That is the reason why it is called the 
+\emph on
+exogenous
+\emph default
+ growth model.
+\end_layout
+
+\end_body
+\end_document

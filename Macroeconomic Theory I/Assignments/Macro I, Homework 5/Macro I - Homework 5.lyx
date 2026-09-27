@@ -1,0 +1,420 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Macreconomic Theory I: Homework 5
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+Problem 2
+\end_layout
+
+\begin_layout Standard
+An economy consists of two infinitely lived consumers named 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+.
+ There is one nonstorable consumption good.
+ Consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ consumes 
+\begin_inset Formula $c_{t}^{i}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ ranks consumption streams by
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{t=0}^{\infty}\beta^{t}u(c_{t}^{i})}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\beta\in(0,1)$
+\end_inset
+
+ and 
+\begin_inset Formula $u(c)$
+\end_inset
+
+ is increasing, strictly concave, and twice continuously differentiable.
+ Consumer 1 is endowed with a stream of the consumption good 
+\begin_inset Formula $y_{t}^{1}=\left(1,0,0,1,0,0,1,\ldots\right)$
+\end_inset
+
+.
+ Consumer 2 is endowed with a stream of the consumption good 
+\begin_inset Formula $y_{t}^{2}=\left(0,1,1,0,1,1,0,\ldots\right)$
+\end_inset
+
+.
+ Assme that there are complete markets with time-0 trading.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a) Define a competitive equilibrium.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+competitive equilibrium 
+\emph default
+is a feasible allocation and a price system that, given the price system,
+ the allocation solves each household's problem.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(b) Compute a competitive equilibrium.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is a special case in which 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+ is deterministic and alternates between the values of 1 and 0.
+ Thus, the endowment processes are perfectly predictable sequences.
+ Note that the aggregate endowment is constant, 
+\begin_inset Formula ${\displaystyle \sum_{t=0}^{\infty}}y_{t}^{i}=1$
+\end_inset
+
+.
+ This implies that 
+\begin_inset Formula $c_{t}^{1}\ \mbox{and}\ c_{t}^{2}$
+\end_inset
+
+ are constant over time.
+ Thus, the equilibrium allocation satifies 
+\begin_inset Formula $c_{t}^{i}=\bar{c}^{i}\ \forall\ t,\ \mbox{for}\ i=1,2$
+\end_inset
+
+.
+ Consumer 
+\begin_inset Formula $i$
+\end_inset
+
+'s problem is given by:
+\begin_inset Formula 
+\begin{eqnarray*}
+ & {\displaystyle \max_{c_{t}^{i}}}{\displaystyle \sum_{t=0}^{\infty}\beta^{t}u(\bar{c}^{i})}\\
+\mbox{s.t.} & {\displaystyle \sum_{t=0}^{\infty}}q_{t}^{0}\bar{c}^{i}\leq{\displaystyle \sum_{t=0}^{\infty}}q_{t}^{0}y_{t}^{i}
+\end{eqnarray*}
+
+\end_inset
+
+Here, 
+\begin_inset Formula $q_{t}^{0}$
+\end_inset
+
+ is the price of time 
+\begin_inset Formula $t$
+\end_inset
+
+ consumption in terms of an abstract unit of account or numeraire.
+ So, we shall set 
+\begin_inset Formula $q_{0}^{0}=1$
+\end_inset
+
+, putting the price system in units of time 0 goods.
+ Underlying the single budget constraint is the fact that multilateral trades
+ are possible through a clearing operation that keeps track of net claims.
+ All trades occur at time 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ After time 
+\begin_inset Formula $0$
+\end_inset
+
+, trades that were agreed to at time 
+\begin_inset Formula $0$
+\end_inset
+
+ are executed, but no more trades occur.
+\end_layout
+
+\begin_layout Standard
+Both households have a single budget constraint to which we attach a Lagrange
+ multiplier 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+L={\displaystyle \sum_{t=0}^{\infty}\beta^{t}u(\bar{c}^{i})}+\mu_{i}\left[{\displaystyle \sum_{t=0}^{\infty}}q_{t}^{0}y_{t}^{i}-{\displaystyle \sum_{t=0}^{\infty}}q_{t}^{0}\bar{c}^{i}\right]
+\]
+
+\end_inset
+
+We obtain the first-order conditions for the household's problem
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial L}{\partial\bar{c}^{i}} & = & \beta^{t}u^{\prime}(\bar{c}^{i})-\mu_{i}q_{t}^{0}=0\nonumber \\
+ & \iff & q_{t}^{0}=\beta^{t}\frac{u^{\prime}(\bar{c}^{i})}{\mu_{i}}
+\end{eqnarray}
+
+\end_inset
+
+Equation 1 implies
+\begin_inset Formula 
+\[
+u^{\prime}(\bar{c}^{i})=\mu_{i}\ \ \mbox{(since}\ q_{0}^{0}=1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus,
+\begin_inset Formula 
+\begin{equation}
+q_{t}^{0}=\beta^{t}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Equation (2) and household 
+\begin_inset Formula $i$
+\end_inset
+
+'s budget constraint imply
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}[y_{t}^{i}-\bar{c}^{i}] & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solving this equation for 
+\begin_inset Formula $\bar{c}^{i}$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\[
+\bar{c}^{i}=(1-\beta){\displaystyle \sum_{t=0}^{\infty}}\beta^{t}y_{t}^{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{c}^{1}=(1-\beta){\displaystyle \sum_{t=0}^{\infty}\beta^{3t}=}\frac{1-\beta}{1-\beta^{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{c}^{2}=1-\bar{c}^{1}=1-\frac{1-\beta}{1-\beta^{3}}=\frac{1-\beta^{3}}{1-\beta^{3}}-\frac{1-\beta}{1-\beta^{3}}=\frac{\beta(1-\beta^{2})}{1-\beta^{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(c) Suppose that one of the consumers markets a derivative asset that promises
+ to pay 
+\begin_inset Formula $.05$
+\end_inset
+
+ units of consumption each period.
+ What would the price of that asset be?
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\left\{ d_{t}\right\} _{t=0}^{\infty}$
+\end_inset
+
+ be a stream of claims on time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ The price of an asset entitling the owner to this stream must be
+\begin_inset Formula 
+\[
+p_{0}^{0}={\displaystyle \sum_{t=0}^{\infty}q_{t}^{0}d_{t}}
+\]
+
+\end_inset
+
+If this equation did not hold, someone could make unbounded profits by synthesiz
+ing this asset through purhcases or sales of dated commodities and then
+ either buying or selling the asset.
+ Since 
+\begin_inset Formula $\ \forall\ t\ q_{t}^{0}=\beta^{t}\ \mbox{and}\ d_{t}=0.5$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+p_{0}^{0}={\displaystyle \sum_{t=0}^{\infty}}\beta^{t}0.05=\frac{1}{20(1-\beta)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

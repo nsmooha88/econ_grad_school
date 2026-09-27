@@ -1,0 +1,4342 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Equilibrium With Complete Markets and Asset Pricing
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+8.1.
+ Time 
+\begin_inset Formula $0$
+\end_inset
+
+ versus sequential trading
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This chapter describes competitive equilibria for a pure exchange infinite
+ horizon economy with stochastic endowments.
+ This economy is useful for studying risk sharing, asset pricing, and consumptio
+n.
+ We describe two market structures: an 
+\emph on
+Arrow-Debreu
+\emph default
+ structure with complete markets in dated contingent claims all traded at
+ time 0, and a sequential-trading structure with complete one-period 
+\emph on
+Arrow securities
+\emph default
+.
+ These two entail different assets and timings of trades, but have identical
+ consumption allocations.
+ Both are referred to as complete markets economies.
+ They allow more comprehensive sharing of risks than do the incomplete markets
+ economies, or the economies with imperfect enforcement or imperfect information
+\end_layout
+
+\begin_layout Section*
+8.2.
+ The physical setting: preferences and endowments
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In each period 
+\begin_inset Formula $t\geq0$
+\end_inset
+
+, there is a realization of a stochastic event 
+\begin_inset Formula $s_{t}\in S$
+\end_inset
+
+.
+ Let the history of events up and until time 
+\begin_inset Formula $t$
+\end_inset
+
+ be denoted 
+\begin_inset Formula $s^{t}=\left[s_{0},s_{1},\ldots,s_{t}\right]$
+\end_inset
+
+.
+ The unconditional probability of obsering a particular sequence of events
+ 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ is given by a probability measure 
+\begin_inset Formula $\pi_{t}(s^{t})$
+\end_inset
+
+.
+ We write conditional probabilities as 
+\begin_inset Formula $\pi_{t}(s^{t}|s^{\tau})$
+\end_inset
+
+, which is the probability of observing 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ conditional upon the realization of 
+\begin_inset Formula $s^{\tau}$
+\end_inset
+
+.
+ In this chapter, we shall assume that trading occurs after observing 
+\begin_inset Formula $s_{0}$
+\end_inset
+
+, which we capture by setting 
+\begin_inset Formula $\pi_{0}(s_{0})=1$
+\end_inset
+
+ for the initially give value of 
+\begin_inset Formula $s_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In section 8.9, we shall follow much of the literatures in macroeconomics
+ and econometrics and assume that 
+\begin_inset Formula $\pi_{t}(s^{t})$
+\end_inset
+
+ is induced by a Markov process.
+ We wait to impose that special assumption because some important findings
+ do not require making that assumption.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There are 
+\begin_inset Formula $I$
+\end_inset
+
+ agents named 
+\begin_inset Formula $i=1,\ldots,I$
+\end_inset
+
+.
+ Agent 
+\begin_inset Formula $i$
+\end_inset
+
+ owns a stochastic endowment of one good 
+\begin_inset Formula $y_{t}^{i}(s^{t})$
+\end_inset
+
+ that depends on the history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+.
+ The history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ is publicly observable.
+ Household 
+\begin_inset Formula $i$
+\end_inset
+
+ purchases a history-dependent consumption plan 
+\begin_inset Formula $c^{i}=\left\{ c_{t}^{i}(s^{t})\right\} _{t=0}^{\infty}$
+\end_inset
+
+ and orders these consumption streams by
+\begin_inset Formula 
+\begin{equation}
+U(c^{i})={\displaystyle \sum_{t=0}^{\infty}}{\displaystyle \sum_{s^{t}}}\beta^{t}u\left[c_{t}^{i}(s^{t})\right]\pi_{t}(s^{t})
+\end{equation}
+
+\end_inset
+
+The right side is equal to 
+\begin_inset Formula $E_{0}\sum_{t=0}^{\infty}\beta^{t}u(c_{t}^{i})$
+\end_inset
+
+, where 
+\begin_inset Formula $E_{0}$
+\end_inset
+
+ is the mathematical expectation operator, conditioned on 
+\begin_inset Formula $s_{0}$
+\end_inset
+
+.
+ Here 
+\begin_inset Formula $u(c)$
+\end_inset
+
+ is an increasing, twice continuously differentiable, strictly concave function
+ of consumption 
+\begin_inset Formula $c\geq0$
+\end_inset
+
+ of one good.
+ The utility function satisfies the Inada condition
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+One role of this Inada condition is to make the consumption of each agent
+ strictly positive in every date-history pair.
+ A related role is to deliver a state-by-state borrowing limit to impose
+ in economies with sequential trading of Arrow securities.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+{\displaystyle \lim_{c\rightarrow0}}u^{\prime}(c)=+\infty
+\]
+
+\end_inset
+
+A 
+\emph on
+feasible allocation
+\emph default
+ satisfies
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{i}}c_{t}^{i}(s^{t})\leq{\displaystyle \sum_{i}}y_{t}^{i}(s^{t})
+\end{equation}
+
+\end_inset
+
+for all 
+\begin_inset Formula $t$
+\end_inset
+
+ and for all 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+8.3.
+ Alternatie trading arrangements
+\end_layout
+
+\begin_layout Section*
+8.4.
+ Pareto Problem
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As a benchmark against which to measure allocations attaned by a market
+ economy, we seek efficient allocations.
+ An allocation is a list of sequences of functions 
+\begin_inset Formula $c^{i}=\{c_{t}^{i}(s^{t})\}_{t=0}^{\infty}$
+\end_inset
+
+, one for each 
+\begin_inset Formula $i$
+\end_inset
+
+, and it is said to be efficient if it is Pareto optimal: it has the property
+ that any reallocation that makes one household strictly better off also
+ makes one or more other households worse off.
+ We can find efficient allocations by posing a Pareto problem for a fictitious
+ social planner.
+ The planner attaches nonnegative 
+\emph on
+Pareto weights
+\emph default
+ 
+\begin_inset Formula $\lambda_{i},\ i=1,\ldots,I$
+\end_inset
+
+ on the consumers and choose allocations 
+\begin_inset Formula $c^{i},\ i=1,\ldots,I$
+\end_inset
+
+ to maximize
+\begin_inset Formula 
+\begin{eqnarray}
+\max & {\displaystyle \sum_{i}\lambda_{i}\left({\displaystyle \sum_{t=0}^{\infty}}\sum_{s^{t}}\beta^{t}u\left(c_{t}^{i}(s^{t})\right)\pi_{t}(s^{t})\right)}\\
+\mbox{subject to} & \sum_{i}c_{t}^{i}(s^{t})\leq\sum_{i}y_{t}^{i}(s^{t})\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+Note that the 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+'s are used to map 
+\begin_inset Formula $c^{i}$
+\end_inset
+
+ to all possible Pareto efficient allocations.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We call an allocation 
+\emph on
+efficient
+\emph default
+ if it solves this problem for some set of nonnegative 
+\begin_inset Formula $\lambda_{i}\mbox{'s}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\theta_{t}(s^{t})$
+\end_inset
+
+ be a nonnegative Lagrange multiplier on the feasibility constrant for time
+ 
+\begin_inset Formula $t$
+\end_inset
+
+ and history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+, and form the Lagrangian
+\begin_inset Formula 
+\[
+L=\sum_{t=0}^{\infty}{\displaystyle \sum_{s^{t}}}\left\{ \sum_{i}\lambda_{i}\beta^{t}u(c_{t}^{i}(s^{t}))\pi_{t}(s^{t})+\theta_{t}(s^{t})\sum_{i=1}^{I}\left[y_{t}^{i}(s^{t})-c_{t}^{i}(s^{t})\right]\right\} 
+\]
+
+\end_inset
+
+The first-order condition for maximizing 
+\begin_inset Formula $L$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $c_{t}^{i}(s^{t})$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+\beta^{t}u^{\prime}(c_{t}^{i}(s^{t}))\pi_{t}(s^{t})=\lambda_{i}^{-1}\theta_{t}(s^{t})
+\end{equation}
+
+\end_inset
+
+for all 
+\begin_inset Formula $i,t$
+\end_inset
+
+, 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+.
+ Taking the ratio for consumers 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\[
+\frac{u^{\prime}(c_{t}^{i}(s^{t}))}{u^{\prime}(c_{t}^{1}(s^{t}))}=\frac{\lambda_{1}}{\lambda_{i}}
+\]
+
+\end_inset
+
+Thus, adjusting for the weights, marginal utilities are equalized across
+ consumers.
+ This equation implies
+\begin_inset Formula 
+\begin{equation}
+effic_{t}^{i}(s^{t})=u^{\prime}{}^{-1}\left(\frac{\lambda_{1}}{\lambda_{i}}u^{\prime}(c_{t}^{1}(s^{t}))\right)
+\end{equation}
+
+\end_inset
+
+Plugging this equation into the feasibility condition at equality gives
+\begin_inset Formula 
+\begin{equation}
+\sum_{i}u^{\prime}{}^{-1}\left(\lambda_{i}^{-1}\lambda_{1}u^{\prime}(c_{t}^{1}(s^{t}))\right)=\sum_{i}y_{t}^{i}(s^{t})
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+This is one equation in 
+\begin_inset Formula $c_{t}^{1}(s^{t})$
+\end_inset
+
+.
+ The right hand side is the realized aggregate endowment, so the left hand
+ side is a funciton only of the aggregate endowment.
+ Thus, 
+\begin_inset Formula $c_{t}^{1}(s^{t})$
+\end_inset
+
+ depends only on the current realizaiton of the aggregate endowment and
+ neither on the specific history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ leading up to that outcome nor on the realization of individual endowments.
+ This implies that for all 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $c_{t}^{i}(s^{t})$
+\end_inset
+
+ depends only on the aggregate endowment realization.
+\end_layout
+
+\begin_layout Proposition*
+An efficient allocation is a function of the realized aggregate endowment
+ and depends neither on the specific history leading up to that outcome
+ nor on the realizations of individual endowments; 
+\begin_inset Formula $c_{t}^{i}(s^{t})=c_{\tau}^{i}(\tilde{s}^{\tau})$
+\end_inset
+
+ for 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{s}^{\tau}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sum_{j}y_{t}^{j}(s^{t})=\sum_{j}y_{t}^{j}(\tilde{s}^{\tau})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To compute the optimal allocation, first solve (6) for 
+\begin_inset Formula $c_{t}^{1}(s^{t})$
+\end_inset
+
+, then solve 
+\begin_inset Formula $(5)$
+\end_inset
+
+ for 
+\begin_inset Formula $c_{t}^{i}(s^{t})$
+\end_inset
+
+.
+ Note from (5) that only the ratios of the Pareto weights matter, so that
+ we are free to normalize the weights, i.e., to impose 
+\begin_inset Formula $\sum_{i}\lambda_{i}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+8.4.1.
+ Time invariance of Pareto weights
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Through equations (5) and (6), the allocation 
+\begin_inset Formula $c_{t}^{i}(s^{t})$
+\end_inset
+
+ assigned to consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ depends on a time-invariance way on the aggregate endowment 
+\begin_inset Formula $\sum_{j}y_{t}^{j}(s^{t})$
+\end_inset
+
+.
+ Consumer 
+\begin_inset Formula $i$
+\end_inset
+
+'s share of the aggregate endowment varies directly with his Pareto weight
+ 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section*
+8.5.
+ Arrow-Debreu time-zero trading
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now describe how an optimal allocation can be attained by a competitive
+ equilibrium with the Arrow-Debreu timing.
+ Households trade dated history-contingent claims to consumption.
+ There is a complete set of securities.
+ Trades occur at time 0, after 
+\begin_inset Formula $s_{0}$
+\end_inset
+
+ has been realized.
+ At 
+\begin_inset Formula $t=0$
+\end_inset
+
+, households can exchange claims on time 
+\begin_inset Formula $t$
+\end_inset
+
+ consumption, contingent on history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ at price 
+\begin_inset Formula $q_{t}^{0}(s^{t})$
+\end_inset
+
+.
+ The superscript 0 refers to the date at which trades occur, while the subscript
+ 
+\begin_inset Formula $t$
+\end_inset
+
+ refers to the date that deliveries are to be made.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The household's problem is to choose 
+\begin_inset Formula $c^{i}$
+\end_inset
+
+ to maximize
+\begin_inset Formula 
+\[
+\max_{c^{i}}\ {\displaystyle \sum_{t=0}^{\infty}}\sum_{s^{t}}\beta^{t}u\left(c_{t}^{i}(s^{t})\right)\pi_{t}(s^{t})
+\]
+
+\end_inset
+
+subject its budget constraint
+\begin_inset Formula 
+\begin{equation}
+\sum_{t=0}^{\infty}\sum_{s^{t}}q_{t}^{0}(s^{t})c_{t}^{i}(s^{t})\leq\sum_{t=0}^{\infty}\sum_{s^{t}}q_{t}^{0}(s^{t})y_{t}^{i}(s^{t})
+\end{equation}
+
+\end_inset
+
+Here, 
+\begin_inset Formula $q_{t}^{0}(s^{t})$
+\end_inset
+
+ is the price of time 
+\begin_inset Formula $t$
+\end_inset
+
+ consumption contingent on history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ at 
+\begin_inset Formula $t$
+\end_inset
+
+ in terms of an abstract unit of account or numeraire.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Underlying the 
+\emph on
+single 
+\emph default
+budget constraint (7) is the fact that multilateral trades are possible
+ through a clearing operation that keeps track of net claims.
+ All trades occur at time 0.
+ After time 0, trades that were agreed to at time 0 are executed, but no
+ more trades occur.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Each household has a 
+\emph on
+single
+\emph default
+ budget constrant (7) to which we attach a Lagrange multiplier 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+.
+ We obtain the first-order conditions for the household's problem:
+\begin_inset Formula 
+\begin{equation}
+\beta^{t}u^{\prime}[c_{t}^{i}(s^{t})]\pi_{t}(s^{t})=\mu_{i}q_{t}^{0}(s^{t})
+\end{equation}
+
+\end_inset
+
+The left side is the derivative of total utility with respect to the time
+ 
+\begin_inset Formula $t$
+\end_inset
+
+, history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ component of consumption.
+ Each household has its own 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+ that is independent of time.
+ We use the following definition:
+\end_layout
+
+\begin_layout Definition*
+A 
+\emph on
+price system
+\emph default
+ is a sequence of functions 
+\begin_inset Formula $\{q_{t}^{0}(s^{t})\}_{t=0}^{\infty}$
+\end_inset
+
+.
+ An 
+\emph on
+allocation
+\emph default
+ is a list of sequences of functions 
+\begin_inset Formula $c^{i}=\left\{ c_{t}^{i}(s^{t})\right\} _{t=0}^{\infty}$
+\end_inset
+
+, one for each 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Notice that equation (8) implies
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{u^{\prime}[c_{t}^{i}(s^{t})]}{u^{\prime}[c_{t}^{j}(s^{t})]}=\frac{\mu_{i}}{\mu_{j}}
+\end{equation}
+
+\end_inset
+
+for all pairs 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+.
+ Thus, ratios of marginal utilities between pairs of agents are constant
+ across all histories and dates.
+\end_layout
+
+\begin_layout Definition*
+A competitive equilibrium is a feasible allocation and a price system such
+ that, given the price system, the allocation solves each household's problem.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An equilibrium allocation solves the feasibility constraint, the budget
+ constraint, and equation (9).
+ Note that equation (9) implies that 
+\begin_inset Formula 
+\begin{equation}
+c_{t}^{i}(s^{t})=u^{\prime-1}\left\{ u^{\prime}[c_{t}^{1}(s^{t})]\frac{\mu_{i}}{\mu_{1}}\right\} 
+\end{equation}
+
+\end_inset
+
+Substituting this into the feasability condition at equaility gives
+\begin_inset Formula 
+\begin{equation}
+\sum_{i}u^{\prime-1}\left\{ u^{\prime}[c_{t}^{1}(s^{t})]\frac{\mu_{i}}{\mu_{1}}\right\} =\sum_{i}y_{t}^{i}(s^{t})
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The right side of equation (11) is the current realization of the aggregate
+ endowment.
+ It does not per se depend on the specific history leading up to this outcome;
+ therefore, the left side, and so 
+\begin_inset Formula $c_{t}^{1}(s^{t})$
+\end_inset
+
+, must also depend only on the current aggregate endowment.
+ It follows from equation (10) that the equilibrium allocation 
+\begin_inset Formula $c_{t}^{i}(s^{t})$
+\end_inset
+
+ for each 
+\begin_inset Formula $i$
+\end_inset
+
+ depends only on the economy's aggreagte endowment.
+\end_layout
+
+\begin_layout Proposition*
+
+\shape up
+\emph on
+The competitive equilibrium allocation is a function of the realized aggregate
+ endowment and depends neither on the specific history leading up to that
+ outcome nor on the realizations of individual endowments; 
+\begin_inset Formula $c_{t}^{i}(s^{t})=c_{\tau}^{i}(\tilde{s}^{\tau})$
+\end_inset
+
+ for 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{s}^{\tau}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sum_{j}y_{t}^{j}(s^{t})=\sum_{j}y_{\tau}^{j}(\tilde{s}^{\tau})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+8.5.1.
+ Equilibrium pricing function
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose that 
+\begin_inset Formula $c^{i},\ i=1,\ldots,I$
+\end_inset
+
+ is an equilibrium allocaiton.
+ Then the marginal condition (8) gives the price system 
+\begin_inset Formula $q_{t}^{0}(s^{t})$
+\end_inset
+
+ as a function of the allocation to household 
+\begin_inset Formula $i$
+\end_inset
+
+, for any 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Note that the price system is a stochastic process.
+ because the units of the price system are arbitrary, one of the prices
+ can be normalized at any positive value.
+ We shall set 
+\begin_inset Formula $q_{0}^{0}(s_{0})=1$
+\end_inset
+
+, putting the price system in units of time 0 goods.
+ This choice implies that 
+\begin_inset Formula $\mu_{i}=u^{\prime}\left[c_{0}^{i}(s_{0})\right]$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+8.5.2.
+ Optimality of equilibrium allocation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A competitive equilibrium allocation is a particular Pareto optimal allocation,
+ one that sets the Pareto weights 
+\begin_inset Formula $\lambda_{i}=\mu_{i}^{-1}$
+\end_inset
+
+, where 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+ is the unique (up to multiplication by a positive scalar) set of Pareto
+ weights associated with the competitive equilibrium.
+ Furthermore, at the competitive equilibrium allocation, the 
+\emph on
+shadow prices
+\emph default
+ 
+\begin_inset Formula $\theta_{t}(s^{t})$
+\end_inset
+
+ for the associated planning problem equal the prices 
+\begin_inset Formula $q_{t}^{0}(s^{t})$
+\end_inset
+
+ for goods to be delieved at date 
+\begin_inset Formula $t$
+\end_inset
+
+ contingent on history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ associated with the Arrow-Debreu competitive equilibrium.
+ That the allocations for the planning problem and the competitive equilibrium
+ are aligned reflects the two fundamental theorems of welfare economics.
+\end_layout
+
+\begin_layout Subsection*
+8.5.3.
+ Equilibrium computation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To compute an equilibrium, we have somehow to determine ratios of the Lagrange
+ multipliers, 
+\begin_inset Formula $\nicefrac{\mu_{i}}{\mu_{1}},\ i=1,\ldots,I$
+\end_inset
+
+, that appear in equation (10) and (11).
+ The following 
+\emph on
+Negishi algorithm
+\emph default
+ accomplishes this.
+\end_layout
+
+\begin_layout Enumerate
+Fix a positive value for one 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+, say 
+\begin_inset Formula $\mu_{1}$
+\end_inset
+
+, throughout the algorithm.
+ Guess some positive values for the remaining 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+'s.
+ Then solve equations (1) and (11) for a candidate consumption allocation
+ 
+\begin_inset Formula $c^{i},\ i=1,\ldots,I$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Use (8) for any household 
+\begin_inset Formula $i$
+\end_inset
+
+ to solve for the price system 
+\begin_inset Formula $q_{t}^{0}(s^{t})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+For 
+\begin_inset Formula $i=1,\ldots I$
+\end_inset
+
+, check the budget constraint (7).
+ For those 
+\begin_inset Formula $i$
+\end_inset
+
+'s for which the const of consumption exceeds the value of their endowment,
+ raise 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+, while for those 
+\begin_inset Formula $i$
+\end_inset
+
+'s for which the reverse inequality holds, lower 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Iterate to convergence on steps 1-3.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Multiplying all of the 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+'s by a positive scalar amounts simply to a change in units of the price
+ system.
+ That is why we are free to normalize as we have in step 1.
+\end_layout
+
+\begin_layout Subsection*
+8.5.4.
+ Interpretation of trading arrangement
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the competitive equilibrium, all trades occur at 
+\begin_inset Formula $t=0$
+\end_inset
+
+ in one market.
+ Deliveries occur after 
+\begin_inset Formula $t=0$
+\end_inset
+
+, but no more trades.
+ A vast clearing or credit system operates at 
+\begin_inset Formula $t=0$
+\end_inset
+
+.
+ It ensures that condition (7) holds for each household 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ A symptom of the once-and-for-all trading arrangement is that each household
+ faces one budget constraint that accounts for all trades across dates and
+ histories.
+\end_layout
+
+\begin_layout Section*
+8.6.
+ Examples
+\end_layout
+
+\begin_layout Subsection*
+8.6.1.
+ Example 1: risk sharing
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose that the one-period utility function is of the constant relative
+ risk-aversion form
+\begin_inset Formula 
+\[
+u(c)=(1-\gamma)^{-1}c^{1-\gamma},\ \gamma>0
+\]
+
+\end_inset
+
+ Then equation (9) implies
+\begin_inset Formula 
+\[
+\left[c_{t}^{i}(s^{t})\right]^{-\gamma}=\left[c_{t}^{j}(s^{t})\right]^{-\gamma}\frac{\mu_{i}}{\mu_{j}}
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\begin{equation}
+c_{t}^{i}(s^{t})=c_{t}^{j}(s^{t})\left(\frac{\mu_{i}}{\mu_{j}}\right)^{-\frac{1}{\gamma}}
+\end{equation}
+
+\end_inset
+
+Equation (12) states that time 
+\begin_inset Formula $t$
+\end_inset
+
+ elements of consumption allocations to distinct agents are constant fractions
+ of one another.
+ With a power utility function, it says that individual consumption is perfectly
+ correlated with the aggregate endowment or aggregate consumption.
+ Also, equation (12) implies that conditional on the history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+, time 
+\begin_inset Formula $t$
+\end_inset
+
+ consumption 
+\begin_inset Formula $c_{t}^{i}(s^{t})$
+\end_inset
+
+ is independent of the household's individual endowment 
+\begin_inset Formula $y_{t}^{i}(s^{t})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The fractions of the aggregate endowment assigned to each individual are
+ independent of the realization of 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+.
+ Thus, there is extensive cross-history and cross-time consumption smoothing.
+ The constant-fractions-of-consumption characterization comes from these
+ two aspects of the theory: (1) complete markets and (2) a homothetic one-period
+ utility function.
+\end_layout
+
+\begin_layout Subsection*
+8.6.2.
+ Example 2: No aggregate uncertainty
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let the stochastic event 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+ take values on the unit interval 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.
+ There are two households, with 
+\begin_inset Formula $y_{t}^{1}(s^{t})=s_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{t}^{2}(s^{t})=1-s_{t}$
+\end_inset
+
+.
+ Note that the aggregate endowment is constant, 
+\begin_inset Formula $\sum_{i}y_{t}^{i}(s^{t})=1$
+\end_inset
+
+.
+ Then equation (11) implies that 
+\begin_inset Formula $c_{t}^{1}(s^{t})$
+\end_inset
+
+ is constant over time and across histories, and equation (11) implies that
+ 
+\begin_inset Formula $c_{t}^{2}(s^{t})$
+\end_inset
+
+ is also constant.
+ Thus, the equilibrium allocation satisfies 
+\begin_inset Formula $c_{t}^{i}(s^{t})=\bar{c}^{i}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+, for 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+.
+ Then from equation (8)
+\begin_inset Formula 
+\begin{equation}
+q_{t}^{0}(s^{t})=\beta^{t}\pi_{t}(s^{t})\frac{u^{\prime}(\bar{c}^{i})}{\mu_{i}}
+\end{equation}
+
+\end_inset
+
+for all 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+, for 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+.
+ Household 
+\begin_inset Formula $i$
+\end_inset
+
+'s budget constraint implies
+\begin_inset Formula 
+\begin{equation}
+\frac{u^{\prime}(\bar{c}^{i})}{\mu_{i}}{\displaystyle \sum_{t=0}^{\infty}}{\displaystyle \sum_{s^{t}}\beta^{t}}\pi_{t}(s^{t})\left[\bar{c}^{i}-y_{t}^{i}(s^{t})\right]=0
+\end{equation}
+
+\end_inset
+
+Using the time 0 good as numeraire, 
+\begin_inset Formula $q_{0}^{0}(s_{0})=1$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\frac{u^{\prime}(\bar{c}^{i})}{\mu_{i}}=1
+\]
+
+\end_inset
+
+Also,
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{s^{t}}\pi_{t}(s^{t})=1}
+\]
+
+\end_inset
+
+Thus, solving equation (14) for 
+\begin_inset Formula $\bar{c}^{i}$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\begin{equation}
+\bar{c}^{i}=(1-\beta){\displaystyle \sum_{t=0}^{\infty}}{\displaystyle \sum_{s^{t}}}\beta^{t}\pi_{t}(s^{t})y_{t}^{i}(s^{t})
+\end{equation}
+
+\end_inset
+
+Summing equation (15) verifies that 
+\begin_inset Formula $\bar{c}^{1}+\bar{c}^{2}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+8.6.3.
+ Example 3: periodic endowment processes
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the special case of the previous example in which 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+ is deterministic and alternates between the values 1 and 0; 
+\begin_inset Formula $s_{0}=1$
+\end_inset
+
+, 
+\begin_inset Formula $s_{t}=0$
+\end_inset
+
+ for 
+\begin_inset Formula $t$
+\end_inset
+
+ odd, and 
+\begin_inset Formula $s_{t}=1$
+\end_inset
+
+ for 
+\begin_inset Formula $t$
+\end_inset
+
+ even.
+ Thus, the endowment processes are perfectly predictable sequences 
+\begin_inset Formula $(1,0,1,\ldots)$
+\end_inset
+
+ for the first agent and 
+\begin_inset Formula $(0,1,0,\ldots)$
+\end_inset
+
+ for the second agent.
+ Let 
+\begin_inset Formula $\tilde{s}^{t}$
+\end_inset
+
+ be the history of 
+\begin_inset Formula $(1,0,1,\ldots)$
+\end_inset
+
+ up to 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Evidently, 
+\begin_inset Formula $\pi_{t}(\tilde{s}^{t})=1$
+\end_inset
+
+, and the probability assigned to all other histories up to 
+\begin_inset Formula $t$
+\end_inset
+
+ is zero.
+ The equilibrium price system is then
+\begin_inset Formula 
+\[
+q_{t}^{0}(s^{t})=\begin{cases}
+\beta^{t} & \mbox{if}\ s^{t}=\tilde{s}^{t}\\
+0 & \mbox{otherwise}
+\end{cases}
+\]
+
+\end_inset
+
+when using the time 0 good as numeraire, 
+\begin_inset Formula $q_{0}^{0}(\tilde{s}_{0})=1$
+\end_inset
+
+.
+ From equation (15), we have
+\begin_inset Formula 
+\begin{eqnarray}
+\bar{c}^{1} & = & (1-\beta){\displaystyle \sum_{j=0}^{\infty}}\beta^{2j}=\frac{1}{1+\beta}\\
+\bar{c}^{2} & = & (1-\beta)\beta{\displaystyle \sum_{j=0}^{\infty}}\beta^{2j}=\frac{\beta}{1+\beta}
+\end{eqnarray}
+
+\end_inset
+
+Consumer 1 consumes more every period because he is richer by virtue of
+ receiving his endowment earlier.
+\end_layout
+
+\begin_layout Section*
+8.7 Primer on asset pricing
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Many asset-pricing models assume complete markets and price an asset by
+ breaking it into a sequence of history-contingent claims, evaluating each
+ component of that sequnce with the relevant 
+\begin_inset Quotes eld
+\end_inset
+
+state price deflator
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $q_{t}^{0}(s^{t})$
+\end_inset
+
+, then adding up those values.
+ The asset is viewed as 
+\emph on
+redundant
+\emph default
+, in the sense that it offers a bundle of history-contingent dated claims,
+ each component of which has already been priced by the market.
+\end_layout
+
+\begin_layout Subsection*
+8.7.1.
+ Pricing redundant assets
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\left\{ d_{t}(s^{t})\right\} ^{\infty}$
+\end_inset
+
+ be a stream of claims on time 
+\begin_inset Formula $t$
+\end_inset
+
+, history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ consumption, where 
+\begin_inset Formula $d_{t}(s^{t})$
+\end_inset
+
+ is a measurable function of 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+.
+ The price of an asset entitling the owner to this stream must be
+\begin_inset Formula 
+\begin{equation}
+p_{0}^{0}(s_{0})={\displaystyle \sum_{t=0}^{\infty}}{\displaystyle \sum_{s^{t}}}q_{t}^{0}(s^{t})d_{t}(s^{t})
+\end{equation}
+
+\end_inset
+
+If this equation did not hold, someone could make unbounded profits by synthesiz
+ing this asset through purchases or sales of history-contingent dated commoditie
+s and then either buying or selling the asset.
+\end_layout
+
+\begin_layout Subsection*
+8.7.2.
+ Riskless consol
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As an example, consider the price of a 
+\emph on
+riskless consol
+\emph default
+, that is, an asset offering to pay one unit of consumption for sure each
+ period.
+ Then, 
+\begin_inset Formula $d_{t}(s^{t})=1$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+, and the price of this asset is
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{t=0}^{\infty}}{\displaystyle \sum_{s^{t}}}q_{t}^{0}(s^{t})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+8.7.3.
+ Riskless strips
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As another example, consider a sequence of 
+\emph on
+strips 
+\emph default
+of payoffs on the riskless consol.
+ The time 
+\begin_inset Formula $t$
+\end_inset
+
+ strip is just the payoff process 
+\begin_inset Formula $d_{\tau}=1$
+\end_inset
+
+ if 
+\begin_inset Formula $\tau=t\geq0$
+\end_inset
+
+, and 0 otherwise.
+ Thus, the owner of the strip is etitled only to the time 
+\begin_inset Formula $t$
+\end_inset
+
+ coupon.
+ The value of the time 
+\begin_inset Formula $t$
+\end_inset
+
+ strip at time 0 is evidently
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{s^{t}}}q_{t}^{0}(s^{t})
+\]
+
+\end_inset
+
+Compare this to the price of the consol (19).
+ Of course, we can think of the 
+\begin_inset Formula $t$
+\end_inset
+
+-period riskless strip as simply a 
+\begin_inset Formula $t$
+\end_inset
+
+-period zero-coupon bond.
+\end_layout
+
+\begin_layout Section*
+8.8 Sequential trading: Arrow securities
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This section describes an alternative market structure that achieves the
+ same equilibrium allocation as the Arrow-Debreu equilibrium.
+ 
+\end_layout
+
+\begin_layout Subsection*
+8.8.1 Arrow securities
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We build on an insight of Arrow that one-period securities are enough to
+ implement complete markets, provided that new one-period markets are reopened
+ for traing each period.
+ Thus, at each date 
+\begin_inset Formula $t\geq0$
+\end_inset
+
+, trades occur in a set of claims to one-period-ahead-state contingent consumpti
+on.
+ We describe a competitive equilibrium of this sequential-trading economy.
+ With a full array of these one-period-ahead claims, the sequential-trading
+ arrangement attains the same allocation as the competitive equilibrium
+ we described earlier.
+\end_layout
+
+\begin_layout Subsection*
+8.8.2.
+ Insight: wealth as an endogenous state variable
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A key step in finding a sequential-trading arrangement is to identify a
+ variable to serve as the state in a value funciton for the household at
+ date 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ We find this state by taking an equilibrium allocation and price system
+ for the (Arrow-Debreu) time 0 trading structure and applying a guess-and-verify
+ method.
+ We begin by asking the following question.
+ In the competitive equilibrium where all trading takes place at time 0,
+ excluding its endowment, what is the implied wealth of household 
+\begin_inset Formula $i$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+ after history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+? In period 
+\begin_inset Formula $t$
+\end_inset
+
+, conditional on history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+, we sum up the value of the household's purchased claims to current and
+ future goods net of its outstanding liabilities.
+ Since history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ is realized, we discard all claims and liabilities contingent on another
+ initial history.
+ For example, household 
+\begin_inset Formula $i$
+\end_inset
+
+'s net claim to delivery of goods in a future period 
+\begin_inset Formula $\tau\geq t$
+\end_inset
+
+, contingent on history 
+\begin_inset Formula $\tilde{s}^{\tau}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\tilde{s}^{t}=s^{t}$
+\end_inset
+
+, is given by 
+\begin_inset Formula $\left[c_{\tau}^{i}(\tilde{s}^{\tau})-y_{\tau}^{i}(\tilde{s}^{\tau})\right]$
+\end_inset
+
+.
+ Thus, the household's wealth, or the value of all its current and future
+ net claims, expressed in terms of the date 
+\begin_inset Formula $t$
+\end_inset
+
+, history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ consumption good is
+\begin_inset Formula 
+\begin{equation}
+\Upsilon_{t}^{i}(s^{t})={\displaystyle \sum_{\tau=t}^{\infty}}{\displaystyle \sum_{s^{\tau}|s^{t}}}q_{\tau}^{t}(s^{\tau})\left[c_{\tau}^{i}(s^{\tau})-y_{\tau}^{i}(s^{\tau})\right]
+\end{equation}
+
+\end_inset
+
+If 
+\begin_inset Formula $\Upsilon_{t}^{i}(s^{t})=0$
+\end_inset
+
+, then 
+\begin_inset Formula $c_{\tau}^{i}(s^{\tau})=y_{\tau}^{i}(s^{\tau})$
+\end_inset
+
+ for all 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ Note that the feasibility constraint (2) at equality implies that
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{I}}\Upsilon_{t}^{i}(s^{t})=0,\ \forall\ t,s^{t}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+In moving from the Arrow-Debreu economy to one with sequential trading,
+ we can match up the time 
+\begin_inset Formula $t$
+\end_inset
+
+, history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ wealth of the household in the sequential economy with the tail wealth
+ 
+\begin_inset Formula $\Upsilon_{t}^{i}(s^{t})$
+\end_inset
+
+ from the Arrow-Debreu economy computed in equation (2).
+ But first we have to say something about debt limits, a feature that was
+ absent in the Arrow-Debreu economy because we imposed (7).
+\end_layout
+
+\begin_layout Subsection*
+8.8.3.
+ Debt limits
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In moving to the sequential formulation, we shall need to impose some restrictio
+ns in this section.
+ We'll synthesize restrictions that work by starting from the equilibrium
+ allocation of the Arrow-Decreu economy (with time 0 markets), and find
+ some state-by-state debt limits that suffice to support sequential trading.
+ Often we'll refer to these weakest possible debt limits as the 
+\begin_inset Quotes eld
+\end_inset
+
+natural debt limits.
+\begin_inset Quotes erd
+\end_inset
+
+ These limits come from the commonsense requirement that it has to be 
+\emph on
+feasible
+\emph default
+ for the consumer to repay his state contingent debt in every possible state.
+ Given our assumption that 
+\begin_inset Formula $c_{t}^{i}(s^{t})$
+\end_inset
+
+ must be nonnegative, that feasibility requirement leads to the natural
+ debt limits that we now describe.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $q_{\tau}^{t}(s^{\tau})$
+\end_inset
+
+ be the Arrow-Debreu price, denominated in units of the date 
+\begin_inset Formula $t$
+\end_inset
+
+, history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ consumption good.
+ Consider the value of the tail of agent 
+\begin_inset Formula $i$
+\end_inset
+
+'s endowment sequence at time 
+\begin_inset Formula $t$
+\end_inset
+
+ in history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+A_{t}^{i}(s^{t})={\displaystyle \sum_{\tau=t}^{\infty}}{\displaystyle \sum_{s^{\tau}|s^{t}}}q_{\tau}^{t}(s^{\tau})y_{\tau}^{i}(s^{\tau})
+\end{equation}
+
+\end_inset
+
+We call 
+\begin_inset Formula $A_{t}^{i}(s^{t})$
+\end_inset
+
+ the 
+\emph on
+natural debt limit
+\emph default
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+ in history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+.
+ It is the maximal value that agent 
+\begin_inset Formula $i$
+\end_inset
+
+ can repay starting from that period, assuming that his consumption is zero
+ forever.
+ From now on, we shall require that household 
+\begin_inset Formula $i$
+\end_inset
+
+ at time 
+\begin_inset Formula $t-1$
+\end_inset
+
+ and history 
+\begin_inset Formula $s^{t-1}$
+\end_inset
+
+ cannot promise to pay more than 
+\begin_inset Formula $A_{t}^{i}(s^{t})$
+\end_inset
+
+ conditional on the realization of 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+ tomorrow, because it will not be feasible to repay more.
+ Note that household 
+\begin_inset Formula $i$
+\end_inset
+
+ at time 
+\begin_inset Formula $t-1$
+\end_inset
+
+ faces one such borrowing constraint for each possible realization of 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+ tomorrow.
+\end_layout
+
+\begin_layout Subsection*
+8.8.4.
+ Sequential trading
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There is a sequence of markets in one-period-ahead state-contingent claims
+ to wealth or consumption.
+ At each date 
+\begin_inset Formula $t\geq0$
+\end_inset
+
+, households trade claims to date 
+\begin_inset Formula $t+1$
+\end_inset
+
+ consumption, whose payment is contingent on the realization of 
+\begin_inset Formula $s_{t+1}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $a_{t}^{i}(s^{t})$
+\end_inset
+
+ denote the claims to 
+\begin_inset Formula $t$
+\end_inset
+
+ consumption, other than its endowment, that household 
+\begin_inset Formula $i$
+\end_inset
+
+ brings into time 
+\begin_inset Formula $t$
+\end_inset
+
+ in history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $a_{t}^{i}(s^{t})>0$
+\end_inset
+
+, then household 
+\begin_inset Formula $i$
+\end_inset
+
+ purchased a security, i.e., the houehold saved its money, so it was a lender
+ in the security market.
+ If 
+\begin_inset Formula $a_{t}^{i}(s^{t})<0$
+\end_inset
+
+, then household 
+\begin_inset Formula $i$
+\end_inset
+
+ sold a security, i.e., the household borrowed money, so it was a borrower
+ in the security market.
+ In each period, total borrowing is equal to total lending, hence 
+\begin_inset Formula $\sum_{i}a_{t}^{i}(s^{t})=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition*
+A 
+\emph on
+distribution of wealth
+\emph default
+ is a vector 
+\begin_inset Formula $\overrightarrow{a_{t}}(s^{t})=\left\{ a_{t}^{i}(s^{t})\right\} _{i=1}^{I}$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $\sum_{i}a_{t}^{i}(s^{t})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose that 
+\begin_inset Formula $Q_{t}(s_{t+1}|s^{t})$
+\end_inset
+
+ gives the price of one unit of time 
+\begin_inset Formula $t+1$
+\end_inset
+
+ consumption, contingent on the realizaiton 
+\begin_inset Formula $s_{t+1}$
+\end_inset
+
+ at 
+\begin_inset Formula $t+1$
+\end_inset
+
+, when the hisotry at 
+\begin_inset Formula $t$
+\end_inset
+
+ is 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+.
+ Notice that we are guessing that this function exists.
+ The household faces a sequence of budget constriants for 
+\begin_inset Formula $t\geq0$
+\end_inset
+
+, where the time 
+\begin_inset Formula $t$
+\end_inset
+
+ history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ budget constrain is
+\begin_inset Formula 
+\begin{equation}
+\tilde{c}_{t}^{i}(s^{t})+{\displaystyle \sum_{s_{t+1}}}a_{t+1}^{i}(s_{t+1},s^{t})Q_{t}(s_{t+1}|s^{t})\leq y_{t}^{i}(s^{t})+a_{t}^{i}(s^{t})
+\end{equation}
+
+\end_inset
+
+At time 
+\begin_inset Formula $t$
+\end_inset
+
+, a household chooses 
+\begin_inset Formula $\tilde{c}_{t}^{i}(s^{t})$
+\end_inset
+
+ and 
+\begin_inset Formula $\left\{ a_{t+1}^{i}(s_{t+1},s^{t})\right\} $
+\end_inset
+
+, where 
+\begin_inset Formula $\left\{ a_{t+1}^{i}(s_{t+1},s^{t})\right\} $
+\end_inset
+
+ is a vector of claims on time 
+\begin_inset Formula $t+1$
+\end_inset
+
+ consumption, one element of the vector for each value of time 
+\begin_inset Formula $t+1$
+\end_inset
+
+ realizaiton of 
+\begin_inset Formula $s_{t+1}$
+\end_inset
+
+.
+ To rule out Ponzi schemes, we impose the state-by-state borrowing constraints
+\begin_inset Formula 
+\begin{equation}
+-a_{t+1}^{i}(s^{t+1})\leq A_{t+1}^{i}(s^{t+1})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $A_{t+1}^{i}(s^{t+1})$
+\end_inset
+
+ is computed in equation (21).
+ This condition says restricts consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ from borrowing more than his debt limit.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\eta_{t}^{i}(s^{t})$
+\end_inset
+
+ and 
+\begin_inset Formula $\nu_{t}^{i}(s^{t}:s_{t+1})$
+\end_inset
+
+ be the nonnegative Lagrange multiplier on the budget constraint (22) for
+ time 
+\begin_inset Formula $t$
+\end_inset
+
+ and history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+.
+ The Lagrangian can then be formed as:
+\begin_inset Formula 
+\[
+L^{i}={\displaystyle \sum_{t=0}^{\infty}}\sum_{s^{t}}\left\{ \beta^{t}u\left(\tilde{c}_{t}^{i}(s^{t})\right)\pi_{t}(s^{t})+\eta_{t}^{i}(s^{t})\left[y_{t}^{i}(s^{t})+a_{t}^{i}(s^{t})-\tilde{c}_{t}^{i}(s^{t})-\sum_{s_{t+1}}Q(s_{t+1}|s^{t})a_{t+1}^{i}(s_{t+1},s^{t})\right]+{\displaystyle \sum_{s_{t+1}}}\nu_{t}^{i}(s^{t};s_{t+1})\left[A_{t+1}^{i}(s^{t+1})+a_{t+1}^{i}(s^{t+1})\right]\right\} 
+\]
+
+\end_inset
+
+for a given initial wealth 
+\begin_inset Formula $a_{0}^{i}(s_{0})$
+\end_inset
+
+.
+ The first-order conditions for maximizing 
+\begin_inset Formula $L^{i}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\tilde{c}_{t}^{i}(s^{t})$
+\end_inset
+
+ and 
+\begin_inset Formula $\{a_{t+1}^{i}(s_{t+1},s^{t})\}_{s_{t+1}}$
+\end_inset
+
+ are:
+\begin_inset Formula 
+\begin{eqnarray}
+\beta^{t}u^{\prime}(\tilde{c}_{t}^{i}(s^{t}))\pi_{t}(s^{t}) & = & \eta_{t}^{i}(s^{t})\\
+\eta_{t}^{i}(s^{t})Q(s_{t+1}|s^{t}) & = & \eta_{t+1}^{i}(s_{t+1},s^{t})+\nu_{t}^{i}(s^{t};s_{t+1})
+\end{eqnarray}
+
+\end_inset
+
+for all 
+\begin_inset Formula $s_{t+1}$
+\end_inset
+
+, 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+.
+ In the optimal solution to this problem, the natural debt limit (23) will
+ not be binding, and hence the Lagrange multipliers 
+\begin_inset Formula $\nu_{t}^{i}(s^{t};s_{t+1})$
+\end_inset
+
+ are all equal to zero for the following reason: if there were any history
+ 
+\begin_inset Formula $s^{t+1}$
+\end_inset
+
+ leading to a binding natrual debt limit, the household would from then
+ on have to set consumption equal to zero in order to honor its debt.
+ Because the household's utility function satisfies the Inada condition,
+ that would mean that all future marginal utilities would be infinite.
+ Thus, it is trivial to find alternative affordable allocations that yield
+ higher expected utility by postponing earlier consumption to periods after
+ such a binding constraint, i.e., alternative preferable allocaitons where
+ the natural debt limits no longer bind.
+ After setting 
+\begin_inset Formula $\nu_{t}^{i}(s^{t};s_{t+1})=0$
+\end_inset
+
+ in equation (25), the first order conditions imply the following conditions
+ on the optimally chosen consumption allocation
+\begin_inset Formula 
+\begin{equation}
+Q(s_{t+1}|s^{t})=\beta\frac{u^{\prime}(\tilde{c}_{t+1}^{i}(s^{t+1}))}{u^{\prime}(\tilde{c}_{t}^{i}(s^{t}))}\pi_{t}(s^{t+1}|s^{t})
+\end{equation}
+
+\end_inset
+
+for all 
+\begin_inset Formula $s_{t+1}$
+\end_inset
+
+, 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+A 
+\emph on
+sequential-trading competitive equilibrium
+\emph default
+ is an initial distribution of wealth 
+\begin_inset Formula $\overrightarrow{a_{0}}(s_{0})$
+\end_inset
+
+, an allocation 
+\begin_inset Formula $\left\{ \tilde{c}^{i}\right\} _{i=1}^{I}$
+\end_inset
+
+, and pricing kernels 
+\begin_inset Formula $\{Q_{t}(s_{t+1}|s^{t})\}_{t=0}^{\infty}$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_layout Definition*
+1.
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+, given 
+\begin_inset Formula $a_{0}^{i}(s_{0})$
+\end_inset
+
+ and the pricing kernels, the consumption allocation 
+\begin_inset Formula $c^{i}$
+\end_inset
+
+ solves the household's problem;
+\end_layout
+
+\begin_layout Definition*
+2.
+ for all realizaitons of 
+\begin_inset Formula $\{s^{t}\}_{t=0}^{\infty}$
+\end_inset
+
+, the households' consumption allocation and implied asset holdings 
+\begin_inset Formula $\left\{ \tilde{c}_{t}^{i}(s^{t}),\left[a_{t+1}^{i}(s_{t+1},s^{t})\right]_{s+1}\right\} $
+\end_inset
+
+ satisfy 
+\begin_inset Formula $\sum_{i}\tilde{c}_{t}^{i}(s^{t})=\sum_{i}y_{t}^{i}(s^{t})\ \mbox{and}\ \sum_{i}a_{t+1}^{i}(s_{t+1},s^{t})=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $s_{t+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Note that this definition leaves open wealth.
+ The Arrow-Debreu equilibrium with complete markets at time 0 in effect
+ pinned down a 
+\emph on
+particular 
+\emph default
+distribution of wealth.
+\end_layout
+
+\begin_layout Subsection*
+8.8.5.
+ Equivalence of allocations
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+By making an appropriate guess about the form of the pricing kernels, it
+ is easy to show that a competitive equilibrium allocaiton of the complete
+ markets model with time 0 trading is also a sequential-trading competitive
+ equilibrium allocation, one with a particular initial distribution of wealth.
+ Thus, take 
+\begin_inset Formula $q_{t}^{0}(s^{t})$
+\end_inset
+
+ as given from the Arrow-Debreu equilibrium and suppose that the pricing
+ kernel 
+\begin_inset Formula $Q_{t}(s_{t+1}|s^{t})$
+\end_inset
+
+ makes the following recursion true
+\begin_inset Formula 
+\[
+q_{t+1}^{0}(s^{t+1})=Q_{t}(s_{t+1}|s^{t})q_{t}^{0}(s^{t})
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\begin{equation}
+Q_{t}(s_{t+1}|s^{t})=q_{t+1}^{t}(s^{t+1})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here, 
+\begin_inset Formula $q_{t+1}^{t}(s^{t+1})$
+\end_inset
+
+ is the price of one unit of consumption delivered at time 
+\begin_inset Formula $t$
+\end_inset
+
+, history 
+\begin_inset Formula $s^{t+1}$
+\end_inset
+
+ in terms of the date 
+\begin_inset Formula $t$
+\end_inset
+
+, history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ consumption good.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\left\{ c_{t}^{i}(s^{t})\right\} $
+\end_inset
+
+ be a competitive equilibrium allocation in the Arrow-Debreu economy if
+ equation (27) is satisfied, that allocaiton is also a sequential-trading
+ compeititve equilibrium allocation.
+ To show this fact, take the household's first-order conditions (8) for
+ the Arrow-Debreu economy from two successive periods and divide one by
+ the other to get
+\begin_inset Formula 
+\begin{equation}
+\frac{\beta u^{\prime}\left[c_{t+1}^{i}(s^{t+1})\right]\pi(s^{t+1}|s^{t})}{u^{\prime}\left[c_{t}^{i}(s^{t})\right]}=\frac{q_{t+1}^{0}(s^{t+1})}{q_{t}^{0}(s^{t})}=Q_{t}(s_{t+1}|s^{t})
+\end{equation}
+
+\end_inset
+
+If the pricing kernel satisfies equation (27), this equation is equivalent
+ with the first-order condition (26) for the sequential-trading competitive
+ equilibrium economy.
+\end_layout
+
+\begin_layout Theorem*
+If the 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\{c_{t}^{i}(s^{t})\}_{t=0}^{\infty}$
+\end_inset
+
+ and 
+\begin_inset Formula $\{q_{t}^{0}(s^{t})\}_{t=0}^{\infty}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ is a time-zero Arrow-Debreu equilibrium, then we can find prices of one-period-
+ahead arrow securities 
+\begin_inset Formula $Q(s_{t+1}|s^{t})$
+\end_inset
+
+ and asset holdings 
+\begin_inset Formula $\{a_{t}^{i}(s_{t})\}_{t=0}^{\infty}$
+\end_inset
+
+ such that 
+\begin_inset Formula $(c,a,Q)$
+\end_inset
+
+ become a Sequential equilibrium.
+\end_layout
+
+\begin_layout Theorem*
+The definition of 
+\begin_inset Formula $Q$
+\end_inset
+
+ is given by the FOC above:
+\begin_inset Formula 
+\[
+Q(s_{t+1}|s^{t})=\frac{q_{t}^{0}(s^{t+1})}{q_{t}^{0}(s^{t})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It remains for us to choose initial wealth of the sequential-trading equilibrium
+ so that the sequential-trading competitive equilibrium duplicates the Arrow-Deb
+reu competitive equilibrium allocation.
+ We conjecture that the initial wealth vector 
+\begin_inset Formula $\overrightarrow{a_{0}}(s_{0})$
+\end_inset
+
+ of the sequential-trading economy should be chosen to be the null vector.
+ This a natural conjecture because it means that each household must rely
+ on its own endowment stream to finance consumption, in the same way that
+ households are constrained to finance their history-contingent purchases
+ for the infinite future at time 0 in the Arrow-Debreu economy.
+ To prove that the conjecture is correct, we must show that this particular
+ initial wealth vector enables household 
+\begin_inset Formula $i$
+\end_inset
+
+ to finanace 
+\begin_inset Formula $\left\{ c_{t}^{i}(s^{t})\right\} $
+\end_inset
+
+ and leaves no room to increase consumption in any period and history.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The proof proceeds by guessing that, at time 
+\begin_inset Formula $t\geq0$
+\end_inset
+
+ and history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+, household 
+\begin_inset Formula $i$
+\end_inset
+
+ chooses an asset portfolio given by 
+\begin_inset Formula $a_{t+1}^{i}(s_{t+1},s^{t})=\Upsilon_{t+1}^{i}(s^{t+1})$
+\end_inset
+
+ for all 
+\begin_inset Formula $s_{t+1}$
+\end_inset
+
+.
+ The value of this asset portfolio expressing in terms of the date 
+\begin_inset Formula $t$
+\end_inset
+
+, history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ consumption good is
+\begin_inset Formula 
+\begin{eqnarray}
+{\displaystyle \sum_{s_{t+1}}}a_{t+1}^{i}(s_{t+1},s^{t})Q_{t}(s_{t+1}|s^{t}) & = & {\displaystyle \sum_{s^{t+1}|s^{t}}}\Upsilon_{t+1}^{i}(s^{t+1})q_{t+1}^{t}(s^{t+1})\nonumber \\
+ & = & {\displaystyle \sum_{\tau=t+1}^{\infty}}{\displaystyle \sum_{s^{\tau}|s^{t}}}q_{\tau}^{t}(s^{\tau})\left[c_{\tau}^{i}(s^{\tau})-y_{\tau}^{i}(s^{\tau})\right]
+\end{eqnarray}
+
+\end_inset
+
+where we have invoked expressions (20) and (27).
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+We have also used the following identities,
+\begin_inset Formula 
+\[
+q_{\tau}^{t+1}(s^{\tau})q_{t+1}^{t}(s^{t+1})=\frac{q_{\tau}^{0}(s^{\tau})}{q_{t+1}^{0}(s^{t+1})}\frac{q_{t+1}^{0}(s^{t+1})}{q_{t}^{0}(s^{t})}=q_{\tau}^{t}(s^{\tau})\ \mbox{for}\ \tau>t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+To demonstrate that household 
+\begin_inset Formula $i$
+\end_inset
+
+ can afford this portfolio strategy, we now use budget constraint (22) to
+ compute the implied consumption plan 
+\begin_inset Formula $\left\{ c_{\tau}^{i}(s^{\tau})\right\} $
+\end_inset
+
+.
+ First, in the initial period 
+\begin_inset Formula $t=0$
+\end_inset
+
+ with 
+\begin_inset Formula $a_{0}^{i}(s_{0})=0$
+\end_inset
+
+, the substitution of equation (29) into budget constraint (22) at equality
+ yields
+\begin_inset Formula 
+\[
+\tilde{c}_{0}^{i}(s_{0})+{\displaystyle \sum_{t=1}^{\infty}}{\displaystyle \sum_{s^{t}}}q_{t}^{0}(s^{t})\left[c_{t}^{i}(s^{t})-y_{t}^{i}(s^{t})\right]=y_{t}^{i}(s_{0})+0
+\]
+
+\end_inset
+
+This expression together with budget constraint (7) at equality imply 
+\begin_inset Formula $\tilde{c}_{0}^{i}(s_{0})=c_{0}^{i}(s_{0})$
+\end_inset
+
+.
+ In other words, the proposed asset portfolio is affordable in period 0
+ and the associated consumption level is the same as in the competitive
+ equilibrium of the Arrow-Debreu economy In all consecutive future period
+ 
+\begin_inset Formula $t>0$
+\end_inset
+
+ and histories 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+, we replace 
+\begin_inset Formula $a_{t}^{i}(s^{t})$
+\end_inset
+
+ in constraint (22) by 
+\begin_inset Formula $\Upsilon_{t}^{i}(s^{t})$
+\end_inset
+
+, and after noticing that the value of the asset portfolio in (29) can be
+ written as
+\begin_inset Formula 
+\begin{eqnarray}
+{\displaystyle \sum_{s_{t+1}}}a_{t+1}^{i}(s_{t+1},s^{t})Q_{t}(s_{t+1}|s^{t}) & = & {\displaystyle \sum_{s^{t+1}|s^{t}}}\Upsilon_{t+1}^{i}(s^{t+1})q_{t+1}^{t}(s^{t+1})\nonumber \\
+ & = & {\displaystyle \sum_{\tau=t+1}^{\infty}}{\displaystyle \sum_{s^{\tau}|s^{t}}}q_{\tau}^{t}(s^{\tau})\left[c_{\tau}^{i}(s^{\tau})-y_{\tau}^{i}(s^{\tau})\right]+q_{t}^{t}(s^{t})\left[c_{t}^{i}(s^{t})-y_{t}^{i}(s^{t})\right]-q_{t}^{t}(s^{t})\left[c_{t}^{i}(s^{t})-y_{t}^{i}(s^{t})\right]\\
+ & = & \Upsilon_{t}^{i}(s^{t})-\left[c_{t}^{i}(s^{t})-y_{t}^{i}(s^{t})\right]
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $q_{t}^{t}(s^{t})=1$
+\end_inset
+
+ is the numeraire.
+ It follows immediately from (22) that 
+\begin_inset Formula $\tilde{c}_{t}^{i}(s^{t})=c_{t}^{i}(s^{t})$
+\end_inset
+
+ for all periods and histories.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We have shown that the proposed portfolio strategy attains the same consumption
+ plan as in the competitive equilibrium of the Arrow-Debreu economy, but
+ what precludes household 
+\begin_inset Formula $i$
+\end_inset
+
+ from further increasing current consumption by reducing some component
+ of the asset portfolio? The answer lies in the debt limit restrictions
+ to which the household must adhere.
+ In particular, if the household wants to ensure that consumption plan 
+\begin_inset Formula $\left\{ c_{\tau}^{i}(s^{\tau})\right\} $
+\end_inset
+
+ can be attained starting next period in all possbile future states, the
+ household should subtract the value of this commitment to future consumption
+ from the natural debt limit in (21).
+ Thus, the household is facing a state-by-state borrowing constraint that
+ is more restrictive than (21): for any 
+\begin_inset Formula $s^{t+1}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+-a_{t+1}^{i}(s^{t+1})\leq A_{t+1}^{i}(s^{t+1})-{\displaystyle \sum_{\tau=t+1}^{\infty}}{\displaystyle \sum_{s^{\tau}|s^{t+1}}}q_{\tau}^{t+1}(s^{\tau})c_{\tau}^{i}(s^{\tau})=-\Upsilon_{t+1}^{i}(s^{t+1})
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\[
+a_{t+1}^{i}(s^{t+1})\geq\Upsilon_{t+1}^{i}(s^{t+1})
+\]
+
+\end_inset
+
+Hence, household 
+\begin_inset Formula $i$
+\end_inset
+
+ does not want to increase consumption at time 
+\begin_inset Formula $t$
+\end_inset
+
+ by reducing next period's wealth below 
+\begin_inset Formula $\Upsilon_{t+1}^{i}(s^{t+1})$
+\end_inset
+
+ because that would jeopardize the attainment of the preferred consumption
+ plan satisfying the first-order conditions (26) for all future periods
+ and histories.
+\end_layout
+
+\begin_layout Theorem*
+If 
+\begin_inset Formula $\{c_{t}^{i}(s^{t}),a_{t}^{i}(s^{t})\}_{t=0}^{\infty}$
+\end_inset
+
+ and 
+\begin_inset Formula $Q(s_{t+1}|s^{t})$
+\end_inset
+
+ is a Sequential-trading equilibrium, then we can find prices of history-conting
+ent claims such that 
+\begin_inset Formula $(c,q)$
+\end_inset
+
+ becomes a time-zero Arrow-Debreu equilibrium.
+\end_layout
+
+\begin_layout Section*
+8.9.
+ Recursive competitive equilibrium
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We have estiablished that the equilibrium allocations are the same in the
+ Arrow-Debreu economy with complete markets in dated contingent claims all
+ traded at time 0, and in a sequential-trading economy with complete one-period
+ Arrow securities.
+ This finding holds for arbitrary individual endowment processes 
+\begin_inset Formula $\left\{ y_{t}^{i}(s^{t})\right\} _{i}$
+\end_inset
+
+ that are measurable funcitons of the history of events 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+, which in turn are governed by some arbitrary probability measure 
+\begin_inset Formula $\pi_{t}(s^{t})$
+\end_inset
+
+.
+ At this level of generality, both the pricing kernels 
+\begin_inset Formula $Q_{t}(s_{t+1}|s^{t})$
+\end_inset
+
+ and the wealth distributions 
+\begin_inset Formula $\overrightarrow{a_{t}}(s_{t})$
+\end_inset
+
+ in the sequential-trading economy depend on history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+.
+ That is, these objects are time-varying functions of all past events 
+\begin_inset Formula $\left\{ s_{\tau}\right\} _{\tau=0}^{t}$
+\end_inset
+
+, which makes it extremely difficult to formulate an economic model that
+ can be used to confront empirial observations.
+ What we want is a framework where economic outcomes are functions of a
+ limited number of 
+\begin_inset Quotes eld
+\end_inset
+
+state variables
+\begin_inset Quotes erd
+\end_inset
+
+ that summarize the effects of past events and current information.
+ This desire leads us to make the following specializaiton of the exogenous
+ forcing processes that facilitate a recursive formulation of the sequential-tra
+ding equilibrium.
+\end_layout
+
+\begin_layout Subsection*
+8.9.1.
+ Endowments governed by a Markov process
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\pi(s^{\prime}|s)$
+\end_inset
+
+ be a Markov chain with given initial distribution 
+\begin_inset Formula $\pi_{0}(s)$
+\end_inset
+
+ and state space 
+\begin_inset Formula $s\in S$
+\end_inset
+
+.
+ That is 
+\begin_inset Formula $\mbox{Prob}(s_{t+1}=s^{\prime}|s_{t}=s)=\pi(s^{\prime}|s)$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{Prob}(s_{0}=s)=\pi_{0}(s)$
+\end_inset
+
+.
+ The chain induces a sequence of probability measures 
+\begin_inset Formula $\pi_{t}(s^{t})$
+\end_inset
+
+ on histories 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ via the recursions
+\begin_inset Formula 
+\begin{equation}
+\pi_{t}(s^{t})=\pi(s_{t}|s_{t-1})\pi(s_{t-1}|s_{t-2})\ldots\pi(s_{1}|s_{0})\pi_{0}(s_{0})
+\end{equation}
+
+\end_inset
+
+In this chapter we have assumed that trading occurs after 
+\begin_inset Formula $s_{0}$
+\end_inset
+
+ has been observed, which we capture by setting 
+\begin_inset Formula $\pi_{0}(s_{0})=1$
+\end_inset
+
+ for the initially given value of 
+\begin_inset Formula $s_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Because of the Markov property, the conditional probability 
+\begin_inset Formula $\pi_{t}(s^{t}|s^{\tau})$
+\end_inset
+
+ for 
+\begin_inset Formula $t>\tau$
+\end_inset
+
+ depends only on the state 
+\begin_inset Formula $s_{\tau}$
+\end_inset
+
+ at time 
+\begin_inset Formula $\tau$
+\end_inset
+
+ and does not depend on the history before 
+\begin_inset Formula $\tau$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+\pi_{t}(s^{t}|s^{\tau})=\pi(s_{t}|s_{t-1})\pi(s_{t-1}|s_{t-2})\ldots\pi(s_{\tau+1}|s_{\tau})
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Next, we assume that households' endowments in period 
+\begin_inset Formula $t$
+\end_inset
+
+ are time invariant measurable funcitons of 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{t}^{i}(s^{t})=y^{i}(s_{t})$
+\end_inset
+
+ for each 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ this assumption means that each household's endowment follows a Markov
+ process, since 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+ itself is governed by a Markov process.
+ Of course, all of our previous results continue to hold, but the Markov
+ assumption imparts further structure to the equilibrium.
+\end_layout
+
+\begin_layout Subsection*
+8.9.2.
+ Equilibrium outcomes inherit the Markov property
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Proposition 2 asserted a particular kind of history independence of the
+ equilibrium allocation that prevails under any stochastic process for the
+ endowments.
+ That is, each individual's consumption is a function only of the current
+ realization of the aggregate endowment and does not depend on the specific
+ history leading up to that outcome.
+ Now, under the asusmption that the endowments are governed by a Markov
+ process, it follows immediately from equations (10) and (11) that the equilibri
+um allocation is a funciton only of the current state 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+c_{t}^{i}(s^{t})=c^{i}(s_{t})
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+After substituting (33) and (34) into (26), the pricing kernel in the sequential
+-trading equilibrium is then a funciton only of the current state,
+\begin_inset Formula 
+\begin{equation}
+Q_{t}(s_{t+1}|s^{t})=\beta\frac{u^{\prime}(c^{i}(s_{t+1}))}{u^{\prime}(c^{i}(s_{t}))}\pi(s_{t+1}|s_{t})\equiv Q(s_{t+1}|s_{t})
+\end{equation}
+
+\end_inset
+
+Now, we can also establish history independence of the relative prices in
+ the Arrow-Debreu economy:
+\end_layout
+
+\begin_layout Proposition*
+Given that the endowments follow a Markov process, the Arrow-Debreu equilibrium
+ price of 
+\begin_inset Formula $\mbox{\emph{date}-}t\geq0$
+\end_inset
+
+, history 
+\begin_inset Formula $s^{t}$
+\end_inset
+
+ consumption goods expressed in terms of date 
+\begin_inset Formula $\tau$
+\end_inset
+
+ 
+\begin_inset Formula $(0\leq\tau\leq t)$
+\end_inset
+
+, history 
+\begin_inset Formula $s^{\tau}$
+\end_inset
+
+ consumption goods is not history dependent: 
+\begin_inset Formula $q_{t}^{\tau}(s^{t})=q_{k}^{j}(\tilde{s}^{k})$
+\end_inset
+
+ for 
+\begin_inset Formula $j,k\geq0$
+\end_inset
+
+ such that 
+\begin_inset Formula $t-\tau=k-j$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[s_{\tau},s_{\tau+1},\ldots,s_{t}\right]=\left[\tilde{s}_{j},\tilde{s}_{j+1},\ldots,\tilde{s}_{k}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Using this proposition, we can verify that both the natural debt limits
+ (21) and households' wealth levels (20) exhibit history independence,
+\begin_inset Formula 
+\begin{eqnarray}
+A_{t}^{i}(s^{t}) & = & A^{i}(s_{t})\\
+\Upsilon_{t}^{i}(s^{t}) & = & \Upsilon^{i}(s_{t})
+\end{eqnarray}
+
+\end_inset
+
+The finding concerning wealth levels (37) conveys a deep insight into how
+ the sequential-trading competitive equilibrium attains the first-best outcome
+ in which no idiosyncratic risk is borne by individual households.
+ In particular, each household enters every period with a wealth level that
+ is independent of past realizations of his endowment.
+ That is, his past trades have fully insured him against the idiosyncratic
+ outcomes of his endowment.
+ And for that very same insurance motive, the household now enters the present
+ period with a wealth level that is a function of the current state 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+.
+ It is a state-contingent wealth level that was chosen by the household
+ in the previous period 
+\begin_inset Formula $t-1$
+\end_inset
+
+, and this wealth will be just sufficient to continue trading strategy designed
+ to insure against future idiosyncractic risks.
+ The optimal holding of wealth is a function of 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+ only because the current state 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+ determines the current endowment and contains all information that predicts
+ future realizations of the household's endowment process (besides determing
+ current prices and forecasts of future prices).
+ It can be shown that a household tends to choose higher wealth levels for
+ those states next period either that make his next period endowment low
+ or more generally that signal poor future prospects for the household as
+ compared to states that are more favorable to that particular household.
+ Of course, these tendencies among individual households are modified by
+ differences in the economy's aggregate endowment across states (as reflected
+ in equilibrium asset prices).
+ Aggregate shocks cannot be diversified away but must be borne by all of
+ the households.
+ The pricing kernel 
+\begin_inset Formula $Q(s_{t}|s_{t-1})$
+\end_inset
+
+ and the assumed clearing of all markets create the 
+\begin_inset Quotes eld
+\end_inset
+
+invisible hand
+\begin_inset Quotes erd
+\end_inset
+
+ that coordinates households' transactions at time 
+\begin_inset Formula $t-1$
+\end_inset
+
+ in such a way that only aggregate risk and no idiosyncratic risk is borne
+ by the households.
+\end_layout
+
+\begin_layout Subsection*
+8.9.3.
+ Recursive formulation of optimizaiton and equilibrium
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Given that the pricing kernel 
+\begin_inset Formula $Q(s^{\prime}|s)$
+\end_inset
+
+ and the endowment 
+\begin_inset Formula $y^{i}(s)$
+\end_inset
+
+ are functions of a Markov process 
+\begin_inset Formula $s$
+\end_inset
+
+, we are motivated to seek a recursive solution to the household's optimization
+ problem.
+ Household 
+\begin_inset Formula $i$
+\end_inset
+
+'s state at time 
+\begin_inset Formula $t$
+\end_inset
+
+ is its wealth 
+\begin_inset Formula $a_{t}^{i}$
+\end_inset
+
+ and the current realizaiton 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+.
+ We seek a pair of optimal policy functions 
+\begin_inset Formula $h^{i}(a,s)$
+\end_inset
+
+, 
+\begin_inset Formula $g^{i}(a,s,s^{\prime})$
+\end_inset
+
+ such that the household's optimal decisions are
+\begin_inset Formula 
+\begin{eqnarray}
+c_{t}^{i} & = & h^{i}(a_{t}^{i},s_{t})\\
+a_{t+1}^{i}(s_{t+1}) & = & g^{i}(a_{t}^{i},s_{t},s_{t+1})
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $v^{i}(a,s)$
+\end_inset
+
+ be the optimal value of household 
+\begin_inset Formula $i$
+\end_inset
+
+'s problem starting from state 
+\begin_inset Formula $(a,s)$
+\end_inset
+
+; 
+\begin_inset Formula $v^{i}(a,s)$
+\end_inset
+
+ is the maximum expected discounted utility household 
+\begin_inset Formula $i$
+\end_inset
+
+ with current wealth 
+\begin_inset Formula $a$
+\end_inset
+
+ can attain in state 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ The Bellman equation for the household's problem is
+\begin_inset Formula 
+\begin{equation}
+v^{i}(a,s)={\displaystyle \max_{c,\hat{a}(s^{\prime})}}\left\{ u(c)+\beta{\displaystyle \sum_{s^{\prime}}}v^{i}\left[\hat{a}(s^{\prime}),s^{\prime}\right]\pi(s^{\prime}|s)\right\} 
+\end{equation}
+
+\end_inset
+
+where the maximization is subject to the following version of constraint
+ (22)
+\begin_inset Formula 
+\begin{equation}
+c+{\displaystyle \sum_{s^{\prime}}}\hat{a}(s^{\prime})Q(s^{\prime}|s)\leq y^{i}(s)+a
+\end{equation}
+
+\end_inset
+
+and also
+\begin_inset Formula 
+\begin{eqnarray}
+c & \geq & 0\\
+-\hat{a}(s^{\prime}) & \leq & A^{i}(s^{\prime}),\ \forall\ s^{\prime}
+\end{eqnarray}
+
+\end_inset
+
+Let the optimum decision rules be
+\begin_inset Formula 
+\begin{eqnarray}
+c & = & h^{i}(a,s)\\
+\hat{a}(s^{\prime}) & = & g^{i}(a,s,s^{\prime})
+\end{eqnarray}
+
+\end_inset
+
+Note that the solution of the Bellman equation implicitly depends on 
+\begin_inset Formula $Q(\cdot|\cdot)$
+\end_inset
+
+ because it appears in the constraint (41).
+ In particular, use the first-order conditions for the problem on the right
+ of equation (40) and the Benveniste-Scheinkman formula and rearrange to
+ get
+\begin_inset Formula 
+\begin{equation}
+Q(s_{t+1}|s_{t})=\beta\frac{u^{\prime}(c_{t+1}^{i})\pi(s_{t+1}|s_{t})}{u^{\prime}(c_{t}^{i})}
+\end{equation}
+
+\end_inset
+
+where it is understood that 
+\begin_inset Formula $c_{t}^{i}=h^{i}(a_{t}^{i},s_{t})$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{t+1}^{i}=h^{i}(a_{t+1}^{i}(s_{t+1}),s_{t+1})=h^{i}(g^{i}(a_{t}^{i},s_{t},s_{t+1}),s_{t+1})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+A 
+\emph on
+recursive competitive equilibrium
+\emph default
+ is an initial distribution of wealth 
+\begin_inset Formula $\overrightarrow{a_{o}}$
+\end_inset
+
+, a pricing kernel 
+\begin_inset Formula $Q(s^{\prime}|s)$
+\end_inset
+
+, sets of value functions 
+\begin_inset Formula $\left\{ v^{i}(a,s)\right\} _{i=1}^{I}$
+\end_inset
+
+, and decision rules 
+\begin_inset Formula $\left\{ h^{i}(a,s),g^{i}(a,s,s^{\prime})\right\} _{i=1}^{I}$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+for all 
+\begin_inset Formula $i$
+\end_inset
+
+, given 
+\begin_inset Formula $a_{0}^{i}$
+\end_inset
+
+ and the pricing kernel, the decision rules solve the household's problem;
+\end_layout
+
+\begin_layout Enumerate
+for all realizations of 
+\begin_inset Formula $\left\{ s_{t}\right\} _{t=0}^{\infty}$
+\end_inset
+
+, the consumption and asset portfolios 
+\begin_inset Formula $\left\{ \{c_{t}^{i},\{\hat{a}_{t+1}^{i}(s^{\prime})\}_{s^{\prime}}\}_{i}\right\} _{t}$
+\end_inset
+
+ implies by the decision rules to satisfy 
+\begin_inset Formula $\sum_{i}c_{t}^{i}=\sum_{i}y^{i}(s_{t})$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum\hat{a}_{t+1}^{i}(s^{\prime})=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $s^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Exercises
+\end_layout
+
+\begin_layout Subsection*
+Exercise 8.4
+\end_layout
+
+\begin_layout Standard
+Consider a pure endowment economy with a single representative consumer;
+ 
+\begin_inset Formula $\left\{ c_{t},d_{t}\right\} _{t=0}^{\infty}$
+\end_inset
+
+ are the consumption and endowment processes, respectively.
+ Feasible allocations satisfy
+\begin_inset Formula 
+\[
+c_{t}\leq d_{t}
+\]
+
+\end_inset
+
+The endowment process is described by
+\begin_inset Formula 
+\[
+d_{t+1}=\lambda_{t+1}d_{t}
+\]
+
+\end_inset
+
+The growth rate 
+\begin_inset Formula $\lambda_{t+1}$
+\end_inset
+
+ is described by a two-state Markov process with transition probabilities
+\begin_inset Formula 
+\[
+P_{ij}=\mbox{Prob}(\lambda_{t+1}=\bar{\lambda}_{j}|\lambda_{t}=\bar{\lambda}_{i})
+\]
+
+\end_inset
+
+Assume that
+\begin_inset Formula 
+\[
+P=\left[\begin{array}{cc}
+.8 & .2\\
+.1 & .9
+\end{array}\right]
+\]
+
+\end_inset
+
+and that
+\begin_inset Formula 
+\[
+\bar{\lambda}=\left[\begin{array}{c}
+.97\\
+1.03
+\end{array}\right]
+\]
+
+\end_inset
+
+In addition, 
+\begin_inset Formula $\lambda_{0}=.97$
+\end_inset
+
+ and 
+\begin_inset Formula $d_{0}=1$
+\end_inset
+
+ are both known at date 0.
+ The consumer has preferences over consumption ordered by
+\begin_inset Formula 
+\[
+E_{0}{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\frac{c_{t}^{1-\gamma}}{1-\gamma}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $E_{0}$
+\end_inset
+
+ is the mathematical expectation operator, conditioned on information known
+ at time 0, 
+\begin_inset Formula $\gamma=2$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=.95$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Part I
+\end_layout
+
+\begin_layout Standard
+At time 0, after 
+\begin_inset Formula $d_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{0}$
+\end_inset
+
+ are known, there are complete markets in date- and history-contingent claims.
+ The market prices are denominated in units of time 0 consumption goods.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Question B.
+ 
+\series default
+Compute the equilibrium price of a claim to one unit of consumption at date
+ 5, denominated in units of time 0 consumption, contingent on the following
+ history of growth rates: 
+\begin_inset Formula $(\lambda_{1},\lambda_{2},\ldots,\lambda_{5})=(.97,.97,1.03,.97,1.03)$
+\end_inset
+
+.
+ Please give a numerical answer.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+The equilibrium price of a claim to one unit of consumption at date 5, denominat
+ed in units of time 0 consumption, contigent on the given history of growth
+ rates is:
+\begin_inset Formula 
+\[
+q_{5}^{0}(s^{5})=\frac{\beta^{5}u^{\prime}\left[c_{5}^{i}(s^{5})\right]\pi_{5}(s^{5})}{u^{\prime}\left[c_{0}^{i}(s^{0})\right]}
+\]
+
+\end_inset
+
+Note that
+\begin_inset Formula 
+\[
+c_{5}=d_{5}=\lambda_{5}\lambda_{4}\lambda_{3}\lambda_{2}\lambda_{1}d_{0}=(0.97)^{3}(1.03)^{2}=.96825
+\]
+
+\end_inset
+
+Also, 
+\begin_inset Formula $u^{\prime}(c)=c^{-\gamma}=c^{-2}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $u^{\prime}(c_{5})=u^{\prime}(.96825)=1.0666$
+\end_inset
+
+ and 
+\begin_inset Formula $u^{\prime}(c_{0})=1$
+\end_inset
+
+.
+ Finally,
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi_{5}(s^{5}) & = & \pi(s_{5}|s_{4})\pi(s_{4}|s_{3})\pi(s_{3}|s_{2})\pi(s_{2}|s_{1})\pi(s_{1}|s_{0})\\
+ & = & .8\times.8\times.2\times.1\times.2\\
+ & = & .00256
+\end{eqnarray*}
+
+\end_inset
+
+Thus, we have
+\begin_inset Formula 
+\[
+q_{5}^{0}(s^{5})=\frac{(0.95)^{5}(1.0666)(.00256)}{1}=.002113
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Question C.
+ 
+\series default
+Compute the equilibrium price of a claim to one unit of consumption at date
+ 5, denominated in units of time 0 consumption, contingent on the following
+ history of growth rates: 
+\begin_inset Formula $(\lambda_{1},\lambda_{2},\ldots,\lambda_{5})=(1.03,1.03,1.03,1.03,.97)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+The equilibrium price of a claim to one unit of consumption at date 5, denominat
+ed in units of time 0 consumption, contigent on the given history of growth
+ rates is:
+\begin_inset Formula 
+\[
+q_{5}^{0}(s^{5})=\frac{\beta^{5}u^{\prime}\left[c_{5}^{i}(s^{5})\right]\pi_{5}(s^{5})}{u^{\prime}\left[c_{0}^{i}(s^{0})\right]}
+\]
+
+\end_inset
+
+Note that
+\begin_inset Formula 
+\[
+c_{5}=d_{5}=\lambda_{5}\lambda_{4}\lambda_{3}\lambda_{2}\lambda_{1}d_{0}=(1.03)^{4}.97=1.09174
+\]
+
+\end_inset
+
+Also 
+\begin_inset Formula $u^{\prime}(c)=c^{-\gamma}=c^{-2}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $u^{\prime}(c_{5})=u^{\prime}(1.09174)=0.839$
+\end_inset
+
+ and 
+\begin_inset Formula $u^{\prime}(c_{0})=1$
+\end_inset
+
+.
+ Finally,
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi_{5}(s^{5}) & = & \pi(s_{5}|s_{4})\pi(s_{4}|s_{3})\pi(s_{3}|s_{2})\pi(s_{2}|s_{1})\pi(s_{1}|s_{0})\\
+ & = & .2\times.9\times.9\times.9\times.1\\
+ & = & 0.01458
+\end{eqnarray*}
+
+\end_inset
+
+Thus, we have
+\begin_inset Formula 
+\[
+q_{5}^{0}(s^{5})=\frac{(0.95)^{2}(0.839)(0.01458)}{1}=0.009465
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Part II
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Question I.
+ 
+\series default
+An entrepreneur enters this economy and proposes to issue a new security
+ each period, namely, a risk-free two-period bond.
+ Such a bond issued in period 
+\begin_inset Formula $t$
+\end_inset
+
+ promises to pay one unit of consumption at time 
+\begin_inset Formula $t+1$
+\end_inset
+
+ for sure.
+ Find the price of this new security in period 
+\begin_inset Formula $t$
+\end_inset
+
+, contingent on 
+\begin_inset Formula $\lambda_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+Due to the equivalence of allocations, the equation for the pricing kernel
+ is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+Q(s_{t+1}|s^{t}) & = & \frac{q_{t+1}^{0}(s^{t+1})}{q_{t}^{0}(s^{t})}\\
+ & = & \beta\frac{u^{\prime}\left[c_{t+1}^{i}(s^{t+1})\right]}{u^{\prime}\left[c_{t}^{i}(s^{t})\right]}\pi(s^{t+1}|s^{t})\\
+ & = & \beta\pi(\lambda_{t+1}|\lambda_{t})\frac{c_{t}^{2}}{c_{t+1}^{2}}\\
+ & = & \beta\pi(\lambda_{t+1}|\lambda_{t})\lambda_{t+1}^{-2}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $c_{t}=d_{t}$
+\end_inset
+
+.
+ Now,
+\begin_inset Formula 
+\begin{eqnarray*}
+Q(L|L) & = & \beta\cdot0.8\cdot(0.97)^{-2}\\
+Q(H|L) & = & \beta\cdot0.2\cdot(1.03)^{-2}\\
+Q(L|H) & = & \beta\cdot0.1\cdot(0.97)^{-2}\\
+Q(H|H) & = & \beta\cdot0.9\cdot(1.03)^{-2}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the price of the bond contingent on 
+\begin_inset Formula $\lambda_{t}=0.97$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{eqnarray*}
+P(\lambda_{t}=L) & = & \beta\left[0.8\cdot(0.97)^{-2}+\beta\cdot0.2\cdot(1.03)^{-2}\right]\\
+ & = & 0.9868
+\end{eqnarray*}
+
+\end_inset
+
+This is the price a consumer has to pay in time 
+\begin_inset Formula $t$
+\end_inset
+
+ to get 1 unit of consumption for certain tomorrow.
+ Finally, the real interest rate when 
+\begin_inset Formula $\lambda_{t}=0.97$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+R(\lambda_{t}=L)=\left(\frac{1}{0.9868}-1\right)=1.3\%
+\]
+
+\end_inset
+
+Important to note, there are two different real interest rates, one for
+ when the shock is low, and one for when the shock is high.
+ Hence, the real interest rates are fluctuating.
+\end_layout
+
+\begin_layout Section*
+13.2.
+ Asset Euler equations
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The agent has wealth 
+\begin_inset Formula $A_{t}>0$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+ and wants to use this wealth to maximize expected lifetime utility
+\begin_inset Formula 
+\begin{equation}
+E_{t}\sum_{j=0}^{\infty}\beta^{j}u(c_{t+j})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $E_{t}$
+\end_inset
+
+ denotes the mathematical expectation conditional on information known at
+ time 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is a subjective discount factor, and 
+\begin_inset Formula $c_{t+j}$
+\end_inset
+
+ is the agent's consumption in period 
+\begin_inset Formula $t+j$
+\end_inset
+
+.
+ The utility function 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+ is concave, strictly increasing, and twice continuously differentiable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To finance future consumption, the agent can transfer wealth over time through
+ bond and equity holdings.
+ One-period bonds earn a risk-free real gross interest rate 
+\begin_inset Formula $R_{t}$
+\end_inset
+
+, measured in untis of time 
+\begin_inset Formula $t+1$
+\end_inset
+
+ consumption good per time 
+\begin_inset Formula $t$
+\end_inset
+
+ consumption good.
+ Let 
+\begin_inset Formula $L_{t}$
+\end_inset
+
+ be gross payout on the agent's bond holdings between period 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $t+1$
+\end_inset
+
+, payable in period 
+\begin_inset Formula $t+1$
+\end_inset
+
+ with a present value of 
+\begin_inset Formula $R_{t}^{-1}L_{t}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ The variable 
+\begin_inset Formula $L_{t}$
+\end_inset
+
+ is negative if the agent issues bonds and thereby borrows funds.
+ The agent's holdings of equity shares between periods 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $t+1$
+\end_inset
+
+ are denoted 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+, where a negative number indicates a short position in shares.
+ A share of a equity entitles the owner to its stochastic dividend stream
+ 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p_{t}$
+\end_inset
+
+ be the share price in period 
+\begin_inset Formula $t$
+\end_inset
+
+ net of that period's dividend.
+ The budget constraint becomes
+\begin_inset Formula 
+\begin{equation}
+c_{t}+R_{t}^{-1}L_{t}+p_{t}N_{t}\leq A_{t}
+\end{equation}
+
+\end_inset
+
+and the next period's wealth is
+\begin_inset Formula 
+\begin{equation}
+A_{t+1}=L_{t}+(p_{t+1}+y_{t+1})N_{t}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The stochasitc dividend is the only source of exogenous fundamental uncertainty,
+ with properties to be specified as needed later.
+ The agent's maximization problem is then a dynamic programming problem
+ with the state at 
+\begin_inset Formula $t$
+\end_inset
+
+ being 
+\begin_inset Formula $A_{t}$
+\end_inset
+
+ and current and past 
+\begin_inset Formula $y$
+\end_inset
+
+, and the contols being 
+\begin_inset Formula $L_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+.
+ At interior solutions, the Euler equations associated with controls 
+\begin_inset Formula $L_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ are
+\begin_inset Formula 
+\begin{eqnarray}
+u^{\prime}(c_{t})R_{t}^{-1} & = & E_{t}\beta u^{\prime}(c_{t+1})\\
+u^{\prime}(c_{t})p_{t} & = & E_{t}\beta(y_{t+1}+p_{t+1})u^{\prime}(c_{t+1})
+\end{eqnarray}
+
+\end_inset
+
+These Euler equations give a number of insights into asset prices and consumptio
+n.
+ Before turning to these we first note that an optimal solution to the agent's
+ maximizaiton problem must also satisfy the following transversality conditions
+\begin_inset Formula 
+\begin{eqnarray}
+\lim_{k\rightarrow\infty}E_{t}\beta^{k}u^{\prime}(c_{t+k})R_{t+k}^{-1}L_{t+k} & = & 0\\
+\lim_{k\rightarrow\infty}E_{t}\beta^{k}u^{\prime}(c_{t+k})p_{t+k}N_{t+k} & = & 0
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Heuristically, if any of the expressions in equations (52) and (53) were
+ strictly positive, the agent would be overaccumulating assets so that a
+ higher expected lifetime utility could be achieved by, for example, increasing
+ consumption today.
+ The counterpart to such nonoptimality in a finite horizon model would be
+ that the agent dies with positive asset holdings.
+ For reasons like thos in a ifnite horizon model, the agent would be happy
+ if the two conditions (52) and (53) could be violated on the negative side.
+ But the market would stop the agent from financing consumption by accumulating
+ the debts that would be associated with such violations of (52) and (53).
+ No other agent would want to make those loans.
+\end_layout
+
+\begin_layout Section*
+13.5.
+ Equilibrium asset pricing
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now explore equilibrium asset pricing in a simple representative agent
+ endowment economy, Lucas's asset-pricing model.
+ We imagine an economy consisting of a large number of identical agents
+ with preferences as specified in expression (47).
+ The only durable good in the economy is a set of identical 
+\begin_inset Quotes eld
+\end_inset
+
+trees,
+\begin_inset Quotes erd
+\end_inset
+
+ on for each person in the economy.
+ At the beginning of each period 
+\begin_inset Formula $t$
+\end_inset
+
+, each tree yields dividends in amount of 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+.
+ The fruit, or dividends, are not storable, but the tree is perfectly durable.
+ Each agent starts life at time zero with one tree.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The dividend 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ is assumed to be governed by a Markov process, and it is a function of
+ the sole state variable of the economy, i.e., 
+\begin_inset Formula $s_{t}=y_{t}$
+\end_inset
+
+.
+ The time-invariant transition probability distribution function is given
+ by 
+\begin_inset Formula $\mbox{Prob}(s_{t+1}\leq s^{\prime}|s_{t}=s)=F(s^{\prime},s)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+All agents maximize expression (47) subject to the budget constraint (48)-(49)
+ and transversality conditions (52)-(53).
+ In an equilibrium, asset prices clear the markets.
+ That is, the bond holdings of all agents sum to zero, and their total stock
+ positions are equal to the aggregate number of shares.
+ As a normalization, let there be one share per tree.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Due to the assumption that all agents are identical with respect to both
+ preferences and endowments, we can work with a representative agent.
+ Lucas's model shares features with a variety of representative agent asset-pric
+ing models.
+ These use versions of stochastic optimal growth models to generate allocations
+ and price assets.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Such asset pricing models can be constructed by the following steps:
+\end_layout
+
+\begin_layout Standard
+1.
+ Describe the preferences, technology, and endowments of a dynamic economy,
+ then solve for the equilibrium intertemporal consumption allocation.
+ Sometimes there is a particular planning problem whose solution equals
+ the competitive allocation.
+\end_layout
+
+\begin_layout Standard
+2.
+ Set up a competitive market in some particular asset that represents a
+ specific claim on future consumption goods.
+ Permit agents to buy and sell at equilibrium asset prices subject to particular
+ borrowing and short-sales constriants.
+ Find an agent's Euler equation for this asset.
+\end_layout
+
+\begin_layout Standard
+3.
+ Equate the consumption that appears in the Euler equation derived in step
+ 2 to the equilibrium consumption in step 1.
+ This procedure will give the asset price at 
+\begin_inset Formula $t$
+\end_inset
+
+ as a function of the state of the economy at 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In our endowment economy, a planner that treats all agents the same would
+ like to maximize 
+\begin_inset Formula $E_{0}\sum_{t=0}^{\infty}\beta^{t}u(c_{t})$
+\end_inset
+
+ subject to 
+\begin_inset Formula $c_{t}\leq y_{t}$
+\end_inset
+
+.
+ Evidently the solution is to set 
+\begin_inset Formula $c_{t}$
+\end_inset
+
+ equal to 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+.
+ After substituting this consumption allocation into equations (50) and
+ (51), we arrive at expressions for the risk-free interest rate and the
+ share price:
+\begin_inset Formula 
+\begin{eqnarray}
+u^{\prime}(y_{t})R_{t}^{-1} & = & E_{t}\beta u^{\prime}(y_{t+1})\\
+u^{\prime}(y_{t})p_{t} & = & E_{t}\beta(y_{t+1}+p_{t+1})u^{\prime}(y_{t+1})
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+13.6.
+ Stock prices without bubbles
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Using recursions on equation (55) and the law of iterated expectations,
+ which states that 
+\begin_inset Formula $E_{t}E_{t+1}(\cdot)=E_{t}(\cdot)$
+\end_inset
+
+, we arrive at the following expression for the equilibrium share price:
+\begin_inset Formula 
+\begin{equation}
+u^{\prime}(y_{t})p_{t}=E_{t}\sum_{j=1}^{\infty}\beta^{j}u^{\prime}(y_{t+j})y_{t+j}+E_{t}\lim_{k\rightarrow\infty}\beta^{k}u^{\prime}(y_{t+k})p_{t+k}
+\end{equation}
+
+\end_inset
+
+Moreover, equilibrium share prices have to be consistent with market clearing;
+ that is, agents must be willing to hold their endowments of trees forever.
+ It follows immediately that the last term in the equation must be zero.
+ We can therefore conclude that the equilibrium price must satisfy
+\begin_inset Formula 
+\begin{eqnarray}
+p_{t} & = & E_{t}\left[\sum_{j=1}^{\infty}\beta^{j}\frac{u^{\prime}(y_{t+j})}{u^{\prime}(y_{t})}y_{t+j}\right]\\
+ & = & E_{t}\left[\sum_{j=t+1}^{\infty}\beta^{j-t}\frac{u^{\prime}(c_{j})}{u^{\prime}(c_{t})}y_{j}\right]\nonumber \\
+ & = & \sum_{j=t+1}^{\infty}\sum_{s_{j}}\frac{\beta^{j}\pi(s_{j})u^{\prime}(c(s_{j}))}{\beta^{t}\pi(s_{t})u^{\prime}(c(s_{t}))}y(s_{j})\nonumber \\
+* & = & \sum_{j=t+1}^{\infty}\sum_{s_{j}}\frac{q_{j}^{0}(s_{j})}{q_{t}^{0}(s_{t})}\nonumber \\
+* & = & \sum_{j=t+1}^{\infty}\sum_{s_{j}}q_{j}^{t}(s_{j})\nonumber \\
+* & = & \sum_{j=t+1}^{\infty}\sum_{s_{j}}Q_{j}(s_{j}|s_{t})\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+Note, 
+\begin_inset Formula $Q_{j}(s_{j}|s_{t})$
+\end_inset
+
+ denotes the 
+\begin_inset Formula $j$
+\end_inset
+
+-step pricing kernel which gives the price of one unit of consumption 
+\begin_inset Formula $j$
+\end_inset
+
+ periods ahead, contingent on the state in that future period being 
+\begin_inset Formula $s_{j}$
+\end_inset
+
+, given that the current state is 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this model, good 
+\begin_inset Formula $t$
+\end_inset
+
+ has become the numeraire.
+ Moreover, under the asusmption that the endowments are governed by a Markov
+ process, the representative household's endowment in period 
+\begin_inset Formula $t$
+\end_inset
+
+ is a time invariant measurable function of 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{t}(s^{t})=y_{t}(s_{t})$
+\end_inset
+
+.
+ Since it has been shown that each individual's consumption is a function
+ only of the current realization of the aggregate endowment, then it follows
+ immediately that the equilibrium allocation is a function only of the current
+ state 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $c_{t}(s^{t})=c(s_{t})$
+\end_inset
+
+.
+ Also, the pricing kernel is a function only of the current state, i.e., 
+\begin_inset Formula $Q_{j}(s_{j}|s^{t})=Q(s_{j}|s_{t})$
+\end_inset
+
+.
+ Finally, it follows that the equilibrium price can be expressed as a function
+ of the current state 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{t}=p(s_{t})$
+\end_inset
+
+.
+ Thus, we have established the history independence of all the variables
+ in this model economy.
+\end_layout
+
+\begin_layout Section*
+13.7.
+ Computing asset prices
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now turn to three examples in which it is easy to calculate an asset-pricing
+ funciton by solving the expectational difference equation (55).
+\end_layout
+
+\begin_layout Subsection*
+13.7.1.
+ Example 1: logarithmic preferences
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Take the special case of equation (57) that emerges when 
+\begin_inset Formula $u(c_{t})=\ln(c_{t})$
+\end_inset
+
+ then equation (57) becomes
+\begin_inset Formula 
+\begin{equation}
+p_{t}=\frac{\beta}{1-\beta}y_{t}
+\end{equation}
+
+\end_inset
+
+Equation (58) is our asset-pricing funciton.
+ It maps the state of the economy at 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+, into the price of a lucas tree at 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+13.7.2.
+ Example 2: a finite-state version
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider a discrete version of Lucas's one-kind-of-tree model.
+ Let dividends assume the 
+\begin_inset Formula $n$
+\end_inset
+
+ possible distinct values 
+\begin_inset Formula $\left[\sigma_{1},\sigma_{2},\ldots,\sigma_{n}\right]$
+\end_inset
+
+.
+ Let dividends evolve through time according to a Markov chain, with
+\begin_inset Formula 
+\[
+\mbox{Prob}\{y_{t+1}=\sigma_{l}|y_{t}=\sigma_{k}\}=P_{kl}>0
+\]
+
+\end_inset
+
+The 
+\begin_inset Formula $(n\times n)$
+\end_inset
+
+ matrix 
+\begin_inset Formula $P$
+\end_inset
+
+ with element 
+\begin_inset Formula $P_{kl}$
+\end_inset
+
+ is called a stochastic matrix.
+ The matrix satisfies 
+\begin_inset Formula $\sum_{l=1}^{n}P_{kl}=1$
+\end_inset
+
+ for each 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ Express equation (55) of Lucas's model as
+\begin_inset Formula 
+\begin{equation}
+p_{t}u^{\prime}(y_{t})=\beta E_{t}p_{t+1}u^{\prime}(y_{t+1})+\beta E_{t}y_{t+1}u^{\prime}(y_{t+1})
+\end{equation}
+
+\end_inset
+
+Express the price at 
+\begin_inset Formula $t$
+\end_inset
+
+ as a function of the state 
+\begin_inset Formula $\sigma_{k}$
+\end_inset
+
+ at 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $p_{t}=p(\sigma_{k})$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $p_{t}u^{\prime}(y_{t})=p(\sigma_{k})u^{\prime}(\sigma_{k})\equiv v_{k},\ k=1,\ldots,n$
+\end_inset
+
+.
+ Also, define 
+\begin_inset Formula $\alpha_{k}=\beta E_{t}y_{t+1}u^{\prime}(y_{t+1})=\beta\sum_{l=1}^{n}\sigma_{l}u^{\prime}(\sigma_{l})P_{kl}$
+\end_inset
+
+.
+ Then equation (59) can be expressed as
+\begin_inset Formula 
+\[
+p(\sigma_{k})u^{\prime}(\sigma_{k})=\beta{\displaystyle \sum_{l=1}^{n}}p(\sigma_{l})u^{\prime}(\sigma_{l})P_{kl}+\beta{\displaystyle \sum_{l=1}^{n}}\sigma_{l}u^{\prime}(\sigma_{l})P_{kl}
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\[
+v_{k}=\alpha_{k}+\beta{\displaystyle \sum_{l=1}^{n}}P_{kl}v_{l}
+\]
+
+\end_inset
+
+or in matrix terms, 
+\begin_inset Formula $v=\alpha+\beta Pv$
+\end_inset
+
+, where 
+\begin_inset Formula $v$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ are column vectors.
+ The equation can be represented as 
+\begin_inset Formula $(I-\beta P)v=\alpha$
+\end_inset
+
+.
+ This equation has a unique solution given by
+\begin_inset Formula 
+\begin{equation}
+v=(1-\beta P)^{-1}\alpha
+\end{equation}
+
+\end_inset
+
+The price of the asset in state 
+\begin_inset Formula $\sigma_{k}$
+\end_inset
+
+, call it 
+\begin_inset Formula $p_{k}$
+\end_inset
+
+, can then be found from 
+\begin_inset Formula $p_{k}=\nicefrac{v_{k}}{\left[u^{\prime}(\sigma_{k})\right]}$
+\end_inset
+
+.
+ Notice that equation (6) can be represented as
+\begin_inset Formula 
+\[
+v=(I+\beta P+\beta^{2}P^{2}+\ldots)\alpha
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\[
+p(\sigma_{k})=p_{k}={\displaystyle \sum_{l}}\left(I+\beta P+\beta^{2}P^{2}+\ldots\right)_{kl}\frac{\alpha_{l}}{u^{\prime}(\sigma_{k})}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\left(I+\beta P+\beta^{2}P^{2}+\ldots\right)_{kl}$
+\end_inset
+
+ is the 
+\begin_inset Formula $(k,l)$
+\end_inset
+
+ element of the matrix 
+\begin_inset Formula $\left(I+\beta P+\beta^{2}P^{2}+\ldots\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+13.7.3.
+ Example 3: asset pricing with growth
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let's price a Lucas tree in a pure endowment economy with 
+\begin_inset Formula $c_{t}=y_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{t+1}=\lambda_{t+1}y_{t}$
+\end_inset
+
+, where 
+\begin_inset Formula $\lambda_{t}$
+\end_inset
+
+ is Markob with transition matrix 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p_{t}$
+\end_inset
+
+ be the ex-dividend price of the Lucas tree.
+ Assume the CRRA utility 
+\begin_inset Formula $u(c)=\nicefrac{c^{1-\gamma}}{(1-\gamma)}$
+\end_inset
+
+.
+ Evidently, the price of the Lucas tree satisfies
+\begin_inset Formula 
+\[
+p_{t}=E_{t}\left[\beta\left(\frac{c_{t+1}}{c_{t}}\right)^{-\gamma}\left(p_{t+1}+y_{t+1}\right)\right]
+\]
+
+\end_inset
+
+Dividing both sides by 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ and rearranging gives
+\begin_inset Formula 
+\[
+\frac{p_{t}}{y_{t}}=E_{t}\left[\beta\left(\lambda_{t+1}\right)^{1-\gamma}\left(\frac{p_{t+1}}{y_{t+1}}+1\right)\right]
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\begin{equation}
+w_{i}=\beta{\displaystyle \sum_{j}}P_{ij}\lambda_{j}^{1-\gamma}(w_{j}+1)
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ represents the price-dividend ratio.
+\end_layout
+
+\end_body
+\end_document

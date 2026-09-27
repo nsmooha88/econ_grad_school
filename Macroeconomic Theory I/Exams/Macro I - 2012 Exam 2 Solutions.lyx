@@ -1,0 +1,944 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Macroeconomic Theory I: Exam 2 Solutions (2012)
+\end_layout
+
+\begin_layout Problem
+Consider a worker whose endowment at 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+, evolves accoring to an 
+\begin_inset Formula $m$
+\end_inset
+
+-state Markov chain with transition matrix 
+\begin_inset Formula $\Pi=[\pi_{ij}]_{i,j=1,\ldots,m}$
+\end_inset
+
+, 
+\begin_inset Formula $\pi_{ij}=Pr(s_{t+1}=\bar{s}_{j}|s_{t}=\bar{s}_{i})$
+\end_inset
+
+.
+ The worker can choos to hold a single risk-free asset 
+\begin_inset Formula $a_{t}$
+\end_inset
+
+.
+ His utility maximizaiton problem is
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & E\left\{ {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(c_{t})\right\} \\
+\mbox{s.t.} & c_{t}+a_{t+1}=(1+r)a_{t}+s_{t}\\
+ & a_{0}\ \mbox{and}\ s_{0}\ \mbox{are given}
+\end{eqnarray*}
+
+\end_inset
+
+Note that the real interest rate, 
+\begin_inset Formula $r$
+\end_inset
+
+, is a constant.
+ Carefully rewrite the decision problem as a dynamic programming problem.
+ Please be precise about the state variable and the control variable.
+\end_layout
+
+\begin_layout Proof
+The state variables are 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{t}$
+\end_inset
+
+, and the control variable is 
+\begin_inset Formula $a_{t+1}$
+\end_inset
+
+.
+ The per-period return function is
+\begin_inset Formula 
+\[
+r(a_{t},s_{t},a_{t+1})=u(c_{t})=u\left((1+r)a_{t}+s_{t}-a_{t+1}\right)
+\]
+
+\end_inset
+
+The household's maximum problem, for a given 
+\begin_inset Formula $r$
+\end_inset
+
+ and given initial values 
+\begin_inset Formula $(a_{0},s_{0})$
+\end_inset
+
+, is to choose a policy for 
+\begin_inset Formula $\{a_{t+1}\}_{t=0}^{\infty}$
+\end_inset
+
+ to maximize
+\begin_inset Formula 
+\[
+V(a_{0},s_{0})=\max_{\{a_{t+1}\}_{t=0}^{\infty}}\ E\left\{ {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(c_{t})\right\} 
+\]
+
+\end_inset
+
+subject to
+\begin_inset Formula 
+\begin{gather*}
+c_{t}+a_{t+1}=(1+r)a_{t}+s_{t}\\
+c_{t}\geq0
+\end{gather*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\beta\in(0,1)$
+\end_inset
+
+ is a discount factor and 
+\begin_inset Formula $r$
+\end_inset
+
+ is a fixed rate of return on the assets.
+ We assume that 
+\begin_inset Formula $\beta(1+r)<1$
+\end_inset
+
+.
+ Here 
+\begin_inset Formula $u(c)$
+\end_inset
+
+ is a strictly increasing, concave one-period utility funciton.
+ Associate with this problem is the Bellman equation 
+\begin_inset Formula 
+\[
+V(a,s)=\max_{a^{\prime}}\left[u\left((1+r)a+s-a^{\prime}\right)+\beta E\left\{ V(a^{\prime},s^{\prime})|s)\right\} \right]
+\]
+
+\end_inset
+
+or for each 
+\begin_inset Formula $i\in[1,\ldots,m]$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V(a,s_{i})=\max_{a^{\prime}}\left[u\left((1+r)a+s_{i}-a^{\prime}\right)+\beta\left\{ \sum_{j=1}^{M}\pi_{ij}V(a,s_{j})\right\} \right]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $a^{\prime}$
+\end_inset
+
+ is next period's value of asset holdings, and 
+\begin_inset Formula $s^{\prime}$
+\end_inset
+
+ is next period's value of the shock.
+ Here, 
+\begin_inset Formula $V(a,s)$
+\end_inset
+
+ is the optimal value of the objective funciton, starting from asset, endowment
+ state 
+\begin_inset Formula $(a,s)$
+\end_inset
+
+.
+ A solution of this problem is a value function 
+\begin_inset Formula $V(a,s)$
+\end_inset
+
+ that satisfies the Bellman equation and an associated policy function 
+\begin_inset Formula $a^{\prime}=g(a,s)$
+\end_inset
+
+ mapping this period's 
+\begin_inset Formula $(a,s)$
+\end_inset
+
+ pair into an optimal choise of assets to carry into next period.
+\end_layout
+
+\begin_layout Problem
+An economy consists of two infinitely lived consumers named 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+.
+ There is one nonstorable good.
+ Consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ consumes 
+\begin_inset Formula $c_{t}^{i}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ ranks consumption streams by
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(c_{t}^{i})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\beta\in(0,1)$
+\end_inset
+
+ and 
+\begin_inset Formula $u(c)$
+\end_inset
+
+ is increasing, strictly concave, and twice continuously differentiable.
+ Consumer 1 is endowed with a stream of the consumption good 
+\begin_inset Formula $y_{t}^{1}=0,1,0,1,0,1\ldots$
+\end_inset
+
+ Consumer 2 is endowed with a stream of consumption good 
+\begin_inset Formula $y_{t}^{2}=1,0,1,0,1,0,\ldots$
+\end_inset
+
+ Assume that there are complete markets with time-0 Arrow Debreu trading.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute a competitive equilibrium.
+\end_layout
+
+\begin_layout Enumerate
+Suppose that a derivative asset promises to pay 0.2 units of consumption
+ from 
+\begin_inset Formula $t=1$
+\end_inset
+
+ onward.
+ What is the price of that asset at 
+\begin_inset Formula $t=0$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+A competitive equilibrium is a feasible allocation 
+\begin_inset Formula $c^{i}=\{c_{t}^{i}\}_{t=0}^{\infty}$
+\end_inset
+
+, one for each 
+\begin_inset Formula $i$
+\end_inset
+
+, and a price system 
+\begin_inset Formula $\{q_{t}^{0}\}_{t=0}^{\infty}$
+\end_inset
+
+ such that, given the price system, the allocaiton solves each household's
+ maximization problem.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+In this economy, there is no aggregate uncertainty and aggregate endowment
+ is constant.
+ As a result, each consumer will smooth his consumption over time so that
+ 
+\begin_inset Formula $\forall\ t:c_{t}^{i}=\bar{c}^{i}$
+\end_inset
+
+.
+ The consumer wishes to maximzing his utility
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(c_{t}^{i})
+\]
+
+\end_inset
+
+subject to his budget constraint
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{t=0}^{\infty}}q_{t}^{0}c_{t}^{i}\leq{\displaystyle \sum_{t=0}^{\infty}}q_{t}^{0}y_{t}^{i}
+\]
+
+\end_inset
+
+The Lagrangian can be written as
+\begin_inset Formula 
+\[
+L={\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(c_{t}^{i})+\mu^{i}\left[{\displaystyle \sum_{t=0}^{\infty}}q_{t}^{0}y_{t}^{i}-{\displaystyle \sum_{t=0}^{\infty}}q_{t}^{0}c_{t}^{i}\right]
+\]
+
+\end_inset
+
+The first-order condition with respect to 
+\begin_inset Formula $c_{t}^{i}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+\beta^{t}u(c_{t}^{i})=\mu^{i}q_{t}^{0}
+\]
+
+\end_inset
+
+We normalize prices such that 
+\begin_inset Formula $q_{0}^{0}=1$
+\end_inset
+
+.
+ So, at 
+\begin_inset Formula $t=0$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+u(c_{t}^{i})=\mu^{i}
+\]
+
+\end_inset
+
+Now, we can find the equilibrium price
+\begin_inset Formula 
+\begin{eqnarray*}
+q_{t}^{0} & = & \beta^{t}\frac{u(c_{t}^{i})}{\mu^{i}}\\
+q_{t}^{0} & = & \beta^{t}
+\end{eqnarray*}
+
+\end_inset
+
+Plugging this price into the budget constraint yields
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \sum_{t=0}^{\infty}}q_{t}^{0}c_{t}^{i} & = & {\displaystyle \sum_{t=0}^{\infty}}q_{t}^{0}y_{t}^{i}\\
+\bar{c}^{i}{\displaystyle \sum_{t=0}^{\infty}}\beta^{t} & = & {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}y_{t}^{i}\\
+\bar{c}^{i} & = & (1-\beta){\displaystyle \sum_{t=0}^{\infty}}\beta^{t}y_{t}^{i}
+\end{eqnarray*}
+
+\end_inset
+
+From consumer 2's endowment stream, we can find his optimal allocation
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{c}^{2} & = & (1-\beta){\displaystyle \sum_{t=0}^{\infty}}\beta^{2t}\\
+\bar{c}^{2} & = & \frac{1-\beta}{1-\beta^{2}}=\frac{(1-\beta)}{(1-\beta)(1+\beta)}=\frac{1}{(1+\beta)}
+\end{eqnarray*}
+
+\end_inset
+
+while consumer 1's optimal allocaiton is
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{c}^{1} & = & 1-\frac{1}{1+\beta}\\
+ & = & \frac{1+\beta-1}{1+\beta}\\
+\bar{c}^{1} & = & \frac{\beta}{1+\beta}
+\end{eqnarray*}
+
+\end_inset
+
+With the equilibrium price, we can also price the redudant asset that pays
+ 0.2 units of consumption from 
+\begin_inset Formula $t=1$
+\end_inset
+
+ onward.
+\begin_inset Formula 
+\begin{eqnarray*}
+p & = & {\displaystyle \sum_{t=0}^{\infty}}q_{t}^{0}d_{t}\\
+ & = & {\displaystyle \sum_{t=0}^{\infty}}\beta^{t+1}(0.2)\\
+p & = & \frac{\beta(0.2)}{1-\beta}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Consider a job search model where the wage offer is uniformly distributed
+ on 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.
+ Denote the worker's discounted utility as 
+\begin_inset Formula $v(w)$
+\end_inset
+
+ after he receives an offer 
+\begin_inset Formula $w$
+\end_inset
+
+ but before he accepts it.
+ The worker's Bellman equation is
+\begin_inset Formula 
+\[
+v(w)=\max\left\{ \frac{w}{1-\beta},\beta{\displaystyle \int_{0}^{1}}v(w^{\prime})f(w^{\prime})dw^{\prime}\right\} 
+\]
+
+\end_inset
+
+where the discount factor is 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $f(w^{\prime})\equiv1$
+\end_inset
+
+ is the density function.
+ Solve for the reservation wage 
+\begin_inset Formula $w^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Assuming that the worker behaves optimally, he accept the offer if 
+\begin_inset Formula $w>w^{*}$
+\end_inset
+
+, and he will reject the offer if 
+\begin_inset Formula $w\leq w^{*}$
+\end_inset
+
+.
+ So, we can write the Bellman equation as
+\begin_inset Formula 
+\[
+v(w)=\begin{cases}
+\frac{w^{*}}{1-\beta}=\beta{\displaystyle \int_{0}^{1}}v(w^{\prime})dw^{\prime} & \mbox{if}\ w\leq w^{*}\\
+\frac{w}{1-\beta} & \mbox{if}\ w>w^{*}
+\end{cases}
+\]
+
+\end_inset
+
+From the equation above, the reservation wage 
+\begin_inset Formula $w^{*}$
+\end_inset
+
+ must satisfy.
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{w^{*}}{1-\beta} & = & \beta{\displaystyle \int_{0}^{1}}v(w^{\prime})dw^{\prime}\\
+\frac{w^{*}}{1-\beta}\left({\displaystyle \int_{0}^{w^{*}}}dw^{\prime}+{\displaystyle \int_{w^{*}}^{1}}dw^{\prime}\right) & = & \beta{\displaystyle \int_{0}^{w^{*}}}\frac{w^{*}}{1-\beta}dw^{\prime}+\beta{\displaystyle \int_{w^{*}}^{1}}\frac{w^{\prime}}{1-\beta}dw^{\prime}\\
+w^{*}{\displaystyle \int_{0}^{w^{*}}}dw^{\prime} & = & \frac{1}{1-\beta}{\displaystyle \int_{w^{*}}^{1}}(\beta w^{\prime}-w^{*})dw^{\prime}\\
+w^{*} & = & \frac{1}{1-\beta}{\displaystyle \int_{w^{*}}^{1}}(\beta w^{\prime}-w^{*})dw^{\prime}+\frac{1}{1-\beta}{\displaystyle \int_{w^{*}}^{1}}w^{*}(1-\beta)dw^{\prime}\\
+w^{*} & = & \frac{\beta}{1-\beta}{\displaystyle \int_{w^{*}}^{1}}(w^{\prime}-w^{*})dw^{\prime}
+\end{eqnarray*}
+
+\end_inset
+
+Now, we can solve for the reservation wage 
+\begin_inset Formula $w^{*}$
+\end_inset
+
+.
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{eqnarray*}
+w^{*} & = & \frac{\beta}{1-\beta}\left[\frac{1}{2}-\frac{w^{*2}}{2}-w^{*}+w^{*2}\right]\\
+w^{*} & = & \frac{\beta}{1-\beta}\frac{1}{2}\left[1+w^{*2}-2w^{*}\right]\\
+w^{*} & = & \frac{\beta}{1-\beta}\frac{\left(1-w^{*}\right)^{2}}{2}\\
+2w^{*}-2\beta w^{*} & = & \beta(1-w^{*})^{2}\\
+\beta(1-w^{*})^{2}+2\beta w^{*}-2w^{*} & = & 0\\
+\beta-2\beta w^{*}+\beta w^{*2}+2\beta w^{*}-2w^{*} & = & 0\\
+w^{*2}-\frac{2}{\beta}w^{*}+1 & = & 0\\
+w^{*} & = & \frac{\frac{2}{\beta}\pm\sqrt{\left(-\frac{2}{\beta}\right)^{2}-4}}{2}\\
+w^{*} & = & \frac{1}{\beta}-\sqrt{\frac{1}{\beta^{2}}-1}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Consider an overlapping generations model in discrete time 
+\begin_inset Formula $(t=0,1,2,\ldots)$
+\end_inset
+
+.
+ An agent of generation 
+\begin_inset Formula $t$
+\end_inset
+
+ is born in period 
+\begin_inset Formula $t$
+\end_inset
+
+ and lives in period 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $t+1$
+\end_inset
+
+.
+ There is a continuum of identical agents per generation.
+ Normalize the size of each generation to 1.
+ Let 
+\begin_inset Formula $\frac{(c_{y}^{t})^{\nicefrac{1}{2}}}{\nicefrac{1}{2}}+\beta\frac{(c_{o}^{t})^{\nicefrac{1}{2}}}{\nicefrac{1}{2}}$
+\end_inset
+
+ denote the utility function of generation 
+\begin_inset Formula $t$
+\end_inset
+
+, where the first argument is consumption when young, the second is consumption
+ when old.
+ Each agent is endowed with 1 unit of non-storable consumption when young
+ and 0 when old.
+ In addition, each initial old (old in generation 0) owns a tree, which
+ yields a non-storable sequence of dividends 
+\begin_inset Formula $\{x_{t}\}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+ is either 1 or 0, and follows a markov chain, with 
+\begin_inset Formula $\pi_{ij}=P(x_{t+1}=j|x_{t}=i),\ i,j=0,1$
+\end_inset
+
+.
+ In each period 
+\begin_inset Formula $t$
+\end_inset
+
+, each young agent decides the number of trees to purchase from the old
+ generation; while each old agent sells his trees inelastically.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+We consider a stationary situation where trees' price depends only on 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+, not directly on calendar time.
+ The prices when 
+\begin_inset Formula $x_{t}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{t}=1$
+\end_inset
+
+ are denoted by 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+, respectively.
+ Define a staitonary competitive equilibrium for this economy.
+\end_layout
+
+\begin_layout Enumerate
+Now assume that 
+\begin_inset Formula $\{x_{t}\}$
+\end_inset
+
+ is i.i.d.
+ across time (i.e., 
+\begin_inset Formula $\pi_{ij}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $i$
+\end_inset
+
+).
+ In each period, the shock is either 1 with probability 
+\begin_inset Formula $\pi_{1}$
+\end_inset
+
+ or 0 with probability 
+\begin_inset Formula $\pi_{0}=1-\pi_{1}$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula $p_{1}=p_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Now assume that 
+\begin_inset Formula $\{x_{t}\}$
+\end_inset
+
+ is persistent across time (i.e., 
+\begin_inset Formula $\pi_{11}>\pi_{01}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi_{10}<\pi_{00}$
+\end_inset
+
+).
+ Show that 
+\begin_inset Formula $p_{1}>p_{0}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Since each agent is identical, then to find the competitive equilibrium,
+ we can just focus on the maximization problem for the representative agent.
+\end_layout
+
+\begin_layout Proof
+When 
+\begin_inset Formula $x_{t}=0$
+\end_inset
+
+, the young agent's problem is
+\begin_inset Formula 
+\begin{eqnarray*}
+\max_{\{s,c_{y},c_{o}(0),c_{o}(1)\}} & \frac{(c_{y})^{\nicefrac{1}{2}}}{\nicefrac{1}{2}}+\beta\left[\pi_{00}\frac{(c_{o}(0))^{\nicefrac{1}{2}}}{\nicefrac{1}{2}}+\pi_{01}\frac{(c_{o}(1))^{\nicefrac{1}{2}}}{\nicefrac{1}{2}}\right]\\
+\mbox{s.t.} & c_{y}+sp_{0}=1\\
+ & c_{o}(0)=sp_{0}\\
+ & c_{o}(1)=s(p_{1}+1)
+\end{eqnarray*}
+
+\end_inset
+
+This problem can be rewritten as
+\begin_inset Formula 
+\[
+\frac{(1-sp_{0})^{\nicefrac{1}{2}}}{\nicefrac{1}{2}}+\beta\left[\pi_{00}\frac{(sp_{0})^{\nicefrac{1}{2}}}{\nicefrac{1}{2}}+\pi_{01}\frac{(s(p_{1}+1))^{\nicefrac{1}{2}}}{\nicefrac{1}{2}}\right]
+\]
+
+\end_inset
+
+When 
+\begin_inset Formula $x_{t}=0$
+\end_inset
+
+, the young agent's problem is
+\begin_inset Formula 
+\begin{eqnarray*}
+\max_{\{s,c_{y},c_{o}(0),c_{o}(1)\}} & \frac{(c_{y})^{\nicefrac{1}{2}}}{\nicefrac{1}{2}}+\beta\left[\pi_{10}\frac{(c_{o}(0))^{\nicefrac{1}{2}}}{\nicefrac{1}{2}}+\pi_{11}\frac{(c_{o}(1))^{\nicefrac{1}{2}}}{\nicefrac{1}{2}}\right]\\
+\mbox{s.t.} & c_{y}+sp_{1}=1\\
+ & c_{o}(0)=sp_{0}\\
+ & c_{o}(1)=s(p_{1}+1)
+\end{eqnarray*}
+
+\end_inset
+
+This problem can be rewritten as
+\begin_inset Formula 
+\[
+\frac{(1-sp_{1})^{\nicefrac{1}{2}}}{\nicefrac{1}{2}}+\beta\left[\pi_{00}\frac{(sp_{0})^{\nicefrac{1}{2}}}{\nicefrac{1}{2}}+\pi_{01}\frac{(s(p_{1}+1))^{\nicefrac{1}{2}}}{\nicefrac{1}{2}}\right]
+\]
+
+\end_inset
+
+A stationary competitive equilibrium is an allocation 
+\begin_inset Formula $\{c_{y},c_{o}(0),c_{o}(1)\}$
+\end_inset
+
+ and a set of prices 
+\begin_inset Formula $\{p_{0},p_{1}\}$
+\end_inset
+
+ such that, given the prices, the allocation solves the household's maximizaiton
+ problem.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+For each realization of 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+, we find the first-order condition of the young agent's problem with respect
+ to 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $x_{t}=0$
+\end_inset
+
+, we have
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+(c_{y})^{-\nicefrac{1}{2}}p_{0}=\beta\left[\pi_{00}(c_{o}(0))^{-\nicefrac{1}{2}}p_{0}+\pi_{01}(c_{0}(1))^{-\nicefrac{1}{2}}(p_{1}+1)\right]
+\]
+
+\end_inset
+
+and when 
+\begin_inset Formula $x_{t}=1$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+(c_{y})^{-\nicefrac{1}{2}}p_{1}=\beta\left[\pi_{10}(c_{o}(0))^{-\nicefrac{1}{2}}p_{0}+\pi_{11}(c_{0}(1))^{-\nicefrac{1}{2}}(p_{1}+1)\right]
+\]
+
+\end_inset
+
+Since agents are homogenous, then 
+\begin_inset Formula $s=1$
+\end_inset
+
+ in equilibrium.
+ Thus, 
+\begin_inset Formula $c_{y}=1-p_{0}$
+\end_inset
+
+ or 
+\begin_inset Formula $c_{y}=1-p_{1}$
+\end_inset
+
+, and 
+\begin_inset Formula $c_{o}(0)=p_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{o}(1)=p_{1}+1$
+\end_inset
+
+.
+ Substituting these values into the first-order conditions yield
+\begin_inset Formula 
+\[
+\frac{p_{0}}{\sqrt{1-p_{0}}}=\beta\left[\pi_{00}\sqrt{p_{0}}+\pi_{01}\sqrt{1+p_{1}}\right]
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\frac{p_{1}}{\sqrt{1-p_{1}}}=\beta\left[\pi_{10}\sqrt{p_{0}}+\pi_{11}\sqrt{1+p_{1}}\right]
+\]
+
+\end_inset
+
+If 
+\begin_inset Formula $\{x_{t}\}$
+\end_inset
+
+ is i.i.d., then 
+\begin_inset Formula $\pi_{00}=\pi_{10}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi_{01}=\pi_{11}$
+\end_inset
+
+.
+ So, the two right-hand sides in the above equations are equal, Thus, we
+ know 
+\begin_inset Formula 
+\[
+\frac{p_{0}}{\sqrt{1-p_{0}}}=\frac{p_{1}}{\sqrt{1-p_{1}}}
+\]
+
+\end_inset
+
+implying 
+\begin_inset Formula $p_{0}=p_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Now, we assume that 
+\begin_inset Formula $\{x_{t}\}$
+\end_inset
+
+ is persistent across time (i.e., 
+\begin_inset Formula $\pi_{01}<\pi_{11}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi_{10}<\pi_{00}$
+\end_inset
+
+).
+ Since we know that 
+\begin_inset Formula $p_{0}<1<p_{1}+1$
+\end_inset
+
+, we get
+\begin_inset Formula 
+\[
+\beta\left[\pi_{00}\sqrt{p_{0}}+\pi_{01}\sqrt{1+p_{1}}\right]<\beta\left[\pi_{10}\sqrt{p_{0}}+\pi_{11}\sqrt{1+p_{1}}\right]
+\]
+
+\end_inset
+
+Thus, we know
+\begin_inset Formula 
+\[
+\frac{p_{0}}{\sqrt{1-p_{0}}}<\frac{p_{1}}{\sqrt{1-p_{1}}}
+\]
+
+\end_inset
+
+implying 
+\begin_inset Formula $p_{0}<p_{1}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

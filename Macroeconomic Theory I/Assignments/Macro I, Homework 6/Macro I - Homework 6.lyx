@@ -1,0 +1,1000 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Macroeconomic Theory I: Homework 6
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Problem 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Trees in the utility function.
+ Consider the following version of the Lucas Tree model.
+ there are two kinds of trees.
+ One kind is beautiful and yields utility.
+ The other kind is ugly and yields no utility.
+ Both trees yield an identical stream of identical fruit.
+ The beautiful tree dividends at time 
+\begin_inset Formula $t$
+\end_inset
+
+ are 
+\begin_inset Formula $d_{1t}$
+\end_inset
+
+, and ugly tree dividends at time 
+\begin_inset Formula $t$
+\end_inset
+
+ are 
+\begin_inset Formula $d_{2t}$
+\end_inset
+
+.
+ Further, 
+\begin_inset Formula $d_{1t}=d_{2t}=\frac{d_{t}}{2}$
+\end_inset
+
+.
+ Thus, the physical output of the two trees are identical at each point
+ in time.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The fruite itself is non-storable and generates utility.
+ Trees last forever, and trees are the only source of fruit.
+ There is no production in the economy, other than fruit from trees.
+ There is one of each kind of tree for each individual in the economy.
+ The inital allocation of tree is that each individual owns one beautiful
+ and one ugly tree.
+ There are 
+\begin_inset Formula $N$
+\end_inset
+
+ individuals in the economy.
+ Assume the dividend process is such that 
+\begin_inset Formula $E_{t}[d_{t+j}]=d_{t}$
+\end_inset
+
+, for any 
+\begin_inset Formula $j>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consumers are identical, so we can work with a representative consumer.
+ Preferences are given by
+\begin_inset Formula 
+\[
+E_{0}{\displaystyle \sum_{t=0}^{\infty}\beta^{t}[\ln(c_{t})+\gamma\ln(s_{1t})],\ \gamma>0}
+\]
+
+\end_inset
+
+Here 
+\begin_inset Formula $c_{t}$
+\end_inset
+
+ is consumption in period 
+\begin_inset Formula $t$
+\end_inset
+
+, and 
+\begin_inset Formula $s_{1t}$
+\end_inset
+
+ is shares of beautiful trees at the beginning of time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p_{it}$
+\end_inset
+
+ be the price of shares of a tree of type 
+\begin_inset Formula $i$
+\end_inset
+
+ during period 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $R_{it}$
+\end_inset
+
+ be the gross return on trees of type 
+\begin_inset Formula $i$
+\end_inset
+
+ held from 
+\begin_inset Formula $t$
+\end_inset
+
+ to 
+\begin_inset Formula $t+1$
+\end_inset
+
+.
+ Consider an equilibrium of this economy with markets in stocks of each
+ type of tree.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a) Set up the household maximization problem as a dynamic programming problem.
+ Derive the pricing funciton mapping the state of the economy at time 
+\begin_inset Formula $t$
+\end_inset
+
+ into price 
+\begin_inset Formula $p_{1t}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{2t}$
+\end_inset
+
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The household's maximization problem is given by:
+\begin_inset Formula 
+\begin{eqnarray*}
+ & {\displaystyle \max}\ E_{0}{\displaystyle \sum_{t=0}^{\infty}\beta^{t}[\ln(c_{t})+\gamma\ln(s_{1t})]}\\
+\mbox{s.t.} & c_{t}+p_{1,t}s_{1,t+1}+p_{2,t}s_{2,t+1}\leq(d_{1t}+p_{1t})s_{1t}+(d_{2t}+p_{2t})s_{2t}\\
+ & s_{10}=s_{20}=1
+\end{eqnarray*}
+
+\end_inset
+
+A competitive equilibrium is given by: a sequence of allocations 
+\begin_inset Formula $\{c_{t},s_{1t},s_{2t}\}_{t=0}^{\infty}$
+\end_inset
+
+ and prices 
+\begin_inset Formula $\{p_{1t},p_{2t}\}_{t=0}^{\infty}$
+\end_inset
+
+ that solves the household's problem and also satisfies the market clearing
+ conditions.
+ Since the households are homogeneous, no trading occurs in equilibrium.
+ Accordingly, the market clearing conditions gives us:
+\begin_inset Formula 
+\[
+s_{i0}=1=s_{it}\ \forall\ t\in\mathbb{N},\ i=1,2
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+c_{t}=d_{t}\ \forall\ t\in\mathbb{N}
+\]
+
+\end_inset
+
+We can set up the household maximization problem as a dynamic programming
+ problem.
+ The Bellman Equation is:
+\begin_inset Formula 
+\begin{eqnarray*}
+V(s_{1},s_{2},d) & = & {\displaystyle \max_{s_{1}^{\prime},s_{2}^{\prime}}\{\ln(c)+\gamma\ln(s_{1})+\beta E[V(s_{1}^{\prime},s_{2}^{\prime},d)]}\}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mbox{where}\ c=(d_{1}+p_{1})s_{1}+(d_{2}+p_{2})s_{2}-p_{1}s_{1}^{\prime}-p_{2}s_{2}^{\prime}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The first order condition of the right hand side of the Bellman Equation
+ with respect to 
+\begin_inset Formula $s_{1}^{\prime}$
+\end_inset
+
+ is:
+\begin_inset Formula 
+\[
+-\frac{p_{1}}{c}+\beta E\left[\frac{d_{1}^{\prime}+p_{1}^{\prime}}{c^{\prime}}+\frac{\gamma}{s_{1}^{\prime}}\right]=0
+\]
+
+\end_inset
+
+In equilibrium, no trading occurs, so 
+\begin_inset Formula $s_{1}^{\prime}=1\ \mbox{and}\ d_{1}^{\prime}=\frac{d^{\prime}}{2}=\frac{c^{\prime}}{2}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\implies\frac{p_{1}}{d}=\frac{\beta}{2}+\beta\gamma+\beta E\left[\frac{p_{1}^{\prime}}{d^{\prime}}\right]
+\]
+
+\end_inset
+
+Now, let 
+\begin_inset Formula $x_{t}=\frac{p_{1}}{d},\ x_{t+1}=\frac{p_{1}^{\prime}}{d^{\prime}},\ A=\frac{\beta}{2}+\beta\gamma$
+\end_inset
+
+.
+ So, the equation above can be rewritten as:
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{t} & = & A+\beta E(x_{t+1})\ \forall\ t\\
+ & = & A+\beta E\left[A+\beta(x_{t+2})\right]\\
+ & \vdots\\
+x_{t} & = & A+\beta E\left[D+\beta^{s-1}(x_{t+s})\right]\ \ \mbox{where \ensuremath{D}\ is a constant}
+\end{eqnarray*}
+
+\end_inset
+
+Note, 
+\begin_inset Formula $\beta^{s-1}\rightarrow0\ \mbox{as}\ s\rightarrow\infty$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $x_{t}=A+\beta D$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ is a linear function of 
+\begin_inset Formula $d$
+\end_inset
+
+, so 
+\begin_inset Formula $p_{1}^{\prime}$
+\end_inset
+
+ is a linear function of 
+\begin_inset Formula $d^{\prime}$
+\end_inset
+
+.
+ As a result,
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{t}[d_{t+j}] & = & d_{t}\ \forall\ j>0\\
+ & \implies & E\left[\frac{p_{1}^{\prime}}{d^{\prime}}\right]=\frac{p_{1}}{d}
+\end{eqnarray*}
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{p_{1}}{d} & = & \frac{\beta}{2}+\beta\gamma+\beta\frac{p_{1}}{d}\\
+p_{1}(d) & = & \frac{(1+2\gamma)\beta d}{2(1-\beta)}
+\end{eqnarray*}
+
+\end_inset
+
+The first order condition of the right hand side of the Bellman Equation
+ with respect to 
+\begin_inset Formula $s_{2}^{\prime}$
+\end_inset
+
+ is:
+\begin_inset Formula 
+\[
+-\frac{p_{2}}{c}+\beta E\left[\frac{d_{2}^{\prime}+p_{2}^{\prime}}{c^{\prime}}\right]=0
+\]
+
+\end_inset
+
+In equilibrium, 
+\begin_inset Formula $d_{2}^{\prime}=\frac{d^{\prime}}{2}=\frac{c^{\prime}}{2}$
+\end_inset
+
+.
+ Also, using the same argument from before, 
+\begin_inset Formula $p_{2}^{\prime}$
+\end_inset
+
+ is a linear function of 
+\begin_inset Formula $d^{\prime}$
+\end_inset
+
+.
+ Hence,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $E\left[\frac{p_{2}^{\prime}}{d^{\prime}}\right]=\frac{p_{2}}{d}$
+\end_inset
+
+.
+ We now have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{p_{2}}{d} & = & \frac{\beta}{2}+\beta\frac{p_{2}}{d}\\
+p_{2}(d) & = & \frac{\beta d}{2(1-\beta)}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(b) Show that 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+ is sufficient for 
+\begin_inset Formula $R_{1t}<R_{2t}$
+\end_inset
+
+.
+ That is, beautiful trees are dominated in rate of return.
+ Also, explain your result intuitively.
+\series default
+
+\begin_inset Formula 
+\begin{eqnarray*}
+R_{1t} & = & \frac{p_{1,t+1}+d_{1,t+1}}{p_{1t}}\\
+ & = & \left(1+\frac{2(1-\beta)}{(1+2\gamma)\beta}\right)\frac{d_{t+1}}{d_{t}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+R_{2t} & = & \frac{p_{1,t+1}+d_{1,t+1}}{p_{1t}}\\
+ & = & \left(1+\frac{2(1-\beta)}{\beta}\right)\frac{d_{t+1}}{d_{t}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+R_{2t}-R_{1t} & = & \left(\frac{2(1-\beta)}{\beta}-\frac{2(1-\beta)}{(1+2\gamma)\beta}\right)\frac{d_{t+1}}{d_{t}}\\
+ & = & \left(1-\frac{1}{1+2\gamma}\right)\frac{2(1-\beta)}{\beta}\frac{d_{t+1}}{d_{t}}>0
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula $R_{2t}>R_{1t}$
+\end_inset
+
+ means the ugly trees have a higher rate of return.
+ The beautiful trees have a higher price because they provide utility to
+ households, but they produce the same amount of fruit as an ugly tree.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Problem 2
+\end_layout
+
+\begin_layout Standard
+Consider an economy with a continuum of identical consumers.
+ The utility of a representatitive consumer is 
+\begin_inset Formula 
+\[
+E\left[{\displaystyle \sum_{t=0}^{\infty}\beta^{t}u(c_{t})}\right]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\beta\in(0,1)$
+\end_inset
+
+, 
+\begin_inset Formula $c_{t}$
+\end_inset
+
+ is consumption and 
+\begin_inset Formula $E$
+\end_inset
+
+ is the expectation operator.
+ Each consumer owns 2 trees, indexed by 
+\begin_inset Formula $g$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ The fruit of tree 
+\begin_inset Formula $i\in\{g,b\},y_{it},$
+\end_inset
+
+ evolves as 
+\begin_inset Formula 
+\[
+y_{t}^{i}=\begin{cases}
+\theta_{t} & i=b\\
+1-\theta_{t} & i=g
+\end{cases}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\theta_{t}$
+\end_inset
+
+ is an aggregate shock whose value is either 
+\begin_inset Formula $H$
+\end_inset
+
+ or 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ 
+\begin_inset Formula $0<L<H<1$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $\theta_{t}$
+\end_inset
+
+ follows a two-state Markov chain with
+\begin_inset Formula 
+\[
+\begin{array}{c}
+\mbox{Pr}[\theta_{t+1}=H|\theta_{t}=H]=\pi,\ \mbox{Pr}[\theta_{t+1}=L|\theta_{t}=H]=1-\pi\\
+\mbox{Pr}[\theta_{t+1}=H|\theta_{t}=L]=1-\pi,\ \mbox{Pr}[\theta_{t+1}=L|\theta_{t}=L]=\pi
+\end{array}
+\]
+
+\end_inset
+
+There is one share in each tree and these shares are competitively traded.
+ Let 
+\begin_inset Formula $p_{it}$
+\end_inset
+
+ be the price of tree 
+\begin_inset Formula $i\in\{g,b\}$
+\end_inset
+
+ in period 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ In addition to shares, there is also a riskless one-period bond.
+ A bond sold in period 
+\begin_inset Formula $t$
+\end_inset
+
+ is a claim to one unti of consumption (i.e., fruit) in period 
+\begin_inset Formula $t+1$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $q_{t}$
+\end_inset
+
+ be the price of a bond in period 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a) Solve for 
+\begin_inset Formula $p_{t}^{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $q_{t}$
+\end_inset
+
+ in each aggregate state.
+ Also determine the real interest rate in each state.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The maximization problem for the representative consumer is given by:
+\begin_inset Formula 
+\begin{eqnarray*}
+ & {\displaystyle \max}\ E_{0}\left[{\displaystyle \sum_{t=0}^{\infty}\beta^{t}[u(c_{t})]}\right]\\
+\mbox{s.t.} & c_{t}+p_{t}^{b}s_{t+1}^{b}+p_{t}^{g}s_{t+1}^{g}+q_{t}b_{t+1}\leq y_{t}^{b}s_{t}^{b}+y_{t}^{g}s_{t}^{g}+p_{t}^{b}s_{t}^{b}+p_{t}^{g}s_{t}^{g}+b_{t}\\
+ & s_{0}^{b}=s_{0}^{g}=1
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A competitive equilibrium is given by: a sequence of allocations 
+\begin_inset Formula $\{c_{t},s_{t}^{b},s_{t}^{g}\}_{t=0}^{\infty}$
+\end_inset
+
+ and prices 
+\begin_inset Formula $\{p_{t}^{b},p_{t}^{g}\}_{t=0}^{\infty}$
+\end_inset
+
+ that solves the household's problem and also satisfies the market clearing
+ conditions.
+ Since the households are homogeneous, no trading occurs in equilibrium.
+ Also, consumption stays constant since aggregate endowment is constant
+ across time and all agents are homogenous.
+ Accordingly, the market clearing conditions gives us:
+\begin_inset Formula 
+\[
+s_{0}^{i}=1=s_{t}^{i}\ \forall\ t\in\mathbb{N},\ i\in\{b,g\}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+c_{t}=1\ \forall\ t\in\mathbb{N}
+\]
+
+\end_inset
+
+To determine 
+\begin_inset Formula $q_{t}$
+\end_inset
+
+, we obtain the first order condition of the maximization problem with resptect
+ to 
+\begin_inset Formula $b_{t+1}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\beta^{t}u(c_{t})}{\partial b_{t+1}}+\frac{\partial\beta^{t}u(c_{t+1})}{\partial b_{t+1}} & = & 0\\
+-\beta^{t}u^{\prime}(c_{t})q_{t}+\beta^{t+1}u(c_{t+1}) & = & 0\\
+q_{t} & = & \beta\frac{u^{\prime}(c_{t+1})}{u^{\prime}(c_{t})}\\
+q_{t} & = & \beta\ \ \mbox{since \ensuremath{u^{\prime}(c_{t})=u^{\prime}(c_{t+1})}}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the interest rate, 
+\begin_inset Formula $r_{t}$
+\end_inset
+
+, is given by:
+\begin_inset Formula 
+\[
+r_{t}=\frac{1}{q_{t}}
+\]
+
+\end_inset
+
+To calculate the asset-pricing function for tree 
+\begin_inset Formula $i$
+\end_inset
+
+, we obtain the first order condition of the maximization problem with respect
+ to 
+\begin_inset Formula $s_{t+1}^{i}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+-\beta^{t}u^{\prime}(c_{t})p_{t}^{i}+\beta^{t+1}u^{\prime}(c_{t+1})E_{t}\left[y_{t+1}^{i}+p_{t+1}^{i}\right] & = & 0\\
+u^{\prime}(c_{t})p_{t}^{i} & = & \beta E_{t}\left[y_{t+1}^{i}+p_{t+1}^{i}\right]u^{\prime}(c_{t+1})\\
+p_{t}^{i} & = & \beta E_{t}(p_{t+1}^{i})+\beta E_{t}(y_{t+1}^{i})\ \ \mbox{(since }u^{\prime}(c_{t})=u^{\prime}(c_{t+1})\mbox{)}
+\end{eqnarray*}
+
+\end_inset
+
+Note,
+\begin_inset Formula $y_{t}^{b}$
+\end_inset
+
+ only takes on two possible values, 
+\begin_inset Formula $H\ \mbox{and}\ L$
+\end_inset
+
+, and it evolves through time according to a Markov chain.
+ So, 
+\begin_inset Formula $p_{t}^{b}$
+\end_inset
+
+ only depends on the current state, and not the entire history.
+ As a result, we can express the price of tree 
+\begin_inset Formula $b$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+ as a function of the state at 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $p_{t}^{b}=p^{b}(\sigma)$
+\end_inset
+
+ where 
+\begin_inset Formula $\sigma\in\{H,L\}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{eqnarray*}
+p^{b}(H) & = & \beta\left[\pi p^{b}(H)+(1-\pi)p^{b}(L)\right]+\beta\left[\pi H+(1-\pi)L\right]\\
+p^{b}(L) & = & \beta\left[(1-\pi)p^{b}(H)+\pi p^{b}(L)\right]+\beta[(1-\pi)H+\pi L]
+\end{eqnarray*}
+
+\end_inset
+
+These two equations can be written succinctly in matrix form as follows:
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\begin{array}{c}
+p^{b}(H)\\
+p^{b}(L)
+\end{array}\right] & = & \beta\left[\begin{array}{cc}
+\pi & (1-\pi)\\
+(1-\pi) & \pi
+\end{array}\right]\left[\begin{array}{c}
+p^{b}(H)\\
+p^{b}(L)
+\end{array}\right]+\beta\left[\begin{array}{cc}
+\pi & (1-\pi)\\
+(1-\pi) & \pi
+\end{array}\right]\left[\begin{array}{c}
+H\\
+L
+\end{array}\right]\\
+p^{b} & = & \beta Pp^{b}+\beta Pv
+\end{eqnarray*}
+
+\end_inset
+
+The equation can be represented as 
+\begin_inset Formula $(I-\beta P)p^{b}=\beta Pv$
+\end_inset
+
+.
+ This equation has a unique solution given by
+\begin_inset Formula 
+\[
+p^{b}=(I-\beta P)^{-1}\left(\beta Pv\right)
+\]
+
+\end_inset
+
+The price of tree 
+\begin_inset Formula $b$
+\end_inset
+
+ in state 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ can be found from the column vector 
+\begin_inset Formula $p^{b}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+p^{b}(H) & = & \frac{1-\pi\beta}{(1-\pi\beta)^{2}-\beta^{2}(1-\pi)^{2}}\left[\beta\pi H+\beta(1-\pi)L\right]+\frac{\beta(1-\pi)}{(1-\pi\beta)^{2}-\beta^{2}(1-\pi)^{2}}[\beta(1-\pi)H+\beta\pi L]\\
+p^{b}(L) & = & \frac{\beta(1-\pi)}{(1-\pi\beta)^{2}-\beta^{2}(1-\pi)^{2}}\left[\beta\pi H+\beta(1-\pi)L\right]+\frac{1-\pi\beta}{(1-\pi\beta)^{2}-\beta^{2}(1-\pi)^{2}}[\beta(1-\pi)H+\beta\pi L]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, lets consider tree 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ Note,
+\begin_inset Formula $y_{t}^{g}$
+\end_inset
+
+ only takes on two possible values, 
+\begin_inset Formula $1-H\ \mbox{and}\ 1-L$
+\end_inset
+
+, and it evolves through time according to a Markov chain.
+ So, 
+\begin_inset Formula $p_{t}^{g}$
+\end_inset
+
+ only depends on the current state, and not the entire history.
+ As a result, we can express the price of tree 
+\begin_inset Formula $g$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+ as a function of the state at 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $p_{t}^{g}=p^{g}(\lambda)$
+\end_inset
+
+ where 
+\begin_inset Formula $\lambda\in\{1-H,1-L\}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+p^{g}(1-H) & = & \beta[\pi p^{g}(1-H)+(1-\pi)p^{g}(1-L)]+\beta[\pi(1-H)+(1-\pi)(1-L)]\\
+p^{g}(1-L) & = & \beta[(1-\pi)p^{g}(1-H)+\pi p^{g}(1-L)]+\beta[(1-\pi)(1-H)+\pi(1-L)]
+\end{eqnarray*}
+
+\end_inset
+
+These two equations can be written succinctly in matrix form as follows:
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\begin{array}{c}
+p^{g}(1-H)\\
+p^{g}(1-L)
+\end{array}\right] & = & \beta\left[\begin{array}{cc}
+\pi & (1-\pi)\\
+(1-\pi) & \pi
+\end{array}\right]\left[\begin{array}{c}
+p^{b}(1-H)\\
+p^{b}(1-L)
+\end{array}\right]+\beta\left[\begin{array}{cc}
+\pi & (1-\pi)\\
+(1-\pi) & \pi
+\end{array}\right]\left[\begin{array}{c}
+1-H\\
+1-L
+\end{array}\right]\\
+p^{g} & = & \beta Pp^{g}+\beta Px
+\end{eqnarray*}
+
+\end_inset
+
+The price of tree 
+\begin_inset Formula $g$
+\end_inset
+
+ in state 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ can be found from the column vector 
+\begin_inset Formula $p^{g}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+p^{g}(1-H) & = & \frac{1-\pi\beta}{(1-\pi\beta)^{2}-\beta^{2}(1-\pi)^{2}}\left[\beta\pi(1-H)+\beta(1-\pi)(1-L)\right]\\
+ &  & +\frac{\beta(1-\pi)}{(1-\pi\beta)^{2}-\beta^{2}(1-\pi)^{2}}[\beta(1-\pi)(1-H)+\beta\pi(1-L)]\\
+p^{g}(1-L) & = & \frac{\beta(1-\pi)}{(1-\pi\beta)^{2}-\beta^{2}(1-\pi)^{2}}\left[\beta\pi(1-H)+\beta(1-\pi)(1-L)\right]\\
+ &  & +\frac{1-\pi\beta}{(1-\pi\beta)^{2}-\beta^{2}(1-\pi)^{2}}[\beta(1-\pi)(1-H)+\beta\pi(1-L)]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(b) Recall that the risk premium is the difference in rates of return between
+ the risky assest and the riskless bond, i.e., 
+\begin_inset Formula $E_{t}\left[\frac{p_{t+1}^{i}+y_{t+1}^{i}}{p_{t}^{i}}-\frac{1}{q_{t}}\right]$
+\end_inset
+
+.
+ Determine the risk premium for each tree.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From part (a) above, the first order condition of the maximization problem
+ with respect to 
+\begin_inset Formula $s_{t+1}^{i}$
+\end_inset
+
+ is:
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{t}^{i} & = & \beta E_{t}(p_{t+1}^{i}+y_{t+1}^{i})\\
+E_{t}\left[\frac{p_{t+1}^{i}+y_{t+1}^{i}}{p_{t}^{i}}\right] & = & \frac{1}{\beta}
+\end{eqnarray*}
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{t}\left[\frac{p_{t+1}^{i}+y_{t+1}^{i}}{p_{t}^{i}}-\frac{1}{q_{t}}\right] & = & E_{t}\left[\frac{p_{t+1}^{i}+y_{t+1}^{i}}{p_{t}^{i}}\right]-E_{t}\left[\frac{1}{q_{t}}\right]\\
+ & = & E_{t}\left[\frac{p_{t+1}^{i}+y_{t+1}^{i}}{p_{t}^{i}}\right]-\frac{1}{q_{t}}\\
+ & = & \frac{1}{\beta}-\frac{1}{\beta}\\
+ & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

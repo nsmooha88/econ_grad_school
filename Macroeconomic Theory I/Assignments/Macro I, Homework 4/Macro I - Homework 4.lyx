@@ -1,0 +1,1455 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Macroeconomic Theory I: Homework 4
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Problem 1
+\end_layout
+
+\begin_layout Standard
+Suppose 
+\begin_inset Formula $\{x_{t};t\geq0\}$
+\end_inset
+
+ is a markov chain with transition matrix 
+\begin_inset Formula $P_{n\times n}$
+\end_inset
+
+.
+ A 
+\series bold
+stationary (or invariant)
+\series default
+ distribution for 
+\begin_inset Formula $P$
+\end_inset
+
+ is a probability vector such that 
+\begin_inset Formula $\pi^{\prime}=\pi^{\prime}P$
+\end_inset
+
+.
+ Find out the invariant distribution for
+\end_layout
+
+\begin_layout Standard
+(a) 
+\begin_inset Formula $P=\left[\begin{array}{cc}
+0.7 & 0.3\\
+0.4 & 0.6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(b) 
+\begin_inset Formula $P=\left[\begin{array}{cc}
+1 & 0\\
+0.9 & 0.1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(a) 
+\begin_inset Formula $P=\left[\begin{array}{cc}
+0.7 & 0.3\\
+0.4 & 0.6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi^{\prime}=\pi^{\prime}P\iff\pi^{\prime}(I_{2}-P)=0\iff\left(I_{2}-P^{\prime}\right)\pi=0$
+\end_inset
+
+ where 
+\begin_inset Formula $\pi=\left[\begin{array}{c}
+\pi_{1}\\
+\pi_{2}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(I_{2}-P^{\prime})=\left[\begin{array}{cc}
+0.3 & -0.4\\
+-0.3 & 0.4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\left(I_{2}-P^{\prime}\right)|\ 0\right]=\left[\begin{array}{cc}
+0.3 & -0.4\\
+-0.3 & 0.4
+\end{array}\left|\begin{array}{c}
+0\\
+0
+\end{array}\right.\right]\sim\left[\begin{array}{cc}
+1 & -\frac{4}{3}\\
+0 & 0
+\end{array}\left|\begin{array}{c}
+0\\
+0
+\end{array}\right.\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi=\left[\begin{array}{c}
+\pi_{1}\\
+\pi_{2}
+\end{array}\right]=\left[\begin{array}{c}
+\frac{4}{3}\pi_{2}\\
+\pi_{2}
+\end{array}\right]=\pi_{2}\left[\begin{array}{c}
+\frac{4}{3}\\
+1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\pi_{1}+\pi_{2}=1$
+\end_inset
+
+, we have 
+\begin_inset Formula $\frac{4}{3}\pi_{2}+\pi_{2}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\pi_{2}=\frac{3}{7}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\pi=\left[\begin{array}{c}
+\frac{4}{7}\\
+\frac{3}{7}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(b) 
+\begin_inset Formula $P=\left[\begin{array}{cc}
+1 & 0\\
+0.9 & 0.1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi^{\prime}=\pi^{\prime}P\iff\pi^{\prime}(I_{2}-P)=0\iff\left(I_{2}-P^{\prime}\right)\pi=0$
+\end_inset
+
+ where 
+\begin_inset Formula $\pi=\left[\begin{array}{c}
+\pi_{1}\\
+\pi_{2}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(I_{2}-P^{\prime})=\left[\begin{array}{cc}
+0 & -0.9\\
+0 & 0.9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\left(I_{2}-P^{\prime}\right)|\ 0\right]=\left[\begin{array}{cc}
+0 & -0.9\\
+0 & 0.9
+\end{array}\left|\begin{array}{c}
+0\\
+0
+\end{array}\right.\right]\sim\left[\begin{array}{cc}
+0 & 0\\
+0 & 1
+\end{array}\left|\begin{array}{c}
+0\\
+0
+\end{array}\right.\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi=\left[\begin{array}{c}
+\pi_{1}\\
+\pi_{2}
+\end{array}\right]=\left[\begin{array}{c}
+\pi_{1}\\
+0
+\end{array}\right]=\pi_{1}\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\pi_{1}+\pi_{2}=1$
+\end_inset
+
+, we have 
+\begin_inset Formula $\pi=\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Problem 2
+\end_layout
+
+\begin_layout Standard
+A shopper wants to purchase one unit of an indivisible consumption good
+ at the lowest possible cost.
+ There are multiple stores that she can visit.
+ First, there is a small neighborhood convenience store.
+ In addition, there is a mall with an infinite number of stores in it.
+ Each of these stores offers the good at a random price.
+ For each store, the price is drawn independently from the same uniform
+ distribution over the interval 
+\begin_inset Formula $[0,B]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The agent can follow one of two strategies.
+ Either she can go immediately to the mall start searching there (strategy
+ 
+\begin_inset Formula $A$
+\end_inset
+
+), or she can first check the convenience store and continue to the mall
+ only if she is not satisfied with the local price (strategy 
+\begin_inset Formula $B$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+The cost of traveling to the convenience store and examining the price there
+ is 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+.
+ Once at the convenience store, the agent holding the item with the price
+ tag 
+\begin_inset Formula $p$
+\end_inset
+
+ has two choices.
+ She can either purchase the item and stop shopping, or she can leave the
+ item and continue to the mall.
+\end_layout
+
+\begin_layout Standard
+The cost of traveling to the mall, either from home or from the convenience
+ store is 
+\begin_inset Formula $c_{2}>c_{1}$
+\end_inset
+
+.
+ (This includes the cost of checking the price in the first store in the
+ mall.) Again, the shopper can either accept this first price and stop shopping
+ or she can reject it and go to the next store in the mall.
+ The cost of going to the next store and echking the price there is 
+\begin_inset Formula $\epsilon<c_{1}$
+\end_inset
+
+.
+ In the mall, she can continue shopping as long as she wishes.
+ Visiting each new store costs an additional amount 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $\epsilon<\frac{B}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The agent aims to 
+\series bold
+minimize
+\series default
+ the total cost of shopping, which is the sum of travel costs an thep rice
+ that is ultimately paid.
+ You can assume that there is no recall of past prices.
+ Note also that there is no discounting.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a) Let 
+\begin_inset Formula $v_{2}(p)$
+\end_inset
+
+ denotes the value of expected future costs for the shopper if she is in
+ one of the stores in the mall holding an item priced 
+\begin_inset Formula $p$
+\end_inset
+
+ .
+ Describe the Bellman equation.
+ Show that her optimal strategy is to follow a reservation price strategy,
+ i.e., buy the item if 
+\begin_inset Formula $p\leq\bar{p}_{2}$
+\end_inset
+
+, otherwise continue shopping.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The shopper wishes to devise a strategy to minimize her total cost of shopping
+ in the mall, i.e.
+ 
+\begin_inset Formula $TC=p+N\epsilon$
+\end_inset
+
+, where 
+\begin_inset Formula $N=\left[\mbox{number of stores visited in the mall}-1\right]$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $v_{2}(p)$
+\end_inset
+
+ be the expected value of the cost to the shopper, who is at a store in
+ the mall and has price 
+\begin_inset Formula $p$
+\end_inset
+
+ in hand.
+ She is deciding whether to accept or to reject it, and she behaves optimally.
+ We assume no recall.
+ The value function 
+\begin_inset Formula $v_{2}(p)$
+\end_inset
+
+ satisfies the Bellman equation
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $v_{2}(p)=\min\left\{ p,\epsilon+\int_{0}^{B}p^{\prime}dF(p^{\prime})\right\} $
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(2.1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the minimization is over the two actions: 
+\begin_inset Formula $(1)$
+\end_inset
+
+ 
+\emph on
+accept
+\emph default
+ the price offer 
+\begin_inset Formula $p$
+\end_inset
+
+, or 
+\begin_inset Formula $(2)$
+\end_inset
+
+ 
+\emph on
+reject
+\emph default
+ the price, spend 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ to go to the next store, and draw a new offer 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+ from distribution 
+\begin_inset Formula $F$
+\end_inset
+
+.
+ Figure 
+\begin_inset Formula $(2.1)$
+\end_inset
+
+ below graphs the functional equation 
+\begin_inset Formula $(2.1)$
+\end_inset
+
+ and reveals that its solution will be of the form
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $v_{2}(p)=\begin{cases}
+p & \mbox{if}\ p\leq\bar{p}_{2}\\
+\bar{p}_{2}=\epsilon+\int_{0}^{B}p^{\prime}dF(p^{\prime}) & \mbox{if}\ p\geq\bar{p}_{2}
+\end{cases}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(2.2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(b) Show that the reservation price at the mall satisfies 
+\begin_inset Formula $\bar{p}_{2}=\sqrt{2B\epsilon}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using equation 
+\begin_inset Formula $(2.2)$
+\end_inset
+
+, we can convert the functional equation 
+\begin_inset Formula $(2.1)$
+\end_inset
+
+ into an ordinary equation in the reservation price at the mall, 
+\begin_inset Formula $\bar{p}_{2}$
+\end_inset
+
+.
+ Evaluating 
+\begin_inset Formula $v_{2}(\bar{p}_{2})$
+\end_inset
+
+ and using equation 
+\begin_inset Formula $(2.2)$
+\end_inset
+
+, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{p}_{2}=\epsilon+\int_{0}^{B}p^{\prime}dF(p^{\prime})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{p}_{2}=\epsilon+\int_{0}^{\bar{p}_{2}}p^{\prime}dF(p^{\prime})+\int_{\bar{p}_{2}}^{B}\bar{p}_{2}dF(p^{\prime})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{p}_{2}=\epsilon+\int_{0}^{\bar{p}_{2}}\frac{p^{\prime}}{B}dp^{\prime}+\int_{\bar{p}_{2}}^{B}\frac{\bar{p}_{2}}{B}dp^{\prime}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $dF(p^{\prime})=d\left[\int_{-\infty}^{p^{\prime}}\frac{1}{B}\right]=\frac{1}{B}dp^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{p}_{2}=\epsilon+\frac{\bar{p}_{2}^{2}}{2B}+\frac{\bar{p}_{2}}{B}(B-\bar{p}_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\bar{p}_{2}^{2}}{2B}=\epsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{p}_{2}=\sqrt{2B\epsilon}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(2.3)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can now rewrite the value function 
+\begin_inset Formula $v_{2}(p)$
+\end_inset
+
+ as 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $v_{2}(p)=\begin{cases}
+p & \mbox{if}\ p\leq\bar{p}_{2}\\
+\bar{p}_{2} & \mbox{if}\ p\geq\bar{p}_{2}
+\end{cases}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(2.4)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(c) Let 
+\begin_inset Formula $v_{1}(p)$
+\end_inset
+
+ denote the value of expected future costs for the shopper if she is in
+ the convenience store holding an item price 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Show that her optimal strategy is also a reservation price strategy, i.e.,
+ buy the item if 
+\begin_inset Formula $p\leq\bar{p}_{1}$
+\end_inset
+
+, otherwise continue shopping.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The shopper wishes to devise a strategy to minimize her total cost of shopping
+ in the convience store and/or the mall, i.e, 
+\begin_inset Formula $TC=p+Dc_{2}+N\epsilon$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $N$
+\end_inset
+
+ is defined as before and 
+\begin_inset Formula $D=\begin{cases}
+1 & \mbox{if she travels to the mall}\\
+0 & \mbox{otherwise}
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $v_{1}(p)$
+\end_inset
+
+ be the expected value of the cost to the shopper, who is at the convenience
+ store and has price 
+\begin_inset Formula $p$
+\end_inset
+
+ in hand.
+ She is deciding to accept or reject it, and she behaves optimally.
+ We assume no recall.
+ The value function 
+\begin_inset Formula $v_{1}(p)$
+\end_inset
+
+ satisfies the Bellman equation
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $v_{1}(p)=\min\left\{ p_{1},c_{2}+\int_{0}^{B}v_{2}(p^{\prime})dF(p^{\prime})\right\} $
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(2.5)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the minimization is over two actions: 
+\begin_inset Formula $(1)$
+\end_inset
+
+ 
+\emph on
+accept
+\emph default
+ the price offer 
+\begin_inset Formula $p$
+\end_inset
+
+, or 
+\begin_inset Formula $(2)$
+\end_inset
+
+ 
+\emph on
+reject
+\emph default
+ the price, spend 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+ to go to the mall store, and implement the optimal shopping strategy in
+ the mall to minimize the total cost of shopping there.
+ Figure 
+\begin_inset Formula $(2.5)$
+\end_inset
+
+ below graphs the functional equation 
+\begin_inset Formula $(2.5)$
+\end_inset
+
+ and reveals its solution will be of the form
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $v_{1}(p)=\begin{cases}
+p & \mbox{if}\ p\leq\bar{p}_{1}\\
+\bar{p}_{1}=c_{2}+\int_{0}^{B}v_{2}(p^{\prime})dF(p^{\prime}) & \mbox{if}\ p\geq\bar{p}_{1}
+\end{cases}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(2.6)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(d) Show that the reservation price at the convenience store satisfies 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\bar{p}_{1}=c_{2}-\epsilon+\sqrt{2B\epsilon}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using equation 
+\begin_inset Formula $(2.6)$
+\end_inset
+
+, we can convert the functional equation 
+\begin_inset Formula $(2.5)$
+\end_inset
+
+ into an ordinary equation in the reservation price at the convenience store,
+ 
+\begin_inset Formula $\bar{p}_{1}$
+\end_inset
+
+.
+ Evaluating 
+\begin_inset Formula $v_{1}(\bar{p}_{1})$
+\end_inset
+
+ and using equation 
+\begin_inset Formula $(2.6)$
+\end_inset
+
+, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{p}_{1}=c_{2}+\int_{0}^{B}v_{2}(p^{\prime})dF(p^{\prime})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{p}_{1}=c_{2}+\int_{0}^{\bar{p}_{2}}p^{\prime}dF(p^{\prime})+\int_{\bar{p}_{2}}^{B}\bar{p}_{2}dF(p^{\prime})$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+from 
+\begin_inset Formula $(2.4)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{p}_{1}=c_{2}+\int_{0}^{\bar{p}_{2}}\frac{p^{\prime}}{B}dp^{\prime}+\int_{\bar{p}_{2}}^{B}\frac{\bar{p}_{2}}{B}dp^{\prime}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $dF(p^{\prime})=d\left[\int_{-\infty}^{p^{\prime}}\frac{1}{B}\right]=\frac{1}{B}dp^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{p}_{1}=c_{2}+\frac{\bar{p}_{2}^{2}}{2B}+\frac{\bar{p}_{2}}{B}(B-\bar{p}_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{p}_{1}=c_{2}+\epsilon+\sqrt{2B\epsilon}-2\epsilon$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+from 
+\begin_inset Formula $(2.3)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{p}_{1}=c_{2}-\epsilon+\sqrt{2B\epsilon}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(2.7)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can now rewrite the value function 
+\begin_inset Formula $v_{1}(p)$
+\end_inset
+
+ as
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $v_{1}(p)=\begin{cases}
+p & \mbox{if}\ p\leq\bar{p}_{1}\\
+\bar{p}_{1} & \mbox{if}\ p\geq\bar{p}_{1}
+\end{cases}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\series bold
+
+\begin_inset Formula $(2.8)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(e) Let 
+\begin_inset Formula $v^{A}$
+\end_inset
+
+ denote the expected cost of the shopper if she follows strategy 
+\begin_inset Formula $A$
+\end_inset
+
+, and 
+\begin_inset Formula $v^{B}$
+\end_inset
+
+denote her expected cost if she follows strategy 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Find analytical expressions for 
+\begin_inset Formula $v^{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $v^{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v^{A}=c_{2}+\int_{0}^{B}v_{2}(p)dF(p)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+ 
+\begin_inset Formula $=c_{2}+\int_{0}^{\bar{p}_{2}}pdF(p)+\int_{\bar{p}_{2}}^{B}\bar{p}_{2}dF(p)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+from 
+\begin_inset Formula $(2.4)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+ 
+\begin_inset Formula $=c_{2}+\int_{0}^{\bar{p}_{2}}\frac{p}{B}dp+\int_{\bar{p}_{2}}^{B}\frac{\bar{p}_{2}}{B}dp$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $dF(p^{\prime})=d\left[\int_{-\infty}^{p^{\prime}}\frac{1}{B}\right]=\frac{1}{B}dp^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+ 
+\begin_inset Formula $=c_{2}+\frac{\bar{p}_{2}^{2}}{2B}+\frac{\bar{p}_{2}}{B}(B-\bar{p}_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+ 
+\begin_inset Formula $=c_{2}+\epsilon+\sqrt{2B\epsilon}-2\epsilon$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+from 
+\begin_inset Formula $(2.3)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+ 
+\begin_inset Formula $=c_{2}-\epsilon+\sqrt{2B\epsilon}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+ 
+\begin_inset Formula $=\bar{p}_{1}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+from 
+\begin_inset Formula $(2.7)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v^{B}=c_{1}+\int_{0}^{B}v_{1}(p)dF(p)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+ 
+\begin_inset Formula $=c_{1}+\int_{0}^{\bar{p}_{1}}pdF(p)+\int_{\bar{p}_{1}}^{B}\bar{p}_{1}dF(p)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+from 
+\begin_inset Formula $(2.8)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+ 
+\begin_inset Formula $=c_{1}+\int_{0}^{\bar{p}_{1}}\frac{p}{B}dp+\int_{\bar{p}_{1}}^{B}\frac{\bar{p}_{1}}{B}dp$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $dF(p^{\prime})=d\left[\int_{-\infty}^{p^{\prime}}\frac{1}{B}\right]=\frac{1}{B}dp^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+ 
+\begin_inset Formula $=c_{2}+\frac{\bar{p}_{1}^{2}}{2B}+\frac{\bar{p}_{1}}{B}(B-\bar{p}_{1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+ 
+\begin_inset Formula $=c_{1}+\bar{p}_{1}-\frac{\bar{p}_{1}^{2}}{2B}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(f) Under what conditions will the shopper prefer to check the convenience
+ store before heading to the mall?
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The shopper will prefer to check the convenience store before heading to
+ the mall if and only if
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v^{B}<v^{A}\iff$
+\end_inset
+
+
+\begin_inset Formula $c_{1}+\bar{p}_{1}-\frac{\bar{p}_{1}^{2}}{2B}<\bar{p}_{1}\iff c_{1}-\frac{\bar{p}_{1}^{2}}{2B}<0$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

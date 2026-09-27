@@ -1,0 +1,1389 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\paragraph_spacing single
+\noindent
+Macroeconomic Theory I:  Homework 2
+\end_layout
+
+\begin_layout Author
+\paragraph_spacing single
+\noindent
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+\paragraph_spacing single
+\noindent
+
+\bar under
+Problem 1
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+Suppose there is a consumer with utlity
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\align center
+\begin_inset Formula ${\displaystyle \sum_{t=0}^{\infty}\beta^{t}u(c_{t})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+The consumer has a sequence of income 
+\begin_inset Formula $\left\{ y_{t}\right\} _{t=0}^{\infty}$
+\end_inset
+
+, and a sequence of budget constraints
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\align center
+\begin_inset Formula $c_{t}+b_{t+1}\leq Rb_{t}+y_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+where 
+\begin_inset Formula $b_{t}$
+\end_inset
+
+ is the holding of bonds (positive holding is saving, while negative holding
+ is borrowing) and 
+\begin_inset Formula $\beta R=1$
+\end_inset
+
+.
+ Initially, the consumer has neither savings nor borrowing 
+\begin_inset Formula $\left(\mbox{i.e.,}\ b_{0}=0\right)$
+\end_inset
+
+.
+ The consumer is subject to a non-Ponzi game condition:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\align center
+\begin_inset Formula $\begin{array}{c}
+\mbox{lim}\\
+T\rightarrow\infty
+\end{array}R^{-T}b_{T+1}\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+Find the consumer's optimal consumption and savings path.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+
+\series bold
+\bar under
+Solution:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+
+\series bold
+\emph on
+Consolidate the budget constraints
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset Formula $\left.\begin{array}{c}
+c_{0}+b_{1}\le y_{0}\\
+c_{1}+b_{2}\leq Rb_{1}+y_{1}\\
+c_{2}+b_{3}\leq Rb_{2}+y_{2}\\
+\vdots\\
+c_{T-1}+b_{T}\le Rb_{T-1}+y_{T-1}\\
+c_{T}+b_{T+1}\le Rb_{T}+y_{T}
+\end{array}\right)\longrightarrow\begin{array}{c}
+c_{0}+b_{1}\le y_{0}\\
+R^{-1}c_{1}+R^{-1}b_{2}\leq b_{1}+R^{-1}y_{1}\\
+R^{-2}c_{2}+R^{-2}b_{3}\leq R^{-1}b_{2}+R^{-2}y_{2}\\
+\vdots\\
+R^{-T+1}c_{T-1}+R^{-T+1}b_{T}\le R^{-T+2}b_{T-1}+R^{-T+1}y_{T-1}\\
+R^{-T}c_{T}+R^{-T}b_{T+1}\le R^{-T+1}b_{T}+R^{-T}y_{T}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $\implies{\displaystyle \sum_{t=0}^{T}}R^{-t}c_{t}+R^{-T}b_{T+1}\le{\displaystyle \sum_{t=0}^{T}}R^{-t}y_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+Now, take the limit as 
+\begin_inset Formula $T\rightarrow\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\align center
+\begin_inset Formula ${\displaystyle \sum_{t=0}^{\infty}}R^{-t}c_{t}+\begin{array}{c}
+\mbox{lim}\\
+T\rightarrow\infty
+\end{array}R^{-T}b_{T+1}\le{\displaystyle \sum_{t=0}^{\infty}}R^{-t}y_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+The non-Ponzi game condition requires 
+\begin_inset Formula $\begin{array}{c}
+\mbox{lim}\\
+T\rightarrow\infty
+\end{array}R^{-T}b_{T+1}\geq0$
+\end_inset
+
+, hence the budget constraint of the consumer is
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\align center
+\begin_inset Formula ${\displaystyle \sum_{t=0}^{\infty}}R^{-t}c_{t}+\le{\displaystyle \sum_{t=0}^{\infty}}R^{-t}y_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+Now, the maximization problem becomes
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $\begin{array}{c}
+\mbox{max}\\
+\left\{ c_{t}\right\} _{t=0}^{\infty}
+\end{array}{\displaystyle \sum_{t=0}^{\infty}\beta^{t}u(c_{t})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $\mbox{s.t.}\ {\displaystyle \sum_{t=0}^{\infty}}R^{-t}c_{t}+\le{\displaystyle \sum_{t=0}^{\infty}}R^{-t}y_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+
+\series bold
+\emph on
+Solve the maximization problem
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+The Lagrangian is
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\align center
+\begin_inset Formula $L={\displaystyle \sum_{t=0}^{\infty}\beta^{t}u(c_{t})}+\lambda\left({\displaystyle \sum_{t=0}^{\infty}}R^{-t}y_{t}-{\displaystyle \sum_{t=0}^{\infty}}R^{-t}c_{t}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\frac{\partial L}{\partial c_{t}}=\beta^{t}u^{\prime}(c_{t})-\lambda R^{-t}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\beta^{t}u^{\prime}(c_{t})=\lambda R^{-t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\left(R\beta\right)^{t}u^{\prime}(c_{t})=\lambda$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $u^{\prime}(c_{t})=\lambda$
+\end_inset
+
+ since 
+\begin_inset Formula $\left(R\beta\right)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\implies u^{\prime}(c_{t})=u^{\prime}(c_{s})\ \forall\ t\neq s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\implies c_{t}=\bar{c}\ \forall\ t$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $c_{t}$
+\end_inset
+
+ is a constant
+\end_layout
+
+\begin_layout Standard
+\noindent
+Also, assuming 
+\begin_inset Formula $u(c_{t})$
+\end_inset
+
+ is a strictly increasing function, 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+.
+\begin_inset Formula $\begin{array}{c}
+\\
+\\
+\\
+\\
+\\
+\\
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Thus, the consolidated budget constraint is binding, i.e., 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula ${\displaystyle \sum_{t=0}^{\infty}}R^{-t}\bar{c}={\displaystyle \sum_{t=0}^{\infty}}R^{-t}y_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+
+\series bold
+\emph on
+Find 
+\begin_inset Formula $\mathbf{\bar{c}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle \sum_{t=0}^{\infty}}R^{-t}\bar{c}={\displaystyle \sum_{t=0}^{\infty}}R^{-t}y_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\begin_inset Formula ${\displaystyle \bar{c}\sum_{t=0}^{\infty}}R^{-t}={\displaystyle \sum_{t=0}^{\infty}}R^{-t}y_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle \bar{c}\sum_{t=0}^{\infty}}\beta^{t}={\displaystyle \sum_{t=0}^{\infty}}R^{-t}y_{t}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $\beta=\frac{1}{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\begin_inset Formula ${\displaystyle \bar{c}}\left(\frac{1}{1-\beta}\right)={\displaystyle \sum_{t=0}^{\infty}}R^{-t}y_{t}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $\beta\in(0,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle \bar{c}}=\left(1-\beta\right){\displaystyle \sum_{t=0}^{\infty}}R^{-t}y_{t}$
+\end_inset
+
+
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+
+\series bold
+\emph on
+Consolidate the budget constraints up to 
+\begin_inset Formula $\mathbf{t=s}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\begin{array}{c}
+c_{s}+b_{s+1}=Rb_{s}+y_{s}\\
+R^{-1}c_{s+1}+R^{-1}b_{s+2}=b_{s+1}+R^{-1}y_{s+1}\\
+R^{-2}c_{s+2}+R^{-2}b_{s+3}=R^{-1}b_{s+2}+R^{-2}y_{s+2}\\
+\vdots\\
+R^{-s+T+1}c_{T-1}+R^{-s+T+1}b_{T}=R^{-s+T+2}b_{T-1}+R^{-s+T+1}y_{T-1}\\
+R^{-s+T}c_{T}+R^{-s+T}b_{T+1}=R^{-s+T+1}b_{T}+R^{-s+T}y_{T}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $\implies{\displaystyle \sum_{s=t}^{T}}R^{-s+t}c_{s}+R^{-s+t}b_{T+1}={\displaystyle Rb_{s}+\sum_{s=t}^{T}}R^{-s+t}y_{s}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+Now, take the limit as 
+\begin_inset Formula $T\rightarrow\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\align center
+\begin_inset Formula ${\displaystyle \sum_{t=s}^{\infty}}R^{-s+t}c_{s}+\begin{array}{c}
+\mbox{lim}\\
+T\rightarrow\infty
+\end{array}R^{-s+T}b_{T+1}={\displaystyle Rb_{s}+\sum_{t=s}^{\infty}}R^{-s+t}y_{s}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+The non-Ponzi game condition requires 
+\begin_inset Formula $\begin{array}{c}
+\mbox{lim}\\
+T\rightarrow\infty
+\end{array}R^{-T}b_{T+1}\geq0$
+\end_inset
+
+, hence the budget constraint of the consumer up to 
+\begin_inset Formula $t=s$
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\align center
+\begin_inset Formula ${\displaystyle \sum_{s=t}^{\infty}}R^{-s+t}c_{s}=Rb_{s}+{\displaystyle \sum_{s=t}^{\infty}}R^{-s+t}y_{s}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Solve for 
+\begin_inset Formula $\mathbf{b_{s}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\begin_inset Formula ${\displaystyle \sum_{s=t}^{\infty}}R^{-s+t}c_{s}=Rb_{s}+{\displaystyle \sum_{s=t}^{\infty}}R^{-s+t}y_{s}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\begin_inset Formula $\bar{c}{\displaystyle \sum_{s=t}^{\infty}}R^{-s+t}=Rb_{s}+{\displaystyle \sum_{s=t}^{\infty}}R^{-s+t}y_{s}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $c_{s}=\bar{c}\ \forall\ s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\left(1-\beta\right){\displaystyle \sum_{t=0}^{\infty}}R^{-t}y_{t}\right]{\displaystyle \sum_{s=t}^{\infty}}R^{-s+t}=Rb_{s}+{\displaystyle \sum_{s=t}^{\infty}}R^{-s+t}y_{s}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula ${\displaystyle \bar{c}}=\left(1-\beta\right){\displaystyle \sum_{t=0}^{\infty}}R^{-t}y_{t}$
+\end_inset
+
+
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $b_{s}=\left[\left(1-\beta\right){\displaystyle \sum_{t=0}^{\infty}}R^{-t}y_{t}\right]{\displaystyle \sum_{s=t}^{\infty}}R^{-s+t-1}-{\displaystyle \sum_{s=t}^{\infty}}R^{-s+t-1}y_{s}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Problem 2
+\end_layout
+
+\begin_layout Standard
+Consider an economy with two price-taking firms.
+ Firm 1 has a production technology 
+\begin_inset Formula $f(k_{1},n_{1})=k_{1}^{\frac{1}{3}}n_{1}^{\frac{2}{3}}+k_{1}$
+\end_inset
+
+, while firm 2 has 
+\begin_inset Formula $g(k_{2},n_{2})=k_{2}^{\frac{2}{3}}n_{2}^{\frac{1}{3}}+n_{2}$
+\end_inset
+
+.
+ Suppose the total supply of capital is 
+\begin_inset Formula $(k_{1}+k_{2}=5)$
+\end_inset
+
+, and the total supply of labor is 
+\begin_inset Formula $(n_{1}+n_{2}=3)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+(a) Formulate the social planner's output maximization problem.
+ Derive the Kuhn-Tucker conditions for the problem.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+The social planner wishes to maximize total output
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\begin{array}{c}
+\mbox{max}\\
+\left\{ k_{1},k_{2},n_{1},n_{2}\right\} 
+\end{array}\left(k_{1}^{\frac{1}{3}}n_{1}^{\frac{2}{3}}+k_{1}\right)+\left(k_{2}^{\frac{2}{3}}n_{2}^{\frac{1}{3}}+n_{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $\begin{array}{cc}
+\mbox{s.t.} & 5-k_{1}-k_{2}=0\\
+ & 3-n_{1}-n_{2}=0
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Solve the maximization problem
+\end_layout
+
+\begin_layout Standard
+The Lagrangian is
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $L=\left(k_{1}^{\frac{1}{3}}n_{1}^{\frac{2}{3}}+k_{1}\right)+\left(k_{2}^{\frac{2}{3}}n_{2}^{\frac{1}{3}}+n_{2}\right)+\lambda\left(5-k_{1}-k_{2}\right)+\mu\left(3-n_{1}-n_{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left.\begin{array}{c}
+\frac{\partial L}{\partial k_{1}}=\frac{1}{3}k_{1}^{-\frac{2}{3}}n_{1}^{\frac{2}{3}}+1-\lambda=0\\
+\frac{\partial L}{\partial k_{2}}=\frac{2}{3}k_{2}^{-\frac{1}{3}}n_{2}^{\frac{1}{3}}-\lambda=0
+\end{array}\right)\implies\frac{1}{3}k_{1}^{-\frac{2}{3}}n_{1}^{\frac{2}{3}}+1=\frac{2}{3}k_{2}^{-\frac{1}{3}}n_{2}^{\frac{1}{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left.\begin{array}{c}
+\frac{\partial L}{\partial n_{1}}=\frac{2}{3}k_{1}^{\frac{1}{3}}n_{1}^{-\frac{1}{3}}-\mu=0\\
+\frac{\partial L}{\partial n_{2}}=\frac{1}{3}k_{2}^{\frac{2}{3}}n_{1}^{-\frac{2}{3}}+1-\mu=0
+\end{array}\right)\implies\frac{2}{3}k_{1}^{\frac{1}{3}}n_{1}^{-\frac{1}{3}}=\frac{1}{3}k_{2}^{\frac{2}{3}}n_{1}^{-\frac{2}{3}}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial L}{\partial\lambda}=5-k_{1}-k_{2}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\frac{\partial L}{\partial\mu}=3-n_{1}-n_{2}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+The Kuhn-Tucker conditions for the problem
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{1}{3}k_{1}^{-\frac{2}{3}}n_{1}^{\frac{2}{3}}+1=\frac{2}{3}k_{2}^{-\frac{1}{3}}n_{2}^{\frac{1}{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{2}{3}k_{1}^{\frac{1}{3}}n_{1}^{-\frac{1}{3}}=\frac{1}{3}k_{2}^{\frac{2}{3}}n_{1}^{-\frac{2}{3}}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $5-k_{1}-k_{2}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $3-n_{1}-n_{2}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+(b) Show that the KT conditions coincide with the equilibrium conditions
+ in Question 2, Assignment 1.
+ This means that the first and the second welfare theorems hold in this
+ environment as well.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Competitive Equilibrium
+\end_layout
+
+\begin_layout Standard
+A competitive equilibrium is a sequence of prices and allocations, such
+ that:
+\end_layout
+
+\begin_layout Enumerate
+All the decision makers maximize their utility and profit
+\end_layout
+
+\begin_layout Enumerate
+Quantity supplied = Quantity demanded in every market
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+1.
+ Firms maximize profit
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Firm 1:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Pi_{1}=f(k_{1},n_{1})=k_{1}^{\frac{1}{3}}n_{1}^{\frac{2}{3}}+k_{1}-R\cdot k_{1}-W\cdot n_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial\Pi_{1}}{\partial k_{1}}=\frac{1}{3}k_{1}^{-\frac{2}{3}}n_{1}^{\frac{2}{3}}+1-R=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow R=\frac{1}{3}k_{1}^{-\frac{2}{3}}n_{1}^{\frac{2}{3}}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial\Pi_{1}}{\partial n_{1}}=\frac{2}{3}k_{1}^{\frac{1}{3}}n_{1}^{-\frac{1}{3}}-W=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow W=\frac{2}{3}k_{1}^{\frac{1}{3}}n_{1}^{-\frac{1}{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Firm 2:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Pi_{2}=k_{2}^{\frac{2}{3}}n_{2}^{\frac{1}{3}}+n_{2}-R\cdot k_{2}-W\cdot n_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial\Pi_{1}}{\partial k_{2}}=\frac{2}{3}k_{2}^{-\frac{1}{3}}n_{2}^{\frac{1}{3}}-R=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow R=\frac{2}{3}k_{2}^{-\frac{1}{3}}n_{2}^{\frac{1}{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial\Pi_{1}}{\partial n_{2}}=\frac{1}{3}k_{2}^{\frac{2}{3}}n_{1}^{-\frac{2}{3}}+1-W=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow W=\frac{1}{3}k_{2}^{\frac{2}{3}}n_{2}^{-\frac{2}{3}}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Now we have,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{1}{3}k_{1}^{-\frac{2}{3}}n_{1}^{\frac{2}{3}}+1=R=\frac{2}{3}k_{2}^{-\frac{1}{3}}n_{2}^{\frac{1}{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{2}{3}k_{1}^{\frac{1}{3}}n_{1}^{-\frac{1}{3}}=W=\frac{1}{3}k_{2}^{\frac{2}{3}}n_{2}^{-\frac{2}{3}}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+2.
+ Quantity supplied = Quantity demanded in all markets
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $5-k_{1}-k_{2}=0\iff k_{1}+k_{2}=5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $3-n_{1}-n_{2}=0\iff n_{1}+n_{2}=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+The First Welfare Theorem
+\end_layout
+
+\begin_layout Standard
+Allocation in a competitive equilibrium solves the social planner's problem.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $k_{1}^{*}\approx4.56958$
+\end_inset
+
+, 
+\begin_inset Formula $k_{2}^{*}\approx0.43042$
+\end_inset
+
+, 
+\begin_inset Formula $n_{1}^{*}\approx0.9679$
+\end_inset
+
+, 
+\begin_inset Formula $n_{2}^{*}\approx2.0321$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $k_{1}^{*}+k_{2}^{*}=5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n_{1}^{*}+n_{2}^{*}=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{1}{3}(4.56958)(0.9679){}^{\frac{2}{3}}+1=1.1184=\frac{2}{3}(0.43042)^{-\frac{1}{3}}(2.0321){}^{\frac{1}{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{2}{3}(4.56958){}^{\frac{1}{3}}(0.9679)^{-\frac{1}{3}}=1.1184=\frac{1}{3}(0.43042){}^{\frac{2}{3}}(2.0321)^{-\frac{2}{3}}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+The Second Welfare Theorem
+\end_layout
+
+\begin_layout Standard
+If an allocation is pareto efficient, then we can find prices such that
+ the prices and the allocation constitute an equilibrium
+\end_layout
+
+\begin_layout Standard
+Set 
+\begin_inset Formula $R^{*}=W^{*}=1.1184$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Problem 3
+\end_layout
+
+\begin_layout Standard
+Consider an unemployed worker with a discount factor 
+\begin_inset Formula $\beta$
+\end_inset
+
+ who is searching for a job.
+ Employment provides a wage income 
+\begin_inset Formula $w>0$
+\end_inset
+
+, while unemployment provides 0 income.
+ Job finding probability is 
+\begin_inset Formula $p(a_{t}$
+\end_inset
+
+), where 
+\begin_inset Formula $p(\cdot):\left[0,\infty\right)\rightarrow\left[0,1\right]$
+\end_inset
+
+ is an increasing function, and 
+\begin_inset Formula $a_{t}$
+\end_inset
+
+ is the search effort of the worker.
+ For simplicity, assume that an employed worder never loses the job, and
+ his discounted utility is 
+\begin_inset Formula $\frac{u(w)}{1-\beta}$
+\end_inset
+
+.
+ An unemployed worker's period utility is 
+\begin_inset Formula $u(0)-a_{t}$
+\end_inset
+
+, i.e., utility from consuming 
+\begin_inset Formula $0$
+\end_inset
+
+ minus the disutility from searching.
+ Carefully rewrite the decision problem as a dynamic programming problem.
+ Please be precise about the state variable and the control variable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The state space is 
+\begin_inset Formula $X\equiv\left\{ 0,1\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The state variable 
+\begin_inset Formula $x_{t}=\left\{ \begin{array}{cc}
+1 & \mbox{if worker is employed at time t}\\
+0 & \mbox{if worker is unemployed at time t}
+\end{array}\right.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Control variable 
+\begin_inset Formula $a_{t}$
+\end_inset
+
+ is the search effort of the worker at time 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $a_{t}\in[0,\infty)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $p(a_{t})$
+\end_inset
+
+ is the probability of finding a job at time 
+\begin_inset Formula $t$
+\end_inset
+
+, where 
+\begin_inset Formula $p(\cdot):\left[0,\infty\right)\rightarrow\left[0,1\right]$
+\end_inset
+
+ is an increasing function
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The per-period return function is:
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Formula $r(x_{t},a_{t})=\left\{ \begin{array}{cc}
+u(w) & \mbox{if}\ x_{t}=1\\
+u(0)-a_{t} & \mbox{if}\ x_{t}=0
+\end{array}\right.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The functional equations are
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Formula $V(1)=r(1,a)+\beta V(1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Formula $V(0)=\begin{array}{c}
+\mbox{max}\\
+a\ge0
+\end{array}\left\{ r(0,a)+\beta\left[p(a)V(1)+(1-p(a))V(0)\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Or, from Sargent Chapter 4.3
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+V(S)=\left[\begin{array}{c}
+V_{1}(1)\\
+V_{2}(0)
+\end{array}\right]=\max\left[\begin{array}{c}
+u(w)\\
+u(0)-a
+\end{array}\right]+\beta P_{2\times2}\left[\begin{array}{c}
+V_{1}(1)\\
+V_{2}(0)
+\end{array}\right]
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+P_{2\times2}=\left[\begin{array}{cc}
+1 & 0\\
+p(a) & 1-p(a)
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

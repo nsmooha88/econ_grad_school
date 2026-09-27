@@ -1,0 +1,1082 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Macroeconomic Theory I: Homework 1
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Problem 1
+\end_layout
+
+\begin_layout Standard
+Derive the Euler equation
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $u^{\prime}[c_{t}]=\beta u^{\prime}[c_{t+1}]f^{\prime}(k_{t+1})$
+\end_inset
+
+; 
+\begin_inset Formula $t=0,\ldots,T-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+by applying the Kuhn-Tucker condition to the following problem,
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $\begin{array}{cc}
+\mbox{max} & {\displaystyle \sum_{t=0}^{T}\beta^{t}u(c_{t})}\\
+\mbox{s.t.} & c_{t}+k_{t+1}\leq f(k_{t}),\ t=0,\ldots,T\\
+ & -k_{T+1}\leq0
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+The Lagrangian:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L={\displaystyle \sum_{t=0}^{T}\beta^{t}u(c_{t})}+{\displaystyle \sum_{t=0}^{T}\lambda_{t}(f(k_{t})-c_{t}-k_{t+1})+\mu(k_{T+1})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+First order conditions:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial L}{\partial c_{t}}=\beta^{t}u^{\prime}(c_{t})-\lambda_{t}=0\Longleftrightarrow\lambda_{t}=\beta^{t}u^{\prime}(c_{t})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial L}{\partial k_{t+1}}=-\lambda_{t}+\lambda_{t+1}f^{\prime}(k_{t+1})=0\Longleftrightarrow\lambda_{t}=\lambda_{t+1}f(k_{t+1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial L}{\partial k_{T+1}}=\mu=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Complementary slackness condition:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\displaystyle \sum_{t=0}^{T}}\lambda_{t}(f(k_{t})-c_{t}-k_{t+1})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+At the optimal point, 
+\begin_inset Formula $\lambda_{t}>0\ \forall\ t=0,\ldots,T-1$
+\end_inset
+
+, so 
+\begin_inset Formula $f(k_{t})-c_{t}-k_{t+1}=0\ \forall\ t=0,\ldots,T-1$
+\end_inset
+
+ from the complementary slackness condition.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies\beta^{t}u^{\prime}(c_{t})=\beta^{t+1}u^{\prime}(c_{t+1})f^{\prime}(k_{t+1})$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+by the first two first order conditions above.
+\end_layout
+
+\begin_layout Plain Layout
+Also, since saving is no longer required after period 
+\begin_inset Formula $T$
+\end_inset
+
+, 
+\begin_inset Formula $k_{T+1}=0$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Euler Equation:
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align left
+\begin_inset Formula $u^{\prime}[c_{t}]=\beta u^{\prime}[c_{t+1}]f^{\prime}(k_{t+1})$
+\end_inset
+
+; 
+\begin_inset Formula $t=0,\ldots,T-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{T+1}=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Problem 2
+\end_layout
+
+\begin_layout Standard
+Consider an economy with two price-taking firms.
+ Firm 1 has a production technology 
+\begin_inset Formula $f(k_{1},n_{1})=k_{1}^{\frac{1}{3}}n_{1}^{\frac{2}{3}}+k_{1}$
+\end_inset
+
+, while firm 2 has 
+\begin_inset Formula $g(k_{2},n_{2})=k_{2}^{\frac{2}{3}}n_{2}^{\frac{1}{3}}+n_{2}$
+\end_inset
+
+.
+ Suppose the total supply of capital is 
+\begin_inset Formula $(k_{1}+k_{2}=5)$
+\end_inset
+
+, and the total supply of labor is 
+\begin_inset Formula $(n_{1}+n_{2}=3)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+(a) Formulate the equilibrium condition as a system of non-linear equations.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Profit function for Firm 1:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Pi_{1}=k_{1}^{\frac{1}{3}}n_{1}^{\frac{2}{3}}+k_{1}-R\cdot k_{1}-W\cdot n_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+First order conditions:
+\end_layout
+
+\begin_layout Standard
+1.
+ 
+\begin_inset Formula $\frac{\partial\Pi_{1}}{\partial n_{1}}=\frac{2}{3}k_{1}^{\frac{1}{3}}n_{1}^{-\frac{1}{3}}-W=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow\frac{2}{3}k_{1}^{\frac{1}{3}}n_{1}^{-\frac{1}{3}}=W$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow\frac{k_{1}}{n_{1}}=\frac{27W^{3}}{8}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow\frac{n_{1}}{k_{1}}=\frac{8}{27W^{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 
+\begin_inset Formula $\frac{\partial\Pi_{1}}{\partial k_{1}}=\frac{1}{3}k_{1}^{-\frac{2}{3}}n_{1}^{\frac{2}{3}}+1-R=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow\frac{1}{3}k_{1}^{-\frac{2}{3}}n_{1}^{\frac{2}{3}}+1=R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow k_{1}^{-\frac{2}{3}}n_{1}^{\frac{2}{3}}=3(R-1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow\frac{n_{1}}{k_{1}}=[3(R-1)]^{\frac{3}{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Combine the two equations:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{8}{27W^{3}}=[3(R-1)]^{\frac{3}{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow\frac{4}{9W^{2}}=R^{*}-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Profit function for Firm 2:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Pi_{2}=k_{2}^{\frac{2}{3}}n_{2}^{\frac{1}{3}}+n_{2}-R\cdot k_{2}-W\cdot n_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+First order conditions:
+\end_layout
+
+\begin_layout Standard
+1.
+ 
+\begin_inset Formula $\frac{\partial\Pi_{1}}{\partial k_{2}}=\frac{2}{3}k_{2}^{-\frac{1}{3}}n_{2}^{\frac{1}{3}}-R=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow\frac{2}{3}k_{2}^{-\frac{1}{3}}n_{2}^{\frac{1}{3}}=R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow\frac{n_{2}}{k_{2}}=\frac{27R^{3}}{8}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow\frac{k_{2}}{n_{2}}=\frac{8}{27R^{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 
+\begin_inset Formula $\frac{\partial\Pi_{1}}{\partial n_{2}}=\frac{1}{3}k_{2}^{\frac{2}{3}}n_{1}^{-\frac{2}{3}}+1-W=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow\frac{1}{3}k_{1}^{\frac{2}{3}}n_{1}^{-\frac{2}{3}}+1=W$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow k_{2}^{\frac{2}{3}}n_{2}^{-\frac{2}{3}}=3(W-1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow\frac{k_{2}}{n_{2}}=[3(W-1)]^{\frac{3}{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Combine the two equations:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{8}{27R^{3}}=[3(W-1)]^{\frac{3}{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longleftrightarrow\frac{4}{9R^{2}}=W^{*}-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+System of non-linear equations:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $R^{*}=\frac{4}{9W}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $W^{*}=\frac{4}{9R^{2}}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+(b) Use Newton's Method to find the equilibrium allocations and price levels.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, we can substitute the equation for 
+\begin_inset Formula $W^{*}$
+\end_inset
+
+ into the equation for 
+\begin_inset Formula $R^{*}$
+\end_inset
+
+ to obtain the following function:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(R^{*})=\frac{4}{27\left(\frac{4}{27R^{2}}+1\right)^{2}}+1-R^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The derivate of this function with respect to 
+\begin_inset Formula $R^{*}$
+\end_inset
+
+ is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f^{\prime}(R^{*})=-\frac{8}{27}\left(\frac{4}{27}R^{*^{2}}+1\right)^{-3}\left(-\frac{8}{27}R^{*^{-3}}\right)-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, to find a solution to 
+\begin_inset Formula $f(R^{*})=0$
+\end_inset
+
+, we use Newton's method.
+ We use the following MATLAB code, with 
+\begin_inset Formula $R_{initial}^{*}=1$
+\end_inset
+
+, 
+\begin_inset Formula $n=50$
+\end_inset
+
+, and 
+\begin_inset Formula $eps=0.0000001$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+function f=Newton(R,n,eps) 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+for i=1:n 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+f = -R+1+(4/(27*(1+(4/(27*R^2)))^2)); 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+derf = -2*(4/27)*(((4/27)*(R^-2)+1)^-3)*(-2*(4/27)*R^(-3))-1; 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Rnew = R-(f/derf); 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+if abs(Rnew - R) < eps 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+break; 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+else 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+R = Rnew; 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+end 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+end 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+Rnew 
+\end_layout
+
+\begin_layout Plain Layout
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After the program runs, the equilibrium price of capital is: 
+\begin_inset Formula $R^{*}=1.1184$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can take this value, and plug it into the equation for 
+\begin_inset Formula $W^{*}$
+\end_inset
+
+ to obtain the equilibrium price of labor: 
+\begin_inset Formula $W^{*}=1.1184$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Next, we obtain the equilibrium allocations for capital using the following
+ equations:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{n_{1}}{k_{1}}=\frac{8}{27W^{3}}\Longrightarrow n_{1}=k_{1}\cdot\frac{8}{27W^{*^{3}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{n_{2}}{k_{2}}=\frac{27R^{3}}{8}\Longrightarrow n_{2}=k_{2}\cdot\frac{27R^{*^{3}}}{8}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $k_{1}+k_{2}=5\Longrightarrow k_{1}=5-k_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, substitute this information into the total supply of labor:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n_{1}+n_{2}=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longrightarrow\left[(5-k_{2})\cdot\frac{8}{27W^{*^{3}}}\right]+\left[k_{2}\cdot\frac{27R^{*^{3}}}{8}\right]=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longrightarrow\frac{40}{27(1.1184)^{3}}-\frac{8}{27(1.1184)^{3}}k_{2}+\frac{27(1.1184)^{3}}{8}k_{2}=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longrightarrow\frac{729(1.1184)^{6}-64}{216(1.1184)^{3}}k_{2}=3-\frac{40}{27(1.1184)^{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longrightarrow k_{2}^{*}\approx0.43042$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally, we obtain the equilibrium allocations for capital using the following
+ equations:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{k_{1}}{n_{1}}=\frac{27W^{*^{3}}}{8}\Longrightarrow k_{1}=n_{1}\cdot\frac{27W^{*^{3}}}{8}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{k_{2}}{n_{2}}=\frac{8}{27R^{*^{3}}}\Longrightarrow k_{2}=n_{2}\cdot\frac{8}{27R^{*^{3}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n_{1}+n_{2}=3\Longrightarrow n_{1}=3-n_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, substitute this information into the total supply of capital:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $k_{1}+k_{2}=5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longrightarrow\left[\left(3-n_{2}\right)\cdot\frac{27W^{*^{3}}}{8}\right]+\left[n_{2}\cdot\frac{8}{27R^{*^{3}}}\right]=5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longrightarrow\frac{81(1.1184)^{3}}{8}-\frac{27(1.1184)^{3}}{8}n_{2}+\frac{8}{27(1.1184)^{3}}n_{2}=5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longrightarrow\frac{64-729(1.1184)^{6}}{216(1.1184)^{3}}n_{2}=5-\frac{81(1.1184)^{3}}{8}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longrightarrow n_{2}^{*}\approx2.0321$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, the equilibrium allocations and price levels are:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $k_{1}^{*}\approx4.56958$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $k_{2}^{*}\approx0.43042$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n_{1}^{*}\approx0.9679$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n_{2}^{*}\approx2.0321$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R^{*}=W^{*}=1.1184$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
