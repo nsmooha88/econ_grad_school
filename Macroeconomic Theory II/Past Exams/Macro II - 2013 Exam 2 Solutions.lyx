@@ -1,0 +1,742 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Macroeconomic Theory II: Exam 2 (Spring 2013)
+\end_layout
+
+\begin_layout Standard
+Consider the so-called yeoman farmer economy.
+ The economy consists of the monetary authority and a continuum of yeoman
+ farmers indexed by 
+\begin_inset Formula $j\in[0,1]$
+\end_inset
+
+.
+ Each yeoman farmer produces a differentiated good with a production technology
+\begin_inset Formula 
+\[
+Y_{t}(j)=A_{t}N_{t}(j)
+\]
+
+\end_inset
+
+A yeoman farmer earns income by selling his or her good in the market, recognizi
+ng he or she is a monopolisitic supplier of the good.
+ The earned income is used either to purcahse goods or to purchase bonds.
+ Mathematically, the problem of a yeoman farmer is indexed by 
+\begin_inset Formula $j$
+\end_inset
+
+ is written as choosing a sequence of consumption for differentiated goods
+ 
+\begin_inset Formula $\{C_{t}(i,j)\}_{i\in[0,1]}$
+\end_inset
+
+, the price level of the product he or she is producing 
+\begin_inset Formula $P_{t}(j)$
+\end_inset
+
+, and the bond holding 
+\begin_inset Formula $B_{t}(j)$
+\end_inset
+
+ to maximize the lifetime utility
+\begin_inset Formula 
+\[
+E_{0}\left\{ {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\left(\log\left[C_{t}(j)\right]-\frac{\left(N_{t}(j)\right)^{1+\varphi}}{1+\varphi}\right)\right\} 
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $C_{t}(j)$
+\end_inset
+
+ is the consumption index given by
+\begin_inset Formula 
+\[
+C_{t}(j)=\left[{\displaystyle \int_{0}^{1}}C_{t}(i,j)^{\frac{\epsilon-1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}
+\]
+
+\end_inset
+
+The yeoman farmer is facing the flow budget constraint,
+\begin_inset Formula 
+\[
+{\displaystyle \int_{0}^{1}}P_{t}(i)C_{t}(i,j)di+Q_{t}B_{t}(j)=B_{t-1}(j)+P_{t}(j)Y_{t}(j)
+\]
+
+\end_inset
+
+the demand constraint,
+\begin_inset Formula 
+\[
+Y_{t}(j)=\left(\frac{P_{t}(j)}{P_{t}}\right)^{-\epsilon}C_{t}
+\]
+
+\end_inset
+
+and no-Ponzi game condition.
+ We assume that everyone starts with zero initial bond holding, i.e., 
+\begin_inset Formula $B_{-1}(j)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $j\in[0,1]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P_{t}$
+\end_inset
+
+ is aggregate price index defined as
+\begin_inset Formula 
+\[
+P_{t}=\left[{\displaystyle \int_{0}^{1}}P_{t}(i)^{1-\epsilon}di\right]^{\frac{1}{1-\epsilon}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ is the aggregate demand defined as
+\begin_inset Formula 
+\[
+C_{t}={\displaystyle \int_{0}^{1}}C_{t}(i)di
+\]
+
+\end_inset
+
+Both 
+\begin_inset Formula $\left\{ P_{t}(i)\right\} _{i\in[0,1],i\neq j}$
+\end_inset
+
+ and 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ are taken as given by a yeoman farmer 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ The price of bond 
+\begin_inset Formula $Q_{t}$
+\end_inset
+
+ is chosen by the monetary authority.
+ Answer the following questions.
+\end_layout
+
+\begin_layout Problem
+First, we will solve the problem of maximization of 
+\begin_inset Formula $C_{t}(j)$
+\end_inset
+
+ for any given expenditure, i.e.,
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & C_{t}(j)=\left[{\displaystyle \int_{0}^{1}}C_{t}(i,j)^{\frac{\epsilon-1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+\mbox{s.t.} & {\displaystyle \int_{0}^{1}}P_{t}(i)C_{t}(i,j)di=Z_{t}
+\end{eqnarray*}
+
+\end_inset
+
+Derive the first order condition
+\begin_inset Formula 
+\[
+C_{t}(i,j)=\left(\frac{P_{t}(i)}{P_{t}(i^{\prime})}\right)^{-\epsilon}C_{t}(i^{\prime},j)\ \mbox{for all}\ i,i^{\prime}\in[0,1]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+First, we set up the Lagrangian
+\begin_inset Formula 
+\[
+L=\left[{\displaystyle \int_{0}^{1}}C_{t}(i,j)^{\frac{\epsilon-1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}+\lambda\left[Z_{t}-{\displaystyle \int_{0}^{1}}P_{t}(i)C_{t}(i,j)di\right]
+\]
+
+\end_inset
+
+Taking the derivative of the function with respect to consumption of good
+ 
+\begin_inset Formula $i$
+\end_inset
+
+ by farmer 
+\begin_inset Formula $j$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\[
+\frac{\partial L}{\partial C_{t}(i,j)}=0:\left[{\displaystyle \int_{0}^{1}}C_{t}(i,j)^{\frac{\epsilon-1}{\epsilon}}di\right]^{\frac{1}{\epsilon-1}}C_{t}(i,j)^{-\frac{1}{\epsilon}}-\lambda P_{t}(i)=0
+\]
+
+\end_inset
+
+Note that this condition holds for all 
+\begin_inset Formula $i\in[0,1]$
+\end_inset
+
+, so we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\frac{C_{t}(i,j)}{C_{t}(i^{\prime},j)}\right)^{-\frac{1}{\epsilon}} & = & \frac{P_{t}(i)}{P_{t}(i^{\prime})}\\
+C_{t}(i,j) & = & \left(\frac{P_{t}(i)}{P_{t}(i^{\prime})}\right)^{-\epsilon}C_{t}(i^{\prime},j)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+By substituting the condition you just derived into the expresison for consumpti
+on expenditure, derive
+\begin_inset Formula 
+\[
+C_{t}(i,j)=\left(\frac{P_{t}(i)}{P_{t}}\right)^{-\epsilon}\frac{Z_{t}}{P_{t}}\ \mbox{for all}\ i\in[0,1]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+The expression for consumption expenditure is
+\begin_inset Formula 
+\[
+{\displaystyle \int_{0}^{1}}P_{t}(i)C_{t}(i,j)di=Z_{t}
+\]
+
+\end_inset
+
+Substituting the condition derived in problem 1 into this expression yields
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \int_{0}^{1}}P_{t}(i)\left(\frac{P_{t}(i)}{P_{t}(i^{\prime})}\right)^{-\epsilon}C_{t}(i^{\prime},j)di & = & Z_{t}\\
+C_{t}(i^{\prime},j)P_{t}(i^{\prime})^{\epsilon}{\displaystyle \int_{0}^{1}}P_{t}(i)^{1-\epsilon} & = & Z_{t}\\
+C_{t}(i^{\prime},j)P_{t}(i^{\prime})^{\epsilon}P_{t}^{1-\epsilon} & = & Z_{t}\\
+C_{t}(i^{\prime},j) & = & \left(\frac{P_{t}(i^{\prime})}{P_{t}}\right)^{-\epsilon}\frac{Z_{t}}{P_{t}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+By substituting the condition you just derived into the definition of 
+\begin_inset Formula $C_{t}(j)$
+\end_inset
+
+, show that
+\begin_inset Formula 
+\[
+C_{t}(j)=\frac{Z_{t}}{P_{t}}
+\]
+
+\end_inset
+
+and therefore,
+\begin_inset Formula 
+\[
+{\displaystyle \int_{0}^{1}}P_{t}(i)C_{t}(i,j)di=P_{t}C_{t}(j)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+The definition of 
+\begin_inset Formula $C_{t}(j)$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+C_{t}(j)=\left[{\displaystyle \int_{0}^{1}}C_{t}(i,j)^{\frac{\epsilon-1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}
+\]
+
+\end_inset
+
+Substituting the condition derived in problem 2 into this expression yields
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{t}(j) & = & \left[{\displaystyle \int_{0}^{1}}\left\{ \left(\frac{P_{t}(i)}{P_{t}}\right)^{-\epsilon}\frac{Z_{t}}{P_{t}}\right\} ^{\frac{\epsilon-1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+ & = & \frac{Z_{t}}{P_{t}}\left[P_{t}^{\epsilon-1}{\displaystyle \int_{0}^{1}}P_{t}(i)^{1-\epsilon}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+ & = & \frac{Z_{t}}{P_{t}}P_{t}^{\epsilon}\left[{\displaystyle \int_{0}^{1}}P_{t}(i)^{1-\epsilon}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+ & = & Z_{t}P_{t}^{\epsilon-1}\left[P_{t}^{1-\epsilon}\right]^{\frac{\epsilon}{\epsilon-1}}\\
+C_{t}(j) & = & \frac{Z_{t}}{P_{t}}
+\end{eqnarray*}
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \int_{0}^{1}}P_{t}(i)C_{t}(i,j)di & = & Z_{t}\\
+{\displaystyle \int_{0}^{1}}P_{t}(i)C_{t}(i,j)di & = & P_{t}C_{t}(j)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, we can rewrite the problem as choosing a sequence of 
+\begin_inset Formula $C_{t}(j)$
+\end_inset
+
+, 
+\begin_inset Formula $P_{t}(j)$
+\end_inset
+
+, and 
+\begin_inset Formula $B_{t}(j)$
+\end_inset
+
+ to maximize
+\begin_inset Formula 
+\[
+E_{0}\left[{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\left(\log\left[C_{t}(j)\right]-\frac{\left(N_{t}(j)\right)^{1+\varphi}}{1+\varphi}\right)\right]
+\]
+
+\end_inset
+
+subject to
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{t}C_{t}(j)+Q_{t}B_{t}(j) & = & B_{t-1}(j)+P_{t}(j)Y_{t}(j)\\
+Y_{t}(j) & = & A_{t}N_{t}(j)\\
+Y_{t}(j) & = & \left(\frac{P_{t}(j)}{P_{t}}\right)^{-\epsilon}C_{t}
+\end{eqnarray*}
+
+\end_inset
+
+Answer the following questions.
+\end_layout
+
+\begin_layout Problem
+Derive the first order conditions
+\begin_inset Formula 
+\begin{eqnarray*}
+-\frac{Q_{t}}{P_{t}}\frac{1}{C_{t}(j)}+E_{t}\left[\beta\frac{1}{P_{t+1}}\frac{1}{C_{t+1}(j)}\right] & = & 0\\
+\left(-\epsilon\frac{Y_{t}(j)}{P_{t}(j)}\right)\frac{1}{A_{t}}\left[-(N_{t}(j))^{\varphi}\right]+\left[Y_{t}(j)+P_{t}(j)\left(-\epsilon\frac{Y_{t}(j)}{P_{t}(j)}\right)\right]\frac{1}{P_{t}}\frac{1}{C_{t}(j)} & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+First, we set up the Lagrangian
+\begin_inset Formula 
+\begin{eqnarray*}
+L & = & E_{0}\left\{ {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\left[\log\left[C_{t}(j)\right]-\frac{\left(\frac{1}{A_{t}}P_{t}(j)^{-\epsilon}P_{t}^{\epsilon}C_{t}\right)^{1+\varphi}}{1+\varphi}\right.\right.\\
+ &  & \left.\left.+\lambda_{t}\left(B_{t-1}(j)+P_{t}(j)^{1-\epsilon}P_{t}^{\epsilon}C_{t}-P_{t}C_{t}(j)-Q_{t}B_{t}(j)\right)\right]\right\} 
+\end{eqnarray*}
+
+\end_inset
+
+The first-order conditions are
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\frac{\partial L}{\partial C_{t}(j)}=0:$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{C_{t}(j)P_{t}}=\lambda_{t}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\frac{\partial L}{\partial P_{t}(j)}=0:$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray}
+\epsilon\frac{1}{A_{t}}P_{t}(j)^{-\epsilon-1}P_{t}^{\epsilon}C_{t}\left(\frac{1}{A_{t}}P_{t}(j)^{-\epsilon}P_{t}^{\epsilon}C_{t}\right)^{\varphi}+(1-\epsilon)\lambda_{t}P_{t}(j)^{-\epsilon}P_{t}^{\epsilon}C_{t} & = & 0\nonumber \\
+\epsilon\frac{Y_{t}(j)}{P_{t}(j)}\frac{1}{A_{t}}\left(N_{t}(j)\right)^{\varphi}+(1-\epsilon)\frac{1}{C_{t}(j)P_{t}}Y_{t}(j) & = & 0\nonumber \\
+\left(-\epsilon\frac{Y_{t}(j)}{P_{t}(j)}\right)\frac{1}{A_{t}}\left(-N_{t}(j)\right)^{\varphi}+\left(Y_{t}(j)+P_{t}(j)\left(-\epsilon\frac{Y_{t}(j)}{P_{t}(j)}\right)\right)\frac{1}{P_{t}C_{t}(j)} & = & 0
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset Formula $\frac{\partial L}{\partial B_{t}(j)}=0:$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+-\lambda_{t}Q_{t}+\beta E_{t}\left[\lambda_{t+1}\right] & = & 0\\
+-\frac{Q_{t}}{P_{t}}\frac{1}{C_{t}(j)}+E_{t}\left[\beta\frac{1}{P_{t+1}}\frac{1}{C_{t+1}(j)}\right] & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Give intuitive explanations for why the above two equations are necessary
+ conditions for optimality.
+\end_layout
+
+\begin_layout Proof
+Will prove.
+\end_layout
+
+\begin_layout Problem
+Rewriting equation (1), show that the following equation is the first-order
+ necessary condition for optimality:
+\begin_inset Formula 
+\[
+\frac{P_{t}(j)}{P_{t}}=\frac{\epsilon}{\epsilon-1}\frac{1}{A_{t}}C_{t}(j)(N_{t}(j))^{\varphi}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Rewriting equation (1)
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(-\epsilon\frac{Y_{t}(j)}{P_{t}(j)}\right)\frac{1}{A_{t}}\left(-N_{t}(j)\right)^{\varphi}+\left(Y_{t}(j)+P_{t}(j)\left(-\epsilon\frac{Y_{t}(j)}{P_{t}(j)}\right)\right)\frac{1}{P_{t}C_{t}(j)} & = & 0\\
+(1-\epsilon)\frac{Y_{t}(j)}{P_{t}C_{t}(j)} & = & \left(-\epsilon\frac{Y_{t}(j)}{P_{t}(j)}\right)\frac{1}{A_{t}}\left(N_{t}(j)\right)^{\varphi}\\
+\frac{P_{t}(j)}{P_{t}} & = & \frac{\epsilon}{\epsilon-1}\frac{1}{A_{t}}C_{t}(j)(N_{t}(j))^{\varphi}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+The equilibrium is defined in the standard way.
+ Show that, since we do not assume the price stickiness, the following condition
+s hold in equilibrium:
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{t}(j) & = & P_{t}\ \mbox{for all}\ j\in[0,1]\\
+C_{t}(j) & = & C_{t}\ \mbox{for all}\ j\in[0,1]\\
+N_{t}(j) & = & \nicefrac{C_{t}}{A_{t}}\ \mbox{for all}\ j\in[0,1]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+The aggregate price index is defined as
+\begin_inset Formula 
+\[
+P_{t}=\left[{\displaystyle \int_{0}^{1}}P_{t}(i)^{1-\epsilon}di\right]^{\frac{1}{1-\epsilon}}
+\]
+
+\end_inset
+
+In equilibrium, all the firms are symmetric, so 
+\begin_inset Formula $\forall\ i\in[0,1]:P_{t}(i)=\bar{P}_{t}$
+\end_inset
+
+.
+ Hence, the aggregate price index is now
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{t} & = & \left[{\displaystyle \int_{0}^{1}}\bar{P}_{t}^{1-\epsilon}di\right]^{\frac{1}{1-\epsilon}}\\
+P_{t} & = & \left[\bar{P}_{t}^{1-\epsilon}{\displaystyle \int_{0}^{1}}di\right]^{\frac{1}{1-\epsilon}}\\
+P_{t} & = & P_{t}(i)
+\end{eqnarray*}
+
+\end_inset
+
+So, the amount of individual good demanded by a yeoman farmer 
+\begin_inset Formula $j$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{t}(i,j) & = & \left(\frac{P_{t}(i)}{P_{t}}\right)^{-\epsilon}C_{t}(j)\\
+C_{t}(i,j) & = & C_{t}(j)\ \mbox{for all}\ i\in[0,1]
+\end{eqnarray*}
+
+\end_inset
+
+while the consumption index is
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{t}(j) & = & \left[{\displaystyle \int_{0}^{1}}C_{t}(i,j)^{\frac{\epsilon-1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+C_{t}(j) & = & \left[{\displaystyle \int_{0}^{1}}C_{t}(j)^{\frac{\epsilon-1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+C_{t}(j) & = & \left[C_{t}(j)^{\frac{\epsilon-1}{\epsilon}}{\displaystyle \int_{0}^{1}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+C_{t}(j) & = & C_{t}(j)
+\end{eqnarray*}
+
+\end_inset
+
+This means that aggregate demand becomes
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{t} & = & {\displaystyle \int_{0}^{1}}C_{t}(i)di\\
+C_{t} & = & C_{t}(j)\int_{0}^{1}di\\
+C_{t} & = & C_{t}(j)\ \mbox{for all}\ j\in[0,1]
+\end{eqnarray*}
+
+\end_inset
+
+With 
+\begin_inset Formula $P_{t}(j)=P_{t}$
+\end_inset
+
+, the demand constraint can be rewritten as
+\begin_inset Formula 
+\begin{eqnarray*}
+Y_{t}(j) & = & \left(\frac{P_{t}(j)}{P_{t}}\right)^{-\epsilon}C_{t}\\
+Y_{t}(j) & = & C_{t}\ \mbox{for all}\ j\in[0,1]
+\end{eqnarray*}
+
+\end_inset
+
+Finally, the amount of labor used for production by yeoman farmer 
+\begin_inset Formula $j$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{eqnarray*}
+Y_{t}(j) & = & A_{t}N_{t}(j)\\
+N_{t}(j) & = & \frac{C_{t}}{A_{t}}\ \mbox{for all}\ j\in[0,1]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Find 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ in the equilibrium.
+\end_layout
+
+\begin_layout Proof
+From the results in problem 7, we can find 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ in equilibrium.
+ 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ is the aggregate demand for labor defined as
+\begin_inset Formula 
+\begin{eqnarray*}
+N_{t} & = & {\displaystyle \int_{0}^{1}}N_{t}(j)dj\\
+ & = & \frac{C_{t}}{A_{t}}{\displaystyle \int_{0}^{1}}dj\\
+N_{t} & = & \frac{C_{t}}{A_{t}}
+\end{eqnarray*}
+
+\end_inset
+
+Recalling the first-order necessary condition for optimality from problem
+ 6
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{P_{t}(j)}{P_{t}} & = & \frac{\epsilon}{\epsilon-1}\frac{1}{A_{t}}C_{t}(j)(N_{t}(j))^{\varphi}\\
+1 & = & \frac{\epsilon}{\epsilon-1}\frac{1}{A_{t}}C_{t}\left(\frac{C_{t}}{A_{t}}\right)^{\varphi}\\
+\frac{1}{M}A^{1+\varphi} & = & C_{t}^{1+\varphi}\\
+C_{t} & = & \left(\frac{1}{M}\right)^{1+\varphi}A_{t}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $M=\frac{\epsilon}{\epsilon-1}$
+\end_inset
+
+.
+ Thus, the equilibrium 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{eqnarray*}
+N_{t} & = & C_{t}A_{t}^{-1}\\
+N_{t} & = & \left(\frac{1}{M}\right)^{1+\varphi}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+How is the equilibrium 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ related with the technology level 
+\begin_inset Formula $A_{t}$
+\end_inset
+
+? Give an economic explanation (not a math proof) for why they are related
+ in such a way.
+\end_layout
+
+\begin_layout Proof
+Will prove.
+\end_layout
+
+\begin_layout Problem
+Can the monetary authority affect the equilibrium 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ and/or 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Proof
+Will prove.
+\end_layout
+
+\begin_layout Problem
+Is the allocation in the economy efficient? If your answer is yes, give
+ a very clear explanation why you reach such a conclusion.
+ If your answer is no, argue what kind of policy (that doe not have to be
+ monetary policy, but could be fiscal policy or even a decree issued by
+ the government) can improve welfare.
+\end_layout
+
+\end_body
+\end_document
