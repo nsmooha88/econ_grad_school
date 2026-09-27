@@ -1,0 +1,455 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Fudenberg Chapter 8 - Equilibrium Refinements: Perfect Bayesian Equilibrium;
+ Sequential Equilibrium
+\end_layout
+
+\begin_layout Section*
+8.2
+\begin_inset space \quad{}
+\end_inset
+
+Perfect Bayesian Equilibrium in Multi-Stage Games of Incomplete Information
+\end_layout
+
+\begin_layout Subsection*
+8.2.1
+\begin_inset space \quad{}
+\end_inset
+
+The Basic Signaling Game
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Signaling games are the simplest kind of game in which the issues of updating
+ and perfection both arise.
+ In these games, there are two players.
+ Player 1 is the leader (also called the sender because he sends a signal),
+ and player 2 is the follower (or receiver).
+ Player 1 has private information about his type 
+\begin_inset Formula $\theta$
+\end_inset
+
+ in 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ and chooses action 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ in 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+.
+ (we delete the subscript on player 1's type, as this will not lead to confusion.
+) Player 2, whose type is cmoon knowledge for simplicity, observe 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ and chooses 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+ in 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+.
+ The space of mixe actions are 
+\begin_inset Formula $\mathscr{A}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathscr{A}_{2}$
+\end_inset
+
+ with elements 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+.
+ Player 
+\begin_inset Formula $i$
+\end_inset
+
+'s payoff is denoted 
+\begin_inset Formula $u_{i}(\alpha_{1},\alpha_{2},\theta)$
+\end_inset
+
+.
+ Before the ame beings, it is common knowledge that player 2 has prior beliefs
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ about player 1's type.
+ A strategy for player 1 prescribes a probability distribution 
+\begin_inset Formula $\sigma_{1}(\cdot|\theta)$
+\end_inset
+
+ over actions 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ for each type 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ A strategy for player 2 prescribes a probability distribution 
+\begin_inset Formula $\sigma_{2}(\cdot|a_{1})$
+\end_inset
+
+ over actions 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+ for each action 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+.
+ Type 
+\begin_inset Formula $\theta$
+\end_inset
+
+'s payoff to strategy 
+\begin_inset Formula $\sigma_{1}(\cdot|\theta)$
+\end_inset
+
+ when player 2 plays 
+\begin_inset Formula $\sigma_{2}(\cdot|a_{1})$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+u_{1}(\sigma_{1},\sigma_{2},\theta)={\displaystyle \sum_{a_{1}}}{\displaystyle \sum_{a_{2}}}\sigma_{1}(a_{1}|\theta)\sigma_{2}(a_{2}|a_{1})u_{1}(a_{1},a_{2},\theta)
+\]
+
+\end_inset
+
+Player 2's (ex ante) payoff to strategy 
+\begin_inset Formula $\sigma_{2}(\cdot|a_{1})$
+\end_inset
+
+ when player 1 plays 
+\begin_inset Formula $\sigma_{1}(\cdot|\theta)$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{\theta}}p(\theta)\left({\displaystyle \sum_{a_{1}}}{\displaystyle \sum_{a_{2}}}\sigma_{1}(a_{1}|\theta)\sigma_{2}(a_{2}|a_{1})u_{2}(a_{1},a_{2},\theta)\right)
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Player 2, who observes player 1's move before choosing her action, should
+ update her beliefs about 
+\begin_inset Formula $\theta$
+\end_inset
+
+ and base her choice of 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+ on the posterior distribution 
+\begin_inset Formula $\mu(\cdot|a_{1})$
+\end_inset
+
+ over 
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+ How is this posterior formed? In a Bayesian equilibrium, player 1's action
+ can depend on his type.
+ Let 
+\begin_inset Formula $\sigma_{1}^{*}(\cdot|\theta)$
+\end_inset
+
+ denot this strategy.
+ Knowing 
+\begin_inset Formula $\sigma_{1}^{*}$
+\end_inset
+
+ and observing 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+, player 2 can use Bayes' rule to update 
+\begin_inset Formula $p(\cdot)$
+\end_inset
+
+ into 
+\begin_inset Formula $\mu(\cdot|a_{1})$
+\end_inset
+
+.
+ The natural extension of the subgame-perfect equilibrium to the signaling
+ game is the perfect Bayesian equilibrium, which requires that player 2
+ maximize her payoff conditional on 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ for each 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+, where the conditional payoff to strategy 
+\begin_inset Formula $\sigma_{2}(\cdot|a_{1})$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{\theta}}\mu(\theta|a_{1})u_{2}(a_{1},\sigma_{2}(\cdot|a_{1}),\theta)={\displaystyle \sum_{\theta}}{\displaystyle \sum_{a_{2}}}\mu(\theta|a_{1})\sigma_{2}(a_{2}|a_{1})u_{2}(a_{1},a_{2},\theta)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+A 
+\emph on
+perfect Bayesian equilibrium 
+\emph default
+(PBE) of a signaling game is a strategy profile 
+\begin_inset Formula $\sigma^{*}$
+\end_inset
+
+ and posterior beliefs 
+\begin_inset Formula $\mu(\cdot|a_{1})$
+\end_inset
+
+ such that:
+\begin_inset Formula 
+\begin{gather*}
+(\mbox{P}_{1}):\ \forall\ \theta,\ \sigma_{1}^{*}(\cdot|\theta)\in\arg{\displaystyle \max_{\alpha_{1}}}u(\alpha_{1},\alpha_{2},\theta)\\
+(\mbox{P}_{2}):\ \forall\ a_{1},\ \sigma_{2}^{*}(\cdot|a_{1})\in\arg{\displaystyle \max_{a_{2}}}{\displaystyle \sum_{\theta}}\mu(\theta|a_{1})u_{2}(a_{1},\alpha_{2},\theta)
+\end{gather*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+(\mbox{B}):\ \mu(\theta|a_{1})=\frac{p(\theta)\sigma_{1}^{*}(a_{1}|\theta)}{{\displaystyle \sum_{\theta^{\prime}\in\Theta}}p(\theta^{\prime})\sigma_{1}^{*}(a_{1}|\theta^{\prime})}
+\]
+
+\end_inset
+
+if 
+\begin_inset Formula ${\displaystyle \sum_{\theta^{\prime}\in\Theta}}p(\theta^{\prime})\sigma_{1}^{*}(a_{1}|\theta^{\prime})>0$
+\end_inset
+
+, and
+\begin_inset Formula $\mu(\cdot|a_{1})$
+\end_inset
+
+ is any probability distribution on 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ if 
+\begin_inset Formula ${\displaystyle \sum_{\theta^{\prime}\in\Theta}}p(\theta^{\prime})\sigma_{1}^{*}(a_{1}|\theta^{\prime})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $\mbox{P}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{P}_{2}$
+\end_inset
+
+ are the perfeciton conditions.
+ 
+\begin_inset Formula $\mbox{P}_{1}$
+\end_inset
+
+ says that player 1 takes into account the effect of 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ on player 2's action; 
+\begin_inset Formula $\mbox{P}_{2}$
+\end_inset
+
+ states that player 2 reacts optimally to player 1's action given her posterior
+ beliefs about 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mbox{B}$
+\end_inset
+
+ corresponds to the applications of Bayes' rule.
+ Note that if 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ is not part of player 1's optimal strategy for some type, observing 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ is a probability-0 event, and Bayes; rule does not pin down posterior beliefs.
+ 
+\emph on
+Any
+\emph default
+ posterior beliefs 
+\begin_inset Formula $\mu(\cdot|a_{1})$
+\end_inset
+
+ are then admissible and so any aciton 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+ can be played that is a best response for some beliefs.
+ (This means that the only actions excluded are those which are dominated
+ given that 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ is played.) Indeed, the purpose of the refinements of the perfect Baynesian
+ equilibrium concept is to put restrictions on these posterior beliefs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Thus, a PBE is simply a set of strategies and beliefs such that, at any
+ stage of the game, strategies are optimal given the beliefs such that,
+ at any stage of the game, strategies are optimal given the beliefs, and
+ the beliefs are obtianed form equilibrium strategies and observed actions
+ using Bayes' rule.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Note the link between strategies and beliefs: The beliefs are consistent
+ with the strategies, which are optimal given the beliefs.
+ Because of this circularity, PBE cannot be determined by backward induction
+ when there is incomplete information, even if players move one at a time.
+\end_layout
+
+\end_body
+\end_document

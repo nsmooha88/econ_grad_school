@@ -1,0 +1,1469 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Game Theory: Homework 2
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Problem
+Prove that if a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix has a 
+\emph on
+strict
+\emph default
+ Nash equilibrium that is also unique, then the game can be solved via iterated
+ strict dominance.
+\end_layout
+
+\begin_layout Proof
+Assume that a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix has a 
+\emph on
+strict 
+\emph default
+Nash equilibrium that is also unique.
+ Then, this Nash equilibrium must be a pure strategy profile.
+ Let 
+\begin_inset Formula $s^{*}=(s_{1}^{*},s_{2}^{*})$
+\end_inset
+
+ be the unique pure strategy Nash equilibrium.
+ So, 
+\begin_inset Formula $\forall\ i\in N,\ \forall\ s_{i}\neq s_{i}^{*}:u_{i}(s_{i}^{*},s_{j}^{*})>u_{i}(s_{i},s_{j}^{*})$
+\end_inset
+
+.
+ Since each player has two pure strategies, then 
+\begin_inset Formula $S_{1}^{0}=\{s_{1}^{*},s_{1}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{2}^{0}=\{s_{2}^{*},s_{2}\}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $(s_{1},s_{2})$
+\end_inset
+
+ is not a Nash equilibrium, then 
+\begin_inset Formula $\exists\ i\in N:u_{i}(s_{i}^{*},s_{j})>u_{i}(s_{i},s_{j})$
+\end_inset
+
+.
+ Without loss of generality, suppose that 
+\begin_inset Formula $u_{1}(s_{1}^{*},s_{2})>u_{1}(s_{1},s_{2})$
+\end_inset
+
+.
+ We now have that 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $u_{1}(s_{1}^{*},s_{2}^{*})>u_{1}(s_{1},s_{2}^{*})$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{1}(s_{1}^{*},s_{2})>u_{1}(s_{1},s_{2})$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+ is dominated by 
+\begin_inset Formula $s_{1}^{*}$
+\end_inset
+
+, so it can be eliminated by iterated strict dominance.
+ In the next iteration, we have 
+\begin_inset Formula $S_{1}^{1}=\left\{ s_{1}^{*}\right\} $
+\end_inset
+
+ and 
+\begin_inset Formula $S_{2}^{1}=\left\{ s_{2}^{*},s_{2}\right\} $
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u_{2}(s_{2}^{*},s_{1}^{*})>u_{2}(s_{2},s_{1}^{*})$
+\end_inset
+
+, then 
+\begin_inset Formula $s_{2}$
+\end_inset
+
+ is dominated by 
+\begin_inset Formula $s_{2}^{*}$
+\end_inset
+
+, so it can be eliminated by iterated strict dominance.
+ Therefore, 
+\begin_inset Formula $(s_{1}^{*},s_{2}^{*})$
+\end_inset
+
+ is the only strategy profile that survives iterated elimination of dominated
+ strategies.
+\end_layout
+
+\begin_layout Problem
+Consider the game depicted in table 1 where 
+\begin_inset Formula $a_{i}>0$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{i}\in\mathbb{R}$
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="8">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}+b_{1},-a_{2}+b_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-a_{1}+b_{1},a_{2}+b_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1},-a_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-a_{1},a_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\equiv$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-a_{1}+b_{1},a_{2}+b_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}+b_{1},-a_{2}+b_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-a_{1},a_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1},-a_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Verify that no pure-strategy NE of this game exists
+\end_layout
+
+\begin_layout Enumerate
+Compute the mixed-strategy NE, 
+\begin_inset Formula $\left(\sigma_{1}^{*}(H),\sigma_{2}^{*}(H)\right)$
+\end_inset
+
+ of this game.
+\end_layout
+
+\begin_layout Enumerate
+Explain briefly (in economic terms) why the NE does not depend on the parameters
+ 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+, or 
+\begin_inset Formula $b_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+For player 1, 
+\begin_inset Formula $u_{1}(H,H)>u_{1}(T,H)$
+\end_inset
+
+ and 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $u_{1}(T,T)>u_{1}(H,T)$
+\end_inset
+
+.
+ For player 2, 
+\begin_inset Formula $u_{2}(T,H)>u_{2}(H,H)$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{2}(H,T)>u_{2}(T,T)$
+\end_inset
+
+.
+ So, in this game, 
+\begin_inset Formula $\forall\ s\in S,\ \exists\ i\in N,\ \exists\ s_{i}^{\prime}\in S_{i}:u(s_{i},s_{-i})<u(s_{i}^{\prime},s_{-i})$
+\end_inset
+
+.
+ Equivalently, 
+\begin_inset Formula $\nexists\ s\in S,\ \forall\ i\in N,\ \forall\ s_{i}^{\prime}:u_{i}(s_{i},s_{-i})\geq u_{i}(s_{i}^{\prime},s_{-i})$
+\end_inset
+
+.
+ Thus, no pure-strategy Nash Equilibrium of this game exists.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+Even though there is no pure-strategy Nash Equilibrium of this game, we
+ know that every finite strategic-form game has a mixed strategy Nash Equilibriu
+m.
+ So, we wish to find the mixed strategy Nash Equilibrium.
+ Let 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+ be a mixed strategy employed by player 1 where 
+\begin_inset Formula $\sigma_{1H}=\sigma_{1}(H)$
+\end_inset
+
+ and 
+\begin_inset Formula $(1-\sigma_{1H})=\sigma_{1}(T)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\sigma_{2}$
+\end_inset
+
+ be a mixed strategy employed by player 2 where 
+\begin_inset Formula $\sigma_{2H}=\sigma_{2}(H)$
+\end_inset
+
+ and 
+\begin_inset Formula $(1-\sigma_{2H})=\sigma_{2}(T)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Eu_{1}(H|\sigma_{2H})=a_{1}\sigma_{2H}-a_{1}(1-\sigma_{2H})=2a_{1}\sigma_{2H}-a_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Eu_{1}(T|\sigma_{2H})=-a_{1}\sigma_{2H}+a_{1}(1-\sigma_{2H})=-2a_{1}\sigma_{2H}+a_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then, 
+\begin_inset Formula 
+\begin{eqnarray*}
+Eu_{1}(H|\sigma_{2H}) & = & Eu_{1}(T|\sigma_{2H})\\
+2a_{1}\sigma_{2H}-a_{1} & = & -2a_{1}\sigma_{2H}+a_{1}\\
+4a_{1}\sigma_{2H} & = & 2a_{1}\\
+\sigma_{2H} & = & \frac{1}{2}
+\end{eqnarray*}
+
+\end_inset
+
+Analogously, the same result can be obtained for player 2.
+ Thus, the mixed strategy Nash Equilibrium is given by 
+\begin_inset Formula $(\sigma_{1}^{*},\sigma_{2}^{*})$
+\end_inset
+
+ where 
+\begin_inset Formula $\sigma_{1H}^{*}=\frac{1}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{2H}^{*}=\frac{1}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+Since utility is ordinal, the Nash Equilibrium does not depend on the exact
+ values of 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+, and 
+\begin_inset Formula $b_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Two students 
+\begin_inset Formula $(i=1,2)$
+\end_inset
+
+, each having an endowment of time 
+\begin_inset Formula $T_{i}=1$
+\end_inset
+
+, are working on a project together.
+ Each student 
+\begin_inset Formula $i$
+\end_inset
+
+ has to decide how to allocate his time endowment between working 
+\begin_inset Formula $(t_{i})$
+\end_inset
+
+ and leisure 
+\begin_inset Formula $(l_{i})$
+\end_inset
+
+.
+ The grade each receives on the project depends on how much time they spend
+ collectively working on it.
+ Let 
+\begin_inset Formula $G=50(t_{1}+t_{2})$
+\end_inset
+
+ denote the grade earned on the project.
+ The utility function of student 
+\begin_inset Formula $i$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+u_{i}(G,l_{i})=a_{i}\sqrt{2G}+l_{i}
+\]
+
+\end_inset
+
+The students simultaneously choose how much time they will allocate to the
+ project.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Set up the optimization problem for player 
+\begin_inset Formula $i$
+\end_inset
+
+ and derive the best response function 
+\begin_inset Formula $t_{i}^{br}(t_{j})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose that 
+\begin_inset Formula $\frac{1}{10}>a_{1}>a_{2}$
+\end_inset
+
+.
+ Carefully draw the best response functions with 
+\begin_inset Formula $t_{1}$
+\end_inset
+
+ on the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis.
+ Characterize all Nash equilibria (if any) in pure strategies.
+\end_layout
+
+\begin_layout Enumerate
+Suppose that 
+\begin_inset Formula $a_{1}=a_{2}=a<\frac{1}{10}$
+\end_inset
+
+.
+ Characterize all Nash equilibria (if any) in pure strategies.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+To find the best response function for player 
+\begin_inset Formula $i$
+\end_inset
+
+, we maximize his utility function taking the strategy of player 
+\begin_inset Formula $j$
+\end_inset
+
+ as given.
+ So, the optimization problem for player 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\max_{t_{i}}\ u_{i}(G,l_{i})=a_{i}\sqrt{100\left(t_{i}+t_{j}\right)}+(1-t_{i})
+\]
+
+\end_inset
+
+We obtain the first-order condition and solve for 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{gather*}
+\frac{\partial u_{i}(G,l_{i})}{\partial l_{i}}=0\iff\frac{1}{2}a_{i}\left[100\left(t_{i}+t_{2}\right)\right]^{-\frac{1}{2}}(100)-1=0\\
+5a_{i}\left(t_{i}+t_{j}\right)^{-\frac{1}{2}}=1\\
+t_{i}=25a_{i}^{2}-t_{j}
+\end{gather*}
+
+\end_inset
+
+Thus, the best response function of person 
+\begin_inset Formula $i$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+t_{i}^{br}(t_{j})=\begin{cases}
+25a_{i}^{2}-t_{j} & \mbox{if}\ t_{j}\leq25a_{i}^{2}\\
+0 & \mbox{if}\ t_{j}>25a_{i}^{2}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Graph.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The pure strategy Nash Equilibrium is 
+\begin_inset Formula $(t_{1},t_{2})=(25a_{1}^{2},0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Graph1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Under the imposed condition, 
+\begin_inset Formula $t_{1}^{*}=t_{1}^{br}(t_{2}^{*})=25a^{2}-t_{2}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $t_{2}^{*}=t_{2}^{br}(t_{1}^{*})=25a^{2}-t_{1}^{*}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $t_{1}^{*}+t_{2}^{*}=25a^{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Problem
+Consider a first-price sealed-bid auction of an object with two bidders.
+ Each bidder 
+\begin_inset Formula $i$
+\end_inset
+
+'s valuation of the object is 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, which is known to both bidders.
+ The auction rules are that each player submits a bid in a sealed envelope.
+ The envelopes are then opened, and the bidder who has submitted the highest
+ bid gets the object and pays the auctioneer the amount of his bid.
+ If the bidders submit the same bid, each gets the object with probablitity
+ 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+.
+ Bids must be in dollar muliples (assume that valuations are also).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Are any strategies strictly dominated?
+\end_layout
+
+\begin_layout Enumerate
+Are any strategies weakly dominated?
+\end_layout
+
+\begin_layout Enumerate
+Is there a Nash Equilibrium? What is it? Is it unique?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Let 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ be the bid person 
+\begin_inset Formula $i$
+\end_inset
+
+ submits.
+ The utility function for person 
+\begin_inset Formula $i$
+\end_inset
+
+ is:
+\begin_inset Formula 
+\[
+u_{i}(b_{i},b_{j})=\begin{cases}
+v_{i}-b_{i} & \mbox{if \ensuremath{b_{i}>b_{j}}}\\
+\frac{1}{2}(v_{i}-b_{i}) & \mbox{if \ensuremath{b_{i}=b_{j}}}\\
+0 & \mbox{if \ensuremath{b_{i}<b_{j}}}
+\end{cases}
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $b_{i}\in S_{i}\equiv\mathbb{N}$
+\end_inset
+
+.
+ We claim that 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ is not strictly dominated.
+ Suppose for contradiction 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ is strictly dominated.
+ Then, 
+\begin_inset Formula $\exists\ b_{i}^{\prime}\neq b_{i},\ \forall\ b_{j}\in S_{j}:u_{i}(b_{i}^{\prime},b_{j})>u_{i}(b_{i},b_{j})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $b_{i}>b_{i}^{\prime}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $u_{i}(b_{i},b_{i}+1)=0=u_{i}(b_{i}^{\prime},b_{i}+1)$
+\end_inset
+
+ where 
+\begin_inset Formula $b_{j}=b_{i}+1$
+\end_inset
+
+.
+ This is a contradiction.
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $b_{i}^{\prime}>b_{i}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $u_{i}(b_{i},b_{i}^{\prime}+1)=0=u_{i}(b_{i}^{\prime},b_{i}^{\prime}+1)$
+\end_inset
+
+ where 
+\begin_inset Formula $b_{j}=b_{i}^{\prime}+1$
+\end_inset
+
+.
+ This is a contradiction.
+\end_layout
+
+\begin_layout Standard
+Therefore, neither of the players have any strictly dominated strategies.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+For player 
+\begin_inset Formula $i$
+\end_inset
+
+, a strategy 
+\begin_inset Formula $b_{i}\in\mathbb{N}$
+\end_inset
+
+ is weakly dominated if 
+\begin_inset Formula $\exists\; b_{i}^{\prime}\neq b_{i}\in\mathbb{N},\;\forall\; b_{j}\in\mathbb{N}:u_{i}(b_{i}^{\prime},b_{j})\geq u_{i}(b_{i},b_{j})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $b_{i}\geq v_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}>b_{i}^{\prime}$
+\end_inset
+
+.
+ We claim that 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ is weakly dominated by 
+\begin_inset Formula $b_{i}^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Case
+
+\series bold
+\begin_inset Formula $b_{i}>b_{i}^{\prime}>b_{j}$
+\end_inset
+
+
+\series default
+.
+ Then, 
+\begin_inset Formula $u_{i}(b_{i}^{\prime},b_{j})=v_{i}-b_{i}^{\prime}>0$
+\end_inset
+
+, while 
+\begin_inset Formula $u_{i}(b_{i},b_{j})=v_{i}-b_{i}\leq0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $b_{i}>b_{i}^{\prime}=b_{j}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $u_{i}(b_{i}^{\prime},b_{j})=\frac{1}{2}(v_{i}-b_{i}^{\prime})>0$
+\end_inset
+
+, while 
+\begin_inset Formula $u_{i}(b_{i},b_{j})=v_{i}-b_{i}\leq0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $b_{i}>b_{j}>b_{i}^{\prime}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $u_{i}(b_{i}^{\prime},b_{j})=0$
+\end_inset
+
+, while 
+\begin_inset Formula $u(b_{i},b_{j})=v_{i}-b_{i}\leq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $b_{j}\geq b_{i}>b_{i}^{\prime}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $u_{i}(b_{i}^{\prime},b_{j})=0$
+\end_inset
+
+, while 
+\begin_inset Formula $u_{i}(b_{i},b_{j})=v_{i}-b_{i}\leq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $b_{i}\geq v_{i}$
+\end_inset
+
+ is weakly dominated by
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula $v_{i}>b_{i}^{\prime}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+Finally, under certain conditions, zero is also weakly dominated
+\begin_inset Formula 
+\[
+u_{i}(0,b_{j})=\begin{cases}
+\frac{v_{i}}{2} & \mbox{if}\ b_{j}=0\\
+0 & \mbox{if}\ b_{j}>0
+\end{cases}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+u_{i}(b_{i},b_{j})=\begin{cases}
+v_{i}-b_{i} & \mbox{if}\ b_{j}=0\\
+v_{i}-b_{i} & \mbox{if}\ 0<b_{j}<b_{i}\\
+\frac{1}{2}(v_{i}-b_{i}) & \mbox{if}\ b_{j}=b_{i}\\
+0 & \mbox{if}\ b_{j}>b_{i}
+\end{cases}
+\]
+
+\end_inset
+
+So, if 
+\begin_inset Formula $\frac{v_{i}}{2}\geq b_{i}$
+\end_inset
+
+, then zero is weakly dominated by 
+\begin_inset Formula $b_{i}\in(0,v_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+A Nash Equilibrium is a set of mutual best responses.
+ The best response function for person 
+\begin_inset Formula $i$
+\end_inset
+
+ is:
+\begin_inset Formula 
+\[
+b_{i}^{*}=r_{i}(b_{j})=\begin{cases}
+[0,b_{j}) & \mbox{if \ensuremath{b_{j}>v_{i}}}\\
+{}[0,b_{j}] & \mbox{if \ensuremath{b_{j}=v_{i}}}\\
+v_{i}-1 & \mbox{if \ensuremath{b_{j}=v_{i}-1}}\\
+\left\{ v_{1}-1,v_{1}-2\right\}  & \mbox{if \ensuremath{b_{j}=v_{i}-2}}\\
+b_{j}+1 & \mbox{if \ensuremath{b_{j}<v_{i}-2}}
+\end{cases}
+\]
+
+\end_inset
+
+Without loss of generality, let 
+\begin_inset Formula $v_{1}\geq v_{2}$
+\end_inset
+
+.
+ We will now consider the different cases for 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $v_{2}=v_{1}=v$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $(v,v)$
+\end_inset
+
+, 
+\begin_inset Formula $(v-1,v-1)$
+\end_inset
+
+, and 
+\begin_inset Formula $(v-2,v-2)$
+\end_inset
+
+ are all Nash Equilibria.
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $v_{2}=v_{1}-1$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $(v_{2},v_{2})$
+\end_inset
+
+, 
+\begin_inset Formula $(v_{2},v_{2}-1)$
+\end_inset
+
+, and 
+\begin_inset Formula $(v_{2}-1,v_{2}-1)$
+\end_inset
+
+ are all Nash Equilibria.
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $v_{2}=v_{1}-2$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $(v_{2}+1,v_{2})$
+\end_inset
+
+, 
+\begin_inset Formula $(v_{2},v_{2})$
+\end_inset
+
+, and 
+\begin_inset Formula $(v_{2},v_{2}-1)$
+\end_inset
+
+ are all Nash Equilibria.
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $v_{2}<v_{1}-2$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $(v_{2}+1,v_{2})$
+\end_inset
+
+ and 
+\begin_inset Formula $(v_{2},v_{2}-1)$
+\end_inset
+
+ are both Nash Equilibria.
+\end_layout
+
+\begin_layout Standard
+Thus, we have found multiple Nash Equilibria in each case.
+\end_layout
+
+\end_body
+\end_document

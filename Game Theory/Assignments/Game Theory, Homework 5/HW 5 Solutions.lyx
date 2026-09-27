@@ -1,0 +1,450 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Game Theory: Problem Set 5 Solutions
+\end_layout
+
+\begin_layout Section*
+Problem 1
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+Firm 2 may leave with probability with 
+\begin_inset Formula $p$
+\end_inset
+
+ and stay with probability 
+\begin_inset Formula $1-p$
+\end_inset
+
+.
+ If firm 1 stays in the market, its expect payoff in period zero is
+\begin_inset Formula 
+\[
+\pi_{0}=p\cdot\frac{\pi^{M}-f}{1-\delta}+(1-p)\cdot(-f+\pi_{1}\delta)
+\]
+
+\end_inset
+
+If firm 1 leaves, then payoff is equal to zero.
+ We need to find the 
+\begin_inset Formula $p$
+\end_inset
+
+ such that firm 1 is indifferent between staying and leaving.
+\begin_inset Formula 
+\[
+\pi_{0}=\pi_{1}=0
+\]
+
+\end_inset
+
+Each time period is an identical subgame, so profit should be the same
+\begin_inset Formula 
+\begin{eqnarray*}
+0 & = & p\cdot\frac{\pi^{M}-f}{1-\delta}+(1-p)(-f)\\
+p^{*} & = & \frac{(1-\delta)f}{\pi^{M}-\delta f}
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+We need to find the symmetric mixed strategy NE.
+ A symmetric strategy means that both firms follow the same strategy.
+ So, 
+\begin_inset Formula $p_{1}=p_{2}=p^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi_{t}^{i}=p(n)^{*n-1}\cdot\frac{\pi^{M}-f}{1-\delta}+(1-p(n)^{*n-1})\cdot(-f+\pi_{t+1}^{i}\delta)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi_{t}^{i}=\pi_{t+1}^{i}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies p(n)^{*}=\left[\frac{(1-\delta)f}{\pi^{M}-\delta f}\right]^{\frac{1}{n-1}}=\left(p^{*}\right)^{\frac{1}{n-1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part D.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\frac{\pi^{M}}{2}-f}{1-\delta}\geq\pi^{M}-f+0\delta+0\delta^{2}+\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\delta\geq\frac{0.5\pi^{M}}{\pi^{M}-f}\equiv\underline{\delta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Problem 2
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $t\rightarrow(v_{1},1-v_{1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $t+1\rightarrow\alpha:(v_{1},1-v_{1});\ 1-\alpha:(1-v_{2},v_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1-v_{1}=\left[\alpha(1-v_{1})+(1-\alpha)v_{2}\right]\delta_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1-v_{2}=\left[\alpha v_{1}+(1-\alpha)(1-v_{2})\right]\delta_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v_{1}=\frac{1-\delta_{2}-(1-\alpha)\delta_{1}+(1-\alpha)\delta_{1}\delta_{2}}{1-\alpha\delta_{2}-(1-\alpha)\delta_{1}}$
+\end_inset
+
+ (1)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v_{2}=\frac{1-\delta_{1}-\alpha\delta_{2}-\alpha\delta_{1}\delta_{2}}{1-\alpha\delta_{2}-(1-\alpha)\delta_{1}}$
+\end_inset
+
+ (2)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E(v_{1})=\alpha v_{1}+(1-\alpha)(1-v_{2})$
+\end_inset
+
+ (3)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E(v_{2})=\alpha(1-v_{1})+(1-\alpha)v_{2}$
+\end_inset
+
+ (4)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E(v_{1})\rightarrow v_{1}\rightarrow1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E(v_{2})\rightarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Problem 3
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $q_{i}=a-p_{i}-b_{i}p_{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b_{i}\in\{b_{H},b_{L}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\theta$
+\end_inset
+
+ be associated with 
+\begin_inset Formula $b_{H}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{L}$
+\end_inset
+
+ with 
+\begin_inset Formula $1-\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{i}=\{P_{i}:0\leq p\leq a\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Theta_{i}=\{b_{H},b_{L}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $i\mbox{'s belief is}\ Pr(b_{j}=b_{H})=\theta;\ Pr(b_{j}=b_{L})=1-\theta$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi_{i}(p_{i},p_{j}|b_{i},b_{j})=P_{i}\left[a-p_{i}-b_{i}p_{j}(b_{j})\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E(\pi_{i})=\theta p_{i}\left[a-p_{i}-b_{i}p_{j}(b_{H})\right]+(1-\theta)p_{i}\left[a-p_{i}-b_{i}p_{j}(b_{L})\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{dE(\pi_{i})}{dp_{i}}=\theta\left[a-2p_{i}-b_{i}p_{j}(b_{H})\right]+(1-\theta)\left[a-2p_{i}-b_{i}p_{j}(b_{l})\right]=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p_{i}=\frac{1}{2}\left\{ a-b_{i}\left[\theta p_{j}(b_{H})+(1-\theta)p_{j}(b_{L})\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p_{H}=p_{i}(b_{H})=\frac{1}{2}\left\{ a-b_{H}\left[\theta p_{H}+(1-\theta)p_{L}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p_{L}=p_{i}(b_{L})=\frac{1}{2}\left\{ a-b_{L}\left[\theta p_{H}+(1-\theta)p_{L}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(2+\theta b_{H})p_{H}+(1-\theta)b_{H}p_{L}=a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\theta b_{L}p_{H}+\left[2+(1-\theta)b_{L}\right]p_{L}=a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p_{H}=\frac{a\left[2-(1-\theta)b_{H}+(1-\theta b_{L}\right]}{2+2\theta b_{H}+2(1-\theta)b_{L}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p_{L}=\frac{a\left[2+\theta b_{H}-\theta b_{L}\right]}{2+2\theta b_{H}+2(1-\theta)b_{L}}$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

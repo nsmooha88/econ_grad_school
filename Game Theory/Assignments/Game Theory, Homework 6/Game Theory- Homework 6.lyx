@@ -1,0 +1,1675 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Game Theory: Homework 6
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Problem
+Consider a symmetric independent private values setting with two potential
+ buyers.
+ The seller owns an indivisible object which she is commonly known to value
+ at 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ Suppose that 
+\begin_inset Formula $v_{i}\in\{1,2,3\}$
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+ and that each realization is equally likely (occurs with probability 
+\begin_inset Formula $\nicefrac{1}{3}$
+\end_inset
+
+).
+ Suppose also that 
+\begin_inset Formula $S_{i}=\{\mbox{No},1,2,3\}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+ so that there are only four possible acttions for each bidder.
+ Suppose that ties are broken randomly so that each bidder acquires the
+ object with probability 
+\begin_inset Formula $\nicefrac{1}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose that the seller announces a second-price sealed-bid auction with
+ reserve price 1.
+ Find all symmetric BNE 
+\begin_inset Formula $b^{*}(v)$
+\end_inset
+
+, in which the bidders play weakly dominant strategies.
+ How much expected revenue is generated in this BNE?
+\end_layout
+
+\begin_layout Enumerate
+Suppose that the seller announces a second-price sealed bid auction with
+ reserve price 1.
+ Find an asymmetric BNE 
+\begin_inset Formula $(b_{1}(v_{1}),b_{2}(v_{2}))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose that the seller announces a first-price sealed bid auction with
+ reserve price of 1.
+ Find the symmetric BNE, 
+\begin_inset Formula $b^{**}(v)$
+\end_inset
+
+ which generates the highest expected revenue for the seller.
+ How much expected revenue is generated in this BNE?
+\end_layout
+
+\begin_layout Enumerate
+Suppose the seller announces an all-pay auction with reserve price of 1,
+ in which the bidder pays his bid independent of the auction outcome.
+ Find a symmetric BNE, 
+\begin_inset Formula $b^{***}(v)$
+\end_inset
+
+.
+ How much expected revenue is generated in this BNE?
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Consider a symmetric independent private values setting with two potential
+ buyers.
+ The seller owns an indivisible object which she is commonly known to value
+ at 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ Suppose that 
+\begin_inset Formula $v_{i}\in\{1,2,3\}$
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+ and that each realization is equally likely (occurs with probability 
+\begin_inset Formula $\nicefrac{1}{3}$
+\end_inset
+
+).
+ Important to note, the definition of the Bayesian Nash Equilibrium is given
+ by
+\begin_inset Formula 
+\[
+b_{i}^{*}\left(v_{i}\right)\in\underset{b_{i}}{\textrm{argmax}}\; E\left\{ u_{i}(b_{i},b(v_{j}))\Bigr|b_{i},v_{i}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+\bar under
+Part A
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+The second-price auction mechanism has the following three components: the
+ set of possible bids
+\begin_inset Formula 
+\[
+S_{i}\in\left\{ \mbox{No},1,2,3\right\} 
+\]
+
+\end_inset
+
+the allocation rule
+\begin_inset Formula 
+\[
+q_{i}=\begin{cases}
+1 & \textrm{if }b_{i}>b_{j}\\
+\frac{1}{2} & \textrm{if }b_{i}=b_{j}\neq\mbox{No}\\
+0 & \textrm{if }b_{i}<b_{j}\textrm{ or }b_{i}=\mbox{No}
+\end{cases}
+\]
+
+\end_inset
+
+and the payment rule
+\begin_inset Formula 
+\[
+p_{i}=\begin{cases}
+1 & \textrm{if }b_{i}>b_{j}=\mbox{No}\\
+b_{j} & \textrm{if }b_{i}>b_{j}\neq\mbox{No}\\
+\frac{1}{2}b_{i} & \textrm{if }b_{i}=b_{j}\neq\mbox{No}\\
+0 & \textrm{if }b_{i}<b_{j}
+\end{cases}
+\]
+
+\end_inset
+
+Thus, the payoff for bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+u_{i}=q_{i}v_{i}-p_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+By Proposition 1 from Lecture 9, each bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ has a weakly dominant strategy in the 
+\begin_inset Formula $SPA(r,0)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+b^{*}(v_{i})=\begin{cases}
+\mbox{No} & \mbox{if}\ v_{i}<r=1\\
+v_{i} & \mbox{if}\ v_{i}\geq r=1
+\end{cases}
+\]
+
+\end_inset
+
+To obtain a symmetric BNE, in which the bidders play weakly dominant strategies,
+ then 
+\begin_inset Formula $\forall\ i\in\{1,2\}:b_{i}(v_{i})=b(v_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+The first symmetric BNE for the second-price auction is given by 
+\begin_inset Formula $b^{*}(v_{i})=v_{i}$
+\end_inset
+
+.
+ Under this symmetric BNE, the expected payment by bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ for each possible bid can be written as
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left\{ p_{i}|b_{i}=1\right\}  & = & \frac{1}{2}\cdot P(v_{j}=1)=\frac{1}{6}\\
+E\left\{ p_{i}|b_{i}=2\right\}  & = & P(v_{j}=1)+\frac{1}{2}\cdot P(v_{j}=2)\cdot2\\
+ & = & \frac{1}{3}+\frac{1}{2}\cdot\frac{1}{3}\cdot2=\frac{2}{3}\\
+E\{p_{i}|b_{i}=3\} & = & P(v_{j}=1)+P(v_{j}=2)\cdot2+\frac{1}{2}\cdot P(v_{j}=3)\cdot3\\
+ & = & \frac{1}{3}+\frac{2}{3}+\frac{1}{2}\cdot\frac{1}{3}\cdot3=\frac{3}{2}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the ex-ante expected payment of bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ in the auction is
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left\{ p_{i}\right\}  & = & P(b_{i}=1)\cdot E\left\{ p_{i}|b_{i}=1\right\} +P(b_{i}=2)\cdot E\left\{ p_{i}|b_{i}=2\right\} +P(b_{i}=3)\cdot E\{p_{i}|b_{i}=3\}\\
+ & = & \frac{1}{3}\cdot\frac{1}{6}+\frac{1}{3}\cdot\frac{2}{3}+\frac{1}{3}\cdot\frac{3}{2}=\frac{7}{9}
+\end{eqnarray*}
+
+\end_inset
+
+The expected revenue accruing to the seller is just 2 times the ex-ante
+ expected payment of an individual bidder, so
+\begin_inset Formula 
+\[
+E\left\{ \Pi_{s}\right\} =2E\left\{ p_{i}\right\} =\frac{14}{9}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Important to note, when 
+\begin_inset Formula $v_{i}=1$
+\end_inset
+
+, bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ is indiffernt between bidding 1 and not bidding at all.
+ So, another symmetric BNE for the second-price auction is given by
+\begin_inset Formula 
+\[
+b(v_{i})=\begin{cases}
+\mbox{No} & \mbox{if}\ v_{i}=1\\
+v_{i} & \mbox{if}\ v_{i}>1
+\end{cases}
+\]
+
+\end_inset
+
+Under this symmetric BNE, the expected payment by bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ for each possible bid can be written as
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left\{ p_{i}|b_{i}=1\right\}  & = & 0\\
+E\left\{ p_{i}|b_{i}=2\right\}  & = & P(v_{j}=1)+\frac{1}{2}\cdot P(v_{j}=2)\cdot2\\
+ & = & \frac{1}{3}+\frac{1}{2}\cdot\frac{1}{3}\cdot2=\frac{2}{3}\\
+E\{p_{i}|b_{i}=3\} & = & P(v_{j}=1)+P(v_{j}=2)\cdot2+\frac{1}{2}\cdot P(v_{j}=3)\cdot3\\
+ & = & \frac{1}{3}+\frac{2}{3}+\frac{1}{2}\cdot\frac{1}{3}\cdot3=\frac{3}{2}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the ex ante expected payment of bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ in the auction is
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left\{ p_{i}\right\}  & = & 0+P(b_{i}=2)\cdot E\left\{ p_{i}|b_{i}=2\right\} +P(b_{i}=3)\cdot E\{p_{i}|b_{i}=3\}\\
+ & = & 0+\frac{1}{3}\cdot\frac{2}{3}+\frac{1}{3}\cdot\frac{3}{2}=\frac{13}{18}
+\end{eqnarray*}
+
+\end_inset
+
+The expected revenue accruing to the seller is just the number of bidders
+ in the auction times the ex-ante expected payment of an individual bidder,
+ so
+\begin_inset Formula 
+\[
+E\left\{ \Pi_{s}\right\} =2E\left\{ p_{i}\right\} =\frac{13}{9}
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part B
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+An asymmetric BNE 
+\begin_inset Formula $(b_{1}(v_{1}),b_{2}(v_{2}))$
+\end_inset
+
+ for the second-price auction is given by:
+\begin_inset Formula 
+\begin{eqnarray*}
+b_{1}(v_{1}) & = & 3\\
+b_{2}(v_{2}) & = & \mbox{No}
+\end{eqnarray*}
+
+\end_inset
+
+If bidder 2 always bids 
+\begin_inset Quotes eld
+\end_inset
+
+No
+\begin_inset Quotes erd
+\end_inset
+
+, then bidder 1 has no incentive to deviate because he will always pay the
+ reserve price of 1.
+ If bidder 1 always bids 3, then bidder 2 has no incentive to deviate because
+ he will always receive a payoff of zero.
+ Hence, this is an asymmetric BNE.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+\bar under
+Part C
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+The first-price auction mechanism has the following three components: the
+ set of possible bids
+\begin_inset Formula 
+\[
+S_{i}\in\left\{ \mbox{No},1,2,3\right\} 
+\]
+
+\end_inset
+
+the allocation rule
+\begin_inset Formula 
+\[
+q_{i}=\begin{cases}
+1 & \textrm{if }b_{i}>b_{j}\\
+\frac{1}{2} & \textrm{if }b_{i}=b_{j}\neq\mbox{No}\\
+0 & \textrm{if }b_{i}<b_{j}\textrm{ or }b_{i}=\mbox{No}
+\end{cases}
+\]
+
+\end_inset
+
+and the payment rule
+\begin_inset Formula 
+\[
+p_{i}=\begin{cases}
+b_{i} & \textrm{if }b_{i}>b_{j}\neq\mbox{No}\\
+\frac{1}{2}b_{i} & \textrm{if }b_{i}=b_{j}\neq\mbox{No}\\
+0 & \textrm{if }b_{i}<b_{j}
+\end{cases}
+\]
+
+\end_inset
+
+Thus, the payoff for bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+u_{i}=q_{i}v_{i}-p_{i}
+\]
+
+\end_inset
+
+We wish to find the symmetric BNE, 
+\begin_inset Formula $b^{**}(v_{i})$
+\end_inset
+
+, which generates the highest expected revenue for the seller.
+\begin_inset Formula 
+\[
+b^{**}(v_{i})=\begin{cases}
+1 & \mbox{if}\ v_{i}=1\\
+1 & \mbox{if}\ v_{i}=2\\
+2 & \mbox{if}\ v_{i}=3
+\end{cases}
+\]
+
+\end_inset
+
+Under this symmetric BNE, the expected payment by bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ for each possible bid can be written as
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left\{ p_{i}|v_{i}=1\right\}  & = & \frac{1}{2}\cdot P(v_{j}=1)+\frac{1}{2}\cdot P(v_{j}=2)=\frac{1}{3}\\
+E\left\{ p_{i}|v_{i}=2\right\}  & = & \frac{1}{2}\cdot P(v_{j}=1)+\frac{1}{2}\cdot P(v_{j}=2)=\frac{1}{3}\\
+E\left\{ p_{i}|v_{i}=3\right\}  & = & P(v_{j}=1)\cdot2+P(v_{j}=2)\cdot2+\frac{1}{2}\cdot P(v_{j}=3)\cdot2\\
+ & = & \frac{2}{3}+\frac{2}{3}+\frac{1}{3}=\frac{5}{3}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the ex-ante expected payment of bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ in the auction is
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left\{ p_{i}\right\}  & = & P(v_{i}=1)\cdot E\left\{ p_{i}|v_{i}=1\right\} +P(v_{i}=2)\cdot E\left\{ p_{i}|v_{i}=2\right\} +P(v_{i}=3)\cdot E\left\{ p_{i}|v_{i}=3\right\} \\
+ & = & \frac{1}{3}\cdot\frac{1}{3}+\frac{1}{3}\cdot\frac{1}{3}+\frac{1}{3}\cdot\frac{5}{3}=\frac{7}{9}
+\end{eqnarray*}
+
+\end_inset
+
+The expected revenue accruing to the seller is just the number of bidders
+ in the auction times the ex-ante expected payment of an individual bidder,
+ so
+\begin_inset Formula 
+\[
+E\left\{ \Pi_{s}\right\} =2E\left\{ p_{i}\right\} =\frac{14}{9}
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part D
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+The all-pay auction mechanism has the following three components: the set
+ of possible bids
+\begin_inset Formula 
+\[
+S_{i}\in\left\{ \mbox{No},1,2,3\right\} 
+\]
+
+\end_inset
+
+the allocation rule
+\begin_inset Formula 
+\[
+q_{i}=\begin{cases}
+1 & \textrm{if }b_{i}>b_{j}\\
+\frac{1}{2} & \textrm{if }b_{i}=b_{j}\neq\mbox{No}\\
+0 & \textrm{if }b_{i}<b_{j}\textrm{ or }b_{i}=\mbox{No}
+\end{cases}
+\]
+
+\end_inset
+
+and the payment rule
+\begin_inset Formula 
+\[
+p_{i}=\begin{cases}
+\mbox{0} & \mbox{if}\ b_{i}=\mbox{No}\\
+b_{i} & \mbox{if}\ b_{i}\neq\mbox{No}
+\end{cases}
+\]
+
+\end_inset
+
+Thus, the payoff for bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+u_{i}=q_{i}v_{i}-p_{i}
+\]
+
+\end_inset
+
+We wish to find the symmetric BNE, 
+\begin_inset Formula $b^{***}(v_{i})$
+\end_inset
+
+.
+ Consider the following bidding function:
+\begin_inset Formula 
+\[
+b^{***}(v_{i})=\begin{cases}
+\mbox{No} & \mbox{if}\ v_{i}=1\\
+1 & \mbox{if}\ v_{i}=2\\
+\mbox{1} & \mbox{if}\ v_{i}=3
+\end{cases}
+\]
+
+\end_inset
+
+If 
+\begin_inset Formula $v_{i}=1$
+\end_inset
+
+, then bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ has no incentive to enter the auction because 
+\begin_inset Formula $E(u_{i}|b_{i}=1)<0$
+\end_inset
+
+ and 
+\begin_inset Formula $E(u_{i}|b_{i}=\mbox{No})=0$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $v_{i}=2$
+\end_inset
+
+, then 
+\begin_inset Formula $b(v_{i})=1$
+\end_inset
+
+ is optimal because 
+\begin_inset Formula $E(u_{i}|b_{i}=1)>0$
+\end_inset
+
+, while 
+\begin_inset Formula $E(u_{i}|b_{i}=\mbox{No})=0$
+\end_inset
+
+, 
+\begin_inset Formula $E(u_{i}|b_{i}=2)<0$
+\end_inset
+
+, and 
+\begin_inset Formula $E(u_{i}|b_{i}=3)<0$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $v_{i}=3$
+\end_inset
+
+, then 
+\begin_inset Formula $b(v_{i})=1$
+\end_inset
+
+ is optimal because 
+\begin_inset Formula $E(u_{i}|b_{i}=1)=1$
+\end_inset
+
+, while 
+\begin_inset Formula $E(u_{i}|b_{i}=\mbox{No})=0$
+\end_inset
+
+, 
+\begin_inset Formula $E(u_{i}|b_{i}=2)=1$
+\end_inset
+
+, and 
+\begin_inset Formula $E(u_{i}|b_{i}=3)<0$
+\end_inset
+
+.
+ Therefore, this bidding function is a symmetric BNE since none of the bidders
+ have an incentive to deviate.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+However, the symmetric BNE which generates the highest expected revenue
+ for the seller is
+\begin_inset Formula 
+\[
+b^{***}(v_{i})=\begin{cases}
+\mbox{No} & \mbox{if}\ v_{i}=1\\
+1 & \mbox{if}\ v_{i}=2\\
+2 & \mbox{if}\ v_{i}=3
+\end{cases}
+\]
+
+\end_inset
+
+If 
+\begin_inset Formula $v_{i}=1$
+\end_inset
+
+, then bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ has no incentive to enter the auction because 
+\begin_inset Formula $E(u_{i}|b_{i}=1)<0$
+\end_inset
+
+ and 
+\begin_inset Formula $E(u_{i}|b_{i}=\mbox{No})=0$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $v_{i}=2$
+\end_inset
+
+, then 
+\begin_inset Formula $b(v_{i})=1$
+\end_inset
+
+ is optimal because 
+\begin_inset Formula $E(u_{i}|b_{i}=1)=0$
+\end_inset
+
+, while 
+\begin_inset Formula $E(u_{i}|b_{i}=\mbox{No})=0$
+\end_inset
+
+, 
+\begin_inset Formula $E(u_{i}|b_{i}=2)<0$
+\end_inset
+
+, and 
+\begin_inset Formula $E(u_{i}|b_{i}=3)<0$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $v_{i}=3$
+\end_inset
+
+, then 
+\begin_inset Formula $b(v_{i})=2$
+\end_inset
+
+ is optimal because 
+\begin_inset Formula $E(u_{i}|b_{i}=2)=\frac{1}{2}$
+\end_inset
+
+, while 
+\begin_inset Formula $E(u_{i}|b_{i}=\mbox{No})=0$
+\end_inset
+
+, 
+\begin_inset Formula $E(u_{i}|b_{i}=1)=\frac{1}{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $E(u_{i}|b_{i}=3)<0$
+\end_inset
+
+.
+ Therefore, this bidding function is a symmetric BNE since none of the bidders
+ have an incentive to deviate.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Under this symmetric BNE, the ex ante expected payment of bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ in the auction is
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left\{ p_{i}\right\}  & = & P(v_{i}=1)\cdot E\left\{ p_{i}|v_{i}=1\right\} +P(v_{i}=2)\cdot E\left\{ p_{i}|v_{i}=2\right\} +P(v_{i}=3)\cdot E\left\{ p_{i}|v_{i}=3\right\} \\
+ & = & \frac{1}{3}\cdot0+\frac{1}{3}\cdot1+\frac{1}{3}\cdot2=1
+\end{eqnarray*}
+
+\end_inset
+
+The expected revenue accruing to the seller is just the number of bidders
+ in the auction times the ex-ante expected payment of an individual bidder,
+ so
+\begin_inset Formula 
+\[
+E\left\{ \Pi_{s}\right\} =2E\left\{ p_{i}\right\} =2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Consider a symmetric independent private values setting in which there are
+ 
+\begin_inset Formula $n>1$
+\end_inset
+
+ buyers whose valuations are independently drawn from a uniform distribution
+ on 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.
+ Consider an all-pay auction with a reserve price and no entry fee.
+ Note: in an all-pay auction, all bidders pay their bids but the bidder
+ with the highest bid wins the object.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute the optimal reserve price for the seller 
+\begin_inset Formula $r^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Given 
+\begin_inset Formula $r^{*}$
+\end_inset
+
+, find the symmetric BNE bidding function 
+\begin_inset Formula $b^{*}(v)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Calculate the seller's expected equilibrium revenue.
+\end_layout
+
+\begin_layout Enumerate
+Is this an optimal sales mechanism from the perspective of the seller? Explain.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+The all-pay auction mechanism has the following three components: the set
+ of possible bids
+\begin_inset Formula 
+\[
+S_{i}\in[0,\infty)
+\]
+
+\end_inset
+
+the allocation rule
+\begin_inset Formula 
+\[
+q_{i}=\begin{cases}
+1 & \textrm{if }b_{i}>{\displaystyle \max_{j\neq i}}\ b_{j}\\
+0 & \textrm{if }b_{i}<{\displaystyle \max_{j\neq i}}\ b_{j}
+\end{cases}
+\]
+
+\end_inset
+
+and the payment rule
+\begin_inset Formula 
+\[
+p_{i}=\begin{cases}
+\mbox{0} & \mbox{if}\ b_{i}=\mbox{0}\\
+b_{i} & \mbox{if}\ b_{i}\neq\mbox{0}
+\end{cases}
+\]
+
+\end_inset
+
+Thus, the payoff for bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+u_{i}=q_{i}v_{i}-p_{i}
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part A
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+According to the Revelation Principle, given the mechanism of the all-pay
+ auction 
+\begin_inset Formula $(S,q,p)$
+\end_inset
+
+ and a BNE for this mechanism, there exists a direct mechanism 
+\begin_inset Formula $(\tilde{V},Q,P)$
+\end_inset
+
+ in which it is an equilibrium for each buyer to report his/her true value,
+ and the outcomes are the same as in the given equilibrium of the original
+ mechanism.
+ Note that
+\begin_inset Formula 
+\[
+\Pi_{i}(v_{i})=Q_{i}(v_{i})v_{i}-P_{i}(v_{i})
+\]
+
+\end_inset
+
+is the expected equilibrium payoff for bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ in the direct allocation mechanism where 
+\begin_inset Formula $Q_{i}(v_{i})$
+\end_inset
+
+ is his expected probability of winning and 
+\begin_inset Formula $P_{i}(v_{i})=b_{i}(v_{i})$
+\end_inset
+
+ is his certain payment.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $G(\cdot)$
+\end_inset
+
+ denote the distribution of 
+\begin_inset Formula $\tilde{y}=\max\{v_{1},\ldots,v_{i-1},v_{i+1},\ldots v_{N}\}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+G(v_{i})=Pr(\tilde{y}_{i}<v_{i})=\prod_{j\ne i}Pr(v_{j}<v_{i})=F(v_{i})^{N-1}=v_{i}^{N-1}
+\]
+
+\end_inset
+
+Consider the all-pay auction with reservation price 
+\begin_inset Formula $r$
+\end_inset
+
+ and no entry fee, i.e., 
+\begin_inset Formula $APA(r,0)$
+\end_inset
+
+, in which all types above some 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+ participate and use a strictly increasing bid function.
+ The expected proability of winning in this all-pay auction is
+\begin_inset Formula 
+\[
+Q_{i}(v_{i})=\begin{cases}
+0 & \mbox{if}\ v_{i}<v_{0}\\
+G(v_{i}) & \mbox{if}\ v_{i}>v_{0}
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+By Proposition 2 of Lecture 10, the seller's expected payoff in any BNE
+ of any auction is
+\begin_inset Formula 
+\[
+\Pi_{s}(v_{s})=v_{s}+\sum_{i=1}^{N}\left[{\displaystyle \int_{0}^{1}}\left(v_{i}-\frac{1-F(v_{i})}{f(v_{i})}-v_{s}\right)Q_{i}(v_{i})f(v_{i})dv_{i}-\Pi_{i}(0)\right]
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $v_{s}=0$
+\end_inset
+
+, 
+\begin_inset Formula $\Pi_{i}(0)=0$
+\end_inset
+
+, and all of the bidders are symmetric, then we have
+\begin_inset Formula 
+\[
+\Pi_{s}(0)=N{\displaystyle \int_{0}^{1}}\left[v-(1-v)\right]Q_{i}(v)dv=N{\displaystyle \int_{v_{0}}^{1}}(2v-1)v^{N-1}dv
+\]
+
+\end_inset
+
+Note that seller would like to set 
+\begin_inset Formula $Q_{i}(v_{i})$
+\end_inset
+
+ to maximize his expect payoff, which is equivalent to choosing the optimal
+ 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+.
+ This boils down to maximizing the summation
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{N}}\left(v_{i}-\frac{1-F(v_{i})}{f(v_{i})}-v_{s}\right)
+\]
+
+\end_inset
+
+subject to the constraints.
+ Since 
+\begin_inset Formula $v_{i}-\frac{1-F(v_{i})}{f(v_{i})}$
+\end_inset
+
+ is increasing in 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray*}
+v_{0}^{*}-\frac{1-F(v_{0}^{*})}{f(v_{0}^{*})} & = & v_{s}\\
+v_{0}^{*}-(1-v_{0}^{*}) & = & 0\\
+v_{0}^{*} & = & \frac{1}{2}
+\end{eqnarray*}
+
+\end_inset
+
+Now, if 
+\begin_inset Formula $v_{i}=v_{0}^{*}$
+\end_inset
+
+, then bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ is indifferent between entering and exiting the auction, so 
+\begin_inset Formula 
+\begin{eqnarray*}
+E\{u_{i}|v_{i}=v_{0}^{*}\}=\Pi_{i}(v_{0}^{*}) & = & 0\\
+Q_{i}(v_{0}^{*})v_{0}^{*}-r & = & 0\\
+v_{0}^{*N}-r & = & 0\\
+r^{*} & = & \left(\frac{1}{2}\right)^{N}
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part B
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+In part A, we assumed that bidders follow a cut-off strategy: 0 if 
+\begin_inset Formula $v_{i}<v_{0}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{i}(v_{i})$
+\end_inset
+
+ if 
+\begin_inset Formula $v_{i}>v_{0}^{*}$
+\end_inset
+
+.
+ Let us suppose that all 
+\begin_inset Formula $i$
+\end_inset
+
+ follow a symmetric bidding function 
+\begin_inset Formula $b(v)$
+\end_inset
+
+, which is also strictly increasing in 
+\begin_inset Formula $v$
+\end_inset
+
+ and differentiable.
+ Moreover, it must be true that 
+\begin_inset Formula $b(0)=0$
+\end_inset
+
+.
+ From part A, we know that for 
+\begin_inset Formula $v_{i}\geq v_{0}^{*}$
+\end_inset
+
+, the expected equilibrium payoff for bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{eqnarray}
+\Pi_{i}(v_{i}) & = & Q_{i}(v_{i})v_{i}-P_{i}(v_{i})\nonumber \\
+\Pi_{i}(v_{i}) & = & v_{i}^{N}-b(v_{i})
+\end{eqnarray}
+
+\end_inset
+
+Furthermore, the incentive compatibility constraint,
+\begin_inset Formula 
+\begin{eqnarray}
+\Pi_{i}(v_{i}) & = & \Pi_{i}(0)+{\displaystyle \int_{0}^{v_{i}}}Q_{i}(y)dy\nonumber \\
+ & = & {\displaystyle \int_{0}^{v_{0}^{*}}}0\cdot dy+{\displaystyle \int_{v_{0}^{*}}^{v_{i}}}Q_{i}(y)dy\nonumber \\
+ & = & {\displaystyle \int_{\nicefrac{1}{2}}^{v_{i}}}y^{N-1}dy\nonumber \\
+\Pi_{i}(v_{i}) & = & \frac{1}{N}\left[v_{i}^{N}-\left(\frac{1}{2}\right)^{N}\right]
+\end{eqnarray}
+
+\end_inset
+
+Setting equation 2 equal to equation 1 and solving for 
+\begin_inset Formula $b(v_{i})$
+\end_inset
+
+ yields 
+\begin_inset Formula 
+\begin{eqnarray*}
+v_{i}^{N}-b(v_{i}) & = & \frac{1}{N}\left[v_{i}^{N}-\left(\frac{1}{2}\right)^{N}\right]\\
+b(v_{i}) & = & \left(\frac{N-1}{N}\right)v_{i}^{N}+\frac{1}{N}\left(\frac{1}{2}\right)^{N}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, given 
+\begin_inset Formula $r^{*}$
+\end_inset
+
+, the symmetric BNE bidding function 
+\begin_inset Formula $b^{*}(v)$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+b^{*}(v)=\begin{cases}
+0 & \mbox{if}\ v<\frac{1}{2}\\
+\left(\frac{N-1}{N}\right)v^{N}+\frac{1}{N}\left(\frac{1}{2}\right)^{N} & \mbox{if}\ v\geq\frac{1}{2}
+\end{cases}
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part C
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Since bidders are symmetric, the expected revenue to the seller is 
+\begin_inset Formula $N$
+\end_inset
+
+ times the ex-ante expected payment of bidder 
+\begin_inset Formula $i$
+\end_inset
+
+, i.e., 
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left\{ R\right\}  & = & NE\left\{ b(v)\right\} \\
+ & = & N{\displaystyle \int_{\nicefrac{1}{2}}^{1}}b(v)f(v)dv\\
+ & = & N{\displaystyle \int_{\nicefrac{1}{2}}^{1}}\left[\left(\frac{N-1}{N}\right)v^{N}+\frac{1}{N}\left(\frac{1}{2}\right)^{N}\right]dv\\
+ & = & (N-1){\displaystyle \int_{\nicefrac{1}{2}}^{1}}v^{N}dv+\left(\frac{1}{2}\right)^{N}{\displaystyle \int_{\nicefrac{1}{2}}^{1}}dv\\
+ & = & \frac{(N-1)}{N+1}\left[1-\left(\frac{1}{2}\right)^{N+1}\right]+\left(\frac{1}{2}\right)^{N+1}
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part D
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+By Proposition 3 of Lecture 10, if 
+\begin_inset Formula $v-\frac{1-F(v)}{f(v)}$
+\end_inset
+
+ is monotone increasing, then the given auction is an optimal sales mechanism
+ for the seller so long as the reserve price and/or entry fee is set so
+ that 
+\begin_inset Formula $v_{0}=v_{0}^{*}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $2v-1$
+\end_inset
+
+ is monotone increasing, then the all-pay auction with 
+\begin_inset Formula $r^{*}=\left(\frac{1}{2}\right)^{N}$
+\end_inset
+
+, so that 
+\begin_inset Formula $v_{0}=v_{0}^{*}=\frac{1}{2}$
+\end_inset
+
+, is an optimal sales mechanism from the perspective of the seller.
+ 
+\end_layout
+
+\begin_layout Problem
+Consider a seller(s) who wishes to sell an item to one of two potential
+ buyers 
+\begin_inset Formula $(i=1,2)$
+\end_inset
+
+.
+ Each buyer's valuation 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ is identically and independently distributed according to a uniform distributio
+n with support 
+\begin_inset Formula $v_{i}\in[0,1]$
+\end_inset
+
+ and the seller's valuation is known to be 
+\begin_inset Formula $v_{s}=0$
+\end_inset
+
+.
+ The seller employs an auction consisting of two stages.
+ In the first stage, both buyers choose simultaneously whether to pay the
+ participation fee 
+\begin_inset Formula $c$
+\end_inset
+
+ for the right to participate in the auction.
+ The buyers who have paid the participation fee are then given access to
+ the room in which the the auction is conducted.
+ Thus, each buyer is able to observe whether the competing buyer has chosen
+ to enter the auciton.
+ The second stage of the auction is a simple first price auction with 
+\begin_inset Formula $0$
+\end_inset
+
+ reserve price, in which the highest bidder wins the auction and pays his
+ own bid.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose that bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ has observed that the competing bidder has chosen to stay out of the auction.
+ Find the bid 
+\begin_inset Formula $b(v_{i}|\mbox{\emph{out}})$
+\end_inset
+
+ that is part of BNE.
+\end_layout
+
+\begin_layout Enumerate
+Suppose that the bidders follow a symmetric entry strategy.
+ Bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ enters the auction only if 
+\begin_inset Formula $v_{i}\geq v_{0}$
+\end_inset
+
+ and stays out if 
+\begin_inset Formula $v_{i}<v_{0}$
+\end_inset
+
+.
+ Consider the second stage, in which bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ observes that both him and the competing seller have entered the auction.
+ Let 
+\begin_inset Formula $\tilde{F}(\cdot)$
+\end_inset
+
+ denote the cumulative distribution of 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $v_{i}\geq v_{0}$
+\end_inset
+
+.
+ Find 
+\begin_inset Formula $\tilde{F}(v)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose that the bidders use a symmetric bid function 
+\begin_inset Formula $b(v|\mbox{\emph{in}})$
+\end_inset
+
+ that is increasing in the bidder's valuation.
+ Derive 
+\begin_inset Formula $b(v|\mbox{\emph{in}})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+What is the economic intuition behind the bidding function 
+\begin_inset Formula $b(v|\mbox{\emph{in}})$
+\end_inset
+
+ that you derived in part C? Find 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+ as a function of the participation cost 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find the seller's expected revenue from the auction 
+\begin_inset Formula $\Pi_{s}(c)$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+What is the optimal participation cost 
+\begin_inset Formula $c^{*}$
+\end_inset
+
+ from the point of view of the seller?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part A
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If the competing bidder has chosen to stay out of the auction, then bidder
+ 
+\begin_inset Formula $i$
+\end_inset
+
+ wins the auction with probability 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ In order to maximize his payoff, i.e., 
+\begin_inset Formula $v_{i}-c-b_{i}$
+\end_inset
+
+, bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ will bid 
+\begin_inset Formula $b(v_{i}|\mbox{\emph{out}})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part B
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Since 
+\begin_inset Formula $\forall\ i\in\{1,2\}:v_{i}\sim U[0,1]$
+\end_inset
+
+, then the cumulative distribution function of 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $Pr(v_{i}\leq v)=F(v)=v$
+\end_inset
+
+ for 
+\begin_inset Formula $v\in[0,1]$
+\end_inset
+
+.
+ We wish to find 
+\begin_inset Formula $F(v|v_{i}\geq v_{0})$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+F(v|v_{i}\geq v_{0}) & = & Pr(v_{i}\leq v|v\geq v_{0})\\
+ & = & \frac{Pr(v_{0}\leq v_{i}\leq v)}{Pr(v_{i}\geq v_{0})}\\
+ & = & \frac{F(v)-F(v_{0})}{1-F(v_{0})}\\
+\tilde{F}(v) & = & \frac{v-v_{0}}{1-v_{0}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part C
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For a symmetric bidding function 
+\begin_inset Formula $b(v_{i}|\mbox{\emph{in})}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+b(v_{i}|\mbox{\emph{in}}) & = & E\left[v_{j}|v_{0}<v_{j}<v_{i}\right]\\
+ & = & \frac{{\displaystyle \int_{v_{0}}^{v_{i}}}v_{j}\ dv_{j}}{v_{i}-v_{0}}\\
+ & = & \frac{1}{2}\left(\frac{v_{i}^{2}-v_{0}^{2}}{v_{i}-v_{0}}\right)\\
+b(v_{i}|\mbox{\emph{in}}) & = & \frac{1}{2}(v_{i}+v_{0})
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part D
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The bidding function 
+\begin_inset Formula $b(v|\mbox{\emph{in}})$
+\end_inset
+
+ that we derived in part C says that when 
+\begin_inset Formula $i$
+\end_inset
+
+ makes his bid, he does not factor in the participation cost 
+\begin_inset Formula $c$
+\end_inset
+
+ because it is now a sunk cost.
+ Hence, in stage 2, bidder 
+\begin_inset Formula $i$
+\end_inset
+
+'s bid depends only on his valuation 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ and the cutoff value 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+.
+ However, 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+ is a function of the of the participation cost 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If a bidder has valuation 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+, then he should be indifferent between participating in the auction and
+ not participating.
+ Such a bidder would win only if there is no competing buyer.
+ So, the expected payoff of such a bidder is
+\begin_inset Formula 
+\begin{eqnarray*}
+Pr(v_{j}<v_{0})v_{0}-c & = & 0\\
+v_{0}^{2} & = & c\\
+v_{0} & = & \sqrt{c}
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part E
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The equilibrium expected payment by bidder 
+\begin_inset Formula $i$
+\end_inset
+
+ is:
+\begin_inset Formula 
+\begin{eqnarray*}
+m(v_{i}) & = & Pr(v_{0}<v_{j}<v_{i})b(v_{i}|\mbox{\emph{in}})+c\\
+ & = & (v_{i}-v_{0})\left[\frac{1}{2}(v_{i}+v_{0})\right]+c\\
+m(v_{i}) & = & \frac{1}{2}\left(v_{i}^{2}-v_{0}^{2}\right)+c
+\end{eqnarray*}
+
+\end_inset
+
+So, the ex-ante expected payment of a bidder is
+\begin_inset Formula 
+\begin{eqnarray*}
+E[m(v_{i})] & = & {\displaystyle \int_{v_{0}}^{1}}\frac{1}{2}\left(v_{i}^{2}-v_{0}^{2}\right)+c\\
+E[m(v_{i})] & = & c(1-v_{0})-\frac{v_{0}^{2}}{2}(1-v_{0})+\frac{1}{6}(1-v_{0}^{3})
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $c=v_{0}^{2}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+E[m(v_{i})]=\frac{c}{2}(1-\sqrt{c})+\frac{1}{6}(1-c^{\nicefrac{3}{2}})
+\]
+
+\end_inset
+
+Thus, the expected revenue function for the seller is
+\begin_inset Formula 
+\begin{eqnarray*}
+\Pi_{s}(c) & = & 2E[m(v_{i})]\\
+ & = & c(1-\sqrt{c})+\frac{1}{3}(1-c^{\nicefrac{3}{2}})\\
+\Pi_{s}(c) & = & c-\frac{4}{3}c^{\nicefrac{3}{2}}+\frac{1}{3}
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part F
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To find the optimal participation cost 
+\begin_inset Formula $c^{*}$
+\end_inset
+
+, the seller will choose 
+\begin_inset Formula $c^{*}$
+\end_inset
+
+ in order to maximize 
+\begin_inset Formula $\Pi_{s}(c)$
+\end_inset
+
+.
+ The first-order condition of the seller's problem is
+\begin_inset Formula 
+\begin{eqnarray*}
+1-2c^{\nicefrac{1}{2}} & = & 0\\
+c^{*} & = & \frac{1}{4}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the optimal participation cost, from the seller's point of view, is
+ 
+\begin_inset Formula $c^{*}=\frac{1}{4}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
