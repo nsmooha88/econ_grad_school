@@ -1,0 +1,398 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Econometrics I: Quiz 3
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Standard
+Consider a simple linear regression model, 
+\begin_inset Formula $y_{t}=\alpha+\beta x_{t}+u_{t}$
+\end_inset
+
+, where 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+ is a fixed variate (strongly exogenous), and 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ is i.i.d.
+ 
+\begin_inset Formula $N(0,\sigma^{2})$
+\end_inset
+
+ variate.
+ Let 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ be the OLSE, 
+\begin_inset Formula $\sigma_{\hat{\beta}}^{2}$
+\end_inset
+
+ be the variance of 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+, and 
+\begin_inset Formula $\hat{\sigma}_{\hat{\beta}}^{2}$
+\end_inset
+
+ be the estimated variance of 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+.
+ You wish to test the null hypothesis 
+\begin_inset Formula $H_{0}:\beta=1$
+\end_inset
+
+ against the one-sided alternative hypothesis 
+\begin_inset Formula $H_{1}:\beta=1$
+\end_inset
+
+.
+ The test involves a few basic elements.
+\end_layout
+
+\begin_layout Problem
+You need to choose a test statistic.
+ Since the test is about the value of 
+\begin_inset Formula $\beta$
+\end_inset
+
+, it seems appropriate to use a test statistic based on its estimate.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What is the name of the test based on this idea?
+\end_layout
+
+\begin_layout Enumerate
+Specify a statistic that you can use for the test and show how to derive
+ it.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Nested hypothesis test.
+ 
+\begin_inset Formula $H_{0}:\mu=a$
+\end_inset
+
+ versus 
+\begin_inset Formula $H_{1}:\mu>a$
+\end_inset
+
+.
+ This implies that 
+\begin_inset Formula $H_{0}:\mu\leq a$
+\end_inset
+
+.
+ To test the hypothesis, I would use the Wald type test.
+ Fact: 
+\begin_inset Formula $F_{\alpha}(1,N-K)=t_{\nicefrac{\alpha}{2}}^{2}(N-K)$
+\end_inset
+
+.
+ For this test, I can use the 
+\begin_inset Formula $t$
+\end_inset
+
+-statistic
+\begin_inset Formula 
+\[
+t=\frac{\hat{\beta}-1}{\sqrt{\hat{\sigma}_{\hat{\beta}}^{2}}}
+\]
+
+\end_inset
+
+and here is how to derive it
+\begin_inset Formula 
+\begin{eqnarray*}
+t & = & \frac{\nicefrac{\left(R\hat{\beta}-R\beta\right)}{sd(R\hat{\beta})}}{\sqrt{\frac{(N-K)\hat{\sigma}^{2}}{\sigma^{2}}\cdot\frac{1}{(N-K)}}}\\
+ & = & \frac{\nicefrac{\left(R\hat{\beta}-R\beta\right)}{sd(R\hat{\beta})}}{\sqrt{\nicefrac{\hat{\sigma}^{2}}{\sigma^{2}}}}\\
+ & = & \frac{\left(R\hat{\beta}-R\beta\right)}{est.\ sd(R\hat{\beta})}\sim t(N-K)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+You now have to select a decision rule that prescribes the rejection region,
+ i.e., when to reject and when not to reject the null hypothesis.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Specify your decision rule, including your reasonable choice of critical
+ value(s) (notice that this question is asked before the following question
+ on the significance level, i.e., I am asking you to specify a decision rule
+ without considering the significance level at this stage).
+\end_layout
+
+\begin_layout Enumerate
+Justify why your decision rule makes sense for the case under consideration.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+For a chosen critical value 
+\begin_inset Formula $c$
+\end_inset
+
+, I reject 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ if 
+\begin_inset Formula $t>c$
+\end_inset
+
+.
+ Under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, if the probability that 
+\begin_inset Formula $t>c$
+\end_inset
+
+ is fairly low, then I will reject 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Any reasonable decision rule is bound to make errors in drawing conclusion.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What is the Type I error? What is the name of probability of Type I error?
+\end_layout
+
+\begin_layout Enumerate
+Why can't we avoid the Type I error?
+\end_layout
+
+\begin_layout Enumerate
+Describe how you find the probability of Type I error of your decision rule?
+ (As a part of your answer, you need to talk about what distribution function
+ you use).
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Type I error occurs when reject a true 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+ The name of probability of Type I error is known as the significance level.
+ Since 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is a random variable, then there will always be some probability that we
+ reject 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ if it's true.
+ 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ changes depending on the sample, so we could obtain a 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ that is significantly different from 
+\begin_inset Formula $\beta=1$
+\end_inset
+
+, even if 
+\begin_inset Formula $\beta=1$
+\end_inset
+
+ is true.
+ One way to find the probability of Type I error is 
+\begin_inset Formula $P(t>c|H_{0})$
+\end_inset
+
+ where 
+\begin_inset Formula $t$
+\end_inset
+
+ is distributed as 
+\begin_inset Formula $t\sim t(N-K)$
+\end_inset
+
+ under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Instead of picking a specific decision rule and then compute the probability
+ of Type I error, the traditional approach is to choose the probability
+ of Type I error and then determine the specific decision rule.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+When would you choose a small probability of Type I error? Give an example.
+\end_layout
+
+\begin_layout Enumerate
+Describe how you determine the critical value(s) for a given probability
+ of Type I error.
+ (As a part of your answer, you need to talk about what distribution function
+ you use).
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+I would choose a small probability of Type I error when I want to reject
+ 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ less frequently.
+ Given a signficance level 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $P(t>t_{\alpha}|H_{0})=\alpha$
+\end_inset
+
+, where 
+\begin_inset Formula $t_{\alpha}$
+\end_inset
+
+ is the critical value for the one-sided test.
+ Note that 
+\begin_inset Formula $t\sim t(N-K)$
+\end_inset
+
+ under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+ We reject 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ if 
+\begin_inset Formula $t>t_{\alpha}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

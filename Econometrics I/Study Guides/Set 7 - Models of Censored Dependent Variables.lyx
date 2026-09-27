@@ -1,0 +1,1762 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Set 7: Models of Censored Dependent Variable
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Abstract
+
+\series bold
+\size normal
+Censored and Truncated Model: 
+\series default
+Specification and interpretation of the model; Estimation (MLE and EM);
+ Type 1 Tobit Model; Type II Tobit Model (Incidental Truncation)
+\end_layout
+
+\begin_layout Section*
+Standard (singularly censored) Tobit Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the latent variable model
+\begin_inset Formula 
+\[
+y_{t}^{*}=X_{t}\beta+u_{t},\ u_{t}\sim\mbox{i.i.d.}(0,\sigma^{2})
+\]
+
+\end_inset
+
+where observations on regressors 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ are fully available, but observations on the dependent variable are censored:
+\begin_inset Formula 
+\[
+y_{t}\begin{cases}
+y_{t}^{*} & \mbox{if}\ y_{t}^{*}>0\\
+0 & \mbox{if}\ y_{t}^{*}\leq0
+\end{cases}
+\]
+
+\end_inset
+
+This is called the standard (singularly censored) 
+\emph on
+Tobit
+\emph default
+ model when 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ has a normal distribution.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Tobin's (1958) model is a regression equation of the ratio of total durable
+ goods expenditure to disposable income on the age of the head of the household
+ and the ratio of liquid assets to disposable income.
+ Another example of early application is Fair's (1978) model of the number
+ of extra-marital affairs on sex, age, number of years married, number of
+ children, education, occupation, degree of religiousness.
+\end_layout
+
+\begin_layout Subsection*
+Properties of the OLSE
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose that the error term 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ satisfies the Gauss-Markove assumptions to that the OLS is BLUE if observations
+ on the dependent variable are not censored.
+ Let 
+\begin_inset Formula $y_{t}^{+}\equiv y_{t}^{*}>0$
+\end_inset
+
+ denote the positive observed data.
+ One may apply the OLS to estimate the Tobit model using
+\end_layout
+
+\begin_layout Enumerate
+positively observed data only, 
+\begin_inset Formula $y_{t}^{+}=X_{t}\beta+\eta_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+all observations (including zeros), 
+\begin_inset Formula $y_{t}=X_{t}\beta+\epsilon_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The OLSE of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is biased and inconsistent in both cases.
+ To show this, consider
+\begin_inset Formula 
+\begin{gather*}
+E(y_{t}^{+})\equiv E(y_{t}^{*}|y_{t}^{*}>0)=E(X_{t}\beta+u_{t}|u_{t}<-X_{t}\beta)=X_{t}\beta+E(u_{t}|u_{t}<-X_{t}\beta)=X_{t}\beta+E(u_{t}^{+})\neq X_{t}\beta\\
+E(y_{t})=P(y_{t}>0)E(y_{t}|y_{t}>0)+P(y_{t}=0)E(y_{t}|y_{t}=0)=\left[1-F(-X_{t}\beta)\right]E(y_{t}^{+})\equiv P_{t}^{+}E(y_{t}^{+})\neq X_{t}\beta
+\end{gather*}
+
+\end_inset
+
+where 
+\begin_inset Formula $F$
+\end_inset
+
+ is the cumulative distribution function of 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+, 
+\begin_inset Formula $E(u_{t}^{+})=E(u_{t}|u_{t}>-X_{t}\beta)$
+\end_inset
+
+ is the truncated mean of the error term, and 
+\begin_inset Formula $P_{t}^{+}=1-F(-X_{t}\beta)$
+\end_inset
+
+ is the probability of being above the limit.
+ This implies that error terms in the regression equations in (a) and (b)
+ above do not have zero means, and heace OLSE is biased.
+ Note that
+\begin_inset Formula 
+\begin{eqnarray*}
+E(y_{t}) & = & \int y_{t}f(y_{t})dy_{t}\\
+ & = & \int P(y_{t}>0)y_{t}f(y_{t}|y_{t}>0)+P(y_{t}=0)(0)f(y_{t}|y_{t}=0)dy_{t}\\
+ & = & P(y_{t}>0)\int y_{t}f(y_{t}|y_{t}>0)dy_{t}\\
+ & = & P(y_{t}>0)E(y_{t}|y_{t}>0)
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $f(y_{t})$
+\end_inset
+
+ is the unconditional pdf.
+\end_layout
+
+\begin_layout Remark*
+Computation of the truncated mean 
+\begin_inset Formula $E(u_{t}^{+})=E(u_{t}|u_{t}>-X_{t}\beta)$
+\end_inset
+
+ uses the truncated density function of 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+, which is given by
+\begin_inset Formula 
+\[
+f(u_{t}|u_{t}>c)=\begin{cases}
+\frac{f(u_{t})}{1-F(c)} & \mbox{if}\ u_{t}>c\\
+0 & \mbox{otherwise}
+\end{cases}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $c=-X_{t}\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $f$
+\end_inset
+
+ is the probability density function of 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+.
+ The mean of this distribution is computed by the usual formula
+\begin_inset Formula 
+\[
+E(u_{t}|u_{t}>c)={\displaystyle \intop_{c}^{\infty}}z\frac{f(z)}{1-F(c)}\ dz
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Marginal Effects of Regressors
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can consider several effects of a regressor: the marginal effect on the
+ means of the latent dependent variable 
+\begin_inset Formula $E(y_{t}^{*})$
+\end_inset
+
+, of the censored dependent variable 
+\begin_inset Formula $E(y_{t})$
+\end_inset
+
+, of the positive dependent variable 
+\begin_inset Formula $E(y_{t}^{+})$
+\end_inset
+
+, of the negative dependent variable 
+\begin_inset Formula $E(y_{t}^{-})$
+\end_inset
+
+, and the probability of being above the limit 
+\begin_inset Formula $P_{t}^{+}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial E(y_{t}^{*})}{\partial X_{tk}} & = & \beta_{k}\\
+\frac{\partial E(y_{t}^{+})}{\partial X_{tk}} & = & \beta_{k}+\frac{\partial E(u_{t}^{+})}{\partial X_{tk}}\\
+\frac{\partial P_{t}^{+}}{\partial X_{tk}} & = & f(-X_{t}\beta)\beta_{k}\\
+\frac{\partial E(y_{t})}{\partial X_{tk}} & = & P_{t}^{+}\frac{\partial E(y_{t}^{+})}{\partial X_{tk}}+E(y_{t}^{+})\frac{\partial P_{t}^{+}}{\partial X_{tk}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The last expression shows the decomposition of the marginal effect of a
+ regressor on the expected censored dependent variable 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ into two components.
+ This decomposition is suggest in Tobin (1958) and worked out in detail
+ by McDonald and Moffitt (1980).
+ In the example of household expenditure on consumer durables, the first
+ term captures the effect of the regressor on the expenditures of those
+ who had positive expenditures.
+ Tobin called the first term 
+\begin_inset Quotes eld
+\end_inset
+
+the size of non-limit responses.
+\begin_inset Quotes erd
+\end_inset
+
+ The second term caputres the effect of the regressor on the change of the
+ households which have a positive expenditure, either moving from positive
+ expenditure to zero expenditure, or vice versa.
+ If a houshold moves from ther zero to positive expenditure group, its expected
+ expenditure is 
+\begin_inset Formula $E(y_{t}^{+})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The marginal effects of a regressor are not constant except for the effect
+ of the mean of the latent variable.
+ They are functions of the values of all regressors.
+ Therefore, the marginal effects can be evaluated at various values of the
+ regressors, and it is a common practice to evaluate them at the sample
+ means of continuous regressors.
+ But, they can also be computed for a set of specific values of the regressors.
+ When a regressors is a dscirete variable (like a 0-1 dummy variable), its
+ marginal effect can be evaluated by computing the mean function at value
+ 0 and then at value 1.
+ The difference between the two values is then take as the marginal effect
+ of a binary regressor.
+ This value of course depends on the choice of the values of other regressors.
+\end_layout
+
+\begin_layout Subsection*
+Estimation of Censored Model
+\end_layout
+
+\begin_layout Subsubsection*
+Maximum Likelihood Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Observations are either the event of 
+\begin_inset Formula $y_{t}^{*}\leq0$
+\end_inset
+
+, or the value of 
+\begin_inset Formula $y_{t}^{*}$
+\end_inset
+
+ when 
+\begin_inset Formula $y_{t}^{*}>0$
+\end_inset
+
+.
+ Define a binary dummy variable for censoring
+\begin_inset Formula 
+\[
+d_{t}=\begin{cases}
+0 & \mbox{if}\ y_{t}=0\ (y_{t}^{*}\leq0)\\
+1 & \mbox{if}\ y_{t}>0\ (y_{t}^{*}>0)
+\end{cases}
+\]
+
+\end_inset
+
+The single likelihood function is either a discrete probability 
+\begin_inset Formula $F(-X_{t}\beta)=P(y_{t}^{*}\leq0)$
+\end_inset
+
+ for 
+\begin_inset Formula $y_{t}=0$
+\end_inset
+
+, or the density 
+\begin_inset Formula $f(y_{t}^{*})$
+\end_inset
+
+ for 
+\begin_inset Formula $y_{t}>0$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+L_{t}(y_{t})=F(-X_{t}\beta)^{1-d_{t}}f(y_{t}-X_{t}\beta)^{d_{t}}
+\]
+
+\end_inset
+
+The likelihood function and the log likelihood function for all observations
+ are
+\begin_inset Formula 
+\begin{eqnarray*}
+L & = & {\displaystyle \prod_{t=1}^{n}}\left[F(-X_{t}\beta)\right]^{1-d_{t}}\left[f(y_{t}-X_{t}\beta)\right]^{d_{t}}\\
+\ln L & = & {\displaystyle \sum_{t=1}^{n}}\left((1-d_{t})\ln\left[F(-X_{t}\beta)\right]+d_{t}\ln\left[f(y_{t}-X_{t}\beta)\right]\right)
+\end{eqnarray*}
+
+\end_inset
+
+The MLE of the parameters 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is the root of the gradient vector
+\begin_inset Formula 
+\[
+\frac{\partial\ln L}{\partial\theta}={\displaystyle \sum_{t=1}^{n}}\left[(1-d_{t})\frac{f(-X_{t}\beta)}{F(-X_{t}\beta)}\frac{\partial f(-X_{t}\beta)}{d\theta}+d_{t}\frac{1}{f(y_{t}-X_{t}\beta)}\frac{\partial f(y_{t}-X_{t}\beta)}{\partial\theta}\right]=0
+\]
+
+\end_inset
+
+and the asymptotic covariance matrix of 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ is 
+\begin_inset Formula $(n\Psi)^{-1}$
+\end_inset
+
+, where 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ is the information matrix.
+\end_layout
+
+\begin_layout Subsubsection*
+Tobit Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Tobin assume a normal distribution, 
+\begin_inset Formula $u_{t}|X_{t}\sim\mbox{i.i.n}(0,\sigma^{2})$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\Phi(z)$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi(z)$
+\end_inset
+
+ be the cdf and pdf of a standard normal random variable, respectively.
+ Then,
+\begin_inset Formula 
+\[
+F(-X_{t}\beta)=P(y_{t}\leq0)=P(u_{t}\leq-X_{t}\beta)=P\left(\frac{u_{t}}{\sigma}\leq-\frac{X_{t}\beta}{\sigma}\right)=\Phi\left(-\frac{X_{t}\beta}{\sigma}\right)=1-\Phi\left(\frac{X_{t}\beta}{\sigma}\right)\equiv1-\Phi_{t}
+\]
+
+\end_inset
+
+and the log likelihood function becomes
+\begin_inset Formula 
+\[
+l(\beta,\sigma^{2})={\displaystyle \sum_{t=1}^{n}}\left\{ (1-d_{t})\ln(1-\Phi_{t})+d_{t}\left[-\left(\frac{1}{2}\right)\ln(\sigma^{2})-\left(\frac{1}{2}\right)\ln(2\pi)-\frac{\left(y_{t}-X_{t}\beta\right)^{2}}{2\sigma^{2}}\right]\right\} 
+\]
+
+\end_inset
+
+Amemiya (1973) proved that this Tobit log-likelihood function is not globablly
+ concave with respect to 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+.
+ Hence, the Newton-Raphson, or the method of scoring, or the alternative
+ iterative algortihm to solve for 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ require their consistent initial estimators.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The log-likelihod function can be written is transformed parameters 
+\begin_inset Formula $\alpha=\frac{\beta}{\sigma}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau=\frac{1}{\sigma}$
+\end_inset
+
+ instead of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+l(\alpha,\tau)={\displaystyle \sum_{t=1}^{n}}\left\{ \left(1-d_{t}\right)\ln\left(1-\Phi_{t}\right)+d_{t}\ln\tau-\left(\frac{d_{t}}{2}\right)\ln(2\pi)-d_{t}\frac{\left(\tau y_{t}-X_{t}\alpha\right)^{2}}{2}\right\} 
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\Phi_{t}=\Phi\left(\frac{X_{t}\beta}{\sigma}\right)=\Phi(X_{t}\alpha)$
+\end_inset
+
+.
+ Olsen (1978) showed that this log-likelihood funcitons is globally concave
+ with respect to the transformed parameters 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ Therefore, the log-likelihood function in terms of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau$
+\end_inset
+
+ can be maximized by finding the roots of its gradient vectors, starting
+ from any arbitrary initial values of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ Estimators of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ can then be recovered from the estimates of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\hat{\sigma}^{2}=\frac{1}{\hat{\tau}^{2}}\ \mbox{and}\ \hat{\beta}=\hat{\alpha}\cdot\hat{\sigma}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+EM Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Define a new dependent variable that replaces the censored value with its
+ conditional expectation
+\begin_inset Formula 
+\[
+\tilde{y}_{t}=\begin{cases}
+y_{t}^{*} & \mbox{if}\ y_{t}^{*}>0\\
+E(y_{t}^{-}) & \mbox{if}\ y_{t}^{*}\leq0
+\end{cases}
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+E(y_{t}^{-})\equiv E(y_{t}^{*}|y_{t}\leq0)=E(X_{t}\beta+u_{t}|u_{t}\leq-X_{t}\beta)=X_{t}\beta+E(u_{t}|u_{t}\leq-X_{t}\beta)=X_{t}\beta-\sigma\left[\frac{\phi_{t}}{\left(1-\Phi_{t}\right)}\right]
+\]
+
+\end_inset
+
+The iterative EM algorithm follows the following procedure
+\end_layout
+
+\begin_layout Enumerate
+Choose initial consistent estimators of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+, and compute 
+\begin_inset Formula $E(y_{t}^{-})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute the new estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ by the OLS: 
+\begin_inset Formula $\hat{\beta}=(X^{\prime}X)^{-1}X^{\prime}\tilde{Y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute the new estimator of 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ by useing the new 
+\begin_inset Formula $\beta$
+\end_inset
+
+ from (ii) and non-censored data
+\begin_inset Formula 
+\[
+\hat{\sigma}^{2}=\frac{{\displaystyle \sum_{t=1}^{n}}d_{t}(y_{t}-X_{t}\hat{\beta})y_{t}}{{\displaystyle \sum_{t=1}^{n}}d_{t}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Repeat the procedure until convergence.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The EM algorithm can also be written in terms of parameters 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ Define
+\begin_inset Formula 
+\[
+\tilde{y}_{t}=\begin{cases}
+\tau y_{t}^{*} & \mbox{if}\ y_{t}^{*}>0\\
+\tau E(y_{t}^{-}) & \mbox{if}\ y_{t}^{*}\leq0
+\end{cases}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\begin{eqnarray*}
+\tau E(y_{t}^{-}) & = & X_{t}\alpha-\lambda_{t}\\
+\lambda_{t} & = & \frac{\phi_{t}}{(1-\Phi_{t})}
+\end{eqnarray*}
+
+\end_inset
+
+The maximization step of the EM algortihm gives
+\begin_inset Formula 
+\[
+\hat{\alpha}=(X^{\prime}X)^{-1}X^{\prime}\tilde{y}
+\]
+
+\end_inset
+
+and the estimator of 
+\begin_inset Formula $\tau$
+\end_inset
+
+ as the solution
+\begin_inset Formula 
+\[
+\tau^{2}{\displaystyle \sum_{N_{2}}}\left(y_{t}^{*}\right)^{2}-\tau{\displaystyle \sum_{N_{2}}}(X_{t}\alpha)y_{t}^{*}-N_{2}=0\implies\alpha\tau^{2}-b\tau-c=0
+\]
+
+\end_inset
+
+which is a quadratic function in 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\tau$
+\end_inset
+
+ is positive, we take the positive root
+\begin_inset Formula 
+\[
+\hat{\tau}=\frac{b+\sqrt{b^{2}+4ac}}{2a}
+\]
+
+\end_inset
+
+The iterative procedure starts with any initial values of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau>0$
+\end_inset
+
+.
+ Compute 
+\begin_inset Formula $\lambda_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{t}\alpha-\lambda_{t}$
+\end_inset
+
+ to construct the vector 
+\begin_inset Formula $\tilde{y}$
+\end_inset
+
+, and estiamte 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ The esitmate of 
+\begin_inset Formula $\tau$
+\end_inset
+
+ is then computed as the positive root of the quadratic equation specified
+ above.
+ This process is repeated until convergence is achieved.
+\end_layout
+
+\begin_layout Subsubsection*
+Heckman's Two-Step Method
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This method is based on a regression equation for only the non-censored
+ sample
+\begin_inset Formula 
+\[
+y_{t}^{+}=X_{t}\beta+\left(\frac{\phi_{t}}{\Phi_{t}}\right)\sigma+\eta_{t},\ y_{t}^{+}=y_{t}>0
+\]
+
+\end_inset
+
+or for the entire sample
+\begin_inset Formula 
+\[
+y_{t}=\left(\Phi_{t}X_{t}\right)\beta+\phi_{t}\sigma+\eta_{t}
+\]
+
+\end_inset
+
+Parameters 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ can be estimated from these equations by OLS if we have observations on
+ 
+\begin_inset Formula $\phi_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Phi_{t}$
+\end_inset
+
+.
+ Heckman suggested to estimate them from a probit model of the entire sample,
+ by setting the observed dependent 
+\begin_inset Formula $y_{t}=1$
+\end_inset
+
+ for 
+\begin_inset Formula $y_{t}^{*}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Truncated Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This is the case where observations on both dependent and independent variables
+ are not available for a sub-population.
+ The Tobit model becomes a truncated model if the sample of negative 
+\begin_inset Formula $y_{t}^{*}$
+\end_inset
+
+ is not used in the estimation of the population parameter 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ The least squares estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is biased and inconsistent in the case of truncated data set, i.e., using
+ the observations of positive 
+\begin_inset Formula $y_{t}^{*}$
+\end_inset
+
+ only.
+ Consider a regression equation
+\begin_inset Formula 
+\[
+y_{t}^{*}=X_{t}\beta+u_{t}^{+},\ y_{t}^{*}>0
+\]
+
+\end_inset
+
+When 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ is a normal random variable, the moments of 
+\begin_inset Formula $u_{t}^{+}$
+\end_inset
+
+ are
+\begin_inset Formula 
+\begin{eqnarray*}
+E(u_{t}^{+}|y_{t}^{*}>0) & = & \frac{\phi_{t}}{\Phi_{t}}\sigma\\
+\mbox{Var}(u_{t}^{+}|y_{t}^{*}>0) & = & \sigma^{2}\left[1-\kappa_{t}(\kappa_{t}+X_{t}\alpha)\right],\ \kappa_{t}=\frac{\phi_{t}}{\Phi_{t}}
+\end{eqnarray*}
+
+\end_inset
+
+The LSE of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is biased and inconsistent because of the nonzero mean of the error term.
+ The regression error term is also heteroskedastic.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A consistent estimator of the population parameters can be obtained by the
+ MLE.
+ The truncated density function of 
+\begin_inset Formula $y_{t}^{*}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+f(y_{t}^{*}|y_{t}^{*}>0)=\begin{cases}
+\frac{(\frac{1}{\sigma})\phi\left(\frac{y_{t}^{*}-X_{t}\beta}{\sigma}\right)}{\Phi\left(\frac{X_{t}\beta}{\sigma}\right)} & \mbox{if}\ y_{t}^{*}>0\\
+0 & \mbox{otherwise}
+\end{cases}
+\]
+
+\end_inset
+
+and hence, the log-likelihood function is
+\begin_inset Formula 
+\[
+l=-{\displaystyle \sum_{t}}\ln\left(\Phi_{t}\right)-\frac{N_{2}}{2}\ln(2\pi)-\frac{N_{2}}{2}\ln(\sigma^{2})-\frac{1}{2\sigma^{2}}{\displaystyle \sum_{t}}(y_{t}^{*}-X_{t}\beta)^{2}
+\]
+
+\end_inset
+
+where the summation is only over 
+\begin_inset Formula $N_{2}$
+\end_inset
+
+ sample of positive 
+\begin_inset Formula $y_{t}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Incidental Truncation - Type II Tobit Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In censored and truncated models, observations of the dependent variable
+ is based on the magnitude of the dependent variable itself.
+ What if the observation of the dependent variable depends on the magnitude
+ (sign) of another variable? One of the earliest studies is Gronau's (1973)
+ model:
+\begin_inset Formula 
+\begin{eqnarray*}
+w_{i} & = & X_{2i}\gamma+v_{i}\\
+w_{i}^{r} & = & Z_{t}\gamma^{r}+v_{i}^{r}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ is the wage rate offered to individual 
+\begin_inset Formula $i$
+\end_inset
+
+ in the market regardless of the number of working hours and 
+\begin_inset Formula $w_{i}^{r}$
+\end_inset
+
+ is the reservation wage rate of individual 
+\begin_inset Formula $i$
+\end_inset
+
+ which is not an observable variable.
+ An individual participates in the labor market and we can observe her market
+ wage if and only if 
+\begin_inset Formula $w_{i}-w_{i}^{r}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Heckman's (1974) paper is motivated by his observation of the research on
+ the labor supply of married women, included wage rates, hours of work,
+ and decision to work.
+ Typical research estimated the labor supply by estimating separately an
+ equation for hours of work and an equation for the probability of work,
+ or estimate the same labor supply function for the working and non-working
+ women assigning zero hour for non-working women.
+ His model is a structural model which includes the functions of 
+\begin_inset Quotes eld
+\end_inset
+
+the probability that a woman works, her hours of work, her observed wage
+ rate, and her asking wage or 
+\begin_inset Quotes eld
+\end_inset
+
+shadow price of time.
+\begin_inset Quotes erd
+\end_inset
+
+ The shadow price is now called the reservation wage.
+ An equilibrium condition is that when a woman works her hours of work adjust
+ to equate the market wage and reservation wage.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Heckman specifies the reservation wage 
+\begin_inset Formula $w^{*}$
+\end_inset
+
+ and market wage 
+\begin_inset Formula $w$
+\end_inset
+
+ functions as
+\begin_inset Formula 
+\begin{eqnarray*}
+w^{*} & = & g(h,w_{m},P,A,A)\\
+w & = & B(E,S)
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $h$
+\end_inset
+
+ is hours of work, 
+\begin_inset Formula $w_{m}$
+\end_inset
+
+ is the wage of the husband, 
+\begin_inset Formula $P$
+\end_inset
+
+ is the price of other goods, 
+\begin_inset Formula $A$
+\end_inset
+
+ is the household's asset income, and 
+\begin_inset Formula $Z$
+\end_inset
+
+ are other characteristics such as number of children, education level,
+ etc., 
+\begin_inset Formula $E$
+\end_inset
+
+ is job experience, and 
+\begin_inset Formula $S$
+\end_inset
+
+ is schooling.
+ The dogenous variables are wage rates and hours of work 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ Specify these equations in linear form
+\begin_inset Formula 
+\begin{eqnarray*}
+\ln(w^{*}) & = & \beta_{0}+\beta_{1}h+X_{2}\beta_{2}+\epsilon\\
+\ln(w) & = & b_{0}+b_{1}S+b_{2}E+u
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $(\epsilon_{i},u_{i})$
+\end_inset
+
+ are i.i.d.
+ 
+\begin_inset Formula $N(0,\Sigma)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $h^{*}$
+\end_inset
+
+ be the desired hours of work that satisfies 
+\begin_inset Formula $\ln(w)=\ln(w^{*})$
+\end_inset
+
+, i.e.,
+\begin_inset Formula 
+\[
+h^{*}=\frac{1}{\beta_{1}}\left(b_{0}+b_{1}S+b_{2}E-\beta_{0}-X_{2}\beta_{2}+u-\epsilon\right)
+\]
+
+\end_inset
+
+A woman works only if 
+\begin_inset Formula $\ln(w^{*}(h=0))<\ln(w)$
+\end_inset
+
+, that is, only if 
+\begin_inset Formula $h^{*}>0$
+\end_inset
+
+.
+ The reduced form model of Heckman consists of the market wage equation
+ and the desired hours of work equation with observations on wage and hours
+ of work only if 
+\begin_inset Formula $h^{*}>0$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\ln(w)=\begin{cases}
+b_{0}+b_{1}S+b_{2}E+u & \mbox{if}\ h^{*}>0\\
+- & \mbox{if}\ h^{*}\leq0
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+We can put his reduced form model in a formal form as
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{1}^{*} & = & X_{1}\beta_{1}+u_{1}\\
+y_{2}^{*} & = & X_{2}\beta_{2}+u_{2}
+\end{eqnarray*}
+
+\end_inset
+
+where the first equation is the market wage equation, and the second equation
+ is the desired hours of work (sample selection) equation.
+ The error terms 
+\begin_inset Formula $(u_{1t},u_{2t})$
+\end_inset
+
+ is an i.i.d.
+ random vector with zero means and a covariance matrix 
+\begin_inset Formula $\Sigma=(\sigma_{ij})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The sample selection is determined by
+\begin_inset Formula 
+\[
+y_{1}=\begin{cases}
+y_{1}^{*} & \mbox{if}\ y_{2}^{*}>0\\
+- & \mbox{if}\ y_{2}^{*}\leq0
+\end{cases}
+\]
+
+\end_inset
+
+The observed value 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ can be positive or negative in general and there are 
+\emph on
+no observations
+\emph default
+ on 
+\begin_inset Formula $y_{1}^{*}$
+\end_inset
+
+ when 
+\begin_inset Formula $y_{2}^{*}\leq0$
+\end_inset
+
+.
+ Some authors specify 
+\begin_inset Formula $y_{1}=0$
+\end_inset
+
+ when 
+\begin_inset Formula $y_{2}^{*}\leq0$
+\end_inset
+
+, but it does not really mean that the observed value is zero: it simply
+ states the event of no observation on 
+\begin_inset Formula $y_{1}^{*}$
+\end_inset
+
+.
+ That is, observations on the first equation are 
+\emph on
+truncated
+\emph default
+.
+ There is no need for 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ to be observed if 
+\begin_inset Formula $y_{2}^{*}\leq0$
+\end_inset
+
+, though we assume full observations on 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Sometimes, it is assume that only the signs of 
+\begin_inset Formula $y_{2}^{*}$
+\end_inset
+
+ are observed, i.e., a binary response model for 
+\begin_inset Formula $y_{2}^{*}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+y_{2}=\begin{cases}
+0 & \mbox{if}\ y_{2}^{*}\leq0\\
+1 & \mbox{if}\ y_{2}>0
+\end{cases}
+\]
+
+\end_inset
+
+and the sample selection is specified as
+\begin_inset Formula 
+\[
+y_{1}=\begin{cases}
+y_{1}^{*} & \mbox{if}\ y_{2}=1\\
+- & \mbox{if}\ y_{2}=0
+\end{cases}
+\]
+
+\end_inset
+
+This specification makes it clear that the second equation is a binary choice
+ (probit or logit) model.
+ Because of this nature, the variance of 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ is not identifiable and it is set 
+\begin_inset Formula $\sigma_{22}=1$
+\end_inset
+
+.
+ The data consists of 
+\begin_inset Formula $(y_{2},y_{1})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Estimation
+\end_layout
+
+\begin_layout Subsubsection*
+Least Squares Estimation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The estimator of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ from 
+\begin_inset Formula $y_{1}=X_{1}\beta+\epsilon_{1}$
+\end_inset
+
+ using the observed values of 
+\begin_inset Formula $y_{1}^{*}$
+\end_inset
+
+ is biased as the data is truncated This bias is called the 
+\emph on
+sample selection bias
+\emph default
+.
+ The source of this bias is same as the case of censored and truncated models,
+ i.e., 
+\begin_inset Formula $E(y_{1})=E(y_{1}^{*}|y_{2}^{*}>0)\neq X_{1}\beta_{1}$
+\end_inset
+
+.
+ We assume that error terms are distributed as normal.
+\end_layout
+
+\begin_layout Theorem*
+Let 
+\begin_inset Formula $u_{1}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{2}^{*}$
+\end_inset
+
+ normal random variables.
+ Then, 
+\begin_inset Formula $E(u_{1}^{*}|u_{2}^{*})=E(u_{1}^{*})+\left(\frac{\sigma_{12}}{\sigma_{22}}\right)\left[u_{2}^{*}-E(u_{2}^{*})\right]$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $E(u_{1}^{*})=0$
+\end_inset
+
+ and 
+\begin_inset Formula $E(u_{2}^{*})=0$
+\end_inset
+
+, then 
+\begin_inset Formula $E(u_{1}^{*}|u_{2}^{*})=\left(\frac{\sigma_{12}}{\sigma_{22}}\right)u_{2}^{*}$
+\end_inset
+
+.
+ The linear projection of 
+\begin_inset Formula $u_{1}^{*}$
+\end_inset
+
+ onto 
+\begin_inset Formula $u_{2}^{*}$
+\end_inset
+
+ can be written as 
+\begin_inset Formula $u_{1}^{*}=\frac{\sigma_{12}}{\sigma_{22}}u_{2}^{*}+\epsilon_{1}^{*}$
+\end_inset
+
+ where 
+\begin_inset Formula $\mbox{Cov}(u_{2}^{*},\epsilon_{1}^{*})=0$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\mbox{Var}(\epsilon_{1}^{*})=\sigma_{11}-\sigma_{12}\sigma_{22}^{-1}\sigma_{21}$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\[
+E(u_{1}^{*}|u_{2}^{*}>-X_{2}\beta)=E\left(\left.\frac{\sigma_{12}}{\sigma_{22}}u_{2}^{*}+\epsilon_{1}^{*}\right|u_{2}^{*}>-X_{2}\beta\right)=\frac{\sigma_{12}}{\sigma_{22}}E\left(u_{2}^{*}|u_{2}^{*}>-X_{2}\beta\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, it is straightforward to show
+\begin_inset Formula 
+\begin{eqnarray*}
+E(y_{1}) & = & E(y_{1}^{*}|y_{2}^{*}>0)\\
+ & = & E(X_{1}\beta_{1}+u_{1}|u_{2}>-X_{2}\beta_{2})\\
+ & = & X_{1}\beta_{1}+E(u_{1}|u_{2}>-X_{2}\beta_{2})\\
+ & = & X_{1}\beta_{1}+\frac{\sigma_{12}}{\sigma_{2}}\kappa_{2}
+\end{eqnarray*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{eqnarray*}
+\mbox{Var}(y_{1}) & = & \mbox{Var}(y_{1}^{*}|y_{2}^{*}>0)\\
+ & = & \sigma_{11}-\frac{\sigma_{12}^{2}}{\sigma_{22}}\kappa_{2}\left(\kappa_{2}+X_{2}\alpha_{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{gather*}
+\kappa_{2}=\frac{\phi\left(\frac{X_{2}\beta_{2}}{\sigma_{2}}\right)}{\Phi\left(\frac{X_{2}\beta_{2}}{\sigma_{2}}\right)}=\frac{\phi(X_{2}\alpha_{2})}{\Phi(X_{2}\alpha_{2})}\\
+\sigma_{2}=\sqrt{\sigma_{22}}
+\end{gather*}
+
+\end_inset
+
+TThese results suggest a heteroskedastic regression model for the observed
+ 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{1} & = & X_{1}\beta_{1}+\left(\frac{\sigma_{12}}{\sigma_{2}}\right)\kappa_{2}+\xi_{1}\\
+E(\xi_{1}) & = & 0\\
+E(\xi^{2}) & = & \sigma_{11}-\frac{\sigma_{12}^{2}}{\sigma_{22}}\kappa_{2}\left(\kappa_{2}+X_{2}\alpha_{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The second term in this expression is the sourse of the bias and inconsistency
+ of the least squares estimator of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $\sigma_{2}$
+\end_inset
+
+ appears always as a combination with 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+ in 
+\begin_inset Formula $\kappa_{2}$
+\end_inset
+
+ or as a combination with 
+\begin_inset Formula $\sigma_{12}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\sigma_{2}$
+\end_inset
+
+ is not identifiable and is usually set to 
+\begin_inset Formula $\sigma_{2}=1$
+\end_inset
+
+.
+ Note also that, if two erro terms are not correlated 
+\begin_inset Formula $(\sigma_{12}=0)$
+\end_inset
+
+, the the OLSE is a consistent estimator.
+ Since we have assumed 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ are normal, then 
+\begin_inset Formula $\mbox{Cov}(u_{1},u_{2})=0$
+\end_inset
+
+ implies that 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ and independent.
+ Thus, 
+\begin_inset Formula $E(u_{1}|u_{2})=E(u_{1})=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Some important things to note:
+\end_layout
+
+\begin_layout Enumerate
+If error terms are uncorrelated 
+\begin_inset Formula $(\sigma_{12}=0)$
+\end_inset
+
+, then the OLSE of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ from the regression equation 
+\begin_inset Formula $y_{1}=X_{1}\beta_{1}+v_{1}$
+\end_inset
+
+ is BLUE if other standard assumptions are valid.
+ That is, there is no sample selection bias if 
+\begin_inset Formula $\sigma_{12}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E(y_{1})$
+\end_inset
+
+ is a nonlinear function of 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ as it enters through 
+\begin_inset Formula $\kappa_{2}$
+\end_inset
+
+.
+ Hence, if one estimates an expanded regressing including 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{1}=X_{1}\beta_{1}+X_{2}\delta_{2}+e_{1}$
+\end_inset
+
+, then the coefficient 
+\begin_inset Formula $\delta_{2}$
+\end_inset
+
+ may turn out to be significant even if 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ does not belong to the first latent variable equation.
+ Its significance is solely due to the sample selection problem.
+\end_layout
+
+\begin_layout Enumerate
+If a common variable is included in 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+, one may make a false conclusion that the proper equation is nonlinear
+ in that variable.
+\end_layout
+
+\begin_layout Subsubsection*
+Heckman's Two-Step Esitmator
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+From the mean function 
+\begin_inset Formula $E(y_{1})$
+\end_inset
+
+, we write a regresison equation
+\begin_inset Formula 
+\[
+y_{1}=X_{1}\beta_{1}+\left(\frac{\sigma_{12}}{\sigma_{2}}\right)\frac{\phi(X_{2}\alpha_{2})}{\Phi(X_{2}\alpha_{2})}+\xi_{1}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\xi_{1}$
+\end_inset
+
+ is heteroskedastic.
+ If 
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+ is known, we can compute 
+\begin_inset Formula $\frac{\phi(X_{2}\alpha_{2})}{\Phi(X_{2}\alpha_{2})}$
+\end_inset
+
+ and then estimate 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(\frac{\sigma_{12}}{\sigma_{2}}\right)$
+\end_inset
+
+ by the OLS or the GLS (heteroskedasticity).
+ Heckman's two-step procedure is
+\end_layout
+
+\begin_layout Enumerate
+Estimate 
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+ with probit MLE (setting 
+\begin_inset Formula $\sigma_{22}=1$
+\end_inset
+
+ since it is not identifiable)
+\end_layout
+
+\begin_layout Enumerate
+Estimate 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ be the OLS or the GLS
+\end_layout
+
+\begin_layout Subsubsection*
+Maximum Likelihood Estimation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The likelihood function is a joint density of all observations, which is
+ a multiplication of the densities of each observation for a random sample.
+ In this model, we have two sets of observations 
+\begin_inset Formula $(y_{2}=0,\ \mbox{no}\ y_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $(y_{2}=1,\ y_{1}=y_{1}^{*})$
+\end_inset
+
+.
+ The probability of observing the first set is just the probability of the
+ event 
+\begin_inset Formula $y_{2}=0$
+\end_inset
+
+.
+ The probability of observing the second set is the joint probability of
+ observing 
+\begin_inset Formula $y_{2}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{1}=y_{1}^{*}$
+\end_inset
+
+.
+ This joint probability can be written as 
+\begin_inset Formula $f(y_{1}^{*}|y_{2}=1)P(y_{2}=1)$
+\end_inset
+
+.
+ Therefore, the likelihood functions can be written as
+\begin_inset Formula 
+\[
+L={\displaystyle \prod_{y_{t2}=0}}P(y_{t2}=0)\times{\displaystyle \prod_{y_{t2=1}}}\left[f(y_{t1}^{*}|y_{t2}=1)\right]={\displaystyle \prod_{t=1}^{n}}\left[P(y_{t2}=0)\right]^{1-y_{t2}}\left[f(y_{t1}^{*}|y_{t2}=1)P(y_{t2}=1)\right]^{y_{t2}}
+\]
+
+\end_inset
+
+Under the assumptions of normality, the first term can be written as
+\begin_inset Formula 
+\[
+P(y_{t2}=0)=P(y_{t2}^{*}\leq0)=P(u_{t2}\leq-X_{t2}\beta_{2})=1-\Phi\left(\frac{X_{t2}\beta_{2}}{\sigma_{2}}\right)=1-\Phi\left(X_{t2}\alpha_{2}\right)
+\]
+
+\end_inset
+
+For the second term, it is easier to rewrite it as
+\begin_inset Formula 
+\[
+f(y_{t1}^{*}|y_{t2}=1)P(y_{t2}=1)=P(y_{t2}=1|y_{t1}^{*})f(y_{t1}^{*})=P(y_{t2}^{*}>0|y_{t1}^{*})f(y_{t1}^{*})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $f(y_{t1}^{*})$
+\end_inset
+
+ is the unconditional marginal density of 
+\begin_inset Formula $y_{t1}^{*}$
+\end_inset
+
+.
+ We can do this since 
+\begin_inset Formula $f(z_{1},z_{2})=f(z_{1}|z_{2})f(z_{2})=f(z_{2}|z_{1})f(z_{1})$
+\end_inset
+
+.
+ The conditional probability in the last expression can be found from the
+ conditional distribution of 
+\begin_inset Formula $y_{t2}^{*}$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $y_{t1}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1420 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Econometrics I: Final Exam Solutions (2012)
+\end_layout
+
+\begin_layout Problem
+Consider a standard linear regression model 
+\begin_inset Formula $y=X\beta+u$
+\end_inset
+
+, where 
+\begin_inset Formula $X$
+\end_inset
+
+ is a 
+\emph on
+strictly
+\emph default
+ exogenous 
+\begin_inset Formula $N\times K$
+\end_inset
+
+ matrix of regressors with full column rank.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What is the critical assumption for the OLSE 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ to be unbiased? Prove its unbiasedness.
+\end_layout
+
+\begin_layout Enumerate
+Give a name of a model for which the OLSE 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is biased even if the assumption in (a) is satisfied.
+ Just the name of the model, and nothing else.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The critical assumptions for the OLSE 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ to be unbiased are
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $\mbox{rank}\ X=K$
+\end_inset
+
+, then 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is unique.
+ Also, 
+\begin_inset Formula $\mbox{rank}(X,y)=K+1$
+\end_inset
+
+ prevents a perfect fit.
+ Under this assumption,
+\begin_inset Formula 
+\[
+\hat{\beta}=(X^{\prime}X)^{-1}X^{\prime}y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E(u|X)=0$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is unbasied conditional on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+E(\hat{\beta}|X) & = & E\left[(X^{\prime}X)^{-1}X^{\prime}y|X\right]\\
+ & = & E\left[\beta+(X^{\prime}X)^{-1}X^{\prime}u|X\right]\\
+ & = & \beta+(X^{\prime}X)^{-1}X^{\prime}E(u|X)\\
+ & = & \beta
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Censored Model
+\end_layout
+
+\begin_layout Problem
+Explain the basic ideas of four different estimation methods: LSE, MLE,
+ MME, and MELE.
+ Make your answers as brief as possible without dropping the core ideas.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+LSE
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A residual is the difference between the observed value 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ and the predicted value 
+\begin_inset Formula $\hat{y}_{i}$
+\end_inset
+
+.
+ We wish to minimize the distance between 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{y}_{i}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Thus, the LSE finds an estimator that minimizes the sum of squared residuals,
+ i.e.,
+\begin_inset Formula 
+\[
+SSR(\tilde{\beta})=(y-X\tilde{\beta})^{\prime}(y-X\tilde{\beta})
+\]
+
+\end_inset
+
+No other informaiton is required
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+MLE
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The joint pdf of a random sample tells us the probability of a specific
+ set of observations, given the distribution paramaeters.
+ Assuming observations are i.i.d., the joint pdf is written as
+\begin_inset Formula 
+\[
+f(y_{1},\ldots,y_{n};\theta)={\displaystyle \prod_{i=1}^{n}}f(y_{i};\theta)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $f(y_{i};\theta)$
+\end_inset
+
+ is the pdf of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+.
+ In estimation, we do not know the distribution parameters, but we have
+ a set of observations.
+ So, we wish to find the parameter 
+\begin_inset Formula $\theta$
+\end_inset
+
+ that could have generated this set of observations, most likely.
+ Thus, to find 
+\begin_inset Formula $\theta$
+\end_inset
+
+, we maximize the log-likelihood function
+\begin_inset Formula 
+\[
+\ln\left[f(y_{1},\ldots,y_{n};\theta)\right]={\displaystyle \sum_{i=1}^{n}}\ln\left[f(y_{i};\theta)\right]
+\]
+
+\end_inset
+
+To perform MLE, we require knowledge of the population distribution function
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+MME
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The basic approach of the method of moments is to set the sample moments
+ of lowest order with the moments of the population distribution, and then
+ solve for unknown parameters.
+\begin_inset Formula 
+\begin{eqnarray*}
+E(X-\theta) & = & 0\\
+n^{-1}{\displaystyle \sum_{i=1}^{n}}X_{i}-\theta & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\bar under
+MELE
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose that we do not have the complete information contained in the distributi
+on funciton, but have only information about the moments.
+ The MELE wishes to maximize empirical probabilities replacing the density
+ function with moment conditions as constraints.
+\begin_inset Formula 
+\begin{eqnarray*}
+\max_{p_{i}} & {\displaystyle \sum_{i=1}^{n}}\ln(p_{i})\\
+\mbox{s.t.} & {\displaystyle p_{i}>0}\\
+ & {\displaystyle \sum_{i=1}^{n}}p_{i}=1\\
+ & {\displaystyle \sum_{i=1}^{n}}p_{i}(y_{i}-\theta)=0
+\end{eqnarray*}
+
+\end_inset
+
+Note that 
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{n}}p_{i}=1$
+\end_inset
+
+ is a normalization, and 
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{n}}p_{i}(y_{i}-\theta)=0$
+\end_inset
+
+ is the sample moment condition with the empirical probability 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ in place of 
+\begin_inset Formula $(\nicefrac{1}{n})$
+\end_inset
+
+.
+ First, taking the parameters as given, we estimate the log-likelihood function
+ with sample moment conditions.
+ Then, we estimate parameters from the empirical log-likelihood function.
+\end_layout
+
+\begin_layout Problem
+A decision maker 
+\begin_inset Formula $i$
+\end_inset
+
+ faces a choice problem: picking one from three choices.
+ Let the stochastic utility of each choice 
+\begin_inset Formula $j$
+\end_inset
+
+ be denoted by
+\begin_inset Formula 
+\[
+U_{ij}=X_{i}\beta_{j}+Z_{ij}\gamma+\epsilon_{ij}=m_{ij}+\epsilon_{ij},\ j=1,\ldots,J;\ i=1,\ldots,n
+\]
+
+\end_inset
+
+When alternative 
+\begin_inset Formula $j$
+\end_inset
+
+ is chosen by individual 
+\begin_inset Formula $i$
+\end_inset
+
+, we observe 
+\begin_inset Formula $y_{ij}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{ik}=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $k\neq j$
+\end_inset
+
+.
+ We wish to analyze the probability 
+\begin_inset Formula $p_{ij}\equiv P(y_{ij}=1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Show the steps to derive 
+\begin_inset Formula $p_{ij}$
+\end_inset
+
+ when 
+\begin_inset Formula $\epsilon_{ij}$
+\end_inset
+
+ is an i.i.d.
+ random variable with a common cdf 
+\begin_inset Formula $F(\epsilon_{ij})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose error terms are i.i.d.
+ Gumbell variables.
+ What is the model called in each case specified below:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\beta_{j}=0\ \forall\ j$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\gamma=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\gamma\neq0,\ \beta_{j}\neq0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If error terms are i.i.d.
+ Gumbell variables,
+\begin_inset Formula 
+\[
+p_{ij}=\frac{e^{m_{ij}}}{{\displaystyle \sum_{k=1}^{J}}e^{m_{ik}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Some of the parameters are not identifiable.
+ Show which parameters are not identifiable, and what is the convential
+ normalization rule?
+\end_layout
+
+\begin_layout Enumerate
+Explain how to construct the likelihood function.
+\end_layout
+
+\begin_layout Enumerate
+In the model (ii) of question (b), what does 
+\begin_inset Formula $\beta_{jk}$
+\end_inset
+
+ represent? Show your work.
+\end_layout
+
+\begin_layout Enumerate
+In the model (i) of question (b), show and explain the independence of irrelevan
+t alternatives (IIA).
+\end_layout
+
+\begin_layout Enumerate
+Which assumption of the model leads to IIA? Explain briefuly a model that
+ avoids that assumption.
+ Just two or three sentences with no equations.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Note that 
+\begin_inset Formula $y_{ij}=1$
+\end_inset
+
+ if 
+\begin_inset Formula $U_{ij}>U_{ik}$
+\end_inset
+
+ for all 
+\begin_inset Formula $k\neq j$
+\end_inset
+
+.
+ Thus
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{ij}\equiv P(y_{ij}=1) & = & P(U_{ij}>U_{ik}\ \forall\ k\neq j)\\
+ & = & P(m_{ij}+\epsilon_{ij}>m_{ik}+\epsilon_{ik}\ \forall\ k\neq j)\\
+ & = & P(\epsilon_{ik}<(m_{ij}-m_{ik})+\epsilon_{ij}\ \forall\ k\neq j)
+\end{eqnarray*}
+
+\end_inset
+
+We can find this joint distribution when we consider the conditional density
+ of 
+\begin_inset Formula $\epsilon_{ik}$
+\end_inset
+
+ for a given 
+\begin_inset Formula $\epsilon_{ij}$
+\end_inset
+
+, and then compute the weighted average of the conditional probability with
+ weights equal to the probability of 
+\begin_inset Formula $\epsilon_{ij}$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+P(y_{ij}=1)={\displaystyle \int}P(\epsilon_{ik}<(m_{ij}-m_{ik})+\epsilon_{ij}|\epsilon_{ij};\forall\ k\neq j)\cdot f(\epsilon_{ij})\ d\epsilon_{ij}
+\]
+
+\end_inset
+
+If 
+\begin_inset Formula $\epsilon_{ij}$
+\end_inset
+
+ are i.i.d.
+ with a cdf 
+\begin_inset Formula $F(\epsilon_{ij})$
+\end_inset
+
+, then the conditional probability is the same as marginal probability,
+ and the joint probability is the product of marginal probabilities.
+ Thus,
+\begin_inset Formula 
+\[
+P(\epsilon_{ik}<(m_{ij}-m_{ik})+\epsilon_{ij}|\epsilon_{ij};\forall\ k\neq j)={\displaystyle \prod_{k\neq j}}F((m_{ij}-m_{ik})+\epsilon_{ij})
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+P(y_{ij}=1)={\displaystyle \int}\left[{\displaystyle \prod_{k\neq j}}F((m_{ij}-m_{ik})+\epsilon_{ij})\right]f(\epsilon_{ij})\ d\epsilon_{ij}
+\]
+
+\end_inset
+
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+(i) conditional logit
+\end_layout
+
+\begin_layout Standard
+(ii) multinomial logit
+\end_layout
+
+\begin_layout Standard
+(iii) mixed logit
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part C, (i)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ are not identifiable.
+ 
+\begin_inset Formula 
+\[
+p_{ij}=\frac{e^{m_{ij}}}{{\displaystyle \sum_{k=1}^{J}}e^{m_{ik}}}=\frac{e^{X_{i}\beta_{j}+Z_{ij}\gamma}}{{\displaystyle \sum_{k=1}^{J}}e^{X_{i}\beta_{k}+Z_{ik}\gamma}}
+\]
+
+\end_inset
+
+Now, let 
+\begin_inset Formula $\tilde{\beta}_{j}=\beta_{j}+\alpha$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\[
+\tilde{p}_{ij}=\frac{e^{m_{ij}}}{{\displaystyle \sum_{k=1}^{J}}e^{m_{ik}}}=\frac{e^{X_{i}\beta_{j}+X_{i}\alpha+Z_{ij}\gamma}}{{\displaystyle \sum_{k=1}^{J}}e^{X_{i}\beta_{k}+X_{i}\alpha+Z_{ik}\gamma}}=\frac{e^{X_{i}\beta_{j}+Z_{ij}\gamma}}{{\displaystyle \sum_{k=1}^{J}}e^{X_{i}\beta_{k}+Z_{ik}\gamma}}=p_{ij}
+\]
+
+\end_inset
+
+A conventional normalization rule is to set 
+\begin_inset Formula $\beta_{1}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part C, (ii)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The likelihood function for all observations is
+\begin_inset Formula 
+\[
+L={\displaystyle \prod_{i=1}^{n}}{\displaystyle \prod_{j=1}^{J}}p_{ij}^{y_{ij}}
+\]
+
+\end_inset
+
+and the log-likelihood function is
+\begin_inset Formula 
+\[
+\ln L={\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{j=1}^{J}}y_{ij}\ln\left(p_{ij}\right)
+\]
+
+\end_inset
+
+To estimate the parameters, we maximize the log-likelihood function.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part C, (iii)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the multinomial logit model, we use the normalization 
+\begin_inset Formula $\beta_{1}=0$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\[
+p_{i1}=\frac{1}{1+{\displaystyle \sum_{k=2}^{J}}e^{X_{i}\beta_{k}}}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+p_{ij}=\frac{e^{X_{i}\beta_{j}}}{1+{\displaystyle \sum_{k=2}^{J}}e^{X_{i}\beta_{k}}},\ j\geq2
+\]
+
+\end_inset
+
+As a result,
+\begin_inset Formula 
+\[
+\ln\left(\frac{p_{ij}}{p_{i1}}\right)=X_{i}\beta_{j}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\frac{\partial\ln\left(\nicefrac{p_{ij}}{p_{i1}}\right)}{\partial X_{ik}}=\beta_{jk}
+\]
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $\beta_{jk}$
+\end_inset
+
+ represents the marginal effect of 
+\begin_inset Formula $X_{ik}$
+\end_inset
+
+ on the log odds ratio.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part C, (iv)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the conditional logit model, we have
+\begin_inset Formula 
+\[
+p_{ij}=\frac{e^{Z_{ij}\gamma}}{{\displaystyle \sum_{k=1}^{J}}e^{Z_{ik}\gamma}}
+\]
+
+\end_inset
+
+Thus, the log odds ratio between two alternaties 
+\begin_inset Formula 
+\[
+\ln\left(\frac{p_{ij}}{p_{ik}}\right)=(Z_{ij}-Z_{ik})\gamma
+\]
+
+\end_inset
+
+only depends on the attributes of alternatives in comparison.
+ This property of the conditional logit model is called the IIA.
+ Consider the example of three choices, traveling in a car, a red bus, and
+ a blue bus.
+ The relative probability between the car and red bus is most likely to
+ change when the alternative blue bus is introduced.
+ But, the IIA indicates that the relative probability between the car and
+ the red bus will not be affected.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part C, (v)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The assumption of the model that leads to the IIA is 
+\begin_inset Formula $\epsilon_{ij}\sim\mbox{i.i.d.}$
+\end_inset
+
+ The nested logit model avoids this problem.
+ A 
+\emph on
+two-level
+\emph default
+ nested logit model posits that some alternatives can be grouped together,
+ each group including one or more alternatives.
+ Decisions are made in two steps: choice of a group and then a choice of
+ alternative.
+\end_layout
+
+\begin_layout Problem
+Consider the Tobit model
+\begin_inset Formula 
+\[
+y_{i}=\begin{cases}
+y_{i}^{*} & \mbox{if}\ y_{i}^{*}=X_{i}\beta+u_{i}^{*}>0\\
+0 & \mbox{if}\ y_{i}^{*}=X_{i}\beta+u_{i}^{*}\leq0
+\end{cases}
+\]
+
+\end_inset
+
+where strictly exogenous regressors are fully observed, and 
+\begin_inset Formula $u_{i}^{*}$
+\end_inset
+
+ is an i.i.d.
+ 
+\emph on
+normal
+\emph default
+ random variable with zero mean and variance 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $y_{i}^{+}=y_{i}^{*}>0$
+\end_inset
+
+ be the observed positive value of the latent variable.
+ Let 
+\begin_inset Formula $y_{i}=X_{i}\beta+u_{i}$
+\end_inset
+
+ be the regression equation of the observed censored variable and 
+\begin_inset Formula $y_{i}^{+}=X_{i}\beta+u_{i}^{+}$
+\end_inset
+
+ be the regression equation of positive latent variable only.
+ Note that notations are a little different from the notations in the lecture
+ notes.
+ Note also that 
+\begin_inset Formula $u_{i}^{*}$
+\end_inset
+
+ is explicitly assumed to be a normal random variable.
+ You must use the notations in this question and also use the notations
+ of normal pdf 
+\begin_inset Formula $\phi(z)$
+\end_inset
+
+ and normal cdf 
+\begin_inset Formula $\Phi(z)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Derive 
+\begin_inset Formula $E(y_{i}^{+})$
+\end_inset
+
+, and prove that the OLSE of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ in 
+\begin_inset Formula $y_{i}^{+}=X_{i}\beta+u_{i}^{+}$
+\end_inset
+
+ is biased.
+ Which of the Gauss-Markov assumptions is violated?
+\end_layout
+
+\begin_layout Enumerate
+Derive 
+\begin_inset Formula $E(y_{i})$
+\end_inset
+
+, and find the marginal effect of 
+\begin_inset Formula $X_{ik}$
+\end_inset
+
+ on 
+\begin_inset Formula $E(y_{i})$
+\end_inset
+
+ and interpret the result.
+\end_layout
+
+\begin_layout Enumerate
+Explain how to construct the likelihood function, and write the likelihood
+ function that is strictly concave with respect to the parameters.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The error terms in the regression equation do not have zero means, and hence,
+ OLSE is biased.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+E(y_{i}^{+}) & = & E(y_{i}^{*}|y_{i}^{*}>0)\\
+ & = & E(X_{i}\beta+u_{i}^{*}|X_{i}\beta+u_{i}^{*}>0)\\
+ & = & X_{i}\beta+E(u_{i}^{*}|u_{i}^{*}>-X_{i}\beta)\\
+ & = & X_{i}\beta+\sigma\frac{\phi\left(-\frac{X_{i}\beta}{\sigma}\right)}{1-\left(-\frac{X_{i}\beta}{\sigma}\right)}\\
+ & = & X_{i}\beta+\sigma\frac{\phi\left(\frac{X_{i}\beta}{\sigma}\right)}{\Phi\left(\frac{X_{i}\beta}{\sigma}\right)}
+\end{eqnarray*}
+
+\end_inset
+
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+E(y_{i}) & = & P(y_{i}=0)E(y_{i}|y_{i}=0)+P(y_{i}^{*}>0)E(y_{i}^{*}|y_{i}^{*}>0)\\
+ & = & P(u_{i}^{*}>-X_{i}\beta)E(y_{i}^{+})\\
+ & = & \Phi\left(\frac{X_{i}\beta}{\sigma}\right)\left[X_{i}\beta+\sigma\frac{\phi\left(\frac{X_{i}\beta}{\sigma}\right)}{\Phi\left(\frac{X_{i}\beta}{\sigma}\right)}\right]
+\end{eqnarray*}
+
+\end_inset
+
+The marginal effect of 
+\begin_inset Formula $X_{ik}$
+\end_inset
+
+ on 
+\begin_inset Formula $E(y_{i})$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+\frac{\partial E(y_{i})}{\partial X_{ik}}=\frac{\partial P(y_{i}^{+})}{\partial X_{ik}}E(y_{i}^{+})+P(y_{i}^{+})\frac{\partial E(y_{i}^{+})}{\partial X_{ik}}
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ signify the expenditure of household 
+\begin_inset Formula $i$
+\end_inset
+
+ on durable goods.
+ The term on the left captures the effect of the regressor on the change
+ of the households which have a positive expenditure, either moving from
+ positive expenditure to zero expenditure, or vice versa.
+ If a household moves from zero to positive expenditure, their expected
+ expenditure is 
+\begin_inset Formula $E(y_{i}^{+})$
+\end_inset
+
+.
+ The term on the right captures the effect of the regressor on the change
+ in household expenditure on those who had positive expenditure.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $d_{i}$
+\end_inset
+
+ be a dummy variable
+\begin_inset Formula 
+\[
+d_{i}=\begin{cases}
+1 & \mbox{if}\ y_{i}>0\ (y_{t}^{*}\leq0)\\
+0 & \mbox{if}\ y_{i}=0\ (y_{t}^{*}>0)
+\end{cases}
+\]
+
+\end_inset
+
+The single likelihood function is either the discrete probability 
+\begin_inset Formula $P(y_{t}^{*}\leq0)$
+\end_inset
+
+ where
+\begin_inset Formula 
+\begin{eqnarray*}
+P(y_{t}^{*}\leq0) & = & P(u_{i}^{*}\leq-X_{i}\beta)\\
+ & = & P\left(\frac{u_{i}}{\sigma}\leq-\frac{X_{i}\beta}{\sigma}\right)\\
+ & = & \Phi\left(-\frac{X_{i}\beta}{\sigma}\right)\\
+ & = & 1-\Phi\left(\frac{X_{i}\beta}{\sigma}\right)
+\end{eqnarray*}
+
+\end_inset
+
+or the density 
+\begin_inset Formula $f(y_{i}^{*})$
+\end_inset
+
+ for 
+\begin_inset Formula $y_{t}>0$
+\end_inset
+
+ where
+\begin_inset Formula 
+\[
+f(y_{t}^{*})=f(y_{i}-X_{i}\beta)
+\]
+
+\end_inset
+
+So, the single likelihood function is
+\begin_inset Formula 
+\[
+L_{i}(y_{i})=\left[1-\Phi_{i}\right]^{1-d_{i}}\left[\frac{1}{\sigma}\phi\left(\frac{X_{i}\beta}{\sigma}\right)\right]^{d_{i}}
+\]
+
+\end_inset
+
+The likelihood function and the log likelihood function for all observations
+ are
+\begin_inset Formula 
+\begin{eqnarray*}
+L & = & {\displaystyle \prod_{i=1}^{n}}\left[1-\Phi_{i}\right]^{1-d_{i}}\left[\frac{1}{\sigma}\phi\left(\frac{y_{i}-X_{i}\beta}{\sigma}\right)\right]^{d_{i}}\\
+\ln L & = & {\displaystyle \sum_{i=1}^{n}}\left(1-d_{i}\right)\ln\left[1-\Phi_{i}\right]+d_{i}\ln\left[\frac{1}{\sigma}\phi\left(\frac{y_{i}-X_{i}\beta}{\sigma}\right)\right]
+\end{eqnarray*}
+
+\end_inset
+
+Now, let 
+\begin_inset Formula $\alpha=\nicefrac{\beta}{\sigma}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau=\nicefrac{1}{\sigma}$
+\end_inset
+
+.
+ Then, the log likelihood function can be rewritten as
+\begin_inset Formula 
+\[
+\ln L={\displaystyle \sum_{i=1}^{n}}\left(1-d_{i}\right)\ln\left[1-\Phi\left(X_{i}\alpha\right)\right]+d_{i}\ln\left[\tau\phi\left(\tau y_{i}-X_{i}\alpha\right)\right]
+\]
+
+\end_inset
+
+With these transformations of the parameters, the log-likelihood function
+ is now strictly concave with respect to 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Consider a system of two latent variables
+\begin_inset Formula 
+\[
+y_{i1}^{*}=X_{i1}\beta_{1}+u_{i1}^{*},\ y_{i2}^{*}=X_{i2}\beta_{2}+u_{i2}^{*},\ i=1,\ldots,n
+\]
+
+\end_inset
+
+where error vector 
+\begin_inset Formula $(u_{i1}^{*},u_{i2}^{*})$
+\end_inset
+
+ is an i.i.d.
+ normal random vector with zero mean and covariance matrix 
+\begin_inset Formula $\Sigma=(\sigma_{ij})$
+\end_inset
+
+.
+ Regressors are fully observed, but only the sign of 
+\begin_inset Formula $y_{i2}^{*}$
+\end_inset
+
+ is observed: 
+\begin_inset Formula $y_{i2}=1$
+\end_inset
+
+ if 
+\begin_inset Formula $y_{i2}^{*}>0$
+\end_inset
+
+, and 
+\begin_inset Formula $y_{i2}=0$
+\end_inset
+
+ if 
+\begin_inset Formula $y_{i2}^{*}\leq0$
+\end_inset
+
+.
+ And, 
+\begin_inset Formula $y_{i1}=y_{i1}^{*}$
+\end_inset
+
+ is observed only when 
+\begin_inset Formula $y_{i2}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Derive 
+\begin_inset Formula $E(y_{i1})$
+\end_inset
+
+ and explain why the LSE of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ from the observed variable 
+\begin_inset Formula $(y_{i1}=X_{i1}\beta+u_{i1})$
+\end_inset
+
+ is biased.
+\end_layout
+
+\begin_layout Enumerate
+Explain Heckman's two-step estimation procedure.
+\end_layout
+
+\begin_layout Enumerate
+Explain a potential problem in estimating an equation for 
+\begin_inset Formula $y_{i1}^{*}$
+\end_inset
+
+ (i) when there is no common variable in 
+\begin_inset Formula $X_{i1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{i2}$
+\end_inset
+
+ and (ii) when there are common varaibles in 
+\begin_inset Formula $X_{i1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{i2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+E(y_{i1}) & = & E(y_{i1}^{*}|y_{i2}^{*}>0)\\
+ & = & E(X_{i1}\beta_{1}+u_{i1}^{*}|X_{i2}\beta_{2}+u_{i2}^{*}>0)\\
+ & = & X_{i1}\beta_{1}+E(u_{i1}^{*}|u_{i2}^{*}>-X_{i2}\beta)\\
+ & = & X_{i1}\beta_{1}+E\left[\left.\left(\frac{\sigma_{12}}{\sigma_{22}}\right)u_{i2}^{*}\right|u_{i2}^{*}>-X_{i2}\beta\right]\\
+ & = & X_{i1}\beta_{1}+\left(\frac{\sigma_{12}}{\sigma_{22}}\right)E(u_{i2}^{*}|u_{i2}>-X_{i2}\beta)\\
+ & = & X_{i1}\beta_{1}+\left(\frac{\sigma_{12}}{\sqrt{\sigma_{22}}}\right)\frac{\phi\left(\frac{X_{i2}\beta_{2}}{\sqrt{\sigma_{22}}}\right)}{\Phi\left(\frac{X_{i2}\beta_{2}}{\sqrt{\sigma_{22}}}\right)}
+\end{eqnarray*}
+
+\end_inset
+
+The second term in this expression is the source of the bias and inconsistency
+ of the least squares estimator of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+From the mean function 
+\begin_inset Formula $E(y_{1})$
+\end_inset
+
+, we write a regresison equation
+\begin_inset Formula 
+\[
+y_{1}=X_{1}\beta_{1}+\left(\frac{\sigma_{12}}{\sigma_{2}}\right)\frac{\phi(X_{2}\alpha_{2})}{\Phi(X_{2}\alpha_{2})}+\xi_{1}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\xi_{1}$
+\end_inset
+
+ is heteroskedastic.
+ If 
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+ is known, we can compute 
+\begin_inset Formula $\frac{\phi(X_{2}\alpha_{2})}{\Phi(X_{2}\alpha_{2})}$
+\end_inset
+
+ and then estimate 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(\frac{\sigma_{12}}{\sigma_{2}}\right)$
+\end_inset
+
+ by the OLS or the GLS (heteroskedasticity).
+ Heckman's two-step procedure is
+\end_layout
+
+\begin_layout Enumerate
+Estimate 
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+ with probit MLE (setting 
+\begin_inset Formula $\sigma_{22}=1$
+\end_inset
+
+ since it is not identifiable)
+\end_layout
+
+\begin_layout Enumerate
+Estimate 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ be the OLS or the GLS.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If a common variable is included in 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+, one may make a false conclusion that the proper equation is nonlinear
+ in that variable.
+\end_layout
+
+\begin_layout Section*
+Hint
+\end_layout
+
+\begin_layout Standard
+First theorem
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
+\end_inset
+
+ and 
+\begin_inset Formula $b=\nicefrac{(c-\mu)}{\sigma}$
+\end_inset
+
+.
+ Then,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $E(X|X>c)=\mu+\sigma\frac{\phi(b)}{1-\Phi(b)}\equiv\mu+\sigma\lambda^{+}(b)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E(X|X<c)=\mu-\sigma\frac{\phi(b)}{\Phi(b)}\equiv\mu+\sigma\lambda^{-}(b)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Second theorem
+\end_layout
+
+\begin_layout Theorem*
+Let 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ be jointly normal with means 
+\begin_inset Formula $\mu_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu_{2}$
+\end_inset
+
+, and covariance matrix 
+\begin_inset Formula $\Sigma=(\sigma_{ij})$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\[
+X_{1}=\mu_{1}+\left(\nicefrac{\sigma_{12}}{\sigma_{22}}\right)\left(X_{2}-\mu_{2}\right)+\eta_{1}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $E(\eta_{1})=0,\ \mbox{Var}(\eta_{1})=\sigma_{11}-\sigma_{12}\sigma_{22}^{-1}\sigma_{21},\ \mbox{Cov}(X_{2},\eta_{1})=0$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

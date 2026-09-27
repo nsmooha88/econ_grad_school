@@ -1,0 +1,853 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Maximum Empirical Likelihood Estimation (MELE)
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Abstract
+
+\series bold
+\size normal
+Estimation of Standard Linear Model - Maximum Empirical Likelihood Estimator:
+ 
+\series default
+Combination of the idea of maximum likelihood method of moments, Maximum
+ Entropy Empirical Likelihood Estimator, Univariate Informational Measure,
+ Relative Entropy, Kullback Leibler Distance (Discrepancy), Kullback-Leibler
+ Information Cirterion, Cressie-Read Distance (Discrepancy), 
+\begin_inset Formula $\alpha$
+\end_inset
+
+-Entropy, Generalized Empirical Likelihood (GEL)
+\end_layout
+
+\begin_layout Section*
+Maximum Empirical Likelihood Estimation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $y_{t},\ t=1,2,\ldots,n,$
+\end_inset
+
+ be a random sample from the population distribution 
+\begin_inset Formula $f(y_{t};\theta)$
+\end_inset
+
+.
+ The parametric maximum likelihood estimation requires the knowledge of
+ the density function, and maximizes the log likelihood function
+\begin_inset Formula 
+\[
+\ln\ L={\displaystyle \sum_{t=1}^{n}\ln\ f(y_{t};\theta})
+\]
+
+\end_inset
+
+The knowledge of the density function implies the knowledge about the relationsh
+ip between the parameters and the density function.
+ Consider a discrete Bernoulli distirbution:
+\begin_inset Formula 
+\[
+f(y_{t};\theta)=\theta^{y_{t}}(1-\theta)^{1-y_{t}},\ y_{t}=0\ \mbox{or}\ 1
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $p_{t}\equiv f(y_{t};\theta)=P(y_{t}=1)\ \mbox{or}\ P(y_{t}=0)$
+\end_inset
+
+, we may consider the ML estimation as a constrained maximization
+\begin_inset Formula 
+\[
+{\displaystyle \max_{p_{t}}\ \sum_{t=1}^{n}\ln(p_{t})\ \ \mbox{s.t.}\ p_{t}=\theta^{y_{t}}(1-\theta)^{1-y_{t}}}
+\]
+
+\end_inset
+
+The distribtuion function cotnains all statistical properties of a random
+ variable, including moments, shape, etc.
+ Suppose that we do not have complete informaiton contained in the distribution
+ function, but have only information about the moments.
+ Can we still apply the same optimization procedure, replacing the density
+ function with moment conditions as the constraints, i.e., 
+\series bold
+unbiased estimating function
+\series default
+? For example,
+\begin_inset Formula 
+\[
+{\displaystyle \max_{p_{t}}}\ {\displaystyle \sum_{t=1}^{n}\ln\ (p_{t})\ \ \mbox{s.t.}\ p_{t}>0,\ E(y_{t}-\theta)=0}
+\]
+
+\end_inset
+
+Note that we require a strict positivity for each 
+\begin_inset Formula $p_{t}$
+\end_inset
+
+.
+ Otherwise, the joint density will be zero.
+ In fact, this condition is already embedded in the object funciton because
+ the object funciton will be negative infinity if one of the 
+\begin_inset Formula $p_{t}$
+\end_inset
+
+ is zero.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Once problem with this formulation is that the objective function is not
+ bounded, while the density function is bounded.
+ We need a normatilization constraint on 
+\begin_inset Formula $p_{t}$
+\end_inset
+
+.
+ We will use 
+\begin_inset Formula ${\displaystyle \sum_{t=1}^{n}}p_{t}=1$
+\end_inset
+
+ as the normalization.
+ Another problem is how to compute the moment condition without knowing
+ the distribution funciton.
+ The MME computes it by the sample mean:
+\begin_inset Formula 
+\[
+E(y_{t}-\theta)=0\implies{\displaystyle \frac{1}{n}\sum_{t=1}^{n}(y_{t}-\theta)=0}
+\]
+
+\end_inset
+
+This is equivalent to using 
+\begin_inset Formula $(\frac{1}{n})$
+\end_inset
+
+ as the probability for each observation.
+ The empirical likelihood estimator uses the empirical probability 
+\begin_inset Formula $p_{t}$
+\end_inset
+
+ in the place of 
+\begin_inset Formula $(\frac{1}{n})$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+E(y_{t}-\theta)=0\implies{\displaystyle \sum_{t=1}^{n}p_{t}(y_{t}-\theta)=0}
+\]
+
+\end_inset
+
+Under these two modifications we can pose the problem as
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \max_{p_{t}}}\ {\displaystyle \sum_{t=1}^{n}}\ln(p_{t})\ \ \mbox{s.t.}\ p_{t}>0,{\displaystyle \sum_{t=1}^{n}}p_{t}=1,\ \sum_{t=1}^{n}p_{t}(y_{t}-\theta)=0\label{eq:1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+When we introduce the moment information we need to consider the following
+ Lagrange equation
+\begin_inset Formula 
+\begin{equation}
+L=\sum_{t=1}^{n}\ln(p_{t})-\kappa\left({\displaystyle \sum_{t=1}^{n}}p_{t}-1\right)+\lambda\left(\sum_{t=1}^{n}p_{t}(y_{t}-\theta)\right)\label{eq:2}
+\end{equation}
+
+\end_inset
+
+First order conditions are nonlinear in the parameters and Lagrange multiplies,
+ and we cannot find the closed form solutions.
+ However, from the first order conditions, we can still derive important
+ results
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial L}{\partial p_{t}}=0 & \iff & \frac{1}{p_{t}}-\kappa+\lambda(y_{t}-\theta)=0\label{eq:3}\\
+\frac{\partial L}{\partial\kappa}=0 & \iff & {\displaystyle \sum_{t=1}^{n}}p_{t}=1\label{eq:4}\\
+\frac{\partial L}{\partial\lambda}=0 & \iff & \sum_{t=1}^{n}p_{t}(y_{t}-\theta)=0\label{eq:5}
+\end{eqnarray}
+
+\end_inset
+
+Consider equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:3"
+
+\end_inset
+
+):
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{1}{p_{t}}-\kappa+\lambda(y_{t}-\theta) & = & 0\nonumber \\
+1-\kappa p_{t}+\lambda p_{t}(y_{t}-\theta) & = & 0\ \ \mbox{(multiplied both sides by \ensuremath{p_{t}})}\nonumber \\
+{\displaystyle \sum_{t=1}^{n}}1-\kappa{\displaystyle \sum_{t=1}^{n}}p_{t}+\lambda{\displaystyle \sum_{t=1}^{n}p_{t}(y_{t}-\theta)} & = & 0\ \ \mbox{(summing both sides over \ensuremath{t})}\nonumber \\
+n-\kappa & = & 0\ \ \mbox{(by equations (\ref{eq:4}) and (\ref{eq:5}))}\nonumber \\
+ & \implies & \hat{\kappa}=n\label{eq:6}
+\end{eqnarray}
+
+\end_inset
+
+Using the estimate of 
+\begin_inset Formula $\kappa$
+\end_inset
+
+, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:6"
+
+\end_inset
+
+), in equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:3"
+
+\end_inset
+
+), we obtain an estimate for 
+\begin_inset Formula $p_{t}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{1}{p_{t}}-n+\lambda(y_{t}-\theta) & = & 0\nonumber \\
+ & \implies & \hat{p_{t}}=\frac{1}{n+\hat{\lambda}(y_{t}-\theta)}\label{eq:7}
+\end{eqnarray}
+
+\end_inset
+
+When we plug this estimate for 
+\begin_inset Formula $p_{t}$
+\end_inset
+
+,(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:7"
+
+\end_inset
+
+), into equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5"
+
+\end_inset
+
+), we obtain 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+ as the solution too:
+\begin_inset Formula 
+\begin{equation}
+\hat{\lambda}\equiv{\displaystyle \arg_{\lambda}}\ {\displaystyle \sum_{t=1}^{n}}\ \frac{(y_{t}-\theta)}{n+\hat{\lambda}(y_{t}-\theta)}=0\label{eq:8}
+\end{equation}
+
+\end_inset
+
+This can be written as a (
+\begin_inset Formula $n$
+\end_inset
+
+-1)th order polynomial equation in 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ The estimate of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ can then be found from the maximization of the concentrated objective function
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \max_{\theta}\ }{\displaystyle \sum_{t=1}^{n}}\ln(\hat{p_{t}})\label{eq:9}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The example above is the case of only one empirical moment.
+ The MELE of distribution parameter 
+\begin_inset Formula $\theta$
+\end_inset
+
+ in a general form can be summarized as follows.
+ We wish to maximize the empirical likelihood function
+\begin_inset Formula 
+\[
+{\displaystyle \max_{p_{t}}\ \ln(L)={\displaystyle \sum_{t=1}^{n}\ln(p_{t})}}
+\]
+
+\end_inset
+
+subject to the strict positivity, normalization, and unbaised estimating
+ function
+\begin_inset Formula 
+\[
+p_{t}>0,\ {\displaystyle \sum_{t=1}^{n}p_{t}=1,\ E(h_{t}(\theta))\equiv E[h(y_{t};\theta)]=0}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $h_{t}(\theta)\equiv h(y_{t};\theta)$
+\end_inset
+
+ is a 
+\begin_inset Formula $m\times1$
+\end_inset
+
+ vector for each 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Since the true distirbution function is unknown, this is computed by empirical
+ probability
+\begin_inset Formula 
+\[
+E(h_{t}(\theta))=0\implies\sum_{t=1}^{n}p_{t}h_{t}(\theta)=0
+\]
+
+\end_inset
+
+Thus, the empirical Lagrange equaiton can be written as
+\begin_inset Formula 
+\begin{equation}
+L=\frac{1}{n}\sum_{t=1}^{n}\ln(p_{t})-\kappa\left(\sum_{t=1}^{n}p_{t}-1\right)+\lambda^{\prime}\sum_{t=1}^{n}p_{t}h_{t}(\theta)\label{eq:10}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is a 
+\begin_inset Formula $m$
+\end_inset
+
+-dimensional vector of Lagrange multipliers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Once again, from the first order conditions, we can derive important results:
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial L}{\partial p_{t}}=0 & \iff & \frac{1}{np_{t}}-\kappa+\lambda^{\prime}h_{t}(\theta)=0\label{eq:11}\\
+\frac{\partial L}{\partial\kappa}=0 & \iff & {\displaystyle \sum_{t=1}^{n}}p_{t}=1\label{eq:12}\\
+\frac{\partial L}{\partial\lambda^{\prime}}=0 & \iff & \sum_{t=1}^{n}p_{t}h_{t}(\theta)=0\label{eq:13}
+\end{eqnarray}
+
+\end_inset
+
+Consider equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:11"
+
+\end_inset
+
+):
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{1}{np_{t}}-\kappa+\lambda^{\prime}h_{t}(\theta) & = & 0\nonumber \\
+\frac{1}{n}-\kappa p_{t}+\lambda^{\prime}p_{t}h_{t}(\theta) & = & 0\ \ \mbox{(multiplied both sides by \ensuremath{p_{t}})}\nonumber \\
+{\displaystyle \sum_{t=1}^{n}}\frac{1}{n}-\kappa{\displaystyle \sum_{t=1}^{n}}p_{t}+{\displaystyle \sum_{t=1}^{n}\lambda^{\prime}p_{t}h_{t}(\theta)} & = & 0\ \ \mbox{(summing both sides over \ensuremath{t})}\nonumber \\
+n-\kappa & = & 0\ \ \mbox{(by equations (\ref{eq:12}) and (\ref{eq:13}))}\nonumber \\
+ & \implies & \hat{\kappa}=1\label{eq:14}
+\end{eqnarray}
+
+\end_inset
+
+Using the estimate of 
+\begin_inset Formula $\kappa$
+\end_inset
+
+, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:14"
+
+\end_inset
+
+), in equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:11"
+
+\end_inset
+
+), we can derive the solution for 
+\begin_inset Formula $p_{t}$
+\end_inset
+
+ for a given 
+\begin_inset Formula $\theta$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{1}{np_{t}}-1+\lambda^{\prime}h_{t}(\theta) & = & 0\nonumber \\
+ & \implies & \hat{p_{t}}=\frac{1}{n\left[1-\lambda^{\prime}h_{t}(\theta)\right]}\label{eq:15}
+\end{eqnarray}
+
+\end_inset
+
+By plugging in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:15"
+
+\end_inset
+
+) into equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:13"
+
+\end_inset
+
+), the solution for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ for a given 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is given implicity by:
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{t=1}^{n}}\ \frac{h_{t}(\theta)}{1-\lambda^{\prime}h_{t}(\theta)}=0\label{eq:16}
+\end{equation}
+
+\end_inset
+
+Substituing the solution for 
+\begin_inset Formula $p_{t}$
+\end_inset
+
+ into the empirical log-likelihood function, we can write a concentrated
+ likelihood function as
+\begin_inset Formula 
+\begin{equation}
+\mbox{ln}(L)=\sum_{t=1}^{n}\mbox{ln}(p_{t})=-\sum_{t=1}^{n}\mbox{ln}\left(n\left[1-\lambda^{\prime}h_{t}(\theta)\right]\right)=-\sum_{t=1}^{n}\mbox{ln}(n)-\sum_{t=1}^{n}\mbox{ln}\left(1-\lambda^{\prime}h_{t}(\theta)\right)\label{eq:17}
+\end{equation}
+
+\end_inset
+
+Therefore, the original maximization problem is equivalent to
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \min_{\theta}\ }\sum_{t=1}^{n}\mbox{ln}\left(1-\lambda^{\prime}h_{t}(\theta)\right)\ \ \mbox{s.t.}\ {\displaystyle \sum_{t=1}^{n}}\ \frac{h_{t}(\theta)}{1-\lambda^{\prime}h_{t}(\theta)}=0\label{eq:18}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Note that the constraint equation that defines the solution for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ implicitly is the same as the first order condition of the maximization
+ of the following equation with respect to 
+\begin_inset Formula $\lambda$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\max_{\lambda}\ \sum_{t=1}^{n}\mbox{ln}\left(1-\lambda^{\prime}h_{t}(\theta)\right)\label{eq:19}
+\end{equation}
+
+\end_inset
+
+Hence, we can write the problem in compact form as
+\begin_inset Formula 
+\begin{equation}
+\hat{\theta}_{MEL}\equiv\arg\min_{\theta}\ \max_{\lambda}\ \sum_{t=1}^{n}\mbox{ln}\left(1-\lambda^{\prime}h_{t}(\theta)\right)\label{eq:20}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Maximum Entropy Empirical Likelihood Estimator
+\end_layout
+
+\begin_layout Standard
+Univariate Informational Measure
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose we have a set of events 
+\begin_inset Formula $E_{i}$
+\end_inset
+
+with a probability 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+.
+ If we receive a message that a certain event has occured, what will be
+ a reasonable measure of the informational content of such a message? Shannon
+ measured it by 
+\begin_inset Formula $\ln(\frac{1}{p_{i}})=-\ln(p_{i})$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ is low (e.g., 
+\begin_inset Formula $p_{i}=0.01$
+\end_inset
+
+), 
+\begin_inset Formula $E_{i}$
+\end_inset
+
+ is not expected to occur often.
+ If 
+\begin_inset Formula $E_{i}$
+\end_inset
+
+ did occure, the news of such an occurence is a surprise and contains a
+ great deal of information.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This measure is not symmetric in the snese that the message of occurence
+ and the message of non-occurence give different values 
+\begin_inset Formula $\ln(\frac{1}{p_{i}})\ \mbox{and}\ \ln(\frac{1}{1-p_{i}})$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ is low, the message of the occurence of 
+\begin_inset Formula $E_{i}$
+\end_inset
+
+ is a big surprise, but the message of non-occurence is not much of a surprise.
+ Before we receive a message, the expected informational content of the
+ message is called 
+\series bold
+Shannon's entropy
+\series default
+.
+ When we have 
+\begin_inset Formula $n$
+\end_inset
+
+ events with probabilities 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+, Shannon's entropy is expressed as
+\begin_inset Formula 
+\begin{equation}
+SE(p)=\sum_{i=1}^{n}p_{i}\ln(\frac{1}{p_{i}})=-\sum_{i=1}^{n}p_{i}\ln(p_{i})\label{eq:21}
+\end{equation}
+
+\end_inset
+
+The 
+\series bold
+maximum entropy empirical likelihood (MEEL)
+\series default
+ estimator maximizes this objective function subject to the normalization
+ and empirical moments constraints:
+\begin_inset Formula 
+\begin{equation}
+\max_{p_{i}}\ \left(-\sum_{i=1}^{n}p_{i}\ln(p_{i})\right)\ \ \mbox{s.t.}\ \sum_{i=1}^{n}p_{i}=1,\ \sum_{i=1}^{n}p_{i}h_{i}(\theta)=0\label{eq:22}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $h_{i}(\theta)$
+\end_inset
+
+ is a 
+\begin_inset Formula $m\times1$
+\end_inset
+
+ vector.
+ Setting up the Lagrange equation
+\begin_inset Formula 
+\begin{equation}
+L=-\sum_{i=1}^{n}p_{i}\ln(p_{i})-\kappa\left(\sum_{i=1}^{n}p_{i}-1\right)+\lambda^{\prime}\sum_{i=1}^{n}p_{i}h_{i}(\theta)\label{eq:23}
+\end{equation}
+
+\end_inset
+
+From the first order conditions, we can derive important results:
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial L}{\partial p_{t}}=0 & \iff & -(\ln(p_{i})+1)-\kappa+\lambda^{\prime}h_{i}(\theta)=0\label{eq:24}\\
+\frac{\partial L}{\partial\kappa}=0 & \iff & {\displaystyle \sum_{i=1}^{n}}p_{i}=1\label{eq:25}\\
+\frac{\partial L}{\partial\lambda^{\prime}}=0 & \iff & \sum_{i=1}^{n}p_{i}h_{i}(\theta)=0\label{eq:26}
+\end{eqnarray}
+
+\end_inset
+
+From equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:24"
+
+\end_inset
+
+), we can obtain an expression for 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+-(\ln(p_{i})+1)-\kappa+\lambda^{\prime}h_{i}(\theta) & = & 0\\
+\ln(p_{i}) & = & \lambda^{\prime}h_{i}(\theta)-\kappa+1\\
+ & \implies & p_{i}=\exp\left[\lambda^{\prime}h_{i}(\theta)-\left(\kappa+1\right)\right]
+\end{eqnarray*}
+
+\end_inset
+
+Taking this expression for 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+, we now substitute it in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:25"
+
+\end_inset
+
+):
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}\frac{e^{\lambda^{\prime}h_{i}(\theta)}}{e^{\kappa+1}}=1\implies e^{\kappa+1}=\sum_{i=1}^{n}e^{\lambda^{\prime}h_{i}(\theta)}
+\]
+
+\end_inset
+
+Thus, the explic solution for 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ is given by:
+\begin_inset Formula 
+\begin{equation}
+\hat{p}_{i}(\theta,\lambda)=\frac{e^{\lambda^{\prime}h_{i}(\theta)}}{{\displaystyle \sum_{i=1}^{n}}e^{\lambda^{\prime}h_{i}(\theta)}}\label{eq:27}
+\end{equation}
+
+\end_inset
+
+Now, substituting the expression for 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:27"
+
+\end_inset
+
+), into equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:26"
+
+\end_inset
+
+), we derive a solution for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{{\displaystyle \sum_{i=1}^{n}}e^{\lambda^{\prime}h_{i}(\theta)}h_{i}(\theta)}{{\displaystyle \sum_{i=1}^{n}}e^{\lambda^{\prime}h_{i}(\theta)}} & = & 0\nonumber \\
+ & \implies & \hat{\lambda}\equiv\lambda(\theta)=\sum_{i=1}^{n}e^{\lambda^{\prime}h_{i}(\theta)}h_{i}(\theta)=0\label{eq:28}
+\end{eqnarray}
+
+\end_inset
+
+Therefore, the original maximization problem is equivalent to
+\begin_inset Formula 
+\begin{equation}
+\max_{p_{i}}\ \left(-\sum_{i=1}^{n}\hat{p}_{i}\ln(\hat{p}_{i})\right)\ \ \mbox{s.t.}\ \frac{\sum_{i=1}^{n}e^{\lambda^{\prime}h_{i}(\theta)}h_{i}(\theta)}{{\displaystyle \sum_{i=1}^{n}}e^{\lambda^{\prime}h_{i}(\theta)}}=0\label{eq:29}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Note that the constraint equation that defines the solution for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ implicitly is the same as the first order condition of the minimization
+ of the following equation with respect to 
+\begin_inset Formula $\lambda$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\min_{\lambda}\ \ln\left(\sum_{i=1}^{n}e^{\lambda^{\prime}h_{i}(\theta)}\right)\label{eq:30}
+\end{equation}
+
+\end_inset
+
+Hence, we can write the problem in compact form as
+\begin_inset Formula 
+\begin{equation}
+\hat{\theta}_{MEEL}\equiv\arg\max_{\theta}\ \min_{\lambda}\ \ln\left(\sum_{i=1}^{n}e^{\lambda^{\prime}h_{i}(\theta)}\right)\label{eq:31}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

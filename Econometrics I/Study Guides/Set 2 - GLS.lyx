@@ -1,0 +1,2451 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Generalized Least Squares Estimator (GLSE)
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Abstract
+
+\series bold
+Violation of the Gauss-Markov Assumptions - Nonshperical Covaraince: 
+\series default
+Effects on the OLSE - inefficient, Estimation method - Generalized Least
+ Squares (GLS) estimator, Special forms of 
+\begin_inset Formula $\Omega$
+\end_inset
+
+, Estimation and Test of Heteroskedastic Models, Estimation and Tests of
+ Autoregressive Errors
+\end_layout
+
+\begin_layout Part*
+Violation of the Gauss-Markov Assumptions
+\end_layout
+
+\begin_layout Section*
+Nonspherical Covariance of the Error Term
+\end_layout
+
+\begin_layout Subsection*
+The Gauss-Markov Assumptions
+\end_layout
+
+\begin_layout Standard
+The Gauss-Markov assumptions on the linear model 
+\begin_inset Formula $y=X\beta+u$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+(A1) 
+\begin_inset Formula $rank(X)=K,\ rank(y,X)=k+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(A2) 
+\begin_inset Formula $E(u|X)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(A3) 
+\begin_inset Formula $E(uu^{\prime}|X)=\sigma^{2}I$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Assumption 3 states that the 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix of conditional second moments 
+\begin_inset Formula $E(uu^{\prime}|X)(=cov(u|X))$
+\end_inset
+
+ is spherical, that is, proportional to the identity matrix.
+\end_layout
+
+\begin_layout Subsection*
+Violation of (A3)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Without (A3), each element of the 
+\begin_inset Formula $N\times N$
+\end_inset
+
+ matrix is in general a nonlinear function of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ If the error is not (conditionally) homoskedastic, the values of the diagonal
+ elements of 
+\begin_inset Formula $E(uu^{\prime}|X)$
+\end_inset
+
+ are not the same, and if there is correlation in the error term between
+ observations (the case of serial correlation for time-series models), the
+ values of the off-diagonal elements are not zero.
+ For any given positive scalar 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+, define 
+\begin_inset Formula $V(X)\equiv\nicefrac{E(uu^{\prime}|X)}{\sigma^{2}}$
+\end_inset
+
+ and asme 
+\begin_inset Formula $V(X)$
+\end_inset
+
+ is nonsingular and known.
+ That is,
+\begin_inset Formula 
+\begin{equation}
+(A3^{*}):E(uu^{\prime}|X)=\sigma^{2}V(X)_{N\times N}\label{eq:1}
+\end{equation}
+
+\end_inset
+
+The reason we decompose 
+\begin_inset Formula $E(uu^{\prime}|X)$
+\end_inset
+
+ into the component 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ that is common to all elements of the matrix 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $E(uu^{\prime}|X)$
+\end_inset
+
+ and the remaining component 
+\begin_inset Formula $V(X)$
+\end_inset
+
+ is that we do not need to know the value of 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ for efficient estimation.
+ The model that results when (A3) is replaced by 
+\begin_inset Formula $(\ref{eq:1})$
+\end_inset
+
+, which merely assumes that the conditional second moment 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $E(uu^{\prime}|X)$
+\end_inset
+
+ is nonsingular, is called the 
+\series bold
+generalized regression model
+\series default
+.
+\end_layout
+
+\begin_layout Subsection*
+Consequences of Relaxing (A3)
+\end_layout
+
+\begin_layout Standard
+The effects on the OLSE of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Subsubsection*
+Linear Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{\beta}=(X^{\prime}X)^{-1}X^{\prime}y=\beta+(X^{\prime}X)^{-1}X^{\prime}u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Unbiased Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E(\hat{\beta}|X)=\beta+(X^{\prime}X)^{-1}X^{\prime}E(u|X)=\beta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Inefficeint Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $cov(\hat{\beta}|X)=cov[(\beta+(X^{\prime}X)^{-1}X^{\prime}u|X]=(X^{\prime}X)^{-1}X^{\prime}cov(u|X)X(X^{\prime}X)^{-1}=\sigma^{2}(X^{\prime}X)^{-1}X^{\prime}\Omega X(X^{\prime}X)^{-1}\neq\sigma^{2}(X^{\prime}X)^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E(\hat{\sigma}^{2}|X)=E\left[\frac{\hat{u}^{\prime}\hat{u}}{N-K}|X\right]=\frac{E\left(u^{\prime}Mu|X\right)}{N-K}=\frac{tr[ME(uu^{\prime}|X)]}{N-K}=\frac{\sigma^{2}tr(M\Omega)}{N-K}\neq\sigma^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is still a linear and unbiased estimator, but it is no longer efficient
+ since the Gauss-Markov Theorem no longer holds for the OLSE.
+ The BLUE is now some other estimator.
+ 
+\end_layout
+
+\begin_layout Itemize
+The OLSE 
+\begin_inset Formula $\hat{\sigma}^{2}$
+\end_inset
+
+ is biased because 
+\begin_inset Formula $tr(M\Omega)\neq(N-K)$
+\end_inset
+
+ in general.
+ Also, the usual form 
+\begin_inset Formula $\sigma^{2}(X^{\prime}X)^{-1}$
+\end_inset
+
+ for the 
+\begin_inset Formula $cov(\hat{\beta}|X)$
+\end_inset
+
+ is incorrect, and hence, any statistical inference based on its estimate
+ 
+\begin_inset Formula $\hat{\sigma}^{2}(X^{\prime}X)^{-1}$
+\end_inset
+
+ will be incorrect also.
+\end_layout
+
+\begin_layout Itemize
+The 
+\begin_inset Formula $t$
+\end_inset
+
+-ratio is not distributed as the 
+\begin_inset Formula $t$
+\end_inset
+
+ distribution.
+ Thus, the 
+\begin_inset Formula $t$
+\end_inset
+
+-test is no longer valid.
+ The same comments apply to the 
+\begin_inset Formula $F$
+\end_inset
+
+-test.
+\end_layout
+
+\begin_layout Section*
+Efficient Estimation with Known V
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If the value of the matrix function 
+\begin_inset Formula $V(X)$
+\end_inset
+
+ is known, does there exist a BLUE for the generalized regression model?
+ The answer is yes, and the estimator is called the 
+\series bold
+generalized least squares (GLS) estimator
+\series default
+, which we now derive.
+ The basic idea of the derivation is to transform the generalized regression
+ model, which consists of (A1), (A2), and (A3*), into a model that satisfies
+ all the assumptions, including (A3), of the classical regression model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For economy of notation, we use 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ for the value of 
+\begin_inset Formula $V(X)$
+\end_inset
+
+.
+ Note, 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ is, by construction, symmetric and positive definite.
+ So, (A3*) can be rewritten as:
+\begin_inset Formula 
+\begin{equation}
+(A3^{*}):E(uu^{\prime}|X)=\sigma^{2}\Omega,\label{eq:2}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ is a symmetric positive definite matrix of constants, and 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ is the scaling paramter such that 
+\begin_inset Formula $tr(\Omega)=N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+As a result, there exists a nonsingular 
+\begin_inset Formula $N\times N$
+\end_inset
+
+ matrix 
+\begin_inset Formula $P$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\begin{equation}
+P^{\prime}P=\Omega^{-1}\label{eq:3}
+\end{equation}
+
+\end_inset
+
+This decomposition is not unique, with more than once choice for 
+\begin_inset Formula $P$
+\end_inset
+
+, but, as is clear from the discussion below, the choice of 
+\begin_inset Formula $P$
+\end_inset
+
+ doesn't matter.
+ Important to note, the OLS minimizes the unweighted SSR, while the GLS
+ minimizes a weighted SSR, i.e.,
+\begin_inset Formula 
+\[
+\mbox{OLS:}\ {\displaystyle \min_{\beta}(y-X\beta)^{\prime}(y-X\beta)}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mbox{GLS:}\ {\displaystyle \min_{\beta}(y-X\beta)^{\prime}\Omega^{-1}(y-X\beta)}\label{eq:4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, consider creating a new regression model by transforming 
+\begin_inset Formula $(y,X,u)$
+\end_inset
+
+ by 
+\begin_inset Formula $P$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{equation}
+y^{*}\equiv Py,\ X^{*}\equiv PX,\ u^{*}\equiv Pu\label{eq:5}
+\end{equation}
+
+\end_inset
+
+Since we estimating the standard linear regression model, this implies that
+ 
+\begin_inset Formula $(y^{*},X^{*},u^{*})$
+\end_inset
+
+ too satisfies linearity: 
+\begin_inset Formula 
+\begin{equation}
+y^{*}=X^{*}\beta+u^{*}\label{eq:6}
+\end{equation}
+
+\end_inset
+
+The transformed model satisfies the other assumptions of the standard linear
+ regression model.
+ Strict exogeneity is satisfied because
+\begin_inset Formula 
+\begin{eqnarray*}
+E(u^{*}|X^{*}) & = & E(u^{\star}|X)\\
+ &  & \mbox{(since \ensuremath{P}is nonsingular, \ensuremath{X}and \ensuremath{X^{*}}contain the same information)}\\
+ & = & PE(u|X)\\
+ & = & 0\ \ \mbox{(since}\ E(u|X)=0\ \mbox{by (A2))}
+\end{eqnarray*}
+
+\end_inset
+
+Because 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ is positive definite, the no multicollinearity assumption 
+\begin_inset Formula $(rank(X)=K,\ rank(y,X)=K+1)$
+\end_inset
+
+ is also satisfied.
+ Assmumption 3 is satisfied for the transformed model because
+\begin_inset Formula 
+\begin{eqnarray*}
+E(u^{*}u^{*\prime}|X^{*}) & = & E(u^{*}u^{*\prime}|X)\ \ \mbox{(since \ensuremath{X}and \ensuremath{X^{*}}contain the same information)}\\
+ & = & E(Puu^{\prime}P^{\prime}|X)\\
+ & = & PE(uu^{\prime}|X)P^{\prime}\\
+ & = & \sigma^{2}P\Omega P^{\prime}\\
+ & = & \sigma^{2}P(P^{\prime}P)^{-1}P^{\prime}\ \ \mbox{(since}\ \Omega=(P^{\prime}P)^{-1}\mbox{)}\\
+ & = & \sigma^{2}PP^{-1}\left(P^{\prime}\right)^{-1}P^{\prime}\\
+ & = & \sigma^{2}I
+\end{eqnarray*}
+
+\end_inset
+
+So indeed the covariance of the transformed error vector 
+\begin_inset Formula $u^{*}$
+\end_inset
+
+ is spherical.
+ Finally, 
+\begin_inset Formula $u^{*}|X^{*}\sim N(0,\sigma^{2}I)$
+\end_inset
+
+ because the distribution of 
+\begin_inset Formula $u^{*}|X^{*}$
+\end_inset
+
+ is the same as 
+\begin_inset Formula $u^{*}|X$
+\end_inset
+
+ and 
+\begin_inset Formula $u^{*}$
+\end_inset
+
+is a linear transformation of 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ This completes the verification of Assumptions (A1)-(A4).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The Gauss-Markov Theorem for the transformed model implies that the BLUE
+ of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ for the generalized regression model is the OLS estimator applied to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:6"
+
+\end_inset
+
+):
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{\beta}_{GLS} & = & (X^{*\prime}X^{*})^{-1}X^{*\prime}y^{*}\nonumber \\
+ & = & (X^{\prime}P^{\prime}PX)^{-1}X^{\prime}P^{\prime}Py\nonumber \\
+ & = & (X^{\prime}\Omega^{-1}X)^{-1}X^{\prime}\Omega^{-1}y\label{eq:7}
+\end{eqnarray}
+
+\end_inset
+
+This is the GLS estimator.
+ Its conditional variance is
+\begin_inset Formula 
+\begin{eqnarray}
+cov(\hat{\beta}_{GLS}|X) & = & cov((X^{\prime}\Omega^{-1}X)^{-1}X^{\prime}\Omega^{-1}y|X)\nonumber \\
+ & = & (X^{\prime}\Omega^{-1}X)^{-1}X^{\prime}\Omega^{-1}cov(y|X)\Omega^{-1}X(X^{\prime}\Omega^{-1}X)^{-1}\nonumber \\
+ & = & (X^{\prime}\Omega^{-1}X)^{-1}X^{\prime}\Omega^{-1}(\sigma^{2}\Omega)\Omega^{-1}X(X^{\prime}\Omega^{-1}X)^{-1}\nonumber \\
+ &  & \mbox{(since}\ cov(y|X)=cov(u|X)\mbox{)}\nonumber \\
+ & = & \sigma^{2}(X^{\prime}\Omega^{-1}X)^{-1}\label{eq:8}
+\end{eqnarray}
+
+\end_inset
+
+The unbiased estimator of 
+\begin_inset Formula $cov(\hat{\beta}_{GLS}|X)$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+est.\ cov(\hat{\beta}_{GLS}|X)=\hat{\sigma}^{2}(X^{\prime}\Omega^{-1}X)^{-1}\label{eq:9}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+\hat{\sigma}^{2}=\frac{(y-X\hat{\beta}_{GLS})^{\prime}\Omega^{-1}(y-X\hat{\beta}_{GLS})}{N-K}\label{eq:10}
+\end{equation}
+
+\end_inset
+
+which is an unbiased estimator of 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Since replacing 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ by 
+\begin_inset Formula $\sigma^{2}\cdot\Omega(=cov(u|X))$
+\end_inset
+
+ in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:7"
+
+\end_inset
+
+) does not change the numerical value, the GLS estimator can also be written
+ as
+\begin_inset Formula 
+\[
+\hat{\beta}_{GLS}=[X^{\prime}cov(u|X)^{-1}X]^{-1}X^{\prime}cov(u|X)^{-1}y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As noted above, the OLS estimator 
+\begin_inset Formula $(X^{\prime}X)^{-1}X^{\prime}y$
+\end_inset
+
+ is also unbiased without A3, but nevertheless the GLS estimator should
+ be preferred (provided 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ is known) because the latter is more efficient in that the variance is
+ smaller in the matrix sense.
+ The gain in efficiency is achieved by exploiting the heteroskedasticity
+ and correlation between observations in the error term, which, operationally,
+ is to insert the inverse of (a matrix proportional to) 
+\begin_inset Formula $cov(u|X)$
+\end_inset
+
+ in the OLS formula, as in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:7"
+
+\end_inset
+
+) .
+ The discussion so far can be summarized as
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\emph on
+(finite-sample properties of GLS):
+\end_layout
+
+\begin_layout Proposition*
+(a) (unbiasedness) Under Assumptions (A1) and (A2), 
+\begin_inset Formula $E(\hat{\beta}_{GLS}|X)=\beta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+(b) (expression for the variance) Under Assumptions (A1) and (A2) and the
+ assumption that the conditional second moment is proportional to 
+\begin_inset Formula $V(X)$
+\end_inset
+
+, i.e.
+ (A3*),
+\begin_inset Formula 
+\[
+cov(\hat{\beta}_{GLS}|X)=\sigma^{2}\cdot(X^{\prime}V(X)^{-1}X)^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+(c) (efficiency of GLS) Under the same set of assumptions as in (b), the
+ GLS estimator is efficient in that the conditional covariance of any unbiased
+ estimator that is linear in 
+\begin_inset Formula $y$
+\end_inset
+
+ is greater than or equal to 
+\begin_inset Formula $cov(\hat{\beta}_{GLS}|X)$
+\end_inset
+
+ in the matrix sense.
+\end_layout
+
+\begin_layout Part*
+Special Forms of Covariance for Known 
+\begin_inset Formula $\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We have presented the classical linear regression model, treating the regressors
+ as random.
+ For these examples, assume 
+\begin_inset Formula $X$
+\end_inset
+
+ is a 
+\begin_inset Quotes eld
+\end_inset
+
+fixed,
+\begin_inset Quotes erd
+\end_inset
+
+ or deterministic, regressor.
+ Then, there is no need to distinguish between the conditional distribution
+ of the error term, 
+\begin_inset Formula $f(u_{t}|X_{1}^{\prime},\ldots,X_{t}^{\prime})$
+\end_inset
+
+, and the unconditional distribution, 
+\begin_inset Formula $f(u_{t})$
+\end_inset
+
+, so that Assumptions (A2) and (A3*) can be written as
+\begin_inset Formula 
+\begin{eqnarray}
+(A2):E(u_{t}) & = & 0\label{eq:11}\\
+(A3^{*}):E(uu^{\prime}) & = & \sigma^{2}\Omega\label{eq:12}
+\end{eqnarray}
+
+\end_inset
+
+The assumption of fixed regressors remains popular because the regression
+ model with fixed 
+\begin_inset Formula $X$
+\end_inset
+
+ can be interpreted as a set of statements conditional on 
+\begin_inset Formula $X$
+\end_inset
+
+, allowing us to dispense with 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $|X$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ from the statements.
+ We will treat the regressors as random another time.
+\end_layout
+
+\begin_layout Section*
+[1] Heteroskedasticity Only
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $\omega_{tt}\neq\omega_{ss}$
+\end_inset
+
+ for at least one pair of 
+\begin_inset Formula $t\neq s$
+\end_inset
+
+, and 
+\begin_inset Formula $\omega_{ts}=0\ \forall\ t\neq s$
+\end_inset
+
+.
+ In this case, 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ is a diagonal matrix and its inverse is a diagonal matrix with 
+\begin_inset Formula $\omega_{tt}^{-1}$
+\end_inset
+
+ as diagonal elements.
+\begin_inset Formula 
+\[
+\Omega=\left[\begin{array}{ccc}
+\omega_{11} &  & \mathbf{0}\\
+ & \ddots\\
+\mathbf{0} &  & \omega_{NN}
+\end{array}\right]_{(N\times N)},\ \Omega^{-1}=\left[\begin{array}{ccc}
+\omega_{11}^{-1} &  & \mathbf{0}\\
+ & \ddots\\
+\mathbf{0} &  & \omega_{NN}^{-1}
+\end{array}\right]_{(N\times N)}
+\]
+
+\end_inset
+
+Therefore, 
+\begin_inset Formula $P$
+\end_inset
+
+ in 
+\begin_inset Formula $\Omega^{-1}=P^{\prime}P$
+\end_inset
+
+ is a diagonal matrix with 
+\begin_inset Formula $\omega_{tt}^{-\frac{1}{2}}$
+\end_inset
+
+ as diagonal elemnts, and hence, 
+\begin_inset Formula $y_{t}^{*}=\frac{y_{t}}{\sqrt{\omega_{tt}}}\ \mbox{and}\ X_{t}^{*}=\frac{X_{t}}{\sqrt{\omega_{tt}}}$
+\end_inset
+
+.
+ The GLS estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is called the 
+\series bold
+weighted least squares
+\series default
+ estimator.
+\end_layout
+
+\begin_layout Example*
+Suppose there are 
+\begin_inset Formula $J_{t}$
+\end_inset
+
+ number of firms in period 
+\begin_inset Formula $t$
+\end_inset
+
+, and the linear model of interest for each firm in period 
+\begin_inset Formula $t$
+\end_inset
+
+ is given by 
+\begin_inset Formula $y_{tj}=X_{tj}\beta+u_{tj}$
+\end_inset
+
+, 
+\begin_inset Formula $j=1,\ldots,J_{t}\ \mbox{and}\ t=1,\ldots,N$
+\end_inset
+
+.
+ Suppose this equation satisfies all Gauss-Markov assumptions, so that OLSE
+ is the BLUE if data at the firm level are available.
+ However, if only industry aggregate data are available and the number of
+ firms in the industry changed over time, we will have a heteroskedasticity
+ problem in the regression equation 
+\begin_inset Formula $y_{t}=X_{t}\beta+u_{t}$
+\end_inset
+
+, where
+\begin_inset Formula 
+\[
+y_{t}={\displaystyle \sum_{j=1}^{J_{t}}y_{tj},}\ X_{t}=\sum_{j=1}^{J_{t}}X_{tj},\ u_{t}=\sum_{j=1}^{J_{t}}u_{tj}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+var(u_{t}) & = & var\left[\left({\displaystyle \sum_{j=1}^{J_{t}}}u_{tj}\right)\right]\\
+ & = & {\displaystyle \sum_{j=1}^{J_{t}}}var(u_{tj})\ \ \mbox{(since}\ \ensuremath{cov(u_{ti},u_{tj}})=0\ \forall\ i\neq j\mbox{)}\\
+ & = & \sigma^{2}J_{t}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+[2] Non-sperical Covariance with Homoskedasticity - Moving average data
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose 
+\begin_inset Formula $y_{t}=X_{t}\beta+u_{t}$
+\end_inset
+
+ satisifies all the Gauss-Markov assumptions for the true quarterly data.
+ Suppose that the published data is a 4-quarter moving average of the true
+ data:
+\begin_inset Formula 
+\[
+y_{t}^{m}=\frac{1}{4}{\displaystyle \sum_{s=0}^{3}y_{t-s}},\ X_{t}^{m}=\frac{1}{4}{\displaystyle \sum_{s=0}^{3}X_{t-s}},\ u_{t}^{m}=\frac{1}{4}{\displaystyle \sum_{s=0}^{3}u_{t-s}}
+\]
+
+\end_inset
+
+Then, the error term in the regression equation 
+\begin_inset Formula $y_{t}^{m}=X_{t}^{m}\beta+u_{t}^{m}$
+\end_inset
+
+ has a covariance matrix 
+\begin_inset Formula $\sigma^{2}\Omega$
+\end_inset
+
+, which is not diagonal:
+\begin_inset Formula 
+\begin{eqnarray*}
+var(u_{t}^{m}) & = & var\left[\left(\frac{1}{4}\sum_{s=0}^{3}u_{t-s}\right)\right]\\
+ & = & \frac{1}{16}{\displaystyle \sum_{s=0}^{3}var\left(u_{t-s}\right)\ \ \mbox{(since}\ cov(u_{t},u_{t-s})=0\ \mbox{for}\ s=1,2,3\mbox{)}}\\
+ & = & \frac{4}{16}\sigma^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+cov(u_{t}^{m},u_{t-1}^{m}) & = & E[(u_{t}^{m}-E(u_{t}^{m}))(u_{t-1}^{m}-E(u_{t-1}^{m}))]\\
+ & = & E[(u_{t}^{m})(u_{t-1}^{m})]\ \ \mbox{(since}\ E(u_{t}^{m})=E(u_{t-1}^{m})=0\mbox{)}\\
+ & = & E\left[\frac{1}{4}(u_{t}+u_{t-1}+u_{t-2}+u_{t-3})\frac{1}{4}(u_{t-1}+u_{t-2}+u_{t-3}+u_{t-4})\right]\\
+ & = & \frac{1}{16}\left[E(u_{t-1}^{2})+E(u_{t-2}^{2})+E(u_{t-3}^{2})\right]\ \ \mbox{(since}\ E(u_{t}u_{s})=0\ \forall\ t\neq s\mbox{)}\\
+ & = & \frac{3}{16}\sigma^{2}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the variance-covariance matrix of 
+\begin_inset Formula $u^{m}$
+\end_inset
+
+ is given by:
+\begin_inset Formula 
+\[
+cov(u^{m})=\frac{\sigma^{2}}{16}\left[\begin{array}{cccccc}
+4 & 3 & 2 & 1 & 0 & \ldots\\
+3 & 4 & 3 & 2 & 1 & 0\\
+2 & 3 & 4 & 3 & 2 & 1\\
+1 & 2 & 3 & 4 & 3 & 2\\
+0 & 1 & 2 & 3 & 4 & 2\\
+\vdots & 0 & 1 & 2 & 3 & 4
+\end{array}\right]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\omega_{tt}=\frac{4}{16},\ \omega_{t,t+1}=\frac{3}{16},\ \omega_{t,t+2}=\frac{2}{16},\ \omega_{t,t+3}=\frac{1}{16},\ \omega_{t,t+s}=0\ \forall\ s>3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+[3] Autocorrelation - Autoregressive (AR) error term
+\end_layout
+
+\begin_layout Subsection*
+(a) First order Markov process AR(1)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{t}=\rho u_{t-1}+\epsilon_{t},\ |\rho|<1,\ \epsilon_{t}\sim i.i.d.(0,\sigma_{\epsilon}^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{t}=\epsilon_{t}+\rho\epsilon_{t-1}+\rho^{2}\epsilon_{t-2}+\cdots+\rho^{n}\epsilon_{t-n}+\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+AR(1) is weakly stationary if 
+\begin_inset Formula $|\rho|<1$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\epsilon_{t}$
+\end_inset
+
+ is known as 
+\series bold
+white noise
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\sigma_{u}^{2}\equiv var(u_{t}) & = & var(\epsilon_{t}+\rho\epsilon_{t-1}+\rho^{2}\epsilon_{t-2}+\cdots+\rho^{n}\epsilon_{t-n}+\cdots)\\
+ & = & var(\epsilon_{t})+\rho^{2}var(\epsilon_{t-1})+\cdots+\rho^{2n}var(\epsilon_{t-n})+\cdots\ \ \mbox{(since}\ \epsilon_{t}\ \mbox{are}\ i.i.d.,\ \mbox{then}\ cov(\epsilon_{t},\epsilon_{s})=0\ \forall\ t\neq s\mbox{)}\\
+ & = & \sigma_{\epsilon}^{2}(1+\rho^{2}+\rho^{4}+\cdots+\rho^{2n}+\cdots)\ \ \mbox{(since}\ var(\epsilon_{t})=\sigma_{\epsilon}^{2}\ \forall\ t\mbox{)}\\
+ & = & \frac{\sigma_{\epsilon}^{2}}{1-\rho^{2}}\ \ \mbox{(since}\ |\rho|<1\mbox{)}\\
+cov(u_{t},u_{t-1}) & = & E[(u_{t}-E(u_{t}))(u_{t-1}-E(u_{t-1}))]\\
+ & = & E[(u_{t})(u_{t-1})]\ \ \mbox{(since}\ E(u_{t})=E(u_{t-1})=0\mbox{)}\\
+ & = & E[(\epsilon_{t}+\rho\epsilon_{t-1}+\rho\epsilon_{t-2}+\cdots+\rho^{n}\epsilon_{t-n}+\cdots)(\epsilon_{t-1}+\rho\epsilon_{t-2}+\cdots+\rho^{n}\epsilon_{t-n}+\cdots)]\\
+ & = & \rho E(\epsilon_{t-1}^{2})+\rho^{3}E(\epsilon_{t-2}^{2})+\cdots\ \ \mbox{(since}\ \epsilon_{t}\ \mbox{are}\ i.i.d.,\ \mbox{then}\ E(\epsilon_{t}\epsilon_{s})=0\ \forall\ t\neq s\mbox{)}\\
+ & = & \sigma_{\epsilon}^{2}\rho(1+\rho^{2}+\rho^{4}+\cdots)\ \ \mbox{\mbox{(since}\ var(\epsilon_{t})=\sigma_{\epsilon}^{2}\ \forall\ t\mbox{)}}\\
+ & = & \rho\frac{\sigma_{\epsilon}^{2}}{1-\rho^{2}}\\
+cov(u_{t},u_{t-n}) & = & \rho^{n}\left(\frac{\sigma_{\epsilon}^{2}}{1-\rho^{2}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the variance-covariance matrix of 
+\begin_inset Formula $u$
+\end_inset
+
+ is given by:
+\begin_inset Formula 
+\[
+cov(u)=\sigma_{\epsilon}^{2}\Omega=\left(\frac{\sigma_{\epsilon}^{2}}{1-\rho^{2}}\right)\left[\begin{array}{ccccc}
+1 & \rho & \rho^{2} & \cdots & \rho^{N-1}\\
+\rho & 1 & \rho & \cdots & \rho^{N-2}\\
+\rho^{2} & \rho & 1 & \cdots & \rho^{N-3}\\
+\vdots & \vdots & \vdots & \vdots & \vdots\\
+\rho^{N-1} & \rho^{N-2} & \rho^{N-3} & \cdots & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+The transformation matrix 
+\begin_inset Formula $P$
+\end_inset
+
+ in 
+\begin_inset Formula $P^{\prime}P=\Omega^{-1}$
+\end_inset
+
+ is given by:
+\begin_inset Formula 
+\[
+P=\left[\begin{array}{ccccc}
+\sqrt{1-\rho^{2}} & 0 & 0 & \cdots & 0\\
+-\rho & 1 & 0 & \cdots & 0\\
+0 & -\rho & 1 & \cdots & 0\\
+\vdots & \vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & -\rho & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+which gives the data transformation
+\begin_inset Formula 
+\[
+y_{1}^{*}=\sqrt{1-\rho^{2}}\cdot y_{1},\ y_{t}^{*}=y_{t}-\rho y_{t-1}\ \mbox{for}\ t=2,\ldots,N
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X_{1}^{*}=\sqrt{1-\rho^{2}}\cdot X_{1},\ X_{t}^{*}=X_{t}-\rho X_{t-1}\ \mbox{for}\ t=2,\ldots,N
+\]
+
+\end_inset
+
+How did we obtain 
+\begin_inset Formula $P$
+\end_inset
+
+? 
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{t} & = & X_{t}\beta+u_{t}\\
+y_{t} & = & X_{t}\beta+(\rho u_{t-1}+\epsilon_{t})\\
+y_{t} & = & \rho y_{t-1}+X_{t}\beta-X_{t-1}(\rho\beta)+\epsilon_{t}\\
+y_{t}-\rho y_{t-1} & = & (X_{t}-\rho X_{t-1})\beta+u_{t}-\rho u_{t-1}\\
+y_{t}^{*} & = & X_{t}^{*}\beta+u_{t}^{*}
+\end{eqnarray*}
+
+\end_inset
+
+We still need to estimate 
+\begin_inset Formula $\rho$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{u}_{t} & = & \rho\hat{u}_{t-1}+\epsilon_{t}\\
+\hat{\rho} & = & \frac{\sum\hat{u}_{t}\hat{u}_{t-1}}{\sum\hat{u}_{t-1}^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+We get 
+\begin_inset Formula $\hat{u}$
+\end_inset
+
+ by running OLS on the original SLM, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $y_{t}=X_{t}\beta+u_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+(b) Second order autoregressive process AR(2)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{t}=\rho_{1}u_{t-1}+\rho_{2}u_{t-2}+\epsilon_{t},\ \epsilon_{t}\sim i.i.d.(0,\sigma_{\epsilon}^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $\{u_{t}\}$
+\end_inset
+
+ is a stationary stochastic process, 
+\begin_inset Formula $E(u_{t})=E(u_{s})$
+\end_inset
+
+ and 
+\begin_inset Formula $var(u_{t})=var(u_{s})$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+, and 
+\begin_inset Formula $cov(u_{t},u_{t-s})$
+\end_inset
+
+ depends only on 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ Using these properties, it is straightforward to verify 
+\begin_inset Formula $E(u_{t})=0$
+\end_inset
+
+, and
+\end_layout
+
+\begin_layout Section*
+[4] Moving Average (MA) Process of the error term.
+\end_layout
+
+\begin_layout Standard
+First order MA process MA(1):
+\begin_inset Formula 
+\[
+u_{t}=\epsilon_{t}+\alpha\epsilon_{t-1},\ |\alpha|<1,\ \epsilon_{t}\sim i.i.d.(0,\sigma_{\epsilon}^{2})
+\]
+
+\end_inset
+
+These properties imply
+\begin_inset Formula 
+\begin{eqnarray*}
+E(u_{t}) & = & E(\epsilon_{t}+\alpha\epsilon_{t-1})\\
+ & = & E(\epsilon_{t}|X)+\alpha E(\epsilon_{t-1})\\
+ & = & 0\\
+var(u_{t}) & = & var(\epsilon_{t}+\alpha\epsilon_{t-1})\\
+ & = & var(\epsilon_{t})+\alpha^{2}var(\epsilon_{t-1})\ \ \mbox{(since}\ \epsilon_{t}\ \mbox{are}\ i.i.d.,\ \mbox{then}\ cov(\epsilon_{t},\epsilon_{s})=0\ \forall\ t\neq s\mbox{)}\\
+ & = & \sigma_{\epsilon}^{2}+\alpha^{2}\sigma_{\epsilon}^{2}\\
+ & = & (1+\alpha^{2})\sigma_{\epsilon}^{2}\\
+cov(u_{t},u_{t-1}) & = & E[(u_{t}-E(u_{t}))(u_{t-1}-E(u_{t-1}))]\\
+ & = & E[(u_{t})(u_{t-1})]\ \ \mbox{(since}\ E(u_{t})=E(u_{t-1})=0)\\
+ & = & E[(\epsilon_{t}+\alpha\epsilon_{t-1})(\epsilon_{t-1}+\alpha\epsilon_{t-2})]\\
+ & = & \alpha E(\epsilon_{t-1})\ \ \mbox{(since}\ \epsilon_{t}\ \mbox{are}\ i.i.d.,\ \mbox{then}\ E(\epsilon_{t}\epsilon_{s})=0\ \forall\ t\neq s\mbox{)}\\
+ & = & \alpha\sigma_{\epsilon}^{2}\\
+cov(u_{t},u_{t-s}) & = & E[(u_{t}-E(u_{t}))(u_{t-s}-E(u_{t-s}))]\\
+ & = & E[(u_{t})(u_{t-s})]\ \ \mbox{(since}\ E(u_{t})=E(u_{t-s})=0)\\
+ & = & E[(\epsilon_{t}+\alpha\epsilon_{t-1})(\epsilon_{t-s}+\alpha\epsilon_{t-s-1})]\\
+ & = & 0\ \ \mbox{(since}\ \epsilon_{t}\ \mbox{are}\ i.i.d.,\ \mbox{then}\ cov(\epsilon_{t},\epsilon_{s})=0\ \forall\ t\neq s\mbox{)}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the conditional covariance matrix of 
+\begin_inset Formula $u$
+\end_inset
+
+ is given by:
+\begin_inset Formula 
+\[
+cov(u)=\sigma_{\epsilon}^{2}\Omega=\sigma_{\epsilon}^{2}\left[\begin{array}{cccc}
+(1+\alpha^{2}) & \alpha & 0 & \cdots\\
+\alpha & (1+\alpha^{2}) & \alpha\\
+0 & \alpha & \ddots\\
+\vdots
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The square root matrix 
+\begin_inset Formula $P$
+\end_inset
+
+ of 
+\begin_inset Formula $\Omega^{-1}$
+\end_inset
+
+ such that 
+\begin_inset Formula $P^{\prime}P=\Omega^{-1}$
+\end_inset
+
+ involves trigonometric functions.
+ One can find 
+\begin_inset Formula $P$
+\end_inset
+
+ by the Choleski decomposition.
+ Alternatrivley, let 
+\begin_inset Formula $C$
+\end_inset
+
+ be the matrix of eigenvectors (characteristic vectors) of 
+\begin_inset Formula $\Omega^{-1}$
+\end_inset
+
+, and 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ be the diagonal matrix with the eigenvalues (characteristic roots) of 
+\begin_inset Formula $\Omega^{-1}$
+\end_inset
+
+ at the diagonal.
+ That is, 
+\begin_inset Formula $\Omega^{-1}C=C\Lambda$
+\end_inset
+
+.
+ Then, let 
+\begin_inset Formula $P=\Lambda^{\frac{1}{2}}C^{\prime}$
+\end_inset
+
+, so that 
+\begin_inset Formula $P^{\prime}P=C\Lambda C^{\prime}=\Omega^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+[6] Seemingly Unrelated Regression (SUR) Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose we have two equations
+\begin_inset Formula 
+\[
+y_{j}=X_{j}\beta_{j}+u_{j},\ j=1,2
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $y_{j}$
+\end_inset
+
+ is a 
+\begin_inset Formula $N\times1$
+\end_inset
+
+ vector of dependent variables, and 
+\begin_inset Formula $X_{j}$
+\end_inset
+
+ is a 
+\begin_inset Formula $N\times K_{j}$
+\end_inset
+
+ matrix of exogenous variables.
+ The error terms have the moments
+\begin_inset Formula 
+\[
+E(u_{j})=0,\ E(u_{j}u_{k})=\sigma_{jk}I
+\]
+
+\end_inset
+
+Each error term statisfies the Gauss-Markov assumptions, and they are 
+\series bold
+contemporaneously
+\series default
+ correlated, i.e.,
+\begin_inset Formula 
+\[
+cov(u_{tj},u_{tk})=\sigma_{jk},\ cov(u_{tj},u_{sk})=0\ \forall\ t\neq s
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Separate estimation of each equation does not take this correlation into
+ account, and will be less efficient than an estimator that utiltizes it.
+ To estimate 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+ jointly, stack 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ i the way similar to the setup of the data matrix when we test stability
+ of the coefficients.
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+y_{1}\\
+y_{2}
+\end{array}\right]=\left[\begin{array}{cc}
+X_{1} & 0\\
+0 & X_{2}
+\end{array}\right]\left[\begin{array}{c}
+\beta_{1}\\
+\beta_{2}
+\end{array}\right]+\left[\begin{array}{c}
+u_{1}\\
+u_{2}
+\end{array}\right]\longrightarrow y=X\beta+u
+\]
+
+\end_inset
+
+If the stacked-up error vector 
+\begin_inset Formula $u$
+\end_inset
+
+ has a scalar covariance matrix 
+\begin_inset Formula $\sigma^{2}I$
+\end_inset
+
+, the OLSE of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ will be BLUE.
+ However, because of the contemporaneous correlation between 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $cov(u|X)$
+\end_inset
+
+ is not of the form 
+\begin_inset Formula $\sigma^{2}I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What is the conditional covariance matrix of 
+\begin_inset Formula $u$
+\end_inset
+
+?
+\begin_inset Formula 
+\[
+cov(u)=E(uu^{\prime})=\left[\begin{array}{cc}
+E(u_{1}u_{1}^{\prime}) & E(u_{1}u_{2}^{\prime})\\
+E(u_{2}u_{1}^{\prime}) & E(u_{2}u_{2}^{\prime})
+\end{array}\right]=\left[\begin{array}{cc}
+\sigma_{11}I & \sigma_{12}I\\
+\sigma_{21}I & \sigma_{22}I
+\end{array}\right]=\Sigma\otimes I,\ \Sigma=\left[\begin{array}{cc}
+\sigma_{11} & \sigma_{12}\\
+\sigma_{21} & \sigma_{22}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remarks.
+\end_layout
+
+\begin_layout Standard
+(a) 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ is the contemporaneous covariance matrix of 
+\begin_inset Formula $(u_{t1},u_{t2})^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(b) The GLS estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+\hat{\beta}_{GLS}=\left[X^{\prime}(\Sigma^{-1}\otimes I)X{}^{-1}\right]X^{\prime}(\Sigma^{-1}\otimes I)y
+\]
+
+\end_inset
+
+We obtain an explicit estimate by running a two step estimation process:
+ 
+\end_layout
+
+\begin_layout Enumerate
+Run OLS on each equation to obtain 
+\begin_inset Formula $\hat{u}_{1}\ \mbox{and}\ \hat{u}_{2}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\hat{\sigma}_{jk}=\frac{\hat{u}_{j}^{\prime}\hat{u}_{k}}{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Run GLS with 
+\begin_inset Formula $\hat{\Sigma}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(c) GLSE of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is identical to the separate OLSE of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+ from each equation if 
+\begin_inset Formula $\sigma_{12}=\sigma_{21}=0$
+\end_inset
+
+ (i.e., 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ is diagonal), or if 
+\begin_inset Formula $X_{1}\equiv X_{2}$
+\end_inset
+
+ (i.e., data of the regressors are identical).
+\end_layout
+
+\begin_layout Enumerate
+To show the first case 
+\begin_inset Formula $(\sigma_{12}=\sigma_{21}=0)$
+\end_inset
+
+, recall that the inverse of a diagonal matrix 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ is simply taking the inverse of the diagonal elemetns.
+ Thus,
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta}_{GLS} & = & \left[X^{\prime}(\Sigma^{-1}\otimes I)X{}^{-1}\right]X^{\prime}(\Sigma^{-1}\otimes I)y\\
+ & = & \left(\left[\begin{array}{cc}
+X_{1}^{\prime} & 0\\
+0 & X_{2}^{\prime}
+\end{array}\right]\left[\begin{array}{cc}
+\sigma_{11}^{-1}I & 0\\
+0 & \sigma_{22}^{-1}I
+\end{array}\right]\left[\begin{array}{cc}
+X_{1} & 0\\
+0 & X_{2}
+\end{array}\right]\right)^{-1}\left[\begin{array}{cc}
+X_{1}^{\prime} & 0\\
+0 & X_{2}^{\prime}
+\end{array}\right]\left[\begin{array}{cc}
+\sigma_{11}^{-1}I & 0\\
+0 & \sigma_{22}^{-1}I
+\end{array}\right]\left[\begin{array}{c}
+y_{1}\\
+y_{2}
+\end{array}\right]\\
+ & = & \left[\begin{array}{cc}
+\sigma_{11}\left(X_{1}^{\prime}X_{1}\right)^{-1} & 0\\
+0 & \sigma_{22}\left(X_{2}^{\prime}X_{2}\right)^{-1}
+\end{array}\right]\left[\begin{array}{c}
+\sigma_{11}^{-1}X_{1}^{\prime}y_{1}\\
+\sigma_{22}^{-1}X_{2}^{\prime}y_{2}
+\end{array}\right]\\
+ & = & \left[\begin{array}{c}
+\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}y_{1}\\
+\left(X_{2}^{\prime}X_{2}\right)^{-1}X_{2}^{\prime}y_{2}
+\end{array}\right]=\left[\begin{array}{c}
+\hat{\beta}_{1\ OLS}\\
+\hat{\beta}_{2\ OLS}
+\end{array}\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+To show the second case, let 
+\begin_inset Formula $Z=X_{1}=X_{2}$
+\end_inset
+
+, so that 
+\begin_inset Formula $X=I\otimes Z$
+\end_inset
+
+.
+ Then, using the relationships 
+\begin_inset Formula $(A\otimes B)^{\prime}=(A^{\prime}\otimes B^{\prime})$
+\end_inset
+
+ and 
+\begin_inset Formula $(A\otimes B)(C\otimes D)=(AC\otimes BD)$
+\end_inset
+
+, we can write
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta}_{GLS} & = & \left[X^{\prime}(\Sigma^{-1}\otimes I)X{}^{-1}\right]X^{\prime}(\Sigma^{-1}\otimes I)y\\
+ & = & \left[\left(I\otimes Z^{\prime}\right)(\Sigma^{-1}\otimes I)(I\otimes Z)\right]^{-1}\left(I\otimes Z^{\prime}\right)(\Sigma^{-1}\otimes I)y\\
+ & = & \left[\Sigma^{-1}\otimes Z^{\prime}Z\right]^{-1}(\Sigma^{-1}\otimes Z^{\prime})y\\
+ & = & [I\otimes(Z^{\prime}Z)^{-1}Z^{\prime}]y\\
+ & = & \left[\begin{array}{cc}
+(Z^{\prime}Z)^{-1}Z^{\prime} & 0\\
+0 & (Z^{\prime}Z)^{-1}Z^{\prime}
+\end{array}\right]\left[\begin{array}{c}
+y_{1}\\
+y_{2}
+\end{array}\right]\\
+ & = & \left[\begin{array}{c}
+(Z^{\prime}Z)^{-1}Z^{\prime}y_{1}\\
+(Z^{\prime}Z)^{-1}Z^{\prime}y_{2}
+\end{array}\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(d) The extension to the SUR model with more than two equations is straightforwa
+rd.
+\end_layout
+
+\begin_layout Section*
+[6] Time Series
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This is the data set on different individuals or firms or countries over
+ several time periods.
+ This is essentially the same as the SUR model in that we have several equations.
+ The name 
+\begin_inset Quotes eld
+\end_inset
+
+time series - cross section data
+\begin_inset Quotes erd
+\end_inset
+
+ applies when we have observations on a few corss sectional units over a
+ relatively long time periods.
+ When we have observations on a large number of crosss sectional units over
+ relatively short time periods, it is called 
+\begin_inset Quotes eld
+\end_inset
+
+panel data
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+longitudinal data set.
+\begin_inset Quotes erd
+\end_inset
+
+ The main feature of interest about the cross sectional units is the heterogenei
+ty, while the times series dimension is interested in the stochastic properties
+ over time.
+ The emphasisi of the analysis typically depends on the nature of the data
+ set.
+ For example, the analysiss of a panel data is mainly interested in the
+ heterogeneity, and there are a variety of ways to take that into account.
+\end_layout
+
+\begin_layout Subsection*
+Time Series - Cross Section Data
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider a time series - cross section data which has observations on 
+\begin_inset Formula $n$
+\end_inset
+
+ cross sectional units over 
+\begin_inset Formula $T$
+\end_inset
+
+ time periods, and in general, 
+\begin_inset Formula $n\leq T$
+\end_inset
+
+.
+ Consider a simple model
+\begin_inset Formula 
+\[
+y_{ti}=X_{ti}\beta+u_{ti},\ i=1,\ldots,n,\ t=1,\ldots,T
+\]
+
+\end_inset
+
+Note that, unlike the SUR model, this specification assumes a stable coefficeint
+ over time as well as across cross sectional units.
+ We can arrange the data in matrix forms in either over time or across the
+ cross sectional units.
+ We will use the popular convention of having the data matrices vary across
+ corss sectional units, i.e., 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is a 
+\begin_inset Formula $T\times1$
+\end_inset
+
+ vector of observations on agent 
+\begin_inset Formula $i$
+\end_inset
+
+ over 
+\begin_inset Formula $T$
+\end_inset
+
+ periods.
+ Using this method, it is easier to specify the stochastic property over
+ time.
+ We can write the equation of the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+agent as
+\begin_inset Formula 
+\[
+y_{i}=X_{i}\beta+u_{i},\ i=1,\ldots,n
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ is a 
+\begin_inset Formula $T\times K$
+\end_inset
+
+ observation matrix of the regressors for agent 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Stacking these equations up as in the case of the SUR model, we can write
+ for all agents over the entire periods as
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\begin{array}{c}
+y_{1}\\
+\vdots\\
+y_{n}
+\end{array}\right] & = & \left[\begin{array}{c}
+X_{1}\\
+\vdots\\
+X_{n}
+\end{array}\right]\beta+\left[\begin{array}{c}
+u_{1}\\
+\vdots\\
+u_{n}
+\end{array}\right]\longrightarrow y=X\beta+u,\ \ V=cov(u)=E(uu^{\prime})=\left[\begin{array}{ccc}
+\sigma_{11}\Omega_{11} & \cdots & \sigma_{1n}\Omega_{1n}\\
+\vdots & \ddots & \vdots\\
+\sigma_{n1}\Omega_{n1} & \cdots & \sigma_{nn}\Omega_{nn}
+\end{array}\right]
+\end{eqnarray*}
+
+\end_inset
+
+where each 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ are 
+\begin_inset Formula $T$
+\end_inset
+
+-dimensional vectors and 
+\begin_inset Formula $cov(u_{i},u_{j})=\sigma_{ij}\Omega_{ij}$
+\end_inset
+
+ is a 
+\begin_inset Formula $T\times T$
+\end_inset
+
+ covariance matrix.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Note that in the SUR model we imposed restrictions 
+\begin_inset Formula $\Omega_{ij}=I\ \forall\ i,j$
+\end_inset
+
+.
+ This assumption implies that there is neither own serial correlation in
+ 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+, nor corss equational serial correlation.
+ By relaxing these restictions, or by imposing furhter restictions, we can
+ construct a variety of models as discussed below.
+\end_layout
+
+\begin_layout Subsubsection*
+(a) Gauss-Markov model: 
+\begin_inset Formula $u_{ti}\sim i.i.d.(0,\sigma^{2})\ \forall\ t,\ \mbox{and}\ i$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This implies 
+\begin_inset Formula $\sigma_{ii}=\sigma^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Omega_{ii}=I$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+, and 
+\begin_inset Formula $\sigma_{ij}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\Omega_{ij}=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+ Therfore, 
+\begin_inset Formula $V=\sigma^{2}I$
+\end_inset
+
+ and OLSE of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is BLUE.
+\end_layout
+
+\begin_layout Subsubsection*
+(b) Cross sectional heteroskedasticity only: 
+\begin_inset Formula $u_{ti}\sim i.i.d.(0,\sigma_{ii})\ \forall\ t\ \mbox{and}\ i$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This implies 
+\begin_inset Formula $\Omega_{ii}=I$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+, and 
+\begin_inset Formula $\sigma_{ij}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\Omega_{ij}=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+ The weighted least squares estimator in the standard case of heteroskedasticity
+ will be the BLUE.
+\end_layout
+
+\begin_layout Subsubsection*
+(c) Cross sectional heteroskedasticity and contemporaneous correlation only
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+cov(u_{ti},u_{sj})=\begin{cases}
+\sigma_{ij} & \mbox{if}\ t=s\\
+0 & \mbox{if}\ t\neq s
+\end{cases}
+\]
+
+\end_inset
+
+This implies 
+\begin_inset Formula $\Omega_{ij}=I$
+\end_inset
+
+ for all 
+\begin_inset Formula $i\ \mbox{and}\ j$
+\end_inset
+
+, and 
+\begin_inset Formula $V=\Sigma\otimes I$
+\end_inset
+
+.
+ The GLSE 
+\begin_inset Formula $\hat{\beta}_{GLS}=\left[X^{\prime}(\Sigma^{-1}\otimes I)X{}^{-1}\right]X^{\prime}(\Sigma^{-1}\otimes I)y$
+\end_inset
+
+ is the BLUE.
+\end_layout
+
+\begin_layout Subsubsection*
+(d) Individual Autocorrelation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{ti}=\rho_{i}u_{t-1,i}+\epsilon_{ti}\ \forall\ i$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{ti}=\epsilon_{ti}+\rho\epsilon_{t-1,i}+\rho^{2}\epsilon_{t-2,i}+\cdots+\rho^{n}\epsilon_{t-n,i}+\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Two cases are presented below.
+\end_layout
+
+\begin_layout Paragraph*
+(i) 
+\begin_inset Formula $\epsilon_{ti}\sim i.i.d.(0,\tau_{ii})\ \forall\ t\ \mbox{and}\ i\ (\mbox{that is},\ cov(\epsilon_{ti},\epsilon_{sj})=0\ \forall\ t\neq s\ \mbox{and}\ i\neq j)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $var(u_{ti})=\sigma_{ii}=\frac{\tau_{ii}}{(1-\rho_{i}^{2})}\ \forall\ i,\ \mbox{and}\ \sigma_{ij}=0\ \mbox{for}\ i\neq j$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Omega_{ii}$
+\end_inset
+
+ is the usual 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ matrix of AR(1) with 
+\begin_inset Formula $\rho_{i}$
+\end_inset
+
+ in the place of 
+\begin_inset Formula $\rho$
+\end_inset
+
+, and 
+\begin_inset Formula $\Omega_{ij}=0\ \forall\ i\neq j$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $V$
+\end_inset
+
+ is a block diagonal matrix
+\end_layout
+
+\begin_layout Paragraph*
+(ii) 
+\begin_inset Formula $cov(\epsilon_{ti},\epsilon_{sj})=\tau_{ij}\ \mbox{for}\ t=s,\ \mbox{and}\ cov(\epsilon_{ti},\epsilon_{sj})=0\ \forall\ t\neq s$
+\end_inset
+
+ (
+\begin_inset Formula $\varepsilon_{ti}$
+\end_inset
+
+ 
+\series medium
+and 
+\begin_inset Formula $\varepsilon_{si}$
+\end_inset
+
+ are contemporaneously correlated)
+\end_layout
+
+\begin_layout Standard
+The diagonal blocs 
+\begin_inset Formula $\sigma_{ii}\Omega_{ii}$
+\end_inset
+
+ of 
+\begin_inset Formula $V$
+\end_inset
+
+ are the same as in Case 
+\series bold
+(i)
+\series default
+.
+ The off-diagonal blocks in 
+\begin_inset Formula $V$
+\end_inset
+
+ have the form:
+\begin_inset Formula 
+\[
+\sigma_{ij}\Omega_{ij}=\frac{\tau_{ij}}{1-\rho_{i}\rho_{j}}\left[\begin{array}{ccccc}
+1 & \rho_{j} & \rho_{j}^{2} & \cdots & \rho_{j}^{T-1}\\
+\rho_{i} & 1 & \rho_{j} & \cdots & \rho_{j}^{T-2}\\
+\rho_{i}^{2} & \rho_{i} & 1 & \cdots & \rho_{j}^{T-3}\\
+\vdots & \vdots & \vdots &  & \vdots\\
+\rho_{i}^{T-1} & \rho_{i}^{T-2} & \rho_{i}^{T-3} & \cdots & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+This can be verified by considering either
+\begin_inset Formula 
+\begin{eqnarray*}
+cov(u_{ti},u_{sj}) & = & cov(\rho_{i}u_{t-1,i}+\varepsilon_{ti},\rho_{j}u_{s-1,j}+\varepsilon_{sj}\\
+ & = & \rho_{i}\rho_{j}cov(u_{t-1,i},u_{s-1,j})+\rho_{i}cov(u_{t-1,i},\varepsilon_{sj})+\rho_{j}cov(u_{s-1,j},\varepsilon_{ti})+cov(\varepsilon_{ti},\varepsilon_{sj})\\
+ & \mbox{or}\\
+cov(u_{ti},u_{sj}) & = & cov\left({\displaystyle \sum_{k=0}^{\infty}}p_{i}^{k}\varepsilon_{t-k,i},{\displaystyle \sum_{l=0}^{\infty}}p_{i}^{l}\varepsilon_{s-l,j}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Here is an example that calculates a few elements of the matrix:
+\begin_inset Formula 
+\begin{eqnarray*}
+cov(u_{ti},u_{sj}) & = & cov\left[\left(\varepsilon_{ti}+\rho_{i}\epsilon_{t-1,i}+\rho_{i}^{2}\epsilon_{t-2,i}+\cdots\right),\left(\varepsilon_{sj}+\rho_{j}\epsilon_{s-1,j}+\rho_{j}^{2}\varepsilon_{s-2,j}+\cdots\right)\right]\\
+ & = & E\left[\left(\varepsilon_{ti}+\rho_{i}\varepsilon_{t-1,i}+\rho_{i}^{2}\varepsilon_{t-2,i}+\cdots\right)\left(\varepsilon_{sj}+\rho_{j}\varepsilon_{s-1,j}+\rho_{j}^{2}\varepsilon_{s-2,j}+\cdots\right)\right]\ \ \mbox{since}\ E(\varepsilon_{ti})=0\ \forall\ t,i\\
+ & = & E\left[\left(\varepsilon_{ti}\varepsilon_{sj}+\varepsilon_{ti}\rho_{j}\varepsilon_{s-1,j}+\cdots\right)+\left(\rho_{i}\varepsilon_{t-1,i}\varepsilon_{sj}+\rho_{i}\rho_{j}\varepsilon_{t-1,i}\varepsilon_{s-1,j}+\cdots\right)+\cdots\right]\\
+t=s & : & \tau_{ij}(1+\rho_{i}\rho_{j}+\rho_{i}^{2}\rho_{j}^{2}+\cdots)=\frac{\tau_{ij}}{1-\rho_{i}\rho_{j}}\\
+t=s-1 & : & \tau_{ij}\rho_{j}(1+\rho_{i}\rho_{j}+\cdots)=\frac{\tau_{ij}}{1-\rho_{i}\rho_{j}}\rho_{j}\\
+t-1=s & : & \tau_{ij}\rho_{i}(1+\rho_{i}\rho_{j}+\cdots)=\frac{\tau_{ij}}{1-\rho_{i}\rho_{j}}\rho_{i}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Longitudinal Data
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As noted earlier, the main interest in the analysis of a panel data is the
+ heterogeneity across the corss sectional agents.
+ There are two basic models that consider the cross sectional heterogeneity:
+ 
+\series bold
+Fixed individual effect model
+\series default
+ and 
+\series bold
+Random individual effect model
+\series default
+.
+\end_layout
+
+\begin_layout Subsubsection*
+(a) Fixed Effects Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The simplest form of this model assumes that the heterogeneity arises only
+ in the intercept term of the regression equation
+\begin_inset Formula 
+\[
+y_{ti}=\alpha_{i}+X_{ti}\beta+u_{ti},\ i=1,\ldots,n,\ t=1,\ldots,T
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $X_{ti}$
+\end_inset
+
+ now does not include a constant term.
+ This is precisely the form of one unstable coefficient in the stability
+ test of a subset of the coefficients.
+ There is nothing new, except that we may now allow various properties of
+ the error term in addition to the 
+\begin_inset Formula $i.i.d.$
+\end_inset
+
+ case we considered for the atability tests.
+ This can also be interpreted as a SUR model with restrictions across equations,
+ i.e., the coefficients of 
+\begin_inset Formula $X$
+\end_inset
+
+ are the same.
+\end_layout
+
+\begin_layout Subsubsection*
+(b) Random Effects Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This model assumes that the heterogeneity effect 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+ is not constant, but a random variable with mean 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and a finite variance.
+ This model views that the cross sectional sample is drawn from a large
+ population whose individual effects have a certain distribution.
+ Let 
+\begin_inset Formula $\alpha_{i}=\alpha+\epsilon_{i}$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\[
+y_{ti}=\alpha_{i}+X_{ti}\beta+u_{ti}=\alpha+X_{ti}\beta+(\epsilon_{i}+u_{ti})=\alpha+X_{ti}\beta+\xi_{ti}
+\]
+
+\end_inset
+
+and the random term 
+\begin_inset Formula $\xi_{ti}$
+\end_inset
+
+ has two components: individual effect 
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+ which stays the same over time, and the pure random noise 
+\begin_inset Formula $u_{ti}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can construct a variety of models by considering different properties
+ of the error terms 
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{ti}$
+\end_inset
+
+.
+ The simplest model assumes that 
+\begin_inset Formula $X_{ti}$
+\end_inset
+
+ is exogenous with respect to 
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+and 
+\begin_inset Formula $u_{ti}$
+\end_inset
+
+, and
+\begin_inset Formula 
+\begin{eqnarray*}
+\epsilon_{i} & \sim & i.i.d.(0,\sigma_{\epsilon}^{2})\ \forall\ i\\
+u_{ti} & \sim & i.i.d.(0,\sigma_{u}^{2})\ \forall\ t\ \mbox{and}\ i\\
+cov(\epsilon_{i},u_{t}) & = & 0\ \forall\ i,j,t
+\end{eqnarray*}
+
+\end_inset
+
+Under these assumptions
+\begin_inset Formula 
+\begin{eqnarray*}
+cov(\xi_{ti},\xi_{sj}) & = & cov[(\epsilon_{i}+u_{ti}),(\epsilon_{j}+u_{si})]\\
+ & = & E[(\epsilon_{i}+u_{ti})(\epsilon_{j}+u_{si})]-E[(\epsilon_{i}+u_{ti})]E[(\epsilon_{j}+u_{si})]\\
+ & = & E[\epsilon_{i}\epsilon_{j}+\epsilon_{i}u_{si}+\epsilon_{j}u_{ti}+u_{ti}u_{sj}]\\
+ & = & \begin{cases}
+\sigma_{\epsilon}^{2}+\sigma_{u}^{2} & \mbox{if}\ t=s,\ i=j\\
+\sigma_{\epsilon}^{2} & \mbox{if}\ t\neq s,\ i=j\\
+0 & \mbox{otherwise}
+\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+All 
+\begin_inset Formula $T\times1$
+\end_inset
+
+ vectos of 
+\begin_inset Formula $\xi_{i}$
+\end_inset
+
+ have a common covariance matrix
+\begin_inset Formula 
+\[
+\Omega=cov(\xi_{i})=\sigma_{u}^{2}I+\sigma_{\epsilon}^{2}ee^{\prime}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $e$
+\end_inset
+
+ is a 
+\begin_inset Formula $T\times1$
+\end_inset
+
+ vecots of 1's.
+ Therefore, the 
+\begin_inset Formula $nT\times1$
+\end_inset
+
+ stacked-up vector 
+\begin_inset Formula $\xi=(\xi_{1}^{\prime},\ldots,\xi_{n}^{\prime})^{\prime}$
+\end_inset
+
+ has the covariance matrix 
+\begin_inset Formula $V=I\otimes\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To transform the data for the GLS estimation of the stacked-up data matrices
+ we need to find a transformation matrix 
+\begin_inset Formula $P$
+\end_inset
+
+ such that 
+\begin_inset Formula $P^{\prime}P=V^{-1}=I\otimes\Omega^{-1}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $Q$
+\end_inset
+
+ be the square root matrix of 
+\begin_inset Formula $\Omega^{-1}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $Q^{\prime}Q=\Omega^{-1}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $P=I\otimes Q$
+\end_inset
+
+.
+ The square root matrix 
+\begin_inset Formula $Q$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+Q=\sigma_{u}^{-1}\left(I-\frac{\delta}{T}ee^{\prime}\right),\ \delta=1-\frac{\sigma_{u}}{\sqrt{T\sigma_{\varepsilon}^{2}+\sigma_{u}^{2}}}
+\]
+
+\end_inset
+
+For the stacked-up 
+\begin_inset Formula $nT\times1$
+\end_inset
+
+ vector 
+\begin_inset Formula $y=(y_{1}^{\prime},\ldots,y_{n}^{\prime})^{\prime}$
+\end_inset
+
+, each subvector of the transformed dependent variable in 
+\begin_inset Formula $y^{*}=Py=(y_{1}^{*\prime},\ldots,y_{n}^{*\prime})^{\prime}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+y_{i}^{*}=Qy_{i}=\sigma_{u}^{-1}\left(I-\frac{\delta}{T}ee^{\prime}\right)y_{i}=\sigma_{u}^{-1}(y_{i}-\delta e\bar{y}_{\cdot i})=\sigma_{u}^{-1}\left[\begin{array}{c}
+y_{ti}-\delta\bar{y}_{\cdot i}\\
+\vdots\\
+y_{Ti}-\delta\bar{y}_{\cdot i}
+\end{array}\right]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\bar{y}_{\cdot i}=T^{-1}e^{\prime}y_{i}=T^{-1}{\displaystyle \sum_{t=1}^{T}}y_{ti}$
+\end_inset
+
+ is the mean of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th cross section unit.
+ Each regressor in 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th unit will be transformed in the similar way.
+\end_layout
+
+\end_body
+\end_document

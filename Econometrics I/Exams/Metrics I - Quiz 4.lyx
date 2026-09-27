@@ -1,0 +1,229 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Econometrics I: Quiz 4
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Problem
+Explain the basic idea of the maximum likelihood estimator.
+\end_layout
+
+\begin_layout Proof
+In estimation problems, we do not know the distribution parameters, but
+ we have a set of observations.
+ Maximum likelihood estimation finds the distribution parameter that would
+ have generated the sample on hand most likely.
+ Assuming we have a random sample, so the observations are independent,
+ the likelihood function and the log-likelihood function are
+\begin_inset Formula 
+\begin{eqnarray*}
+L & = & {\displaystyle \prod_{t=1}^{n}}f(y_{t};\theta)\\
+l & = & {\displaystyle \sum_{t=1}^{n}}\ln\left[f(y_{t};\theta)\right]
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $f(y_{t};\theta)$
+\end_inset
+
+ is the marginal pdf of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\displaystyle \prod_{i=1}^{n}}f(y_{t};\theta)$
+\end_inset
+
+ is the joint pdf of 
+\begin_inset Formula $(y_{1},\ldots,y_{n})$
+\end_inset
+
+.
+ Given a sample, we want to maximize the log-likelihood function with respect
+ to the parameter.
+\end_layout
+
+\begin_layout Problem
+Consider a standard linear regression model 
+\begin_inset Formula $y=X\beta+u$
+\end_inset
+
+, which satisfies the Gauss-Markov assumptions and 
+\begin_inset Formula $u_{t}\sim i.i.d.N(0,\sigma^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Write the log likelihood function.
+\end_layout
+
+\begin_layout Enumerate
+Derive the first order conditions and solve for the unknown parameter.
+\end_layout
+
+\begin_layout Enumerate
+Are the estimators unbiased? Just explain why or why not.
+\end_layout
+
+\begin_layout Enumerate
+Find the maximum value of the log likelihood function.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+The log likelihood function is
+\begin_inset Formula 
+\[
+\ln L=-\frac{N}{2}\ln(2\pi)-\frac{N}{2}\ln(\sigma^{2})-\frac{(y-X\beta)^{\prime}(y-X\beta)}{2\sigma^{2}}
+\]
+
+\end_inset
+
+The first-order conditions are
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\ln L}{\partial\beta} & = & -\frac{1}{2\sigma^{2}}\left(-2X^{\prime}y+2X^{\prime}X\beta\right)=0\\
+\hat{\beta} & = & (X^{\prime}X)^{-1}X^{\prime}y
+\end{eqnarray*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\ln L}{\partial\sigma^{2}} & = & -\frac{N}{2}\frac{1}{\sigma^{2}}+\frac{(y-X\beta)^{\prime}(y-X\beta)}{2\sigma^{4}}=0\\
+\hat{\sigma}^{2} & = & \frac{(y-X\hat{\beta})^{\prime}(y-X\hat{\beta})}{N}
+\end{eqnarray*}
+
+\end_inset
+
+Since the Gauss-Markove assumptions are satisfied we know 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is unbiased.
+ However, 
+\begin_inset Formula $\hat{\sigma}^{2}$
+\end_inset
+
+ is biased because the unbiased estimator of 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\hat{\sigma}^{2}=\frac{(y-X\hat{\beta})^{\prime}(y-X\hat{\beta})}{N-K}
+\]
+
+\end_inset
+
+The maximum vaue of the log-likelihood function is
+\begin_inset Formula 
+\[
+\ln L=-\frac{N}{2}\ln(2\pi)-\frac{N}{2}\ln(\hat{\sigma}^{2})-\frac{N}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

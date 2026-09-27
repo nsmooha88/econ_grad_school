@@ -1,0 +1,2258 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Set 6: Models of Qualitative Responses
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Abstract
+
+\series bold
+\size normal
+Models of Limited Dependent Variables:
+\series default
+ Binary Choice Model; Multiple Choice Model
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider a model where a dependent variable (latent variable) 
+\begin_inset Formula $y_{t}^{*}$
+\end_inset
+
+ has mean 
+\begin_inset Formula $\mu_{t}$
+\end_inset
+
+, which is a linear function of a set of exogenous variables 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+y_{t}^{*}=E(y_{t}^{*})=u_{t}=X_{t}\beta+u_{t},\ t=1,\ldots,N
+\]
+
+\end_inset
+
+
+\begin_inset Formula $X_{t}\beta$
+\end_inset
+
+ is called an 
+\emph on
+index function
+\emph default
+.
+ The latent variable model is often motivated by the maximization of 
+\emph on
+random utilities
+\emph default
+ of two choices.
+ Let the utility of choice 
+\begin_inset Formula $j$
+\end_inset
+
+ be 
+\begin_inset Formula $U_{ij}=Z_{ij}\beta+\epsilon_{ij},\ j=0,1$
+\end_inset
+
+, for individual 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ He will choose alternative 
+\begin_inset Formula $1$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $U_{i1}>U_{i0}$
+\end_inset
+
+, that is, if
+\begin_inset Formula 
+\[
+y_{i}^{*}\equiv U_{i1}-U_{i0}=(Z_{i1}-Z_{i0})\beta+(\epsilon_{i1}-\epsilon_{i0})\equiv X_{i}\beta+u_{i}>0
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Models of limited dependent variables are the cases in which observations
+ on the dependent variable are not fully available.
+ In the binary response (choice) model, only the signs of the dependent
+ variable 
+\begin_inset Formula $y_{t}^{*}$
+\end_inset
+
+ are observed while observations on regressors 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ are fully available.
+ Let 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ be the observable random variable.
+ Then, we can specify the 
+\emph on
+binary response model
+\emph default
+ as
+\begin_inset Formula 
+\[
+y_{t}=\begin{cases}
+1 & \mbox{if}\ y_{t}^{*}>0\\
+0 & \mbox{if}\ y_{t}^{*}\leq0
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+When there are more than two choices, two cases arise: 
+\emph on
+ordered
+\emph default
+ and 
+\emph on
+unordered 
+\emph default
+qualitative response (choice) models.
+ A classical example of ordered qualitative response model (OQR) is a survey
+ data where the answers are to choose one from strongly agree, agree, indifferen
+t, disagree, and strongly disagree.
+ This can be considered as a direct extension of the binary choice model.
+ A classical example of the unordered qualitative response model (UQR) is
+ the choice of a transportation mode among driving, riding on a bus, walking,
+ etc.
+ The ordered and unordered qualitative response models are also called the
+ ordered and unordered multinomial models.
+ We will discuss these models after the binary response model.
+\end_layout
+
+\begin_layout Section*
+Binary Response Model (BRM)
+\end_layout
+
+\begin_layout Subsection*
+Specification of the Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the BRM, we may directly define the observed values 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ as the realizations of a Bernoulli random variable.
+ The probability 
+\begin_inset Formula $P(y_{t}=1)$
+\end_inset
+
+ is assume to be a function of 
+\begin_inset Formula $X_{t}\beta$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+P(y_{t}=1) & = & F(X_{t}\beta)\equiv F_{t}\\
+P(y_{t}=0) & = & 1-F(X_{t}\beta)\equiv1-F_{t}
+\end{eqnarray*}
+
+\end_inset
+
+This interpretation of the BRM required that 
+\begin_inset Formula $F$
+\end_inset
+
+ is a monotonic nondecreasing function with 
+\begin_inset Formula $F(-\infty)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $F(\infty)=1$
+\end_inset
+
+.
+ A cumulative distribution function (cdf) satisfies these conditions.
+ The function 
+\begin_inset Formula $F$
+\end_inset
+
+ is sometimes called a 
+\emph on
+transformation function
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can derive the same result from the latent variable model 
+\begin_inset Formula $y_{t}^{*}=X_{t}\beta+u_{t}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $F(u_{t})$
+\end_inset
+
+ be the cdf of 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\begin{gather*}
+P(y_{t}=1)=P(y_{t}^{*}>0)=1-P(y_{t}^{*}<0)=1-P(u_{t}<-X_{t}\beta)=1-F(-X_{t}\beta)\\
+P(y_{t}=0)=1-P(y_{t}=1)=F(-X_{t}\beta)
+\end{gather*}
+
+\end_inset
+
+If the distribution function is symmetric, then 
+\begin_inset Formula $F(-X_{t}\beta)=1-F(X_{t}\beta)$
+\end_inset
+
+, and hence we have the same results as the direct specification of the
+ BRM.
+ We will assume a symmetric distribution of 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ when the model refers to the latent variable interpretation.
+\end_layout
+
+\begin_layout Subsection*
+Intepretation of the Model
+\end_layout
+
+\begin_layout Subsubsection*
+Non-constant Marginal Effects of Regressors on Probability
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A primary interest in a regression model is the marginal effects of the
+ regressors on the (conditional) mean of the dependent variable.
+ In the BRM, it is the marginal effects on the probability of choice 
+\begin_inset Formula $P(y_{t}=1)$
+\end_inset
+
+ that is of more interest.
+ Of course, in the Bernoulli binary choice specification, this probability
+ is the same as the mean of the dependent variable.
+ Since the effect of a regressor on 
+\begin_inset Formula $P(y_{t}=1)$
+\end_inset
+
+ is a nonlinear function in general, we need to compute it as
+\begin_inset Formula 
+\[
+\frac{\partial E(y_{t})}{\partial X_{tk}}=\frac{\partial P(y_{t}=1)}{\partial X_{tk}}=\frac{\partial F(X_{t}\beta)}{\partial X_{tk}}=f(X_{t}\beta)\beta_{k}
+\]
+
+\end_inset
+
+when 
+\begin_inset Formula $X_{tk}$
+\end_inset
+
+ is a continuous variable.
+\end_layout
+
+\begin_layout Subsubsection*
+Evaluations of the Marginal Effects
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Noe that this marginal effect depends on the values of all regressors.
+ Typically, this marginal effect is evaluated at the sample mean 
+\begin_inset Formula $\bar{X}$
+\end_inset
+
+ of the regressors.
+ However, it is very informative to compute this effect for several sets
+ of the values of 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+.
+ For example, holding the vlaues of other regressors at their sample means,
+ one may compute the marginal effect of 
+\begin_inset Formula $X_{tk}$
+\end_inset
+
+ for a wide range of the values of 
+\begin_inset Formula $X_{tk}$
+\end_inset
+
+.
+ When the regressor 
+\begin_inset Formula $X_{tk}$
+\end_inset
+
+ of interest is a discrete variable (dummy variable) taking values 0 or
+ 1, the derivative is not a proper measure.
+ A more proper measure is the difference in 
+\begin_inset Formula $F(X_{t}\hat{\beta})$
+\end_inset
+
+ beween 
+\begin_inset Formula $X_{tk}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{tk}=0$
+\end_inset
+
+, holding all other continuous regressors at a fixed value (their means).
+\end_layout
+
+\begin_layout Subsubsection*
+Effect of the Shapte of the Distribution Funciton
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The marginal effect also depends on the density function.
+ One may get a very different profile of the marginal effect, depending
+ on the choice of the transformation function.
+ For example, suppose we wish to compare the marginal effect of income on
+ the probability of making a charitable contribution.
+ Suppose we used the standard normal cdf for 
+\begin_inset Formula $F$
+\end_inset
+
+ to estimate the model, and found 
+\begin_inset Formula $X_{H}\hat{\beta}>X_{L}\hat{\beta}>0$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $f(X_{H}\hat{\beta})<f(X_{L}\hat{\beta})$
+\end_inset
+
+, which implies a larger marginal effect for the low income individual.
+ This is mainly due to the choice of the model density function.
+\end_layout
+
+\begin_layout Subsubsection*
+Other Quantities of Interest
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Since the marginal effect of the 
+\begin_inset Formula $k$
+\end_inset
+
+th regressor 
+\begin_inset Formula $X_{k}$
+\end_inset
+
+ changes over time (or across individuals) as its value changes, we may
+ take the sample average of the marginal effects as a measure of the marginal
+ effect of 
+\begin_inset Formula $X_{k}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mbox{estimate of}\ \frac{\partial P(y_{t}=1)}{\partial X_{k}}=\frac{1}{N}{\displaystyle \sum_{t=1}^{N}}f(X_{t}\hat{\beta})\hat{\beta}=\bar{\hat{f}}\hat{\beta}_{k}
+\]
+
+\end_inset
+
+Another measure of interest is the marginal effect of a regressor on the
+ 
+\emph on
+odds ratio
+\emph default
+ or 
+\emph on
+log odds ratio
+\emph default
+
+\begin_inset Formula 
+\begin{gather*}
+q_{t}=\frac{P(y_{t}=1)}{P(y_{t}=0)}=\frac{F(X_{t}\beta)}{1-F(X_{t}\beta)}\\
+\ln q_{t}=\ln\left[F(X_{t}\beta)\right]-\ln\left[1-F(X_{t}\beta)\right]
+\end{gather*}
+
+\end_inset
+
+The marginal effects are easily computed from
+\begin_inset Formula 
+\begin{gather*}
+\frac{dq_{t}}{dX_{tk}}=\frac{f_{t}}{(1-F_{t})^{2}}\beta_{k}\\
+\frac{d\ln q_{t}}{dX_{tk}}=\frac{f_{t}}{F_{t}(1-F_{t})}\beta_{k}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+A Measurement of Goodness-of-Fit
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+How well does the model explain the binary decision? A standard way to measure
+ it is to compare the actual choice and predicted choice, where the predicted
+ choice is determined by 
+\begin_inset Formula $\hat{y}_{t}=1$
+\end_inset
+
+ if 
+\begin_inset Formula $F(X_{t}\hat{\beta})>c$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{y}_{t}=0$
+\end_inset
+
+ if 
+\begin_inset Formula $F(X_{t}\hat{\beta})\leq c$
+\end_inset
+
+ for some constant 
+\begin_inset Formula $c$
+\end_inset
+
+, typically 0.5.
+ One may compute the correct number of predicitons as a measure of the goodness
+ of fit.
+ The choice of 
+\begin_inset Formula $c=0.5$
+\end_inset
+
+ seems to be reasonable, but somewhat arbitrary.
+ An alternative method may use the confidence intervals of 
+\begin_inset Formula $p_{t}=F(X_{t}\beta)$
+\end_inset
+
+ based on their estimated variances.
+ If 95% confidence interval includes 
+\begin_inset Formula $p_{t}=1$
+\end_inset
+
+, then we take the predicted event as 
+\begin_inset Formula $\hat{y}_{t}=1$
+\end_inset
+
+, etc.
+\end_layout
+
+\begin_layout Subsection*
+Estimation of the Model
+\end_layout
+
+\begin_layout Subsubsection*
+Least Squares Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The most widely used estimation method of the binary choice model is the
+ MLE.
+ Before we consider it, we will consider the least squares estimator of
+ the coefficient vector in
+\begin_inset Formula 
+\[
+y_{t}=X_{t}\beta+u_{t}
+\]
+
+\end_inset
+
+where we simply use the binary values of 
+\begin_inset Formula $y_{t}=0,1$
+\end_inset
+
+ as the observations of the dependent variable.
+ For this specificaiton to satisfy the assumption 
+\begin_inset Formula $E(u_{t})=0$
+\end_inset
+
+, it requires
+\begin_inset Formula 
+\begin{eqnarray*}
+E(u_{t}) & = & E(y_{t}-X_{t}\beta)=0\\
+ & = & (1-X_{t}\beta)F_{t}-X_{t}\beta(1-F_{t})=0\\
+ & \implies & F_{t}=X_{t}\beta
+\end{eqnarray*}
+
+\end_inset
+
+and hence
+\begin_inset Formula 
+\begin{eqnarray*}
+E(u_{t}^{2}) & = & \left[1-2X_{t}\beta+(X_{t}\beta)^{2}\right]F_{t}+(X_{t}\beta)^{2}(1-F_{t})\\
+ & = & F_{t}-2F_{t}+F_{t}^{2}\\
+ & = & F_{t}(1-F_{t})
+\end{eqnarray*}
+
+\end_inset
+
+That is, 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ is heteroskedastic if it has zero mean.
+ Therefore, the coefficient will be estimated by the GLS, which is identival
+ to the MLE under the assumption of the standard uniform distribution.
+\end_layout
+
+\begin_layout Subsubsection*
+Maximum Likelihood Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The density function of a Bernoulli random variable 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+ with probability 
+\begin_inset Formula $P(Y_{t}=1)=F_{t}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+P(Y_{t}=y_{t})=F_{t}^{y_{t}}(1-F_{t})^{1-y_{t}},\ y_{t}=0\ \mbox{or}\ 1
+\]
+
+\end_inset
+
+Therefore, the likelihood function 
+\begin_inset Formula $L$
+\end_inset
+
+ and the log-likelihood function 
+\begin_inset Formula $l$
+\end_inset
+
+ of an 
+\begin_inset Formula $N$
+\end_inset
+
+ independent sample 
+\begin_inset Formula $y_{t},\ t=1,\ldots,N$
+\end_inset
+
+ are
+\begin_inset Formula 
+\begin{eqnarray*}
+L & = & {\displaystyle \prod_{t=1}^{N}}F_{t}^{y_{t}}(1-F_{t})^{1-y_{t}}\\
+l & = & {\displaystyle \sum_{t=1}^{N}}y_{t}\ln F_{t}+{\displaystyle \sum_{t=1}^{N}}(1-y_{t})\ln(1-F_{t})
+\end{eqnarray*}
+
+\end_inset
+
+It is straight forward to derive the gradient vector and Hessian matrix.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To find the gradient, note first that
+\begin_inset Formula 
+\[
+\frac{dF_{t}}{d\beta}=\frac{dF(X_{t}\beta)}{d\beta}=f_{t}X_{t}^{\prime},\ f_{t}=f(X_{t}\beta)
+\]
+
+\end_inset
+
+Therefore the gradient vector is
+\begin_inset Formula 
+\begin{eqnarray*}
+g(\beta)\equiv\frac{\partial l}{\partial\beta} & = & {\displaystyle \sum_{t=1}^{N}}\left[y_{t}\frac{f_{t}}{F_{t}}-(1-y_{t})\frac{f_{t}}{1-F_{t}}\right]X_{t}^{\prime}\\
+ & = & {\displaystyle \sum_{t=1}^{N}}\left[\frac{y_{t}-y_{t}F_{t}-F_{t}+y_{t}F_{t}}{F_{t}(1-F_{t})}\right]f_{t}X_{t}^{\prime}\\
+ & = & {\displaystyle \sum_{t=1}^{N}}\frac{y_{t}-F_{t}}{F_{t}(1-F_{t})}f_{t}X_{t}^{\prime}\\
+ & = & {\displaystyle \sum_{t=1}^{N}}\left(f_{t}X_{t}\right)^{\prime}\left[F_{t}\left(1-F_{t}\right)\right]^{-1}\left(y_{t}-F_{t}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+To find the Hessian matrix, consider
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial\beta^{\prime}}\left[\frac{y_{t}-F_{t}}{F_{t}\left(1-F_{t}\right)}f_{t}\right]=\frac{y_{t}-F_{t}}{F_{t}\left(1-F_{t}\right)}\cdot\frac{\partial f_{t}(z)}{\partial z}X_{t}+D_{2}f_{t}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\nicefrac{\partial f(z)}{\partial z}$
+\end_inset
+
+ is the derivative of the density function with respect to its argument,
+ and
+\begin_inset Formula 
+\begin{eqnarray*}
+D_{2} & = & \frac{1}{\left[F_{t}\left(1-F_{t}\right)\right]^{2}}\left(-F_{t}(1-F_{t})f_{t}X_{t}-(y_{t}-F_{t})(1-2F_{t})f_{t}X_{t}\right)\\
+ & = & \frac{1}{\left[F_{t}\left(1-F_{t}\right)\right]^{2}}\left(-F_{t}f_{t}X_{t}+F_{t}^{2}f_{t}X_{t}-y_{t}f_{t}X_{t}+y_{t}2F_{t}f_{t}X_{t}+F_{t}f_{t}X_{t}-2F_{t}^{2}f_{t}X_{t}\right)\\
+ & = & -\frac{f_{t}X_{t}}{\left[F_{t}\left(1-F_{t}\right)\right]^{2}}\left[F_{t}^{2}+y_{t}\left(1-2F_{t}\right)\right]\\
+ & = & -\frac{f_{t}X_{t}}{\left[F_{t}\left(1-F_{t}\right)\right]^{2}}\left[y_{t}-F_{t}\right]^{2}
+\end{eqnarray*}
+
+\end_inset
+
+where the last equality is due to the fact that 
+\begin_inset Formula $y_{t}=y_{t}^{2}$
+\end_inset
+
+ for the values of 
+\begin_inset Formula $y_{t}=1$
+\end_inset
+
+ or 
+\begin_inset Formula $y_{t}=0$
+\end_inset
+
+.
+ Thus, the Hessian matrix is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+H & = & \frac{\partial^{2}l}{\partial\beta\partial\beta^{\prime}}\\
+ & = & {\displaystyle \sum_{t=1}^{N}}\frac{y_{t}-F_{t}}{F_{t}(1-F_{t})}\frac{\partial f_{t}}{\partial\beta^{\prime}}X_{t}^{\prime}X_{t}-{\displaystyle \sum_{t=1}^{N}}\frac{f_{t}^{2}X_{t}^{\prime}X_{t}}{\left[F_{t}\left(1-F_{t}\right)\right]^{2}}\left[y_{t}-F_{t}\right]^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The MLE 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ as the root of the gradient vector 
+\begin_inset Formula $g(\hat{\beta})=0$
+\end_inset
+
+ has an asymptotic normal distribution.
+\begin_inset Formula 
+\[
+\sqrt{N}(\hat{\beta}-\beta)\begin{array}[b]{c}
+_{a}\\
+\sim
+\end{array}N(0,\Psi^{-1})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\Psi=E\left(-N^{-1}H\right)$
+\end_inset
+
+ is the information matrix.
+\end_layout
+
+\begin_layout Subsubsection*
+EM Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An alternative procedure is the 
+\series bold
+\emph on
+EM algorithm
+\series default
+\emph default
+, which fills the missing observations with its conditional expectiation.
+ The likelihood function for the MLE is written in terms of the observed
+ variable 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+.
+ The EM (expectation-maximization) algorithm writes the likelihood function
+ in terms of the latent variable 
+\begin_inset Formula $y_{t}^{*}$
+\end_inset
+
+ conditional on observed variable 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ and initial estimate of parameters
+\begin_inset Formula 
+\[
+l={\displaystyle \sum_{t=1}^{N}}\ln f(y_{t}^{*}|y_{t},X_{t},\beta)
+\]
+
+\end_inset
+
+The first (expectation) step of the EM algortihm is to take the expected
+ value of this log-likelihood function, and the second maximizaiton step
+ is to find a new estimate 
+\begin_inset Formula $\beta$
+\end_inset
+
+ that maximizes the expected likelihood
+\begin_inset Formula 
+\[
+{\displaystyle \max_{\beta}}\ E\left({\displaystyle \sum_{t=1}^{N}}\ln f(y_{t}^{*}|y_{t},X_{t},\beta)\right)
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+In the case of BRM, this procedure is equivalent to replacing the missing
+ observations 
+\begin_inset Formula $y_{t}^{*}$
+\end_inset
+
+ with its expected value conditional on observed value 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+.
+ That is replace 
+\begin_inset Formula $y_{t}=1$
+\end_inset
+
+ with 
+\begin_inset Formula $E(y_{t}^{*}|y_{t}^{*}>0$
+\end_inset
+
+, and replace 
+\begin_inset Formula $y_{t}=0$
+\end_inset
+
+ with 
+\begin_inset Formula $E(y_{t}^{*}|y_{t}^{*}\leq0)$
+\end_inset
+
+.
+ From the latent variable model we have
+\begin_inset Formula 
+\begin{gather*}
+E(y_{t}^{*}|y_{t}^{*}>0)\equiv E(y_{t}^{*}|u_{t}>-X_{t}\beta)=X_{t}\beta+E(u_{t}|u_{t}>-X_{t}\beta)\\
+E(y_{t}^{*}|y_{t}^{*}\leq0)\equiv E(y_{t}^{*}|u_{t}\leq-X_{t}\beta)=X_{t}\beta+E(u_{t}|u_{t}\leq-X_{t}\beta)
+\end{gather*}
+
+\end_inset
+
+The conditional means are derived from the 
+\series bold
+\emph on
+truncated distributions
+\series default
+\emph default
+, which are
+\begin_inset Formula 
+\begin{gather*}
+f(u_{t}|u_{t}>-X_{t}\beta)=\begin{cases}
+\frac{f(u_{t})}{1-F(-X_{t}\beta)} & \mbox{if}\ u_{t}>-X_{t}\beta\\
+0 & \mbox{otherwise}
+\end{cases}\\
+f(u_{t}|u_{t}\leq-X_{t}\beta)=\begin{cases}
+\frac{f(u_{t})}{F(-X_{t}\beta)} & \mbox{if}\ u_{t}\leq-X_{t}\beta\\
+0 & \mbox{otherwise}
+\end{cases}
+\end{gather*}
+
+\end_inset
+
+Since both expected values are functions of 
+\begin_inset Formula $\beta$
+\end_inset
+
+, evaluate each by the 
+\begin_inset Formula $i$
+\end_inset
+
+th iterative value 
+\begin_inset Formula $\hat{\beta}_{i}$
+\end_inset
+
+.
+ Then, use these as the dependent variable and apply OLS against the regressors
+ 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ to obtain a new estimator 
+\begin_inset Formula $\hat{\beta}_{i+1}$
+\end_inset
+
+.
+ Repeat this until converegence is obtained.
+ The EM estimator converges to the MLE.
+ The drawback of this EM algorithm is that the asymptotic covariance matrix
+ is not a part of the computation procedure and has to be compute separately.
+\end_layout
+
+\begin_layout Subsection*
+Distribution of the Estimators of Probability and Marginal Effects
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Once the estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is compute, we can compute the predicted value of the probability and the
+ marginal effects of regressors on the probability,
+\begin_inset Formula 
+\begin{gather*}
+\hat{F}_{t}=F(X_{t}\hat{\beta})\\
+\hat{m}_{t}\equiv\frac{\partial F(X_{t}\hat{\beta})}{\partial X_{t}^{\prime}}=f(X_{t}\hat{\beta})\hat{\beta}=\hat{f}_{t}\hat{\beta}
+\end{gather*}
+
+\end_inset
+
+which are nonlinear functions of 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+.
+ The variance of 
+\begin_inset Formula $\hat{F}_{t}$
+\end_inset
+
+ and the covariance matrix of 
+\begin_inset Formula $\hat{m}_{t}$
+\end_inset
+
+ can be found by applying a linear approximation approach (
+\begin_inset Formula $\delta$
+\end_inset
+
+-method), which gives
+\begin_inset Formula 
+\begin{gather*}
+\hat{F}_{t}\begin{array}[b]{c}
+_{a}\\
+\sim
+\end{array}N(F_{t},f_{t}^{2}X_{t}VX_{t}^{\prime}),\ V=\mbox{cov}(\hat{\beta})\\
+\hat{m}_{t}\begin{array}[b]{c}
+_{a}\\
+\sim
+\end{array}N\left(m_{t},(f_{t}I_{K}+d_{t}\beta X_{t})V(f_{t}I_{K}+d_{t}\beta X_{t})^{\prime}\right)
+\end{gather*}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+d_{t}=\frac{\partial f_{t}}{\partial(X_{t}\beta)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Choice of the Transformation Function
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The parametric approach to the estimation of the model chooses a parametric
+ distribution (transformation) function.
+ Most commonly uses functions are normal and logistic:
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Probit Model:
+\emph default
+ 
+\begin_inset Formula $u_{t}\sim N(0,\sigma^{2})$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{gather*}
+F(Z)=\Phi\left(\nicefrac{z}{\sigma}\right)\\
+f(z)=\left(\nicefrac{1}{\sigma}\right)\cdot\phi\left(\nicefrac{z}{\sigma}\right)
+\end{gather*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi$
+\end_inset
+
+ are the standard normal cdf and pdf, respectively.
+ Parameters 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ are not identifiable and hence normalization restriction 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+ is usually imposed.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Logit Model
+\emph default
+: 
+\begin_inset Formula $u_{t}\sim Logistic(0,\nicefrac{\pi^{2}}{3})$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{gather*}
+F(z)=\frac{1}{1+e^{-z}}=\frac{e^{z}}{1+e^{z}}\\
+f(z)=\frac{e^{z}}{(1+e^{z})^{2}}=F(z)F(-z)=F(z)[1-F(z)]
+\end{gather*}
+
+\end_inset
+
+A more general logistic cdf is given by
+\begin_inset Formula 
+\begin{gather*}
+F(z)=\frac{1}{1+\exp(\nicefrac{-(z-a)}{b})},\ -\infty<a<\infty,\ b>0\\
+E(Z)=a,\ \mbox{Var}(Z)=\frac{(b\pi)^{2}}{3}
+\end{gather*}
+
+\end_inset
+
+
+\emph on
+Linear Probability Model
+\emph default
+: 
+\begin_inset Formula $u_{t}\sim U(0,1)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F(z)=\begin{cases}
+0 & \mbox{if}\ z\leq0\\
+z & \mbox{if}\ 0<z\leq1\\
+1 & \mbox{if}\ z>1
+\end{cases}
+\]
+
+\end_inset
+
+
+\emph on
+Weibull Model
+\emph default
+: 
+\begin_inset Formula $u_{t}\sim Weibull(\lambda,\alpha)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{gather*}
+F(z)=1-\exp(-\lambda z^{\alpha})\\
+f(z)=\lambda\alpha z^{\alpha-1}\exp(-\lambda z^{\alpha})
+\end{gather*}
+
+\end_inset
+
+This is an asymmetric density.
+\end_layout
+
+\begin_layout Subsection*
+Classical Tests of Nested Hypothesis
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Tests of nest hypothesis about the linear or nonlinear restrictions on the
+ coefficient vector 
+\begin_inset Formula $\beta$
+\end_inset
+
+ can be conducted by using one of the three classical test methods: LR,
+ Wald, and LM tests.
+ Let the hypothesis to be tested by
+\begin_inset Formula 
+\[
+H_{0}:r(\beta)=q
+\]
+
+\end_inset
+
+against
+\begin_inset Formula 
+\[
+H_{1}:r(\beta)\neq q
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $r(\beta)$
+\end_inset
+
+ is a set of 
+\begin_inset Formula $J$
+\end_inset
+
+ linear or nonlinear equations of 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ vector 
+\begin_inset Formula $\beta$
+\end_inset
+
+, and 
+\begin_inset Formula $q$
+\end_inset
+
+ is a 
+\begin_inset Formula $J\times1$
+\end_inset
+
+ vector of known constanst.
+ Let
+\begin_inset Formula 
+\[
+R(\beta)=\left(\frac{\partial r(\beta)}{\partial\beta}\right)^{\prime}
+\]
+
+\end_inset
+
+be the set of partial derivatives of dimension 
+\begin_inset Formula $J\times K$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $r(\beta)$
+\end_inset
+
+ is a linear function 
+\begin_inset Formula $r(\beta)=R(\beta)$
+\end_inset
+
+, then 
+\begin_inset Formula $R$
+\end_inset
+
+ does not depend on 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{\beta}$
+\end_inset
+
+ be the unrestricted and restricted MLEs, respectively.
+ Then, the classical test statistics which have the asymptotic null distribution
+ 
+\begin_inset Formula $\chi^{2}(J)$
+\end_inset
+
+ are given by
+\begin_inset Formula 
+\begin{gather*}
+LRT=2\left[l(\hat{\beta})-l(\tilde{\beta})\right]\\
+WT=\left(r(\beta)-q\right)^{\prime}\left[R(\hat{\beta})V(\hat{\beta})R(\hat{\beta})\right]^{-1}\left(r(\beta)-q\right)\\
+LMT=g(\tilde{\beta})^{\prime}V(\tilde{\beta})g(\tilde{\beta})
+\end{gather*}
+
+\end_inset
+
+where 
+\begin_inset Formula $V(\hat{\beta})=\left[-EH(\beta)\right]^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Ordered Qualitative Response Models (OQR)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The OQR model can be considered in terms of the latent variable model
+\begin_inset Formula 
+\[
+y_{t}^{*}=X_{t}\beta+u_{t},\ t=1,\ldots,N
+\]
+
+\end_inset
+
+and the observed variables are choices among three alternatives (say)
+\begin_inset Formula 
+\[
+y_{t}=\begin{cases}
+0 & \mbox{if}\ y_{t}^{*}<\alpha_{1}\\
+1 & \mbox{if}\ \alpha_{1}\leq y_{t}^{*}<\alpha_{2}\\
+2 & \mbox{if}\ \alpha_{2}\leq y_{t}^{*}
+\end{cases}
+\]
+
+\end_inset
+
+As in the binary choice model, 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ can be set to zero without loss of generality if 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ has a constant intercept term.
+ The probability of 
+\begin_inset Formula $y_{t}=j$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\begin{gather*}
+P(y_{t}=0)=P(y_{t}^{*}<\alpha_{1})=P(u_{t}<\alpha_{1}-X_{t}\beta)=F(\alpha_{1}-X_{t}\beta)\\
+P(y_{t}=1)=P(\alpha_{1}\leq y_{t}^{*}<\alpha_{2})=P(\alpha_{1}-X_{t}\beta\leq u_{t}<\alpha_{2}-X_{t}\beta)=F(\alpha_{2}-X_{t}\beta)-F(\alpha_{1}-X_{t}\beta)\\
+P(y_{t}=2)=P(y_{t}^{*}\geq\alpha_{1})=P(u_{t}\geq\alpha_{2}-X_{t}\beta)=1-F(\alpha_{2}-X_{t}\beta)
+\end{gather*}
+
+\end_inset
+
+Therefore, the log likelihood function can be written as
+\begin_inset Formula 
+\[
+l(\beta,\alpha_{1},\alpha_{2})={\displaystyle \sum_{y_{t}=0}}\ln F(\alpha_{1}-X_{t}\beta)+{\displaystyle \sum_{y_{t}=1}}\ln\left[F(\alpha_{2}-X_{t}\beta)-F(\alpha_{1}-X_{t}\beta)\right]+{\displaystyle \sum_{y_{t}=2}}\ln\left[1-F(\alpha_{2}-X_{t}\beta)\right]
+\]
+
+\end_inset
+
+More generally, let the probabilities of 
+\begin_inset Formula $J+1$
+\end_inset
+
+ choices be
+\begin_inset Formula 
+\[
+p_{tj}\equiv P(y_{t}=j)=P(\alpha_{j}\leq y_{t}^{*}<\alpha_{j+1})=F(\alpha_{j+1}-X_{t}\beta)-F(\alpha_{j}-X_{t}\beta),\ j=0,\ldots,J
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha_{0}=-\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha_{J+1}=\infty$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\[
+l(\beta,\alpha)={\displaystyle \sum_{t=1}^{N}}{\displaystyle \sum_{j=0}^{J}}y_{tj}\ln\left[F(\alpha_{j+1}-X_{t}\beta)-F(\alpha_{j}-X_{t}\beta)\right]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $y_{tj}=1$
+\end_inset
+
+ if 
+\begin_inset Formula $j$
+\end_inset
+
+th choice is selected and 
+\begin_inset Formula $y_{tj}=0$
+\end_inset
+
+ otherwise.
+ The marginal effects of the regressors on the probabilities 
+\begin_inset Formula $p_{tj}$
+\end_inset
+
+ are easily computed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The marginal effects of regressors on each probability can be computed as
+ before.
+\begin_inset Formula 
+\[
+\frac{\partial p_{tj}}{\partial X_{t}^{\prime}}=\left[f(\alpha_{j+1}-X_{t}\beta)-f(\alpha_{j}-X_{t}\beta)\right]\beta,\ j=0,\ldots,J
+\]
+
+\end_inset
+
+The sign of this marginal effect depends not only on the sign of 
+\begin_inset Formula $\beta_{k}$
+\end_inset
+
+, but also on the sign difference between the two values of the density.
+ Thus, it is difficult to interpret the marginal effects of regressors on
+ the probabilities.
+ Of course, the sign and magnitude of 
+\begin_inset Formula $\beta_{k}$
+\end_inset
+
+ represent its effect on the latent variable 
+\begin_inset Formula $y_{t}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Unordered Qualitative Response Models (UQR)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An important point in the ordered qualitative response model is that it
+ has a single index function 
+\begin_inset Formula $X_{t}\beta$
+\end_inset
+
+, that is, it is common to all choices and 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ does not have characteristics of a particular choice.
+ In unordered qualitative response models, the regressors may vary across
+ choices.
+ The unordered choice model is often based on an additive random utility
+ model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let the random utility of alternative 
+\begin_inset Formula $j$
+\end_inset
+
+ for an individual 
+\begin_inset Formula $i$
+\end_inset
+
+ be specified as
+\begin_inset Formula 
+\[
+U_{ij}=W_{ij}\delta_{j}+\epsilon_{ij}=m_{ij}+\epsilon_{ij},\ =1,\ldots,J
+\]
+
+\end_inset
+
+There are two types of regressors: regressors 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ that are individual specific and common to all alternatives, and regressors
+ 
+\begin_inset Formula $Z_{ij}$
+\end_inset
+
+ that are alternative-specific and represent the attributes of the choices.
+ The income of individual 
+\begin_inset Formula $i$
+\end_inset
+
+ is an example of the former, and an example of the latter is the prices
+ of alternative transportation modes.
+ When both types of regressors are present, we can specify the random utility
+ as
+\begin_inset Formula 
+\[
+U_{ij}=X_{i}\beta_{j}+Z_{ij}\gamma+\epsilon_{ij}=m_{ij}+\epsilon_{ij},\ j=1,2,\ldots,J
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Note that individual-specific regressors 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ are assumed to have different marginal effects on utility and alternative-speci
+fic regressors 
+\begin_inset Formula $Z_{ij}$
+\end_inset
+
+ are assumed to have the same marginal effects on utilities.
+ The model is called the 
+\emph on
+multinomial model 
+\emph default
+if only individual-specific regressors 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ are included 
+\begin_inset Formula $(\gamma=0)$
+\end_inset
+
+, and it is called the 
+\emph on
+conditional model
+\emph default
+ if only choice-specific regressors 
+\begin_inset Formula $Z_{ij}$
+\end_inset
+
+ are included 
+\begin_inset Formula $(\beta_{j}=0)$
+\end_inset
+
+.
+ When both type of regressors are present, it is sometimes called the 
+\emph on
+mixed model
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The multinomial model or the mixed model can be expressed as a conditional
+ model.
+ Consider an example of 3 alternatives.
+ Write the mean function in matrix form
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+m_{i1}\\
+m_{i2}\\
+m_{i3}
+\end{array}\right]=X_{i}\left[\begin{array}{c}
+\beta_{i1}\\
+\beta_{i2}\\
+\beta_{3}
+\end{array}\right]+\left[\begin{array}{c}
+Z_{i1}\\
+Z_{i2}\\
+Z_{i3}
+\end{array}\right]\gamma=\left[\begin{array}{ccc}
+X_{i} & 0 & 0\\
+0 & X_{i} & 0\\
+0 & 0 & X_{i}
+\end{array}\right]\left[\begin{array}{c}
+\beta_{i1}\\
+\beta_{i2}\\
+\beta_{i3}
+\end{array}\right]+\left[\begin{array}{c}
+Z_{i1}\\
+Z_{i2}\\
+Z_{i3}
+\end{array}\right]\gamma=\left[\begin{array}{c}
+X_{i1}\\
+X_{i2}\\
+X_{i3}
+\end{array}\right]\beta+\left[\begin{array}{c}
+Z_{i1}\\
+Z_{i2}\\
+Z_{i3}
+\end{array}\right]\gamma
+\]
+
+\end_inset
+
+which can be written as 
+\begin_inset Formula $m_{ij}=X_{ij}\beta+Z_{ij}\gamma$
+\end_inset
+
+, where 
+\begin_inset Formula $X_{ij}=D_{j}^{\prime}\otimes X_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $D_{j}$
+\end_inset
+
+ is a column vector with zeros except for the 
+\begin_inset Formula $j$
+\end_inset
+
+th position.
+ In this expression, both regressors vary across alternatives and both coefficie
+nt vectors are constant, the characteristics of the conditional model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Individual 
+\begin_inset Formula $i$
+\end_inset
+
+ will choose alternative 
+\begin_inset Formula $j$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $U_{ij}>U_{ik}$
+\end_inset
+
+ for all 
+\begin_inset Formula $k\neq j$
+\end_inset
+
+.
+ When alternative 
+\begin_inset Formula $j$
+\end_inset
+
+ is chosen, we observe 
+\begin_inset Formula $y_{ij}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{ik}=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $k\neq j$
+\end_inset
+
+.
+ We wish to specify the probability 
+\begin_inset Formula $P(y_{ij}=1)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+P(y_{ij}=1) & = & P\left[U_{ij}=\max\left(U_{i1},\ldots,U_{iJ}\right)\right]\\
+ & = & P\left(m_{ik}+\epsilon_{ik}<m_{ij}+\epsilon_{ij},\ \forall\ k\neq j\right)\\
+ & = & P\left(\epsilon_{ik}<(m_{ij}-m_{ik})+\epsilon_{ij},\ \forall\ k\neq j\right)
+\end{eqnarray*}
+
+\end_inset
+
+This probability can be found by first considered the conditional probability
+ for a given 
+\begin_inset Formula $\epsilon_{ij}$
+\end_inset
+
+, and then compute the weighted average of the conditional probability with
+ weights equal to the probability of 
+\begin_inset Formula $\epsilon_{ij}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P(y_{ij}=1)={\displaystyle \int}P\left(\epsilon_{ik}<(m_{ij}-m_{ik})+\epsilon_{ij}|\epsilon_{ij};\forall\ k\neq j\right)f(\epsilon_{ij})\ d\epsilon_{ij}
+\]
+
+\end_inset
+
+If 
+\begin_inset Formula $\epsilon_{ij}$
+\end_inset
+
+ are i.i.d.
+ random variables with a cdf 
+\begin_inset Formula $F(\epsilon_{ij})$
+\end_inset
+
+, then the conditional probability is the same as the marginal probability
+ and the joint probability is the product of marginal probabilities.
+ Hence,
+\begin_inset Formula 
+\[
+P\left(\epsilon_{ik}<(m_{ij}-m_{ik})+\epsilon_{ij}|\epsilon_{ij};\forall\ k\neq j\right)={\displaystyle \prod_{k\neq j}}F\left((m_{ij}-m_{ik})+\epsilon_{ij}\right)
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+p_{ij}\equiv P(y_{ij}=1)={\displaystyle \int}\left[{\displaystyle \prod_{k\neq j}}F\left((m_{ij}-m_{ik})+\epsilon_{ij}\right)\right]f(\epsilon_{ij})\ d\epsilon_{ij}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Choice of Distribution Function
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The most widely used distribution function of 
+\begin_inset Formula $\epsilon_{ij}$
+\end_inset
+
+ is the standard extreme value (maximum) distribution of Type I, which is
+ also called the 
+\emph on
+Gumbel distribution
+\emph default
+.
+ It has the pdf and cdf of the following forms
+\begin_inset Formula 
+\begin{gather*}
+f(z)=\exp(-z)\cdot\exp(-e^{-z})=e^{-z}F(z)\\
+F(z)=\exp(-e^{-z})
+\end{gather*}
+
+\end_inset
+
+The model with this distribution is called the 
+\emph on
+multinomial logit model
+\emph default
+ if only individual-specific regressors 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ are included, and it is called the 
+\emph on
+conditional logit model
+\emph default
+ if only choice-specific regressors 
+\begin_inset Formula $Z_{ij}$
+\end_inset
+
+ are included.
+ When both types of regressors are present, it is sometimes called the 
+\emph on
+mixed logit model
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When 
+\begin_inset Formula $\epsilon_{ij}$
+\end_inset
+
+ are i.i.d.
+ standard Gumbel (maximum random variables, the integrand in the computation
+ of 
+\begin_inset Formula $p_{ij}$
+\end_inset
+
+ can be written as
+\begin_inset Formula 
+\[
+p_{ij}=P(y_{ij}=1)={\displaystyle \int}\Psi\ d\epsilon_{ij}
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{eqnarray*}
+\Psi & = & \left[{\displaystyle \prod_{k\neq j}}F\left((m_{ij}-m_{ik})+\epsilon_{ij}\right)\right]f(\epsilon_{ij})\\
+ & = & \left[{\displaystyle \prod_{k\neq j}}\exp\left(-e^{-(m_{ij}-m_{ik}+\epsilon_{ij})}\right)\right]e^{-\epsilon_{ij}}\exp\left(-e^{-\epsilon_{ij}}\right)\\
+ & = & \exp\left[{\displaystyle \sum_{k\neq j}}e^{-(m_{ij}-m_{ik})-\epsilon_{ij}}\right]e^{-\epsilon_{ij}}\exp\left(-e^{-\epsilon_{ij}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Let 
+\begin_inset Formula $\tau={\displaystyle \sum_{k\neq j}}e^{-(m_{ij}-m_{ik})}$
+\end_inset
+
+ and 
+\begin_inset Formula $w=\epsilon_{ij}-\ln(1+\tau)$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $1+\tau=\exp(\ln(1+\tau))$
+\end_inset
+
+.
+ Now,
+\begin_inset Formula 
+\begin{eqnarray*}
+\ln\Psi & = & -e^{-\epsilon_{ij}}{\displaystyle \sum_{k\neq j}}e^{-(m_{ij}-m_{ik})}-\epsilon_{ij}-e^{-\epsilon_{ij}}\\
+ & = & -\epsilon_{ij}-e^{-\epsilon_{ij}}\left[1+{\displaystyle \sum_{k\neq j}}e^{-(m_{ij}-m_{ik})}\right]\\
+ & = & -\epsilon_{ij}-e^{-\epsilon_{ij}+\ln(1+\tau)}
+\end{eqnarray*}
+
+\end_inset
+
+Taking the exponent on both sides yields
+\begin_inset Formula 
+\begin{eqnarray*}
+\Psi & = & \exp(-\epsilon_{ij})\exp\left(-e^{-\epsilon_{ij}+\ln(1+\tau)}\right)\\
+ & = & \frac{e^{\ln(1+\tau)}}{1+\tau}\exp(-\epsilon_{ij})\exp\left(-e^{-\epsilon_{ij}+\ln(1+\tau)}\right)\\
+ & = & \frac{\exp\left(-\epsilon_{ij}+\ln(1+\tau)\right)}{1+\tau}\exp\left(-e^{-\epsilon_{ij}+\ln(1+\tau)}\right)\\
+ & = & \frac{e^{-w}}{1+\tau}\exp\left(-e^{-w}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\begin{eqnarray*}
+P(y_{ij}=1) & = & {\displaystyle \int}\Psi\ d\epsilon_{ij}\\
+ & = & \frac{1}{1+\tau}{\displaystyle \int}e^{-w}\exp(e^{-w})\ dw\ \ \mbox{since}\ dw=d\epsilon_{ij}\\
+ & = & \frac{1}{1+\tau}{\displaystyle \int}f(w)\ dw\\
+ & = & \frac{1}{1+\tau}
+\end{eqnarray*}
+
+\end_inset
+
+Finally,
+\begin_inset Formula 
+\begin{eqnarray*}
+1+\tau & = & 1+{\displaystyle \sum_{k\neq j}}e^{-(m_{ij}-m_{ik})}\\
+ & = & 1+e^{-m_{ij}}{\displaystyle \sum_{k\neq j}}e^{m_{ik}}\\
+ & = & e^{-m_{ij}}\left(e^{m_{ij}}+{\displaystyle \sum_{k\neq j}}e^{m_{ik}}\right)\\
+ & = & e^{-m_{ij}}{\displaystyle \sum_{k}}e^{m_{ik}}
+\end{eqnarray*}
+
+\end_inset
+
+Therefore,
+\begin_inset Formula 
+\[
+P(y_{ij}=1)=\frac{e^{m_{ij}}}{{\displaystyle \sum_{k=1}^{J}}e^{m_{ik}}}=\frac{e^{X_{i}\beta_{j}}e^{Z_{ij}\gamma}}{{\displaystyle \sum_{k=1}^{J}}e^{X_{i}\beta_{k}}e^{Z_{ik}\gamma}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Identification of Parameters in Logit Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Parameters of the individual-specific regressors 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ are not all identifiable.
+ This means that two coefficient vectors 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{\beta}_{j}$
+\end_inset
+
+ give an identical probability 
+\begin_inset Formula $p_{ij}=P(y_{ij}=1)$
+\end_inset
+
+, where 
+\begin_inset Formula $\tilde{\beta}_{j}=\beta_{j}+\alpha$
+\end_inset
+
+ for a constant 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ To see this, consider the mean function 
+\begin_inset Formula $\tilde{\beta}_{j}$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\tilde{m}_{ij}=X_{i}\tilde{\beta}_{j}+Z_{ij}\gamma=X_{i}\beta_{j}+Z_{ij}\gamma+X_{i}\alpha=m_{ij}+X_{i}\alpha
+\]
+
+\end_inset
+
+Then,
+\begin_inset Formula 
+\[
+\exp(\tilde{m}_{ij})=\exp(m_{ij})\exp(X_{i}\alpha)
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{k=1}^{J}}\exp(\tilde{m}_{ik})=\exp(X_{i}\alpha){\displaystyle \sum_{k=1}^{J}}\exp(m_{ik})
+\]
+
+\end_inset
+
+So,
+\begin_inset Formula 
+\[
+\tilde{p}_{ij}=\frac{\exp(\tilde{m}_{ij})}{{\displaystyle \sum_{k=1}^{J}}\exp(\tilde{m}_{ik})}=\frac{\exp(m_{ij})}{{\displaystyle \sum_{k=1}^{J}}\exp(m_{ik})}=p_{ij}
+\]
+
+\end_inset
+
+Thus, parameters 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{\beta}_{j}$
+\end_inset
+
+ lead to the identical probability.
+ To identify the parameters in this model, an identification restriction
+ is imposed usually in the form of 
+\begin_inset Formula $\beta_{1}=0$
+\end_inset
+
+.
+ Under this restriction, the choice probabilities become
+\begin_inset Formula 
+\[
+p_{i1}=\frac{\exp(Z_{i1}\gamma)}{\exp(Z_{i1}\gamma)+{\displaystyle \sum_{k=2}^{J}}\exp(X_{i}\beta_{k})\exp(Z_{ik}\gamma)}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+p_{ij}=\frac{\exp(X_{i}\beta_{j})\exp(Z_{ij}\gamma)}{\exp(Z_{i1}\gamma)+{\displaystyle \sum_{k=2}^{J}}\exp(X_{i}\beta_{k})\exp(Z_{ik}\gamma)},\ j\geq2
+\]
+
+\end_inset
+
+In the case of the 
+\emph on
+multinomial logit model
+\emph default
+ (only regressors 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma=0$
+\end_inset
+
+), the choice probabilities become
+\begin_inset Formula 
+\[
+p_{i1}=\frac{1}{1+{\displaystyle \sum_{k=2}^{J}}\exp(X_{i}\beta_{k})}\equiv\frac{1}{D}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+p_{ij}=\frac{\exp(X_{i}\beta_{j})}{1+{\displaystyle \sum_{k=2}^{J}}\exp(X_{i}\beta_{k})}=\frac{\exp(X_{i}\beta_{j})}{D},\ j\geq2
+\]
+
+\end_inset
+
+For the 
+\emph on
+conditional logit model
+\emph default
+ (i.e., 
+\begin_inset Formula $\beta_{j}=0$
+\end_inset
+
+), the probabilities are given by
+\begin_inset Formula 
+\[
+p_{ij}=\frac{\exp(Z_{ij}\gamma)}{{\displaystyle \sum_{k=1}^{J}}\exp(Z_{ik}\gamma)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+MLE of Multinomial Logit Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The log likelihood function for all observations is
+\begin_inset Formula 
+\begin{eqnarray*}
+L & = & \ln\left[{\displaystyle \prod_{i=1}^{n}}{\displaystyle \prod_{j=1}^{J}}p_{ij}^{y_{ij}}\right]\\
+ & = & {\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{j=1}^{J}}y_{ij}\ln p_{ij}
+\end{eqnarray*}
+
+\end_inset
+
+Substituting 
+\begin_inset Formula $p_{ij}$
+\end_inset
+
+ of the multinomial logit model, the log likelihood function becomes
+\begin_inset Formula 
+\begin{eqnarray*}
+L & = & \sum_{i=1}^{n}\left[-y_{i1}\ln(D)+{\displaystyle \sum_{j=2}^{J}}y_{ij}\left(X_{i}\beta_{j}-\ln(D)\right)\right]\\
+ & = & \sum_{i=1}^{n}\left[-\ln(D){\displaystyle \sum_{k=1}^{J}}y_{ij}+{\displaystyle \sum_{j=2}^{J}}y_{ij}X_{i}\beta_{j}-\ln(D)\right]\\
+ & = & \sum_{i=1}^{n}\left[-\ln(D)+{\displaystyle \sum_{j=2}^{J}}y_{ij}X_{i}\beta_{j}-\ln(D)\right]\ \ \mbox{since}\ {\displaystyle \sum_{k=1}^{J}}y_{ij}\\
+L & \equiv & {\displaystyle \sum_{=1}^{n}}L_{i}
+\end{eqnarray*}
+
+\end_inset
+
+It is straightforward to derive the gradient vectors
+\begin_inset Formula 
+\[
+\frac{\partial L}{\partial\beta_{j}}={\displaystyle \sum_{i=1}^{n}}(y_{ij}-p_{ij})X_{i}^{\prime},\ j\geq2
+\]
+
+\end_inset
+
+the diagonal elements of the Hessian matrix
+\begin_inset Formula 
+\[
+\frac{\partial^{2}L}{\partial\beta_{j}\partial\beta_{j}^{\prime}}=-{\displaystyle \sum_{i=1}^{n}}p_{ij}(1-p_{ij})X_{i}^{\prime}X_{i},\ j\geq2
+\]
+
+\end_inset
+
+and the off-diagonal blocks
+\begin_inset Formula 
+\[
+\frac{\partial^{2}L}{\partial\beta_{j}\partial\beta_{s}^{\prime}}=-{\displaystyle \sum_{i=1}^{n}}p_{ij}p_{is}X_{i}^{\prime}X_{i},\ j\geq2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Interpretation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Note that the odds ratio
+\begin_inset Formula 
+\[
+\frac{p_{ij}}{p_{i1}}=\exp(X_{i}\beta_{j})
+\]
+
+\end_inset
+
+Therefore, the log of the odds ratio against the probability of the normalized
+ parameter becomes
+\begin_inset Formula 
+\[
+\ln\left(\frac{p_{ij}}{p_{i1}}\right)=X_{i}\beta_{j}
+\]
+
+\end_inset
+
+Therefore, the coefficient 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ represents the marginal effect of 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ on the logs odd ratio.
+ Similarly, the log odds ratio
+\begin_inset Formula 
+\[
+\ln\left(\frac{p_{ij}}{p_{is}}\right)=X_{i}(\beta_{j}-\beta_{s}),\ j\neq s\geq2
+\]
+
+\end_inset
+
+indicates that the differences in coefficients represent the marginal effects
+ of regressors on the difference in log probabilities.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The marginal effects of the regressors on the probability of a particular
+ alternative depend on all values of coefficient vectors.
+ To see this for the case of continuous regressors, take the derivative
+\begin_inset Formula 
+\[
+\frac{\partial p_{ij}}{X_{i}^{\prime}}=\frac{1}{D^{2}}\left[D\exp(X_{i}\beta_{j})\beta_{j}-\exp(X_{i}\beta_{j}){\displaystyle \sum_{k=2}^{J}}\exp(X_{i}\beta_{k})\beta_{k}\right]=p_{ij}\beta_{j}-p_{ij}{\displaystyle \sum_{k=1}^{J}}p_{ik}\beta_{k}=p_{ij}(\beta_{j}-\bar{\beta})
+\]
+
+\end_inset
+
+where we used the normalization 
+\begin_inset Formula $\beta_{1}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{\beta}$
+\end_inset
+
+ is the weighted mean (expected value) of 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+.
+ Note that the marginal effect of a particular regressor 
+\begin_inset Formula $X_{ik}$
+\end_inset
+
+ on 
+\begin_inset Formula $p_{ij}$
+\end_inset
+
+ is positive if and only if its coefficient for the 
+\begin_inset Formula $j$
+\end_inset
+
+th alternative is greater than the average of its coefficients for all althernat
+ives 
+\begin_inset Formula $(\beta_{jk}>\bar{\beta}_{k})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+MLE of Conditional Logit Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The probabilities of the conditional logit model are given by
+\begin_inset Formula 
+\[
+p_{ij}=\frac{\exp(Z_{ij}\gamma)}{D_{c}}
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+D_{c}={\displaystyle \sum_{k=1}^{J}}\exp(Z_{ij}\gamma),\ j=1,\ldots,J
+\]
+
+\end_inset
+
+The log likelihood function is
+\begin_inset Formula 
+\[
+L={\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{j=1}^{J}}y_{ij}\ln(p_{ij})={\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{j=1}^{J}}y_{ij}\left(Z_{ij}\gamma-\ln(D_{c})\right)
+\]
+
+\end_inset
+
+It is easy to show the gradient vector
+\begin_inset Formula 
+\[
+\frac{\partial L}{\partial\gamma}={\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{j=1}^{J}}y_{ij}(Z_{ij}^{\prime}-\bar{Z}_{i}^{\prime}),\ \bar{Z}_{i}={\displaystyle \sum_{j=1}^{J}}p_{ik}Z_{ik}^{\prime}
+\]
+
+\end_inset
+
+and Hessian matrix
+\begin_inset Formula 
+\[
+\frac{\partial^{2}L}{\partial\gamma\partial\gamma^{\prime}}=-{\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{j=1}^{J}}p_{ik}\left(Z_{ik}-\bar{Z}_{i}\right)^{\prime}\left(Z_{ik}-\bar{Z}_{i}\right)
+\]
+
+\end_inset
+
+The log odds ratio between two alternatives
+\begin_inset Formula 
+\[
+\ln\left(\frac{p_{ij}}{p_{ik}}\right)=\left(Z_{ij}-Z_{ik}\right)\gamma,\ j,k=1,\ldots,J
+\]
+
+\end_inset
+
+indicates that it depends only on the attributes of alternatives in comparison.
+ This property of the conditional logit model is called the 
+\emph on
+independence of irrelevant alternatives
+\emph default
+.
+ This property simplifies the estimation problem, but it is an undesirable
+ property from the view point of economic behavior of economic agents.
+ Consider the classical example of three choices, traveling in a car, a
+ red bus and a blue bus.
+ The relative probability between the car and the red bus is most likely
+ to change when the alternative blue bus is introduced.
+ But, the 
+\emph on
+independence of irrelevant alternatives
+\emph default
+ indicates that the relative probability between the car and the red bus
+ will not be affected.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+One of the reasons for this property is the assumption of the independence
+ of 
+\begin_inset Formula $\epsilon_{ij}$
+\end_inset
+
+.
+ The independence implies that the conditional probability of choosing 
+\begin_inset Formula $j$
+\end_inset
+
+ given that either 
+\begin_inset Formula $j$
+\end_inset
+
+ or 
+\begin_inset Formula $k$
+\end_inset
+
+ alternatives are chosen is given by
+\begin_inset Formula 
+\[
+P(y_{ij}=1|y_{ij}=1\ \mbox{or}\ y_{ik}=1)=\frac{p_{ij}}{p_{ij}+p_{ik}}=\frac{\exp(Z_{ij}\gamma)}{\exp(Z_{ij}\gamma)+\exp(Z_{ik}\gamma)}
+\]
+
+\end_inset
+
+which does not depend on attributes of other alternatives except for those
+ of 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ alternatives.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The marginal effects of the regressors on the probability of a particular
+ alternative depends on all values of coefficient vectors.
+ To see this for the case of continuous regressors, take the derivative.
+\begin_inset Formula 
+\begin{gather*}
+\frac{\partial p_{ij}}{\partial Z_{ij}}=\frac{1}{D_{c}^{2}}\left(D_{c}\exp(Z_{ij}\gamma)\gamma^{\prime}-\exp(Z_{ij}\gamma)\exp(Z_{ij}\gamma)\gamma^{\prime}\right)=p_{ij}(1-p_{ij})\gamma^{\prime}\\
+\frac{\partial p_{ij}}{\partial Z_{is}}=\frac{1}{D_{c}^{2}}\left(0-\exp(Z_{ij}\gamma)\exp(Z_{ij}\gamma)\gamma^{\prime}\right)=-p_{ij}p_{is}\gamma^{\prime},\ s\neq j
+\end{gather*}
+
+\end_inset
+
+The marginal effect of an alternative-specific attribute on its own probability
+ has the same sign as the sign of the coefficient 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, while the cross marginal effect has a sign opposite to the sign of 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

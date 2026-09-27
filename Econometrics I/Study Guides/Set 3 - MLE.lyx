@@ -1,0 +1,1243 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Maximum Likelihood Estimator (MLE)
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Abstract
+
+\series bold
+Maximum Likelihood Estimator (MLE): 
+\series default
+General likelihood and log likelihood funciton, regularity conditions, propertie
+s of MLE, MLE of the SLM, restricted MLE and its asymptotic distribution
+\end_layout
+
+\begin_layout Section*
+Maximum Likelihood Estimator (MLE)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A joint 
+\series bold
+probability density funciton (pdf),
+\series default
+ 
+\begin_inset Formula $f(x_{1},\ldots,x_{n};\theta)$
+\end_inset
+
+, of a random sample tells us the probability of a set of specific observations,
+ given the 
+\series bold
+distribution parameters
+\series default
+, 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ That is, a joint pdf is treated as a function of the values of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, given 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In estimation problems, we do not know the distribution paramters, but have
+ a set of observations.
+ The quesiton we pose is: which distribution parameter would have generated
+ the sample on hand most likely? In this estimation method, the joint pdf
+ is treated as a function of 
+\begin_inset Formula $\theta$
+\end_inset
+
+, given a sample observation 
+\begin_inset Formula $(x_{1},\ldots,x_{n})$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $f(\theta;x_{1},\ldots,x_{n})$
+\end_inset
+
+.
+ Interpreted this way, we call the joint pdf a 
+\series bold
+likelihood function
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The method of 
+\series bold
+maximum likelihood estimation
+\series default
+ finds the estimators of population paramaters by maximizing the likelihood
+ function or the log-likelihood function with respect to 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ The resulting estimator is called the 
+\series bold
+maximum likelihood estimator (MLE)
+\series default
+.
+ Since the logarithmic function is a monotonically increasing function,
+ maximization of the likelihood function and the log-likelihood funciton
+ should yield the same solution.
+ Important to note, the MLE requires knowledge of the population distribution
+ funciton to specify the likelihood function while the least squares method
+ does not.
+ Finally, the MLE may not exist, or if it exists, it may not be unique.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To consider the MLE more formally, let 
+\begin_inset Formula $y^{\prime}=(y_{1},\ldots y_{N})$
+\end_inset
+
+ be an i.i.d.
+ random sample of size 
+\begin_inset Formula $N$
+\end_inset
+
+ from a population chracterized by a density 
+\begin_inset Formula $f(y_{t};\theta)$
+\end_inset
+
+, where 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is a 
+\begin_inset Formula $K$
+\end_inset
+
+-dimensional vector in a compact parameter space 
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+Likelihood funciton, 
+\begin_inset Formula $L$
+\end_inset
+
+, and log-likelihood function, 
+\begin_inset Formula $l$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray}
+L(y;\theta) & = & {\displaystyle \prod_{t=1}^{N}}f(y_{t};\theta)\label{eq:1}\\
+l(y;\theta) & = & {\displaystyle \sum_{t=1}^{N}}\ln\left[f(y_{t};\theta)\right]\label{eq:2}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We also must distinguish between the global MLE and the local MLE of the
+ true parameter 
+\begin_inset Formula $\theta_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ is the global MLE of the true parameter 
+\begin_inset Formula $\theta_{0}$
+\end_inset
+
+ if 
+\begin_inset Formula $l(y;\hat{\theta})\geq l(y;\theta)$
+\end_inset
+
+ for all 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+, and 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ is the local MLE of 
+\begin_inset Formula $\theta_{0}$
+\end_inset
+
+ if it is a root of the gradient 
+\begin_inset Formula $\frac{\partial l}{\partial\theta}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We consider only the local MLE or consider the case of likelihood function
+ which has a unique global maximum point.
+ In this case, we find the MLE from the first and second order conditions
+\begin_inset Formula 
+\begin{eqnarray}
+g(\theta) & = & \frac{\partial l(\theta)}{\partial\theta}=0\label{eq:3}\\
+\mathcal{H}(\theta) & = & \frac{\partial^{2}l(\theta)}{\partial\theta\partial\theta^{\prime}}\ \ \mbox{is negative definite}\label{eq:4}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+The MLE is a sufficient statistic and a best asymptotically normal (BAN)
+ estimator.
+ More importantly, the MLE has an 
+\series bold
+invariance property
+\series default
+, that is, if 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ is the MLE of 
+\begin_inset Formula $\theta$
+\end_inset
+
+, then 
+\begin_inset Formula $h(\hat{\theta})$
+\end_inset
+
+ is the MLE of 
+\begin_inset Formula $h(\theta)$
+\end_inset
+
+ for any continuous function 
+\begin_inset Formula $h$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Condition*
+Regularity Conditions: The joint pdf 
+\begin_inset Formula $L(y;\theta)$
+\end_inset
+
+ is said to be regular if
+\end_layout
+
+\begin_layout Condition*
+(a) The sample space 
+\begin_inset Formula $y$
+\end_inset
+
+ for which 
+\begin_inset Formula $L(y;\theta)$
+\end_inset
+
+ is strictly positive does not depend on 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ (The range of 
+\begin_inset Formula $y$
+\end_inset
+
+ must not depend on 
+\begin_inset Formula $\theta$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Condition*
+(b) For all 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+ and for all 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $L(y;\theta)$
+\end_inset
+
+ and 
+\begin_inset Formula $l(y;\theta)$
+\end_inset
+
+ finite-valued partial derivatives with respect to 
+\begin_inset Formula $\theta$
+\end_inset
+
+ up to the third order.
+\end_layout
+
+\begin_layout Condition*
+(c) The covariance matrix of 
+\begin_inset Formula $\frac{\partial\ln L}{\partial\theta}$
+\end_inset
+
+ is positie definite everywhere in 
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Condition*
+(d) The integral 
+\begin_inset Formula $\int\ln L(y;\theta)dy$
+\end_inset
+
+ is twice differentiable under the integral.
+\end_layout
+
+\begin_layout Subsection*
+Asymptotic Properties of MLE
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The proof of the asymptotic properties of the MLE under the regularity condition
+s is based on the following propositions:
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula $E\left[\frac{l(\theta_{0})}{N}\right]\geq E\left[\frac{l(\theta)}{N}\right]\ \forall\ \theta\in\Theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $\ln(z)$
+\end_inset
+
+ is a stricly concave function, by Jensen's inequality, we have 
+\begin_inset Formula $E\left[\ln(z)\right]\leq\ln\left[E(z)\right]$
+\end_inset
+
+ for a random variable 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $z=\frac{L(y;\theta)}{L(y;\theta_{0})}$
+\end_inset
+
+, the ratio of the likelihood functions.
+ Then,
+\begin_inset Formula 
+\[
+E\left[\frac{l(\theta)}{N}\right]-E\left[\frac{l(\theta_{0})}{N}\right]=E\left[\ln(z)\right]\leq\ln\left[E(z)\right]=\ln\intop\frac{L(y;\theta)}{L(y;\theta_{0})}L(y;\theta_{0})dy=\ln(1)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula $p{\displaystyle \lim_{N\rightarrow\infty}}\frac{l(\theta)}{N}=E\left[\frac{l(\theta)}{N}\right]\ \forall\ \theta\in\Theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $l_{t}(\theta)=\ln f(y_{t};\theta)$
+\end_inset
+
+ is an i.i.d.
+ random variable.
+\begin_inset Formula 
+\[
+\frac{1}{N}l(\theta)=\frac{1}{N}{\displaystyle \sum_{t=1}^{N}}l_{t}(\theta)\equiv\bar{l}(\theta)
+\]
+
+\end_inset
+
+Hence, by the Weak Law of Large Numbers (WLLN), the sample mean, 
+\begin_inset Formula $\bar{l}(\theta)$
+\end_inset
+
+, coverges to the mean 
+\begin_inset Formula $E\left[l_{t}(\theta)\right]=E\left[\bar{l}(\theta)\right]$
+\end_inset
+
+ in probability.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula $E\left[g(\theta)\right]=E\left[g_{t}\left(\theta\right)\right]=0$
+\end_inset
+
+, 
+\begin_inset Formula $Cov\left[g(\theta)\right]=N\Psi$
+\end_inset
+
+, 
+\begin_inset Formula $Cov\left[g_{t}(\theta)\right]=\Psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $f(y_{t};\theta)$
+\end_inset
+
+ is a density function it must integrate to 1:
+\begin_inset Formula 
+\[
+\int f(y_{t};\theta)dy_{t}=1
+\]
+
+\end_inset
+
+Differentiation of both sides of this equation with resect to 
+\begin_inset Formula $\theta$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\[
+\int g_{t}(\theta)f(y_{t};\theta)dy_{t}=0
+\]
+
+\end_inset
+
+where we used the relationship 
+\begin_inset Formula $\frac{\partial\ln f}{\partial\theta}=\left(\frac{1}{f}\right)\left(\frac{\partial f}{\partial\theta}\right)$
+\end_inset
+
+, which gives 
+\begin_inset Formula $\frac{\partial f}{\partial\theta}=f\left(\frac{\partial\ln f}{\partial\theta}\right)$
+\end_inset
+
+.
+ The left hand side is simply the definition of the expect value of 
+\begin_inset Formula $g_{t}(\theta)$
+\end_inset
+
+, and hence 
+\begin_inset Formula $E\left[g_{t}(\theta)\right]=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Differentiating again with respect to 
+\begin_inset Formula $\theta$
+\end_inset
+
+, we can write
+\begin_inset Formula 
+\[
+\int\mathcal{H}_{t}(\theta)f(y_{t};\theta)dy_{t}+\int\left(g_{t}(\theta)g_{t}(\theta)^{\prime}\right)f(y_{t};\theta)dy_{t}=0
+\]
+
+\end_inset
+
+The first term is 
+\begin_inset Formula $E\left[\mathcal{H}_{t}(\theta)\right]$
+\end_inset
+
+, and the second term is 
+\begin_inset Formula $E\left[g_{t}(\theta)g_{t}(\theta)^{\prime}\right]$
+\end_inset
+
+, which is the covariance of 
+\begin_inset Formula $g_{t}(\theta)$
+\end_inset
+
+ because 
+\begin_inset Formula $E\left[g_{t}(\theta)\right]=0$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\[
+Cov\left(g_{t}(\theta)\right)=E\left[g_{t}(\theta)g_{t}(\theta)^{\prime}\right]=E\left[-\mathcal{H}_{t}(\theta)\right]=\Psi
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $g_{t}(\theta)$
+\end_inset
+
+ is an i.i.d.
+ random variable, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left[g(\theta)\right] & = & {\displaystyle \sum_{t=1}^{N}}E\left[g_{t}(\theta)\right]=0\\
+Cov\left(g(\theta)\right) & = & Cov\left({\displaystyle \sum_{t=1}^{N}}g_{t}(\theta)\right)={\displaystyle \sum_{t=1}^{N}}Cov\left(g_{t}(\theta)\right)=N\Psi
+\end{eqnarray*}
+
+\end_inset
+
+These results for the entire sample can also be shown by using the same
+ procedure as above.
+ Since the likelihood function, 
+\begin_inset Formula $L(y;\theta)$
+\end_inset
+
+, is a joint density function it must integreate to 1:
+\begin_inset Formula 
+\[
+\int L(y;\theta)dy=1
+\]
+
+\end_inset
+
+Differentiation of both sides of this equation with respect to 
+\begin_inset Formula $\theta$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\[
+\int g(\theta)L(y;\theta)dy=0
+\]
+
+\end_inset
+
+The left hand side is simply the definition of the expect value of 
+\begin_inset Formula $g(\theta)$
+\end_inset
+
+ because 
+\begin_inset Formula $L(y;\theta)$
+\end_inset
+
+ is the joint density of 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $E\left[g(\theta)\right]=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Differentiating again with respect to 
+\begin_inset Formula $\theta$
+\end_inset
+
+, we can write
+\begin_inset Formula 
+\[
+\int\mathcal{H}(\theta)L(y;\theta)dy+\int\left(g(\theta)g(\theta)^{\prime}\right)L(y;\theta)dy=0
+\]
+
+\end_inset
+
+The first term is 
+\begin_inset Formula $E\left[\mathcal{H}(\theta)\right]$
+\end_inset
+
+, and the second term is 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $E\left[g(\theta)g(\theta)^{\prime}\right]$
+\end_inset
+
+, which is the covariance of 
+\begin_inset Formula $g(\theta)$
+\end_inset
+
+ because 
+\begin_inset Formula $E\left[g(\theta)\right]=0$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\[
+Cov\left[g(\theta)\right]=E\left[-\mathcal{H}(\theta)\right]=N\Psi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula $\frac{1}{\sqrt{N}}g(\theta)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N(0,\Psi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $g_{t}(\theta)$
+\end_inset
+
+ is a sequence of i.i.d.
+ random vectors with zero mean and covariance matrix 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ by Proposition 3.
+\begin_inset Formula 
+\[
+\frac{1}{\sqrt{N}}g(\theta)=\frac{1}{\sqrt{N}}{\displaystyle \sum_{t=1}^{N}}g_{t}(\theta)
+\]
+
+\end_inset
+
+By the Central Limit Theorem (CLT), this converges in distribution to 
+\begin_inset Formula $N(0,\Psi)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula $p{\displaystyle \lim_{N\rightarrow\infty}\left(-\frac{1}{N}\mathcal{H}(\theta)\right)=\Psi}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\left\{ \mathcal{H}_{t}(\theta)\right\} $
+\end_inset
+
+ is a sequence of i.i.d.
+ random matrices.
+\begin_inset Formula 
+\[
+\frac{1}{N}\mathcal{H}(\theta)=\frac{1}{N}{\displaystyle \sum_{t=1}^{N}}\mathcal{H}_{t}(\theta)=\bar{\mathcal{H}}_{t}(\theta)
+\]
+
+\end_inset
+
+By Khinchine's WLLN, the sample mean 
+\begin_inset Formula $\bar{\mathcal{H}}_{t}(\theta)$
+\end_inset
+
+ converges to its true mean 
+\begin_inset Formula $E\left[\mathcal{H}_{t}(\theta)\right]=-\Psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+Let 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ be the MLE of the true parameter 
+\begin_inset Formula $\theta_{0}$
+\end_inset
+
+ for a sample of size 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ Then, under the regularity conditions, 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ is consistent and has an asymptotic normal distribution, i.e.,
+\begin_inset Formula 
+\begin{eqnarray*}
+p\lim_{N\rightarrow\infty}\hat{\theta} & = & \theta_{0}\\
+\sqrt{N}(\hat{\theta}-\theta_{0}) & \begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array} & N(0,\Psi^{-1})
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Psi=E\left(-\frac{1}{N}\mathcal{H}(\theta)\right)$
+\end_inset
+
+ is Fisher's 
+\series bold
+information's matrix
+\series default
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+\shape italic
+Proof of Consistency
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+From Propositions 1 and 2, we have
+\begin_inset Formula 
+\[
+p\lim\left[\frac{l(\theta_{0})}{N}\right]=E\left[\frac{l(\theta_{0})}{N}\right]\geq E\left[\frac{l(\theta)}{N}\right]=p\lim\left[\frac{l(\theta)}{N}\right]
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ In particular, the inequality holds for 
+\begin_inset Formula $\theta=\hat{\theta}$
+\end_inset
+
+, and hence,
+\begin_inset Formula 
+\[
+p\lim\left[\frac{l(\theta_{0})}{N}\right]\geq p\lim\left[\frac{l(\hat{\theta})}{N}\right]
+\]
+
+\end_inset
+
+But 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ is the MLE for every 
+\begin_inset Formula $N$
+\end_inset
+
+, and hence,
+\begin_inset Formula 
+\[
+\left[\frac{l(\hat{\theta})}{N}\right]\geq\left[\frac{l(\theta)}{N}\right]
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $\theta$
+\end_inset
+
+ (including 
+\begin_inset Formula $\theta_{0}$
+\end_inset
+
+) and for all 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ Therfore,
+\begin_inset Formula 
+\[
+p\lim\left[\frac{l(\hat{\theta})}{N}\right]\geq p\lim\left[\frac{l(\theta_{0})}{N}\right]
+\]
+
+\end_inset
+
+These two inequalities imply
+\begin_inset Formula 
+\[
+p\lim\left[\frac{l(\hat{\theta})}{N}\right]=p\lim\left[\frac{l(\theta_{0})}{N}\right]
+\]
+
+\end_inset
+
+This, in turn, implies 
+\begin_inset Formula $p\lim(\hat{\theta})=\theta_{0}$
+\end_inset
+
+ when the model is asymptotically identified.
+ The model is asymptotically identifed under very general conditions which
+ are satisfied by the regularity conditions.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+\emph on
+Proof of Asymptotic Normality
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Take the first order Taylor expansion of 
+\begin_inset Formula $g(\hat{\theta})$
+\end_inset
+
+ around the true value 
+\begin_inset Formula $\theta_{0}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+g(\hat{\theta})=g(\theta_{0})+\mathcal{H}(\theta_{0})(\hat{\theta}-\theta_{0})
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $g(\hat{\theta})=0$
+\end_inset
+
+, dividing the equation with 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+ and rearranging the terms we can write
+\begin_inset Formula 
+\[
+\sqrt{N}(\hat{\theta}-\theta)=\left(\frac{1}{N}\mathcal{H}(\theta_{0})\right)^{-1}\frac{1}{\sqrt{N}}g(\theta_{0})
+\]
+
+\end_inset
+
+ The first matrix on the right hand side converges in probability to 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ by Proposition 5, and the last term converges in distribution to 
+\begin_inset Formula $N(0,\Psi)$
+\end_inset
+
+ by Proposition 4.
+ Hence by using a well-known theorem, 
+\begin_inset Formula $\sqrt{N}(\hat{\theta}-\theta_{0})$
+\end_inset
+
+ converges in distribution to 
+\begin_inset Formula $\Psi^{-1}Z$
+\end_inset
+
+, where 
+\begin_inset Formula $Z\sim N(0,\Psi)$
+\end_inset
+
+.
+ This gives the desired result.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Alternative computational forms of the information matrix are
+\begin_inset Formula 
+\begin{eqnarray}
+\Psi & = & E\left(-\frac{1}{N}\mathcal{H}(\theta)\right)\nonumber \\
+ & = & E\left(-\mathcal{H}_{t}(\theta)\right)\nonumber \\
+ & = & p\mbox{lim}\left(-\frac{1}{N}\mathcal{H}(\theta)\right)\nonumber \\
+ & = & E\left(-\frac{1}{N}g(\theta)g(\theta)^{\prime}\right)\nonumber \\
+ & = & E\left(g_{t}(\theta)g_{t}(\theta)^{\prime}\right)\nonumber \\
+ & = & p\lim\left(\frac{1}{N}{\displaystyle \sum_{t=1}^{N}}g_{t}(\theta)g_{t}(\theta)^{\prime}\right)\label{eq:5}
+\end{eqnarray}
+
+\end_inset
+
+where subscript 
+\begin_inset Formula $t$
+\end_inset
+
+ indicates a single observation
+\begin_inset Formula 
+\begin{eqnarray}
+g_{t}(\theta) & = & \frac{\partial\ln f(y_{t};\theta)}{\partial\theta}\label{eq:6}\\
+\mathcal{H}_{t}(\theta) & = & \frac{\partial^{2}\ln f(y_{t};\theta)}{\partial\theta\partial\theta^{\prime}}=\frac{\partial g_{t}(\theta)}{\partial\theta^{\prime}}\label{eq:7}
+\end{eqnarray}
+
+\end_inset
+
+ and 
+\begin_inset Formula $g(\theta)=\sum g_{t}(\theta)$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{H}(\theta)=\sum\mathcal{H}_{t}(\theta)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Note that the first three expressions for 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ require computation of the Hessian matrix, while the last three expressions
+ require only the gradient vector.
+ If the expectations of these forms are functions of the sample size 
+\begin_inset Formula $N$
+\end_inset
+
+, then there limit as 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+ is sometimes taken for 
+\begin_inset Formula $\Psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In practice, we are interested in the MLE, 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+, and its asymptotic distribution.
+ 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ is asymptotically distributed as normal with mean 
+\begin_inset Formula $\theta_{0}$
+\end_inset
+
+ (the true value of 
+\begin_inset Formula $\theta$
+\end_inset
+
+) and covariance matrix 
+\begin_inset Formula $V\equiv(N\Psi)^{-1}$
+\end_inset
+
+, where 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ is evaluated at the MLE 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+.
+ The choice of 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ to be used in 
+\begin_inset Formula $V$
+\end_inset
+
+ depends primarily on the degree of difficulty in computing the expectations
+ or 
+\begin_inset Formula $p\lim$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When it is difficult to compute them, their empirical values (matrices without
+ taking expectaitons or 
+\begin_inset Formula $p\lim$
+\end_inset
+
+) are often used for the estimate of 
+\begin_inset Formula $V$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+V=\mbox{asymp.}\ Cov(\hat{\theta})=\left(-\mathcal{H}(\hat{\theta})\right)^{-1}\ \mbox{or}\ \left(g(\hat{\theta})g(\hat{\theta})^{\prime}\right)^{-1}\ \mbox{or}\ \left({\displaystyle \sum_{t=1}^{N}g_{t}(\hat{\theta})g_{t}(\hat{\theta})}^{\prime}\right)^{-1}\label{eq:8}
+\end{equation}
+
+\end_inset
+
+In particular, the inverse of the negative Hessian matrix is used as the
+ estimate of 
+\begin_inset Formula $V$
+\end_inset
+
+ in many software.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In some cases, it is easy to compute the expectation or 
+\begin_inset Formula $p\lim$
+\end_inset
+
+ for some elements in the matrix, and not easy for other elements.
+ In such cases, it is generally suggested to use the expected value of 
+\begin_inset Formula $p\lim$
+\end_inset
+
+ for those elements that can be easily computed, and use the empirical values
+ for other elements.
+\end_layout
+
+\begin_layout Section*
+Restricted Maximum Likelihood Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $L(y;\theta)$
+\end_inset
+
+ and 
+\begin_inset Formula $l(\theta)=\ln L(y;\theta)$
+\end_inset
+
+ be as defined before, where 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is a 
+\begin_inset Formula $K$
+\end_inset
+
+-dimensional vector of unknown parameters.
+ The gradient vector and the Hessian matrix are denoted by 
+\begin_inset Formula $g(\theta)$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{H}(\theta)$
+\end_inset
+
+, respectively.
+ Let 
+\begin_inset Formula $h(\theta)=0$
+\end_inset
+
+ be a 
+\begin_inset Formula $J$
+\end_inset
+
+-dimsensional vector of restricitons on 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ The restricted MLE of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is obtained by maximizing the Lagrange equation
+\begin_inset Formula 
+\begin{equation}
+\mathscr{L}=l(\theta)-\lambda^{\prime}h(\theta)\label{eq:9}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is a 
+\begin_inset Formula $J$
+\end_inset
+
+-dimensional vector of Lagrange multipliers.
+ The restricted MLE 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{\lambda}$
+\end_inset
+
+ are the solutions to the first order conditions
+\begin_inset Formula 
+\begin{eqnarray}
+g(\tilde{\theta})-H_{\tilde{\theta}}\lambda & = & 0\label{eq:10}\\
+h(\tilde{\theta}) & = & 0\label{eq:11}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $H_{\tilde{\theta}}=\frac{\partial h(\tilde{\theta})}{\partial\theta}$
+\end_inset
+
+ is a 
+\begin_inset Formula $K\times J$
+\end_inset
+
+ matrix evaluated at 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+.
+ The subscript for 
+\begin_inset Formula $H$
+\end_inset
+
+ emphasizes that it may be a function of 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

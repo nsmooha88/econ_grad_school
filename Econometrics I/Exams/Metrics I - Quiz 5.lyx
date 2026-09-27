@@ -1,0 +1,637 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Econometrics I: Quiz 5
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Problem
+You wish to test 
+\begin_inset Formula $h(\theta)=0$
+\end_inset
+
+ in the context in the maximum likelihood estimation.
+ Let 
+\begin_inset Formula $\ln L(\theta)$
+\end_inset
+
+ be the log-likelihood function, 
+\begin_inset Formula $g(\theta)$
+\end_inset
+
+ be the gradient vector.
+ Explain the ideas of the likelihood ratio test, the Wald test, and the
+ efficient score test.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+ be the unrestricted and restricted estimators, respectively.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Likelihood Ratio Test (LRT):
+\series default
+ For this test, we need to know 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+.
+ With MLE, we wish to maximize 
+\begin_inset Formula $\ln L(\theta)$
+\end_inset
+
+.
+ For this test, we need to know 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+.
+ We know 
+\begin_inset Formula $\ln L(\hat{\theta})\geq\ln L(\tilde{\theta})$
+\end_inset
+
+.
+ If the restrictions are valid, we can expect 
+\begin_inset Formula $\ln L(\hat{\theta})-\ln L(\tilde{\theta})\approx0$
+\end_inset
+
+.
+ If they are not valid, then 
+\begin_inset Formula $\ln L(\hat{\theta})-\ln L(\tilde{\theta})$
+\end_inset
+
+ will be very different from zero.
+ LRT analyzes the squared Euclidean distance of 
+\begin_inset Formula $\ln L(\hat{\theta})-\ln L(\tilde{\theta})$
+\end_inset
+
+ from zero.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Wald Test (WT):
+\series default
+ We only need information on 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+.
+ We want to see if 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ satisfies the restrictions 
+\begin_inset Formula $h(\theta)=0$
+\end_inset
+
+.
+ If the restrictions are valid, then 
+\begin_inset Formula $h(\hat{\theta})\approx0$
+\end_inset
+
+.
+ If they are not valid, then 
+\begin_inset Formula $h(\hat{\theta})$
+\end_inset
+
+ will be very different from the zero vector.
+ The WT analyzes the weighted squared Euclidean distance of 
+\begin_inset Formula $h(\hat{\theta})$
+\end_inset
+
+ from the zero vector.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Efficient Score Test (EST):
+\series default
+ We only need information on 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+.
+ We want to see if 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+ satisfies the FOC of the unrestricted model, 
+\begin_inset Formula $g(\theta)=0$
+\end_inset
+
+.
+ If the restrictions are valid, then 
+\begin_inset Formula $g(\tilde{\theta})\approx0$
+\end_inset
+
+.
+ If the restrictions are not valid, then 
+\begin_inset Formula $g(\tilde{\theta})$
+\end_inset
+
+ will be very different from the zero vector.
+ EST analyzes the weighted squared Euclidean distance of 
+\begin_inset Formula $g(\tilde{\theta})$
+\end_inset
+
+ from the zero vector.
+\end_layout
+
+\begin_layout Problem
+Consider a standard linear regression model 
+\begin_inset Formula $y_{t}=Z_{t}\theta+u_{t}$
+\end_inset
+
+, where 
+\begin_inset Formula $Z_{t}$
+\end_inset
+
+ is a 
+\begin_inset Formula $1\times p$
+\end_inset
+
+ vector of regressors, and 
+\begin_inset Formula $u_{t}\sim i.i.d.(0,\sigma^{2})$
+\end_inset
+
+.
+ There are 
+\begin_inset Formula $K$
+\end_inset
+
+ variables 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ that are uncorrelated with 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $K\geq p$
+\end_inset
+
+.
+ You wish to estimate 
+\begin_inset Formula $\beta$
+\end_inset
+
+ by the method of moments.
+ Note that 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ is an i.i.d.
+ random variable.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Write the population moment condition and the sample moment condition that
+ you will use.
+\end_layout
+
+\begin_layout Enumerate
+Explain the identifiability problem is, and derive the rank condition for
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+ to be identified.
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is overidentified by the population moment condition.
+ What does that mean?
+\end_layout
+
+\begin_layout Enumerate
+We discussed an estimation idea to handle the overidentification problem.
+ Explain the idea and explain how to choose the seleciton matrix (which
+ was denoted by 
+\begin_inset Formula $F$
+\end_inset
+
+ in the lecture).
+ Present the best 
+\begin_inset Formula $F$
+\end_inset
+
+ and prove that it is indeed the best.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ be a 
+\begin_inset Formula $1\times K$
+\end_inset
+
+ matrix.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+The population moment condition is
+\begin_inset Formula 
+\[
+E(X_{t}^{\prime}u_{t})=0
+\]
+
+\end_inset
+
+and the sample moment condition is
+\begin_inset Formula 
+\[
+\frac{1}{T}{\displaystyle \sum_{t=1}^{T}}X_{t}^{\prime}(y_{t}-Z_{t}\theta)=0
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Suppose 
+\begin_inset Formula $\theta_{0}$
+\end_inset
+
+ is the true value of 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ Then, it must solve the population moment condition, i.e.,
+\begin_inset Formula 
+\[
+E\left[X_{t}^{\prime}(y_{t}-Z_{t}\theta_{0})\right]=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\theta_{0}$
+\end_inset
+
+ is identified if and only if
+\begin_inset Formula 
+\[
+E\left[X_{t}^{\prime}(y_{t}-Z_{t}\theta)\right]=0
+\]
+
+\end_inset
+
+has a unique solution for 
+\begin_inset Formula $\theta$
+\end_inset
+
+ and it is equal to 
+\begin_inset Formula $\theta_{0}$
+\end_inset
+
+.
+ If there is another vector 
+\begin_inset Formula $\theta_{1}$
+\end_inset
+
+ that also solves the population moment condition, then the true value of
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is unable to be identified.
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left[X_{t}^{\prime}(y_{t}-Z_{t}\theta)\right] & = & E\left[X_{t}^{\prime}(y_{t}-Z_{t}\theta)\right]+E\left[X_{t}^{\prime}(y_{t}-Z_{t}\theta_{0})\right]-E\left[X_{t}^{\prime}(y_{t}-Z_{t}\theta_{0})\right]\\
+ & = & 0+E(X_{t}^{\prime}Z_{t})(\theta_{0}-\theta)=0
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula $\theta=\theta_{0}$
+\end_inset
+
+ is the unique solution if and only if 
+\begin_inset Formula $rank\ E(X_{t}^{\prime}Z_{t})=0$
+\end_inset
+
+.
+ This is the rank condition for 
+\begin_inset Formula $\theta$
+\end_inset
+
+ to be identified.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is overidentified by the population moment condition, then the number of
+ equations to estimate the regressors is greater than the actual number
+ of regressors, i.e., 
+\begin_inset Formula $K>p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+One way to handle the overidentification problem is to reduce the overidentified
+ system to the just-identified system by selecting 
+\begin_inset Formula $p$
+\end_inset
+
+ number of sample moment conditions and then solve for 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $F$
+\end_inset
+
+ be a 
+\begin_inset Formula $K\times p$
+\end_inset
+
+ selection matrix with full column rank.
+ Premultiplying 
+\begin_inset Formula $F^{\prime}$
+\end_inset
+
+ to the sample moment conditions, we have the just identified 
+\begin_inset Formula $p$
+\end_inset
+
+ moment conditions
+\begin_inset Formula 
+\[
+\tilde{m}(\theta)=F^{\prime}\bar{m}(\theta)=\frac{1}{T}(XF)^{\prime}(y-Z\theta)=\frac{1}{T}(F^{\prime}X^{\prime}y-F^{\prime}X^{\prime}Z\theta)=0
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $F^{\prime}X^{\prime}Z$
+\end_inset
+
+ is a square matrix of full rank, the solution to this set of conditions
+ is
+\begin_inset Formula 
+\[
+\tilde{\theta}=\left(F^{\prime}X^{\prime}Z\right)^{-1}F^{\prime}X^{\prime}y=\theta+\left(F^{\prime}X^{\prime}Z\right)^{-1}F^{\prime}X^{\prime}u
+\]
+
+\end_inset
+
+with an asymptotic covariance matrix
+\begin_inset Formula 
+\[
+\mbox{cov}(\tilde{\theta}|X)=\left(F^{\prime}X^{\prime}Z\right)^{-1}F^{\prime}X^{\prime}\Omega XF\left(Z^{\prime}XF\right)^{-1}
+\]
+
+\end_inset
+
+The optimal weightin matrix
+\begin_inset Formula 
+\[
+F=\left(X^{\prime}\Omega X\right)^{-1}X^{\prime}Z
+\]
+
+\end_inset
+
+This choice gives the estimator
+\begin_inset Formula 
+\[
+\hat{\theta}=\left[Z^{\prime}X\left(X^{\prime}\Omega X\right)^{-1}X^{\prime}Z\right]Z^{\prime}X\left(X^{\prime}\Omega X\right)^{-1}X^{\prime}y
+\]
+
+\end_inset
+
+with the asymptotic covariance matrix
+\begin_inset Formula 
+\[
+\mbox{cov}(\hat{\theta}|X)=\left[Z^{\prime}X\left(X^{\prime}\Omega X\right)^{-1}X^{\prime}Z\right]^{-1}
+\]
+
+\end_inset
+
+The difference in the covariances, 
+\begin_inset Formula $\mbox{cov}(\tilde{\theta})-\mbox{cov}(\hat{\theta})$
+\end_inset
+
+ is postive semidefinite for any choice of 
+\begin_inset Formula $F$
+\end_inset
+
+ for 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+.
+\begin_inset Formula $\mbox{cov}(\tilde{\theta})-\mbox{cov}(\hat{\theta})$
+\end_inset
+
+ is positive semidefinite if and only if 
+\begin_inset Formula $\left[\mbox{cov}(\hat{\theta})\right]^{-1}-\left[\mbox{cov}(\tilde{\theta})\right]^{-1}$
+\end_inset
+
+ is positive semidefinite.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left[\mbox{cov}(\hat{\theta})\right]^{-1}-\left[\mbox{cov}(\tilde{\theta})\right]^{-1}=Z^{\prime}X\left(X^{\prime}\Omega X\right)^{-1}X^{\prime}Z-Z^{\prime}XF\left(F^{\prime}X^{\prime}\Omega XF\right)^{-1}F^{\prime}X^{\prime}Z
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $X^{\prime}\Omega X=D^{\prime}D$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\mbox{cov}(\hat{\theta})\right]^{-1}-\left[\mbox{cov}(\tilde{\theta})\right]^{-1} & = & Z^{\prime}X\left(D^{\prime}D\right)^{-1}X^{\prime}Z-Z^{\prime}XF\left(F^{\prime}X^{\prime}\Omega XF\right)^{-1}F^{\prime}X^{\prime}Z\\
+ & = & Z^{\prime}XD^{-1}D^{\prime-1}X^{\prime}Z-Z^{\prime}XF\left(F^{\prime}X^{\prime}\Omega XF\right)^{-1}F^{\prime}X^{\prime}Z\\
+ & = & Z^{\prime}XD^{-1}\left[I_{K}-DF\left(F^{\prime}X^{\prime}\Omega XF\right)^{-1}D^{\prime}F^{\prime}\right]D^{\prime-1}X^{\prime}Z\\
+ & = & Z^{\prime}XD^{-1}\left[I_{K}-DF\left(F^{\prime}D^{\prime}DF\right)^{-1}D^{\prime}F^{\prime}\right]D^{\prime-1}X^{\prime}Z
+\end{eqnarray*}
+
+\end_inset
+
+Let 
+\begin_inset Formula $A=DF$
+\end_inset
+
+, 
+\begin_inset Formula $B=Z^{\prime}XD^{-1}$
+\end_inset
+
+, 
+\begin_inset Formula $M_{A}=I_{K}-A(A^{\prime}A)^{-1}A^{\prime}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $M_{A}$
+\end_inset
+
+ is symmetric and idempotent.
+ Thus
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\mbox{cov}(\hat{\theta})\right]^{-1}-\left[\mbox{cov}(\tilde{\theta})\right]^{-1} & = & BM_{A}B^{\prime}\\
+ & = & BM_{A}M_{A}^{\prime}B^{\prime}\\
+ & = & CC^{\prime}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $C=BM_{A}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\mbox{cov}(\tilde{\theta})-\mbox{cov}(\hat{\theta})$
+\end_inset
+
+ is positive semi-definite.
+\end_layout
+
+\end_body
+\end_document

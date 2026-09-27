@@ -1,0 +1,641 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Econometrics I: Quiz 6
+\end_layout
+
+\begin_layout Problem
+Consider a linear regression model 
+\begin_inset Formula $y=X\beta+u$
+\end_inset
+
+, which satisfies the Gauss-Markov assumptions except for the condition:
+ 
+\begin_inset Formula $E(uu^{\prime}|X)=\sigma^{2}I$
+\end_inset
+
+.
+ Instead, we have 
+\begin_inset Formula $E(uu^{\prime}|X)=\sigma^{2}\Omega$
+\end_inset
+
+ and 
+\begin_inset Formula $\Omega\neq I$
+\end_inset
+
+.
+ The OLSE of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is a linear unbiased estimator, but it is not the best.
+ Assuming that 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ is known, derive the BLUE of 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\Omega^{-1}=P^{\prime}P$
+\end_inset
+
+.
+ Pre-multiply the regression model by 
+\begin_inset Formula $P$
+\end_inset
+
+ to obtain
+\begin_inset Formula 
+\[
+y^{*}=X^{*}\beta+u^{*}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $y^{*}=Py$
+\end_inset
+
+, 
+\begin_inset Formula $X^{*}=PX$
+\end_inset
+
+, and 
+\begin_inset Formula $u^{*}=Pu$
+\end_inset
+
+.
+ Then, the BLUE is
+\begin_inset Formula 
+\[
+\hat{\beta}=(X^{*\prime}X^{*})^{-1}X^{*\prime}y^{*}=(X^{\prime}\Omega^{-1}X)^{-1}X^{\prime}\Omega^{-1}y
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is BLUE because
+\begin_inset Formula 
+\[
+cov(u^{*})=Pcov(u)P^{\prime}=\sigma^{2}P(P^{\prime}P)^{-1}P^{\prime}=\sigma^{2}PP^{-1}P^{\prime-1}P^{\prime}=\sigma^{2}I
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Consider a system of two equations, 
+\begin_inset Formula $y_{j}=X_{j}\beta_{j}+u_{j},\ j=1,2$
+\end_inset
+
+, where 
+\begin_inset Formula $y_{j}$
+\end_inset
+
+ is a 
+\begin_inset Formula $N\times1$
+\end_inset
+
+ vector of dependent variables, and 
+\begin_inset Formula $X_{j}$
+\end_inset
+
+ is a 
+\begin_inset Formula $N\times K_{j}$
+\end_inset
+
+ matrix of exogenous variables.
+ The error terms have the moments 
+\begin_inset Formula $E(u_{j})=0$
+\end_inset
+
+ and 
+\begin_inset Formula $E(u_{j}u_{k}^{\prime})=\sigma_{jk}I$
+\end_inset
+
+.
+ Each error term satisfies the Gauss-Markov assumptions, and they are 
+\emph on
+contemporaneously 
+\emph default
+correlated.
+ Show that the GLS estimators of 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ are identical to their individual OLS estimators if 
+\begin_inset Formula $X_{1}\equiv X_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Write the model as
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\begin{array}{c}
+y_{1}\\
+y_{2}
+\end{array}\right] & = & \left[\begin{array}{cc}
+X_{1} & 0\\
+0 & X_{2}
+\end{array}\right]\left[\begin{array}{c}
+\beta_{1}\\
+\beta_{2}
+\end{array}\right]+\left[\begin{array}{c}
+u_{1}\\
+u_{2}
+\end{array}\right]\\
+y & = & X\beta+u
+\end{eqnarray*}
+
+\end_inset
+
+Note that
+\begin_inset Formula 
+\[
+\Omega=E(uu^{\prime})=E\left\{ \left[\begin{array}{c}
+u_{1}\\
+u_{2}
+\end{array}\right]\left[\begin{array}{cc}
+u_{1} & u_{2}\end{array}\right]\right\} =E\left[\begin{array}{cc}
+u_{1}u_{1}^{\prime} & u_{1}u_{2}^{\prime}\\
+u_{2}u_{1}^{\prime} & u_{2}u_{2}^{\prime}
+\end{array}\right]=\left[\begin{array}{cc}
+\sigma_{11}I & \sigma_{12}I\\
+\sigma_{21}I & \sigma_{22}I
+\end{array}\right]=\Sigma\otimes I
+\]
+
+\end_inset
+
+Then,
+\begin_inset Formula 
+\[
+\hat{\beta}_{GLS}=\left(X^{\prime}\Omega^{-1}X\right)^{-1}X^{\prime}\Omega^{-1}y
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $Z=X_{1}=X_{2}$
+\end_inset
+
+, so that 
+\begin_inset Formula $X=I\otimes Z$
+\end_inset
+
+.
+ Then, using the relationships 
+\begin_inset Formula $(A\otimes B)^{\prime}=(A^{\prime}\otimes B^{\prime})$
+\end_inset
+
+ and 
+\begin_inset Formula $(A\otimes B)(C\otimes D)=(AC\otimes BD)$
+\end_inset
+
+, we can write
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta}_{GLS} & = & \left[X^{\prime}(\Sigma^{-1}\otimes I)X{}^{-1}\right]X^{\prime}(\Sigma^{-1}\otimes I)y\\
+ & = & \left[\left(I\otimes Z^{\prime}\right)(\Sigma^{-1}\otimes I)(I\otimes Z)\right]^{-1}\left(I\otimes Z^{\prime}\right)(\Sigma^{-1}\otimes I)y\\
+ & = & \left[\Sigma^{-1}\otimes Z^{\prime}Z\right]^{-1}(\Sigma^{-1}\otimes Z^{\prime})y\\
+ & = & [I\otimes(Z^{\prime}Z)^{-1}Z^{\prime}]y\\
+ & = & \left[\begin{array}{cc}
+(Z^{\prime}Z)^{-1}Z^{\prime} & 0\\
+0 & (Z^{\prime}Z)^{-1}Z^{\prime}
+\end{array}\right]\left[\begin{array}{c}
+y_{1}\\
+y_{2}
+\end{array}\right]\\
+ & = & \left[\begin{array}{c}
+(Z^{\prime}Z)^{-1}Z^{\prime}y_{1}\\
+(Z^{\prime}Z)^{-1}Z^{\prime}y_{2}
+\end{array}\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+The random individual effect model of a panel data specifies the model as
+\begin_inset Formula 
+\[
+y_{ti}=\alpha_{i}+X_{ti}\beta+u_{ti}=\alpha+X_{ti}\beta+(\epsilon_{i}+u_{ti})=\alpha+X_{ti}\beta+e_{ti}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha_{i}=\alpha+\epsilon_{i}$
+\end_inset
+
+.
+ A standard set of assumptions includes that 
+\begin_inset Formula $X_{ti}$
+\end_inset
+
+ is exogenous with respect to 
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{ti}$
+\end_inset
+
+, 
+\begin_inset Formula $\epsilon_{i}\sim i.i.d.(0,\sigma_{\epsilon}^{2})$
+\end_inset
+
+, 
+\begin_inset Formula $u_{ti}\sim i.i.d.(0,\sigma_{u}^{2})$
+\end_inset
+
+, and 
+\begin_inset Formula $cov(\epsilon_{i},u_{tj})=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $i,j,t$
+\end_inset
+
+.
+ Under these assumptions, derive the variance of 
+\begin_inset Formula $e_{ti}$
+\end_inset
+
+ and covariances of 
+\begin_inset Formula $e_{ti}$
+\end_inset
+
+ and 
+\begin_inset Formula $e_{sj}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+First, we find the variance of 
+\begin_inset Formula $e_{ti}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+Var(e_{ti}) & = & Var(\epsilon_{i}+u_{ti})\\
+ & = & Var(\epsilon_{i})+Var(u_{ti})\\
+ & = & \sigma_{\epsilon}^{2}+\sigma_{u}^{2}
+\end{eqnarray*}
+
+\end_inset
+
+The covariance of 
+\begin_inset Formula $e_{ti}$
+\end_inset
+
+ and 
+\begin_inset Formula $e_{sj}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+cov(e_{ti},e_{sj}) & = & cov\left[\left(\epsilon_{i}+u_{ti}\right),\left(\epsilon_{j}+u_{sj}\right)\right]\\
+ & = & E\left\{ \left[\left(\epsilon_{i}+u_{ti}\right)-E\left(\epsilon_{i}+u_{ti}\right)\right]\left[\left(\epsilon_{j}+u_{sj}\right)-E\left(\epsilon_{j}+u_{sj}\right)\right]\right\} \\
+ & = & E\left[\left(\epsilon_{i}+u_{ti}\right)\left(\epsilon_{j}+u_{sj}\right)\right]\\
+ & = & E\left(\epsilon_{i}\epsilon_{j}\right)+E\left(u_{ti}u_{sj}\right)\\
+cov(e_{ti},e_{sj}) & = & \begin{cases}
+\sigma_{u}^{2}+\sigma_{\epsilon}^{2} & \mbox{if}\ t=s,\ i=j\\
+\sigma_{\epsilon}^{2} & \mbox{if}\ t\neq s,\ i=j\\
+0 & \mbox{otherwise}
+\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+The ARCH(1) model specifies the error term process as 
+\begin_inset Formula $u_{t}=\sigma_{t}\epsilon_{t}$
+\end_inset
+
+, where 
+\begin_inset Formula $\sigma_{t}^{2}=\alpha_{0}+\alpha_{1}u_{t-1}^{2},\ \epsilon_{t}\sim i.i.d.(0,1)$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha_{0}>0$
+\end_inset
+
+, 
+\begin_inset Formula $1>\alpha_{1}\geq0$
+\end_inset
+
+.
+ Verify that OLS estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is the BLUE.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $\sigma_{t}^{2}$
+\end_inset
+
+ is a function of 
+\begin_inset Formula $\epsilon_{t-s},\ \forall\ s\geq1$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma_{t}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $\epsilon_{t}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $E(\epsilon_{t})=0$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+E(u_{t})=E(\sigma_{t}\epsilon_{t})=E(\sigma_{t})E(\epsilon_{t})=0
+\]
+
+\end_inset
+
+Also, since 
+\begin_inset Formula $E(\epsilon_{t}^{2})=1$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+E(u_{t}^{2})=E(\sigma_{t}^{2}\epsilon_{t}^{2})=E(\sigma_{t}^{2})E(\epsilon_{t}^{2})=E(\sigma_{t}^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+The observed dependent variable in a binary choice model takes two values:
+ 
+\begin_inset Formula $y_{i}=0$
+\end_inset
+
+ or 
+\begin_inset Formula $y_{i}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What is the major problem with estimating 
+\begin_inset Formula $y_{i}=X_{i}\beta+u_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,\ldots,N$
+\end_inset
+
+ by the OLS?
+\end_layout
+
+\begin_layout Enumerate
+The binary choice model is often motivated by the latent variable model.
+ What is it and how is it related to the observed values of 
+\begin_inset Formula $y_{i}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{i}=1$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+The marginal effect on the probability of choice, 
+\begin_inset Formula $P(y_{i}=1)$
+\end_inset
+
+, is not a linear funciton of the coefficient.
+ Show the marginal effect of 
+\begin_inset Formula $X_{ik}$
+\end_inset
+
+ and explain an important factor to be considered in measuring it.
+\end_layout
+
+\begin_layout Enumerate
+Present how you use the MLE to estimate the model.
+ (Not the final solution, but just the specification of the objective function).
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+The major problem with estimating 
+\begin_inset Formula $y_{i}=X_{i}\beta+u_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,\ldots,N$
+\end_inset
+
+ by the OLS is that the predicted values 
+\begin_inset Formula $\hat{y}_{i}$
+\end_inset
+
+ may not be in the unit interval.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $U_{i1}=Z_{i1}\beta+\epsilon_{i1}$
+\end_inset
+
+ and 
+\begin_inset Formula $U_{i0}=Z_{i0}\beta+\epsilon_{i1}$
+\end_inset
+
+ represent the utility choice 1 and choice 0 brings to agent 
+\begin_inset Formula $i$
+\end_inset
+
+, respectively.
+ The latent variable model is
+\begin_inset Formula 
+\[
+y_{i}^{*}=U_{1i}-U_{i0}=(Z_{i1}-Z_{i0})\beta+(\epsilon_{i1}-\epsilon_{i0})\equiv X_{i}\beta+u_{i}
+\]
+
+\end_inset
+
+However, we do not observe the value of 
+\begin_inset Formula $y_{i}^{*}$
+\end_inset
+
+, only its sign.
+ Thus, the binary response model is specified as
+\begin_inset Formula 
+\[
+y_{i}=\begin{cases}
+1 & \mbox{if}\ y_{i}>0\\
+0 & \mbox{if}\ y_{i}\leq0
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+If the pdf is symmetric, then
+\begin_inset Formula 
+\[
+\frac{\partial F(X_{i}\beta)}{\partial X_{ik}}=f(X_{i}\beta)\beta_{k}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+To find the MLE, we wish to maximize the following function with respect
+ to 
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+L & = & {\displaystyle \prod_{i=1}^{n}}F(X_{i}\beta)^{y_{i}}\cdot\left[1-F(X_{i}\beta)\right]^{1-y_{i}}\\
+\ln L & = & {\displaystyle \sum_{i=1}^{n}}y_{i}\ln\left[F(X_{i}\beta)\right]+(1-y_{i})\ln\left[1-F(X_{i}\beta)\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
