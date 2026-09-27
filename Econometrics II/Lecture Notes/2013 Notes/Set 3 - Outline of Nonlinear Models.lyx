@@ -1,0 +1,7275 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Outline of Nonlinear Models
+\end_layout
+
+\begin_layout Section*
+M-Estimation
+\end_layout
+
+\begin_layout Subsection*
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+q_{i}(\theta)=q(w_{i},\theta)
+\]
+
+\end_inset
+
+is known and 
+\begin_inset Formula $\{w_{i}:i=1,\ldots,n\}$
+\end_inset
+
+ represents all of the observations
+\end_layout
+
+\begin_layout Subsection*
+M-Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\theta}_{M}=\arg{\displaystyle \min_{\theta\in\Theta}}\ Q_{n}(\theta)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\Theta\subseteq\mathbb{R}^{P}$
+\end_inset
+
+ is the parameter space and 
+\begin_inset Formula $Q_{n}(\theta)=\frac{1}{n}{\displaystyle \sum_{i=1}^{n}}q(w_{i},\theta)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Identification of the M-Estimator
+\end_layout
+
+\begin_layout Subsubsection*
+Conditions for Consistency of 
+\begin_inset Formula $\hat{\theta}_{M}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+One set of sufficient conditions:
+\end_layout
+
+\begin_layout Enumerate
+1.
+ 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ is compact
+\end_layout
+
+\begin_layout Enumerate
+2.
+ Uniform Convergence
+\begin_inset Formula 
+\[
+{\displaystyle \sup_{\theta\in\Theta}}\ \left|\frac{1}{n}{\displaystyle \sum_{i=1}^{n}}q(w_{i},\theta)-E\left[q(w_{i},\theta)\right]\right|\begin{array}[b]{c}
+_{p}\\
+\longrightarrow
+\end{array}0
+\]
+
+\end_inset
+
+3.
+ 
+\begin_inset Formula $\theta_{o}=\arg{\displaystyle \min_{\theta\in\Theta}}\ q(\theta)$
+\end_inset
+
+ is unique (identification)
+\end_layout
+
+\begin_layout Standard
+Another set of sufficient conditions: 
+\begin_inset Formula $q(w_{i},\theta)$
+\end_inset
+
+ is concave in 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\emph on
+Uniform Weak Law of Large Numbers (UWLLN):
+\series default
+\emph default
+ If 
+\begin_inset Formula $\forall\ \theta\in\Theta$
+\end_inset
+
+, 
+\begin_inset Formula $\left|q(w_{i},\theta)\right|<d(w_{i})$
+\end_inset
+
+ and 
+\begin_inset Formula $E\left[d(w_{i})\right]<\infty$
+\end_inset
+
+, then 
+\begin_inset Formula $n^{-1}\sum_{i=1}^{n}q(w_{i},\theta)\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}E\left[q(w_{i},\theta)\right]$
+\end_inset
+
+ uniformly in 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Note that because the WLLN is point-wise convergence, the UWLLN is stronger
+ than the WLLN, i.e., the UWLLN implies the WLLN.
+ 
+\end_layout
+
+\begin_layout Standard
+Since for each 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+, 
+\begin_inset Formula $\left\{ q(w_{i},\theta):i=1,2,\ldots\right\} $
+\end_inset
+
+ is just an i.i.d.
+ sequence, then the uniform weak law of large numbers implies that
+\begin_inset Formula 
+\[
+Q_{n}(\theta)=\frac{1}{n}{\displaystyle \sum_{i=1}^{n}}q(w_{i},\theta)\begin{array}[b]{c}
+_{p}\\
+\longrightarrow
+\end{array}E\left[q(w_{i},\theta)\right]=Q(\theta)
+\]
+
+\end_inset
+
+We want to show that
+\begin_inset Formula 
+\[
+\hat{\theta}_{M}\begin{array}[b]{c}
+_{p}\\
+\longrightarrow
+\end{array}\theta_{0}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\theta_{0}=\arg{\displaystyle \min_{\theta\in\Theta}}\ Q(\theta)$
+\end_inset
+
+.
+ For identification, 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ must be unique, but 
+\begin_inset Formula $\hat{\theta}_{M}$
+\end_inset
+
+ does not have too be.
+\end_layout
+
+\begin_layout Example*
+Linear Model
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $\left|q(w_{i},\theta)\right|=\left(y_{i}-x_{i}^{\prime}\theta\right)^{2}\leq2y_{i}^{2}+2\left(x_{i}^{\prime}\theta\right)^{2}\le2y_{i}^{2}+2c^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $E(y_{i}^{2})<\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $E(x_{i}^{2})<\infty$
+\end_inset
+
+, so we have uniform convergence.
+ Note that because 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ in linear models has a closed form solution, only point-wise convergence
+ is needed to show consistency.
+ In nonlinear models, 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+, generally, does not have a closed form solution, which is why uniform
+ convergence is needed to show consistency.
+\end_layout
+
+\begin_layout Subsection*
+Asymptotic Normality
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\theta}=\arg{\displaystyle \min_{\theta\in\Theta}}\ \frac{1}{n}{\displaystyle \sum_{i=1}^{n}}q(w_{i},\theta)
+\]
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+FOC with respect to 
+\begin_inset Formula $\theta$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{N}}s(w_{i},\hat{\theta})=0
+\]
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+where 
+\begin_inset Formula $s(w_{i},\theta)$
+\end_inset
+
+ is the 
+\begin_inset Formula $P\times1$
+\end_inset
+
+ vector of partial derivatives of 
+\begin_inset Formula $q(w_{i},\theta)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+s_{i}(\theta)=s(w_{i},\theta)\equiv\frac{\partial q(w_{i},\theta)}{\partial\theta}\equiv\left[\begin{array}{c}
+\frac{\partial q(w_{i},\theta)}{\partial\theta_{1}}\\
+\vdots\\
+\frac{\partial q(w_{i},\theta)}{\partial\theta_{P}}
+\end{array}\right]
+\]
+
+\end_inset
+
+We call 
+\begin_inset Formula $s(w_{i},\theta)$
+\end_inset
+
+ the 
+\series bold
+score of the objective function
+\series default
+ 
+\begin_inset Formula $q(w_{i},\theta)$
+\end_inset
+
+ for observation We want the expression 
+\begin_inset Formula $\left(\hat{\theta}-\theta_{o}\right)$
+\end_inset
+
+, so we take the mean value expansion of the FOC at 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{N}}s(w_{i},\hat{\theta})={\displaystyle \sum_{i=1}^{n}}s(w_{i},\theta_{o})+{\displaystyle \sum_{i=1}^{n}}H(w_{i},\bar{\theta})(\hat{\theta}-\theta_{o})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $H(w_{i},\theta)$
+\end_inset
+
+ is the 
+\begin_inset Formula $P\times P$
+\end_inset
+
+ matrix of second partial derivatives of 
+\begin_inset Formula $q(w_{i},\theta)$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+H_{i}(\theta)=H(w_{i},\theta)\equiv\frac{\partial^{2}q(w_{i},\theta)}{\partial\theta\partial\theta^{\prime}}\equiv\nabla_{\theta}^{2}q(w_{i},\theta)
+\]
+
+\end_inset
+
+We call 
+\begin_inset Formula $H(w_{i},\theta)$
+\end_inset
+
+ the 
+\series bold
+Hessian of the objective function
+\series default
+ 
+\begin_inset Formula $q(w_{i},\theta)$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\theta$
+\end_inset
+
+ for observation 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ 
+\begin_inset Formula $H(w_{i},\bar{\theta})$
+\end_inset
+
+ is the Hessian evaluated at 
+\begin_inset Formula $\bar{\theta}$
+\end_inset
+
+, where 
+\begin_inset Formula $\bar{\theta}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\theta_{o}$
+\end_inset
+
+ is between 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+.
+ Note that if 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is in the interior of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ and 
+\begin_inset Formula $E\left[q(w_{i},\theta)\right]$
+\end_inset
+
+ is differentiable for 
+\begin_inset Formula $\theta\in\mbox{int}\ \Theta$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\nabla_{\theta}E\left[q(w_{i},\theta)\right]=0
+\]
+
+\end_inset
+
+Now, if the derivative and expectations operator can be interchanged (which
+ is the case quite generally), then the above equation implies that assume
+ that
+\begin_inset Formula 
+\[
+E\left[\nabla_{\theta}q(w_{i},\theta)\right]=E\left[s(w_{i},\theta_{o})\right]=0
+\]
+
+\end_inset
+
+From the FOC of the objective function, we have
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{N}}s(w_{i},\hat{\theta})=0
+\]
+
+\end_inset
+
+Solving for 
+\begin_inset Formula $(\hat{\theta}-\theta_{o})$
+\end_inset
+
+ and mulitplying by 
+\begin_inset Formula $\sqrt{n}$
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\[
+\sqrt{n}\left(\hat{\theta}-\theta_{o}\right)=\left(\frac{1}{n}{\displaystyle \sum_{i=1}^{n}}H(w_{i},\bar{\theta})\right)^{-1}\left(-\frac{1}{\sqrt{n}}{\displaystyle \sum_{i=1}^{n}}s(w_{i},\theta_{o})\right)
+\]
+
+\end_inset
+
+We also assume the condition that 
+\begin_inset Formula $\left|H(w_{i},\theta)\right|<b(w_{i})$
+\end_inset
+
+ and 
+\begin_inset Formula $E\left[b(w_{i})\right]<\infty$
+\end_inset
+
+.
+ Hence, by the UWLLN,
+\begin_inset Formula 
+\[
+\frac{1}{n}{\displaystyle \sum_{i=1}^{n}}H(w_{i},\bar{\theta})\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}E\left[H(w_{i},\theta_{o})\right]
+\]
+
+\end_inset
+
+Thus, by the CLT,
+\begin_inset Formula 
+\[
+\sqrt{n}\left(\hat{\theta}-\theta_{o}\right)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N\left(0,A_{o}^{-1}B_{o}A_{o}^{-1}\right)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $A_{o}\equiv E\left[H(w_{i},\theta_{o})\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $B_{o}\equiv E\left[s(w_{i},\theta_{o})s(w_{i},\theta_{o})^{\prime}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $V=A_{o}^{-1}B_{o}A_{o}^{-1}$
+\end_inset
+
+ is known as the Sandwich Robust Variance.
+ The fully robut variance matrix estimator, 
+\begin_inset Formula $\hat{V}$
+\end_inset
+
+, is obtained by replacing 
+\begin_inset Formula $A_{o}$
+\end_inset
+
+ by 
+\begin_inset Formula $\hat{A}=n^{-1}\sum_{i=1}^{n}H(w_{i},\hat{\theta})$
+\end_inset
+
+ and 
+\begin_inset Formula $B_{o}$
+\end_inset
+
+ by 
+\begin_inset Formula $\hat{B}=n^{-1}\sum_{i=1}^{n}s(w_{i},\hat{\theta})s(w_{i}\hat{\theta})^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+To simply notation, note that 
+\begin_inset Formula $E\left[H_{i}(\theta)\right]=A(\theta)$
+\end_inset
+
+; 
+\begin_inset Formula $A(\theta_{o})=A_{o}$
+\end_inset
+
+; 
+\begin_inset Formula $E\left[s_{i}(\theta)s_{i}(\theta)^{\prime}\right]=B(\theta)$
+\end_inset
+
+; 
+\begin_inset Formula $B(\theta_{o})=B_{o}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Linear Model
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $w_{i}=\left[\begin{array}{cc}
+x_{i} & y_{i}\end{array}\right]^{\prime}$
+\end_inset
+
+; 
+\begin_inset Formula $q(w_{i},\theta)=\frac{(y_{i}-x_{i}^{\prime}\theta)^{2}}{2}$
+\end_inset
+
+; 
+\begin_inset Formula $s(w_{i},\theta)=-x_{i}(y_{i}-x_{i}^{\prime}\theta)=-x_{i}u_{i}$
+\end_inset
+
+; 
+\begin_inset Formula $H(w_{i},\theta)=x_{i}x_{i}^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $A_{o}=E\left(x_{i}x_{i}^{\prime}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $B_{o}=E\left(u_{i}^{2}x_{i}x_{i}^{\prime}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Generalized Information Matrix Equation (GIME)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+GIME: 
+\series default
+
+\begin_inset Formula $B_{o}=\sigma^{2}A_{o}$
+\end_inset
+
+, where 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ is a scalar.
+\end_layout
+
+\begin_layout Standard
+For MLE, 
+\begin_inset Formula $\sigma^{2}=1$
+\end_inset
+
+, so 
+\begin_inset Formula $B_{o}=A_{o}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+For NLS, 
+\begin_inset Formula $E(u_{i}^{2}|x_{i})=\sigma^{2}\implies B_{o}=\sigma^{2}A_{o}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Under GIME for NLS, 
+\begin_inset Formula $V=\sigma^{2}A_{o}^{-1}$
+\end_inset
+
+, so a consistent estimator for 
+\begin_inset Formula $V$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+\hat{V}=\hat{\sigma}^{2}\left(\frac{1}{n}{\displaystyle \sum_{i=1}^{N}}H(w_{i},\hat{\theta})\right)^{-1}
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+\hat{\sigma}^{2}=\frac{1}{N-P}{\displaystyle \sum_{i=1}^{N}}\hat{u}_{i}^{2}=\frac{SSR}{N-P}
+\]
+
+\end_inset
+
+Note that the 
+\begin_inset Formula $\hat{u}_{i}$
+\end_inset
+
+ are the NLS residuals and SSR is the sum of squared NLS residuals.
+\end_layout
+
+\begin_layout Subsection*
+Inference
+\end_layout
+
+\begin_layout Standard
+Testing 
+\begin_inset Formula $Q$
+\end_inset
+
+ restrictions 
+\begin_inset Formula $H_{0}:c(\theta_{o})=0$
+\end_inset
+
+, where 
+\begin_inset Formula $c:\mathbb{R}^{P}\rightarrow\mathbb{R}^{Q}$
+\end_inset
+
+ and 
+\begin_inset Formula $P\geq Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The constrained estimator is 
+\begin_inset Formula $\tilde{\theta}=\arg\min Q_{n}(\theta)$
+\end_inset
+
+ subject to 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Note that 
+\begin_inset Formula $C(\theta)=\frac{\partial c(\theta)}{\partial\theta^{\prime}}$
+\end_inset
+
+ is the 
+\begin_inset Formula $Q\times P$
+\end_inset
+
+ Jacobian of 
+\begin_inset Formula $c(\theta)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Wald Test
+\end_layout
+
+\begin_layout Standard
+For this test, we only need the unconstrained estimator, 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+.
+ We use the delta method to derive the Wald statistic.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Delta Method:
+\series default
+ If 
+\begin_inset Formula $\sqrt{n}(\hat{\theta}-\theta_{o})\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N(0,V)$
+\end_inset
+
+, then 
+\begin_inset Formula $\sqrt{n}\left(g(\hat{\theta})-g(\theta_{o})\right)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N(0,G_{o}VG_{o}^{\prime})$
+\end_inset
+
+, where 
+\begin_inset Formula $G(\theta)=\frac{\partial g(\theta)}{\partial\theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $G_{o}=G(\theta_{o})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+So, by the delta method, we have 
+\begin_inset Formula $\sqrt{n}\left(c(\hat{\theta})-c(\theta_{o})\right)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N(0,C_{o}VC_{o}^{\prime})$
+\end_inset
+
+, where 
+\begin_inset Formula $C_{o}\equiv C(\theta_{o})$
+\end_inset
+
+.
+ Thus, under the null hypothesis, 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, we can form the Wald statistic
+\begin_inset Formula 
+\[
+W=c(\hat{\theta})^{\prime}(\hat{C}\hat{V}\hat{C}^{\prime})^{-1}c(\hat{\theta})\rightarrow\chi_{Q}^{2}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{V}$
+\end_inset
+
+is an asymptotic variance matrix estimator of 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{C}\equiv C(\hat{\theta})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Lagrange Multiplier (LM) Test
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For this test, we only need the constrained estimator, 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+.
+ The LM statistic is based on the limiting distribution of 
+\begin_inset Formula $N^{-\nicefrac{1}{2}}\sum_{i=1}^{N}s_{i}(\tilde{\theta})$
+\end_inset
+
+ under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+ This is the score with respect to the entire vector 
+\begin_inset Formula $\theta$
+\end_inset
+
+, but we are evaluating it at the restricted estimates.
+ If 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+ were replaced by 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+, then the expression would be identically zero, which would make it useless
+ as a test statistic.
+ If the restrictions imposed by the null hypothesis are true, then the expressio
+n will not be statistically different from zero.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Assume initially that 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is in the interior of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $\sqrt{N}(\tilde{\theta}-\theta_{o})=O_{p}(1)$
+\end_inset
+
+ by the delta method.
+ A standard mean value expansion yields
+\begin_inset Formula 
+\[
+N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}s_{i}(\tilde{\theta})=N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}s_{i}(\theta_{o})+A_{o}\sqrt{N}(\tilde{\theta}-\theta_{o})+o_{p}(1)
+\]
+
+\end_inset
+
+under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, where 
+\begin_inset Formula $A_{o}\equiv E\left[H(w_{i},\theta_{o})\right]$
+\end_inset
+
+.
+ But 
+\begin_inset Formula $0=\sqrt{N}c(\tilde{\theta})=\sqrt{N}c(\theta_{o})+C(\bar{\theta})\sqrt{N}(\tilde{\theta}-\theta_{o})$
+\end_inset
+
+, where 
+\begin_inset Formula $C(\cdot)$
+\end_inset
+
+ is the 
+\begin_inset Formula $Q\times P$
+\end_inset
+
+ Jacobian matrix 
+\begin_inset Formula $C(\theta)$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{\theta}$
+\end_inset
+
+ is between 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+.
+ Under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $c(\theta_{o})=0$
+\end_inset
+
+, and 
+\begin_inset Formula $\mbox{p\lim}\ C(\bar{\theta})=C(\theta_{o})\equiv C_{o}$
+\end_inset
+
+.
+ Therefore, under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{o}\sqrt{N}(\tilde{\theta}-\theta_{o})=o_{p}(1)$
+\end_inset
+
+, and so multiplying the equation above through by 
+\begin_inset Formula $C_{o}A_{o}^{-1}$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\[
+C_{o}A_{o}^{-1}N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}s_{i}(\tilde{\theta})=C_{o}A_{o}^{-1}N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}s_{i}(\theta_{o})+o_{p}(1)
+\]
+
+\end_inset
+
+By the CLT, 
+\begin_inset Formula $C_{o}A_{o}^{-1}N^{-\nicefrac{1}{2}}\sum_{i=1}^{N}s_{i}(\theta_{o})\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N\left(0,C_{o}A_{o}^{-1}B_{o}A_{o}^{-1}C_{o}^{\prime}\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $B_{o}\equiv E\left[s(w_{i},\theta_{o})s(w_{i}\theta_{o})^{\prime}\right]$
+\end_inset
+
+.
+ Under our assumptions, 
+\begin_inset Formula $C_{o}A_{o}^{-1}B_{o}A_{o}^{-1}C_{o}^{\prime}$
+\end_inset
+
+ has full rank 
+\begin_inset Formula $Q$
+\end_inset
+
+, and so
+\begin_inset Formula 
+\[
+\left[N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}s_{i}(\tilde{\theta})\right]^{\prime}A_{o}^{-1}C_{o}^{\prime}\left(C_{o}A_{o}^{-1}B_{o}A_{o}^{-1}C_{o}^{\prime}\right)^{-1}C_{o}A_{o}^{-1}\left[N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}s_{i}(\tilde{\theta})\right]\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}\chi_{Q}^{2}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The score or LM statistic is given by
+\begin_inset Formula 
+\[
+LM\equiv N^{-1}\cdot\left({\displaystyle \sum_{i=1}^{N}}\tilde{s}_{i}\right)^{\prime}\tilde{A}^{-1}\tilde{C}^{\prime}\left(\tilde{C}\tilde{A}^{-1}\tilde{B}\tilde{A}^{-1}\tilde{C}^{\prime}\right)^{-1}\tilde{C}\tilde{A}^{-1}\left({\displaystyle \sum_{i=1}^{N}}\tilde{s}_{i}\right)
+\]
+
+\end_inset
+
+where all quantities are evaluated at 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+.
+ For example, 
+\begin_inset Formula $\tilde{C}\equiv C(\tilde{\theta})$
+\end_inset
+
+, 
+\begin_inset Formula $\tilde{B}$
+\end_inset
+
+ is given in expression (31), but with 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+ in place of 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+, and 
+\begin_inset Formula $\tilde{A}$
+\end_inset
+
+ is the estimator in expression (30), again evaluated at 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+.
+ Under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $LM\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}\chi_{Q}^{2}$
+\end_inset
+
+ .
+ Because 
+\begin_inset Formula $\tilde{B}$
+\end_inset
+
+ is at least p.s.d., 
+\begin_inset Formula $LM\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If we assume 
+\series bold
+GIME
+\series default
+ with 
+\begin_inset Formula $\sigma_{o}^{2}=1$
+\end_inset
+
+, the LM statistic simplifies.
+ Let
+\begin_inset Formula 
+\[
+L(\theta)={\displaystyle \sum_{i=1}^{n}}q_{i}(\theta)+c(\theta)^{\prime}\gamma
+\]
+
+\end_inset
+
+Then, taking the derivative of 
+\begin_inset Formula $L(\theta)$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\theta$
+\end_inset
+
+, we obtain
+\begin_inset Formula 
+\[
+\frac{\partial L(\theta)}{\partial\theta}={\displaystyle \sum_{i=1}^{n}}s_{i}(\tilde{\theta})+C(\tilde{\theta})^{\prime}\tilde{\gamma}
+\]
+
+\end_inset
+
+Now, let
+\begin_inset Formula 
+\[
+\tilde{C}^{\prime}\tilde{\gamma}={\displaystyle \sum_{i=1}^{n}}s_{i}(\tilde{\theta})
+\]
+
+\end_inset
+
+So, the LM statistic becomes
+\begin_inset Formula 
+\[
+N^{-1}\left[\tilde{\gamma}^{\prime}\tilde{C}\tilde{A}^{-1}\tilde{C}^{\prime}\left(\tilde{C}\tilde{A}^{-1}\tilde{C}^{\prime}\right)\tilde{C}\tilde{A}^{-1}\tilde{C}^{\prime}\tilde{\gamma}\right]=N^{-1}\left[\tilde{\gamma}^{\prime}\tilde{C}\tilde{A}^{-1}\tilde{C}^{\prime}\tilde{\gamma}\right]
+\]
+
+\end_inset
+
+Thus, we obtain the nonrobust version of the LM statistic.
+\begin_inset Formula 
+\[
+LM=N^{-1}\left({\displaystyle \sum_{i=1}^{n}}s_{i}(\tilde{\theta})\right)^{\prime}\tilde{A}^{-1}\left({\displaystyle \sum_{i=1}^{n}}s_{i}(\tilde{\theta})\right)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}\chi_{Q}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Quasi-Likelihood Ratio (QLR) Test
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For this test, 
+\series bold
+GIME
+\series default
+ is required, and we need both the unconstrained, 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+, and constrained, 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+, estimators.
+ We first consider the case where 
+\begin_inset Formula $\sigma_{o}^{2}=1$
+\end_inset
+
+, so that 
+\begin_inset Formula $B_{o}=A_{o}$
+\end_inset
+
+.
+ Using a second-order Taylor expansion,
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{N}}q(w_{i},\tilde{\theta})-{\displaystyle \sum_{i=1}^{N}}q(w_{i},\hat{\theta})=\left({\displaystyle \sum_{i=1}^{N}}s_{i}(\hat{\theta})\right)(\hat{\theta}-\theta_{o})+(\nicefrac{1}{2})(\tilde{\theta}-\hat{\theta})^{\prime}\left({\displaystyle \sum_{i=1}^{N}}H_{i}(\bar{\theta})\right)(\tilde{\theta}-\hat{\theta})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $H_{i}(\bar{\theta})$
+\end_inset
+
+ is the 
+\begin_inset Formula $P\times P$
+\end_inset
+
+ Hessian evaluated at the mean value 
+\begin_inset Formula $\bar{\theta}$
+\end_inset
+
+ which is between 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+.
+ Note that,
+\begin_inset Formula 
+\begin{eqnarray}
+\sqrt{n}(\hat{\theta}-\theta_{o}) & = & -A_{o}^{-1}\left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{n}}s_{i}(\theta_{o})\right)+o_{p}(1)\\
+\frac{1}{\sqrt{n}}{\displaystyle \sum_{i=1}^{n}}s_{i}(\tilde{\theta}) & = & \frac{1}{\sqrt{n}}{\displaystyle \sum_{i=1}^{n}}s_{i}(\theta_{o})+\frac{1}{n}{\displaystyle \sum_{i=1}^{n}H_{i}(\bar{\theta})}\sqrt{n}(\tilde{\theta}-\theta_{o})\nonumber \\
+ & = & \frac{1}{\sqrt{n}}{\displaystyle \sum_{i=1}^{n}}s_{i}(\theta_{o})+A_{o}\sqrt{n}(\tilde{\theta}-\theta_{o})+o_{p}(1)\\
+A_{o}^{-1}\frac{1}{\sqrt{n}}{\displaystyle \sum_{i=1}^{n}}\tilde{s}_{i} & = & A_{o}^{-1}\frac{1}{\sqrt{n}}{\displaystyle \sum_{i=1}^{n}}s_{i}(\theta_{o})+\sqrt{n}(\tilde{\theta}-\theta_{o})+o_{p}(1)
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ (using the first-order condition for 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+), we have
+\begin_inset Formula 
+\[
+2\left[{\displaystyle \sum_{i=1}^{N}}q(w_{i},\tilde{\theta})-{\displaystyle \sum_{i=1}^{N}}q(w_{i},\hat{\theta})\right]=\left[\sqrt{N}(\tilde{\theta}-\hat{\theta})\right]^{\prime}A_{o}\left[\sqrt{N}(\tilde{\theta}-\hat{\theta})\right]+o_{p}(1)
+\]
+
+\end_inset
+
+since 
+\begin_inset Formula $N^{-1}\sum_{i=1}^{N}H_{i}(\bar{\theta})=A_{o}+o_{p}(1)$
+\end_inset
+
+ and 
+\begin_inset Formula $\sqrt{N}(\tilde{\theta}-\hat{\theta})=O_{p}(1)$
+\end_inset
+
+.
+ In fact, by adding (1) and (3), it follows that 
+\begin_inset Formula $\sqrt{N}(\tilde{\theta}-\hat{\theta})=A_{o}^{-1}N^{-\nicefrac{1}{2}}\sum_{i=1}^{N}s_{i}(\tilde{\theta})+o_{p}(1)$
+\end_inset
+
+.
+ Plugging this into the equation above shows that
+\begin_inset Formula 
+\begin{eqnarray*}
+QLR & \equiv & 2\left[{\displaystyle \sum_{i=1}^{N}}q(w_{i},\tilde{\theta})-{\displaystyle \sum_{i=1}^{N}}q(w_{i},\hat{\theta})\right]\\
+ & = & \left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}\tilde{s}_{i}\right)^{\prime}A_{o}^{-1}\left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}\tilde{s}_{i}\right)+o_{p}(1)
+\end{eqnarray*}
+
+\end_inset
+
+so that QLR has the same limiting distribution, 
+\begin_inset Formula $\chi_{Q}^{2}$
+\end_inset
+
+, as the LM statistic under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+ We call the above statistic the 
+\series bold
+quasi-likelihood ratio (QLR) statistic
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $\sigma_{o}^{2}\neq1$
+\end_inset
+
+, we simply divide OLR by 
+\begin_inset Formula $\hat{\sigma}^{2}$
+\end_inset
+
+, which is a consistent estimator of 
+\begin_inset Formula $\sigma_{o}^{2}$
+\end_inset
+
+ obtained from the unrestricted estimation.
+ For example, consider NLS under Assumptions NLS.1-NLS.3.
+ When equation the QLR statistic is divided by 
+\begin_inset Formula $\hat{\sigma}^{2}$
+\end_inset
+
+, we obtain 
+\begin_inset Formula $\nicefrac{(SSR_{r}-SSR_{ur})}{\left[\nicefrac{SSR_{ur}}{(N-P)}\right]}$
+\end_inset
+
+, where 
+\begin_inset Formula $SSR_{r}$
+\end_inset
+
+ and 
+\begin_inset Formula $SSR_{ur}$
+\end_inset
+
+ are the restricted and unrestricted sum of squared residuals.
+\end_layout
+
+\begin_layout Section*
+Nonlinear Least Squares (NLS)
+\end_layout
+
+\begin_layout Subsection*
+Important Notes
+\end_layout
+
+\begin_layout Standard
+NLS is a special case of an M-estimator.
+ It is useful when the model is estimating a conditional expectation, i.e.,
+ 
+\begin_inset Formula $E(y|x)=m(x,\theta_{0})$
+\end_inset
+
+.
+ In some applications, numerical search is required to obtain the NLS estimator.
+ MLE, on the other hand, is more general, but it requires full information.
+ The GMM estimator is not an M-estimator.
+ However, the M-estimator and GMM estimator are each part of a larger class
+ of estimators known as Extrememum Estimators.
+\end_layout
+
+\begin_layout Subsection*
+Preliminaries
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E(y_{i}|x_{i})=m(x_{i},\theta)$
+\end_inset
+
+, where 
+\begin_inset Formula $m(x_{i},\theta)$
+\end_inset
+
+ is known
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $q(w_{i},\theta)=\left[y_{i}-m(x_{i},\theta)\right]^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $w_{i}=\left[\begin{array}{cc}
+x_{i} & y_{i}\end{array}\right]^{\prime}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is such that 
+\begin_inset Formula $E(y_{i}|x_{i})=m(x_{i},\theta_{o})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E\left[q(w_{i},\theta)\right]=E\left[(y_{i}-\alpha)^{2}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+Linear Model
+\end_layout
+
+\begin_layout Example*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $m(x_{i},\theta)=x_{i}^{\prime}\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+NLS Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{\theta}_{NLS}=\arg{\displaystyle \min_{\theta\in\Theta}\frac{1}{n}\sum_{i=1}^{n}}\frac{\left[y_{i}-m(x_{i},\theta)\right]^{2}}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Identification of the NLS Estimator
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Conditional Expectation ID:
+\series default
+ 
+\begin_inset Formula $m(x,\theta)\neq m(x,\theta_{0}),\ \forall\ \theta\neq\theta_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, we have 
+\begin_inset Formula $m(x,\theta)=m(x,\theta_{0}),\ \forall\ \theta=\theta_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A sufficient condition for identification: 
+\begin_inset Formula $\theta\longmapsto m(x,\theta)$
+\end_inset
+
+ is strictly monotonic
+\end_layout
+
+\begin_layout Section*
+Conditional MLE (CLME)
+\end_layout
+
+\begin_layout Subsection*
+Introduction
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+CMLE: 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $f(y|x;\theta)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(y_{i}|x_{i},;\theta_{o})$
+\end_inset
+
+ uniquely maximizes 
+\begin_inset Formula $E\left[\log f(y_{i}|x_{i};\theta)\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\forall\ \theta\in\Theta$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ solves
+\begin_inset Formula 
+\[
+\max_{\theta\in\Theta}\ E\left[\log f(y_{i}|x_{i};\theta)\right]
+\]
+
+\end_inset
+
+where the expectation is with respect to the joint distribution of 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+.
+ The sample analogue of the expression above is
+\begin_inset Formula 
+\[
+{\displaystyle \max_{\theta\in\Theta}}{\displaystyle \sum_{i=1}^{n}}\log f(y_{i}|x_{i};\theta)
+\]
+
+\end_inset
+
+A solution to this problem, assuming that one exists, is the 
+\series bold
+conditional maximum likelihood estimator
+\series default
+ of 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+, which we denote as 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\hat{\theta}_{MLE}=\arg{\displaystyle \max_{\theta\in\Theta}}{\displaystyle \sum_{i=1}^{n}}l_{i}(\theta)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $l_{i}(\theta)\equiv l(y_{i},x_{i},\theta)\equiv\log f(y_{i}|x_{i};\theta)$
+\end_inset
+
+ is the 
+\series bold
+conditional log likelihood for observation 
+\begin_inset Formula $i$
+\end_inset
+
+
+\series default
+.
+ Note that 
+\begin_inset Formula $l_{i}(\theta)$
+\end_inset
+
+ is a 
+\emph on
+random 
+\emph default
+function of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ since it depends on the random vector 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Identification of the CMLE
+\end_layout
+
+\begin_layout Subsubsection*
+Kullback-Leibler Information Inequality
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather*}
+E\left[\log(f(y_{i}|x_{i};\theta_{o})\right]\geq E\left[\log(f(y_{i}|x_{i};\theta)\right]\\
+\iff E\left[\log\left(\frac{f(y|x;\theta)}{f(y|x;\theta_{o})}\right)\right]\leq\log\left(E\left[\frac{f(y|x;\theta)}{f(y|x;\theta_{o})}\right]\right)=\log\left[{\displaystyle \int}\frac{f(y|x;\theta)}{f(y|x;\theta_{o})}f(y|x;\theta_{o})\right]dy=\log\left({\displaystyle \int}dy\right)=0
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+ID of the CLME
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Conditional Density ID: 
+\series default
+
+\begin_inset Formula $f(y|x;\theta)\neq f(y|x;\theta_{o}),\ \forall\ \theta\neq\theta_{o}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Note that conditional density ID is stronger than conditional expectation
+ ID.
+\end_layout
+
+\begin_layout Subsection*
+CLME as an M-Estimator
+\end_layout
+
+\begin_layout Standard
+The CMLE is clearly an M-estimator, since a maximization problem is easily
+ turned into a minimization problem.
+ Take 
+\begin_inset Formula $w_{i}\equiv(x_{i},y_{i})$
+\end_inset
+
+ and 
+\begin_inset Formula $q(w_{i},\theta)\equiv-\log f(y_{i}|x_{i};\theta)$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\hat{\theta}_{MLE}=\arg{\displaystyle \min_{\theta\in\Theta}}{\displaystyle \sum_{i=1}^{n}}-\log f(y_{i}|x_{i};\theta)
+\]
+
+\end_inset
+
+So, we can apply the results we obtained for M-estimators.
+ The 
+\series bold
+score of the log likelihood
+\series default
+ for observation 
+\begin_inset Formula $i$
+\end_inset
+
+ is the 
+\begin_inset Formula $P\times1$
+\end_inset
+
+ vector 
+\begin_inset Formula 
+\[
+s_{i}(\theta)\equiv\frac{\partial l_{i}(\theta)}{\partial\theta}=\left[\begin{array}{c}
+\frac{\partial l_{i}(\theta)}{\partial\theta_{1}}\\
+\vdots\\
+\frac{\partial l_{i}(\theta)}{\partial\theta_{P}}
+\end{array}\right]=\frac{f_{\theta}(y_{i}|x_{i};\theta)}{f(y_{i}|x_{i};\theta)}
+\]
+
+\end_inset
+
+and the Hessian for observation 
+\begin_inset Formula $i$
+\end_inset
+
+ is the 
+\begin_inset Formula $P\times P$
+\end_inset
+
+ matrix of second partial derivatives of 
+\begin_inset Formula $l_{i}(\theta)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{i}(\theta)\equiv\frac{\partial^{2}l_{i}(\theta)}{\partial\theta\partial\theta^{\prime}}\equiv\frac{\partial s_{i}(\theta)}{\partial\theta^{\prime}}
+\]
+
+\end_inset
+
+In the vast majority of cases, the score of the log-likehood function has
+ an important zero conditional mean property
+\begin_inset Formula 
+\[
+E\left[s_{i}(\theta_{o})|x_{i}\right]=0
+\]
+
+\end_inset
+
+This was a key condition in deriving the asymptotic normality of the M-estimator.
+ To show this condition, we have
+\begin_inset Formula 
+\[
+E\left[s_{i}(\theta)|x_{i}\right]={\displaystyle \int}s(y_{i},x_{i},\theta)f(y_{i}|x_{i};\theta)dy
+\]
+
+\end_inset
+
+If intergration and differentiation can be interchanged on 
+\begin_inset Formula $\mbox{int}(\Theta)$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial}{\partial\theta}\left({\displaystyle \int}f(y_{i}|x_{i};\theta)dy\right) & = & {\displaystyle \int}\frac{\partial}{\partial\theta}f(y_{i}|x_{i};\theta)dy\\
+\frac{\partial}{\partial\theta}(1) & = & {\displaystyle \int}\frac{\partial}{\partial\theta}f(y_{i}|x_{i};\theta)dy\\
+{\displaystyle \int}\frac{\partial}{\partial\theta}\left[\log f(y_{i}|x_{i};\theta)\right]f(y_{i}|x_{i};\theta)dy & = & 0\\
+{\displaystyle \int}s(y_{i},x_{i},\theta)f(y_{i}|x_{i};\theta)dy & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim*
+For MLE, 
+\begin_inset Formula $A_{o}=B_{o}$
+\end_inset
+
+, where 
+\begin_inset Formula $A_{o}\equiv-E\left[H_{i}(\theta_{o})\right]$
+\end_inset
+
+.
+ We must assume enough smoothness such that the interchange of integral
+ and derivative is valid.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial}{\partial\theta^{\prime}}E\left[s(y_{i},\theta)|x_{i}\right] & = & 0\\
+\frac{\partial}{\partial\theta^{\prime}}{\displaystyle \int}s(y_{i},\theta)f(y_{i}|x_{i};\theta) & = & 0\\
+{\displaystyle \int}\frac{\partial}{\partial\theta^{\prime}}\left[s(y_{i},\theta)f(y_{i}|x_{i};\theta)\right]dy & = & 0\\
+{\displaystyle \int}\left[H(y_{i},\theta)f(y_{i}|x_{i};\theta)+\frac{s(y_{i},\theta)\left[f_{\theta}(y_{i}|x_{i};\theta)\right]^{\prime}}{f(y_{i}|x_{i},\theta)}f(y_{i}|x_{i};\theta)\right]dy & = & 0\\
+{\displaystyle \int}\left[H(y_{i},\theta)f(y_{i}|x_{i};\theta)+s(y_{i},\theta)s(y_{i},\theta)^{\prime}f(y_{i}|x_{i};\theta)\right]dy & = & 0\\
+{\displaystyle \int\left[H(y_{i},\theta)+s(y_{i},\theta)s(y_{i},\theta)^{\prime}\right]}f(y_{i}|x_{i};\theta)dy & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+When evaluated at 
+\begin_inset Formula $\theta=\theta_{o}$
+\end_inset
+
+, we get
+\begin_inset Formula 
+\[
+-E\left[H_{i}(\theta_{o})|x_{i}\right]=E\left[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}|x_{i}\right]
+\]
+
+\end_inset
+
+where the expectation and variance are with respect to the true conditional
+ distribution of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Taking the expectation of this equation (with respect to the distribution
+ of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+) and using the law of iterated expectations gives
+\begin_inset Formula 
+\[
+-E\left[H_{i}(\theta_{o})\right]=E\left[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}\right]
+\]
+
+\end_inset
+
+or 
+\begin_inset Formula $A_{o}=B_{o}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Binary Response Models (BRM)
+\end_layout
+
+\begin_layout Subsection*
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y_{i}=1$
+\end_inset
+
+ or 
+\begin_inset Formula $y_{i}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi_{i}\equiv P(y_{i}=1|x_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1-\pi_{i}\equiv P(y_{i}=0|x_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Linear Probability Model (LPM)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The LPM for binary response 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is specified as:
+\begin_inset Formula 
+\[
+\pi_{i}=P(y_{i}=1|x_{i})=E(y_{i}|x_{i})=x_{i}^{\prime}\beta
+\]
+
+\end_inset
+
+As usual, the 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+ can be functions of underlying explanatory variables.
+ Given a random sample, the OLS regression of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ produces consistent and even unbiased estimators of 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Drawbacks
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\hat{\pi}_{i}=x_{i}^{\prime}\hat{\beta}$
+\end_inset
+
+ may not be a probability
+\end_layout
+
+\begin_layout Enumerate
+Heteroskedasticity is always present: 
+\begin_inset Formula $\mbox{Var}(y_{i}|x_{i})=\pi_{i}(1-\pi_{i})=x_{i}^{\prime}\beta(1-x_{i}^{\prime}\beta)=\sigma_{i}^{2}$
+\end_inset
+
+.
+ A nice way to deal with this issue is to use standard heteroskedasticity-robust
+ standard errors and 
+\begin_inset Formula $t$
+\end_inset
+
+ statistics.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+WLS
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If we operate under the LPM, we can obtain a more asymptotically efficient
+ estimator by applying weighted least squares (WLS).
+\end_layout
+
+\begin_layout Enumerate
+Estimate 
+\begin_inset Formula $\sigma_{i}^{2}$
+\end_inset
+
+ by 
+\begin_inset Formula $\hat{\sigma}_{i}^{2}=x_{i}^{\prime}\hat{\beta}_{OLS}(1-x_{i}^{\prime}\hat{\beta}_{OLS})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Regress 
+\begin_inset Formula $\nicefrac{y_{i}}{\hat{\sigma}_{i}}$
+\end_inset
+
+ on 
+\begin_inset Formula $\nicefrac{x_{i}}{\hat{\sigma}_{i}}$
+\end_inset
+
+ to get 
+\begin_inset Formula $\hat{\beta}_{WLS}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $0<\hat{\sigma}_{i}^{2}<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If some of the OLS fitted values are not between zero and one, WLS analysis
+ is not possible without ad hoc adjustments to bring deviant fitted values
+ into the unit interval.
+\end_layout
+
+\begin_layout Subsection*
+Nonlinear Probability Model
+\end_layout
+
+\begin_layout Subsubsection*
+Preliminaries
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The general specification of the nonlinear probability model is:
+\begin_inset Formula 
+\[
+\pi_{i}=P(y_{i}=1|x_{i})=G(x_{i}^{\prime}\beta)
+\]
+
+\end_inset
+
+where 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $0<G(z)<1,\ \forall\ z$
+\end_inset
+
+.
+ For the linear probability model, 
+\begin_inset Formula $G(z)=z$
+\end_inset
+
+ is the identity funciton, which means that the response probabilities cannot
+ be between 0 and 1 for all 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ In most applications, 
+\begin_inset Formula $G$
+\end_inset
+
+ is a cumulative distribution function (cdf) whose specific form can sometimes
+ be derived from an underlying economic model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Models where 
+\begin_inset Formula $G$
+\end_inset
+
+ is a cdf can be derived more gnerally from an underlying 
+\series bold
+latent variable model
+\series default
+,
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{i}^{*} & = & x_{i}^{\prime}\beta+u_{i}\\
+y_{i} & = & \begin{cases}
+1 & y_{i}^{*}>0\\
+0 & y_{i}\leq0
+\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is a continuously distributed variable independent of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and the distribution of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is symmetric about zero.
+ If 
+\begin_inset Formula $G(\cdot)$
+\end_inset
+
+ is the cdf of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+, and 
+\begin_inset Formula $g(\cdot)$
+\end_inset
+
+ is the pdf of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+, then, because 
+\begin_inset Formula $g(\cdot)$
+\end_inset
+
+ is symmetric about zero, 
+\begin_inset Formula $1-G(-z)=G(z),\ \forall\ z$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\begin{gather*}
+E(y_{i}|x_{i})=P(y_{i}=1|x_{i})=P(y_{i}^{*}>0|x_{i})\\
+=P(u_{i}>-x_{i}^{\prime}\beta|x_{i})=1-P(u_{i}\leq-x_{i}^{\prime}\beta|x_{i})\\
+=1-G(-x_{i}^{\prime}\beta)=G(x_{i}^{\prime}\beta)
+\end{gather*}
+
+\end_inset
+
+In most applications of binary response models, the primary goal is to explain
+ the effects of the 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+ on the response probability 
+\begin_inset Formula $P(y_{i}=1|x_{i})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Probit and Logit Models
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The 
+\series bold
+probit model
+\series default
+ can be derived from the latent variable formulation when 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ has a standard normal distribution, 
+\begin_inset Formula 
+\[
+G(z)=\Phi(z)\equiv{\displaystyle \int_{-\infty}^{Z}}\phi(v)dv
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\phi(z)$
+\end_inset
+
+ is the standard normal density
+\begin_inset Formula 
+\[
+g(z)=\phi(z)\equiv(2\pi)^{-\nicefrac{1}{2}}\exp\left(-\nicefrac{z^{2}}{2}\right)
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The 
+\series bold
+logit model
+\series default
+ arises from the latent variable formulation when 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ has a standard logistic distribution.
+\begin_inset Formula 
+\[
+G(z)=\Lambda(z)\equiv\frac{\exp(z)}{\left[1+\exp(z)\right]}=\frac{1}{1+\exp(-z)}
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $\pi_{i}=P(x_{i}^{\prime}\beta)$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{P}^{-1}(\pi_{i})=x_{i}^{\prime}\beta$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi_{i} & = & P(z)=\frac{1}{1+e^{-z}}\\
+\mbox{P}^{-1}(\pi_{i}) & = & \log\frac{\pi_{i}}{1-\pi_{i}}=x_{i}^{\prime}\beta
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\nicefrac{\pi_{i}}{1-\pi_{i}}=\exp(x_{i}^{\prime}\beta)$
+\end_inset
+
+.
+ Thus, a unit increase of 
+\begin_inset Formula $x_{i1}$
+\end_inset
+
+ will lead to an increase of 
+\begin_inset Formula $\nicefrac{\pi_{i}}{1-\pi_{i}}$
+\end_inset
+
+ by a factor of 
+\begin_inset Formula $\exp(\beta_{1})$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is the partial effect on 
+\begin_inset Formula $\log$
+\end_inset
+
+ odds.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The general specification at the start of this subsection allows us to cover
+ probit, logit, and a number of other binary choice models in one framework.
+ In fact, in what follows we do not even need 
+\begin_inset Formula $G$
+\end_inset
+
+ to be a cdf, but we do assume that 
+\begin_inset Formula $G(z)$
+\end_inset
+
+ is strictly between zero and unity for all real numbers 
+\begin_inset Formula $z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Maximum Likelihood Estimation of Binary Response Models
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Assume we have 
+\begin_inset Formula $N$
+\end_inset
+
+ independent, identically distributed observations.
+ To estimate the model by (conditional) maximum likelihood (MLE), we need
+ the log-likelihood for each 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ The density of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ can be written as:
+\begin_inset Formula 
+\[
+f(y_{i}|x_{i};\beta)=\pi_{i}^{y_{i}}(1-\pi_{i})^{1-y_{i}}
+\]
+
+\end_inset
+
+The log-likelihood for observation 
+\begin_inset Formula $i$
+\end_inset
+
+ is a function of the 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ vector of paramters and the data 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+-\log f(y_{i}|x_{i};\beta) & = & -y_{i}\log\pi_{i}-(1-y_{i})-\log(1-\pi_{i})\\
+ & = & -y_{i}\log\left[G(x_{i}^{\prime}\beta)\right]-(1-y_{i})\left[1-G(x_{i}^{\prime}\beta)\right]
+\end{eqnarray*}
+
+\end_inset
+
+For a sample size 
+\begin_inset Formula $N$
+\end_inset
+
+, the MLE of 
+\begin_inset Formula $\beta$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+, minimizes
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{N}}-y_{i}\log\left[G(x_{i}^{\prime}\beta)\right]-(1-y_{i})\left[1-G(x_{i}^{\prime}\beta)\right]
+\]
+
+\end_inset
+
+We assume that 
+\begin_inset Formula $G(\cdot)$
+\end_inset
+
+ is twice differentiable, and the function 
+\begin_inset Formula $g(z)$
+\end_inset
+
+ is the derivative of 
+\begin_inset Formula $G(\cdot)$
+\end_inset
+
+.
+ The score of the conditiaonl log-likelihood for observation 
+\begin_inset Formula $i$
+\end_inset
+
+ can be shown to be
+\begin_inset Formula 
+\[
+s(w_{i},\theta)=\frac{-y_{i}g(x_{i}^{\prime}\beta)x_{i}}{G(x_{i}^{\prime}\beta)}+\frac{(1-y_{i})g(x_{i}^{\prime}\beta)x_{i}}{1-G(x_{i}^{\prime}\beta)}
+\]
+
+\end_inset
+
+Similarly, the expected value of the Hessian conditional on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+-E\left[H_{i}(\beta)|x_{i}\right]=\frac{\left[f(x_{i}^{\prime}\beta)\right]^{2}x_{i}x_{i}^{\prime}}{F(x_{i}^{\prime}\beta)\left[1-F(x_{i}^{\prime}\beta)\right]}\equiv A(x_{i},\beta)
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+From the general maximum likelihood results, we know that 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is consistent and asymptotically normal:
+\begin_inset Formula 
+\[
+\sqrt{n}(\hat{\beta}-\beta)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N(0,V)
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+V=\left\{ E\left[s(w_{i},\theta_{o})s(w_{i},\theta_{o})^{\prime}\right]\right\} ^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that 
+\begin_inset Formula $E\left[s(w_{i},\theta_{o})s(w_{i},\theta_{o})^{\prime}\right]$
+\end_inset
+
+ is known as the 
+\series bold
+Information Matrix
+\series default
+.
+ Also, for MLE, 
+\begin_inset Formula $A_{o}=B_{o}$
+\end_inset
+
+.
+ A consistent estimator of 
+\begin_inset Formula $V$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+\hat{V}=\frac{1}{n}{\displaystyle \sum_{i=1}^{n}}s(w_{i},\hat{\theta})s(w_{i},\hat{\theta})^{\prime}
+\]
+
+\end_inset
+
+Thus, we can use the Wald test, LM test, or LR test.
+\end_layout
+
+\begin_layout Subsubsection*
+Partial Effects
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In order to successfully apply probit and logit models, it is important
+ to know how to interpret the 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ on both continuous and discrete explanatory variables.
+ First, if 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+ is continuous, the 
+\series bold
+partial (marginal) effect
+\series default
+ of 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+ on 
+\begin_inset Formula $\pi_{i}$
+\end_inset
+
+ is:
+\begin_inset Formula 
+\[
+\frac{\partial\pi_{i}}{\partial x_{ij}}=\frac{\partial G(x_{i}^{\prime}\beta)}{\partial x_{ij}}=g(x_{i}^{\prime}\beta)\beta_{j}
+\]
+
+\end_inset
+
+Therefore, the partial effect of 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+ on 
+\begin_inset Formula $\pi_{i}$
+\end_inset
+
+ depends on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ through 
+\begin_inset Formula $g(x_{i}\beta)$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $G(\cdot)$
+\end_inset
+
+ is a strictly increasing cdf, as in the probit and logit cases, then 
+\begin_inset Formula $g(z)>0$
+\end_inset
+
+ for all 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Therefore, the sign of the effect is given by the sign of 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+.
+ Also, the 
+\emph on
+relative
+\emph default
+ effects do not depend on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+: for continuous variables 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{ih}$
+\end_inset
+
+, the ratio of the partial effects is constant and given by the ratio of
+ the corresponding coefficients:
+\begin_inset Formula 
+\[
+\frac{\nicefrac{\partial p(x_{i})}{\partial x_{ij}}}{\nicefrac{\partial p(x_{i})}{\partial x_{ih}}}=\frac{\beta_{j}}{\beta_{h}}
+\]
+
+\end_inset
+
+In the typical case that 
+\begin_inset Formula $g$
+\end_inset
+
+ is a symmetric density about zero, with unique mode at zero, the largest
+ effect is when 
+\begin_inset Formula $x_{i}^{\prime}\beta=0$
+\end_inset
+
+.
+ The estimator of the partial effect is
+\begin_inset Formula 
+\[
+g(x_{i}^{\prime}\hat{\beta})\hat{\beta}_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+ is a binary explanatory variable, then the partial effect from changing
+ 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+ from zero to one on 
+\begin_inset Formula $\pi_{i}$
+\end_inset
+
+, also known as 
+\series bold
+the treatment effect
+\series default
+ of a discrete 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+ on 
+\begin_inset Formula $\pi_{i}$
+\end_inset
+
+, holding all other variables fixed, is simply
+\begin_inset Formula 
+\[
+G(\beta_{1}+\beta_{2}x_{i2}+\cdots+\beta_{K-1}x_{i,K-1}+\beta_{K})-G(\beta_{1}+\beta_{2}x_{i2}+\cdots+\beta_{K-1}x_{i,K-1})
+\]
+
+\end_inset
+
+Again, this expression depends on the other 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can also use the difference expression above for other kinds of discrete
+ variables.
+ The effect on the probability of 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+ going from 
+\begin_inset Formula $c_{K}$
+\end_inset
+
+ to 
+\begin_inset Formula $c_{K}+1$
+\end_inset
+
+ is simply
+\begin_inset Formula 
+\begin{gather*}
+G(\beta_{1}+\beta_{2}x_{i2}+\cdots+\beta_{K-1}x_{i,K-1}+\beta_{K}[c_{K}+1])\\
+-G(\beta_{1}+\beta_{2}x_{i2}+\cdots+\beta_{K-1}x_{i,K-1}+\beta_{K}c_{K})
+\end{gather*}
+
+\end_inset
+
+This formula could also be used to measure the 
+\series bold
+unit increase
+\series default
+ of a continuous or discrete variable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is also straightforward to include standard function forms among the
+ explanatory variables.
+ Models with interactions among explanatory variables, including interactions
+ between discrete and continuous variables, are handled similarly.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An alternative way to summarize the estimated marginal effects is to estimate
+ the average value of 
+\begin_inset Formula $\beta_{K}g(x_{i}^{\prime}\beta)$
+\end_inset
+
+ across the population, or 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\beta_{K}E\left[g(x_{i}^{\prime}\beta)\right]$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+ is continuous, this quantity is known as the 
+\series bold
+average partial effect (APE)
+\series default
+.
+ Here we are averaging across the distribution of all observable covariates.
+ A consistent estimator of the APE is
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}_{K}\left[N^{-1}{\displaystyle \sum_{i=1}^{N}}g(x_{i}^{\prime}\hat{\beta})\right]
+\end{equation}
+
+\end_inset
+
+When 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+ is binary, the estimated 
+\series bold
+average treatment effect (ATE)
+\series default
+ is
+\begin_inset Formula 
+\begin{equation}
+N^{-1}{\displaystyle \sum_{i=1}^{N}}\left[G\left(\hat{\beta}_{1}+\hat{\beta}x_{i,2}+\cdots+\hat{\beta}_{K-1}x_{i,K-1}+\hat{\beta}_{K}\right)-G\left(\hat{\beta}_{1}+\hat{\beta}x_{i,2}+\cdots+\hat{\beta}_{K-1}x_{i,K-1}\right)\right]
+\end{equation}
+
+\end_inset
+
+Naturally, we can use equation (5) to estimate the APE from changing 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ (continuous or discrete) from any two values, say 
+\begin_inset Formula $c_{K}^{0}$
+\end_inset
+
+ to 
+\begin_inset Formula $c_{K}^{1}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\hat{\beta}_{K}$
+\end_inset
+
+ is replaced with 
+\begin_inset Formula $\hat{\beta}_{K}c_{K}^{1}$
+\end_inset
+
+ in the first term and we insert 
+\begin_inset Formula $\hat{\beta}_{K}c_{K}^{0}$
+\end_inset
+
+ intwo the second occurence of 
+\begin_inset Formula $F(\cdot)$
+\end_inset
+
+.
+ Further, in either equation (4) or (5), we can fix some of the explanatory
+ variables at specific values and average across the remaining ones.
+ If some elements of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ are functions of each other, obtaining APEs of the form in equation (4)
+ is not especially useful.
+ We can obtain standard errors of the estimators in (4) and (5) by applying
+ the boostrap to an average.
+\end_layout
+
+\begin_layout Subsection*
+Heterogeneity in Binary Response Models
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+All of these topics are relevant for general index models, but features
+ of the normal distribution allow us to obtain concrete results in the context
+ of probit models.
+ Therefore, our primary focus is on probit models.
+\end_layout
+
+\begin_layout Subsubsection*
+Heteroskedastic Binary Response Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Heteroskedasticity is ruled out when 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ are independent.
+ Let us consider the case when independence does not hold.
+ The latent variable form is given by
+\begin_inset Formula 
+\[
+y_{i}^{*}=x_{i}^{\prime}\beta+u_{i};\ y_{i}=1[y_{i}^{*}>0]
+\]
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $u_{i}|x_{i}\sim N\left(0,\exp\left[-2x_{i}^{\prime}\delta\right]\right)$
+\end_inset
+
+.
+ Then, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+P(y_{i}=1|x_{i}) & = & P(y_{i}^{*}>0|x_{i})\\
+ & = & P(u_{i}>-x_{i}^{\prime}\beta|x_{i})\\
+ & = & P\left(u_{i}\exp\left(x_{i}^{\prime}\delta\right)>-x_{i}^{\prime}\beta\exp\left(x_{i}^{\prime}\delta\right)|x_{i}\right)\\
+ & = & \Phi\left[x_{i}^{\prime}\beta\cdot\exp\left(x_{i}^{\prime}\delta\right)\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ must have at least one stochastic component.
+ To estimate the model by CLME, we need the log-likelihood function for
+ each 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ The density of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ can be written as 
+\begin_inset Formula 
+\[
+f(y_{i}|x_{i})=\left\{ \Phi\left[x_{i}^{\prime}\beta\cdot\exp\left(x_{i}^{\prime}\delta\right)\right]\right\} ^{y_{i}}\left\{ 1-\Phi\left[x_{i}^{\prime}\beta\cdot\exp\left(x_{i}^{\prime}\delta\right)\right]\right\} ^{1-y_{i}}
+\]
+
+\end_inset
+
+The log-likelihhod funciton is
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{N}}\log f(y_{i}|x_{i})
+\]
+
+\end_inset
+
+which we maximize to get 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\delta}$
+\end_inset
+
+.
+ The partical effect of 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\frac{\partial P(y_{i}=1|x_{i})}{\partial x_{ij}}=\phi\left[x_{i}^{\prime}\beta\cdot\exp\left(x_{i}^{\prime}\delta\right)\right]\left[\beta_{j}\exp(x_{i}^{\prime}\delta)+x_{i}^{\prime}\beta\exp(x_{i}^{\prime}\delta)\delta_{j}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Neglected Heterogeneity
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We study the consequences of omitting variables when those omitted variables
+ are 
+\emph on
+independent
+\emph default
+ of the included explanatory variables.
+ This is also called the 
+\series bold
+neglected heterogeneity
+\series default
+ problem.
+ We write the latent variable form as
+\begin_inset Formula 
+\[
+y_{i}^{*}=x_{i}^{\prime}\beta+\gamma c_{i}+u_{i};\ y_{i}=1[y_{i}^{*}>0]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $u_{i}|x_{i},c_{i}\sim N(0,1)$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $v_{i}\equiv\gamma c_{i}+u_{i}$
+\end_inset
+
+ is unobserved.
+ Now, suppose 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, and 
+\begin_inset Formula $c_{i}\sim N(0,\sigma_{c}^{2})$
+\end_inset
+
+.
+ Given these assumptions, the composite error term, 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, is independent of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}\sim N(0,\gamma^{2}\sigma_{c}^{2}+1)$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\begin{eqnarray*}
+P(y_{i}=1|x_{i}) & = & P(x_{i}^{\prime}\beta+\gamma c_{i}+u>0|x_{i})\\
+ & = & P(x_{i}^{\prime}\beta+v_{i}>0|x_{i})\\
+ & = & P(v_{i}>-x_{i}^{\prime}\beta|x_{i})\\
+ & = & P\left(\frac{v_{i}}{\sqrt{\gamma^{2}\sigma_{c}^{2}+1}}<\frac{x_{i}^{\prime}\beta}{\sqrt{\gamma^{2}\sigma_{c}^{2}+1}}|x_{i}\right)
+\end{eqnarray*}
+
+\end_inset
+
+and so we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta} & \begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array} & \frac{\beta}{\sqrt{\gamma^{2}\sigma_{c}^{2}+1}}\\
+|\hat{\beta}| & < & |\beta|
+\end{eqnarray*}
+
+\end_inset
+
+This is known as 
+\series bold
+attenuation bias
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is correlated with 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ or is otherwise dependent on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ (for example, if 
+\begin_inset Formula $\mbox{Var}(c_{i}|x_{i})$
+\end_inset
+
+ depends on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+), the omission of 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is serious.
+ To illustrate, consider the lienar projection of 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+c_{i}=x_{i}^{\prime}\delta+e_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+, and
+\begin_inset Formula 
+\[
+\epsilon_{i}|x_{i}\sim N(0,\eta^{2})
+\]
+
+\end_inset
+
+So, we can rewrite the latent variable as
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{i}^{*} & = & x_{i}^{\prime}\beta+\gamma c_{i}+u_{i}\\
+y_{i}^{*} & = & x_{i}^{\prime}\beta+\gamma(x_{i}^{\prime}\delta+e_{i})+u_{i}\\
+y_{i}^{*} & = & x_{i}^{\prime}(\gamma+\beta)+\gamma e_{i}+u_{i}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula 
+\[
+\gamma e_{i}+u_{i}\sim N(0,1+\gamma^{2}\eta^{2})
+\]
+
+\end_inset
+
+and the probit of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{eqnarray*}
+P(y_{i}=1|x_{i}) & = & P(y_{i}^{*}>0|x_{i})\\
+ & = & P(\gamma e_{i}+u_{i}>-x_{i}^{\prime}(\gamma+\beta)|x_{i})\\
+ & = & P\left(\left.\frac{\gamma e_{i}+u_{i}}{\sqrt{1+\gamma^{2}\eta^{2}}}<\frac{x_{i}^{\prime}(\gamma+\beta)}{\sqrt{1+\gamma^{2}\eta^{2}}}\right|x_{i}\right)\\
+ & = & \Phi\left(\frac{x_{i}^{\prime}(\gamma+\beta)}{\sqrt{1+\gamma^{2}\eta^{2}}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+which gives consistent estimates of
+\begin_inset Formula 
+\[
+\frac{\gamma+\beta}{\sqrt{1+\gamma^{2}\eta^{2}}}
+\]
+
+\end_inset
+
+In this case, we cannot get a consistent estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ We now study what can be done to account for endogenous variables in probit
+ models.
+\end_layout
+
+\begin_layout Subsection*
+Binary Response Model Under Endogeneity
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+All of these topics are relevant for general index models, but features
+ of the normal distribution allow us to obtain concrete results in the context
+ of probit models.
+ Therefore, our primary focus is on probit models.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If we want to estimate a probit model with endogenous explanatory variables,
+ we must make some fairly strong assumptions.
+ In this section, we consider the case of a continuous endogenous explanatory
+ variable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Write the model as
+\begin_inset Formula 
+\begin{eqnarray}
+y_{1i}^{*} & = & z_{1i}^{\prime}\beta_{1}+y_{2i}\beta_{2}+u_{i}\\
+y_{2i} & = & z_{1i}^{\prime}\gamma_{1}+z_{2i}^{\prime}\gamma_{2}+v_{i}=z_{i}^{\prime}\gamma+v_{i}\\
+y_{1i} & = & 1[y_{1i}^{*}>0]
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $z_{1i}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{2i}$
+\end_inset
+
+ are IVs.
+ Equation (6), along with equation (8), is the structural equation; equation
+ (7) is a reduced form equation for 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+, which is endogenous if 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ are correlated.
+ We assume that
+\begin_inset Formula 
+\[
+\left.\left(\begin{array}{c}
+u_{i}\\
+v_{i}
+\end{array}\right)\right|z_{i}\sim N\left(\left[\begin{array}{c}
+0\\
+0
+\end{array}\right],\left[\begin{array}{cc}
+1 & \sigma_{uv}\\
+\sigma_{uv} & \sigma_{v}^{2}
+\end{array}\right]\right);\ \sigma_{uv}\neq0
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+ is also independent of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ is normally distributed, we are assuming that 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ given 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ is normal.
+ Thus, 
+\begin_inset Formula $y_{i2}$
+\end_inset
+
+ should have features of a normal random variable.
+ The normalization that ties the parameters in equation (6) to an average
+ partial effect interpretation, at least in the endogenous variable context,
+ is 
+\begin_inset Formula $\mbox{Var}(u_{i})=1$
+\end_inset
+
+, just as in a probit model with all explanatory variables exogenous.
+\end_layout
+
+\begin_layout Subsubsection*
+Continuous Endogenous Explanatory Variables (Control Function Approach)
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The most useful two-step approach is a control function (CF) approach.
+ To derive the procedure, first note that, under joint normality of 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+, with 
+\begin_inset Formula $\mbox{Var}(u_{i})=1$
+\end_inset
+
+, we can write the linear project of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{equation}
+u_{i}=\theta v_{i}+e_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\theta=\nicefrac{\sigma_{uv}}{\sigma_{v}^{2}},$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma_{uv}=\mbox{Cov}(v_{i},u_{i})$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma_{v}^{2}=\mbox{Var}(v_{i})$
+\end_inset
+
+, and 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+.
+ Because of joint normality of 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+, 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ is also normally distributed with 
+\begin_inset Formula $E(e_{i})=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{Var}(e_{i})=\mbox{Var}(u_{i})-\nicefrac{\sigma_{uv}^{2}}{\sigma_{v}^{2}}=1-\rho^{2}$
+\end_inset
+
+, where 
+\begin_inset Formula $\rho=\mbox{Corr}(v_{i},u_{i})=\frac{\sigma_{uv}}{\sigma_{u}\sigma_{v}}=\frac{\sigma_{uv}}{\sigma_{v}}$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\left.\left(\begin{array}{c}
+e_{i}\\
+v_{i}
+\end{array}\right)\right|z_{i}=\left(\begin{array}{c}
+u_{i}-\theta v_{i}\\
+v_{i}
+\end{array}\right)=\left(\begin{array}{cc}
+1 & -\theta\\
+0 & 1
+\end{array}\right)\left(\begin{array}{c}
+u_{i}\\
+v_{i}
+\end{array}\right)\sim N\left(\left[\begin{array}{c}
+0\\
+0
+\end{array}\right],\left[\begin{array}{cc}
+1-\rho^{2} & 0\\
+0 & \sigma_{v}^{2}
+\end{array}\right]\right)
+\]
+
+\end_inset
+
+We can now write
+\begin_inset Formula 
+\begin{eqnarray}
+y_{1i}^{*} & = & z_{1i}^{\prime}\beta_{1}+y_{2i}\beta_{2}+\theta v_{i}+e_{i}\\
+D(e_{i}|z_{i},y_{2i},v_{i})=D(e_{i}|z_{i},v_{i})=D(e_{i}|z_{i}) & = & N(0,1-\rho^{2})
+\end{eqnarray}
+
+\end_inset
+
+Assuming for the moment that we observe 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, then probit of 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ on 
+\begin_inset Formula $z_{1i}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+, and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ consistently estimates
+\begin_inset Formula 
+\begin{eqnarray*}
+\beta_{\rho1} & \equiv & \frac{\beta_{1}}{\sqrt{(1-\rho^{2})}}\\
+\beta_{\rho2} & \equiv & \frac{\beta_{2}}{\sqrt{(1-\rho^{2})}}\\
+\theta_{\rho} & \equiv & \frac{\theta}{\sqrt{(1-\rho^{2})}}
+\end{eqnarray*}
+
+\end_inset
+
+Notice that because 
+\begin_inset Formula $\rho^{2}<1$
+\end_inset
+
+, each scaled coefficient is greater than its unscaled counterpart unless
+ 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ is exogenous 
+\begin_inset Formula $(\rho=0)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Since we do not know 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, we must first estimate it, as in the following procedure:
+\end_layout
+
+\begin_layout Algorithm*
+(a) Run the OLS regression 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ on 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ and save the residuals 
+\begin_inset Formula $\hat{v}_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Algorithm*
+(b) Run the probit 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ on 
+\begin_inset Formula $z_{i1i}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{v}_{i}$
+\end_inset
+
+ to get consistent estimators, 
+\begin_inset Formula $\tilde{\beta}_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\tilde{\beta}_{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+, of the scaled coefficients 
+\begin_inset Formula $\beta_{\rho1}$
+\end_inset
+
+, 
+\begin_inset Formula $\beta_{\rho2}$
+\end_inset
+
+, and 
+\begin_inset Formula $\theta_{\rho}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A nice feature of this algorthim is that the usual probit 
+\begin_inset Formula $t$
+\end_inset
+
+ statistic on 
+\begin_inset Formula $\hat{v}_{i}$
+\end_inset
+
+ is a valid test of the null hypothesis that 
+\begin_inset Formula $y_{i2}$
+\end_inset
+
+ is exogenous, that is 
+\begin_inset Formula $H_{0}:\theta=0$
+\end_inset
+
+.
+ Under this null hypothesis, 
+\begin_inset Formula $e_{i}=u_{i}$
+\end_inset
+
+, and so the distribution of 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ plays no role.
+ Therefore, the 
+\emph on
+test
+\emph default
+ of exogeneity is valid without assuming normality or homoskedasticity of
+ 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, and it can be implied very broadly.
+ If 
+\begin_inset Formula $\theta\neq0$
+\end_inset
+
+, then the normality of 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ is crucial.
+ Also, the usual probit standard errors and test statistics are not striclty
+ valid since we have only estimated 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+ up to scale.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+After the two-step estimation, we can easily obtain estimates of the unscaled
+ parameters, 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+, which then allows us to estimate partial effects.
+ From the two-step estimation procedure, we have consistent estimators of
+ 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{v}^{2}$
+\end_inset
+
+ from the first-stage regression, and then 
+\begin_inset Formula $\beta_{\rho1}$
+\end_inset
+
+, 
+\begin_inset Formula $\beta_{\rho2}$
+\end_inset
+
+, and 
+\begin_inset Formula $\theta_{\rho}$
+\end_inset
+
+ from the second stage.
+ It is obvious that
+\begin_inset Formula 
+\[
+\theta_{\rho}\equiv\frac{\theta}{\sqrt{(1-\rho^{2})}}=\frac{\rho}{\sigma_{v}\sqrt{(1-\rho^{2})}}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\tilde{\theta}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\theta_{\rho}$
+\end_inset
+
+ and we know 
+\begin_inset Formula $\hat{\sigma}_{v}$
+\end_inset
+
+, then we can estimate 
+\begin_inset Formula $\rho$
+\end_inset
+
+.
+ Now, because 
+\begin_inset Formula $\beta_{1}=\beta_{\rho1}\sqrt{(1-\rho^{2})}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{2}=\beta_{\rho2}\sqrt{(1-\rho^{2})}$
+\end_inset
+
+, we can obtain consistent estimators of the original coefficients
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta}_{1} & = & \tilde{\beta}_{1}\sqrt{(1-\hat{\rho}^{2})}\\
+\hat{\beta}_{2} & = & \tilde{\beta}_{2}\sqrt{(1-\hat{\rho}^{2})}
+\end{eqnarray*}
+
+\end_inset
+
+where all quantities on the right-hand side of the equations are available
+ from the two-step estimation procedure and 
+\begin_inset Formula $\hat{\rho}$
+\end_inset
+
+ is the estimator of 
+\begin_inset Formula $\rho$
+\end_inset
+
+.
+ However, with the CF approach, getting the appropriate standard errors
+ is difficult.
+\end_layout
+
+\begin_layout Subsubsection*
+Continuous Endogenous Explanatory Variables (IV Probit)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Rather than use a two-step procedure, we can estimate equations (29)-(31)
+ by CLME.
+ To obtain the joint distribution of 
+\begin_inset Formula $(y_{i1},y_{i2})$
+\end_inset
+
+, conditional on 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, recall that
+\begin_inset Formula 
+\begin{equation}
+f(y_{i1},y_{i2}|z_{i})=f(y_{i1}|y_{i2},z_{i})\cdot f(y_{i2}|z_{i})
+\end{equation}
+
+\end_inset
+
+Since 
+\begin_inset Formula $y_{2i}|z_{i}\sim N(z_{i}^{\prime}\gamma,\sigma_{v}^{2})$
+\end_inset
+
+, then density of 
+\begin_inset Formula $f(y_{2i}|z_{i})$
+\end_inset
+
+ is easy to write down.
+ We can also derive the conditional density of 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ given 
+\begin_inset Formula $(y_{2i},z_{i})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $v_{i}=y_{2i}-z_{i}^{\prime}\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{1i}=1[y_{1i}^{*}>0]$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray}
+P(y_{1i}=1|y_{2i},z_{i}) & = & P(y_{1i}=1|v_{i},z_{i})\nonumber \\
+ & = & P(u_{i}>-z_{1i}^{\prime}\beta_{1}-y_{2i}\beta_{2}|v_{i},z_{i})\nonumber \\
+ & = & P(u_{i}-\sigma_{uv}\sigma_{v}^{-2}v_{i}>-z_{1i}^{\prime}\beta_{1}-y_{2i}\beta_{2}-\sigma_{uv}\sigma_{v}^{-2}v_{i}|v_{i},z_{i})\nonumber \\
+ & = & P\left(\left.\frac{u_{i}-\sigma_{uv}\sigma_{v}^{-2}v_{i}}{\sqrt{1-\sigma_{uv}^{2}\sigma_{v}^{-2}}}>\frac{-z_{1i}^{\prime}\beta_{1}-y_{2i}\beta_{2}-\sigma_{uv}\sigma_{v}^{-2}v_{i}}{\sqrt{1-\sigma_{uv}^{2}\sigma_{v}^{-2}}}\right|v_{i},z_{i}\right)\nonumber \\
+ & = & \Phi\left(\frac{z_{1i}^{\prime}\beta_{1}+y_{2i}\beta_{2}+\sigma_{uv}\sigma_{v}^{-2}v_{i}}{\sqrt{1-\sigma_{uv}^{2}\sigma_{v}^{-2}}}\right)
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Fact*
+If 
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+u\\
+v
+\end{array}\right)\sim N\left(\left(\begin{array}{c}
+0\\
+0
+\end{array}\right),\left[\begin{array}{cc}
+1 & \sigma_{uv}\\
+\sigma_{uv} & \sigma_{v}^{2}
+\end{array}\right]\right)
+\]
+
+\end_inset
+
+then
+\begin_inset Formula 
+\begin{eqnarray*}
+u|v & \sim & N(\mu_{u|v},\sigma_{u|v}^{2})\\
+\mu_{u|v} & = & \sigma_{uv}^{2}\sigma_{v}^{-2}v\\
+\sigma_{u|v}^{2} & = & 1-\sigma_{uv}^{2}\sigma_{v}^{-2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ denote the term inside 
+\begin_inset Formula $\Phi(\cdot)$
+\end_inset
+
+ in equation (13).
+ Then we have derived
+\begin_inset Formula 
+\[
+f(y_{1i},y_{2i}|z_{i})=\left\{ \Phi(w_{i})\right\} ^{y_{1i}}\left\{ 1-\Phi(w_{i})\right\} ^{1-y_{1i}}\left(\frac{1}{\sigma_{v}}\right)\phi\left(\frac{y_{2i}-z_{i}^{\prime}\gamma}{\sigma_{v}}\right)
+\]
+
+\end_inset
+
+and so the log likelihood for observation 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+y_{1i}\log\Phi(w_{i})+(1-y_{1i})\log\left[1-\Phi(w_{i})\right]-\frac{1}{2}\log(\sigma_{v}^{2})-\frac{1}{2}\frac{\left(y_{2i}-z_{i}^{\prime}\gamma\right)^{2}}{\sigma_{v}^{2}}
+\]
+
+\end_inset
+
+Summing this expression across all 
+\begin_inset Formula $i$
+\end_inset
+
+ and maximizing with respect to all parameters gives the MLEs.
+ The general theory of conditional MLE applies, and so standard errors can
+ be obtained using the estimated Hessian, the estimated expted Hessian,
+ or the outer product of the score.
+ MLE applied to this model sometimes goes by the name of instrumental variables
+ probit, or IV probit.
+\end_layout
+
+\begin_layout Subsubsection*
+Binary Endogenous Explanatory Variable
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The model is
+\begin_inset Formula 
+\begin{eqnarray*}
+y & = & 1\left(\alpha+\beta x+u\geq0\right)\\
+x & = & 1(z^{\prime}\pi+v\geq0)\\
+\left.\left(\begin{array}{c}
+u\\
+v
+\end{array}\right)\right|z & \sim & N\left(\left[\begin{array}{c}
+0\\
+0
+\end{array}\right],\left[\begin{array}{cc}
+1 & \rho\\
+\rho & 1
+\end{array}\right]\right)
+\end{eqnarray*}
+
+\end_inset
+
+In this model, 
+\begin_inset Formula $x$
+\end_inset
+
+ is an endogenous explanatory variable as long as 
+\begin_inset Formula $\rho\neq0$
+\end_inset
+
+, and 
+\begin_inset Formula $x$
+\end_inset
+
+ is exogenous if 
+\begin_inset Formula $\rho=0$
+\end_inset
+
+.
+ Let us introduce a notation for standard normal bivariate probabilities:
+ 
+\begin_inset Formula $\Phi_{2}(r,s;\rho)=\mbox{Pr}(u\leq r,v\leq s)$
+\end_inset
+
+.
+ The joint probability of 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+ given 
+\begin_inset Formula $z$
+\end_inset
+
+ consists of four terms:
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{00} & = & \mbox{Pr}(y=0,x=0)\\
+ & = & \mbox{Pr}(\alpha+\beta x+u<0,x=0)\\
+ & = & \mbox{Pr}(\alpha+u<0,z^{\prime}\pi+v<0)=\Phi_{2}(-\alpha,-z^{\prime}\pi;\rho)\\
+p_{01} & = & \mbox{Pr}(y=1,x=0)\\
+ & = & \mbox{Pr}(\alpha+\beta+u<0,x=1)\\
+ & = & \mbox{Pr}(x=1|\alpha+\beta+u<0)\mbox{Pr}(\alpha+\beta+u<0)\\
+ & = & \left[1-\mbox{Pr}(x=0|\alpha+\beta+u<0)\right]\mbox{Pr}(\alpha+\beta+u<0)\\
+ & = & \mbox{Pr}(\alpha+\beta+u<0)-\mbox{Pr}(\alpha+\beta+u<0,x=0)\\
+ & = & \Phi(-\alpha-\beta)-\Phi_{2}(-\alpha,-z^{\prime}\pi;\rho)\\
+p_{10} & = & \mbox{Pr}(y=1,x=0)\\
+ & = & \mbox{Pr}(\alpha+u\geq0,x=0)\\
+ & = & \mbox{Pr}(\alpha+u\geq0|x=0)\mbox{Pr}(x=0)\\
+ & = & \left[1-\mbox{Pr}(\alpha+u<0|x=0)\right]\mbox{Pr}(x=0)\\
+ & = & \mbox{Pr}(x=0)-\mbox{Pr}(\alpha+u<0,x=0)\\
+ & = & \Phi(-z^{\prime}\pi)-p_{00}\\
+p_{11} & = & 1-p_{00}-p_{01}-p_{10}
+\end{eqnarray*}
+
+\end_inset
+
+Therefore, the log-likelihood is given by
+\begin_inset Formula 
+\[
+L={\displaystyle \sum_{i=1}^{N}}\left\{ (1-y_{i})(1-x_{i})\ln p_{00i}+(1-y_{i})x_{i}\ln p_{01i}+y_{i}(1-x_{i})\ln p_{10i}+y_{i}x_{i}\ln p_{11i}\right\} 
+\]
+
+\end_inset
+
+In this model, there are only two potential outcomes:
+\begin_inset Formula 
+\begin{eqnarray*}
+y(1) & = & 1(\alpha+\beta+u\geq0)\\
+y(0) & = & 1(\alpha+u\geq0)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Binary Response Models for Panel Data
+\end_layout
+
+\begin_layout Subsubsection*
+Panel Models With No Unobserved Effects
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose the model is given by
+\begin_inset Formula 
+\[
+P(y_{it}=1|x_{it})=\Phi(x_{it}^{\prime}\beta),\ i=1,\ldots,N;\ t=1,\ldots,T
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $N$
+\end_inset
+
+ is large and 
+\begin_inset Formula $T$
+\end_inset
+
+ is small.
+ We asssume
+\end_layout
+
+\begin_layout Enumerate
+Strict Exogeneity (SE): 
+\begin_inset Formula $D(y_{it}|x_{i})=D(y_{it}|x_{it})$
+\end_inset
+
+ where 
+\begin_inset Formula $D$
+\end_inset
+
+ is a conditional distribution.
+ Under strict exogeneity assumption, 
+\begin_inset Formula $D$
+\end_inset
+
+ only depends on the current time period.
+\end_layout
+
+\begin_layout Enumerate
+Conditional Independence (CI): 
+\begin_inset Formula $y_{i1},\ldots,y_{iT}$
+\end_inset
+
+ are independent conditional on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With these two assumptions, we can derive the joint distribution of 
+\begin_inset Formula $y_{i}\equiv(y_{i1},\ldots y_{iT})^{\prime}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}\equiv(x_{i1}^{\prime},\ldots,x_{iT}^{\prime})^{\prime}$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+f(y_{i1},\ldots,y_{iT}|x_{i})\begin{array}[b]{c}
+_{CI}\\
+=
+\end{array}\prod_{t=1}^{T}f(y_{it}|x_{i})\begin{array}[b]{c}
+_{SE}\\
+=
+\end{array}\prod_{t=1}^{T}f(y_{it}|x_{it})
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+f(y_{it}|x_{it})=\Phi(x_{it}^{\prime}\beta)^{y_{it}}\left[1-\Phi(x_{it}^{\prime}\beta)\right]^{1-y_{it}}
+\]
+
+\end_inset
+
+Therefore, the 
+\series bold
+pooled probit log-likelihood 
+\series default
+is
+\begin_inset Formula 
+\[
+L_{i}(\beta)={\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}y_{it}\log\Phi(x_{it}^{\prime}\beta)+(1-y_{it})\log\left[1-\Phi(x_{it}^{\prime}\beta)\right]
+\]
+
+\end_inset
+
+Important to note, the same conclusions apply to the logit model for 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Unobserved Effects Probit Models Under Strict Exogeneity
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+First, we present the 
+\series bold
+traditional random effects probit model
+\series default
+.
+ For the unobserved effects probit model, we specify a response probability
+ that fully determines the conditional distribution 
+\begin_inset Formula $D(y_{it}|x_{it},c_{i})$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+P(y_{it}=1|x_{it},c_{i})=\Phi(x_{it}^{\prime}\beta+c_{i})
+\]
+
+\end_inset
+
+Once again we assume
+\end_layout
+
+\begin_layout Enumerate
+Strict Exogeneity (SE): 
+\begin_inset Formula $D(y_{it}|x_{i},c_{i})=D(y_{it}|x_{it},c_{i})$
+\end_inset
+
+ where 
+\begin_inset Formula $D$
+\end_inset
+
+ is a conditional distribution.
+ Under strict exogeneity assumption, 
+\begin_inset Formula $D$
+\end_inset
+
+ only depends on the current time period.
+\end_layout
+
+\begin_layout Enumerate
+Conditional Independence (CI): 
+\begin_inset Formula $y_{i1},\ldots,y_{iT}$
+\end_inset
+
+ are independent conditional on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the latent variable model,
+\begin_inset Formula 
+\[
+y_{it}^{*}=x_{it}^{\prime}\beta+c_{i}+u_{it};\ y_{it}=1\left[y_{it}^{*}>0\right]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $c_{i}|x_{i}\sim N(0,\sigma_{c}^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Under the given assumptions, a CMLE likelihood approach is available for
+ estimating 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{c}^{2}$
+\end_inset
+
+.
+ Because the 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ are not observed, they cannot appear in the likelihood function.
+ Instead, we find the joint distribution of 
+\begin_inset Formula $(y_{i1},\ldots,y_{iT})$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, a step that requires us to 
+\emph on
+integrate out 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+
+\emph default
+.
+\begin_inset Formula 
+\[
+f(y_{i1},y_{i2},\ldots,y_{iT}|x_{i},c_{i})\begin{array}[b]{c}
+_{CI}\\
+=
+\end{array}\prod_{t=1}^{T}f(y_{it}|x_{i},c_{i})\begin{array}[b]{c}
+_{SE}\\
+=
+\end{array}\prod_{t=1}^{T}f(y_{it}|x_{it},c_{i})=\prod_{t=1}^{T}\Phi(x_{it}^{\prime}\beta+c_{i})^{y_{it}}\left[1-\Phi(x_{it}^{\prime}\beta+c_{i})\right]^{1-y_{it}}
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $f(y)=\int f(y,c)dc$
+\end_inset
+
+ where 
+\begin_inset Formula $f(y,c)=f(y|c)\cdot f(c)$
+\end_inset
+
+.
+ Thus, we have
+\begin_inset Formula 
+\[
+f(y_{it},\ldots,y_{iT}|x_{i})={\displaystyle \intop_{-\infty}^{\infty}}\left\{ \prod_{t=1}^{T}\Phi(x_{it}^{\prime}\beta+c_{i})^{y_{it}}\left[1-\Phi(x_{it}^{\prime}\beta+c_{i})\right]^{1-y_{it}}\right\} \frac{\varphi\left(\nicefrac{c}{\sigma_{c}}\right)}{\sigma_{c}}dc
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Plugging in 
+\begin_inset Formula $y_{it}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+ and taking the log of the equation above gives the conditional log likelihood
+ 
+\begin_inset Formula $l_{i}(\theta)$
+\end_inset
+
+ for each 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ The log-likelihood funciton for the entire sample of size 
+\begin_inset Formula $N$
+\end_inset
+
+ can be maximized with respect to 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{c}^{2}$
+\end_inset
+
+ to obtain 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+-consistent asymptotically normal estimators.
+ The CLME in this context is typically called the 
+\series bold
+random effects probit estimator
+\series default
+.
+ Since 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{c}^{2}$
+\end_inset
+
+ can be estimated, the partial effects at 
+\begin_inset Formula $c=0$
+\end_inset
+
+ as well as the APEs can be estimated.
+ Since the variance of the idiosyncratic error in the latent variable model
+ is unity, the relative importance of the unobserved effect is measured
+ as 
+\begin_inset Formula $\rho=\nicefrac{\sigma_{c}^{2}}{(\sigma_{c}^{2}+1)}$
+\end_inset
+
+, which is also the correlation between the composite latent error, 
+\begin_inset Formula $c_{i}+e_{it}$
+\end_inset
+
+, across any two time periods.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As in the linear case, in many applications the point of introducing the
+ unobserved effect, 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+, is to explicitly allow unobservables to be correlated with some elements
+ of 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+.
+ We allow for correlation between 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ by assuming a conditional normal distribution with linear expectation and
+ constant variance.
+ A version of this assumption is
+\begin_inset Formula 
+\[
+c_{i}|x_{i}\sim N(\psi+\bar{x}_{i}^{\prime}\gamma,\sigma_{a}^{2})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\bar{x}_{i}$
+\end_inset
+
+ is the average of 
+\begin_inset Formula $x_{it},\ t=1,\ldots,T$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{a}^{2}$
+\end_inset
+
+ is the variance of 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ in the equation 
+\begin_inset Formula $c_{i}=\psi+\bar{x}_{i}\gamma+a_{i}$
+\end_inset
+
+.
+ (In other words, 
+\begin_inset Formula $\sigma_{a}^{2}$
+\end_inset
+
+ is the conditional variance of 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+, which is assumed not to depend on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+).
+ This model under the SE and CI assumptions is known as a 
+\series bold
+correlated random effects probit model
+\series default
+.
+ Estimation of 
+\begin_inset Formula $\beta$
+\end_inset
+
+, 
+\begin_inset Formula $\psi$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, and 
+\begin_inset Formula $\sigma_{a}^{2}$
+\end_inset
+
+ is straightforward because we can write the latent variable as 
+\begin_inset Formula $y_{it}^{*}=\psi+x_{it}^{\prime}\beta+\bar{x}_{i}^{\prime}\gamma+a_{i}+e_{it}$
+\end_inset
+
+, where the 
+\begin_inset Formula $e_{it}$
+\end_inset
+
+ are independent Normal(0,1) variates (conditional on 
+\begin_inset Formula $(x_{i},a_{i}))$
+\end_inset
+
+, and 
+\begin_inset Formula $a_{i}|x_{i}\sim N(0,\sigma_{a}^{2})$
+\end_inset
+
+.
+ In other words, by adding 
+\begin_inset Formula $\bar{x}_{i}$
+\end_inset
+
+ to the equation for each time period, we arrive at a traditional RE model,
+ so the same derviations above apply to this case.
+\end_layout
+
+\begin_layout Subsubsection*
+Unobserved Effects Logit Models under Strict Exogeneity
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We allow 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ to be arbitrarily related in the unobserved effects logit model, so there
+ is no specification of the distribution of 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ What we do is find the joint distribution of 
+\begin_inset Formula $y_{i}\equiv(y_{i1},\ldots,y_{iT})^{\prime}$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+, and 
+\begin_inset Formula $n_{i}\equiv\sum_{t=1}^{T}y_{it}$
+\end_inset
+
+.
+ It turns out that this conditional distribution does not depend on 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+, so that it is also the distribution of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{i}$
+\end_inset
+
+.
+ Therefore, we can use standard CMLE methods to estimate 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ (The fact that we can find a conditional distribution that does not depend
+ on the 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is a feature of the logit functional form.
+ Unfortunately, the same argument does not work for the unobserved effects
+ probit model.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+First, consider the 
+\begin_inset Formula $T=2$
+\end_inset
+
+ case, where 
+\begin_inset Formula $n_{i}$
+\end_inset
+
+ takes a value in 
+\begin_inset Formula $\{0,1,2\}$
+\end_inset
+
+.
+ Intuitively, the conditional distribution of 
+\begin_inset Formula $(y_{i1},y_{i2})^{\prime}$
+\end_inset
+
+ given 
+\begin_inset Formula $n_{i}$
+\end_inset
+
+ cannot be informative for 
+\begin_inset Formula $\beta$
+\end_inset
+
+ when 
+\begin_inset Formula $n_{i}=0$
+\end_inset
+
+ or 
+\begin_inset Formula $n_{i}=2$
+\end_inset
+
+ because these values completely determine the outcome of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+.
+ However, for 
+\begin_inset Formula $n_{i}=1$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{eqnarray*}
+P(y_{i2}=1|x_{i}c_{i},n_{i}=1) & = & \frac{P(y_{i2}=1,n_{i}=1|x_{i},c_{i})}{P(n_{i}=1|x_{i},c_{i})}\\
+ & = & \frac{P(y_{i2}=1|x_{i},c_{i})P(y_{i1}=0|x_{i},c_{i})}{\left\{ P(y_{i1}=0,y_{i2}=1|x_{i},c_{i})+P(y_{i1}=1,y_{i2}=0|x_{i},c_{i})\right\} }\\
+ & = & \frac{\Lambda(x_{i2}^{\prime}\beta+c_{i})\left[1-\Lambda(x_{i1}^{\prime}\beta+c_{i})\right]}{\left\{ \left[1-\Lambda(x_{i1}^{\prime}\beta+c_{i})\right]\Lambda(x_{i2}^{\prime}\beta+c_{i})+\Lambda(x_{i1}^{\prime}\beta+c_{i})\left[1-\Lambda(x_{i2}^{\prime}\beta+c_{i})\right]\right\} }\\
+ & = & \frac{\nicefrac{\exp(x_{i2}^{\prime}\beta+c_{i})}{\left[1+\exp(x_{i1}^{\prime}\beta+c_{i})\right]\left[1+\exp(x_{i2}^{\prime}\beta+c_{i})\right]}}{\nicefrac{\exp(x_{i1}^{\prime}\beta+c_{i})+\exp(x_{i2}^{\prime}\beta+c_{i})}{\left[1+\exp(x_{i1}^{\prime}\beta+c_{i})\right]\left[1+\exp(x_{i2}^{\prime}\beta+c_{i})\right]}}\\
+ & = & \frac{\exp(x_{i2}^{\prime}\beta+c_{i})}{\exp(x_{i1}^{\prime}\beta+c_{i})+\exp(x_{i2}^{\prime}\beta+c_{i})}\\
+ & = & \frac{\exp(x_{i2}^{\prime}\beta)}{\exp(x_{i1}^{\prime}\beta)+\exp(x_{i2}^{\prime}\beta)}\\
+ & = & \frac{\exp(x_{i2}-x_{i1})^{\prime}\beta}{1+\exp(x_{i2}-x_{i1})^{\prime}}\\
+ & = & \Lambda\left[(x_{i2}-x_{i1})^{\prime}\beta\right]
+\end{eqnarray*}
+
+\end_inset
+
+Similarly, 
+\begin_inset Formula $P(y_{i1}=1|x_{i},c_{i},n_{i}=1)=\Lambda\left[-(x_{i2}-x_{i1})^{\prime}\beta\right]=1-\Lambda\left[(x_{i2}-x_{i1})^{\prime}\beta\right]$
+\end_inset
+
+.
+ The conditional log likelihood for observation 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+l_{i}(\beta)=1\left[n_{i}=1\right]\left(w_{i}\log\Lambda\left[(x_{i2}-x_{i1})^{\prime}\beta\right]\right)+(1-w_{i})\log\left\{ 1-\Lambda\left[(x_{i2}-x_{i1})^{\prime}\beta\right]\right\} 
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $w_{i}=1$
+\end_inset
+
+ if 
+\begin_inset Formula $(y_{i1}=0,y_{i2}=1)$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{i}=0$
+\end_inset
+
+ if 
+\begin_inset Formula $(y_{i1}=1,y_{i2}=0)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The CMLE is obtained by maximizing the sum of the 
+\begin_inset Formula $l_{i}(\beta)$
+\end_inset
+
+ across 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ The indicator function 
+\begin_inset Formula $1\left[n_{i}=1\right]$
+\end_inset
+
+ selects out the observations for which 
+\begin_inset Formula $n_{i}=1$
+\end_inset
+
+; as stated earlier, observations for which 
+\begin_inset Formula $n_{i}=0$
+\end_inset
+
+ or 
+\begin_inset Formula $n_{i}=2$
+\end_inset
+
+ do not contribute to the log likelihood.
+ Interestingly, the equation we derived is just a standard cross sectional
+ logit of 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $(x_{i2}-x_{i1})$
+\end_inset
+
+ using the observations for which 
+\begin_inset Formula $n_{i}=1$
+\end_inset
+
+.
+ (This approach is analogous to differencing in the linear case with 
+\begin_inset Formula $T=2$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The CMLE from equation (14) is often called the 
+\series bold
+fixed effects logit estimator
+\series default
+ and sometimes called the 
+\series bold
+conditional logit estimator
+\series default
+.
+ We must emphasize that the FE logit estimator does 
+\emph on
+not
+\emph default
+ arise by treating the 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ as parameters to be estimated along with 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ The MLE of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ that is obtained by maximizing the log likelihood over 
+\begin_inset Formula $\beta$
+\end_inset
+
+, and the 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ has probability limit 
+\begin_inset Formula $2\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Corner Solution Responses
+\end_layout
+
+\begin_layout Subsection*
+Type I Tobit Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the population, let 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ be the corner solution response and let 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ be the column vector of covariates (which contains unity as its first element).
+ Assume
+\begin_inset Formula 
+\begin{equation}
+y_{i}=\max(0,x_{i}^{\prime}\beta+u_{i})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is unobservable.
+ Naturally, 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ could have a variety of distributions, and its conditional distribution
+ 
+\begin_inset Formula $D(u_{i}|x_{i})$
+\end_inset
+
+ could depend on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ But we will mostly work with the assumption
+\begin_inset Formula 
+\begin{equation}
+u_{i}|x_{i}\sim N(0,\sigma^{2})
+\end{equation}
+
+\end_inset
+
+which implies that 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Assumptions (15) and (16) define the 
+\series bold
+type I Tobit model
+\series default
+.
+ It is handy to have a notation for when a variable follows a Tobit model.
+ If 
+\begin_inset Formula $D(y_{i}|x_{i})$
+\end_inset
+
+ is determined by (15) and (16), we write 
+\begin_inset Formula $D(y_{i}|x_{i})=\mbox{Tobit}(x_{i}^{\prime}\beta,\sigma^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The normality assumption for 
+\begin_inset Formula $u$
+\end_inset
+
+ means that it has unbounded support, and, because 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, there is always positive probability (for any 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and any value of 
+\begin_inset Formula $\beta$
+\end_inset
+
+) that 
+\begin_inset Formula $x_{i}^{\prime}\beta+u<0$
+\end_inset
+
+, which means 
+\begin_inset Formula $P(y_{i}=0|x_{i})>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Equation (15) has the benefit of directly relating the variable of interest,
+ 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, to observed explanatory variables and an unobservable.
+ Nevertheless, sometimes it is useful to write (13) as a latent variable
+ model:
+\begin_inset Formula 
+\begin{gather}
+y_{i}^{*}=x_{i}^{\prime}\beta+u_{i};\ u_{i}|x_{i}\sim N(0,\sigma^{2})\\
+y_{i}=\max(0,y^{*})
+\end{gather}
+
+\end_inset
+
+The latent variable formulation has the danger of suggesting that we are
+ interested in 
+\begin_inset Formula $E(y_{i}^{*}|x_{i})$
+\end_inset
+
+, but it will be valuable for certain derivations later on.
+ Given (15) the latent variable 
+\begin_inset Formula $y_{i}^{*}$
+\end_inset
+
+ satisfies the classical linear model assumptions.
+ Important to note, 
+\begin_inset Formula $y_{i}^{*}$
+\end_inset
+
+ is a random variable that we do not observe, but we do observe the event
+ 
+\begin_inset Formula $y_{i}^{*}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+1.
+ Corner solution outcomes: We are interested in 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, which can be the hours married women work per week; 2.
+ Censored outcome (data availability): in this case, we are interested in
+ 
+\begin_inset Formula $y_{i}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Useful Expression for Type I Tobit
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and has a normal distribution, we can find an explicit expression for 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+.
+ We first derive 
+\begin_inset Formula $P(y_{i}>0|x_{i})$
+\end_inset
+
+ and 
+\begin_inset Formula $E(y_{i}|x_{i},y_{i}>0)$
+\end_inset
+
+, which are of interest in their own right.
+ Then, we use the law of iterated expectations to obtain 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray}
+E(y_{i}|x_{i}) & = & P(y_{i}=0|x_{i})\cdot0+P(y_{i}>0|x_{i})\cdot E(y_{i}|x_{i},y_{i}>0)\nonumber \\
+ & = & P(y_{i}>0|x_{i})\cdot E(y_{i}|x_{i},y_{i}>0)
+\end{eqnarray}
+
+\end_inset
+
+Finding the expression for 
+\begin_inset Formula $P(y_{i}>0|x_{i})$
+\end_inset
+
+ is straightforward
+\begin_inset Formula 
+\begin{eqnarray*}
+P(y_{i}>0|x_{i}) & = & P(y_{i}^{*}>0|x_{i})\\
+ & = & P(x_{i}^{\prime}\beta+u_{i}>0|x_{i})\\
+ & = & P\left(\nicefrac{u_{i}}{\sigma}>\nicefrac{-x_{i}^{\prime}\beta}{\sigma}|x_{i}\right)\\
+ & = & \Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)
+\end{eqnarray*}
+
+\end_inset
+
+while
+\begin_inset Formula 
+\[
+P(y_{i}=0|x_{i})=1-\Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+To derive 
+\begin_inset Formula $E(y_{i}|x_{i}y_{i}>0)$
+\end_inset
+
+, we need the following fact about the normal distribution: if 
+\begin_inset Formula $z\sim N(0,1)$
+\end_inset
+
+, then, for any constant 
+\begin_inset Formula $c$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+E(z|z>c)=\frac{\phi(c)}{1-\Phi(c)}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\phi(\cdot)$
+\end_inset
+
+ is the standard normal density function.
+ Therefore, if 
+\begin_inset Formula $u_{i}\sim N(0,\sigma^{2})$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+E(u_{i}|u_{i}>c)=\sigma E\left(\left.\frac{u_{i}}{\sigma}\right|\frac{u_{i}}{\sigma}>\frac{c}{\sigma}\right)=\sigma\left[\frac{\phi(\nicefrac{c}{\sigma})}{1-\Phi(\nicefrac{c}{\sigma})}\right]
+\]
+
+\end_inset
+
+We can use this equation to find 
+\begin_inset Formula $E(y_{i}|x_{i},y_{i}>0)$
+\end_inset
+
+ when 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ follows a Tobit model:
+\begin_inset Formula 
+\begin{eqnarray*}
+E(y_{i}|x_{i},y_{i}>0) & = & E(y_{i}^{*}|x_{i},y_{i}^{*}>0)\\
+ & = & E(x_{i}^{\prime}\beta+u_{i}|x_{i},u_{i}>-x_{i}^{\prime}\beta)\\
+ & = & x_{i}^{\prime}\beta+E\left(\nicefrac{u_{i}}{\sigma}|x_{i},\nicefrac{u_{i}}{\sigma}>-\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\\
+ & = & x_{i}^{\prime}\beta+\sigma\frac{\phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)}{\Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)}\\
+ & = & x_{i}^{\prime}\beta+\sigma\lambda\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\lambda(z)=\frac{\phi(z)}{\Phi(z)}$
+\end_inset
+
+ is the inverse Mills ratio.
+\end_layout
+
+\begin_layout Subsection*
+Estimation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can estimate the model using NLS or MLE
+\begin_inset Formula 
+\[
+y_{i}^{*}|x_{i}\sim N(x_{i}^{\prime}\beta,\sigma^{2})=\frac{1}{\sigma}\phi\left(\frac{y_{i}-x_{i}^{\prime}\beta)}{\sigma}\right)
+\]
+
+\end_inset
+
+To obtain the likelihood function, note that
+\begin_inset Formula 
+\[
+f(y_{i}|x_{i})=\begin{cases}
+P(y_{i}=0|x_{i})=1-\Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right) & \mbox{if}\ y_{i}=0\\
+f(y_{i}^{*}|x_{i}) & \mbox{if}\ y_{i}>0
+\end{cases}
+\]
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+So, we can write the density funciton for 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ compactly using the indicator funciton 
+\begin_inset Formula $1[\cdot]$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+f(y_{i}|x_{i})=\left\{ 1-\Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\right\} ^{1[y_{i}=0]}\left\{ \frac{1}{\sigma}\phi\left(\frac{y_{i}-x_{i}^{\prime}\beta}{\sigma}\right)\right\} ^{1[y_{i}>0]}
+\end{equation}
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+The log likelihood is
+\begin_inset Formula 
+\begin{equation}
+l_{i}(\theta)=1\left[y_{i}=0\right]\log\left\{ 1-\Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\right\} +1\left[y_{i}>0\right]\left\{ \log\phi\left[\nicefrac{(y_{i}-x_{i}^{\prime}\beta)}{\sigma}\right]-\nicefrac{\log(\sigma^{2})}{2}\right\} 
+\end{equation}
+
+\end_inset
+
+Apart from a constant that does not affect maximization, equation (19) can
+ be written as
+\begin_inset Formula 
+\[
+1\left[y_{i}=0\right]\log\left\{ 1-\Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\right\} +-1\left[y_{i}>0\right]\left\{ \nicefrac{(y_{i}-x_{i}^{\prime}\beta)^{2}}{2\sigma^{2}}+\nicefrac{\log(\sigma^{2})}{2}\right\} 
+\]
+
+\end_inset
+
+Therefore,
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial l_{i}(\theta)}{\partial\beta} & = & -1\left[y_{i}=0\right]\phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\left(\frac{x_{i}^{\prime}}{\sigma}\right)\left[1-\Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\right]+1\left[y_{i}>0\right]\frac{(y_{i}-x_{i}^{\prime}\beta)x_{i}^{\prime}}{\sigma^{2}}\\
+\frac{\partial l_{i}(\theta)}{\partial\sigma^{2}} & = & 1\left[y_{i}=0\right]\phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\frac{\left(x_{i}^{\prime}\beta\right)}{\left\{ 2\sigma^{3}\left[1-\Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\right]\right\} }+1\left[y_{i}>0\right]\left\{ \frac{(y_{i}-x_{i}^{\prime}\beta)^{2}}{(2\sigma^{4})}-\frac{1}{2\sigma^{2}}\right\} 
+\end{eqnarray}
+
+\end_inset
+
+The second derivatives are complicated, but all we need is 
+\begin_inset Formula $A(x_{i},\theta)\equiv-E\left[H_{i}(\theta)|x_{i}\right]$
+\end_inset
+
+.
+ After tediaous calculations it can be shown that
+\begin_inset Formula 
+\begin{equation}
+A(x_{i},\theta)=\left[\begin{array}{cc}
+ax_{i}x_{i}^{\prime} & b_{i}x_{i}^{\prime}\\
+b_{i}x_{i} & c_{i}
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{eqnarray*}
+a_{i} & = & -\sigma^{-2}\left\{ x_{i}^{\prime}\gamma\phi_{i}-\left[\frac{\phi_{i}^{2}}{1-\Phi_{i}}\right]-\Phi_{i}\right\} \\
+b_{i} & = & \frac{1}{2}\sigma^{-3}\left\{ \left(x_{i}^{\prime}\gamma\right)\phi_{i}+\phi_{i}-\left[\frac{\left(x_{i}^{\prime}\gamma\right)\phi_{i}^{2}}{1-\Phi_{i}}\right]\right\} \\
+c_{i} & = & -\frac{1}{4}\sigma^{-4}\left\{ \left(x_{i}^{\prime}\gamma\right)^{3}\phi_{i}+\left(x_{i}^{\prime}\gamma\right)\phi_{i}-\left[\frac{\left(x_{i}^{\prime}\gamma\right)\phi_{i}^{2}}{1-\Phi_{i}}\right]-2\Phi_{i}\right\} 
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula $\gamma=\nicefrac{\beta}{\sigma}$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Phi_{i}$
+\end_inset
+
+ are evaluated at 
+\begin_inset Formula $x_{i}^{\prime}\gamma$
+\end_inset
+
+.
+ This matrix is used to obtian the estimate of 
+\begin_inset Formula $\mbox{AVar}(\hat{\theta})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Testing is easily carried out in a standard MLE framework.
+ Sincle exclusion restrictions are tested using asymptotic 
+\begin_inset Formula $t$
+\end_inset
+
+ statistics once 
+\begin_inset Formula $\hat{\beta}_{j}$
+\end_inset
+
+ and its asymptotic standard error have been obtained.
+ Multiple exclusion restrictions are easily tested using the LR statistic,
+ and some econometrics packages routinely compute the Wald statistic.
+ If the unrestricted model has so many variables that computation becomes
+ an issue, the LM statistic is an attractive alternative.
+ The Wald statistic is the easiest to compute for testing nonlienar restrictions
+ on 
+\begin_inset Formula $\beta$
+\end_inset
+
+, just as in binary response analysis, because the unrestricted model is
+ just standard Tobit.
+\end_layout
+
+\begin_layout Subsubsection*
+Inconsistency of OLS
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Important to note, inconsistency can arise if we apply OLS to the entire
+ sample or the subsample 
+\begin_inset Formula $[y_{i}>0]$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{i}\cdot1[y_{i}>0]=x_{i}^{\prime}\beta\cdot1[y_{i}>0]+\sigma\lambda\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\cdot1[y_{i}>0]+e_{i}
+\]
+
+\end_inset
+
+Since the second term is not observable, then OLS is inconsistent.
+\begin_inset Formula 
+\begin{eqnarray*}
+E(e_{i}|x_{i},y_{i}>0) & = & 0\\
+E\left\{ e_{i}|x_{i}\cdot1[y_{i}>0],\lambda\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\cdot1[y_{i}>0]\right\}  & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Neglected Heterogeneity
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose that we are initially interested in the model
+\begin_inset Formula 
+\begin{equation}
+y_{i}=\max(0,x_{i}^{\prime}\beta+\gamma q_{i}+u_{i});\ u_{i}|x_{i},q_{i}\sim N(0,\sigma^{2})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ is an unobserved variable that is assumed to be independent of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and has a 
+\begin_inset Formula $N(0,\tau^{2})$
+\end_inset
+
+ distribution.
+ Let 
+\begin_inset Formula $v_{i}\equiv\gamma q_{i}+u_{i}$
+\end_inset
+
+.
+ It follows immediately that
+\begin_inset Formula 
+\begin{equation}
+y_{i}=\max(0,x_{i}^{\prime}\beta+v_{i});\ v_{i}\sim N(0,\sigma^{2}+\gamma^{2}\tau^{2})
+\end{equation}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ follows a Tobit model, and Tobit of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ consistently estimates 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\eta^{2}\equiv\sigma^{2}+\gamma^{2}\tau^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Endogenous Explanatory Variables
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose we now allow one of the variables in the Tobit model to be endogenous.
+ The first model we consider has a continuous endogenous explanatory variable:
+\begin_inset Formula 
+\begin{eqnarray}
+y_{1i} & = & \max(0,z_{1i}^{\prime}\delta_{1}+\alpha_{1}y_{2i}+u_{i})\\
+y_{2i} & = & z_{i}^{\prime}\delta_{2}+v_{i}=z_{1i}^{\prime}\delta_{21}+z_{2i}^{\prime}\delta_{22}+v_{i}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+ are zero-mean normally distributed, independent of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, i.e.,
+\begin_inset Formula 
+\[
+\left.\left(\begin{array}{c}
+u_{i}\\
+v_{i}
+\end{array}\right)\right|x_{i}\sim N\left[\left(\begin{array}{c}
+0\\
+0
+\end{array}\right),\left(\begin{array}{cc}
+\sigma_{u}^{2} & \sigma_{uv}\\
+\sigma_{uv} & \sigma_{v}^{2}
+\end{array}\right)\right]
+\]
+
+\end_inset
+
+Note that equation (28) is the reduced form of the endogenous variable 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ are correlated, then 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ is endogenous.
+ For indentification, we need the usual rank condition 
+\begin_inset Formula $\delta_{22}\neq0$
+\end_inset
+
+; 
+\begin_inset Formula $E(z_{i}z_{i}^{\prime})$
+\end_inset
+
+ is assumed to have full rank, as always.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Before estimating this model by MLE, a procedure that requires obtaining
+ the distribution of 
+\begin_inset Formula $(y_{1i},y_{2i})$
+\end_inset
+
+ given 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, it is convenient to have a two-step procedure that also delivers a simple
+ test for the endogeneity of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+.
+ Under bivariate normality of 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+, we can write
+\begin_inset Formula 
+\begin{equation}
+u_{i}=\theta v_{i}+e_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\theta=\nicefrac{\sigma_{uv}}{\sigma_{v}^{2}}$
+\end_inset
+
+, 
+\begin_inset Formula $\mbox{Var}(v_{i})=\sigma_{v}^{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ with zero-mean normal distribution and variance 
+\begin_inset Formula $\sigma_{e}^{2}$
+\end_inset
+
+.
+ Further, because 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $(z_{i},v_{i})$
+\end_inset
+
+.
+ Finally, we have 
+\begin_inset Formula $\sigma_{e}^{2}=\mbox{Var}(e_{i})=\sigma_{u}^{2}-\theta^{2}\sigma_{v}^{2}=\sigma_{u}^{2}-\frac{\sigma_{uv}^{2}}{\sigma_{v}^{2}}$
+\end_inset
+
+ Now, plugging in equation (29) into equation (27) gives
+\begin_inset Formula 
+\begin{equation}
+y_{1i}=\max(0,z_{1i}^{\prime}\delta_{1}+\alpha_{1}y_{2}+\theta v_{i}+e_{i})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $e_{i}|z_{i},v_{i}\sim N(0,\sigma_{e}^{2})$
+\end_inset
+
+.
+ Using our previous notation, we can write
+\begin_inset Formula 
+\[
+D(y_{1i}|z_{i},y_{2i})=\mbox{Tobit}(z_{1i}^{\prime}\delta_{1}+\alpha_{1}y_{2i}+\theta(y_{2i}-z_{i}^{\prime}\delta_{2}),\sigma_{e}^{2})=\mbox{Tobit}(z_{1i}^{\prime}\delta_{1}+\alpha_{1}y_{2i}+\theta v_{i},\sigma_{e}^{2})
+\]
+
+\end_inset
+
+It follows that, if we knew 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, we would just estimate 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\theta$
+\end_inset
+
+, and 
+\begin_inset Formula $\sigma_{e}^{2}$
+\end_inset
+
+ by type I Tobit.
+ We do not observe 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ because it depends on the unknown vector 
+\begin_inset Formula $\delta_{2}$
+\end_inset
+
+.
+ However, we can easily estimate 
+\begin_inset Formula $\delta_{2}$
+\end_inset
+
+ by OLS in a first stage.
+ The procedure is as follows
+\end_layout
+
+\begin_layout Algorithm*
+(a) Estimate the reduced form of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ by OLS; this step gives 
+\begin_inset Formula $\hat{\delta}_{2}$
+\end_inset
+
+.
+ Define the reduced-form OLS residuals as 
+\begin_inset Formula $\hat{v}_{i}=y_{2i}-z^{\prime}\hat{\delta}_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Algorithm*
+(b) Estimate a standard Tobit of 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ on 
+\begin_inset Formula $z_{1i}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+, and 
+\begin_inset Formula $\hat{v}_{i}$
+\end_inset
+
+.
+ This step gives conssitent estimator of 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\theta$
+\end_inset
+
+, and 
+\begin_inset Formula $\sigma_{e}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The usual 
+\begin_inset Formula $t$
+\end_inset
+
+ statistic on 
+\begin_inset Formula $\hat{v}_{i}$
+\end_inset
+
+ reported by Tobit provides a simple test of the null 
+\begin_inset Formula $H_{0}:\theta=0$
+\end_inset
+
+, which says that 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ is exogenous.
+ Further, under 
+\begin_inset Formula $\theta=0$
+\end_inset
+
+, 
+\begin_inset Formula $e_{i}=u_{i}$
+\end_inset
+
+, and so normality of 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ plays no role: as a 
+\emph on
+test
+\emph default
+ for endogeneity of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+, this approach is valid without any distribution assumptions on the reduced
+ form of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When 
+\begin_inset Formula $\theta\neq0$
+\end_inset
+
+, the second-stage Tobit standard errors and test statistics are not asymptotica
+lly valid because 
+\begin_inset Formula $\hat{\delta}_{2}$
+\end_inset
+
+ has been used in place of 
+\begin_inset Formula $\delta_{2}$
+\end_inset
+
+.
+ Formulas for correcting the asymptotic variances can be derived using the
+ formulas for two-step M-estimators.
+ Note that joint normality of 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+ is not necessary for the two-step estimator to consistently estimate the
+ parameters.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can recover an estimate of 
+\begin_inset Formula $\sigma_{u}^{2}$
+\end_inset
+
+ from the estimates obtained from the two-step control function procedure.
+ From equation (28), we have 
+\begin_inset Formula $\sigma_{u}^{2}=\theta^{2}\sigma_{v}^{2}+\sigma_{e}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\sigma}_{v}^{2}$
+\end_inset
+
+ is obtained as the usual estimated error variance from the first-stage
+ regression, whereas, 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\sigma}_{e}^{2}$
+\end_inset
+
+ are obtained from the second-stage Tobit.
+ Forming 
+\begin_inset Formula $\hat{\sigma}_{u}^{2}=\hat{\theta}^{2}\hat{\sigma}_{v}^{2}+\hat{\sigma}_{e}^{2}$
+\end_inset
+
+ gives us all the estimates we need.
+\end_layout
+
+\begin_layout Section*
+Censored Data
+\end_layout
+
+\begin_layout Subsection*
+Selection on the Basis of the Reponse Variable: Truncated Regression
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+ denote a random draw from a population.
+ In this section, we explicitly treat the case where the sample is selected
+ on the basis of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+.
+ The model is given by
+\begin_inset Formula 
+\[
+y_{i}=x_{i}^{\prime}\beta+u_{i},\ i=1,\ldots,n
+\]
+
+\end_inset
+
+We assume that 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is a continuous random variable and that the selection rule takes the form
+\begin_inset Formula 
+\[
+s_{i}=1[a<y_{i}<b]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ are observed only if 
+\begin_inset Formula $s_{i}=1$
+\end_inset
+
+, where 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ is a selection variable.
+ In most applications of truncated samples, the population conditional distribut
+ion is assumed to be 
+\begin_inset Formula $u_{i}|x_{i}\sim N(0,\sigma^{2})$
+\end_inset
+
+, so 
+\begin_inset Formula $E(u_{i}|x_{i})=0$
+\end_inset
+
+, in which case we have the 
+\series bold
+truncated Tobit model
+\series default
+ or 
+\series bold
+truncated normal regression model
+\series default
+.
+ 
+\begin_inset Formula 
+\[
+s_{i}=\{a<y_{i}<b\}=\left\{ \frac{a-x_{i}^{\prime}\beta}{\sigma}<\frac{y_{i}-x_{i}^{\prime}\beta}{\sigma}<\frac{b-x_{i}^{\prime}\beta}{\sigma}\right\} 
+\]
+
+\end_inset
+
+We want 
+\begin_inset Formula $f(y_{i}|x_{i},s_{i}=1)$
+\end_inset
+
+.
+ Note that for a generic 
+\begin_inset Formula $y$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+P(Y<y|x_{i},s_{i}=1)=\frac{P(Y<y,s_{i}=1|x_{i})}{P(s_{i}=1|x_{i})}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $P(Y<y,s_{i}=1|x_{i})=P(a<Y<y)$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\[
+\frac{\Phi\left(\frac{y_{i}-x_{i}^{\prime}\beta}{\sigma}\right)-\Phi\left(\frac{a-x_{i}^{\prime}\beta}{\sigma}\right)}{\Phi\left(\frac{b-x_{i}^{\prime}\beta}{\sigma}\right)-\Phi\left(\frac{a-x_{i}^{\prime}\beta}{\sigma}\right)}
+\]
+
+\end_inset
+
+Taking the derivative with respect to 
+\begin_inset Formula $y$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\[
+f(y|x_{i},s_{i}=1)=\frac{\nicefrac{\varphi\left(\frac{y_{i}-x_{i}^{\prime}\beta}{\sigma}\right)}{\sigma}}{\Phi\left(\frac{b-x_{i}^{\prime}\beta}{\sigma}\right)-\Phi(\frac{a-x_{i}^{\prime}\beta}{\sigma})}
+\]
+
+\end_inset
+
+Thus, the log-likelihood function is given by
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{n}}\log f(y_{i}|x_{i},s_{i}=1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Truncated Models
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This is the case where observations on both dependent and independent variables
+ are not available for a sub-population.
+ The Tobit model becomes a truncated model if the sample of negative 
+\begin_inset Formula $y_{t}^{*}$
+\end_inset
+
+ is not used in the estimation of the population parameter 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ The least squares estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is biased and inconsistent in the case of truncated data set, i.e., using
+ the observations of positive 
+\begin_inset Formula $y_{t}^{*}$
+\end_inset
+
+ only.
+ Consider a regression equation
+\begin_inset Formula 
+\[
+y_{i}=x_{i}^{\prime}\beta+u_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ are observed when 
+\begin_inset Formula $y_{i}>0$
+\end_inset
+
+.
+ Once again, we assume that 
+\begin_inset Formula $u_{i}|x_{i}\sim N(0,\sigma^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Fact*
+Moments of truncated normal 
+\begin_inset Formula $z\sim N(\mu,\sigma^{2})$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+E(z|z>c)=\mu+\sigma\lambda(a)={\displaystyle \int_{-\infty}^{\infty}}zf(z|z>c)dz
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $c$
+\end_inset
+
+ is a constant, 
+\begin_inset Formula $a=\frac{c-\mu}{\sigma}$
+\end_inset
+
+, and 
+\begin_inset Formula $\lambda(a)=\frac{\varphi(a)}{\Phi(a)}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mbox{Var}(z|z>c)=\sigma^{2}\left[1-\lambda(-a)(\lambda(-a)-a)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, we have
+\begin_inset Formula 
+\[
+E(y_{i}|x_{i},y_{i}>0)=E(x_{i}^{\prime}\beta+u_{i}|x_{i},y_{i}>0)=x_{i}^{\prime}\beta+E(u_{i}|x_{i},u_{i}>-x_{i}^{\prime}\beta)=x_{i}^{\prime}\beta+\sigma\lambda\left(\frac{x_{i}^{\prime}\beta}{\sigma}\right)
+\]
+
+\end_inset
+
+The LSE of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is biased and inconsistent because of the nonzero mean of the error term.
+ The regression error term is also heteroskedastic.
+\begin_inset Formula 
+\[
+\mbox{Var}(y_{i}|x_{i},y_{i}>0)=\sigma^{2}\left[1-\lambda(\frac{x_{i}^{\prime}\beta}{\sigma})\left(\lambda(\frac{x_{i}^{\prime}\beta}{\sigma})+\frac{x_{i}^{\prime}\beta}{\sigma}\right)\right]
+\]
+
+\end_inset
+
+Instead, we can run a NLS of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ to get 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\sigma}$
+\end_inset
+
+ based on the selected sample.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+However, a consistent estimator of the population parameters can also be
+ obtained by the MLE, which is more effective.
+ The truncated density function of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+f(y_{i}|y_{i}>0)=\begin{cases}
+\frac{(\frac{1}{\sigma})\phi\left(\frac{y_{t}^{*}-X_{t}\beta}{\sigma}\right)}{\Phi\left(\frac{X_{t}\beta}{\sigma}\right)} & \mbox{if}\ y_{i}>0\\
+0 & \mbox{otherwise}
+\end{cases}
+\]
+
+\end_inset
+
+and hence, the log-likelihood function is
+\begin_inset Formula 
+\[
+l=-{\displaystyle \sum_{i}}\ln\left(\Phi_{t}\right)-\frac{N_{2}}{2}\ln(2\pi)-\frac{N_{2}}{2}\ln(\sigma^{2})-\frac{1}{2\sigma^{2}}{\displaystyle \sum_{i}}(y_{t}^{*}-X_{t}\beta)^{2}
+\]
+
+\end_inset
+
+where the summation is only over 
+\begin_inset Formula $N_{2}$
+\end_inset
+
+ sample of positive 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Incidental Truncation: Type II Tobit Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now turn to sample selection corrections when selection is determined
+ by a probit model.
+ The model is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{i1} & = & x_{i}^{\prime}\beta+u_{i}\\
+y_{i2} & = & I(z_{i}^{\prime}\gamma\delta+v_{i}>0)
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $y_{i1}$
+\end_inset
+
+ is obseved only when 
+\begin_inset Formula $y_{i2}=1$
+\end_inset
+
+, and 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is a subset of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+.
+ As an example, 
+\begin_inset Formula $y_{i1}$
+\end_inset
+
+ could represent agent 
+\begin_inset Formula $i$
+\end_inset
+
+'s salary, while 
+\begin_inset Formula $y_{i2}$
+\end_inset
+
+ could represent his choice of whether to work or not.
+ We also assume that 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+ is bivariate normal:
+\begin_inset Formula 
+\[
+\left.\left(\begin{array}{c}
+u_{i}\\
+v_{i}
+\end{array}\right)\right|z_{i}\sim N\left(0,\left[\begin{array}{cc}
+\sigma_{u}^{2} & \sigma_{uv}\\
+\sigma_{uv} & 1
+\end{array}\right]\right)
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The linear projection of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ can be written as
+\begin_inset Formula 
+\[
+u_{i}=\gamma v_{i}+r_{i}
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{gather*}
+\gamma=\sigma_{uv}\\
+\sigma_{u}^{2}=\gamma^{2}+\sigma_{r}^{2}\\
+\sigma_{r}^{2}=\sigma_{u}^{2}-\gamma^{2}=\sigma_{u}^{2}-\sigma_{uv}^{2}
+\end{gather*}
+
+\end_inset
+
+So, the expected value of 
+\begin_inset Formula $y_{i1}$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{i2}=1$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{eqnarray*}
+E(y_{i1}|z_{i},y_{i2}=1) & = & E(x_{i}^{\prime}\beta+u_{i}|z_{i},v_{i}>-z_{i}^{\prime}\delta)\\
+ & = & x_{i}^{\prime}\beta+E(u_{i}|z_{i},v_{i}>-z_{i}^{\prime}\delta)\\
+ & = & x_{i}^{\prime}\beta+\gamma E(v_{i}|z_{i},v_{i}>-z_{i}^{\prime}\delta)\\
+ & = & x_{i}^{\prime}\beta+\gamma\lambda(z_{i}^{\prime}\delta)
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\lambda(\cdot)$
+\end_inset
+
+ is the Inverse Mill's Ratio.
+ To estimate 
+\begin_inset Formula $\beta$
+\end_inset
+
+, we can apply either of the following two methods.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Two Stage Correction (Heckman Correction)
+\end_layout
+
+\begin_layout Enumerate
+Run a probit of 
+\begin_inset Formula $y_{i2}$
+\end_inset
+
+ on 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ to get 
+\begin_inset Formula $\hat{\delta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Run OLS of 
+\begin_inset Formula $y_{i1}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda(z_{i}^{\prime}\hat{\delta})$
+\end_inset
+
+ to obtain 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+However, it is not easy to get standard errors of 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ when using this method.
+\end_layout
+
+\begin_layout Subsubsection*
+MLE
+\end_layout
+
+\begin_layout Standard
+The linear projection of 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+v_{i}=\theta u_{i}+e_{i}
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{gather*}
+\theta=\frac{\sigma_{uv}}{\sigma_{u}^{2}}\\
+\theta^{2}\sigma_{u}^{2}+\sigma_{e}^{2}=1\\
+\sigma_{e}^{2}=1-\frac{\sigma_{uv}^{2}}{\sigma_{u}^{2}}
+\end{gather*}
+
+\end_inset
+
+For MLE, we use
+\begin_inset Formula 
+\[
+f(y_{i1},y_{i2}=1|z_{i})=P(y_{i2}=1|y_{i1},z_{i})\cdot f(y_{i1}|z_{i})
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+f(y_{i1}|z_{i})=\frac{\varphi\left(\frac{y_{i1}-x_{i}^{\prime}\beta)}{\sigma_{u}}\right)}{\sigma_{u}}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{eqnarray*}
+P(y_{i2}=1|y_{i1},z_{i}) & = & P(e_{i}>-\theta u_{i}-z_{i}^{\prime}\delta|u_{i},z_{i})\\
+ & = & \Phi\left(\frac{\frac{\sigma_{uv}}{\sigma_{u}^{2}}\left(y_{i1}-x_{i}^{\prime}\beta\right)+z_{i}^{\prime}\delta}{\sqrt{1-\frac{\sigma_{uv}^{2}}{\sigma_{u}^{2}}}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+MLE will be more efficient than the two-step procudre under joint normality
+ of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, and it will produce standard errors and likelihood ratio statistics that
+ can be used directily.
+ The drawbacks are that it is less robust than the two-step procedure and
+ that it is sometimes difficult to get the problem to converge.
+\end_layout
+
+\begin_layout Subsection*
+Incidental Truncation: Type III Tobit Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now study the case where more information is available on sample selection,
+ primarily in the contet of incidental truncation.
+ In particular, we assume that selection is based on the outcome of a Tobit,
+ rather than a probit, equation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The model is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{i1} & = & x_{i}^{\prime}\beta+u_{i}\\
+y_{i2} & = & \max\{0,z_{i}^{\prime}\delta+v_{i}\}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $y_{i1}$
+\end_inset
+
+ is observed when 
+\begin_inset Formula $y_{i2}>0$
+\end_inset
+
+, and 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is a subset of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+.
+ We also assume that 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+ is bivariate normal
+\begin_inset Formula 
+\[
+\left.\left(\begin{array}{c}
+u_{i}\\
+v_{i}
+\end{array}\right)\right|z_{i}\sim N\left(0,\left[\begin{array}{cc}
+\sigma_{u}^{2} & \sigma_{uv}\\
+\sigma_{uv} & \sigma_{v}^{2}
+\end{array}\right]\right)
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The linear projection of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ onto 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+u_{i}=\gamma v_{i}+e_{i}
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{gather*}
+\gamma=\frac{\sigma_{uv}}{\sigma_{v}^{2}}\\
+\sigma_{u}^{2}=\gamma^{2}\sigma_{v}^{2}+\sigma_{e}^{2}\\
+\sigma_{e}^{2}=\sigma_{u}^{2}-\frac{\sigma_{uv}^{2}}{\sigma_{v}^{2}}
+\end{gather*}
+
+\end_inset
+
+So, the expected value of 
+\begin_inset Formula $y_{i1}$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{i2}>0$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{eqnarray*}
+E(y_{i1}|z_{i},y_{i2}>0) & = & E(x_{i}^{\prime}\beta+u_{i}|z_{i},v_{i}>-z_{i}^{\prime}\delta)\\
+ & = & x_{i}^{\prime}\beta+E(u_{i}|z_{i},v_{i}>-z_{i}^{\prime}\delta)\\
+ & = & x_{i}^{\prime}\beta+\gamma E(v_{i}|z_{i},v_{i}>-z_{i}^{\prime}\delta)\\
+ & = & x_{i}^{\prime}\beta+\gamma\sigma_{v}\lambda\left(\frac{z_{i}^{\prime}\delta}{\sigma_{v}}\right)\\
+ & = & x_{i}^{\prime}\beta+\frac{\sigma_{uv}}{\sigma_{v}}\lambda\left(\frac{z_{i}^{\prime}\delta}{\sigma_{v}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is the Inverse Mill's Ratio.
+ To estimate the Type III Tobit model, we run the following two-stage correction
+ procedure:
+\end_layout
+
+\begin_layout Enumerate
+Run a Tobit of 
+\begin_inset Formula $y_{i2}$
+\end_inset
+
+ on 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ to get 
+\begin_inset Formula $\hat{\delta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\sigma}_{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Run OLS of 
+\begin_inset Formula $y_{i1}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{1}{\hat{\sigma}_{v}}\lambda\left(\frac{z_{i}^{\prime}\hat{\delta}}{\hat{\sigma}_{v}}\right)$
+\end_inset
+
+ to get 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\sigma}_{uv}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Duration Analysis
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T_{i}>0$
+\end_inset
+
+ is the survival time of an object up to some event with 
+\begin_inset Formula $i=1,\ldots,N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Hazard Functions Without Covariates
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Often, it is convenient to distinguish random variables from particular
+ outcomes of random variables.
+ Let 
+\begin_inset Formula $T\geq0$
+\end_inset
+
+ denote the duration, which has some distribution in the population; 
+\begin_inset Formula $t$
+\end_inset
+
+ denotes a particular value of 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ (As with any econometric analysis, it is important to be very clear about
+ the relevant population.) In survival analysis, 
+\begin_inset Formula $T$
+\end_inset
+
+ is the length of time a subject lives.
+ Much of the current terminology in duration analysis comes from survival
+ applications.
+ For us, 
+\begin_inset Formula $T$
+\end_inset
+
+ is the time at which a person leave the initial state.
+ For example, if the initial state is unemployment, 
+\begin_inset Formula $T$
+\end_inset
+
+ woudl be the time, measured in, say, weeks, until a person becomes employed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The cumulative distribution function (cdf) of 
+\begin_inset Formula $T$
+\end_inset
+
+ is defined as
+\begin_inset Formula 
+\begin{equation}
+F(t)=P(T\leq t),\ t\geq0
+\end{equation}
+
+\end_inset
+
+The 
+\series bold
+survivor function
+\series default
+ is defined as 
+\begin_inset Formula $S(t)\equiv1-F(t)=P(T>t)$
+\end_inset
+
+, and this is the probability of 
+\begin_inset Quotes eld
+\end_inset
+
+surviving
+\begin_inset Quotes erd
+\end_inset
+
+ past time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ We assume in the rest of this section that 
+\begin_inset Formula $T$
+\end_inset
+
+ is continuous, and has a differentiable cdf because this assumption simplifies
+ statements of certain probabilities.
+ Discreteness in observed durations can be viewed as a consequence of the
+ sampling scheme.
+ Denote the density of 
+\begin_inset Formula $T$
+\end_inset
+
+ by 
+\begin_inset Formula $f(t)=\frac{dF}{dt}(t)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For 
+\begin_inset Formula $h>0$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+P(t\leq T<t+h|T\geq t)
+\end{equation}
+
+\end_inset
+
+is the probability of leaving the inital state in the interval 
+\begin_inset Formula $[t,t+h)$
+\end_inset
+
+ given survival up until time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ The 
+\series bold
+hazard function
+\series default
+ for 
+\begin_inset Formula $T$
+\end_inset
+
+ is defined as
+\begin_inset Formula 
+\begin{equation}
+\lambda(t)={\displaystyle \lim_{h\rightarrow0}}\frac{P(t\leq T<t+h|T\geq t)}{h}
+\end{equation}
+
+\end_inset
+
+For each 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda(t)$
+\end_inset
+
+ is the instantaneous rate of leaving per unit of time.
+ From equation (33) it follows that, for 
+\begin_inset Quotes eld
+\end_inset
+
+small
+\begin_inset Quotes erd
+\end_inset
+
+ h,
+\begin_inset Formula 
+\begin{equation}
+P(t\leq T\leq t+h|T\geq t)\approx\lambda(t)h
+\end{equation}
+
+\end_inset
+
+Thus, the hazard function can be used to approximate a conditional probability
+ in much the same way that the hieght of the density of 
+\begin_inset Formula $T$
+\end_inset
+
+ can be used to approximate an unconditional probability.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can express the hazard function in terms of the density and cdf very
+ simply.
+ First, write
+\begin_inset Formula 
+\[
+P(t\leq T<t+h|T\geq t)=\frac{P(t\leq T<t+h)}{P(T\geq t)}=\frac{F(t+h)-F(t)}{1-F(t)}
+\]
+
+\end_inset
+
+When the cdf is differentiable, we can take the limit of the right-hand
+ side, divided by 
+\begin_inset Formula $h$
+\end_inset
+
+, as 
+\begin_inset Formula $h$
+\end_inset
+
+ approaches zero from above:
+\begin_inset Formula 
+\begin{equation}
+\lambda(t)={\displaystyle \lim_{h\rightarrow0}}\frac{F(t+h)-F(t)}{h}\cdot\frac{1}{1-F(t)}=\frac{f(t)}{1-F(t)}=\frac{f(t)}{S(t)}
+\end{equation}
+
+\end_inset
+
+Because the derivative of 
+\begin_inset Formula $S(t)$
+\end_inset
+
+ is 
+\begin_inset Formula $-f(t)$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{equation}
+\lambda(t)=-\frac{d\log S(t)}{dt}
+\end{equation}
+
+\end_inset
+
+and, using 
+\begin_inset Formula $F(0)=0$
+\end_inset
+
+, we can integrate to get
+\begin_inset Formula 
+\begin{equation}
+F(t)=1-\exp\left[-{\displaystyle \int_{0}}^{t}\lambda(s)\ ds\right],\ t\geq0
+\end{equation}
+
+\end_inset
+
+Straightforward differentiation of equation (37) gives the density of 
+\begin_inset Formula $T$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{equation}
+f(t)=\lambda(t)\exp\left[-{\displaystyle \int_{0}^{t}}\lambda(s)\ ds\right]
+\end{equation}
+
+\end_inset
+
+Therefore, all proabilities can be computed using the hazard function.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The shape of the hazard funciton is of primary interest in many empirical
+ applications.
+ In the simplest case, the hazard function is a constant
+\begin_inset Formula 
+\begin{equation}
+\lambda(t)=\lambda,\ \forall\ t\geq0
+\end{equation}
+
+\end_inset
+
+This function means that the process driving 
+\begin_inset Formula $T$
+\end_inset
+
+ is 
+\emph on
+memoryless
+\emph default
+: the probability of exit in the next interval does not depend on how much
+ time has been spend in the initial state.
+ From equation (37), a constant hazard implies
+\begin_inset Formula 
+\[
+F(t)=1-\exp(-\lambda t)
+\]
+
+\end_inset
+
+which is the cdf of the 
+\series bold
+exponential distribution
+\series default
+.
+ Conversely, if 
+\begin_inset Formula $T$
+\end_inset
+
+ has an exponential distribution, it has a constant hazard.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When the hazard funciton is not constant, we say that the process exhibits
+ 
+\series bold
+duration dependence
+\series default
+.
+ Assuming that 
+\begin_inset Formula $\lambda(\cdot)$
+\end_inset
+
+ is differentialbe, there is 
+\series bold
+positive duration
+\series default
+ 
+\series bold
+dependence
+\series default
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+ if 
+\begin_inset Formula $\nicefrac{d\lambda(t)}{dt}>0$
+\end_inset
+
+; if 
+\begin_inset Formula $\nicefrac{d\lambda(t)}{dt}>0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t>0$
+\end_inset
+
+, then the process exhibits posititive duration dependence.
+ With positive duration dependence, the probability of exiting the initial
+ state increases the longer one is in the initial state.
+ If the derivative is negative, then there is 
+\series bold
+negative duration dependence
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $T$
+\end_inset
+
+ has a 
+\series bold
+Weibull distribution
+\series default
+, its cdf is given by 
+\begin_inset Formula $F(t)=1-\exp(-\gamma t^{\alpha})$
+\end_inset
+
+, where 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ are nonnegative parameters.
+ The density is 
+\begin_inset Formula $f(t)=\gamma\alpha t^{\alpha-1}\exp(-\gamma t^{\alpha}).$
+\end_inset
+
+ By equation (5), the hazard function is
+\begin_inset Formula 
+\begin{equation}
+\lambda(t)=\nicefrac{f(t)}{S(t)}=\gamma\alpha t^{\alpha-1}
+\end{equation}
+
+\end_inset
+
+When 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+, the Weibull distribution reduces to the exponential with 
+\begin_inset Formula $\lambda=\gamma$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\alpha>1$
+\end_inset
+
+, the hazard is monotonically increasing, so the hazard everywhere exhibits
+ positive duration dependence; for 
+\begin_inset Formula $\alpha<1$
+\end_inset
+
+, the hazard is monotonically decreasing.
+ Provided we think the hazard is monotonically increasing or decreasing,
+ the Weibull distribution is a relatively simple way to caputre the duration
+ dependence.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We often want to specify the hazard directly, in which case we can use equation
+ (37) to determine the duration distribution.
+\end_layout
+
+\begin_layout Subsection*
+Hazard Functions Conditional on Time-Invariant Covariates
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Usually in economics we are interested in hazard functions conditional on
+ a set of covariates or regressors.
+ When these do not change over time, as is often the case given the way
+ many duration data sets are collected, then we simply define the hazard
+ (and all other features of 
+\begin_inset Formula $T$
+\end_inset
+
+) conditional on the covariates.
+ Thus, the conditional hazard is
+\begin_inset Formula 
+\[
+\lambda(t;x)={\displaystyle \lim_{h\rightarrow0}}\frac{P(t\leq T<t+h|T\geq t,x)}{h}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x$
+\end_inset
+
+ is a vector of explanatory variables.
+ All the formulas from the previous subsection continue to hold provided
+ the cdf and density are defined conditional on 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ For example, if the conditional cdf 
+\begin_inset Formula $F(\cdot|x)$
+\end_inset
+
+ is differentialbe, we have
+\begin_inset Formula 
+\begin{equation}
+\lambda(t;x)=\frac{f(t|x)}{1-F(t|x)}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $f(\cdot|x)$
+\end_inset
+
+ is the density of 
+\begin_inset Formula $T$
+\end_inset
+
+ given 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Often we are interested in the partial effects of the 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ on 
+\begin_inset Formula $\lambda(t;x)$
+\end_inset
+
+, which are defined as partial derivatives for continuous 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ and as differences for discrete 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If the durations start at different calendar dates, which is usually the
+ case, we can include indicators for different starting dates in the covariates.
+ These allow us to control for seasonal differences in duration distributions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An especially important class of models with time-invariant regressors consists
+ of 
+\series bold
+proportional hazard models.
+
+\series default
+ A proportional hazard model can be written as
+\begin_inset Formula 
+\begin{equation}
+\lambda(t;x)=\kappa(x)\lambda_{0}(t)
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\kappa(\cdot)>0$
+\end_inset
+
+ is a positive funciton of 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{0}(t)>0$
+\end_inset
+
+ is called the 
+\series bold
+baseline hazard
+\series default
+.
+ The baseline hazard is common to all units in the population; individual
+ hazard functions differ proportionately based on a function 
+\begin_inset Formula $\kappa(x)$
+\end_inset
+
+ of observed covariates.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Typically, 
+\begin_inset Formula $\kappa(\cdot)$
+\end_inset
+
+ is parameterized as 
+\begin_inset Formula $\kappa(x)=\exp(x^{\prime}\beta)$
+\end_inset
+
+, where 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is a vector of parameters.
+ Then
+\begin_inset Formula 
+\begin{equation}
+\log\lambda(t;x)=x^{\prime}\beta+\log\lambda_{0}(t)
+\end{equation}
+
+\end_inset
+
+and 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ measures the semielasticity of the hazard with respect to 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ is the log of an underlying variable 
+\begin_inset Formula $z_{j}$
+\end_inset
+
+, then 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ is the elasticity of the hazard with respect to 
+\begin_inset Formula $z_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Occasionally we are interested only in how the covariates shift the hazard
+ funciton, in which case estimation of 
+\begin_inset Formula $\lambda_{0}$
+\end_inset
+
+ is not necessary.
+ In economics, much of the time we are interested in the shape of the baseline
+ hazard.
+ If in the Weibull hazard function (40) we replace 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ with 
+\begin_inset Formula $\exp(x^{\prime}\beta)$
+\end_inset
+
+, where the first element of 
+\begin_inset Formula $x$
+\end_inset
+
+ is unity, we obtain a proportional hazard model with 
+\begin_inset Formula $\lambda_{0}(t)\equiv\alpha t^{\alpha-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Analysis of Single-Spell Data With Time-Invariant Covariates
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We assume that the population of interest is individuals entering the initial
+ state during a given interval of time, say 
+\begin_inset Formula $[0,b]$
+\end_inset
+
+, where 
+\begin_inset Formula $b>0$
+\end_inset
+
+ is a known constant.
+ (Naturally, 
+\begin_inset Quotes eld
+\end_inset
+
+individual
+\begin_inset Quotes erd
+\end_inset
+
+ can be replaced with any population unit of interest, such as 
+\begin_inset Quotes eld
+\end_inset
+
+family
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+firm.
+\begin_inset Quotes erd
+\end_inset
+
+) As in all econometric contexts, it is very important to be explicit about
+ the underlying population.
+ By convention, we let zero denote the earliest canedar ate that an individual
+ can enter the initial state, and 
+\begin_inset Formula $b$
+\end_inset
+
+ is the last possible date.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In using the methods of this section, we typically ignor the fact that durations
+ are often grouped into discrete intervals and treat them as continously
+ distributed.
+ If we want to explicitly recognize the discreteness of the measured durations,
+ we should treat them as grouped data.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We restrict attention to 
+\series bold
+single-spell data
+\series default
+.
+ That is, we use, at most, one completed spell per individual.
+ If, after leaving the initial state, an individual subsequently reenters
+ the initial state in the interval 
+\begin_inset Formula $[0,b]$
+\end_inset
+
+, we ignore this information.
+ In addition, covariates in the analysisis are time invariant, which means
+ we collect covariates on individuals at a given point in time, usually
+ at the beginning of the spell, and we do not re-collect data on the covariates
+ during the course of the spell.
+\end_layout
+
+\begin_layout Subsubsection*
+Flow Sampling
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+With 
+\series bold
+flow sampling
+\series default
+, we sample individuals who enter the state at some point during the interval
+ 
+\begin_inset Formula $[0,b]$
+\end_inset
+
+, and we record the length of time each individual is in the initial state.
+ We collect data on covariates known at the time the individual entered
+ the initial state.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Flow data are usually subject to 
+\series bold
+right cenoring
+\series default
+.
+ That is, after a certain amount of time, we stop following the individuals
+ in the sample, which we must do in order to analyze the data.
+ (Right censoring is the only kind that occurs with flow data, so we will
+ often refer to right censoring as 
+\begin_inset Quotes eld
+\end_inset
+
+censoring
+\begin_inset Quotes erd
+\end_inset
+
+ in this and the next subsection.) For individuals who have completed their
+ spells in the initial state, we observe the exact duration.
+ But for those still in the initial state state, we only know that the durating
+ lasted as long as the tracking period.
+\end_layout
+
+\begin_layout Subsubsection*
+Maximum Likelihood Estimation With Censored Flow Data
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For a random draw 
+\begin_inset Formula $i$
+\end_inset
+
+ from the population, let 
+\begin_inset Formula $a_{i}\in[0,b]$
+\end_inset
+
+ denot the time at which individual 
+\begin_inset Formula $i$
+\end_inset
+
+ enters the initial state (the 
+\begin_inset Quotes eld
+\end_inset
+
+starting time
+\begin_inset Quotes erd
+\end_inset
+
+), let 
+\begin_inset Formula $t_{i}^{*}$
+\end_inset
+
+ denote the length of time in the initial state (the duration), and let
+ 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ denote the vector of observed covariates.
+ We assume that 
+\begin_inset Formula $t_{i}^{*}$
+\end_inset
+
+ has a continuous conditional density 
+\begin_inset Formula $f(t|x_{i};\theta)$
+\end_inset
+
+, where 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is the vector of unknown parameters.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Without right censoring we would observe a random sample 
+\begin_inset Formula $(a_{i},t_{i}^{*},x_{i})$
+\end_inset
+
+, and estimation would be a standard exercise in conditional maximum liklihood.
+ To account for right censoring, we assume that the observed duration, 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+, is obtained as
+\begin_inset Formula 
+\begin{equation}
+t_{i}=\min(t_{i}^{*},c_{i})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is the censoring time for individual 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ In some cases, 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is constant across 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We assume that, conditional on the covariates, the true duration is independent
+ of the starting point, 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+, and the censoring time, 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+D(t_{i}^{*}|x_{i},a_{i},c_{i})=D(t_{i}^{*}|x_{i})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $D(\cdot|\cdot)$
+\end_inset
+
+ denotes the conditional distribution.
+ Assumption (45) clearly holds when 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ are constant for all 
+\begin_inset Formula $i$
+\end_inset
+
+, but it holds under much weaker assumptions.
+ Sometimes 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is constant for all 
+\begin_inset Formula $i$
+\end_inset
+
+, in which case assumption (45) holds when the duration is independent of
+ the starting time, conditional on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ If there are seasonal effects on the duration, then we may have to put
+ dummy variables for different starting dates in 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ to ensure that assumption (45) holds.
+ This approach would ensure that assumption (45) holds when a fixed calendar
+ date is used for censoring implying that 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is not constant across 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Assumption (45) holds for certian nonstandard censoring schemes, too.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Under assumption (45), the distribution of 
+\begin_inset Formula $t_{i}^{*}$
+\end_inset
+
+ given 
+\begin_inset Formula $(x_{i},a_{i},c_{i})$
+\end_inset
+
+ does not depend on 
+\begin_inset Formula $(a_{i},c_{i})$
+\end_inset
+
+.
+ Therefore, if the duration is not censored, the density of 
+\begin_inset Formula $t_{i}=t_{i}^{*}$
+\end_inset
+
+ given 
+\begin_inset Formula $(x_{i},a_{i},c_{i})$
+\end_inset
+
+ is simply 
+\begin_inset Formula $f(t|x_{i};\theta)$
+\end_inset
+
+.
+ The probability that 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ is censored is
+\begin_inset Formula 
+\[
+P(t_{i}^{*}\geq c_{i}|x_{i})=1-F(c_{i}|x_{i};\theta)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $F(t|x_{i};\theta)$
+\end_inset
+
+ is the conditional cdf of 
+\begin_inset Formula $t_{i}^{*}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Letting 
+\begin_inset Formula $d_{i}$
+\end_inset
+
+ be a censoring indicator (
+\begin_inset Formula $d_{i}=1$
+\end_inset
+
+ if uncensored, 
+\begin_inset Formula $d_{i}=0$
+\end_inset
+
+ if censored), the conditional likelihood for observation 
+\begin_inset Formula $i$
+\end_inset
+
+ can be written as
+\begin_inset Formula 
+\begin{equation}
+f(t_{i}|x_{i};\theta)^{d_{i}}\left[1-F(t_{i}|x_{i};\theta)\right]^{(1-d_{i})}
+\end{equation}
+
+\end_inset
+
+Importantly, neither the starting times, 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+, nor the length of the interval, 
+\begin_inset Formula $b$
+\end_inset
+
+, plays a role in the analysis.
+ (in fact, in the vast majority of treatments of flow data, 
+\begin_inset Formula $b$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ are not even introduced.
+ However, it is important to know that the reason 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ is not relevant for the analysis of flow data is the conditional independence
+ assumption in equation (45).) By contrast, the censoring times 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ do appear in the likelihood for censored observations because then 
+\begin_inset Formula $t_{i}=c_{i}$
+\end_inset
+
+.
+ Given data on 
+\begin_inset Formula $(t_{i},d_{i},x_{i})$
+\end_inset
+
+ for a random sample of size 
+\begin_inset Formula $N$
+\end_inset
+
+, the maximum likelihood estimator of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is obtained by maximizing
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{i=1}^{N}}\left\{ d_{i}\log\left[f(t_{i}|x_{i};\theta)\right]+\left(1-d_{i}\right)\log\left[1-F(t_{i}|x_{i};\theta)\right]\right\} 
+\end{equation}
+
+\end_inset
+
+For the choices of 
+\begin_inset Formula $f(\cdot|x;\theta)$
+\end_inset
+
+ used in practice, the conditional MLE regularity conditions old, and the
+ MLE is 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+-consistent and asymptotically normal.
+ (If there is no censoring, 
+\begin_inset Formula $d_{i}=1$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+ and the second term in expression (47) is dropped.) Because the hazard function
+ can be expressed as in equation (41), once we specify 
+\begin_inset Formula $f$
+\end_inset
+
+, the hazard function can be estimated once we have the MLE, 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

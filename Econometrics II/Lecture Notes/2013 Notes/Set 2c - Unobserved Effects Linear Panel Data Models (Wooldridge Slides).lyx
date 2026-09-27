@@ -1,0 +1,3827 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Unobserved Effects Linear Panel Data Models
+\end_layout
+
+\begin_layout Part*
+Wooldridge Slides
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We already covered panel data models where the error term had no particular
+ structure.
+ But we assumed either contemporaneous exogeneity (POLS) or strict exogeneity
+ (FGLS).
+ Now, we explicitly add a time constant, 
+\emph on
+unobserved effect
+\emph default
+ to the model, often called 
+\emph on
+unobserved heterogeneity
+\series bold
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Start with the balanced panel case, and assume random sampling across 
+\begin_inset Formula $i$
+\end_inset
+
+ (the cross section dimension), with fixed time period 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\left\{ (x_{it},y_{it}):t=1,\ldots,T,c_{i}\right\} $
+\end_inset
+
+ where 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is the unobserved effect drawn along with the observed data.
+ The unbalanced case is trickier because we must know why we are missing
+ some time periods for some units.
+ We consider this much later under missing/data sample selection issues.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For a random draw 
+\begin_inset Formula $i$
+\end_inset
+
+ from the population, the basic model is
+\begin_inset Formula 
+\begin{equation}
+y_{it}=x_{it}^{\prime}\beta+c_{i}+u_{it},\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\left\{ u_{it}:t=1,\ldots,T\right\} $
+\end_inset
+
+ are the 
+\emph on
+idiosyncratic errors.
+
+\emph default
+ The 
+\emph on
+composite error
+\emph default
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+v_{it}=c_{i}+u_{it}
+\end{equation}
+
+\end_inset
+
+Because of 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+, the sequence 
+\begin_inset Formula $\left\{ v_{it}:t=1,\ldots,T\right\} $
+\end_inset
+
+ is almost certainly serially correlated, and definitely is if 
+\begin_inset Formula $\{u_{it}\}$
+\end_inset
+
+ is serially uncorrelated.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is useful to write a population version of the model in conditional expectati
+on form:
+\begin_inset Formula 
+\begin{equation}
+E(y_{it}|x_{it},c_{i})=x_{it}^{\prime}\beta+c_{i},\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+Therefore,
+\begin_inset Formula 
+\begin{equation}
+\beta_{j}=\frac{\partial E(y_{it}|x_{it},c_{i})}{\partial x_{itj}}
+\end{equation}
+
+\end_inset
+
+so that 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ is the partial effect of 
+\begin_inset Formula $x_{itj}$
+\end_inset
+
+ on 
+\begin_inset Formula $E(y_{it}|x_{it},c_{i})$
+\end_inset
+
+, so that we are 
+\begin_inset Quotes eld
+\end_inset
+
+holding 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ fixed.
+\begin_inset Quotes erd
+\end_inset
+
+ Our hope is that we can allow 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ to be correlated with 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+With a single cross section, there is nothing we can do unless we can find
+ good observable IVs for the endogenous elements of 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+.
+ But with two or more periods, we have more options.
+ We can write the population model as
+\begin_inset Formula 
+\begin{eqnarray}
+y_{it} & = & x_{it}^{\prime}\beta+c_{i}+u_{it}\\
+E(u_{it}|x_{it},c_{i}) & = & 0
+\end{eqnarray}
+
+\end_inset
+
+Suppose we have 
+\begin_inset Formula $T=2$
+\end_inset
+
+ time periods:
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{i1} & = & x_{i1}^{\prime}\beta+c_{i}+u_{i1}\\
+y_{i2} & = & x_{i2}^{\prime}\beta+c_{i}+u_{i2}
+\end{eqnarray*}
+
+\end_inset
+
+Subtract 
+\begin_inset Formula $t=1$
+\end_inset
+
+ from 
+\begin_inset Formula $t=2$
+\end_inset
+
+ and define 
+\begin_inset Formula $\Delta y_{i}=y_{i2}-y_{i1}$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta x_{i}=x_{i2}-x_{i1}$
+\end_inset
+
+, and 
+\begin_inset Formula $\Delta u_{i}=u_{i2}-u_{i1}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\Delta y_{i}=\Delta x_{i}^{\prime}\beta+\Delta u_{i}
+\]
+
+\end_inset
+
+which is now a cross section in the changes or differences.
+ Sufficient for OLS on a random sample to consistently estimate 
+\begin_inset Formula $\beta$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray}
+E(\Delta x_{i}\Delta u_{i}) & = & 0\\
+\mbox{rank}\ E(\Delta x_{i}\Delta x_{i}^{\prime}) & = & K
+\end{eqnarray}
+
+\end_inset
+
+The rank condition is violated if 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ has elements that do not change over time.
+ Assume each element of 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ has some time variation (that is, for at least some members in the population).
+ The orthogonality condition is
+\begin_inset Formula 
+\[
+E\left[(x_{i2}-x_{i1})(u_{i2}-u_{i1})\right]=0
+\]
+
+\end_inset
+
+But
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left[(x_{i2}-x_{i1})(u_{i2}-u_{i1})\right] & = & E(x_{i2}u_{i2})-E(x_{i1}u_{i2})-E(x_{i2}u_{i1})+E(x_{i1}u_{i1})\\
+ & = & -\left[E(x_{i1}u_{i2})+E(x_{i2}u_{i1})\right]
+\end{eqnarray*}
+
+\end_inset
+
+because 
+\begin_inset Formula $E(x_{it}u_{it})=0$
+\end_inset
+
+ under the conditional mean specification.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+OLS on the differences will only be consistent if we add
+\begin_inset Formula 
+\begin{equation}
+E(x_{is}u_{it})=0,\ s\neq t
+\end{equation}
+
+\end_inset
+
+This is a kind of strict exogeneity assumption.
+ However, we have removed 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ from the composit error.
+ Assume 
+\begin_inset Formula $x_{is}$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+ for all 
+\begin_inset Formula $s$
+\end_inset
+
+ and 
+\begin_inset Formula $t$
+\end_inset
+
+ is weaker than assuming 
+\begin_inset Formula $x_{is}$
+\end_inset
+
+ is uncorrelated with the composit error, 
+\begin_inset Formula $c_{i}+u_{it}$
+\end_inset
+
+, for all 
+\begin_inset Formula $s$
+\end_inset
+
+ and 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ It is very unlikely that we omit an intercept from the differenced equation.
+ If we start with a model with different intercepts,
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{i1} & = & \theta_{i1}+x_{i1}^{\prime}\beta+c_{i}+u_{i1}\\
+y_{i2} & = & \theta_{i2}+x_{i2}^{\prime}\beta+c_{i}+u_{i2}
+\end{eqnarray*}
+
+\end_inset
+
+then
+\begin_inset Formula 
+\[
+\Delta y_{i}=\alpha_{i}+\Delta x_{i}^{\prime}\beta+\Delta u_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha_{i}=\theta_{i2}-\theta_{i1}$
+\end_inset
+
+ is the change in the aggregate time effects (intercepts).
+ Now the rank condition also excludes variables that change by the same
+ amount for each unit (such as age).
+\end_layout
+
+\begin_layout Section*
+Assumptions
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As mentioned earlier, we assume a balanced panel and all asymptotic analysis,
+ implicit or explicit, is with fixed 
+\begin_inset Formula $T$
+\end_inset
+
+ and 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+, where 
+\begin_inset Formula $N$
+\end_inset
+
+ is the size of the cross section.
+ The basic 
+\emph on
+unobserved effects model
+\emph default
+ is
+\begin_inset Formula 
+\begin{equation}
+y_{it}=x_{it}^{\prime}\beta+c_{i}+u_{it},\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ and so is 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ In addition to unobserved effect and unobserved heterogeneity, 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is sometimes called a 
+\emph on
+latent effect
+\emph default
+ or an individual effect, firm effect, school effect, and so on.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An extension of the basic model is
+\begin_inset Formula 
+\begin{equation}
+y_{it}=x_{it}^{\prime}\beta+\eta_{t}c_{i}+u_{it},\ t=1,\ldots T
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\left\{ \eta_{t}:t=1,\ldots,T\right\} $
+\end_inset
+
+ are unknown parameters (and we have to assume something like 
+\begin_inset Formula $\eta_{1}=1$
+\end_inset
+
+).
+ More on this later.
+ As in the earlier treatment, the model is written with 
+\begin_inset Formula $\beta$
+\end_inset
+
+ not depending on time.
+ But 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ can include time period dummies and interactions of variables with time
+ periods dummies, so the model is quite flexible.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A general specfication is
+\begin_inset Formula 
+\begin{equation}
+y_{it}=g_{t}^{\prime}\theta+z_{i}^{\prime}\delta+w_{it}^{\prime}\gamma+c_{i}+u_{it}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $g_{t}$
+\end_inset
+
+ is a vector of aggregate time effects (often time dummies), 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ is a set of time-constant observed variables, and 
+\begin_inset Formula $w_{it}$
+\end_inset
+
+ changes across 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $t$
+\end_inset
+
+ (for at least some units 
+\begin_inset Formula $i$
+\end_inset
+
+ and time periods 
+\begin_inset Formula $t$
+\end_inset
+
+).
+ 
+\begin_inset Formula $w_{it}$
+\end_inset
+
+ can include interactions among time-constant and time varying variables.
+ In microeconometric applications, it is best to avoid calling 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ a 
+\begin_inset Quotes eld
+\end_inset
+
+random effect
+\begin_inset Quotes erd
+\end_inset
+
+ or a 
+\begin_inset Quotes eld
+\end_inset
+
+fixed effect.
+\begin_inset Quotes erd
+\end_inset
+
+ We are always treating 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ as a random variable.
+\end_layout
+
+\begin_layout Subsection*
+Assumptions about the Unobserved Effect
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In modern applications, 
+\begin_inset Quotes eld
+\end_inset
+
+random effect
+\begin_inset Quotes erd
+\end_inset
+
+ essentially means
+\begin_inset Formula 
+\begin{equation}
+\mbox{Cov}(x_{it},c_{i})=0,\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+although we often will stregthen this.
+ The term 
+\begin_inset Quotes eld
+\end_inset
+
+fixed effect
+\begin_inset Quotes erd
+\end_inset
+
+ means that no restricitions are placed on the relationship between 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+.
+ Recently, 
+\begin_inset Quotes eld
+\end_inset
+
+correlated random effects
+\begin_inset Quotes erd
+\end_inset
+
+ is used to denot situations where we model the relationship between 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+, and it is especially useful for nonlinear models (but also for linear
+ models).
+\end_layout
+
+\begin_layout Subsection*
+Exogeneity Assumptions on the Explanatory Variables
+\end_layout
+
+\begin_layout Subsubsection*
+Contemporaneous Exogeneity Conditional on the Unobserved Effect
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E(u_{it}|x_{it},c_{i})=0
+\end{equation}
+
+\end_inset
+
+or
+\begin_inset Formula 
+\begin{equation}
+E(y_{it}|x_{it},c_{i})=x_{it}^{\prime}\beta+c_{i}
+\end{equation}
+
+\end_inset
+
+Ideally, we could proceed with just this assumption.
+\end_layout
+
+\begin_layout Subsubsection*
+Strict Exogeneity Conditional on the Unobserved Effect
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E(y_{it}|x_{i1},\ldots,x_{iT},c_{i})=E(y_{it}|x_{it},c_{i})=x_{it}^{\prime}\beta+c_{i}
+\end{equation}
+
+\end_inset
+
+so that only 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ affects the expected value of 
+\begin_inset Formula $y_{it}$
+\end_inset
+
+ once 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is controlled for.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This is weaker than if we did not condition on 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+ Assuming the condition holds conditional on 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+E(y_{it}|x_{i1},\ldots,x_{iT})=x_{it}^{\prime}\beta+E(c_{i}|x_{i1},\ldots,x_{iT})
+\]
+
+\end_inset
+
+So correlation between 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $(x_{i1},\ldots,x_{iT})$
+\end_inset
+
+ would invalidate the assumption without conditioning on 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+But strict exogeneity conditional on 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ rules out lagged dependent variables and feedback.
+ Written in terms of the idiosyncratic errors, strict exogeneity is
+\begin_inset Formula 
+\begin{equation}
+E(u_{it}|x_{i1},\ldots,x_{iT},c_{i})=0
+\end{equation}
+
+\end_inset
+
+and so 
+\begin_inset Formula $x_{i,t+h}$
+\end_inset
+
+ must be uncorrelated with 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+ for all 
+\begin_inset Formula $h>0$
+\end_inset
+
+.
+ In addition to ruling out feedback, strict exogeneity assumes we have any
+ distributed lag dynamics correct, too.
+ For example, if 
+\begin_inset Formula $x_{it}=(z_{it},z_{i,t-1})$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{equation}
+E(y_{it}|z_{i1},\ldots,z_{it},\ldots,z_{iT},c_{i})=E(y_{it}|z_{it},z_{i,t-1},c_{i})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Sequential Exogeneity Conditional on the Unobserved Effect
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A more reasonable assumption that we will use later is
+\begin_inset Formula 
+\begin{equation}
+E(y_{it}|x_{it},x_{i,t-1},\ldots,x_{i1},c_{i})=E(y_{it}|x_{it},c_{i})=x_{it}^{\prime}\beta+c_{i}
+\end{equation}
+
+\end_inset
+
+Sequential exogeneity assumes correct distributed lag dynamics but is silent
+ on feedback.
+\end_layout
+
+\begin_layout Section*
+Estimation and Testing
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There are four common methods: POLS, random effects, fixed effects, and
+ first differencing.
+\end_layout
+
+\begin_layout Subsection*
+POLS
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We already covered this.
+ Now, we just recognize that the equation is
+\begin_inset Formula 
+\begin{eqnarray}
+y_{it} & = & x_{it}^{\prime}\beta+v_{it}\\
+v_{it} & = & c_{i}+u_{it}
+\end{eqnarray}
+
+\end_inset
+
+Consistency (fixed 
+\begin_inset Formula $T$
+\end_inset
+
+, 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+) of the POLS estimator is ensured by
+\begin_inset Formula 
+\begin{eqnarray}
+E(x_{it}c_{i}) & = & 0\\
+E(x_{it}u_{it}) & = & 0,\ t=1,\ldots,T
+\end{eqnarray}
+
+\end_inset
+
+Contemporaneous exogeneity is weaker than strict exogeneity, but it buys
+ us little in practice because POLS also uses 
+\begin_inset Formula $E(x_{it}c_{i})=0$
+\end_inset
+
+, which cannot hold for lagged dependent variables and is unlikely for other
+ varaibles not strictly exogenous.
+ Inference should be made robust to serial correlation and heteroskedasticity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\hat{v}_{it}=y_{it}-x_{it}^{\prime}\hat{\beta}_{POLS}$
+\end_inset
+
+ be the POLS residuals.
+ Then
+\begin_inset Formula 
+\begin{equation}
+\widehat{\mbox{AVar}(\hat{\beta}_{POLS})}=\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}x_{it}x_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}{\displaystyle \sum_{s=1}^{T}}\hat{v}_{it}\hat{v_{is}}x_{it}x_{its}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}x_{it}x_{it}^{\prime}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+or sometimes with an adjustment, such as multiplying by 
+\begin_inset Formula $\nicefrac{N}{(N-1)}$
+\end_inset
+
+.
+ We can also write this estimator as
+\begin_inset Formula 
+\begin{equation}
+\widehat{\mbox{AVar}(\hat{\beta}_{POLS})}=\left({\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}X_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\hat{v}_{i}\hat{v}_{i}^{\prime}X_{i}\right)\left({\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}X_{i}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Random Effects Estimation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We will state assumptions in conditional mean terms so that second moment
+ derivations are easier.
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\shape up
+RE.1:
+\series default
+ 
+\emph on
+(a) 
+\begin_inset Formula $E(u_{it}|x_{i1},\ldots,x_{iT},c_{i})=0,\ t=1,\ldots,T$
+\end_inset
+
+; (b) 
+\begin_inset Formula $E(c_{i}|x_{i1},\ldots,x_{iT})=E(c_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We assume 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ includes (at least) unity, and probably time dummies in addition.
+ Then 
+\begin_inset Formula $E(c_{i})=0$
+\end_inset
+
+ without loss of generality.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A GLS approach also leaves 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ in the error term:
+\begin_inset Formula 
+\[
+y_{it}=x_{it}^{\prime}\beta+v_{it},\ t=1,\ldots,T
+\]
+
+\end_inset
+
+and we know the properties of FGLS when
+\begin_inset Formula 
+\begin{equation}
+E(x_{is}v_{it})=0,\ \forall\ s,t=1,\ldots T
+\end{equation}
+
+\end_inset
+
+This weaker version of strict exogeneity is implied by Assumption RE.1.
+ Write the equaiton in system form (for all time periods) as
+\begin_inset Formula 
+\begin{equation}
+y_{i}=x_{i}\beta+v_{i}+c_{i}j_{T}+u_{i}
+\end{equation}
+
+\end_inset
+
+ where 
+\begin_inset Formula $j_{T}$
+\end_inset
+
+ is a 
+\begin_inset Formula $T\times1$
+\end_inset
+
+ vector of all ones.
+ Define
+\begin_inset Formula 
+\begin{equation}
+\Omega_{T\times T}=E(v_{i}v_{i}^{\prime})=\mbox{Var}(v_{i})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\shape up
+RE.2:
+\series default
+ 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ is nonsingular and 
+\begin_inset Formula $\mbox{rank}\ E(x_{i}^{\prime}\Omega^{-1}x_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+RE imposes a special structure on 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ (which could be wrong).
+ Under RE.1(a), 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+ are uncorrelated.
+ Assume further that
+\begin_inset Formula 
+\begin{eqnarray}
+\mbox{Var}(u_{it}) & = & \sigma_{u}^{2},\ t=1,\ldots,T\\
+\mbox{Cov}(u_{it},u_{is}) & = & 0,\ t\neq s
+\end{eqnarray}
+
+\end_inset
+
+Then
+\begin_inset Formula 
+\begin{eqnarray}
+\mbox{Var}(v_{it}) & = & \mbox{Var}(c_{i}+u_{it})\nonumber \\
+ & = & \mbox{Var}(c_{i})+\mbox{Var}(u_{it})\nonumber \\
+\sigma_{v}^{2} & = & \sigma_{c}^{2}+\sigma_{u}^{2}
+\end{eqnarray}
+
+\end_inset
+
+Further, for 
+\begin_inset Formula $t\neq s$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray}
+\mbox{Cov}(v_{it},v_{is}) & = & \mbox{Cov}(c_{i}+u_{it},c_{i}+u_{is})\nonumber \\
+ & = & \mbox{Var}(c_{i})+\mbox{Cov}(c_{i},u_{is})+\mbox{Cov}(u_{it},c_{i})+\mbox{Cov}(u_{it},u_{is})\nonumber \\
+ & = & \sigma_{c}^{2}
+\end{eqnarray}
+
+\end_inset
+
+This leads to the 
+\begin_inset Quotes eld
+\end_inset
+
+random effects
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+exchangeable
+\begin_inset Quotes erd
+\end_inset
+
+ structure for 
+\begin_inset Formula $\Omega$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray}
+\Omega & = & E\left[(c_{i}j_{T}+u_{i})(c_{i}j_{T}+u_{i})^{\prime}\right]\nonumber \\
+ & = & E(c_{i}^{2})j_{T}j_{T}^{\prime}+E(u_{i}u_{i}^{\prime})\nonumber \\
+ & = & \sigma_{c}^{2}j_{T}j_{T}^{\prime}+\sigma_{u}^{2}I_{T}
+\end{eqnarray}
+
+\end_inset
+
+or
+\begin_inset Formula 
+\begin{equation}
+\Omega=\left[\begin{array}{cccc}
+\sigma_{c}^{2}+\sigma_{u}^{2} & \sigma_{c}^{2} & \cdots & \sigma_{c}^{2}\\
+\sigma_{c}^{2} & \sigma_{c}^{2}+\sigma_{u}^{2} & \cdots & \sigma_{c}^{2}\\
+\vdots &  & \ddots & \vdots\\
+\sigma_{c}^{2} & \cdots & \sigma_{c}^{2} & \sigma_{c}^{2}+\sigma_{u}^{2}
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+so the 
+\begin_inset Formula $T\times T$
+\end_inset
+
+ matrix depends on only two parameters, 
+\begin_inset Formula $\sigma_{c}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{u}^{2}$
+\end_inset
+
+, or, more directly, 
+\begin_inset Formula $\sigma_{v}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{c}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Feasible GLS requires estimating 
+\begin_inset Formula $\Omega$
+\end_inset
+
+, that is, the two parameters.
+ Actually, it would be enough to know 
+\begin_inset Formula $\rho=\nicefrac{\sigma_{c}^{2}}{\left(\sigma_{c}^{2}+\sigma_{u}^{2}\right)}$
+\end_inset
+
+, the fraction of the total variance accounted for by 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+ Notice that 
+\begin_inset Formula $\rho=\mbox{Corr}(v_{it},v_{is})$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\neq s$
+\end_inset
+
+.
+ We can also write 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{equation}
+\Omega=\sigma_{v}^{2}\left[\begin{array}{cccc}
+1 & \rho & \cdots & \rho\\
+\rho & 1 & \cdots & \rho\\
+\vdots &  & \ddots & \vdots\\
+\rho & \cdots & \rho & 1
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+which shows we only need to estimate 
+\begin_inset Formula $\rho$
+\end_inset
+
+ to proceed with FGLS.
+ Typically, we estimate 
+\begin_inset Formula $\sigma_{v}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{c}^{2}$
+\end_inset
+
+, but 
+\begin_inset Formula $\rho$
+\end_inset
+
+ is useful for summarizing the importance of 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can use POLS to get residuals, 
+\begin_inset Formula $\check{v}_{it}$
+\end_inset
+
+, across all 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Then a consistent estimator of 
+\begin_inset Formula $\sigma_{v}^{2}$
+\end_inset
+
+ (not generally unbiased), as 
+\begin_inset Formula $N$
+\end_inset
+
+ gets large for fixed 
+\begin_inset Formula $T$
+\end_inset
+
+, is
+\begin_inset Formula 
+\begin{equation}
+\hat{\sigma}_{v}^{2}=(NT-K)^{-1}{\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\check{v}_{it}^{2}=\nicefrac{SSR}{(NT-K)}
+\end{equation}
+
+\end_inset
+
+the usual variance estimator from OLS regression.
+ This is based on, for each 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma_{v}^{2}=T^{-1}\sum_{t=1}^{T}E(v_{it}^{2})$
+\end_inset
+
+ and then average across 
+\begin_inset Formula $i$
+\end_inset
+
+, too.
+ Then replace population with sample average, and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ with POLS estimates, and subtract 
+\begin_inset Formula $K$
+\end_inset
+
+ as a degrees-of-freedom adjustment.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For 
+\begin_inset Formula $\sigma_{c}^{2}$
+\end_inset
+
+, note that
+\begin_inset Formula 
+\begin{equation}
+\sigma_{c}^{2}=\left[\nicefrac{T(T-1)}{2}\right]^{-1}{\displaystyle \sum_{t=1}^{T-1}}{\displaystyle \sum_{s=t+1}^{T}}E(v_{it}v_{is})
+\end{equation}
+
+\end_inset
+
+So a consistent 
+\begin_inset Quotes eld
+\end_inset
+
+estimator
+\begin_inset Quotes erd
+\end_inset
+
+ would be
+\begin_inset Formula 
+\[
+\tilde{\sigma}_{c}^{2}=\left[\nicefrac{NT(T-1)}{2}\right]^{-1}{\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T-1}}{\displaystyle \sum_{s=t+1}^{T}}v_{it}v_{is}
+\]
+
+\end_inset
+
+An actual estimator replaces 
+\begin_inset Formula $v_{it}$
+\end_inset
+
+ with the POLS residuals,
+\begin_inset Formula 
+\begin{equation}
+\hat{\sigma}_{c}^{2}=\left[\frac{NT(T-1)}{2}-K\right]^{-1}{\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T-1}}{\displaystyle \sum_{s=t+1}^{T}}\check{v}_{it}\check{v}_{is}
+\end{equation}
+
+\end_inset
+
+and subtracts 
+\begin_inset Formula $K$
+\end_inset
+
+ from 
+\begin_inset Formula $\nicefrac{NT(T-1)}{2}$
+\end_inset
+
+ as a degrees-of-freedom adjustment.
+ By the usual argument,
+\begin_inset Formula 
+\[
+\mbox{p}{\displaystyle \lim_{N\rightarrow\infty}}\ \hat{\sigma}_{c}^{2}=\sigma_{c}^{2}
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula $T$
+\end_inset
+
+ fixed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, we can use
+\begin_inset Formula 
+\begin{equation}
+\hat{\Omega}=\left[\begin{array}{cccc}
+\hat{\sigma}_{v}^{2} & \hat{\sigma}_{c}^{2} & \cdots & \hat{\sigma}_{c}^{2}\\
+\hat{\sigma}_{c}^{2} & \hat{\sigma}_{v}^{2} & \cdots & \hat{\sigma}_{c}^{2}\\
+\vdots &  & \ddots & \vdots\\
+\hat{\sigma}_{c}^{2} & \cdots & \hat{\sigma}_{c}^{2} & \hat{\sigma}_{v}^{2}
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+or
+\begin_inset Formula 
+\begin{equation}
+\hat{\Lambda}=\left[\begin{array}{cccc}
+1 & \hat{\rho} & \cdots & \hat{\rho}\\
+\hat{\rho} & 1 &  & \hat{\rho}\\
+\vdots &  & \ddots & \vdots\\
+\hat{\rho} & \cdots & \hat{\rho} & 1
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{\rho}=\nicefrac{\hat{\sigma}_{c}^{2}}{\hat{\sigma}_{v}^{2}}$
+\end_inset
+
+ in FGLS.
+ It is possible for 
+\begin_inset Formula $\hat{\sigma}_{c}^{2}$
+\end_inset
+
+ to be negative, which means the basic unboserved effects variance-covariance
+ structure is faulty.
+ Typically, 
+\begin_inset Formula $\hat{\sigma}_{c}^{2}>0$
+\end_inset
+
+ unless the variables have been transformed in some way, such as being first
+ differenced, before apply GLS.
+ The FGLS estimator that uses this particular structure of 
+\begin_inset Formula $\hat{\Omega}$
+\end_inset
+
+ is the 
+\emph on
+random effects (RE) estimator
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Fully robust inference is available for RE, and there are good reasons for
+ doing so.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\Omega$
+\end_inset
+
+ may not have the special (and restricitive, especially for large 
+\begin_inset Formula $T$
+\end_inset
+
+) RE structure, that is, 
+\begin_inset Formula $E(v_{i}v_{i}^{\prime})$
+\end_inset
+
+ need not have the RE form.
+ Serial correlation or changing variances in 
+\begin_inset Formula $\left\{ u_{it}:t=1,\ldots,T\right\} $
+\end_inset
+
+ invalidate the RE structure.
+\end_layout
+
+\begin_layout Enumerate
+The system homoskedasticity requirement,
+\begin_inset Formula 
+\[
+E(v_{i}v_{i}^{\prime}|x_{i})=E(v_{i}v_{i}^{\prime})
+\]
+
+\end_inset
+
+might not hold.
+\end_layout
+
+\begin_layout Standard
+A fully robust estimator is
+\begin_inset Formula 
+\begin{equation}
+\widehat{\mbox{AVar}(\hat{\beta}_{RE})}=\left({\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}\hat{\Omega}^{-1}x_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}\hat{\Omega}^{-1}\hat{v}_{i}\hat{v}_{i}^{\prime}\hat{\Omega}^{-1}x_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}\hat{\Omega}^{-1}x_{i}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{v}_{i}=y_{i}-x_{i}\hat{\beta}_{RE}$
+\end_inset
+
+ is the vector of RE (FGLS) residuals.
+ Sometimes, an iterative procedure is used.
+ These new residuals can be used to obtain a new estimate of 
+\begin_inset Formula $\Omega$
+\end_inset
+
+, and so on.
+ For first order asymptotics, there is no efficiency gain from iterating.
+ Though, it might help with smaller 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What is the advantage of RE, which imposes specific assumptions on 
+\begin_inset Formula $\Omega$
+\end_inset
+
+, and the unrestricted FGLS we discussed earlier? Theoretically, nothing.
+ We do not get more efficiency with large 
+\begin_inset Formula $N$
+\end_inset
+
+ and small 
+\begin_inset Formula $T$
+\end_inset
+
+ by imposing restrictions on 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ If system homoskedasticity holds but 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ is not of the RE form, an unrestricted FGLS analysis is more efficient
+ than RE (again, fixed 
+\begin_inset Formula $T$
+\end_inset
+
+, 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+).
+ RE does have some appeal because of its implicit transformation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A nonrobust variance matrix estimator can be used if we add an assumption:
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\shape up
+RE.3:
+\series default
+ 
+\emph on
+(a) 
+\begin_inset Formula $E(u_{i}u_{i}^{\prime}|x_{i},c_{i})=\sigma_{u}^{2}I_{T}$
+\end_inset
+
+; (b) 
+\begin_inset Formula $E(c_{i}^{2}|x_{i})=\sigma_{c}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Under Assumptions RE.1 and RE.3, 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ has the RE structure and system homoskedasticity holds.
+ Part (a) is homoskedasticity and serial uncorrelatedness of 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $(x_{i},c_{i})$
+\end_inset
+
+, and (b) is homoskedasticity of 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+ Under RE.1, RE.2, and RE.3
+\begin_inset Formula 
+\begin{equation}
+\widehat{\mbox{AVar}(\hat{\beta}_{RE})}=\left({\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}\hat{\Omega}^{-1}x_{i}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+is a valid estimator.
+ Inference is straightforward.
+ Typically, we use a Wald or a robust Wald statistic for multiple restrictions.
+\end_layout
+
+\begin_layout Subsection*
+Fixed Effects Estimation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Unlike POLS and RE, fixed effects estimation removes 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ to form an estimating equation.
+ We average the original equation, 
+\begin_inset Formula 
+\[
+y_{it}=x_{it}^{\prime}\beta+c_{i}+u_{it},\ t=1,\ldots,T
+\]
+
+\end_inset
+
+across 
+\begin_inset Formula $t$
+\end_inset
+
+ to get a cross-sectional equation:
+\begin_inset Formula 
+\begin{equation}
+\bar{y}_{i}=\bar{x}_{i}^{\prime}\beta+c_{i}+\bar{u}_{i}
+\end{equation}
+
+\end_inset
+
+where the overbar indiciates 
+\emph on
+time averages
+\emph default
+:
+\begin_inset Formula 
+\[
+\bar{y}_{i}=T^{-1}{\displaystyle \sum_{t=1}^{T}}y_{it},\ \bar{x}_{i}=T^{-1}{\displaystyle \sum_{t=1}^{T}}x_{it},\ \bar{u}_{i}=T^{-1}{\displaystyle \sum_{t=1}^{T}}u_{it}
+\]
+
+\end_inset
+
+The equation 
+\begin_inset Formula $\bar{y}_{i}=\bar{x}_{i}^{\prime}\beta+c_{i}+\bar{u}_{i}$
+\end_inset
+
+ is often called the 
+\emph on
+between equation
+\emph default
+ because it relies on variation in the data between cross seciton observations.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The 
+\emph on
+between estimator
+\emph default
+ is the OLS estimator form the cross section regression
+\begin_inset Formula 
+\[
+\bar{y}_{i}\ \mbox{on}\ \bar{x}_{i},\ i=1,\ldots,N
+\]
+
+\end_inset
+
+In practice, an intercept is included to account for nonzero 
+\begin_inset Formula $E(c_{i})$
+\end_inset
+
+.
+ The between estimator is inconsistent unless
+\begin_inset Formula 
+\[
+\mbox{Cov}(\bar{x}_{i},c_{i})=0,\ \mbox{Cov}(\bar{x}_{i},\bar{u}_{i})=0
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Instead, subtract off the time-averaged equation from the original equation
+ to eliminate 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+y_{it}-\bar{y}_{i}=(x_{it}-\bar{x}_{i})^{\prime}\beta+u_{it}-\bar{u}_{i},\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+or
+\begin_inset Formula 
+\begin{equation}
+\ddot{y}_{it}=\ddot{x}_{it}^{\prime}\beta+\ddot{u}_{it},\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\ddot{y}_{it}=y_{it}-\bar{y}_{i}$
+\end_inset
+
+ and so on.
+ We call this the 
+\emph on
+time demeaned equation
+\emph default
+, and the transformation is 
+\emph on
+time demeaning
+\emph default
+, 
+\emph on
+fixed effects
+\emph default
+, or 
+\emph on
+within
+\emph default
+ (time variation within each 
+\begin_inset Formula $i$
+\end_inset
+
+ is used).
+ The key is that 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is gone from the time demeaned equation.
+ So we can use POLS:
+\begin_inset Formula 
+\begin{equation}
+\ddot{y}_{it}\ \mbox{on}\ \ddot{x}_{it},\ t=1,\ldots,T;\ i=1,\ldots,N
+\end{equation}
+
+\end_inset
+
+This is the 
+\emph on
+fixed effects (FE) estimator
+\emph default
+ or the 
+\emph on
+within estimator
+\emph default
+.
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{\beta}_{FE} & = & \left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\ddot{x}_{it}\ddot{x}_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\ddot{x}_{it}\ddot{y}_{it}\right)\\
+ & = & \left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\ddot{x}_{it}\ddot{x}_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\ddot{x}_{it}y_{it}\right)\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+because 
+\begin_inset Formula $\sum_{t=1}^{T}(x_{it}-\bar{x}_{i})(y_{it}-\bar{y}_{i})=\sum_{t=1}^{T}(x_{it}-\bar{x}_{i})y_{it}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What is the weakest orthogonality assumption for consistency? We can just
+ apply the results for POLS, but it is useful to see it directly.
+ Write the estimator by substituting 
+\begin_inset Formula $\ddot{y}_{it}=\ddot{x}_{it}^{\prime}\beta+\ddot{u}_{it}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta}_{FE} & = & \beta+\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\ddot{x}_{it}\ddot{x}_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\ddot{x}_{it}\ddot{u}_{it}\right)\\
+ & = & \beta+\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\ddot{x}_{it}\ddot{x}_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\ddot{x}_{it}u_{it}\right)
+\end{eqnarray*}
+
+\end_inset
+
+By the WLLN, as 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+ with fixed 
+\begin_inset Formula $T$
+\end_inset
+
+, the key moment condition for consistency is
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{t=1}^{T}}E(\ddot{x}_{it}u_{it})={\displaystyle \sum_{t=1}^{T}}E\left[(x_{it}-\bar{x}_{i})u_{it}\right]=0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+In addition to contemporaneous exogeneity, 
+\begin_inset Formula $E(x_{it}u_{it})=0$
+\end_inset
+
+, we need a kind of strict exogeneity
+\begin_inset Formula 
+\begin{equation}
+E(\bar{x}_{i}u_{it})=T^{-1}{\displaystyle \sum_{s=1}^{T}}E(x_{is}u_{it})=0,\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\shape up
+FE.1:
+\series default
+ Same as RE.1(a), that is, 
+\begin_inset Formula $E(u_{it}|x_{i},c_{i})=0,\ t=1,\ldots,T$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape up
+This implies that 
+\begin_inset Formula $E(x_{is}u_{it})=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $s,t=1,\ldots,T$
+\end_inset
+
+, and so 
+\begin_inset Formula $E(\ddot{x}_{it}u_{it})=0,\ t=1,\ldots,T$
+\end_inset
+
+.
+ The rank condition is directly from POLS.2.
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\shape up
+FE.2:
+\series default
+ 
+\begin_inset Formula $\mbox{rank}\ \left[{\displaystyle \sum_{t=1}^{T}}E(\ddot{x}_{it}\ddot{x}_{it}^{\prime})\right]=K$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The rank condition rules out elements in 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ that have no time variation for any unit in the population.
+ Such variables get swept away by the within transformation.
+ Under FE.1 and FE.2
+\begin_inset Formula 
+\[
+\hat{\beta}_{FE}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\beta\ \mbox{as}\ N\rightarrow\infty
+\]
+
+\end_inset
+
+The FE estimator works well for large 
+\begin_inset Formula $T$
+\end_inset
+
+, too, but showing that requires putting restrictions on the time series
+ process 
+\begin_inset Formula $\left\{ (x_{it},y_{it}):t=1,\ldots\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What parameters can we identify with FE? Suppose we start with
+\begin_inset Formula 
+\begin{equation}
+y_{it}=\theta_{1}+\theta_{2}d2_{t}+\cdots+\theta_{T}dT_{t}+z_{i}^{\prime}\gamma_{1}+d2_{t}z_{i}^{\prime}\gamma_{2}+\cdots+DT_{t}z_{i}^{\prime}\gamma_{T}+w_{it}^{\prime}\delta+c_{i}+u_{it}
+\end{equation}
+
+\end_inset
+
+Using FE, we cannot estimate 
+\begin_inset Formula $\theta_{1}$
+\end_inset
+
+ or 
+\begin_inset Formula $\gamma_{1}$
+\end_inset
+
+, but all other parameters are generally identified.
+ FE allows 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ to be arbitrarily correlated with 
+\begin_inset Formula $(z_{i},w_{it})$
+\end_inset
+
+, and so we cannot distinguish 
+\begin_inset Formula $\theta_{1}+z_{i}^{\prime}\gamma_{1}$
+\end_inset
+
+ from 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+ We can estimate 
+\begin_inset Formula $\theta_{2},\ldots,\theta_{T}$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma_{2},\ldots,\gamma_{T}$
+\end_inset
+
+.
+ So we can estimate whether the effect of the time constant variables has
+ changed over time.
+ We cannot estimate the effect in any period 
+\begin_inset Formula $t$
+\end_inset
+
+ because it is 
+\begin_inset Formula $\gamma_{1}$
+\end_inset
+
+ for 
+\begin_inset Formula $t=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma_{1}+\gamma_{t}$
+\end_inset
+
+ for 
+\begin_inset Formula $t=2,\ldots,T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can obtain a variance matrix estimator valid under Assumptions FE.1 and
+ FE.2.
+ Define the FE residuals as
+\begin_inset Formula 
+\begin{equation}
+\hat{\ddot{u}}_{it}=\ddot{y}_{it}-\ddot{x}_{it}^{\prime}\hat{\beta}_{FE},\ t=1,\ldots,T;\ i=1,\ldots,N
+\end{equation}
+
+\end_inset
+
+These are 
+\begin_inset Quotes eld
+\end_inset
+
+estimates
+\begin_inset Quotes erd
+\end_inset
+
+ of the 
+\begin_inset Formula $\ddot{u}_{it}$
+\end_inset
+
+, not the 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+.
+ This has implications for estimating the error variance, 
+\begin_inset Formula $\sigma_{u}^{2}$
+\end_inset
+
+.
+ Without additional assumptions, use the 
+\begin_inset Quotes eld
+\end_inset
+
+cluster-robust
+\begin_inset Quotes erd
+\end_inset
+
+ matrix
+\begin_inset Formula 
+\begin{equation}
+\widehat{\mbox{AVar}(\hat{\beta}_{FE})}=\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\ddot{x}_{it}\ddot{x}_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}{\displaystyle \sum_{s=1}^{T}}\hat{\ddot{u}}_{it}\hat{\ddot{u}}_{it}\ddot{x}_{it}\ddot{x}_{is}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\ddot{x}_{it}\ddot{x}_{it}^{\prime}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Of course, a nonrobust form requires an extra assumption:
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\shape up
+FE.3:
+\series default
+ Same as RE.3(a), that is, 
+\begin_inset Formula $E(u_{i}u_{i}^{\prime}|x_{i},c_{i})=\sigma_{u}^{2}I_{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape up
+To find the asymptotic variance under this assumption, remember the general
+ form for a POLS estimator, in this case, on the time demeaned data, is
+ the sandwich form
+\begin_inset Formula 
+\[
+\left[E(\ddot{x}_{i}^{\prime}\ddot{x}_{i})\right]^{-1}E\left(\ddot{x}_{i}^{\prime}\ddot{u}_{i}\ddot{u}_{i}^{\prime}\ddot{x}_{i}\right)\left[E(\ddot{x}_{i}^{\prime}\ddot{x}_{i})\right]^{-1}
+\]
+
+\end_inset
+
+Under FE.3, we can simplify the middle matrix.
+ First, use
+\begin_inset Formula 
+\begin{equation}
+\ddot{x}_{i}^{\prime}\ddot{u}_{i}={\displaystyle \sum_{t=1}^{T}}\ddot{x}_{it}\ddot{u}_{it}={\displaystyle \sum_{t=1}^{T}}\ddot{x}_{it}u_{it}=\ddot{x}_{i}^{\prime}u_{i}
+\end{equation}
+
+\end_inset
+
+Therefore,
+\begin_inset Formula 
+\begin{eqnarray}
+E\left(\ddot{x}_{i}^{\prime}\ddot{u}_{i}\ddot{u}_{i}^{\prime}\ddot{x}_{i}\right) & = & E\left(\ddot{x}_{i}^{\prime}u_{i}u_{i}^{\prime}\ddot{x}_{i}\right)\nonumber \\
+ & = & E\left[E\left(\ddot{x}_{i}^{\prime}u_{i}u_{i}^{\prime}\ddot{x}_{i}\right)|\ddot{x}_{i}\right]\nonumber \\
+ & = & E\left[\ddot{x}_{i}^{\prime}E\left(u_{i}u_{i}^{\prime}|\ddot{x}_{i}\right)\ddot{x}_{i}\right]\nonumber \\
+ & = & E\left[\ddot{x}_{i}^{\prime}(\sigma_{u}^{2}I_{T})\ddot{x}_{i}\right]\nonumber \\
+ & = & \sigma_{u}^{2}E(\ddot{x}_{i}^{\prime}\ddot{x}_{i})
+\end{eqnarray}
+
+\end_inset
+
+because 
+\begin_inset Formula $E(u_{i}u_{i}^{\prime}|\ddot{x}_{i})=\sigma_{u}^{2}I_{T}$
+\end_inset
+
+ under FE.3.
+ So,
+\begin_inset Formula 
+\begin{equation}
+\mbox{AVar}\left[\sqrt{N}(\hat{\beta}_{FE}-\beta)\right]=\sigma_{u}^{2}\left[E(\ddot{x}_{i}^{\prime}\ddot{x}_{i})\right]^{-1}
+\end{equation}
+
+\end_inset
+
+under FE.1, FE.2, and FE.3.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Estimating 
+\begin_inset Formula $\sigma_{u}^{2}$
+\end_inset
+
+ requires some care because we effectively observe 
+\begin_inset Formula $\ddot{u}_{it}$
+\end_inset
+
+, not 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+.
+ Under the constant variance and no serial correlation assumptions on 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{eqnarray}
+\mbox{Var}(\ddot{u}_{it}) & = & \mbox{Var}(u_{it}-\bar{u}_{i})\nonumber \\
+ & = & \sigma_{u}^{2}+\frac{\sigma_{u}^{2}}{T}-2\mbox{Cov}(u_{it},\bar{u}_{i})\nonumber \\
+ & = & \sigma_{u}^{2}+\frac{\sigma_{u}^{2}}{T}-2\frac{\sigma_{u}^{2}}{T}\nonumber \\
+ & = & \sigma_{u}^{2}\left(1-\frac{1}{T}\right)
+\end{eqnarray}
+
+\end_inset
+
+So,
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{t=1}^{T}}E(\ddot{u}_{it}^{2})=(T-1)\sigma_{u}^{2}
+\end{equation}
+
+\end_inset
+
+One degree of freedom is lost for each unit 
+\begin_inset Formula $i$
+\end_inset
+
+ because of the time demeaning: 
+\begin_inset Formula $\sum_{t=1}^{T}\ddot{u}_{it}=0$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\begin{equation}
+\sigma_{u}^{2}=\left[N(T-1)\right]^{-1}{\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}E(\ddot{u}_{it}^{2})
+\end{equation}
+
+\end_inset
+
+and now take away expectation, insert 
+\begin_inset Formula $\hat{\beta}_{FE}$
+\end_inset
+
+ for 
+\begin_inset Formula $\beta$
+\end_inset
+
+, and use a degree-of-freedom adjustment to account for estimating the 
+\begin_inset Formula $K$
+\end_inset
+
+-vector 
+\begin_inset Formula $\beta$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\hat{\sigma}_{u}^{2}=\left[N(T-1)-K\right]^{-1}{\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\hat{\ddot{u}}_{it}^{2}=\frac{SSR}{N(T-1)-K}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $\hat{\sigma}_{u}^{2}$
+\end_inset
+
+ is actually unbiased under FE.1, FE.2, and FE.3.
+ It is consistent as 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+.
+ Under FE.1, FE.2, and FE.3,
+\begin_inset Formula 
+\begin{equation}
+\widehat{\mbox{AVar}(\hat{\beta}_{FE})}=\hat{\sigma}_{u}^{2}\left({\displaystyle \sum_{i=1}^{N}}\ddot{x}_{i}^{\prime}\ddot{x}_{i}\right)^{-1}=\hat{\sigma}_{u}^{2}\left(\ddot{X}^{\prime}\ddot{X}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+and this is the 
+\begin_inset Quotes eld
+\end_inset
+
+usual
+\begin_inset Quotes erd
+\end_inset
+
+ asymptotic variance estimator.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If you do the time-demeaning and run POLS, the usual statistics do not reflect
+ the lost degress of freedom (
+\begin_inset Formula $N$
+\end_inset
+
+ of them).
+ The estimate of 
+\begin_inset Formula $\sigma_{u}^{2}$
+\end_inset
+
+ will be 
+\begin_inset Formula $\nicefrac{SSR}{(NT-K)}$
+\end_inset
+
+, which is too small.
+ Canned FE packages compute the statistics.
+ The FE estimator 
+\begin_inset Formula $\hat{\beta}_{FE}$
+\end_inset
+
+ can also be obtained by running a long regression on the original data,
+ and including dummy variables for each cross section unit:
+\begin_inset Formula 
+\begin{equation}
+y_{it}\ \mbox{on}\ d1_{i},d2_{i},\ldots,dN_{i},x_{it},\ t=1,\ldots,T;\ i=1,\ldots,N
+\end{equation}
+
+\end_inset
+
+often called the 
+\emph on
+dummy variable regression
+\emph default
+.
+ The statistics are properly computed because the inclusion of the 
+\begin_inset Formula $N$
+\end_inset
+
+ dummy variables.
+ The only danger is treating the 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ as parameters to estimate, while sensible with 
+\begin_inset Quotes eld
+\end_inset
+
+large
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $T$
+\end_inset
+
+, it can lead to trouble later with nonlinear models.
+ Here, we get a consistent estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ for fixed 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Sometimes, we want to estimate the 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ using the 
+\begin_inset Formula $T$
+\end_inset
+
+ time periods.
+ We do not have to run the dummy variable regression.
+\begin_inset Formula 
+\begin{equation}
+\hat{c}_{i}=\bar{y}_{i}-\bar{x}_{i}^{\prime}\hat{\beta}_{FE},\ i=1,\ldots,N
+\end{equation}
+
+\end_inset
+
+With small 
+\begin_inset Formula $T$
+\end_inset
+
+, this is not a good 
+\begin_inset Quotes eld
+\end_inset
+
+estimate
+\begin_inset Quotes erd
+\end_inset
+
+ of 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+, but it is unbiased.
+ We can estimate features of the distribution of 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ well:
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\mu}_{c} & = & N^{-1}{\displaystyle \sum_{i=1}^{N}}\hat{c}_{i}\\
+ & = & N^{-1}{\displaystyle \sum_{i=1}^{N}}(\bar{y}_{i}-\bar{x}_{i}^{\prime}\hat{\beta}_{FE})\\
+ & = & N^{-1}{\displaystyle \sum_{i=1}^{N}}\left[c_{i}+\bar{u}_{i}+\bar{x}_{i}^{\prime}(\beta-\hat{\beta}_{FE})\right]\\
+ & = & N^{-1}{\displaystyle \sum_{i=1}^{N}}c_{i}+N^{-1}{\displaystyle \sum_{i=1}^{N}}\bar{u}_{i}+\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}\bar{x}_{i}\right)\left(\beta-\hat{\beta}_{FE}\right)\\
+ & = & N^{-1}{\displaystyle \sum_{i=1}^{N}}c_{i}+o_{p}(1)+O_{p}(1)o_{p}(1)\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\mu_{c}
+\end{eqnarray*}
+
+\end_inset
+
+Stata, for example, reports 
+\begin_inset Formula $\hat{\mu}_{c}$
+\end_inset
+
+ as the 
+\begin_inset Quotes eld
+\end_inset
+
+intercept
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+constant
+\begin_inset Quotes erd
+\end_inset
+
+ in FE regressions.
+ This consistency argument uses only FE.1 and FE.2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can estimate other features of the distribution, too, although some 
+\begin_inset Quotes eld
+\end_inset
+
+obvious
+\begin_inset Quotes erd
+\end_inset
+
+ estimators are inconsistent.
+ For example, we might try to estimate 
+\begin_inset Formula $\sigma_{c}^{2}$
+\end_inset
+
+ using the sample variance of 
+\begin_inset Formula $\left\{ \hat{c}_{i}:i=1,\ldots,N\right\} $
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\tilde{\sigma}_{c}^{2}=(N-1)^{-1}{\displaystyle \sum_{i=1}^{N}}(\hat{c}_{i}-\hat{\mu}_{c})^{2}
+\]
+
+\end_inset
+
+But under FE.1 to FE.3 it can be shown that
+\begin_inset Formula 
+\[
+\mbox{p\lim}(\tilde{\sigma}_{c}^{2})=\sigma_{c}^{2}+\mbox{Var}(\bar{u}_{i})=\sigma_{c}^{2}+\frac{\sigma_{u}^{2}}{T}
+\]
+
+\end_inset
+
+We can adjust for the 
+\begin_inset Quotes eld
+\end_inset
+
+bias
+\begin_inset Quotes erd
+\end_inset
+
+ using the estimate of 
+\begin_inset Formula $\hat{\sigma}_{u}^{2}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\hat{\sigma}_{c}^{2}=\tilde{\sigma}_{c}^{2}-\frac{\hat{\sigma}_{u}^{2}}{T}=(N-1)^{-1}{\displaystyle \sum_{i=1}^{N}}(\hat{c}_{i}-\hat{\mu}_{c})^{2}-\frac{\hat{\sigma}_{u}^{2}}{T}
+\end{equation}
+
+\end_inset
+
+is consistent for 
+\begin_inset Formula $\sigma_{c}^{2}$
+\end_inset
+
+ for any 
+\begin_inset Formula $T$
+\end_inset
+
+ as 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+.
+ If we treat the 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ as parameters, we can test the null that they are the same.
+ This is easy to see if we add to FE.1 to FE.3 the assumption 
+\begin_inset Formula $u_{it}|x_{i},c_{i}\sim N(0,\sigma_{u}^{2})$
+\end_inset
+
+.
+ Then the classical linear model assumptions hold, and so 
+\begin_inset Formula $H_{0}:c_{1}=c_{2}=\cdots=c_{N}$
+\end_inset
+
+ can be tested using an 
+\begin_inset Formula $F$
+\end_inset
+
+ statistic with 
+\begin_inset Formula $N-1$
+\end_inset
+
+ and 
+\begin_inset Formula $N(T-1)-K$
+\end_inset
+
+ degrees of freedom.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can also obtain an estimate of 
+\begin_inset Formula $\sigma_{c}^{2}$
+\end_inset
+
+ using
+\begin_inset Formula 
+\begin{equation}
+\sigma_{c}^{2}=\sigma_{v}^{2}-\sigma_{u}^{2}
+\end{equation}
+
+\end_inset
+
+We alread have 
+\begin_inset Formula $\hat{\sigma}_{u}^{2}=\nicefrac{SSR}{\left[N(T-1)-K\right]}$
+\end_inset
+
+, which is consistent for 
+\begin_inset Formula $\sigma_{u}^{2}$
+\end_inset
+
+ under FE.1 to FE.3.
+ Also, 
+\begin_inset Formula $v_{it}=y_{it}-x_{it}^{\prime}\beta$
+\end_inset
+
+ and so a consistent estimator of 
+\begin_inset Formula $\sigma_{v}^{2}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+\hat{\sigma}_{v}^{2}=(NT-K)^{-1}{\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}(y_{it}-x_{it}^{\prime}\hat{\beta}_{FE}-\hat{\mu}_{v})^{2}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{\mu}_{v}$
+\end_inset
+
+ is the sample average of the 
+\begin_inset Formula $\left\{ y_{it}-x_{it}^{\prime}\hat{\beta}_{FE}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Fixed Effects GLS
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Write the 
+\begin_inset Formula $T$
+\end_inset
+
+ time periods for a random draw 
+\begin_inset Formula $i$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{equation}
+y_{i}=x_{i}\beta+c_{i}j_{T}+u_{i}
+\end{equation}
+
+\end_inset
+
+and let the variance matrix of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ be a 
+\begin_inset Formula $T\times T$
+\end_inset
+
+ unrestricted matrix 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+.
+ When we eliminate 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ by demeaning we get
+\begin_inset Formula 
+\begin{equation}
+\ddot{y}_{i}=\ddot{x}_{i}\beta+\ddot{u}_{i}
+\end{equation}
+
+\end_inset
+
+where, for example, 
+\begin_inset Formula $\ddot{u}_{i}=Q_{T}u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $Q_{T}=I_{T}-j_{T}(j_{T}^{\prime}j_{T})^{-1}j_{T}^{\prime}$
+\end_inset
+
+ is symmetric, idempotent with rank 
+\begin_inset Formula $T-1$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $j_{T}^{\prime}\ddot{u}_{i}=0$
+\end_inset
+
+, we know the 
+\begin_inset Formula $T\times T$
+\end_inset
+
+ matrix 
+\begin_inset Formula $E(\ddot{u}_{i}\ddot{u}_{i}^{\prime})$
+\end_inset
+
+ has rank less than 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ In fact, (unconditional) variance covariance matrix of 
+\begin_inset Formula $\ddot{u}_{i}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+\Omega\equiv E(\ddot{u}_{i}\ddot{u}_{i}^{\prime})=E(Q_{t}u_{i}u_{i}^{\prime}Q_{T})=Q_{T}\Lambda Q_{T}
+\end{equation}
+
+\end_inset
+
+ which has rank 
+\begin_inset Formula $T-1$
+\end_inset
+
+.
+ Applying FGLS to
+\begin_inset Formula 
+\[
+\ddot{y}_{i}=\ddot{x}_{i}\beta+\ddot{u}_{i}
+\]
+
+\end_inset
+
+is tricky because the generalized inverse is required.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There is a simple solution.
+ After demeaning to obtain 
+\begin_inset Formula $\ddot{y}_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\ddot{x}_{i}$
+\end_inset
+
+ using all 
+\begin_inset Formula $T$
+\end_inset
+
+ time periods and obtaining
+\begin_inset Formula 
+\begin{equation}
+\hat{\Omega}=N^{-1}{\displaystyle \sum_{i=1}^{N}}\hat{\ddot{u}}_{i}\hat{\ddot{u}}_{i}^{\prime}
+\end{equation}
+
+\end_inset
+
+drop one of the time periods.
+ It doe not matter which one is dropped (but the first or last are easiest).
+ Apply FGLS to the 
+\begin_inset Formula $T-1$
+\end_inset
+
+ remaining equations using 
+\begin_inset Formula $\hat{\Omega}$
+\end_inset
+
+.
+ Remember, we can still make a case for robust inference because system
+ heteroskedasticity is always a possibility.
+\end_layout
+
+\begin_layout Subsection*
+First-Differencing Estimation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Like FE, FD removes 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+ But it does it by differencing adjacent observations.
+ FE and FD are the same when 
+\begin_inset Formula $T=2$
+\end_inset
+
+, but differe otherwise.
+ Again, start with the orginial equation
+\begin_inset Formula 
+\[
+y_{it}=x_{it}^{\prime}\beta+c_{i}+u_{it},\ t=1,\ldots,T
+\]
+
+\end_inset
+
+For FD, we explicitly lose the first time period
+\begin_inset Formula 
+\begin{equation}
+\Delta y_{it}=\Delta x_{it}^{\prime}\beta+\Delta u_{it},\ t=2,\ldots,T
+\end{equation}
+
+\end_inset
+
+The FD estimator is POLS on the first differences.
+ In practice, we might not difference period dummies, unless we are interested
+ in the year intercepts in the original levels.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+FD also requires a kind of strict exogeneity.
+ The weakest assumption is
+\begin_inset Formula 
+\begin{equation}
+E(\Delta x_{it}\Delta u_{it})=0,\ t=2,\ldots,T
+\end{equation}
+
+\end_inset
+
+Failure of strict exogeneity will cause different inconsistencies in FE
+ and FD when 
+\begin_inset Formula $T>2$
+\end_inset
+
+.
+ In unbalanced cases, FD requires that data exists in adjacent time periods.
+ FE does not.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A sufficient condition is
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\shape up
+FD.1:
+\series default
+ 
+\emph on
+Same as FE.1, 
+\begin_inset Formula $E(u_{it}|x_{i},c_{i})=0,\ t=1,\ldots,T$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We also need the following rank condition
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\shape up
+FD.2:
+\series default
+ Let 
+\begin_inset Formula $\Delta x_{i}$
+\end_inset
+
+ be the 
+\begin_inset Formula $(T-1)\times K$
+\end_inset
+
+ matrix with rows 
+\begin_inset Formula $\Delta x_{it}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\mbox{rank}\ E(\Delta x_{i}^{\prime}\Delta x_{i})=K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This should make inference robust to serial correlation and heteroskedasticity
+ in the differences errors, 
+\begin_inset Formula $e_{it}\equiv u_{it}-u_{i,t-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+After POLS on the first differences, let
+\begin_inset Formula 
+\begin{equation}
+\hat{e}_{it}=\Delta y_{it}-\Delta x_{it}^{\prime}\hat{\beta}_{FD},\ t=2,\ldots T;\ i=1,\ldots,N
+\end{equation}
+
+\end_inset
+
+and let 
+\begin_inset Formula $\hat{e}_{i}=(\hat{e}_{i2},\ldots,\hat{e}_{iT})^{\prime}$
+\end_inset
+
+ be the 
+\begin_inset Formula $(T-1)\times1$
+\end_inset
+
+ residuals.
+ Then
+\begin_inset Formula 
+\begin{equation}
+\widehat{\mbox{AVar}(\hat{\beta}_{FD})}=\left({\displaystyle \sum_{i=1}^{N}}\Delta x_{i}^{\prime}\Delta x_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}\Delta x_{i}^{\prime}\hat{e}_{i}\hat{e}_{i}^{\prime}\Delta x_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}\Delta x_{i}^{\prime}\Delta x_{i}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+is the fully robust variance matrix estimator.
+ Use POLS on the first differences, and then use a 
+\begin_inset Quotes eld
+\end_inset
+
+cluster
+\begin_inset Quotes erd
+\end_inset
+
+ option.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can also add a homoskedasticity assumption
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\shape up
+FD.3:
+\series default
+ 
+\begin_inset Formula $E(e_{i}e_{i}^{\prime}|\Delta x_{i})=\sigma_{e}^{2}I_{T}$
+\end_inset
+
+ where 
+\begin_inset Formula $\sigma_{e}^{2}=E(e_{it}^{2})$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Under Assumption FE.3, the usual POLS statistics in the FD regression are
+ asymptotically valid.
+ If we believe FD.3, then 
+\begin_inset Formula $u_{it}=u_{i,t-1}+e_{it}$
+\end_inset
+
+ is a random walk.
+ In a pure time series setting, this means the regression would be 
+\begin_inset Quotes eld
+\end_inset
+
+spurious.
+\begin_inset Quotes erd
+\end_inset
+
+ For a given 
+\begin_inset Formula $i$
+\end_inset
+
+, the time series 
+\begin_inset Quotes eld
+\end_inset
+
+model
+\begin_inset Quotes erd
+\end_inset
+
+ would be
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{it} & = & c_{i}+x_{it}^{\prime}\beta+u_{it}\\
+u_{it} & = & u_{i,t-1}+e_{it}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is the intercept for unit 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ This doe not define a sensible time series regression because 
+\begin_inset Formula $\left\{ u_{it}\right\} $
+\end_inset
+
+ is not 
+\begin_inset Quotes eld
+\end_inset
+
+mean reverting.
+\begin_inset Quotes erd
+\end_inset
+
+ One way to see this is 
+\begin_inset Formula $\mbox{Var}(u_{it})=\sigma_{e}^{2}t$
+\end_inset
+
+, and so the idiosyncratic error variance grows as a linear function of
+ 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Here, we can allow random walk behavior in 
+\begin_inset Formula $\left\{ u_{it}\right\} $
+\end_inset
+
+ with a short 
+\begin_inset Formula $T$
+\end_inset
+
+ because we have cross section variation driving the large-sample analysis.
+\end_layout
+
+\begin_layout Section*
+Hausman and Taylor Models
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+IV methods for FE and FD require us to find IVs from outside the model.
+ This is often difficult (just as in the cross section case).
+ Hausman and Taylor (1981) proposed assuming that certain variables are
+ appropriately exogenous, and using these as IVs.
+ Write the HT model as
+\begin_inset Formula 
+\begin{equation}
+y_{it}=w_{i}^{\prime}\gamma+x_{it}^{\prime}\beta+c_{i}+u_{it},\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ are time-constant variables (including an intercept) and 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ are time-varying variables.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We maintain the strict exogeneity assumption condition on 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+, RE.1(a):
+\begin_inset Formula 
+\begin{equation}
+E(u_{it}|w_{i},x_{i1},\ldots,x_{iT},c_{i})=0
+\end{equation}
+
+\end_inset
+
+If we want to estimate 
+\begin_inset Formula $\beta$
+\end_inset
+
+, we can just use FE without furhter assumptions.
+ What about estimation of 
+\begin_inset Formula $\gamma$
+\end_inset
+
+? Suppose we 
+\emph on
+assume
+\emph default
+ that 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+E(w_{i}c_{i})=0
+\end{equation}
+
+\end_inset
+
+Now, 
+\begin_inset Formula $\bar{y}_{i}-w_{i}^{\prime}\gamma-\bar{x}_{i}^{\prime}\beta=c_{i}+\bar{u}_{i}$
+\end_inset
+
+, and so
+\begin_inset Formula 
+\begin{equation}
+E\left[w_{i}\left(\bar{y}_{i}-w_{i}\gamma-\bar{x}_{i}^{\prime}\beta\right)\right]=0
+\end{equation}
+
+\end_inset
+
+Therefore,
+\begin_inset Formula 
+\begin{equation}
+E(w_{i}w_{i}^{\prime})\gamma=E\left[w_{i}(\bar{y}_{i}-\bar{x}_{i}^{\prime}\beta)\right]
+\end{equation}
+
+\end_inset
+
+So, a consistent estimator of 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+\hat{\gamma}=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}w_{i}w_{i}^{\prime}\right)^{-1}\left[N^{-1}{\displaystyle \sum_{i=1}^{N}}w_{i}\left(\bar{y}_{i}-\bar{x}_{i}^{\prime}\hat{\beta}_{FE}\right)\right]
+\end{equation}
+
+\end_inset
+
+which is the OLS coefficients from the cross section regression
+\begin_inset Formula 
+\begin{equation}
+\bar{y}_{i}-\bar{x}_{i}^{\prime}\hat{\beta}_{FE}\ \mbox{on}\ w_{i},\ i=1,\ldots,N
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+In practice, 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ would contain a set of year dummies and 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ would contain an overal intercept (which allows the mean of 
+\begin_inset Formula $E(c_{i})$
+\end_inset
+
+ to be different from zero).
+ Computing standard errors for 
+\begin_inset Formula $\hat{\gamma}$
+\end_inset
+
+ must account for estimation of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ by 
+\begin_inset Formula $\hat{\beta}_{FE}$
+\end_inset
+
+.
+ We could stack the two sets of moment conditions and use system IV.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now analyze the model under more general assumptions.
+ First, partition 
+\begin_inset Formula $w_{i}=(w_{i1},w_{i2})$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{it}=(x_{it1},x_{it2})$
+\end_inset
+
+ where 
+\begin_inset Formula $w_{i1}$
+\end_inset
+
+ is 
+\begin_inset Formula $J_{1}\times1$
+\end_inset
+
+, 
+\begin_inset Formula $w_{i2}$
+\end_inset
+
+ is 
+\begin_inset Formula $J_{2}\times1$
+\end_inset
+
+, 
+\begin_inset Formula $x_{it1}$
+\end_inset
+
+ is 
+\begin_inset Formula $K_{1}\times1$
+\end_inset
+
+, and 
+\begin_inset Formula $x_{it2}$
+\end_inset
+
+ is 
+\begin_inset Formula $K_{2}\times1$
+\end_inset
+
+.
+ Then assume
+\begin_inset Formula 
+\begin{eqnarray}
+E(w_{i1}c_{i}) & = & 0\\
+E(x_{it1}c_{i}) & = & 0,\ t=1,\ldots,T
+\end{eqnarray}
+
+\end_inset
+
+Write the system as
+\begin_inset Formula 
+\begin{equation}
+y_{i}=w_{i}^{\prime}\gamma+x_{i}\beta+v_{i}
+\end{equation}
+
+\end_inset
+
+Let 
+\begin_inset Formula $Q_{T}$
+\end_inset
+
+ be the 
+\begin_inset Formula $T\times T$
+\end_inset
+
+ demeaning matrix.
+ Then 
+\begin_inset Formula $Q_{T}x_{i}$
+\end_inset
+
+, is the 
+\begin_inset Formula $T\times K$
+\end_inset
+
+ matrix with rows 
+\begin_inset Formula $\ddot{x}_{it}^{\prime}$
+\end_inset
+
+, is a valid set of instruments because 
+\begin_inset Formula $Q_{T}j_{T}=0$
+\end_inset
+
+ and so
+\begin_inset Formula 
+\begin{equation}
+\left(Q_{T}x_{i}\right)^{\prime}v_{i}=\left(Q_{T}x_{i}\right)^{\prime}u_{i}
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+E\left[\left(Q_{T}x_{i}\right)^{\prime}u_{i}\right]=0
+\end{equation}
+
+\end_inset
+
+under 
+\begin_inset Formula $E(u_{it}|x_{i},c_{i})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Under the assumptions given, 
+\begin_inset Formula $w_{i1}$
+\end_inset
+
+ can act as its own IVs.
+ But we need instruments for 
+\begin_inset Formula $w_{i2}$
+\end_inset
+
+.
+ If we define 
+\begin_inset Formula $x_{i1}^{o}=(x_{i11},x_{i21},\ldots x_{iT1})^{\prime}$
+\end_inset
+
+ then 
+\begin_inset Formula $E(x_{i1}^{o}c_{i})=0$
+\end_inset
+
+; technically, we can use all of 
+\begin_inset Formula $x_{i1}^{o}$
+\end_inset
+
+ as IVs in each time period.
+ Then the matrix of IVs is
+\begin_inset Formula 
+\begin{equation}
+\left[Q_{T}x_{i},j_{T}\otimes(w_{i1},x_{i1}^{o})\right]
+\end{equation}
+
+\end_inset
+
+But, it is probably misleading to think all of 
+\begin_inset Formula $x_{i1}^{o}$
+\end_inset
+
+ has explanatory power for the time-constant 
+\begin_inset Formula $w_{i2}$
+\end_inset
+
+.
+ For example, under certain assumptions (i.i.d.
+ is sufficient, but not necessary), 
+\begin_inset Formula $L(w_{i2}|x_{i1}^{o})=L(w_{i2}|\bar{x}_{i1})$
+\end_inset
+
+ where 
+\begin_inset Formula $\bar{x}_{i1}$
+\end_inset
+
+ is the 
+\begin_inset Formula $K_{2}\times1$
+\end_inset
+
+ vector of time averages.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $K_{1}\geq J_{2}$
+\end_inset
+
+, we might only use 
+\begin_inset Formula $\bar{x}_{i1}$
+\end_inset
+
+.
+ (If 
+\begin_inset Formula $K_{1}<J_{2}$
+\end_inset
+
+ the entire strategy is questionable.) In other words, at time 
+\begin_inset Formula $t$
+\end_inset
+
+ use IVs
+\begin_inset Formula 
+\begin{equation}
+(\ddot{x}_{it},w_{i1},\bar{x}_{i1})
+\end{equation}
+
+\end_inset
+
+and use REIV.
+ (Again, we should make the inference robust.) Given the instruments, we
+ can use GMM-3SLS with unrestricted 
+\begin_inset Formula $\hat{\Omega}$
+\end_inset
+
+ or even optimal GMM with a general weighting matrix.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The bottom line is that, if we ahve enough time-varying variables that we
+ think are uncorrelated with 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ (as well as being strictly exogenous with respect to 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+), then we can allow a subset of the time-constant variables to be correlated
+ with 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Estimation Under Sequential Exogeneity
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now consider IV estimation of the model
+\begin_inset Formula 
+\[
+y_{it}=x_{it}^{\prime}\beta+c_{i}+u_{it},\ t=1,\ldots,T
+\]
+
+\end_inset
+
+under the sequential exogeneity assumption
+\begin_inset Formula 
+\begin{equation}
+E(u_{it}|x_{it},x_{i,t-1},\ldots,x_{i1},c_{i})=0,\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+Actually, for consistency, we can get by with the weaker form
+\begin_inset Formula 
+\begin{equation}
+\mbox{Cov}(x_{is},u_{it})=0,\ \forall\ s\leq t
+\end{equation}
+
+\end_inset
+
+This leads to simple moment conditions after first differencing:
+\begin_inset Formula 
+\begin{eqnarray}
+\Delta y_{it} & = & \Delta x_{it}^{\prime}\beta+\Delta u_{it},\ t=2,\ldots,T\\
+E(x_{is}\Delta u_{it}) & = & 0,\ s=1,\ldots,t-1;\ t=2,\ldots,T
+\end{eqnarray}
+
+\end_inset
+
+Therefore, at time 
+\begin_inset Formula $t$
+\end_inset
+
+, the available instruments in the FD equation are in the vector 
+\begin_inset Formula $x_{i,t-1}^{o}\equiv(x_{i1}^{\prime},x_{i2}^{\prime},\ldots,x_{i,t-1}^{\prime})^{\prime},\ t=2,\ldots,T$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The matrix of instruments is
+\begin_inset Formula 
+\[
+W_{i}=\mbox{diag}(x_{i1}^{o\prime},x_{i2}^{o\prime},\ldots,x_{i,T-1}^{o\prime})
+\]
+
+\end_inset
+
+which has 
+\begin_inset Formula $T-1$
+\end_inset
+
+ rows.
+ It is fairly routine to apply GMM estimation with an optimal weighting
+ matrix.
+ With even moderate 
+\begin_inset Formula $T$
+\end_inset
+
+ there are lots of overidentifying restrictions (at least nominally).
+ A simple strategy mentioned earlier is available: Estimate a reduced form
+ for 
+\begin_inset Formula $\Delta x_{it}$
+\end_inset
+
+ separately for each 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ So, at time 
+\begin_inset Formula $t$
+\end_inset
+
+, run the regression 
+\begin_inset Formula $\Delta x_{it}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i,t-1}^{o}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,\ldots,N$
+\end_inset
+
+, and obtain the fitted values, 
+\begin_inset Formula $\widehat{\Delta x_{it}}$
+\end_inset
+
+.
+ Then, estimate the FD equation
+\begin_inset Formula 
+\[
+\Delta y_{it}=\Delta x_{it}^{\prime}\beta+\Delta u_{it},\ t=2,\ldots,T
+\]
+
+\end_inset
+
+by pooled IV using instruments (not regressors) 
+\begin_inset Formula $\widehat{\Delta x_{it}}$
+\end_inset
+
+.
+ This should probably be done even if using full GMM to confirm that the
+ IVs are sufficiently correlated with 
+\begin_inset Formula $\Delta x_{it}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Any of the IV approaches can suffer from a weak instrument problem when
+ 
+\begin_inset Formula $\Delta x_{it}$
+\end_inset
+
+ has little correlation with 
+\begin_inset Formula $x_{i,t-1}^{o}$
+\end_inset
+
+.
+ In particular, if
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{it} & = & \omega_{t}+x_{i,t-1}+r_{it}\\
+E(r_{it}|x_{i,t-1},x_{i,t-2},\ldots,x_{i0}) & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+then 
+\begin_inset Formula $E(\Delta x_{it}|x_{i,t-1}^{o})=E(\Delta x_{it})=\omega_{t}$
+\end_inset
+
+, and IV fails when a full set of year intercepts is included in the equation.
+ If we add some assumptions, we can get more moment conditions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose we assume dynamic completeness in the mean
+\begin_inset Formula 
+\begin{equation}
+E(u_{it}|x_{it},y_{i,t-1},x_{i,t-1},\ldots,y_{i1},x_{i1},c_{i})=0
+\end{equation}
+
+\end_inset
+
+This condition rules out serial correlation in 
+\begin_inset Formula $\left\{ u_{it}\right\} $
+\end_inset
+
+, which is often too restrictive when 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ does not include 
+\begin_inset Formula $y_{i,t-1}$
+\end_inset
+
+.
+ (If 
+\begin_inset Formula $y_{i,t-1}\in x_{it}$
+\end_inset
+
+, there is no differene between sequential exogeneity and dynamic completeness.)
+ Dynamic completeness means many more moment conditions are available.
+ Using linear functions only, for 
+\begin_inset Formula $t=3,\ldots,T$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+E\left[\Delta u_{i,t-1}(c_{i}+u_{it})\right]=E\left[(\Delta y_{i,t-1}-\Delta x_{i,t-1}\beta)^{\prime}(y_{it}-x_{it}^{\prime}\beta)\right]=0
+\end{equation}
+
+\end_inset
+
+One drawback is that we often do not want to assume dynamic completeness.
+ Plus, the extra conditions are nonlinear in parameters.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Arellano and Bover (1995) suggested instead the restrictions
+\begin_inset Formula 
+\begin{equation}
+\mbox{Cov}(\Delta x_{it}c_{i})=0,\ t=2,\ldots,T
+\end{equation}
+
+\end_inset
+
+which allows the 
+\begin_inset Quotes eld
+\end_inset
+
+level
+\begin_inset Quotes erd
+\end_inset
+
+ of the sequence 
+\begin_inset Formula $\left\{ x_{it}:t=1,\ldots,T\right\} $
+\end_inset
+
+ to be correlated with 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ but not the changes.
+ It holds if
+\begin_inset Formula 
+\begin{equation}
+x_{it}=\omega_{t}+h_{i}+r_{it}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\left\{ r_{it}:t=1,\ldots,T\right\} $
+\end_inset
+
+ are uncorrelated with 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+ This setup allows 
+\begin_inset Formula $h_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ to be arbitrarily correlated.
+ However, the moment conditions would fail if, say,
+\begin_inset Formula 
+\[
+x_{it}=\omega_{t}+h_{i}+g_{i}t+r_{it}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $g_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ are correlated.
+ To use the Arellano and Bover moment conditions, we need to let 
+\begin_inset Formula $\alpha=E(c_{i})$
+\end_inset
+
+ to allow a nonzero mean.
+ Then
+\begin_inset Formula 
+\begin{equation}
+E\left[\Delta x_{it}\left((c_{i}-\alpha)\right)+u_{it}\right]=0,\ t=2,\ldots,T
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+In terms of the parameters and observable data, we have the moment conditions
+\begin_inset Formula 
+\begin{equation}
+E\left[\Delta x_{it}(y_{it}-\alpha-x_{it}^{\prime}\beta)\right]=0,\ t=2,\ldots,T
+\end{equation}
+
+\end_inset
+
+We can use these along with the moment conditions in the FD equation that
+ are implied by sequential exogeneity.
+ Note that all moment conditions are linear in 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Because we are mixing moment conditions in FD and levels, if 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ includes year dummies (it should) then these must be differenced in 
+\begin_inset Formula $\Delta x_{it}$
+\end_inset
+
+.
+ The full set of moment conditions
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{c}
+E\left[x_{i1}\left(\Delta y_{i2}-\Delta x_{i2}^{\prime}\beta\right)\right]\\
+\vdots\\
+E\left[x_{i,T-1}^{o}\left(\Delta y_{iT}-\Delta x_{iT}^{\prime}\beta\right)\right]\\
+E\left[\Delta x_{i2}\left(\Delta y_{i2}-\Delta x_{i2}^{\prime}\beta\right)\right]\\
+\vdots\\
+E\left[\Delta x_{iT}\left(\Delta y_{iT}-\Delta x_{iT}^{\prime}\beta\right)\right]
+\end{array}\right]=0
+\end{equation}
+
+\end_inset
+
+We use GMM with a gneral weighting matrix to allow arbitrary correlation
+ across al time periods/equations.
+ (Now called 
+\begin_inset Quotes eld
+\end_inset
+
+system
+\begin_inset Quotes erd
+\end_inset
+
+ GMM.)
+\end_layout
+
+\begin_layout Subsection*
+AR(1) Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the simple AR(1) model
+\begin_inset Formula 
+\[
+y_{it}=\rho y_{i,t-1}+c_{i}+u_{it},\ t=1,\ldots,T
+\]
+
+\end_inset
+
+Typically, the minimal assumpitons imposed are
+\begin_inset Formula 
+\[
+E(y_{is}u_{it})=0,\ s=0,\ldots,t-1,\ t=1,\ldots,T
+\]
+
+\end_inset
+
+(implied by dynamic completeness) so, for 
+\begin_inset Formula $t=2,\ldots,T$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+E\left[y_{is}\left(\Delta y_{it}-\rho\Delta y-i,t-1\right)\right]=0,\ s\leq t-2
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Again, the model can suffer from weak instruments when 
+\begin_inset Formula $\rho$
+\end_inset
+
+ is close to unity.
+ Blundell and Bond (1998) showed that if the condition
+\begin_inset Formula 
+\[
+\mbox{Cov}(\Delta y_{i1},c_{i})=\mbox{Cov}(y_{i1}-y_{i0},c_{i})=0
+\]
+
+\end_inset
+
+is added to 
+\begin_inset Formula $E(u_{it}|y_{i,t-1},\ldots,y_{i0},c_{i})=0$
+\end_inset
+
+ then the Arellano and Bover extra moment conditions hold
+\begin_inset Formula 
+\[
+E\left[\Delta y_{i,t-1}\left(y_{it}-\alpha-\rho y_{i,t-1}\right)\right]=0
+\]
+
+\end_inset
+
+The condition
+\begin_inset Formula 
+\[
+\mbox{Cov}(\Delta y_{i1},c_{i})=0
+\]
+
+\end_inset
+
+can be interpreted as a restriction on the initial condition, 
+\begin_inset Formula $y_{i0}$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $\left|\rho\right|<1$
+\end_inset
+
+, write 
+\begin_inset Formula $y_{i0}$
+\end_inset
+
+ as a deviation from its steady state: 
+\begin_inset Formula $y_{i0}=\nicefrac{c_{i}}{(1-\rho)}+r_{i0}$
+\end_inset
+
+.
+ Then, the extra condition is
+\begin_inset Formula 
+\[
+\mbox{Cov}(r_{i0},c_{i})=0
+\]
+
+\end_inset
+
+the deviation of 
+\begin_inset Formula $y_{i0}$
+\end_inset
+
+ from its steady state is uncorrelated with the SS.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, let us consider extensions of the AR(1) model
+\begin_inset Formula 
+\[
+y_{it}=\rho y_{i,t-1}+z_{it}^{\prime}\gamma+c_{i}+u_{it},\ t=1,\ldots,T
+\]
+
+\end_inset
+
+and use FD
+\begin_inset Formula 
+\[
+\Delta y_{it}=\rho\Delta y_{i,t-1}+\Delta z_{it}^{\prime}\gamma+\Delta u_{it},\ t=2,\ldots,T
+\]
+
+\end_inset
+
+We can use 
+\begin_inset Formula $\Delta z_{it}$
+\end_inset
+
+ as own IVs if they are strictly exogenous, 
+\begin_inset Formula $y_{i,t-h},\ h\geq2$
+\end_inset
+
+ and we can still add moment conditions in levels.
+ Because 
+\begin_inset Formula $y_{i,t-1}$
+\end_inset
+
+ is incuded as a control, 
+\begin_inset Formula $z_{it}$
+\end_inset
+
+ (perhaps program assignment) is allowed to be correlated with 
+\begin_inset Formula $y_{i,t-1}$
+\end_inset
+
+ as well as with 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $\left\{ z_{it}\right\} $
+\end_inset
+
+ is not strictly exogenous, we can use 
+\begin_inset Formula $\left\{ z_{i,t-1},\ldots,z_{i1}\right\} $
+\end_inset
+
+ as IVs, along with 
+\begin_inset Formula $\left\{ y_{i,t-2},\ldots,y_{i0}\right\} $
+\end_inset
+
+ in the FD equation at time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ And, we still might use, for 
+\begin_inset Formula $t=2,\ldots,T$
+\end_inset
+
+, the Arellano-Bover moments:
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left[\Delta y_{i,t-1}\left(y_{it}-\alpha-\rho y_{i,t-1}-z_{it}^{\prime}\gamma\right)\right] & = & 0\\
+E\left[\Delta z_{it}\left(y_{it}-\alpha-\rho y_{i,t-1}-z_{it}^{\prime}\gamma\right)\right] & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+As usual, time dummies act as their own IVs.
+\end_layout
+
+\end_body
+\end_document

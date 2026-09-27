@@ -1,0 +1,3740 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 19: Censored Data, Sample Selection, and Attrition
+\end_layout
+
+\begin_layout Section*
+19.1
+\begin_inset space \quad{}
+\end_inset
+
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In previous chapters, we assume that we can obtain a random sample from
+ the population of interest.
+ In this chapter, we turn to several missing data problems.
+ It is critical, even more so than in the previous chapters, to distinguish
+ between assumptions placed on the population model and assumptions about
+ how the data were generated.
+ Under random sampling, the itneresting issues concern the population model
+ and assumptions we make about distributional features in the population.
+ With nonrandom sampling, we must take particular care in stating assumptions
+ about the population and separately stating assumptions on the sampling
+ scheme.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We first study the general problem of 
+\series bold
+data censoring
+\series default
+.
+ With data censoring we can still randomly sample 
+\emph on
+units
+\emph default
+ from the relevant population, but we face the problem that one or more
+ of the variables is censored: we only observe the response over a certain
+ range.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In addition to data censoring, we also treat the general problem of sample
+ selection.
+ With sample selection problems we may or may not be able to randomly sample
+ units from the population.
+ The case of 
+\series bold
+data truncation 
+\series default
+is a situation where we do not randomly draw units from the population;
+ rather, we randomly sample from a subpopulation defined in terms of one
+ or more of the observed variables.
+ Naturally, the population parameters cannot always be identified with such
+ sampling schemes, but they can be under suitable assumptions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Another sample selection problem is 
+\series bold
+incidental truncation
+\series default
+, where certain variables are observed only if other variables take on particula
+r values.
+ In such cases, we often can randomly sample units, but we have data missing
+ on key varibles (and, unlike in the data censoring case, we have no information
+ on the outcome, or even a range of possible outcomes, of the missing data).
+\end_layout
+
+\begin_layout Section*
+19.2
+\begin_inset space \quad{}
+\end_inset
+
+Data Censoring
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Although the statistical models used for limited dependent variables and
+ censored dependent variables are similar, their interpretaiton, as well
+ as the way one views and reacts to violations of standard assumptions,
+ is very different.
+ Because the statistical tools for handling censored data are very similar
+ to specifying and estimating models for limited dependent variables, our
+ coverage of the estimation details can be terse.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Our main focus on this chaper is on a very familiar model: the linear model
+ from inroductory econometrics.
+ Let 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ denote the variable of interest and assume that it follows a standard linear
+ model in the population:
+\begin_inset Formula 
+\begin{eqnarray}
+y_{i} & = & x_{i}^{\prime}\beta+u_{i}\\
+E(u_{i}|x_{i}) & = & 0
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ with first-element unity.
+ Under assumptions (1) and (2), if we have random draws 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+ from the population, then OLS is consistent and 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+-asymptotically normal for the parameters of interest, 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ The problem we study in this chapter occurs when we observe only a censored
+ version of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection*
+19.2.1
+\begin_inset space \quad{}
+\end_inset
+
+Binary Censoring
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We first cover the case where the censoring of the underlying response variable
+ is extreme.
+ Along with 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+, we observe the binary response
+\begin_inset Formula 
+\begin{equation}
+w_{i}=1\left[y_{i}>r_{i}\right]
+\end{equation}
+
+\end_inset
+
+where we assume, for now, that the chance that 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ equals 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ is zero.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What is the most natural way to proceed to estimate 
+\begin_inset Formula $\beta$
+\end_inset
+
+? If we impose some strong assumptions on the underlying population and
+ the nature of 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+, then we can proceed with MLE.
+ In particular, assume
+\begin_inset Formula 
+\begin{equation}
+u_{i}|x_{i},r_{i}\sim N(0,\sigma^{2})
+\end{equation}
+
+\end_inset
+
+Assumption (4) implies that 
+\begin_inset Formula $y_{i}=x_{i}^{\prime}\beta+u_{i}$
+\end_inset
+
+ actually satisfies the classical linear model (CLM).
+ It also requires that 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, that is,
+\begin_inset Formula 
+\begin{equation}
+D(y_{i}|x_{i},r_{i})=D(y_{i}|x_{i})
+\end{equation}
+
+\end_inset
+
+Assumption (5) is satisfied if 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ is randomized or if 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ is chosen as a function of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, or some combination of these alternatives.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Given assumption (4)
+\begin_inset Formula 
+\begin{eqnarray}
+P(w_{i}=1|x_{i},r_{i}) & = & P(y_{i}>r_{i}|x_{i},r_{i})\nonumber \\
+ & = & P\left(\left.\frac{u_{i}}{\sigma}>\frac{(r_{i}-x_{i}^{\prime}\beta)}{\sigma}\right|x_{i},r_{i}\right)\nonumber \\
+ & = & 1-\Phi\left[\frac{(r_{i}-x_{i}^{\prime}\beta)}{\sigma}\right]\nonumber \\
+ & = & \Phi\left[\frac{(x_{i}^{\prime}\beta-r_{i})}{\sigma}\right]
+\end{eqnarray}
+
+\end_inset
+
+We can see that the bianry response, which indicates whether unit 
+\begin_inset Formula $i$
+\end_inset
+
+ is in favor of the project at cost 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+, follows a probit model with parameter vector 
+\begin_inset Formula $\nicefrac{\beta}{\sigma}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $-\nicefrac{1}{\sigma}$
+\end_inset
+
+ on 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+.
+ Therefore, all the parameters, including 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, are identified provided 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is not perfectly collinear and 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ varies across 
+\begin_inset Formula $i$
+\end_inset
+
+ in a way not perfectly linearly related to 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Given the data censoring, the MLEs are the asymptotically efficient estimators
+ of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma$
+\end_inset
+
+.
+ Because the underlying population model is linear, we are interested in
+ the slopes, 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The costs of the binary censoring scheme are potentially severe.
+ If we could observe 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, specifying 
+\begin_inset Formula $E(y_{i}|x_{i})=x_{i}^{\prime}\beta$
+\end_inset
+
+ would suffice for consistent estimation of 
+\begin_inset Formula $\beta$
+\end_inset
+
+; in fact, we could just specify a linear projection and use OLS.
+ With censoring, we must add more, and assumption (4) implies that the underlyin
+g model satisfies the CLM.
+ It is in this setting where discussion of the delterious effects of nonnormalit
+y and heteroskedasticity when using probit models make sense.
+ With data censoring, we are interested only in the parameters in the underlying
+ linear model.
+ Consequently, it is now legitimate to be concerned about the effects on
+ the parameter estimates of heteroskedasticity or nonnormality in the underlying
+ linear model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is zero for some subset of the population, a sensible population model
+ is the Type I Tobit:
+\begin_inset Formula 
+\begin{equation}
+y_{i}=\max(0,x_{i}^{\prime}\beta+u_{i})
+\end{equation}
+
+\end_inset
+
+under assumption (4).
+ If we had a random sample, we would use Type I Tobit MLE to estimate 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ (naturally, 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ would not come into play), and we would use the MLEs to estimate the means,
+ say, from a Type I Tobit.
+ Interestingly, if we have binary censoring, the estimation procedure is
+ identical to that outlined for a linear model for 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, provided that the 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ are all strictly positive.
+ Because we do not observe 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, we cannot distinguish between equations (1) and (7) when 
+\begin_inset Formula $r_{i}>0$
+\end_inset
+
+.
+ But if we believe that 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is zero for a nontrivial fraction of the population, any calculations should
+ reflect that belief by using the Type I Tobit formulas for estimating partial
+ effects.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ cannot take on negative values, the linear model we started with in equation
+ (1) is not ideal.
+ The following Tobit assumption
+\begin_inset Formula 
+\begin{equation}
+y=\max(0,x_{i}^{\prime}\beta+u_{i})
+\end{equation}
+
+\end_inset
+
+leads to the same estimation method but implies a Tobit form for 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+.
+ If we think 
+\begin_inset Formula $y_{i}>0$
+\end_inset
+
+ in the population, then
+\begin_inset Formula 
+\begin{equation}
+y_{i}=\exp(x_{i}^{\prime}\beta+u_{i})
+\end{equation}
+
+\end_inset
+
+is more attractive.
+ Then, 
+\begin_inset Formula $\log(y_{i})=x_{i}^{\prime}\beta+u_{i}$
+\end_inset
+
+, so that the previous analysis applies but with 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ replaced with 
+\begin_inset Formula $\log(r_{i})$
+\end_inset
+
+.
+ The differences in the functional forms for 
+\begin_inset Formula $P(w_{i}=1|x_{i},r_{i})$
+\end_inset
+
+ provides a way to distinguish between the different assumptions.
+\end_layout
+
+\begin_layout Subsection*
+19.2.2
+\begin_inset space \quad{}
+\end_inset
+
+Interval Coding
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now consider the linear model (1) in a scenario where the continuous,
+ quantitative outcome, 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, is only recorded to fall into a particular interval.
+ In this case we say we have 
+\series bold
+interval-coded data
+\series default
+ (or 
+\series bold
+interval-censored data
+\series default
+).
+ We are still interested in the population regress 
+\begin_inset Formula $E(y_{i}|x_{i})=x_{i}^{\prime}\beta$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $r_{1}<\cdots<r_{J}$
+\end_inset
+
+ denote the 
+\emph on
+known
+\emph default
+ interval limits; these are specified as part of the survey design.
+ For example, rather than asking individuals to report actual annual income,
+ they report the interval that their imcome falls into.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Under the normality assumption in equation (4), we can estimate 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+.
+ We can define
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+w_{i}=0 & \mbox{if}\ y_{i}\leq r_{1}\\
+w_{i}=1 & \mbox{if}\ r_{1}<y_{i}\leq r_{2}\\
+\vdots\\
+w_{i}=J & \mbox{if}\ y>r_{J}
+\end{cases}
+\end{equation}
+
+\end_inset
+
+and easily obtain the conditional probabilities 
+\begin_inset Formula $P(w_{i}=j|x_{i})$
+\end_inset
+
+ for 
+\begin_inset Formula $j=0,\ldots,J$
+\end_inset
+
+.
+ The log likelihood for a random draw 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{eqnarray}
+l_{i}(\beta,\sigma) & = & 1\left[w_{i}=0\right]\log\left\{ \Phi\left[\frac{\left(r_{1}-x_{i}^{\prime}\beta\right)}{\sigma}\right]\right\} +1\left[w_{i}=1\right]\log\left\{ \Phi\left[\frac{\left(r_{2}-x_{i}^{\prime}\beta\right)}{\sigma}\right]-\Phi\left[\frac{\left(r_{1}-x_{i}^{\prime}\beta\right)}{\sigma}\right]\right\} \nonumber \\
+ &  & +\cdots+1\left[w_{i}=J\right]\log\left\{ 1-\Phi\left[\frac{\left(r_{J}-x_{i}^{\prime}\beta\right)}{\sigma}\right]\right\} 
+\end{eqnarray}
+
+\end_inset
+
+The maximum likelihood estimators, 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\sigma}^{2}$
+\end_inset
+
+, are often called 
+\series bold
+interval regression estimators
+\series default
+, with the understanding that the underlying population distribution is
+ homoskedastic normal.
+ We interpret the 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ as if we had been able to run the regression 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,\ldots N$
+\end_inset
+
+.
+ Imposing assumptions of the CLM allows us to estimate the parameters in
+ the distribution 
+\begin_inset Formula $D(y_{i}|x_{i})$
+\end_inset
+
+, even though the data are interval censored.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Sometimes the interval limits change across 
+\begin_inset Formula $i$
+\end_inset
+
+, a possibility that causes no problems if we assume the limits are exogenous
+ in the following sense:
+\begin_inset Formula 
+\begin{equation}
+D(y_{i}|x_{i},r_{i1},\ldots,r_{iJ})=D(y_{i}|x_{i})
+\end{equation}
+
+\end_inset
+
+Generally, the limits can be a function of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ (because these are being conditioned on).
+ The resulting log likelihood is exactly as in equation (11) with 
+\begin_inset Formula $r_{j}$
+\end_inset
+
+ replaced with 
+\begin_inset Formula $r_{ij}$
+\end_inset
+
+.
+ Also, even if 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ is set to some value within the interval that contains 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, MLE estimators of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ will be the same provided the definition of 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ determines the proper interval.
+\end_layout
+
+\begin_layout Subsection*
+19.2.3
+\begin_inset space \quad{}
+\end_inset
+
+Censoring from Above and Below
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Two kinds of censoring are common: one is seen when the value of a variable
+ is observed only when it is below a known cap, the other when it is above
+ a known floor (or, in some cases, both).
+ Consider first the case of 
+\series bold
+right censoring
+\series default
+ (censoring from above).
+ For each 
+\begin_inset Formula $i$
+\end_inset
+
+, a censoring threshold, 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+, is observed.
+ When we randomly draw a unit from the population, we observe the explanatory
+ variables, 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ However, rather tahn observing the outcome on 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, we effectively observe
+\begin_inset Formula 
+\begin{equation}
+w_{i}=\min(y_{i},r_{i})
+\end{equation}
+
+\end_inset
+
+If the underlying population distribution for 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is continuous, the probability that 
+\begin_inset Formula $y_{i}=r_{i}$
+\end_inset
+
+ is zero, and so, if 
+\begin_inset Formula $w_{i}=r_{i}$
+\end_inset
+
+, we know that the observation is censored; if 
+\begin_inset Formula $w_{i}<r_{i}$
+\end_inset
+
+, we know that 
+\begin_inset Formula $w_{i}=y_{i}$
+\end_inset
+
+; that is, we observe 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is (partially) discrete, there can be postivie probability that 
+\begin_inset Formula $y_{i}=r_{i}$
+\end_inset
+
+.
+ As a practical matter, when censoring points change across 
+\begin_inset Formula $i$
+\end_inset
+
+, it is helpful in data sets to define a binary variable indicating whether
+ an observation is censored.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For concreteness, we focus on the case where the population distribution
+ of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is continuous.
+ Let 
+\begin_inset Formula $f(y_{i}|x_{i};\theta)$
+\end_inset
+
+ denote the conditional density.
+ Under 
+\begin_inset Formula $D(y_{i}|x_{i},r_{i})=D(y_{i}|x_{i})$
+\end_inset
+
+, we can easily obtain the density of 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $(x_{i},r_{i})$
+\end_inset
+
+ because, for 
+\begin_inset Formula $w<r_{i}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+P(w_{i}\leq w|x_{i},r_{i})=P(y_{i}\leq w|x_{i})=F(w|x_{i};\theta)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $F(\cdot|x_{i};\theta)$
+\end_inset
+
+ is the cdf of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Therefore, the probability density of 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $(x_{i},r_{i})$
+\end_inset
+
+ is simply 
+\begin_inset Formula $f(w|x_{i};\theta)$
+\end_inset
+
+ for 
+\begin_inset Formula $w<r_{i}$
+\end_inset
+
+, that is for vlaues strictly less than the censoring point.
+ Further,
+\begin_inset Formula 
+\[
+P(w_{i}=r_{i}|x_{i},r_{i})=P(y_{i}\geq r_{i}|x_{i},r_{i})=1-F(r_{i}|x_{i};\theta)
+\]
+
+\end_inset
+
+It follows that we can write the probability density of 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $(x_{i},r_{i})$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{equation}
+g(w|x_{i},r_{i};\theta)=\left[f(w|x_{i};\theta)\right]^{1\left[w<r_{i}\right]}\left[1-F(r_{i}|x_{i};\theta)\right]^{1\left[w=r_{i}\right]}
+\end{equation}
+
+\end_inset
+
+The log-likelihood function for a random draw 
+\begin_inset Formula $i$
+\end_inset
+
+ (where we do not bother to distinguish between the 
+\begin_inset Quotes eld
+\end_inset
+
+true
+\begin_inset Quotes erd
+\end_inset
+
+ value of theta and a generic value is
+\begin_inset Formula 
+\begin{equation}
+\log\left[g(w|x_{i},r_{i};\theta)\right]=1\left[w_{i}<r_{i}\right]\log\left[f(w_{i}|x_{i};\theta)\right]+1\left[w_{i}=r_{i}\right]\log\left[1-F(r_{i}|x_{i};\theta)\right]
+\end{equation}
+
+\end_inset
+
+and we sum this expression across all 
+\begin_inset Formula $i$
+\end_inset
+
+ to obtain the log likelihood for the entire smaple.
+ In the vast majority of cases, the conditions sufficient for MLE to be
+ well behaved hold for sensored estimation because the model 
+\begin_inset Formula $f(y|x;\theta)$
+\end_inset
+
+ is smooth 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An interesting feature of equation (15) is that we only need to observe
+ the censoring point, 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+, for censored observations.
+ (However, we do need to know which observations are censored and which
+ are not.) This feature of the MLE approach is useful because sometimes in
+ applications to duration models, the censoring value is reported only for
+ observations that are actually censored.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the leading case, 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ follows a classical linear model in the population of interest, that is
+\begin_inset Formula 
+\begin{equation}
+D(y_{i}|x_{i})=N(x_{i}^{\prime}\beta,\sigma^{2})
+\end{equation}
+
+\end_inset
+
+in which case we have what is typically called the 
+\series bold
+censored normal regression model
+\series default
+.
+ The log likelihood for the censored normal regression is
+\begin_inset Formula 
+\begin{equation}
+l_{i}(\theta)=1\left[w_{i}<r_{i}\right]\log\left\{ \frac{1}{\sigma}\phi\left[\frac{\left(w_{i}-x_{i}^{\prime}\beta\right)}{\sigma}\right]\right\} +1\left[w_{i}=r_{i}\right]\log\left\{ 1-\Phi\left[\frac{(w_{i}-x_{i}^{\prime}\beta)}{\sigma}\right]\right\} 
+\end{equation}
+
+\end_inset
+
+Often, a transformation, such as taking the natural 
+\begin_inset Formula $\log$
+\end_inset
+
+, is needed to make equation (16) a reasonable assumption.
+ In cases where no such transformation is available that ensures normality,
+ the more general formulation in equation (15) can be used to obtain the
+ log likelihood.
+\end_layout
+
+\begin_layout Section*
+19.3
+\begin_inset space \quad{}
+\end_inset
+
+Overview of Sample Selection
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now turn to estimation when a sample from subset of the population is
+ used to estimate the unknown parameters.
+ The term 
+\series bold
+selected sample
+\series default
+ is generally used to describe a sample that is not randomly drawn from
+ the underlying population.
+ There are a variety of 
+\series bold
+selections mechaism
+\series default
+ that result in selected samples.
+ Some mechanisms are due to sample design, while others are due to the behavior
+ of the units being sampled, inluding nonresponse on survery questions and
+ attrition from social programs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An important general point to remember is that sample selection can only
+ be an issue once the population of interest has been carefully specified.
+ If we propose a model for a subset of a larger population, it is proper
+ to proceed by obtaining a radom sample from that subpopulation and then
+ using the standard econometric methods that we have covered thus far.
+ That we do not have a random sample from the larger population does not
+ affect our ability to conssitently estimate the parameters of the mmodel
+ for the subpopulation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There are a fewq common issues where nonrandom sampling is relevant and
+ can cause serious problems.
+ Somtimes data is missing on all variables for a subset of the population
+ as a result of survey design.
+ In other cases, units are randomly drawn from the population but data are
+ missing on one or more variables for some units in the sample.
+ Using a subset of a random sample because of missing data can lead to a
+ sample selection problem.
+ As we will see, if the reason the observations are missing is appropriately
+ exogenous, using the subsample has no serious consequences.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the next several sections, we cover a variety of sample selection issues,
+ including tests and corrections.
+\end_layout
+
+\begin_layout Section*
+19.4
+\begin_inset space \quad{}
+\end_inset
+
+When Can Sample Selection Be Ignored?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Here, we discuss under what circumstances does using a nonrandom sample
+ from a specified population nevertheless consistently estimate the populaiton
+ parameters?
+\end_layout
+
+\begin_layout Subsection*
+19.4.1
+\begin_inset space \quad{}
+\end_inset
+
+Linear Models: Estimation by OLS and S2SLS
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We begin by obtaining conditions under which esitmation of the population
+ model by two-stage least squares (2SLS) using a selected sample is consistent
+ for the population parameters.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We assume there is a population represented by the random vector 
+\begin_inset Formula $(x,y,z)$
+\end_inset
+
+, where 
+\begin_inset Formula $x$
+\end_inset
+
+ is a 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ vector of explanatory variables, 
+\begin_inset Formula $y$
+\end_inset
+
+ is the scalar response variable, and 
+\begin_inset Formula $z$
+\end_inset
+
+ is a 
+\begin_inset Formula $L\times1$
+\end_inset
+
+ vector of instrumental variables.
+ The population model is the standard single-equation linear model with
+ possibly endogenous explanatory variables:
+\begin_inset Formula 
+\begin{gather}
+y_{i}=\beta_{1}+\beta_{2}x_{i2}+\cdots+\beta_{K}x_{iK}=x_{i}^{\prime}\beta+u_{i}\\
+E(z_{i}u_{i})=0
+\end{gather}
+
+\end_inset
+
+where we take 
+\begin_inset Formula $x_{1}\equiv$
+\end_inset
+
+ for notational simplicity (an assumption that means 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ is almost certainly equal to unity, too).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Rather than obtaining a random sample from the population, we only use data
+ points that satsify certain conditions.
+ The idea is to think of drawing units randomly from the population, but
+ now a random draw for unit 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $(x_{i},y_{i},z_{i})$
+\end_inset
+
+, is supplemented by drawing a 
+\series bold
+selection indicator
+\series default
+, 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+.
+ By definition, 
+\begin_inset Formula $s_{i}=1$
+\end_inset
+
+ if unit 
+\begin_inset Formula $i$
+\end_inset
+
+ is used in the estimation, and 
+\begin_inset Formula $s_{i}=0$
+\end_inset
+
+ if we do not use random draw 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Therefore, our 
+\begin_inset Quotes eld
+\end_inset
+
+data
+\begin_inset Quotes erd
+\end_inset
+
+ consist of 
+\begin_inset Formula $\{(x_{i},y_{i},z_{i},s_{i}):i=1,\ldots,N\}$
+\end_inset
+
+, where the value of 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ determines whether we observe all of 
+\begin_inset Formula $(x_{i},y_{i},z_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Because parameter identification should always be studied in a population,
+ we let 
+\begin_inset Formula $s$
+\end_inset
+
+ denote a random variable with the distribution of 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ In other words, 
+\begin_inset Formula $(x,y,z,s)$
+\end_inset
+
+ now represents the population.
+ Therefore, to determine the properties of any estimation procedure using
+ the selected sample, we need to know about the distribution of 
+\begin_inset Formula $s$
+\end_inset
+
+ and its dependence on 
+\begin_inset Formula $(x,y,z)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To obtian the conditions under which 2SLS on the selected sample consistently
+ estimates 
+\begin_inset Formula $\beta$
+\end_inset
+
+, assume 
+\begin_inset Formula $\{(x_{i},y_{i},z_{i},s_{i}):i=1,\ldots,N\}$
+\end_inset
+
+ is a random sample from the population.
+ The 2SLS estimator using the selected sample can be written as
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta} & = & \left[\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}z_{i}x_{i}^{\prime}\right)^{\prime}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}z_{i}z_{i}^{\prime}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}z_{i}x_{i}^{\prime}\right)\right]^{-1}\\
+ &  & \times\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}z_{i}x_{i}^{\prime}\right)^{\prime}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}z_{i}z_{i}^{\prime}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}z_{i}y_{i}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Substituting 
+\begin_inset Formula $y_{i}=x_{i}^{\prime}\beta+u_{i}$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{\beta} & = & \beta+\left[\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}z_{i}x_{i}^{\prime}\right)^{\prime}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}z_{i}z_{i}^{\prime}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}z_{i}x_{i}^{\prime}\right)\right]^{-1}\nonumber \\
+ &  & \times\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}z_{i}x_{i}^{\prime}\right)^{\prime}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}z_{i}z_{i}^{\prime}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}z_{i}u_{i}\right)
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+It is easily seen from equation (20) that the key condition for consistency
+ is 
+\begin_inset Formula $E(s_{i}z_{i}u_{i})=0$
+\end_inset
+
+, along with the rank condition on the selected sample.
+ Formally, we have the following result
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+19.1 (Consistency of 2SLS under Sample Selection):
+\series default
+ 
+\emph on
+In model (17), assume that 
+\begin_inset Formula $E(u^{2})<\infty$
+\end_inset
+
+, 
+\begin_inset Formula $E(x_{j}^{2})<\infty,\ j=1,\ldots,K$
+\end_inset
+
+, and 
+\begin_inset Formula $E(z_{j}^{2})<\infty,\ j=1,\ldots,L$
+\end_inset
+
+.
+ Further assume that
+\begin_inset Formula 
+\begin{eqnarray}
+E(s_{i}z_{i}u_{i}) & = & 0\\
+\mbox{rank}E(z_{i}z_{i}^{\prime}|s=1) & = & L\\
+\mbox{rank}E(z_{i}x_{i}^{\prime}|s=1) & = & K
+\end{eqnarray}
+
+\end_inset
+
+Then, the 2SLS estimator using the selected sample is consistent for 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+-asymptotically normal.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Equation (20) essentially proves the consistency result under the assumptions
+ of Theorem 19.1.
+ Naturally, it is possible that the rank condition holds on the entire populatio
+n but not the 
+\begin_inset Formula $s=1$
+\end_inset
+
+ subset.
+ Generally, one needs sufficient variation in both the explanatory variables
+ and instruments in the subpopulation in order for the rank condition to
+ hold.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is worth studying condtion (21) in some detail.
+ First, it is not generally enough to assume condtion (19) holds.
+ One case where condition (19) is sufficient occurs when 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $(z_{i},u_{i})$
+\end_inset
+
+, but this is a very strong assumption.
+ In the leading case where 
+\begin_inset Formula $z_{i}=x_{i}$
+\end_inset
+
+, so that estimation is by OLS, the condition is the same as independence
+ between 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+, which is tantamount to assuming that some observations from an originial
+ random sample are dropped randomly, without regard to the values of 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+.
+ This has been called the 
+\series bold
+missing completely at random (MCAR)
+\series default
+ assumption.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+More intersting are situations where selection can depend on exogenous variables
+, but not on the unobserved error.
+ An important sufficient conditions for assumption (21), easily verfied
+ by applying iterated expectations, is
+\begin_inset Formula 
+\begin{equation}
+E(u_{i}|z_{i},s_{i})=0
+\end{equation}
+
+\end_inset
+
+Assumption (24) allows selection to be correlated with 
+\begin_inset Formula $z$
+\end_inset
+
+ but not with 
+\begin_inset Formula $u$
+\end_inset
+
+, and has been called 
+\series bold
+exogenous sampling
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is easier to interpret this label by looking at a special case, whcih
+ strengthens the sense in which the instruments are exogenous in the population.
+ If 
+\begin_inset Formula $E(u_{i}|z_{i})=0$
+\end_inset
+
+ and 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ is a deterministic function of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, then assumption (24) holds.
+ In other words, exogenous sampling occurs when 
+\begin_inset Formula $s_{i}=h(z_{i})$
+\end_inset
+
+ for some nonrandom funciton 
+\begin_inset Formula $h(\cdot)$
+\end_inset
+
+; that is, 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ is a nonrandom funciton of exogenous variables.
+ But we must remember that the sense in which the instruments are exogenous
+ is given by the stronger asusmption 
+\begin_inset Formula $E(u_{i}|z_{i})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the case with exogenous explanatory variables, condition (23) is equivalent
+ to
+\begin_inset Formula 
+\begin{equation}
+E(y_{i}|x_{i},s_{i})=E(y_{i}|x_{i})=x_{i}^{\prime}\beta
+\end{equation}
+
+\end_inset
+
+where the first equality is how we would define the exogenous sampling in
+ the context of regression analysis.
+ Notice that assumption (25) implies consistency of OLS on the selected
+ sample regardless of whether data are missing on 
+\begin_inset Formula $y$
+\end_inset
+
+ or elements of 
+\begin_inset Formula $x$
+\end_inset
+
+, or both.
+ Assumption (25) rules out selection mechanisms that depend on the unobserved
+ factors affecting 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ in equation (18).
+ This assumption is related to (a conditional mean version of) the 
+\series bold
+missing at random (MAR)
+\series default
+ assumption.
+ MAR, which is often stated in terms of conditional distributions, further
+ assumes that the variables determing selection (
+\begin_inset Formula $x$
+\end_inset
+
+ in this case) are always observed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A sufficient condition for assumption (24) is that conditional on 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ are independent, which is informatively written as 
+\begin_inset Formula $D(s_{i}|z_{i},u_{i})=D(s_{i}|z_{i})$
+\end_inset
+
+, or, because 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ is binary
+\begin_inset Formula 
+\begin{equation}
+P(s_{i}=1|z_{i},u_{i})=P(s_{i}=1|z_{i})
+\end{equation}
+
+\end_inset
+
+ Because 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ is observable, at least for part of the population, and 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is always unobservable, condition (26) is an example of what has been dubbed
+ 
+\series bold
+selection on observables
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Not surprisingly, the usual heteroskedasticity-robust variance matrix estimator,
+ applied to the selected sample, is valid without further assumptions.
+ If we add the homoskedasticity assumption 
+\begin_inset Formula $E(u_{i}^{2}|z_{i},s_{i})=E(u_{i}^{2})=\sigma^{2}$
+\end_inset
+
+ to the assumptions of Theorem 19.1, then we can show that the 
+\begin_inset Quotes eld
+\end_inset
+
+usual
+\begin_inset Quotes erd
+\end_inset
+
+ variance matrix estimator for 2SLS is asymptotically valid.
+ Under the homoskedasticity assumption, 
+\begin_inset Formula $E(s_{i}u_{i}^{2})=E(s_{i})\sigma^{2}$
+\end_inset
+
+, where 
+\begin_inset Formula $E(s_{i})$
+\end_inset
+
+ is just the franction of the subpopulation in the overall population.
+ The estimator of 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ (without degrees-of-freedom adjustment) is
+\begin_inset Formula 
+\begin{equation}
+\left({\displaystyle \sum_{i=1}^{N}}s_{i}\right)^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}\hat{u}_{i}^{2}
+\end{equation}
+
+\end_inset
+
+since 
+\begin_inset Formula $\sum_{i=1}^{N}s_{i}$
+\end_inset
+
+ is simply the number of observations in the selected sample.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ is a funciton only of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, or if 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $(z_{i},u_{i})$
+\end_inset
+
+, and 
+\begin_inset Formula $E(u_{i}^{2}|z_{i})=\sigma^{2}$
+\end_inset
+
+, then 
+\begin_inset Formula $E(u_{i}^{2}|z_{i},s_{i})=\sigma^{2}$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is exogenous and we apply OLS on the selected sample, Theorem 19.1 implies
+ that we can select the sample on the basis of the explanatory variables.
+ Selection based on 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ or on endogenous elements of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is not allowed because then 
+\begin_inset Formula $E(u_{i}|x_{i},s_{i})\neq E(u_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+19.4.2
+\begin_inset space \quad{}
+\end_inset
+
+Nonlinear Models
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Results similar to those in the previous seciton hold for nonlinear models
+ as well.
+ We will cover explicitly the case of NLS and MLE.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the NLS case, if 
+\begin_inset Formula $E(y_{i}|x_{i},s_{i})=E(y_{i}|x_{i})$
+\end_inset
+
+, so that selection is exogenous in the conditional mean sense, then NLS
+ on the selected smaple is consistent.
+ Sufficient is that 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ is a deterministic function of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ The consistency argument is simple: NLS on the selected sample solves
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \min_{\beta}}N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}\left[y_{i}-m(x_{i},\beta)\right]^{2}
+\end{equation}
+
+\end_inset
+
+so it suffices to show that 
+\begin_inset Formula $\beta_{o}$
+\end_inset
+
+ in 
+\begin_inset Formula $E(y_{i}|x_{i})=m(x_{i},\beta_{o})$
+\end_inset
+
+ minimizes 
+\begin_inset Formula $E\left\{ s_{i}\left[y_{i}-m(x_{i},\beta)\right]^{2}\right\} $
+\end_inset
+
+ over 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ By iterated expectations,
+\begin_inset Formula 
+\[
+E\left\{ s_{i}\left[y_{i}-m(x_{i},\beta)\right]^{2}\right\} =E\left(s_{i}E\left\{ \left[y_{i}-m(x_{i},\beta)\right]^{2}|x_{i},s_{i}\right\} \right)
+\]
+
+\end_inset
+
+Next, write 
+\begin_inset Formula $\left[y_{i}-m(x_{i},\beta)\right]^{2}=u_{i}^{2}+2\left[m(x_{i},\beta_{o})-m(x_{i},\beta)\right]u_{i}+\left[m(x_{i},\beta_{o})-m(x_{i},\beta)\right]^{2}$
+\end_inset
+
+, where 
+\begin_inset Formula $u_{i}=y_{i}-m(x_{i},\beta_{o})$
+\end_inset
+
+.
+ Bu assumption, 
+\begin_inset Formula $E(u_{i}|x_{i},s_{i})=0$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\[
+E\left\{ \left[y_{i}-m(x_{i},\beta)\right]^{2}|x_{i},s_{i}\right\} =E(u_{i}^{2}|x_{i},s_{i})+\left[m(x_{i},\beta_{o})-m(x_{i},\beta)\right]^{2}
+\]
+
+\end_inset
+
+and the second term is clearly minimized at 
+\begin_inset Formula $\beta=\beta_{o}$
+\end_inset
+
+.
+ We do have to assume that 
+\begin_inset Formula $\beta_{o}$
+\end_inset
+
+ is the 
+\emph on
+unique
+\emph default
+ value of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ that makes 
+\begin_inset Formula $E\left\{ s_{i}\left[m(x_{i},\beta)-m(x_{i},\beta_{o})\right]^{2}\right\} $
+\end_inset
+
+ zero.
+ This is the identification condition on the subpopulation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It can be shown that, if 
+\begin_inset Formula $\mbox{Var}(y_{i}|x_{i},s_{i})=\mbox{Var}(y_{i}|x_{i})$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{Var}(y_{i}|x_{i})=\sigma_{o}^{2}$
+\end_inset
+
+, then the usual, nonrobust NLS statistics are valid.
+ If heteroskedasticity exists either in the population or the subpopulation,
+ standard heteroskedasticity-robust inference can be used.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Another important case is the general CML setup.
+ Assume that the distribution of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ is the same as the distribution of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+D(y_{i}|x_{i},s_{i})=D(y_{i}|x_{i})
+\end{equation}
+
+\end_inset
+
+Assumption (29) ensures that the MLE on the selected sample is consistent
+ and the usual MLE statistics are valid.
+ It is a stronger form of ignorability of selection, but it always holds
+ if 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ is a nonrandom function of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, or if 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+.
+ CMLE on the selected sample solves
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \max_{\theta}}N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}l(y_{i},x_{i};\theta)
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $l(y_{i},x_{i};\theta)$
+\end_inset
+
+ is the log likelihood for observation 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Now for each 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ maximizes 
+\begin_inset Formula $E\left[l(y_{i},x_{i};\theta)|x_{i}\right]$
+\end_inset
+
+ over 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ But 
+\begin_inset Formula $E\left[s_{i}l(y_{i},x_{i};\theta)\right]=E\left\{ s_{i}E\left[l(y_{i},x_{i};\theta)|x_{i},s_{i}\right]\right\} =E\left\{ s_{i}E\left[l(y_{i},x_{i};\theta)|x_{i}\right]\right\} $
+\end_inset
+
+ since, by assumption, the conditional distribution of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $(x_{i},s_{i})$
+\end_inset
+
+ does not depend on 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $E\left[l(y_{i},x_{i};\theta)|x_{i}\right]$
+\end_inset
+
+ is maximized at 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+, so is 
+\begin_inset Formula $E\left\{ s_{i}E\left[l(y_{i},x_{i};\theta)|x_{i}\right]\right\} $
+\end_inset
+
+.
+ We must make the stronger assumption that 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is the unique maximum, just as in the previous cases.
+ Inference can be carried out using the usual MLE statistics obtained from
+ the selected subsample because the information equality now holds conditional
+ on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ under assumption (29).
+\end_layout
+
+\begin_layout Section*
+19.5
+\begin_inset space \quad{}
+\end_inset
+
+Selection on the Basis of the Response Variable: Truncated Regression
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+ denote a random draw from a population.
+ In this section, we explicitly treat the case where the sample is selected
+ on the basis of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In applying the following methods it is important to remember that there
+ is an underlying population of interest, often described by a linear conditiona
+l expectation: 
+\begin_inset Formula $E(y_{i}|x_{i})=x_{i}^{\prime}\beta$
+\end_inset
+
+.
+ If we could observe a random sample from the population, then we would
+ just use standard regression analysis.
+ The problem comes about because the sample we can observe is chosen at
+ least partly based on the value of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+.
+ Unlike in the case where selection is based only on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, selection based on 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ causes problems for standard OLS analysis on the selected sample.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We assume that 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is a continuous random variable and that the selection rule takes the form
+\begin_inset Formula 
+\[
+s_{i}=1\left[a_{1}<y_{i}<a_{2}\right]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+ are known constant such that 
+\begin_inset Formula $a_{1}<a_{2}$
+\end_inset
+
+.
+ A good way to think of the sample selection in this case is that we draw
+ 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+ randomly from the population.
+ If 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ falls in the interval 
+\begin_inset Formula $(a_{1},a_{2})$
+\end_inset
+
+, then we observe both 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is outside this interval, then we do not observe 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ or 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Thus, all we know is that there is some subset of the population that does
+ not enter our data set because of the selection rule.
+ We know how to characterize the part of the population not being sampled
+ because we know the constants 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In most applications we are still interested in estimation 
+\begin_inset Formula $E(y_{i}|x_{i})=x_{i}^{\prime}\beta$
+\end_inset
+
+.
+ However, because of sample selection based on 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, we must specify a full conditional distribution of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Parameterize the conditional density of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ by 
+\begin_inset Formula $f(\cdot|x_{i};\beta,\gamma)$
+\end_inset
+
+ where 
+\begin_inset Formula $\beta$
+\end_inset
+
+ are the conditional mean parameters and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is a 
+\begin_inset Formula $G\times1$
+\end_inset
+
+ vector of additional parameters.
+ the cdf of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $F(\cdot|x_{i};\beta,\gamma)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What we can use in estimation is the density of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ 
+\emph on
+and
+\emph default
+ the fact that we observe 
+\begin_inset Formula $(y_{i},x_{i})$
+\end_inset
+
+.
+ In other words, we must condition on 
+\begin_inset Formula $a_{1}<y_{1}<a_{2}$
+\end_inset
+
+ or, equivalently, 
+\begin_inset Formula $s_{i}=1$
+\end_inset
+
+.
+ The cdf of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $(x_{i},s_{i}=1)$
+\end_inset
+
+ is simply
+\begin_inset Formula 
+\[
+P(y_{i}\leq\mathscr{Y})|x_{i},s_{i}=1)=\frac{P(y_{i}\leq\mathscr{Y},s_{i}=1|x_{i})}{P(s_{i}=1|x_{i})}
+\]
+
+\end_inset
+
+Because 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is continuously distributed, 
+\begin_inset Formula $P(s_{i}=1|x_{i})=P(a_{1}<y_{i}<a_{2}|x_{i})=F(a_{2}|x_{i};\beta,\gamma)-F(a_{1}|x_{i};\beta,\gamma)>0$
+\end_inset
+
+ for all possible values of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ The case 
+\begin_inset Formula $a_{2}=\infty$
+\end_inset
+
+ corresponds to truncation only from below, in which case 
+\begin_inset Formula $F(a_{2}|x_{i};\beta,\gamma)\equiv1$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $a_{1}=-\infty$
+\end_inset
+
+ (truncation from above), then 
+\begin_inset Formula $F(a_{1}|x_{i};\beta,\gamma)=0$
+\end_inset
+
+.
+ To obtain the numerator when 
+\begin_inset Formula $a_{1}<\mathscr{Y}<a_{2}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+P(y_{i}\leq\mathscr{Y},s_{i}=1|x_{i})=P(a_{1}<y_{i}\leq\mathscr{Y}|x_{i})=F(\mathscr{Y}|x_{i};\beta,\gamma)-F(a_{1}|x_{i};\beta,\gamma)
+\]
+
+\end_inset
+
+When we put this equation over 
+\begin_inset Formula $P(s_{i}=1|x_{i})$
+\end_inset
+
+ and take the derivative with respect to the dummy argument 
+\begin_inset Formula $\mathscr{Y}$
+\end_inset
+
+, we obtain the density of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $(x_{i},s_{i}=1)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+p(\mathscr{Y}|x_{i},s_{i}=1)=\frac{f(\mathscr{Y}|x_{i};\beta,\gamma)}{F(a_{2}|x_{1};\beta,\gamma)-F(a_{1}|x_{i};\beta,\gamma)}
+\end{equation}
+
+\end_inset
+
+for 
+\begin_inset Formula $a_{1}<\mathscr{Y}<a_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Given a model for 
+\begin_inset Formula $f(y_{i}|x_{i};\beta,\gamma)$
+\end_inset
+
+, the log-likelihood function for any 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+ in the sample can be obtained by plugging 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ into equation (31) and taking the log.
+ The CMLEs of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ using the selected sample are efficient in the class of estimators that
+ do not use information about the distribution of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Standard errors and test statistics can be computed using the general theory
+ of CMLE.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In most applications of truncated samples, the population conditional distributi
+on is assumed to be 
+\begin_inset Formula $N(x_{i}^{\prime}\beta,\sigma^{2})$
+\end_inset
+
+ in whcih case we have the 
+\series bold
+truncated Tobit model
+\series default
+ or 
+\series bold
+truncated normal regression model
+\series default
+.
+ The truncated Tobit model is related to the censored Tobit model for data-censo
+ring applications, but there is a key difference: in censored regression,
+ we have a random sample of units and we observe covariates 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ for 
+\emph on
+all
+\emph default
+ people, even those for who the response is not known.
+ If we drop observations entirely when the response is not observed, we
+ obtain the truncated regression model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is not surprising that heteroskedasticity or nonnormality in truncated
+ regression results in inconsistent estimators of 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ This outcome is unfortunate because, if not for the sample seletion problem,
+ we could consistently estimate 
+\begin_inset Formula $\beta$
+\end_inset
+
+ under 
+\begin_inset Formula $E(y_{i}|x_{i})=x_{i}^{\prime}\beta$
+\end_inset
+
+, without specifying 
+\begin_inset Formula $\mbox{Var}(y_{i}|x_{i})$
+\end_inset
+
+ or the conditional distribution.
+\end_layout
+
+\begin_layout Section*
+19.6
+\begin_inset space \quad{}
+\end_inset
+
+Incidental Truncation: A Probit Selection Equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now turn to sample selection corrections when selection is determined
+ by a probit model.
+ This setup applies to problems different from those in Section 19.5, where
+ the problem was that a survey or program was designed to intentionally
+ exclude part of the population.
+ We are now interested in selection problems that are due to incidental
+ truncation, attrition in the context of program evaluation, and general
+ nonresponse that leads to missing data on the response variable or the
+ expalanatory variable.
+\end_layout
+
+\begin_layout Subsection*
+19.6.1
+\begin_inset space \quad{}
+\end_inset
+
+Exogenous Explanatory Variables
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This case differs in an important respect from top coding, where the censoring
+ rule is known for each unit in the populaiton.
+ With incidental truncation, we do know know the latent variable 
+\begin_inset Formula $y_{i}^{*}$
+\end_inset
+
+, so we cannot use the response variable that we do know in a censored regressio
+n analysis.
+ If 
+\begin_inset Formula $y_{i}^{*}$
+\end_inset
+
+ were observed and exogenous and 
+\begin_inset Formula $x_{1i}$
+\end_inset
+
+ were always observed, then we sould be in censored regression framework
+ with censoring form below.
+ If 
+\begin_inset Formula $y_{i}^{*}$
+\end_inset
+
+ were observed and exogenous but 
+\begin_inset Formula $x_{1i}$
+\end_inset
+
+ were observed only when 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is, we would be in he truncated Tobit framework.
+ But 
+\begin_inset Formula $y_{i}^{*}$
+\end_inset
+
+ is allowed to depend on unobservalbes, and so we need a new framework.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can write the model for a random draw from the population as
+\begin_inset Formula 
+\begin{eqnarray}
+y_{1i} & = & x_{1i}^{\prime}\beta_{1}+u_{i}\\
+y_{2i} & = & 1\left[x_{i}^{\prime}\delta_{2}+v_{i}>0\right]
+\end{eqnarray}
+
+\end_inset
+
+We discuss estimation of this model under the following set of assumptions:
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\emph on
+19.1.
+ 
+\series default
+\emph default
+(a) 
+\begin_inset Formula $(x_{i},y_{2i})$
+\end_inset
+
+ are always observed, 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ is observed only when 
+\begin_inset Formula $y_{2i}=1$
+\end_inset
+
+; (b) 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+ are independent of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ with zero mean; (c) 
+\begin_inset Formula $v_{i}\sim N(0,1)$
+\end_inset
+
+; and (d) 
+\begin_inset Formula $E(u_{i}|v_{i})=\gamma v_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Assumption 19.1a empahsizes the sample seleciton nature of the problem.
+ Part b is a strong, but standard form of exogeneity of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ We will see that assumption 19.1c is needed to derive a conditional expectiation
+ given the selected sample.
+ It is probably the most restrictive assumption because it is an explicit
+ distributional assumption.
+ Assuming 
+\begin_inset Formula $\mbox{Var}(v_{i})=1$
+\end_inset
+
+ is without loss of generality because 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ is a binary variable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Assumption 19.1d requires linearity in the population regression of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+.
+ It always holds if 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+ is bivariate normal, a standard assumption in these contexts, but assumption
+ 19.1d holds under weaker assumptions.
+ In particular, we do not need to assume that 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ itself is normally distributed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We call equations (32) and (33) the 
+\series bold
+Type II Tobit model
+\series default
+.
+ This name is fine as a label, but we must understand that it is a model
+ of sample selection, and it has nothing to do with 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ being a corner solution outcome.
+ Unfortunately, in almost all treatments of this model, 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ is set to zero when 
+\begin_inset Formula $y_{2i}=0$
+\end_inset
+
+.
+ Setting 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ to zero (or any value) when 
+\begin_inset Formula $y_{2i}=0$
+\end_inset
+
+ is misleading and can lead to inappropriate use of the model.
+ We also have some interest in the parameters of the selection equation
+ (33).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Because of the similarities in the statistical structures for the Type II
+ Tobit model for sample selection and the exponential Type II Tobit model
+ for corner solutions, now is a good time to review the differences in how
+ one applies theses models.
+ Recall that when using the ET2T for a corner solution response, the goal
+ is to model the distribution of the 
+\emph on
+fully
+\emph default
+ observalbe outcome in a flexible way.
+ The possible outomces include zero, which is a legitimate value and means
+ we need to model the proability of a response at zero, as well as the density
+ ofr positive vlaues.
+ One can debate about which model is best but the important point is that
+ there is no missing data problem.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The present situation is different from having a corner at zero.
+ In the sampel selection setting, the variable 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ in equation (32), which often is in logarithmic form (in which case the
+ stup appears wuire similar to the ET2T model), is not always observed.
+ We are interested in the mean response in the populations, 
+\begin_inset Formula $E(y_{1i}|x_{1i})$
+\end_inset
+
+, which is assume to follow a standard linear model.
+ Consequently, once the parameters 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ have been consistently esitmated, it is trivial to interpret the esitmated
+ equation because the elements of 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ directly measure the partial effects of interest.
+ In other words, in the sample selection context the parameter estimates
+ are directly interpretable as partial effects on 
+\begin_inset Formula $E(y_{1i}|x_{1i})$
+\end_inset
+
+, unlike in the ET2T case, where the various conditional means of the observed
+ response have no simple forms.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can allow a little more generality in the model by replacing 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ in equation (33) with 
+\begin_inset Formula $x_{2i}$
+\end_inset
+
+; then, as will become clear, 
+\begin_inset Formula $x_{1i}$
+\end_inset
+
+ would only need to be observed whenever 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ is, whereas 
+\begin_inset Formula $x_{2i}$
+\end_inset
+
+ must always be observed.
+ Because the selection equation is not typically a structural equation,
+ it is undesirable to impose exclusion restricitions in equation (33).
+ If a variable affecting 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ is observed only along with 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+, the instrumental variables method that we cover in Seciton 19.6.2 is more
+ attractive.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To derive an estimating equation, let 
+\begin_inset Formula $(y_{1i},y_{2i},x_{i},u_{i},v_{i})$
+\end_inset
+
+ denote a random draw from the population.
+ Since 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ is observed only when 
+\begin_inset Formula $y_{2i}=1$
+\end_inset
+
+ , what we can hope to estimate is 
+\begin_inset Formula $E(y_{1i}|x_{i},y_{2i}=1)$
+\end_inset
+
+ [along with 
+\begin_inset Formula $P(y_{2i}=1|x_{i})$
+\end_inset
+
+].
+ How does 
+\begin_inset Formula $E(y_{1i}|x_{i},y_{2i}=1)$
+\end_inset
+
+ depend on the vector of interest, 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+? First, under assumption 19.1 and equation (32),
+\begin_inset Formula 
+\begin{equation}
+E(y_{1i}|x_{i},v_{i})=x_{1i}^{\prime}\beta_{1}+E(u_{i}|x_{i},v_{i})=x_{1i}^{\prime}\beta_{1}+E(u_{i}|v_{i})=x_{1i}^{\prime}\beta_{1}+\gamma v_{i}
+\end{equation}
+
+\end_inset
+
+where the second equality follows because 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Equation (34) is very useful.
+ The first thing to note is that, if 
+\begin_inset Formula $\gamma=0$
+\end_inset
+
+ which implies that 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ are uncorrelated, then 
+\begin_inset Formula $E(y_{1i}|x_{i},v_{i})=E(y_{1i}|x_{i})=E(y_{1i}|x_{1i})=x_{1i}^{\prime}\beta_{1}$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ is a function of 
+\begin_inset Formula $(x_{i},v_{i})$
+\end_inset
+
+, it follows immediately that 
+\begin_inset Formula $E(y_{1i}|x_{i},y_{2i})=E(y_{1i}|x_{1i})$
+\end_inset
+
+.
+ In other words, if 
+\begin_inset Formula $\gamma=0$
+\end_inset
+
+, then there is no sample selection problem, and 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ can be consistently estimated by OLS using the selected sample.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What if 
+\begin_inset Formula $\gamma\ne0$
+\end_inset
+
+? Using iterated expectations on equation (34),
+\begin_inset Formula 
+\[
+E(y_{1i}|x_{i},y_{2i})=x_{1i}^{\prime}\beta_{1}+\gamma E(v_{i}|x_{i},y_{2i})=x_{1i}^{\prime}\beta_{1}+\gamma h(x_{i},y_{2i})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $h(x_{i},y_{2i})=E(v_{i}|x_{i},y_{2i})$
+\end_inset
+
+.
+ If we knew 
+\begin_inset Formula $h(x_{i},y_{2i})$
+\end_inset
+
+, then, from Theorem 19.1, we could estimate 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ from the regresison 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{1i}$
+\end_inset
+
+ and 
+\begin_inset Formula $h(x_{i},y_{2i})$
+\end_inset
+
+, using only the selected sample.
+ Because the selected sample has 
+\begin_inset Formula $y_{2i}=1$
+\end_inset
+
+, we need only find 
+\begin_inset Formula $h(x_{i},1)$
+\end_inset
+
+.
+ But 
+\begin_inset Formula $h(x_{i},1)=E(v_{i}|v_{i}>-x_{i}^{\prime}\delta_{2})=\lambda(x_{i}^{\prime}\delta_{2})$
+\end_inset
+
+, where 
+\begin_inset Formula $\lambda\equiv\nicefrac{\phi(\cdot)}{\Phi(\cdot)}$
+\end_inset
+
+ is the inverse Mills ratio, and so we can write
+\begin_inset Formula 
+\begin{equation}
+E(y_{1i}|x_{i},y_{2i}=1)=x_{1i}^{\prime}\beta_{1}+\gamma\lambda(x_{i}^{\prime}\delta_{2})
+\end{equation}
+
+\end_inset
+
+Equation (35), which can be found in numerous places, makes it clear that
+ an OLS regression of 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{1i}$
+\end_inset
+
+ using the selected sample omits the term 
+\begin_inset Formula $\lambda(x_{i}^{\prime}\delta_{2})$
+\end_inset
+
+ and generally leads to inconsistent estimation of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+.
+ The presence of selection bias can be viewed as an omitted variable problem
+ in the selected sample.
+ An interesting point is that, even though only 
+\begin_inset Formula $x_{1i}$
+\end_inset
+
+ appears in the population expectiation, 
+\begin_inset Formula $E(y_{1i}|x_{i})$
+\end_inset
+
+, other elements of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ appear in the expectation on the subpopulation, 
+\begin_inset Formula $E(y_{1i}|x_{i},y_{2i}=1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Equation (35) also suggests a way to consistently estimate 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+.
+ We can consistently estimate 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ using the selected sample by regression 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{1i}$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda(x_{i}^{\prime}\delta_{2})$
+\end_inset
+
+.
+ The problem is that 
+\begin_inset Formula $\delta_{2}$
+\end_inset
+
+ is unknown, so we cannot compute the additional regressor 
+\begin_inset Formula $\lambda(x_{i}^{\prime}\delta_{2})$
+\end_inset
+
+.
+ Nevertheless, a consistent estimator of 
+\begin_inset Formula $\delta_{2}$
+\end_inset
+
+ is available from the first-stage probit estimation of the selected equation.
+\end_layout
+
+\begin_layout Algorithm*
+
+\series bold
+\shape up
+19.1:
+\series default
+ 
+\emph on
+(a) Obtain the probit esitmate 
+\begin_inset Formula $\hat{\delta}_{2}$
+\end_inset
+
+ from the model
+\begin_inset Formula 
+\begin{equation}
+P(y_{2i}=1|x_{i})=\Phi(x_{i}^{\prime}\delta_{2})
+\end{equation}
+
+\end_inset
+
+using all 
+\begin_inset Formula $N$
+\end_inset
+
+ observations.
+ Then obtain the estimated inverse Mills rations 
+\begin_inset Formula $\hat{\lambda}_{2i}\equiv\lambda(x_{i}^{\prime}\hat{\delta}_{2})$
+\end_inset
+
+ (at least for 
+\begin_inset Formula $i=1,\ldots,N_{1}$
+\end_inset
+
+).
+ (b) Obtain 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\gamma}$
+\end_inset
+
+ from the OLS regression on the selected sample,
+\begin_inset Formula 
+\begin{equation}
+y_{1i}\ \mbox{on}\ x_{1i},\hat{\lambda}_{2i},\ i=1,2,\ldots,N_{1}
+\end{equation}
+
+\end_inset
+
+These estimators are consistent and 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+- asymptotically normal.
+\end_layout
+
+\begin_layout Standard
+The procedure is sometimes called 
+\series bold
+Heckit
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A very simple test for selection bias is available from regression (37).
+ Under the null of no selection bias, 
+\begin_inset Formula $H_{0}:\gamma=0$
+\end_inset
+
+, we have 
+\begin_inset Formula $\mbox{Var}(y_{1i}|x_{i},y_{2i}=1)=\mbox{Var}(y_{1i}|x_{i})=\mbox{Var}(u_{i})$
+\end_inset
+
+, and so no homoskedasticity holds under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+ Further, the asymptotic variance of 
+\begin_inset Formula $\hat{\gamma}$
+\end_inset
+
+ (and 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+) is not affected by 
+\begin_inset Formula $\hat{\delta}_{2}$
+\end_inset
+
+ when 
+\begin_inset Formula $\gamma=0$
+\end_inset
+
+.
+ Thus, a standard 
+\begin_inset Formula $t$
+\end_inset
+
+ test on 
+\begin_inset Formula $\hat{\gamma}$
+\end_inset
+
+ is a valid test of the null hypothesis of no selection bias.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When 
+\begin_inset Formula $\gamma\neq0$
+\end_inset
+
+, obtaining a consistent estimate for the asymptotic variance of 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ is complicated for two reasons.
+ The first is that, if 
+\begin_inset Formula $\gamma\neq0$
+\end_inset
+
+, then 
+\begin_inset Formula $\mbox{Var}(y_{1i}|x_{i},y_{2i}=1)$
+\end_inset
+
+ is not constant.
+ As we know, heteroskedasticity itself is easy to correct for using the
+ robust standard errors.
+ However, we should also acocunt for the fact that 
+\begin_inset Formula $\hat{\delta}_{2}$
+\end_inset
+
+ is an estimator of 
+\begin_inset Formula $\delta_{2}$
+\end_inset
+
+.
+ The adjustment ot the variance of 
+\begin_inset Formula $(\hat{\beta}_{1},\hat{\gamma})$
+\end_inset
+
+ because of the two-step estimation is cumbersome.
+ It is 
+\emph on
+not 
+\emph default
+enough to simply make the standard errors heteroskedasticity-robust.
+ Some statistical packages now have this feature built in.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As a technical point, we do not need 
+\begin_inset Formula $x_{1i}$
+\end_inset
+
+ to be a strict subset of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ for 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ to be identified, and procedure 19.1 doe carry through when 
+\begin_inset Formula $x_{1i}=x_{i}$
+\end_inset
+
+.
+ However, if 
+\begin_inset Formula $x_{i}^{\prime}\hat{\delta}_{2}$
+\end_inset
+
+ does not have much variation in the sample, then 
+\begin_inset Formula $\hat{\lambda}_{2i}$
+\end_inset
+
+ can be approximated well by a linear function of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $x_{i}=x_{1i}$
+\end_inset
+
+, this correlation can introduce sever collinearity among the regressors
+ in (37) which can lead to large standard errors of the elements of 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $x_{1i}=x_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ is identified only due to the nonlinearity of the inverse Mills ratio.
+ Here, we still have identification for any value of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ in equation (32), but it is unlikely we can estiamte 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ with much precision.
+ Even if we can, we would have to wonder whether a statistically significant
+ inverse Mills ratio term is due to sample selection or functional form
+ misspecification in the populaiton model (32).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If we replaced parts c and d in assumption 19.1 with the stronger assumption
+ that 
+\begin_inset Formula $(u_{1},v_{2})$
+\end_inset
+
+ is bivariate normal with mean zero, 
+\begin_inset Formula $\mbox{Var}(u_{i})=\sigma_{u}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\mbox{Cov}(u_{i},v_{i})=\sigma_{uv}^{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mbox{Var}(v_{i})=1$
+\end_inset
+
+, then partial maximum likelihood estimation can be used.
+ Partial MLE will be more efficient than the two-step procudre under joint
+ normality of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, and it will produce standard errors and likelihood ratio statistics that
+ can be used directily.
+ The drawbacks are that it is less robust than the two-step procedure and
+ that it is sometimes difficult to get the problem to converge.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The reason we cannot perform full conditional MLE is that 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ is only observed when 
+\begin_inset Formula $y_{2i}=1$
+\end_inset
+
+.
+ Thus, while we can use the full density of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, which is 
+\begin_inset Formula $f(y_{2i}|x_{i})=\left[\Phi(x_{i}^{\prime}\delta_{2})\right]^{y_{i2i}}\left[1-\Phi(x_{i}^{\prime}\delta_{2})\right]^{1-y_{2i}},\ y_{2i}=0,1$
+\end_inset
+
+, we can only use the density 
+\begin_inset Formula $f(y_{1i}|y_{2i},x_{i})$
+\end_inset
+
+ when 
+\begin_inset Formula $y_{2i}=1$
+\end_inset
+
+.
+ To find 
+\begin_inset Formula $f(y_{1i}|y_{2i},x_{i})$
+\end_inset
+
+ at 
+\begin_inset Formula $y_{2i}=1$
+\end_inset
+
+, we can use Bayes' rule to write 
+\begin_inset Formula $f(y_{1i}|y_{2i},x_{i})=\nicefrac{f(y_{2i}|y_{1i},x_{i})f(y_{1i}|x_{i})}{f(y_{2i}|x_{i})}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $f(y_{1i}|y_{2i}=1,x_{i})=\nicefrac{P(y_{2i}=1|y_{1i},x_{i})f(y_{1i}|x_{i})}{P(y_{2i}=1|x_{i})}$
+\end_inset
+
+.
+ But, 
+\begin_inset Formula $y_{1i}|x_{i}\sim N(x_{1i}^{\prime}\beta_{1},\sigma_{u}^{2})$
+\end_inset
+
+.
+ Further, 
+\begin_inset Formula $y_{2i}=1\left[x_{i}^{\prime}\delta_{2}+\sigma_{uv}\sigma_{u}^{-2}(y_{1i}-x_{1i}^{\prime}\beta)+e_{i}>0\right]$
+\end_inset
+
+, where 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $(x_{i},y_{1i})$
+\end_inset
+
+ and 
+\begin_inset Formula $e_{i}\sim N(0,1-\sigma_{uv}^{2}\sigma_{u}^{-2})$
+\end_inset
+
+ (this conclusion follows from standard conitional distribution results
+ for joint normal random variables).
+ Therefore,
+\begin_inset Formula 
+\[
+P(y_{2i}=1|y_{1i},x_{i})=\Phi\left\{ \left[x_{i}^{\prime}\delta_{2}+\sigma_{uv}\sigma_{u}^{-2}(y_{1i}-x_{1i}^{\prime}\beta)\right]\left(1-\sigma_{uv}^{2}\sigma_{u}^{-2}\right)^{-\nicefrac{1}{2}}\right\} 
+\]
+
+\end_inset
+
+Combining all of these pieces [and noting the cancellation of 
+\begin_inset Formula $P(y_{2i}=1|x_{i})$
+\end_inset
+
+ we get
+\begin_inset Formula 
+\begin{eqnarray*}
+l_{i}(\theta) & = & (1-y_{i2})\log[1-\Phi(x_{i}^{\prime}\delta_{2})]+y_{2i}\left(\log\Phi\left\{ \left[x_{i}^{\prime}\delta_{2}+\sigma_{uv}\sigma_{u}^{-2}(y_{1i}-x_{1i}^{\prime}\beta)\right]\right.\right.\\
+ &  & \left.\left.\times\left(1-\sigma_{uv}^{2}\sigma_{u}^{-2}\right)^{-\nicefrac{1}{2}}\right\} +\log\phi\left[\nicefrac{\left(y_{1i}-x_{1i}^{\prime}\beta_{1}\right)}{\sigma_{u}}\right]-\log(\sigma_{u})\right)
+\end{eqnarray*}
+
+\end_inset
+
+The partial log likelihood is obtained by summing 
+\begin_inset Formula $l_{i}(\theta)$
+\end_inset
+
+ across all observations; 
+\begin_inset Formula $y_{2i}=1$
+\end_inset
+
+ picks out when 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ is observed and therefore contains information for estimating 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+19.7
+\begin_inset space \quad{}
+\end_inset
+
+Indental Truncation: A Tobit Selection Equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now study the case where more information is available on sample selection
+ primarily in the context of incidental truncation.
+ In particular, we assume that selection is based on the otucome of a Tobit,
+ rather than a probit, equation.
+\end_layout
+
+\begin_layout Subsection*
+19.7.1
+\begin_inset space \quad{}
+\end_inset
+
+Exogenous Explanatory Variables
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now consider the case where the selection equation is of the censored
+ Tobit form.
+ The population model is
+\begin_inset Formula 
+\begin{eqnarray}
+y_{1i} & = & x_{1i}^{\prime}\beta_{1}+u_{i}\\
+y_{2i} & = & \max\left(0,x_{i}^{\prime}\delta_{2}+v_{i}\right)
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $(x_{i},y_{2i})$
+\end_inset
+
+ is always observed in the population by 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ is observed only when 
+\begin_inset Formula $y_{2i}>0$
+\end_inset
+
+.
+ A standard example occurs when 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ is the log of the hourly wage offer and 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ is weekly or annual hours of labor supply.
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\shape up
+19.3:
+\series default
+ 
+\emph on
+(a) 
+\begin_inset Formula $(x_{i},y_{2i})$
+\end_inset
+
+ is always observed in the population, but 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ is observed only when 
+\begin_inset Formula $y_{2i}>0$
+\end_inset
+
+; (b) 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+; (c) 
+\begin_inset Formula $v_{i}\sim N(0,\sigma_{v}^{2})$
+\end_inset
+
+; and (d) 
+\begin_inset Formula $E(u_{i}|v_{i})=\gamma v_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+These assumptions are very similar to the assumptions for a probit selection
+ equation.
+ The only difference is that 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ now has an unknown variance, since 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ is a censored as opposed to a binary variable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We call equations (38) and (39) the 
+\series bold
+Type III Tobit model
+\series default
+, but we emphasize that equation (38) is the structural population equation
+ of interest and that equation (39) simply determines when 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ is observed.
+ As with a probit selection equation, it makes no sense to define 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ to be , say, zero, just because we do not observe 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The starting point is equation (34), just as in the probit selection case.
+ Now, define the selection indicator as 
+\begin_inset Formula $s_{2i}=1$
+\end_inset
+
+ if 
+\begin_inset Formula $y_{2i}>0$
+\end_inset
+
+, and 
+\begin_inset Formula $s_{2i}=0$
+\end_inset
+
+ otherwise.
+ Since 
+\begin_inset Formula $s_{2i}$
+\end_inset
+
+ is a function of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, it follows immediately that
+\begin_inset Formula 
+\[
+E(y_{1i}|x_{i},v_{i},s_{2i})=x_{1i}^{\prime}\beta_{1}+\gamma v_{i}
+\]
+
+\end_inset
+
+This equation means that, if we could observe 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, then an OLS regression of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ using the selected subsample would consistently estimate 
+\begin_inset Formula $(\beta_{1},\gamma)$
+\end_inset
+
+.
+ While 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ cannot be observed when 
+\begin_inset Formula $y_{2i}=0$
+\end_inset
+
+ (because when 
+\begin_inset Formula $y_{2i}=0$
+\end_inset
+
+, we only know that 
+\begin_inset Formula $v_{i}\leq-x_{i}^{\prime}\delta_{2})$
+\end_inset
+
+, for 
+\begin_inset Formula $y_{2}>0$
+\end_inset
+
+, 
+\begin_inset Formula $v_{i}=y_{2i}-x_{i}^{\prime}\delta_{2}$
+\end_inset
+
+.
+ Thus, if we knew 
+\begin_inset Formula $\delta_{2}$
+\end_inset
+
+, we would know 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ whenever 
+\begin_inset Formula $y_{2i}>0$
+\end_inset
+
+.
+ It seems reasonable that, because 
+\begin_inset Formula $\delta_{2}$
+\end_inset
+
+ can be consistently estimated by Tobit on the whole sample, we cna replace
+ 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ with consistent estimates.
+\end_layout
+
+\begin_layout Algorithm*
+
+\series bold
+\shape up
+19.3:
+\series default
+ 
+\emph on
+(a) Estimate equation (39) by standard Tobit using all 
+\begin_inset Formula $N$
+\end_inset
+
+ observations.
+ For 
+\begin_inset Formula $y_{2i}>0$
+\end_inset
+
+ (say 
+\begin_inset Formula $i=1,\ldots,N_{1}$
+\end_inset
+
+), define
+\begin_inset Formula 
+\begin{equation}
+\hat{v}_{i}=y_{2i}-x_{i}^{\prime}\hat{\delta}_{2}
+\end{equation}
+
+\end_inset
+
+(b) Using observations for which 
+\begin_inset Formula $y_{2i}>0$
+\end_inset
+
+, estimate 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, by the OLS regression
+\begin_inset Formula 
+\begin{equation}
+y_{1i}\ \mbox{on}\ x_{1i},\hat{v}_{i},\ i=1,\ldots,N_{1}
+\end{equation}
+
+\end_inset
+
+This regression produces consistent, 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+- asymptotically normal estimators of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ under assumption 19.3.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The statistic to test for selectivity bias is just the usual 
+\begin_inset Formula $t$
+\end_inset
+
+ statistic on 
+\begin_inset Formula $\hat{v}_{i}$
+\end_inset
+
+ in regression (41).
+ It seems likely that there is an efficiency over procedure 19.1.
+ If 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ were known we could use regression (41) for the entire population, there
+ would definitely be an efficiency gain: the error variance is reduced by
+ conditioning on 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+along with 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, and there would be no heteroskedasticity in the population.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Unlike in the probit selection case, 
+\begin_inset Formula $x_{1i}=x_{i}$
+\end_inset
+
+ causes no problems here: 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ always has separate variance from 
+\begin_inset Formula $x_{1i}$
+\end_inset
+
+ because of variation in 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+.
+ We do not need to rely on the nonlinearity of the inverse Mills ratio.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For partial maximum likelihood estimation, we assume that 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+ is jointly normal, and we use the density for 
+\begin_inset Formula $f(y_{2i}|x_{i})$
+\end_inset
+
+ for the entire sample and the conditional density 
+\begin_inset Formula $f(y_{1i}|x_{i},y_{2i},s_{2i}=1)=f(y_{1i}|x_{i},y_{2i})$
+\end_inset
+
+ for the selected sample.
+ This approach is fairly straight forward because, when 
+\begin_inset Formula $y_{2i}>0$
+\end_inset
+
+, 
+\begin_inset Formula $y_{1i}|x_{i},y_{2i}\sim N\left[x_{1i}^{\prime}\beta_{1}+\gamma(y_{2i}-x_{i}^{\prime}\delta_{2}),\eta^{2}\right]$
+\end_inset
+
+, where 
+\begin_inset Formula $\eta^{2}=\sigma_{u}^{2}-\nicefrac{\sigma_{uv}^{2}}{\sigma_{v}^{2}}$
+\end_inset
+
+.
+ The log likelihood for observation 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+l_{i}(\theta)=s_{2i}\log f(y_{1i}|x_{i},y_{2i};\theta)+\log f(y_{2i}|x_{i};\delta_{2},\sigma_{v}^{2})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $f(y_{1i}|x_{i},y_{2i};\theta)$
+\end_inset
+
+ is the 
+\begin_inset Formula $N\left[x_{1i}^{\prime}\beta_{1}+\gamma(y_{2i}-x_{i}^{\prime}\delta_{2}),\eta^{2}\right]$
+\end_inset
+
+ distribution, evaluated at 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ and 
+\begin_inset Formula $f(y_{2i}|x_{i};\delta_{2},\sigma_{v}^{2})$
+\end_inset
+
+ is the standard censored Tobit density.
+ The usual MLE theory can be used even though the log-likelihood funciton
+ is not based on a full conditional density.
+\end_layout
+
+\end_body
+\end_document

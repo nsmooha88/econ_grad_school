@@ -1,0 +1,1182 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 11: More Topics in Linear Unobserved Effects Models
+\end_layout
+
+\begin_layout Part*
+Hausman-Taylor Model, Sequential Exogeneity, Dynamic Panel Models, Unbalanced
+ Panels
+\end_layout
+
+\begin_layout Section*
+11.1 GMM for RE, FE, and FD
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We extensively covered estimation of the unobserved effects model
+\begin_inset Formula 
+\begin{equation}
+y_{it}=x_{it}^{\prime}\beta+c_{i}+u_{it},\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+which we can write for all 
+\begin_inset Formula $T$
+\end_inset
+
+ time periods as
+\begin_inset Formula 
+\begin{equation}
+y_{i}=x_{i}\beta+c_{i}j_{T}+u_{i}=x_{i}\beta+v_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $j_{T}$
+\end_inset
+
+ is the 
+\begin_inset Formula $T\times1$
+\end_inset
+
+ vector of ones 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is the 
+\begin_inset Formula $T\times1$
+\end_inset
+
+ vector of idiosyncratic errors, and 
+\begin_inset Formula $v_{i}=c_{i}j_{T}+u_{i}$
+\end_inset
+
+ is the 
+\begin_inset Formula $T\times1$
+\end_inset
+
+ vector of composite errors.
+ With strictly exogeneous explanatory variables, RE, FE, and FD are still
+ the most popular approaches to estimating 
+\begin_inset Formula $\beta$
+\end_inset
+
+ in equation (2).
+ Each of these estimators is consistent without restrictions on the variance-cov
+ariance matrix of the composite or idiosyncratic errors.
+ We also saw that each estimator is asymptotically efficient under a particular
+ set of assumptions on the conditional second moment matrix of 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ in the RE case, 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ in the FE case, and 
+\begin_inset Formula $\Delta u_{i}$
+\end_inset
+
+ in the FD case.
+ Recall that there are two aspects to the second moment assumptions that
+ imply asymptotic efficiency.
+ First, the unconditional variance-covariance matrix is assumed to have
+ a special structure.
+ Second, system homoskedasticity is assumed in all cases.
+ (Loosely, conditional variances and covariances do not depend on the explanator
+y variables.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We have already seen how to allow for an unrestricted unconditional variance-cov
+ariance matrix in the context of RE, FE, and FD: we simply apply unrestriced
+ FGLS to the appropriately transformed equations.
+ Nevertheless, efficiency of, say, the FEGLS estimators hinge on the system
+ homoskedasticity assumption 
+\begin_inset Formula $E(u_{i}u_{i}^{\prime}|x_{i},c_{i})=E(u_{i}u_{i}^{\prime})$
+\end_inset
+
+.
+ Under RE.1, efficiency of the FGLS estimator with unrestricted 
+\begin_inset Formula $\mbox{Var}(v_{i})$
+\end_inset
+
+ is ensured only if 
+\begin_inset Formula $E(v_{i}v_{i}^{\prime}|x_{i})=E(v_{i}v_{i}^{\prime})$
+\end_inset
+
+.
+ If this assumption fails, GMM with an optimal weighting matrix is generally
+ more efficient, and so it may be worthwhile to apply GMM methods to (2),
+ or in the case of FE and FD, a suitably transformed set of equations.
+\end_layout
+
+\begin_layout Section*
+11.3 Hausman and Taylor-Type Models
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The results of the previous seciton apply to a class of unobserved effects
+ models studied by Hausman and Taylor (1981) (HT).
+ The key feature of these models is that the assumptions imply the availability
+ of instrumental variables form within the model; one need not look outside
+ the model for exogenous variables.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The HT model can be written as
+\begin_inset Formula 
+\begin{equation}
+y_{it}=w_{i}^{\prime}\gamma+x_{it}^{\prime}\beta+c_{i}+u_{it},\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+where all elements of 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ display some time variation, and it is convient to include unity in 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ and assume that 
+\begin_inset Formula $E(c_{i})=0$
+\end_inset
+
+.
+ We assume strict exogeneity conditional on 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+E(u_{it}|w_{i},x_{i1},\ldots,x_{iT},c_{i})=0,\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+Estimation of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ can proceed by FE.
+ The FE transformation eliminates 
+\begin_inset Formula $w_{i}\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+ As usual, this approach places nor estrictions on the correlation between
+ 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $(w_{i},x_{it})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What about estimation of 
+\begin_inset Formula $\gamma$
+\end_inset
+
+? If, in addition to (11), we assume
+\begin_inset Formula 
+\begin{equation}
+E(w_{i}c_{i})=0
+\end{equation}
+
+\end_inset
+
+then a 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+-consistent estimator is easy to obtain: average equation (1) across 
+\begin_inset Formula $t$
+\end_inset
+
+, premulitply by 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+, take expectations, use the fact that 
+\begin_inset Formula $E\left[w_{i}\left(c_{i}+\bar{u}_{i}\right)\right]=0$
+\end_inset
+
+, and rearrange to get
+\begin_inset Formula 
+\begin{equation}
+E(w_{i}w_{i}^{\prime})\gamma=E\left[w_{i}(\bar{y}_{i}-\bar{x}_{i}^{\prime}\beta)\right]
+\end{equation}
+
+\end_inset
+
+Now, making the standard assumption that 
+\begin_inset Formula $E(w_{i}w_{i}^{\prime})$
+\end_inset
+
+ is nonsingular, it follows by the usual analogy principle argument that
+ 
+\begin_inset Formula 
+\begin{equation}
+\hat{\gamma}=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}w_{i}w_{i}^{\prime}\right)^{-1}\left[N^{-1}{\displaystyle \sum_{i=1}^{N}w_{i}\left(\bar{y}_{i}-\bar{x}_{i}^{\prime}\hat{\beta}_{FE}\right)}\right]
+\end{equation}
+
+\end_inset
+
+is consistent for 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+ The asymptotic variance of 
+\begin_inset Formula $\sqrt{N}(\hat{\gamma}-\gamma)$
+\end_inset
+
+ can be obtained by standard arguments for two-step estimators.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Hausman and Taylor (1981) partition 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ as 
+\begin_inset Formula $w_{i}=(w_{i1},w_{i2})$
+\end_inset
+
+, 
+\begin_inset Formula $x_{it}=(x_{it1},x_{it2})$
+\end_inset
+
+, where 
+\begin_inset Formula $w_{i1}$
+\end_inset
+
+ is 
+\begin_inset Formula $J_{1}\times1$
+\end_inset
+
+, 
+\begin_inset Formula $w_{i2}$
+\end_inset
+
+ is 
+\begin_inset Formula $J_{2}\times1$
+\end_inset
+
+, 
+\begin_inset Formula $x_{it1}$
+\end_inset
+
+ is 
+\begin_inset Formula $K_{1}\times1$
+\end_inset
+
+, 
+\begin_inset Formula $x_{it2}$
+\end_inset
+
+ is 
+\begin_inset Formula $K_{2}\times1$
+\end_inset
+
+, and assume that 
+\begin_inset Formula 
+\begin{equation}
+E(w_{i1}c_{i})=0\ \mbox{and}\ E(x_{it1}c_{i})=0,\ \forall\ t
+\end{equation}
+
+\end_inset
+
+ We still maintain assumption (4), so that 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{is}$
+\end_inset
+
+ are uncorrelated with 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Assumptions (4) and (8) provide orthogonality conditions that can be used
+ in a method of moments procedure.
+ Write equation (3) for all 
+\begin_inset Formula $T$
+\end_inset
+
+ time periods as
+\begin_inset Formula 
+\begin{equation}
+y_{i}=w_{i}\gamma+x_{i}\beta+v_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $v_{i}=c_{i}j_{T}+u_{i}$
+\end_inset
+
+ is the composite error.
+ Since 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ is strictly exogenous and 
+\begin_inset Formula $Q_{T}v_{i}=Q_{T}u_{i}$
+\end_inset
+
+ [where 
+\begin_inset Formula $Q_{T}\equiv I_{T}-j_{T}(j_{T}^{\prime}j_{T})^{-1}j_{T}^{\prime}$
+\end_inset
+
+ is again the 
+\begin_inset Formula $T\times T$
+\end_inset
+
+ time-demeaning matrix], it follows that 
+\begin_inset Formula $E[(Q_{T}x_{i})^{\prime}v_{i}]=0$
+\end_inset
+
+.
+ Thus, the 
+\begin_inset Formula $T\times K$
+\end_inset
+
+ matrix 
+\begin_inset Formula $Q_{T}x_{i}$
+\end_inset
+
+ can be used as instruments in estimation equation (16).
+ If these were the only instruments available, then we would be back to
+ FE estimation of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ without being able to estimate 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Additional instruments come from assumption (8).
+ In particular, 
+\begin_inset Formula $w_{i1}$
+\end_inset
+
+ is orthogonal to 
+\begin_inset Formula $v_{it}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+, and so is 
+\begin_inset Formula $x_{i1}^{o}$
+\end_inset
+
+, the 
+\begin_inset Formula $1\times TK_{1}$
+\end_inset
+
+ vector containing 
+\begin_inset Formula $x_{it1}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+.
+ Thus, define a set of instruments for equation (9) by
+\begin_inset Formula 
+\begin{equation}
+\left[Q_{T}x_{i},j_{T}\otimes(w_{i1},x_{i1}^{o})\right]
+\end{equation}
+
+\end_inset
+
+which is a 
+\begin_inset Formula $T\times(K+J_{1}+TK_{1})$
+\end_inset
+
+ matrix.
+ Simply put, the vector of IVs for time period 
+\begin_inset Formula $t$
+\end_inset
+
+ is 
+\begin_inset Formula $(\ddot{x}_{it},w_{i1},x_{i1}^{o})$
+\end_inset
+
+.
+ With this set of instruments, the order condition for identification of
+ 
+\begin_inset Formula $(\gamma,\beta)$
+\end_inset
+
+ is that 
+\begin_inset Formula $K+J_{1}+TK_{1}\geq J+K$
+\end_inset
+
+ or 
+\begin_inset Formula $TK_{1}\geq J_{2}$
+\end_inset
+
+.
+ In effect, we must have a sufficient number of elements in 
+\begin_inset Formula $x_{i1}^{o}$
+\end_inset
+
+ to act as instruments for 
+\begin_inset Formula $w_{i2}$
+\end_inset
+
+.
+ (
+\begin_inset Formula $\ddot{x}_{it}$
+\end_inset
+
+ are the IVs for 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+, and 
+\begin_inset Formula $w_{i1}$
+\end_inset
+
+ act as their own IVs.) Whether we do depends on the number of time periods,
+ as well as on 
+\begin_inset Formula $K_{1}$
+\end_inset
+
+.
+ Hausman and Taylor (1981) suggested estimating 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ by REIV.
+ REIV can be implemented as a P2SLS estimator on transformed data.
+\end_layout
+
+\begin_layout Section*
+11.6 Estimation under Sequential Exogeneity
+\end_layout
+
+\begin_layout Subsection*
+11.6.1 General Framework
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can also apply the FDIV methods in the previous section to estiamte the
+ standard model
+\begin_inset Formula 
+\begin{equation}
+y_{it}=x_{it}^{\prime}\beta+c_{i}+u_{it},\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+under a sequential exogeneity assumption, properly modified for the presence
+ of the unobserved effect, 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+ The 
+\series bold
+sequential moment restriction
+\series default
+ can be written in conditional expectations form as
+\begin_inset Formula 
+\begin{equation}
+E(u_{it}|x_{it},x_{i,t-1},\ldots,x_{i1},c_{i})=0,\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+When assumption (12) holds, we say that 
+\begin_inset Formula $\{x_{it}\}$
+\end_inset
+
+ is 
+\series bold
+sequentially exogenous conditional on the unobserved effect
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Given equation (11), assumption (12) is equivalent to
+\begin_inset Formula 
+\begin{equation}
+E(y_{it}|x_{it},x_{i,t-1},\ldots,x_{i1},c_{i})=E(y_{it}|x_{it},c_{i})=x_{it}^{\prime}\beta+c_{i}
+\end{equation}
+
+\end_inset
+
+which provides a simple interpretation of sequential exogeneity conditional
+ on 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+: once 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ have been controlled for, no 
+\emph on
+past
+\emph default
+ values of 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ affect the expected value of 
+\begin_inset Formula $y_{it}$
+\end_inset
+
+.
+ Conditioning on the explanatory variables only up through time 
+\begin_inset Formula $t$
+\end_inset
+
+ is more natural than the strict exogeneity assumption, which requires condition
+ing on future values of 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ as well.
+ Models with lagged dependent variables are naturally analyzed under sequential
+ exogeneity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A general approach to estimation under sequential exogeneity is taking first
+ differences to remove 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ and obtain equation
+\begin_inset Formula 
+\begin{equation}
+\Delta y_{it}=\Delta x_{it}^{\prime}\beta+\Delta u_{it},\ t=2,\ldots,T
+\end{equation}
+
+\end_inset
+
+written in stacked form as in
+\begin_inset Formula 
+\begin{equation}
+\Delta y_{i}=\Delta x_{i}\beta+\Delta u_{i}
+\end{equation}
+
+\end_inset
+
+The only issue is where the instruments come from.
+ Under assumption (12),
+\begin_inset Formula 
+\begin{equation}
+E(x_{is}u_{it})=0,\ s=1,\ldots,t;t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+which implies the orthogonality conditions
+\begin_inset Formula 
+\begin{equation}
+E(x_{is}\Delta u_{it})=0,\ s=1,\ldots,t-1;t=2,\ldots,T
+\end{equation}
+
+\end_inset
+
+Therefore, at time 
+\begin_inset Formula $t$
+\end_inset
+
+, the available instruments in the FD equation are in the vector 
+\begin_inset Formula $x_{i,t-1}^{o}$
+\end_inset
+
+, where 
+\begin_inset Formula 
+\begin{equation}
+x_{it}^{o}\equiv(x_{i1},\ldots,x_{it})^{\prime}
+\end{equation}
+
+\end_inset
+
+Therefore, the matrix of instruments is simply
+\begin_inset Formula 
+\begin{equation}
+W_{i}=\mbox{diag}(x_{i1}^{o\prime},\ldots,x_{i,T-1}^{o\prime})
+\end{equation}
+
+\end_inset
+
+which has 
+\begin_inset Formula $(T-1)$
+\end_inset
+
+ rows.
+ Because of sequential exogeneity, the number of valid instruments increases
+ with 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Given 
+\begin_inset Formula $W_{i}$
+\end_inset
+
+, it is routine to apply GMM estimation.
+ However, some simpler strategies are available.
+ One useful one is to estimate a reduced form for 
+\begin_inset Formula $\Delta x_{it}$
+\end_inset
+
+ separately for each 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ So, at time 
+\begin_inset Formula $t$
+\end_inset
+
+, the regression 
+\begin_inset Formula $\Delta x_{it}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i,t-1}^{o}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,\ldots,N$
+\end_inset
+
+, and obtain the fitted values, 
+\begin_inset Formula $\widehat{\Delta x}_{it}$
+\end_inset
+
+.
+ Of course, the fitted values are all 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ vectors for each 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Then, estimate the FD equation (18) by PIV using instruments 
+\begin_inset Formula $\widehat{\Delta x}_{it}$
+\end_inset
+
+.
+ It is simple to obtain robust standard errors and test statistics from
+ such a procedure because the first state estimation to obtain the instruments
+ can be ignored (asymptotically, of course).
+ This is the same set of estimates obtained if we choose 
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ as in (19) and choose as the weighting matrix 
+\begin_inset Formula $(W^{\prime}W/N)^{-1}$
+\end_inset
+
+, that is, we obtain the S2SLS estimator.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Given an initial consistent estimator, we can obtain the efficient GMM weighting
+ matrix.
+ In most applications, there is a reasonable set of assumptions under which
+ 
+\begin_inset Formula $E(W_{i}^{\prime}e_{i}e_{i}^{\prime}W_{i})=E(W_{i}^{\prime}\Omega W_{i})$
+\end_inset
+
+ where 
+\begin_inset Formula $e_{i}=\Delta u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Omega=E(e_{i}e_{i}^{\prime})$
+\end_inset
+
+, in which case the GMM 3SLS estimator is an efficient GMM estimator.
+\end_layout
+
+\begin_layout Subsection*
+11.6.2 Models with Lagged Dependent Variables
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A special case of models under sequential exogeneity restrictions are autoregres
+sive models.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $y_{it}=\alpha y_{i,t-1}+z_{it}^{\prime}\gamma+c_{i}+u_{it}=x_{it}^{\prime}\beta+c_{i}+u_{it}$
+\end_inset
+
+, where 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ includes the regressors in 
+\begin_inset Formula $z_{it}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{i,t-1}$
+\end_inset
+
+.
+ Due to the lagged dependent variable being used as a regressor, strict
+ exogeneity is not satisfied.
+ Since 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+ is correlated with the future values of the regressors, i.e., 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ is correlated with 
+\begin_inset Formula $u_{i,t-1}$
+\end_inset
+
+, then 
+\begin_inset Formula $E(u_{it}x_{is})\ne0$
+\end_inset
+
+ when 
+\begin_inset Formula $s=t+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Here we study the AR(1) model above.
+ In the model without any other covariates,
+\begin_inset Formula 
+\begin{gather}
+y_{it}=\rho y_{i,t-1}+c_{i}+u_{it},\ t=1,\ldots,T\\
+E(u_{it}|y_{i,t-1},\ldots,y_{i0},c_{i})=0
+\end{gather}
+
+\end_inset
+
+so that our first observation on 
+\begin_inset Formula $y$
+\end_inset
+
+ is at 
+\begin_inset Formula $t=0$
+\end_inset
+
+.
+ Assumption (21) says that we have the dynamics completely specified: once
+ we control for 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+, only one lag of 
+\begin_inset Formula $y_{it}$
+\end_inset
+
+ is necessary.
+ This is an example of a 
+\series bold
+dynamic completeness conditional on the unobserved effect
+\series default
+ assumption.
+ When we let 
+\begin_inset Formula $x_{it}=y_{i,t-1}$
+\end_inset
+
+, we see immediately that the AR(1) model satisfies the sequential exogeneity
+ assumptions (conditional on 
+\begin_inset Formula $c_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+One application of model (20) is to determine whether 
+\begin_inset Formula $\{y_{it}\}$
+\end_inset
+
+ exhibits 
+\series bold
+state dependence
+\series default
+: after controlling for systemic, time-constant differences 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+, does last period's outcome on 
+\begin_inset Formula $y$
+\end_inset
+
+ help predict this period's outcome.
+ 
+\begin_inset Formula $H_{0}:\rho=0$
+\end_inset
+
+ (non-predictability: the past dependent variable has no bearing on the
+ current one).
+ If we reject 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, then we should included a lagged dependent variable in the regressors.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+At time 
+\begin_inset Formula $t$
+\end_inset
+
+ in the FD equation 
+\begin_inset Formula $\Delta y_{it}=\rho\Delta y_{i,t-1}+\Delta u_{it},\ t=2,\ldots,T$
+\end_inset
+
+, the avaiable instruments are 
+\begin_inset Formula $w_{it}=(y_{i0},\ldots,y_{i,t-2})$
+\end_inset
+
+.
+ Note, the differenced errors 
+\begin_inset Formula $\Delta u_{it}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta u_{i,t-1}$
+\end_inset
+
+ are necessarily correlated under assumption (21).
+ Thus, at a minimum, any estimation method should account for this serial
+ correlation in calculating standard errors and test statistics.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A more general version of the model is
+\begin_inset Formula 
+\begin{equation}
+y_{it}=\theta_{t}+\rho y_{i,t-1}+z_{it}\gamma+c_{i}+u_{it},\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\theta_{t}$
+\end_inset
+
+ denotes different period intercepts and 
+\begin_inset Formula $\{z_{it}\}$
+\end_inset
+
+ is strictly exogenous.
+ When we difference equation (22),
+\begin_inset Formula 
+\begin{equation}
+\Delta y_{it}=\eta_{t}+\rho\Delta y_{i,t-1}+\Delta z_{it}\gamma+\Delta u_{it},\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+the available instruments (in addition to time period dummies) are 
+\begin_inset Formula $(z_{i},y_{i,t-2},\ldots,y_{i0})$
+\end_inset
+
+.
+ We might not want to use all of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ for every period, but certaintly we would use 
+\begin_inset Formula $\Delta z_{it}$
+\end_inset
+
+ and maybe even 
+\begin_inset Formula $\Delta z_{i,t-1}$
+\end_inset
+
+.
+ If we add sequentially exogenous variables, say 
+\begin_inset Formula $h_{it}$
+\end_inset
+
+, to (22) then 
+\begin_inset Formula $(h_{i,t-1},\ldots,h_{i1})$
+\end_inset
+
+ would be added to the list.
+ Remember, (32) is an estimating equation.
+ We should interpret the estimates in light of the orginial model (22).
+ It is equation (22) that represents a dynamically complete conditional
+ expectation.
+ Equation (23) does not even satisfy 
+\begin_inset Formula $E(\Delta u_{it}|\Delta y_{i,t-1},\Delta z_{it})=0$
+\end_inset
+
+, which is why POLS estimation of (23) is inconsistent.
+\end_layout
+
+\begin_layout Section*
+Unbalanced Panels
+\end_layout
+
+\begin_layout Standard
+When you have a different number of time periods
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y_{it}$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+FE transformation: 
+\begin_inset Formula $y_{it}-\frac{1}{T}{\displaystyle \sum_{t=1}^{T}}y_{it}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To obtian the FE estimator, run POLS of 
+\begin_inset Formula $Qy_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $Qx_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q=I_{t}-d_{i}(d_{i}^{\prime}d_{i})^{-1}d_{i}^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d_{it}=\begin{cases}
+1 & \mbox{if t is in sample}\\
+0 & \mbox{otherwise}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d_{i}=\left(\begin{array}{c}
+d_{i1}\\
+\vdots\\
+d_{iT}
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

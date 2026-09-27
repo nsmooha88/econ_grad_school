@@ -1,0 +1,1745 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 13: Maximum Likelihood Methods
+\end_layout
+
+\begin_layout Section*
+13.1 Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+MLE is generally the most efficient estimation procedure in the class of
+ estimators that use information on the distribution of the endogenous variables
+ given the exogenous variables.
+ However, efficiency usually comes at the price of nonrobustness, and this
+ is certainly the case for maximum likelihood.
+ Maximum likelihood estimators are generally inconsistent if some part of
+ the specified distribution is misspecified.
+\end_layout
+
+\begin_layout Section*
+13.2 Preliminaries and Examples
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Traditional maximum likelihood theory for independent, identically distributed
+ observations 
+\begin_inset Formula $\{y_{i}\in\mathbb{R}^{G}:i=1,2,\ldots\}$
+\end_inset
+
+ starts by specifying a family of densities for 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+.
+ In almost all economic applications, we are interested in estimating parameters
+ of 
+\emph on
+conditional
+\emph default
+ distributions.
+ Therefore, we assume that each random draw is partitioned as 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+, where 
+\begin_inset Formula $x_{i}\in\mathbb{R}^{K}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{i}\in\mathbb{R}^{G}$
+\end_inset
+
+, and we are interested in estimating a model for the conditional distribution
+ of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ We are not interested in the distribution of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, so we will not specify a model for it.
+ Consequently, the method we will focus on is properly called 
+\series bold
+conditional maximum likelihood estimation (CMLE)
+\series default
+.
+ By taking 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ to be null we cover unconditional MLE as a special case.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is important to understand that the subsequent results apply any time
+ we have random sampling in the cross section dimension.
+ Thus, the general theory applies to system estimation, including panel
+ data, provided we are willing to assume a distribution for 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In order to perform maximum likelihood analysis, we need to specify, or
+ derive from an underlying (structural) model, the density of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ We assume this density is known up to a finite number of unknown parameters,
+ with the result that we have a 
+\series bold
+parametric model
+\series default
+ of a conditional density.
+ The vector (or scalar) 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ can be continuous or discrete, or it can have both discrete and continuous
+ characteristics.
+\end_layout
+
+\begin_layout Example*
+
+\emph on
+(Binary Response Model, specifically the Probit Model)
+\end_layout
+
+\begin_layout Example*
+\begin_inset space \quad{}
+\end_inset
+
+Suppose that the 
+\series bold
+latent variable
+\series default
+ 
+\begin_inset Formula $y_{i}^{*}$
+\end_inset
+
+ follows
+\begin_inset Formula 
+\begin{equation}
+y_{i}^{*}=x_{i}^{\prime}\theta+e_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ is 
+\emph on
+independent
+\emph default
+ of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ (which is a 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ vector with first element equal to unity for all 
+\begin_inset Formula $i$
+\end_inset
+
+), 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is a 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ vector of parameters, and 
+\begin_inset Formula $e_{i}\sim N(0,1)$
+\end_inset
+
+.
+ Instead of observing 
+\begin_inset Formula $y_{i}^{*}$
+\end_inset
+
+, we observe only a binary variable indicating the sign of 
+\begin_inset Formula $y_{i}^{*}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+y_{i}=\begin{cases}
+1 & \mbox{if}\ y_{i}^{*}>0\\
+0 & \mbox{if}\ y_{i}^{*}\leq0
+\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+We can easily obtain the distribution of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray}
+P(y_{i}=1|x_{i}) & = & P(y_{i}^{*}>0|x_{i})\nonumber \\
+ & = & P(x_{i}^{\prime}\theta+e_{i}>0|x_{i})\nonumber \\
+ & = & P(e_{i}>-x_{i}^{\prime}\theta|x_{i})=1-\Phi(-x_{i}^{\prime}\theta)=\Phi(x_{i}^{\prime}\theta)
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Phi(\cdot)$
+\end_inset
+
+ denotes the standard normal cumulative distribution function (cdf).
+ Therefore,
+\begin_inset Formula 
+\begin{equation}
+P(y_{i}=0|x_{i})=1-\Phi(x_{i}^{\prime}\theta)
+\end{equation}
+
+\end_inset
+
+We can combine equations (3) and (4) into the density of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+f(y_{i}|x_{i})=\left[\Phi(x_{i}^{\prime}\theta)\right]^{y_{i}}\left[1-\Phi(x_{i}^{\prime}\theta)\right]^{1-y_{i}},\ y_{i}=0,1
+\end{equation}
+
+\end_inset
+
+That 
+\begin_inset Formula $f(y_{i}|x_{i})$
+\end_inset
+
+ is zero when 
+\begin_inset Formula $y_{i}\notin\{0,1\}$
+\end_inset
+
+ is obvious.
+\end_layout
+
+\begin_layout Section*
+13.3 General Framework for Conditional Maximum Likelihood Estimation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $p_{o}(y|x)$
+\end_inset
+
+ denote the conditional density of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}=x$
+\end_inset
+
+, where 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+ are dummy arguments.
+ We index this density by 
+\begin_inset Quotes eld
+\end_inset
+
+o
+\begin_inset Quotes erd
+\end_inset
+
+ to emphasize that it is the true density of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, and not just one of many candidates.
+ It useful to let 
+\begin_inset Formula $\mathscr{X}\subset\mathbb{R}^{K}$
+\end_inset
+
+ denote the possible values for 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathscr{Y}$
+\end_inset
+
+ denote the possible values of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+; 
+\begin_inset Formula $\mathscr{X}$
+\end_inset
+
+and 
+\begin_inset Formula $\mathscr{Y}$
+\end_inset
+
+ are called the 
+\emph on
+supports
+\emph default
+ of the random vectos 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, respectively.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For a general treatment, we assume that, for all 
+\begin_inset Formula $x\in\mathscr{X}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{o}(\cdot|x)$
+\end_inset
+
+ is a density with respect to a 
+\begin_inset Formula $\sigma$
+\end_inset
+
+-
+\emph on
+finite measure
+\emph default
+, denoted 
+\begin_inset Formula $v(dy)$
+\end_inset
+
+, which can be chosen to allow 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ to be discrete, continuous, or some mixture of the two.
+ When 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is discrete, the measure 
+\begin_inset Formula $v(dy)$
+\end_inset
+
+ simply turns all integrals into sums; when 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is purely continuous, we obtain the usual Riemann integrals.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The result from proability that is crucial for applying the analogy principle
+ is the 
+\series bold
+conditional Kullback-Leibler information inequality
+\series default
+.
+ The following statement suffices for our purpose: for any nonegative function
+ 
+\begin_inset Formula $f(\cdot|x)$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \int_{\mathscr{Y}}}f(y|x)v(dy)=1,\ \forall\ x\in\mathscr{X}
+\end{equation}
+
+\end_inset
+
+Property CD.1 in chapter 13's appendix implies that
+\begin_inset Formula 
+\begin{equation}
+\mathscr{K}(f;x)\equiv{\displaystyle \int_{\mathscr{Y}}}\log\left[\nicefrac{p_{o}(y|x)}{f(y|x)}\right]p_{o}(y|x)v(dy)\geq0,\ \forall\ x\in\mathscr{X}
+\end{equation}
+
+\end_inset
+
+Because the integral is identically zero for 
+\begin_inset Formula $f=p_{o}$
+\end_inset
+
+, expression (7) says that, for each 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $\mathscr{K}(f;x)$
+\end_inset
+
+ is minimized at 
+\begin_inset Formula $f=p_{o}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can apply inequality (7) to a parametric model for 
+\begin_inset Formula $p_{o}(\cdot|x)$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+\left\{ f(\cdot|x;\theta),\ \theta\in\Theta,\ \Theta\subset\mathbb{R}^{P}\right\} 
+\end{equation}
+
+\end_inset
+
+which we assume satisfies condition (6) for each 
+\begin_inset Formula $x\in\mathscr{X}$
+\end_inset
+
+ and each 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+; if it does not, then 
+\begin_inset Formula $f(\cdot|x;\theta)$
+\end_inset
+
+ does not integrate to unity (with respect to the measure 
+\begin_inset Formula $v$
+\end_inset
+
+), and as as a result, it is a very poor candidate for 
+\begin_inset Formula $p_{o}(y|x)$
+\end_inset
+
+.
+ Model (8) is a 
+\series bold
+correctly specified model of the conditional density
+\series default
+, 
+\begin_inset Formula $p_{o}(\cdot|\cdot)$
+\end_inset
+
+, if, for some 
+\begin_inset Formula $\theta_{o}\in\Theta$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+f(\cdot|x;\theta_{o})=p_{o}(\cdot|x),\ \forall\ x\in\mathscr{X}
+\end{equation}
+
+\end_inset
+
+As before, we use 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ to distinguish the true value of the parameter from a generic element of
+ 
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For each 
+\begin_inset Formula $x\in\mathscr{X}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathscr{K}(f,x)$
+\end_inset
+
+ can be written as 
+\begin_inset Formula $E\left\{ \log\left[p_{o}(y_{i}|x_{i})\right]|x_{i}=x\right\} -E\left\{ \log\left[f(y_{i}|x_{i})\right]|x_{i}=x\right\} $
+\end_inset
+
+.
+ Therefore, if the parametric model is correctly specified, then 
+\begin_inset Formula $E\left\{ \log\left[f(y_{i}|x_{i};\theta_{o})\right]|x_{i}\right\} \geq E\left\{ \log\left[f(y_{i}|x_{i};\theta)\right]|x_{i}\right\} $
+\end_inset
+
+, or
+\begin_inset Formula 
+\begin{equation}
+E\left[l_{i}(\theta_{o})|x_{i}\right]\geq E\left[l(\theta)|x_{i}\right],\ \theta\in\Theta
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+l_{i}(\theta)\equiv l_{i}\left(y_{i},x_{i},\theta\right)\equiv\log\ f(y_{i}|x_{i};\theta)
+\end{equation}
+
+\end_inset
+
+is the 
+\series bold
+conditional log likelihood for observation i
+\series default
+.
+ Note that 
+\begin_inset Formula $l_{i}(\theta)$
+\end_inset
+
+ is a 
+\emph on
+random
+\emph default
+ funciton of 
+\begin_inset Formula $\theta$
+\end_inset
+
+, since it depends on the random vector 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+.
+ By taking the expected value of expression (10) and using iterated expectations
+, we see that 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ solves
+\begin_inset Formula 
+\begin{equation}
+\max_{\theta\in\Theta}\ E\left[l_{i}(\theta)\right]
+\end{equation}
+
+\end_inset
+
+where the expectation is with respect to the joint distribution of 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+.
+ The sample analogue of expression (12) is
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \max_{\theta\in\Theta}}\ N^{-1}{\displaystyle \sum_{i=1}^{N}}\log f(y_{i}|x_{i};\theta)
+\end{equation}
+
+\end_inset
+
+A solution to problem (13), assuming that one exists, is the 
+\series bold
+conditional maximum likelihood estimator
+\series default
+ of 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+, which we denote as 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The CMLE is clearly an M-estimator, since a maximization problem is easily
+ turned into a minimization problem.
+ Take 
+\begin_inset Formula $w_{i}\equiv(x_{i},y_{i})$
+\end_inset
+
+ and 
+\begin_inset Formula $q(w_{i},\theta)\equiv-\log f(y_{i}|x_{i};\theta)$
+\end_inset
+
+.
+ So, we can apply the results we obtained for M-estimators.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In a traditional framework, we would treat the 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ as constants appearing in the distribuion of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, and we would define 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ as the solution to
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \max_{\theta\in\Theta}}{\displaystyle \prod_{i=1}^{N}}f(y_{i}|x_{i};\theta)
+\end{equation}
+
+\end_inset
+
+Under independence, the product in expression (14) is the model for the
+ joint density of 
+\begin_inset Formula $(y_{1},\ldots,y_{N})$
+\end_inset
+
+, evaluated at the data.
+ Because maximizing the function in (14) is the same as maximizing its natural
+ log, we are led to problem (13).
+ However, the arguments explaining why solving (14) should to a good estimator
+ of 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ are necessarily heuristic.
+ By contrast, the analogy principle applies directly to problem (13), and
+ we need not assume that the 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ are fixed.
+\end_layout
+
+\begin_layout Example*
+
+\emph on
+(continued):
+\emph default
+ In the probit example, the log likelihood for observation 
+\begin_inset Formula $i$
+\end_inset
+
+ is 
+\begin_inset Formula $l_{i}(\theta)=y_{i}\log\Phi(x_{i}^{\prime}\theta)+(1-y_{i})\log\left[1-\Phi(x_{i}^{\prime}\theta)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+13.4 Consistency of CMLE
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now state a formal consistency result for the CMLE, which is a special
+ case of the M-estimator consistency result.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+13.1 (Consistency of CMLE): 
+\series default
+\emph on
+Let 
+\begin_inset Formula $\left\{ (x_{i},y_{i}):i=1,2,\ldots\right\} $
+\end_inset
+
+ be a random sample with 
+\begin_inset Formula $x_{i}\in\mathscr{X}\subset\mathbb{R}^{K}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{i}\in\mathscr{Y}\subset\mathbb{R}^{G}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\Theta\subset\mathbb{R}^{P}$
+\end_inset
+
+ be the parameter set, and denote the parametric model of the conditional
+ density as 
+\begin_inset Formula $\left\{ f(\cdot|x,\theta):x\in\mathscr{X},\theta\in\Theta\right\} $
+\end_inset
+
+.
+ Assume that 
+\series bold
+(a)
+\series default
+ 
+\begin_inset Formula $f(\cdot|x;\theta)$
+\end_inset
+
+ is a true density with respect to the measure 
+\begin_inset Formula $v(dy)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta$
+\end_inset
+
+, so that condition (6) holds; 
+\series bold
+(b)
+\series default
+ for some 
+\begin_inset Formula $\theta_{o}\in\Theta$
+\end_inset
+
+, 
+\begin_inset Formula $p_{o}(\cdot|x)=f(\cdot|x;\theta_{o}),\ \forall\ x\in\mathscr{X}$
+\end_inset
+
+, and 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is the unique solution to the problem (12); 
+\series bold
+(c)
+\series default
+ 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ is a compact set; 
+\series bold
+(d)
+\series default
+ for each 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+, 
+\begin_inset Formula $l(\cdot,\theta)$
+\end_inset
+
+ is a Borel measurable function on 
+\begin_inset Formula $\mathscr{Y}\times\mathscr{X}$
+\end_inset
+
+; 
+\series bold
+(e)
+\series default
+ for each 
+\begin_inset Formula $(y,x)\in\mathscr{Y}\times\mathscr{X}$
+\end_inset
+
+, 
+\begin_inset Formula $l(y,x,\cdot)$
+\end_inset
+
+ is a continuous function on 
+\begin_inset Formula $\Theta$
+\end_inset
+
+; and 
+\series bold
+(f)
+\series default
+ 
+\begin_inset Formula $|l(w,\theta)|\leq b(w),\ \forall\ \theta\in\Theta$
+\end_inset
+
+, and 
+\begin_inset Formula $E[b(w)]<\infty$
+\end_inset
+
+ .
+ Then there exists a solution to problem (13), the CMLE 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mbox{p\lim}\ \hat{\theta}=\theta_{o}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For the probit example, the log likelihood is clearly continuous in 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ We can verify the moment condition 
+\begin_inset Formula $(f)$
+\end_inset
+
+ if we bound certain moments of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and make the parameter space compact.
+ But our primary concern is that densities are correctly specified.
+ For example, the density for 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ will be incorrect if the latent error 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ is not independent of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and normally distributed, or if the latent variable model is not linear
+ to begin with.
+\end_layout
+
+\begin_layout Section*
+13.5 Asymptotic Normality and Asymptotic Variance Estimation
+\end_layout
+
+\begin_layout Subsection*
+13.5.1 Asymptotic Normality
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To derive the limiting distribution of the MLE, we will have to assume certain
+ regularity conditions (see Theorem 12.3); in particular, we assume that
+ 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is in the interior of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+, and 
+\begin_inset Formula $l_{i}(\theta)$
+\end_inset
+
+ is twice continuously differentiable on the interior of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The 
+\series bold
+score of the log likelihood
+\series default
+ for observation 
+\begin_inset Formula $i$
+\end_inset
+
+ is simply
+\begin_inset Formula 
+\begin{equation}
+s_{i}(\theta)\equiv\frac{\partial l_{i}(\theta)}{\partial\theta}=\left[\begin{array}{c}
+\frac{\partial l_{i}}{\partial\theta_{1}}(\theta)\\
+\vdots\\
+\frac{\partial l_{i}}{\partial\theta_{P}}(\theta)
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+a 
+\begin_inset Formula $P\times1$
+\end_inset
+
+ vector.
+\end_layout
+
+\begin_layout Example*
+
+\emph on
+(continued):
+\end_layout
+
+\begin_layout Example*
+For the probit case, 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+\frac{\partial l_{i}(\theta)}{\partial\theta}=y_{i}\left[\frac{\phi(x_{i}^{\prime}\theta)x_{i}^{\prime}}{\Phi(x_{i}^{\prime}\theta)}\right]-(1-y_{i})\left[\frac{\phi(x_{i}^{\prime}\theta)x_{i}^{\prime}}{\left[1-\Phi(x_{i}^{\prime}\theta)\right]}\right]
+\]
+
+\end_inset
+
+Transposing this equation, and using a little algebra, gives
+\begin_inset Formula 
+\begin{equation}
+s_{i}(\theta)=\frac{\phi(x_{i}^{\prime}\theta)x_{i}\left[y_{i}-\Phi(x_{i}^{\prime}\theta)\right]}{\Phi(x_{i}^{\prime}\theta)\left[1-\Phi(x_{i}^{\prime}\theta)\right]}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the vast majority of cases, the score of the log-likelihood function
+ has an important zero conditional mean property:
+\begin_inset Formula 
+\begin{equation}
+E\left[s_{i}(\theta_{o})|x_{i}\right]=0
+\end{equation}
+
+\end_inset
+
+In other words, when we evaluate the 
+\begin_inset Formula $P\times1$
+\end_inset
+
+ score at 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+, and take its expectation with respect to 
+\begin_inset Formula $f(\cdot|x_{i};\theta_{o})$
+\end_inset
+
+, the expectation is zero.
+ Under condition (17), 
+\begin_inset Formula $E\left[s_{i}(\theta_{o})\right]=0$
+\end_inset
+
+, which was a key condition in deriving the asymptotic normality of the
+ M-estimator.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To show condition (17) generally, let 
+\begin_inset Formula $E_{\theta}\left[\cdot|x_{i}\right]$
+\end_inset
+
+ denote conditional expectation with respect to the density 
+\begin_inset Formula $f(\cdot|x_{i};\theta)$
+\end_inset
+
+ for any 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+.
+ Then, by definition,
+\begin_inset Formula 
+\[
+E_{\theta}\left[s_{i}(\theta)|x_{i}\right]={\displaystyle \int_{\mathscr{Y}}}s(y,x_{i},\theta)f(y|x_{i};\theta)v(dy)
+\]
+
+\end_inset
+
+If integration and differentiation can be interchanged on 
+\begin_inset Formula $\mbox{int}(\Theta)$
+\end_inset
+
+, that is, if
+\begin_inset Formula 
+\begin{equation}
+\nabla_{\theta}\left({\displaystyle \int_{\mathscr{Y}}}f(y|x_{i};\theta)v(dy)\right)={\displaystyle \int_{\mathscr{Y}}}\nabla_{\theta}f(y|x_{i};\theta)v(dy)
+\end{equation}
+
+\end_inset
+
+for all 
+\begin_inset Formula $x_{i}\in\mathscr{X}$
+\end_inset
+
+, 
+\begin_inset Formula $\theta\in\mbox{int}(\Theta)$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{equation}
+0={\displaystyle \int_{\mathscr{Y}}}\nabla_{\theta}f(y|x_{i};\theta)v(dy)
+\end{equation}
+
+\end_inset
+
+since 
+\begin_inset Formula $\int_{\mathscr{Y}}\nabla_{\theta}f(y|x_{i};\theta)v(dy)$
+\end_inset
+
+ is unity for all 
+\begin_inset Formula $\theta$
+\end_inset
+
+, and therefore the partial derivatives with respect to 
+\begin_inset Formula $\theta$
+\end_inset
+
+ must be identically zero.
+ But the right-hand side of equation (19) can be written as 
+\begin_inset Formula ${\displaystyle \int_{\mathscr{Y}}}\left[\nabla_{\theta}l(y,x_{i},\theta)\right]f(y|x_{i};\theta)v(dy)$
+\end_inset
+
+.
+ Putting in 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ for 
+\begin_inset Formula $\theta$
+\end_inset
+
+ yields (17).
+\end_layout
+
+\begin_layout Example*
+
+\emph on
+(continued): 
+\emph default
+Define 
+\begin_inset Formula $u_{i}\equiv y_{i}-\Phi(x_{i}^{\prime}\theta_{o})=y_{i}-E(y_{i}|x_{i})$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\[
+s_{i}(\theta_{o})=\frac{\phi(x_{i}^{\prime}\theta_{o})x_{i}u_{i}}{\Phi(x_{i}^{\prime}\theta_{o})\left[1-\Phi(x_{i}^{\prime}\theta_{o})\right]}
+\]
+
+\end_inset
+
+and, since 
+\begin_inset Formula $E(u_{i}|x_{i})=0$
+\end_inset
+
+, it follows that 
+\begin_inset Formula $E\left[s_{i}(\theta_{o})|x_{i}\right]=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Assuming that 
+\begin_inset Formula $l_{i}(\theta)$
+\end_inset
+
+ is twice continuously differentiable on the interior of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+, let the Hessian for observation 
+\begin_inset Formula $i$
+\end_inset
+
+ be the 
+\begin_inset Formula $P\times P$
+\end_inset
+
+ matrix of second partial derivatives of 
+\begin_inset Formula $l_{i}(\theta)$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+H_{i}(\theta)\equiv\nabla_{\theta}s_{i}(\theta)=\nabla_{\theta}^{2}l_{i}(\theta)
+\end{equation}
+
+\end_inset
+
+The Hessian is a symmetric matrix that generally depend on 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+.
+ Since MLE is a maximization problem, the expected value of 
+\begin_inset Formula $H_{i}(\theta)$
+\end_inset
+
+ is negative definite.
+ Thus, we define
+\begin_inset Formula 
+\begin{equation}
+A_{o}\equiv-E\left[H_{i}(\theta_{o})\right]
+\end{equation}
+
+\end_inset
+
+which is generally a positive definite matrix when 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is identified.
+ Under standard regularity conditions, the asymptotic normality of the CMLE
+ follows from Theorem 12.3: 
+\begin_inset Formula $\sqrt{N}(\hat{\theta}-\theta_{o})\begin{array}[b]{c}
+_{a}\\
+\sim
+\end{array}N(0,A_{o}^{-1}B_{o}A_{o}^{-1})$
+\end_inset
+
+, where 
+\begin_inset Formula $B_{o}\equiv\mbox{Var}\left[s_{i}(\theta)\right]\equiv E\left[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}\right]$
+\end_inset
+
+.
+ We now show that 
+\begin_inset Formula $B_{o}=A_{o}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We must assume enough smoothness such that the following interchange of
+ integral and derivative is valid:
+\begin_inset Formula 
+\begin{equation}
+\nabla_{\theta}\left({\displaystyle \int_{\mathscr{Y}}}s_{i}(\theta)f(y|x_{i};\theta)v(dy)\right)={\displaystyle \int_{\mathscr{Y}}}\nabla_{\theta}\left[s_{i}(\theta)f(y|x_{i};\theta)\right]v(dy)
+\end{equation}
+
+\end_inset
+
+Then, taking the derivative of the identity
+\begin_inset Formula 
+\[
+\int_{\mathscr{Y}}s_{i}(\theta)f(y|x_{i};\theta)v(dy)\equiv E_{\theta}\left[s_{i}(\theta)|x_{i}\right]=0,\ \theta\in\mbox{int}(\Theta)
+\]
+
+\end_inset
+
+and using equation (22), gives, for all 
+\begin_inset Formula $\theta\in\mbox{int}(\Theta)$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+-E_{\theta}\left[H_{i}(\theta)|x_{i}\right]=\mbox{Var}_{\theta}\left[s_{i}(\theta)|x_{i}\right]
+\]
+
+\end_inset
+
+where the indexing by 
+\begin_inset Formula $\theta$
+\end_inset
+
+ denotes expectation and variance when 
+\begin_inset Formula $f(\cdot|x;\theta)$
+\end_inset
+
+ is the density of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ When evaluated at 
+\begin_inset Formula $\theta=\theta_{o}$
+\end_inset
+
+, we get a very important equality:
+\begin_inset Formula 
+\begin{equation}
+-E\left[H_{i}(\theta_{o})|x_{i}\right]=E\left[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}|x_{i}\right]
+\end{equation}
+
+\end_inset
+
+where the expectation and variance are with respect to the true conditional
+ distribution of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Equation (23) is called the 
+\series bold
+conditional information matrix equality (CIME)
+\series default
+.
+ Taking the expectation of equation (23) (with respect to the distribution
+ of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+) and using the law of iterated expectations gives
+\begin_inset Formula 
+\begin{equation}
+-E\left[H_{i}(\theta_{o})\right]=E\left[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}\right]
+\end{equation}
+
+\end_inset
+
+or 
+\begin_inset Formula $A_{o}=B_{o}$
+\end_inset
+
+.
+ This relationship is best thought of as the 
+\series bold
+unconditional information matrix equality (UIME)
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+13.2 (Asymptotic Normality of CMLE):
+\series default
+ 
+\emph on
+Let the conditions of Theorem 13.1 hold.
+ In addition, assume that 
+\series bold
+(a)
+\series default
+ 
+\begin_inset Formula $\theta_{o}\in\mbox{int}(\Theta)$
+\end_inset
+
+; 
+\series bold
+(b)
+\series default
+ for each 
+\begin_inset Formula $(y,x)\in\mathscr{Y}\times\mathscr{X}$
+\end_inset
+
+, 
+\begin_inset Formula $l(y,x,\cdot)$
+\end_inset
+
+ is twice continuously differentiable on 
+\begin_inset Formula $\mbox{int}(\Theta)$
+\end_inset
+
+; 
+\series bold
+(c)
+\series default
+ the interchanges of derivative and integral in equations (18) and (22)
+ hold for all 
+\begin_inset Formula $\theta\in\mbox{int}(\Theta)$
+\end_inset
+
+; 
+\series bold
+(d)
+\series default
+ the elements of 
+\begin_inset Formula $\nabla_{\theta}^{2}l(y,x,\theta)$
+\end_inset
+
+ are bounded in absolute value by a function 
+\begin_inset Formula $b(y,x)$
+\end_inset
+
+ with finite expectation; and 
+\series bold
+(e)
+\series default
+ 
+\begin_inset Formula $A_{o}$
+\end_inset
+
+ defined by expression (21) is positive definite.
+ Then
+\begin_inset Formula 
+\begin{equation}
+\sqrt{N}(\hat{\theta}-\theta_{o})\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N(0,A_{o}^{-1})
+\end{equation}
+
+\end_inset
+
+and therefore
+\begin_inset Formula 
+\begin{equation}
+\mbox{AVar}(\hat{\theta})=\frac{A_{o}^{-1}}{N}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+13.5.2 Estimating the Asymptotic Variance
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Estimating 
+\begin_inset Formula $\mbox{AVar}(\hat{\theta})$
+\end_inset
+
+ requires estimating 
+\begin_inset Formula $A_{o}$
+\end_inset
+
+.
+ From the equalities derived previously, there are at least two possible
+ estimators of 
+\begin_inset Formula $A_{o}$
+\end_inset
+
+ in the CMLE context.
+ In fact, under slight extensions of the regularity conditions in Theorem
+ 13.2, both of the matrices
+\begin_inset Formula 
+\begin{equation}
+N^{-1}{\displaystyle \sum_{i=1}^{N}}-H_{i}(\hat{\theta}),\ \mbox{and}\ N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}(\hat{\theta})s_{i}(\hat{\theta})^{\prime}
+\end{equation}
+
+\end_inset
+
+converge to 
+\begin_inset Formula $A_{o}=B_{o}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\widehat{\mbox{AVar}(\hat{\theta})}$
+\end_inset
+
+ can be taken to be either of the two matrices
+\begin_inset Formula 
+\begin{equation}
+\left[N^{-1}{\displaystyle \sum_{i=1}^{N}}-H_{i}(\hat{\theta})\right]^{-1},\ \mbox{or}\ \left[N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}(\hat{\theta})s_{i}(\hat{\theta})^{\prime}\right]^{-1}
+\end{equation}
+
+\end_inset
+
+and the asymptotic standard errors are the square roots of the diagonal
+ elements of any of the matrices.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The first estimator, based on the Hessian of the log-likelihood, requires
+ computing second derivatives.
+ When the inverse exists, the estimate is positive definite because 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ maximizies the objective funciton.
+ The second estimator in equation (28), based on the outer product of the
+ score, depends only on first derivatives of the log-likelihood funciton.
+ Its primary drawback is that it can be poorly behaved in even moderate
+ sample sizes.
+\end_layout
+
+\begin_layout Example*
+
+\emph on
+(continued):
+\emph default
+ The Hessian for the probit log-likelihood is a mess.
+ Fortunately, 
+\begin_inset Formula $E\left[H_{i}(\theta_{o})|x_{i}\right]$
+\end_inset
+
+ has a fairly simple form.
+ Taking the derivative of equation (16) and using the product rule gives
+\begin_inset Formula 
+\[
+H_{i}(\theta)=-\frac{\left\{ \phi(x_{i}^{\prime}\theta)\right\} ^{2}x_{i}x_{i}^{\prime}}{\Phi(x_{i}^{\prime}\theta)\left[1-\Phi(x_{i}^{\prime}\theta)\right]}+\left[y_{i}-\Phi(x_{i}^{\prime}\theta)\right]L(x_{i}^{\prime}\theta)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $L(x_{i}^{\prime}\theta)$
+\end_inset
+
+ is a 
+\begin_inset Formula $K\times K$
+\end_inset
+
+ complicated function of 
+\begin_inset Formula $x_{i}^{\prime}\theta$
+\end_inset
+
+ that we need not find explicitly.
+ Now, when we evaluate this expression at 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ and note that 
+\begin_inset Formula $E\left\{ \left[y_{i}-\Phi(x_{i}^{\prime}\theta_{o})\right]L(x_{i}^{\prime}\theta_{o})|x_{i}\right\} =\left[E(y_{i}|x_{i})-\Phi(x_{i}^{\prime}\theta_{o})\right]L(x_{i}^{\prime}\theta_{o})=0$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+-E\left[H_{i}(\theta_{o})|x_{i}\right]=A_{i}(\theta_{o})=\frac{\left\{ \phi(x_{i}^{\prime}\theta_{o})\right\} ^{2}x_{i}x_{i}^{\prime}}{\Phi(x_{i}^{\prime}\theta_{o})\left[1-\Phi(x_{i}^{\prime}\theta_{o})\right]}
+\]
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $\widehat{\mbox{AVar}(\hat{\theta})}$
+\end_inset
+
+ in probit analysis is
+\begin_inset Formula 
+\begin{equation}
+\left({\displaystyle \sum_{i=1}^{N}}\frac{\left\{ \phi(x_{i}^{\prime}\hat{\theta})\right\} ^{2}x_{i}x_{i}^{\prime}}{\Phi(x_{i}^{\prime}\hat{\theta})\left[1-\Phi(x_{i}^{\prime}\hat{\theta})\right]}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+which is always postitive definite when the inverse exists.
+ Note that 
+\begin_inset Formula $x_{i}x_{i}^{\prime}$
+\end_inset
+
+ is a 
+\begin_inset Formula $K\times K$
+\end_inset
+
+ matrix for each 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+13.6 Hypothesis Testing
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Given the asymptotic standard errors, it is easy to form asymptotic 
+\begin_inset Formula $t$
+\end_inset
+
+ statistics for testing single hypotheses.
+ These 
+\begin_inset Formula $t$
+\end_inset
+
+ statistics are asymptotically distributed as standard normal.
+ The three tests covered in Champter 12 are immediately appliable to the
+ MLE case.
+ The Wald statistic is the same as before.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Define the log-likelihood function for the entire sample by 
+\begin_inset Formula $L(\theta)\equiv\sum_{i=1}^{N}l_{i}(\theta)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ be the unrestricted estimator, and let 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+ be the estimator with the 
+\begin_inset Formula $Q$
+\end_inset
+
+ nonredundant constraints imposed.
+ Then, under the regularity conditions discussed before, the 
+\series bold
+likelihood ratio (LR) statistic
+\series default
+,
+\begin_inset Formula 
+\begin{equation}
+LR\equiv2\left[L(\hat{\theta})-L(\tilde{\theta})\right]
+\end{equation}
+
+\end_inset
+
+is distributed asymptotically as 
+\begin_inset Formula $\chi_{Q}^{2}$
+\end_inset
+
+ under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+ As with the Wald statistic, we cannot use LR as approximately 
+\begin_inset Formula $\chi_{Q}^{2}$
+\end_inset
+
+ when 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is on the boundary of the parameter set.
+ The LR statistic is invariant to reparameterizing the conditional density.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The score or LM test is based on the restricted estimation only.
+ Let 
+\begin_inset Formula $s_{i}(\tilde{\theta})$
+\end_inset
+
+ be the 
+\begin_inset Formula $P\times1$
+\end_inset
+
+ score 
+\begin_inset Formula $l_{i}(\theta)$
+\end_inset
+
+ evaluated at the restricted estimates 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\begin{equation}
+\left({\displaystyle \sum_{i=1}^{N}}\tilde{s}_{i}\right)^{\prime}\left(-{\displaystyle \sum_{i=1}^{N}}\tilde{H}_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}\tilde{s}_{i}\right),\ \mbox{and}\ \left({\displaystyle \sum_{i=1}^{N}}\tilde{s}_{i}\right)^{\prime}\left(-{\displaystyle \sum_{i=1}^{N}}\tilde{s}_{i}\tilde{s}_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}\tilde{s}_{i}\right)
+\end{equation}
+
+\end_inset
+
+have limiting 
+\begin_inset Formula $\chi_{Q}^{2}$
+\end_inset
+
+ distributions under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.The first statistic is not guaranteed to be nonnegative and is not invariant
+ to reparameterizations, but the outer product statistic is.
+\end_layout
+
+\end_body
+\end_document

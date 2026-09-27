@@ -1,0 +1,1603 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 8: System Estimation by Instrumental Variables
+\end_layout
+
+\begin_layout Part*
+SIV and GMM
+\end_layout
+
+\begin_layout Section*
+8.2 General Linear System of Equations
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now discuss estimation of a linear panel data model of the form
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y_{it}=x_{it}^{\prime}\beta+u_{it},\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+Note, there is a common vector, 
+\begin_inset Formula $\beta$
+\end_inset
+
+, in each time period.
+ Nevertheless, this notation allows for different intercepts and slopes
+ because 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ can contain time period dummies and interactions between time dummies and
+ covariates.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Stacking over 
+\begin_inset Formula $T$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{eqnarray}
+y_{i} & = & x_{i}\beta+u_{i}\\
+x_{i} & = & \left(\begin{array}{c}
+x_{i1}^{\prime}\\
+\vdots\\
+x_{iT}^{\prime}
+\end{array}\right)\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is a 
+\begin_inset Formula $T\times1$
+\end_inset
+
+ vector, 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is a 
+\begin_inset Formula $T\times K$
+\end_inset
+
+, and 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is the 
+\begin_inset Formula $T\times1$
+\end_inset
+
+ vector errors.
+ Note, the rows of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, and 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ can represent different time periods for the same cross-sectional unit.
+ Therefore, the following analysis applies to panel data models where 
+\begin_inset Formula $T$
+\end_inset
+
+ is small relative to the cross section sample size, 
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $z_{it}$
+\end_inset
+
+ is a 
+\begin_inset Formula $L_{t}\times1$
+\end_inset
+
+ vector of instruments for each time period, in the sense that 
+\begin_inset Formula 
+\begin{equation}
+E(z_{it}u_{it})=0,\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+then we can setup the matrix of instruments as
+\begin_inset Formula 
+\begin{equation}
+z_{i}=\left(\begin{array}{ccc}
+z_{i1}^{\prime} &  & 0\\
+ & \ddots\\
+0 &  & z_{iT}^{\prime}
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+which has dimension 
+\begin_inset Formula $T\times L$
+\end_inset
+
+, where 
+\begin_inset Formula $L=L_{1}+L_{2}+\cdots+L_{T}$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $L_{t}$
+\end_inset
+
+ is the same for all 
+\begin_inset Formula $t$
+\end_inset
+
+ 
+\begin_inset Formula $(L_{t}=L,\ t=1,\ldots,T)$
+\end_inset
+
+, a different setup is possible:
+\begin_inset Formula 
+\begin{equation}
+z_{i}=\left(\begin{array}{c}
+z_{i1}^{\prime}\\
+\vdots\\
+z_{iT}^{\prime}
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+which also has dimension 
+\begin_inset Formula $T\times L$
+\end_inset
+
+.
+ As we sill see, generally the choice (5) leads to a different estimator
+ than when the IVs are chosen as in (4).
+ In the important special case where the same instruments, say 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+, can be used for every equation, we can write (5) as 
+\begin_inset Formula 
+\[
+z_{i}=\left(\begin{array}{c}
+w_{i}^{\prime}\\
+\vdots\\
+w_{i}^{\prime}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The following orthogonality condition is the basis for estimating 
+\begin_inset Formula $\beta$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\emph on
+SIV.1:
+\series default
+\emph default
+ 
+\begin_inset Formula $E(z_{i}^{\prime}u_{i})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(The abbreviation SIV stands for 
+\begin_inset Quotes eld
+\end_inset
+
+system instrumental variables.
+\begin_inset Quotes erd
+\end_inset
+
+).
+ When 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ has structure (4), then for each 
+\begin_inset Formula $i$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+z_{i}^{\prime}u_{i}=\left(\begin{array}{c}
+z_{i1}u_{i1}\\
+\vdots\\
+z_{iT}u_{iT}
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+and so 
+\begin_inset Formula $E(z_{i}^{\prime}u_{i})=0$
+\end_inset
+
+ reproduces the orthogonality conditions (3).
+ We also assume that 
+\begin_inset Formula $E(u_{i})=0$
+\end_inset
+
+.
+ On the other hand, the choice of instrument matrix in (5) means we are
+ only using the moment conditions aggregated across time, 
+\begin_inset Formula $\sum_{t=1}^{T}E(z_{it}u_{it})=0$
+\end_inset
+
+.
+ Thus, to obtain the efficient GMM estimator that uses only the moments
+ 
+\begin_inset Formula $E(z_{it}^{\prime}u_{it})=0$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+, the matrix of instruments should be as in (4) because this expresses the
+ full set of moment conditions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An assumption sufficient for identification is the 
+\series bold
+rank condition:
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\emph on
+SIV.2:
+\series default
+\emph default
+ 
+\emph on
+rank 
+\emph default
+
+\begin_inset Formula $E(z_{i}^{\prime}x_{i})=K$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $E(z_{i}^{\prime}x_{i})$
+\end_inset
+
+ is an 
+\begin_inset Formula $L\times K$
+\end_inset
+
+ matrix, Assumption SIV.2 requires the columns of this matrix to be linearly
+ independent.
+ Necessary for the rank conditions is the 
+\series bold
+order condition:
+\series default
+ 
+\begin_inset Formula $L\geq K$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ has structure (4), then
+\begin_inset Formula 
+\begin{equation}
+E(z_{i}^{\prime}x_{i})=\left(\begin{array}{c}
+E(z_{i1}x_{i1}^{\prime})\\
+\vdots\\
+E(z_{iT}x_{iT}^{\prime})
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+which has dimension 
+\begin_inset Formula $L\times K$
+\end_inset
+
+ and 
+\begin_inset Formula $E(z_{it}x_{it}^{\prime})$
+\end_inset
+
+ has dimension 
+\begin_inset Formula $L_{t}\times K$
+\end_inset
+
+.
+ Assumption SIV.2 requires that this matrix have full column rank.
+\end_layout
+
+\begin_layout Section*
+8.3 Generalized Method of Moments Estimation
+\end_layout
+
+\begin_layout Subsection*
+8.3.1 General Weighting Matrix
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The orthogonality conditions in Assumption SIV.1 suggest an estimation strategy.
+ Under Assumptions SIV.1 and SIV.2, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is the 
+\emph on
+unique
+\emph default
+ 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ vector solving the linear set population moment conditions
+\begin_inset Formula 
+\begin{equation}
+E[z_{i}^{\prime}(y_{i}-x_{i}\beta)]=0
+\end{equation}
+
+\end_inset
+
+(That 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is a solution follows from Assumption SIV.1; that it is unique follows by
+ Assumption SIV.2.) This equation shows that 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is identified.
+ Because sample averages are consistent estimators of population moments,
+ the analogy principle applied to condition (8) suggest choosing the estimator
+ 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ to solve
+\begin_inset Formula 
+\begin{equation}
+N^{-1}\sum_{i=1}^{N}z_{i}^{\prime}(y_{i}-x_{i}\hat{\beta})=0
+\end{equation}
+
+\end_inset
+
+Equation (9) is a set of 
+\begin_inset Formula $L$
+\end_inset
+
+ linear equations in the 
+\begin_inset Formula $K$
+\end_inset
+
+ unknowns in 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+.
+ First, consider the case 
+\begin_inset Formula $L=K$
+\end_inset
+
+, so that we have exactly enough IVs for the explanatory variables in the
+ system.
+ Then, if the 
+\begin_inset Formula $K\times K$
+\end_inset
+
+ matrix 
+\begin_inset Formula $\sum_{i=1}^{n}z_{i}^{\prime}x_{i}$
+\end_inset
+
+ is nonsingular, we can solve for 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}_{IV}=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}x_{i}\right)^{-1}\left(N^{-1}\sum_{i=1}^{N}z_{i}^{\prime}y_{i}\right)
+\end{equation}
+
+\end_inset
+
+We can write 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ using full matrix notation as 
+\begin_inset Formula $\hat{\beta}=(Z^{\prime}X)^{-1}Z^{\prime}Y$
+\end_inset
+
+, where 
+\begin_inset Formula $Z$
+\end_inset
+
+ is the 
+\begin_inset Formula $NT\times L$
+\end_inset
+
+ matrix obtained by stacking 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ from 
+\begin_inset Formula $i=1,\ldots,N$
+\end_inset
+
+, 
+\begin_inset Formula $X$
+\end_inset
+
+ is the 
+\begin_inset Formula $NT\times K$
+\end_inset
+
+ matrix obtained by stacking 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ from 
+\begin_inset Formula $i=1,\ldots,N$
+\end_inset
+
+, and 
+\begin_inset Formula $Y$
+\end_inset
+
+ is the 
+\begin_inset Formula $NT\times1$
+\end_inset
+
+ vector obtained from stacking 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ from 
+\begin_inset Formula $i=1,\ldots,N$
+\end_inset
+
+.
+ We call (10) the 
+\series bold
+system IV (SIV)
+\series default
+ 
+\series bold
+estimator
+\series default
+.
+ Application of the law of large numbers shows that the SIV estimator is
+ consistent under Assumptions SIV.1 and SIV.2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When 
+\begin_inset Formula $L>K$
+\end_inset
+
+, so that we have more columns in the IV matrix 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ than we need for identification, choosing 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is more complicated.
+ Except in special cases, (10) will not have a solution.
+ Instead, we choose 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ to make the vector in equation (10) as 
+\begin_inset Quotes eld
+\end_inset
+
+small
+\begin_inset Quotes erd
+\end_inset
+
+ as possible in the sample.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To obtain a general class of estimators, we obtain a 
+\series bold
+weighting matrix
+\series default
+, and then we minimize the squared weighted Euclidean length of the 
+\begin_inset Formula $L\times1$
+\end_inset
+
+ vector in equation (10).
+ Let 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+ be an 
+\begin_inset Formula $L\times L$
+\end_inset
+
+ symmetric, positive semidefinite matrix, where 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+ is generally an estimator.
+ A 
+\series bold
+generalized method of moments (GMM) estimator
+\series default
+ of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is a vector 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ that solves the problem
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \min_{b}}\left[\sum_{i=1}^{N}z_{i}^{\prime}(y_{i}-x_{i}b)\right]^{\prime}\hat{W}\left[\sum_{i=1}^{N}z_{i}^{\prime}(y_{i}-x_{i}b)\right]
+\end{equation}
+
+\end_inset
+
+Because expression (11) is a quadratic function of 
+\begin_inset Formula $b$
+\end_inset
+
+, the solution to it has a closed form.
+ Using multivariable calculus or direct substitution, we can show that the
+ unique solution is
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}=\left[\left({\displaystyle \sum_{i=1}^{n}}x_{i}^{\prime}z_{i}\right)\hat{W}\left({\displaystyle \sum_{i=1}^{n}}z_{i}^{\prime}x_{i}\right)\right]^{-1}\left[\left({\displaystyle \sum_{i=1}^{n}x_{i}^{\prime}z_{i}}\right)\hat{W}\left({\displaystyle \sum_{i=1}^{n}}z_{i}^{\prime}y_{i}\right)\right]
+\end{equation}
+
+\end_inset
+
+assuming that 
+\begin_inset Formula $\left[\left({\displaystyle \sum_{i=1}^{n}}x_{i}^{\prime}z_{i}\right)\hat{W}\left({\displaystyle \sum_{i=1}^{n}}z_{i}^{\prime}x_{i}\right)\right]$
+\end_inset
+
+ is nonsingular.
+ We can also write 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ using full matrix notation as 
+\begin_inset Formula $\hat{\beta}=(X^{\prime}Z\hat{W}Z^{\prime}X)^{-1}(X^{\prime}Z\hat{W}Z^{\prime}Y)$
+\end_inset
+
+.
+ To show that this estimator is consistent, we assume that 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+ has a nonsingular probability limit.
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\emph on
+SIV.3:
+\emph default
+ 
+\series default
+
+\begin_inset Formula $\hat{W}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}W$
+\end_inset
+
+ as 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+, where 
+\begin_inset Formula $W$
+\end_inset
+
+ is a nonrandom, symmetric, 
+\begin_inset Formula $L\times L$
+\end_inset
+
+ positive definite matrix.
+\end_layout
+
+\begin_layout Standard
+In applications, the convergence in Assumption SIV.3 will follow from the
+ law of large numbers because 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+ will be a function of sample averages.
+ The fact that 
+\begin_inset Formula $W$
+\end_inset
+
+ is assume to be positive definite means that 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+ is positive definite with probability approaching one.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+8.1 (Consistency of GMM):
+\series default
+ 
+\emph on
+Under Assumptions SIV.1-SIV.3, 
+\begin_inset Formula $\hat{\beta}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\beta$
+\end_inset
+
+ as 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Write
+\begin_inset Formula 
+\[
+\hat{\beta}=\beta+\left[\left({\displaystyle \sum_{i=1}^{n}}x_{i}^{\prime}z_{i}\right)\hat{W}\left({\displaystyle \sum_{i=1}^{n}}z_{i}^{\prime}x_{i}\right)\right]^{-1}\left[\left({\displaystyle \sum_{i=1}^{n}x_{i}^{\prime}z_{i}}\right)\hat{W}\left({\displaystyle \sum_{i=1}^{n}}z_{i}^{\prime}u_{i}\right)\right]
+\]
+
+\end_inset
+
+Under Assumption SIV.2, 
+\begin_inset Formula $C\equiv E(z_{i}^{\prime}x_{i})$
+\end_inset
+
+ has rank 
+\begin_inset Formula $K$
+\end_inset
+
+, and combining with Assumption SIV.3, 
+\begin_inset Formula $C^{\prime}WC$
+\end_inset
+
+ has rank 
+\begin_inset Formula $K$
+\end_inset
+
+ and is therefore nonsingular.
+ It follows by the law of large numbers that 
+\begin_inset Formula $\mbox{p\lim}\ \hat{\beta}=\beta+(C^{\prime}WC)^{-1}C^{\prime}W(\mbox{p\lim}\ N^{-1}\sum_{i=1}^{N}z_{i}^{\prime}u_{i})=\beta+(C^{\prime}WC)^{-1}C^{\prime}W\cdot0=\beta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Theorem 8.1 shows that a large class of estimators is consistent for 
+\begin_inset Formula $\beta$
+\end_inset
+
+ under Assumptions SIV.1 and SIV.2, provided taht we choose 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+ to satisfy modest restrictions.
+ When 
+\begin_inset Formula $L=K$
+\end_inset
+
+, the GMM estimator (12) becomes equation (10), no matter how we choose
+ 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+ because 
+\begin_inset Formula $X^{\prime}Z$
+\end_inset
+
+ is a 
+\begin_inset Formula $K\times K$
+\end_inset
+
+ nonsingular matrix.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can also show that 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is asymptotically normally distributed under these first three assumptions.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+8.2 (Asymptotic Normality of GMM):
+\series default
+ 
+\emph on
+Under Assumptions SIV.1-SIV.3, 
+\begin_inset Formula $\sqrt{N}(\hat{\beta}-\beta)$
+\end_inset
+
+ is asymptotically normally distributed withmean zero and
+\begin_inset Formula 
+\begin{equation}
+\mbox{\emph{AVar}}\sqrt{N}(\hat{\beta}-\beta)=(C^{\prime}WC)^{-1}C^{\prime}W\Lambda WC(C^{\prime}WC)^{-1}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+\Lambda\equiv E(z_{i}^{\prime}u_{i}u_{i}^{\prime}z_{i})=\mbox{\emph{Var}}(z_{i}^{\prime}u_{i})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The asymptotic variance matrix in equation (13) looks complicated, but it
+ can be consistently estimated.
+ If 
+\begin_inset Formula $\hat{\Lambda}$
+\end_inset
+
+ is a consistent estimator of 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+, then equation (13) is consistently estimated by
+\begin_inset Formula 
+\begin{equation}
+\left[\left(\nicefrac{X^{\prime}Z}{N}\right)\hat{W}\left(\nicefrac{Z^{\prime}X}{N}\right)\right]^{-1}\left(\nicefrac{X^{\prime}Z}{N}\right)\hat{W}\hat{\Lambda}\hat{W}\left(\nicefrac{Z^{\prime}X}{N}\right)\left[\left(\nicefrac{X^{\prime}Z}{N}\right)\hat{W}\left(\nicefrac{Z^{\prime}X}{N}\right)\right]^{-1}
+\end{equation}
+
+\end_inset
+
+As usual, we estimate 
+\begin_inset Formula $\mbox{AVar}(\hat{\beta})$
+\end_inset
+
+ by dividing expression (15) by 
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+While the general formula is occaionally useful, it turns out that it is
+ greatly simplified by choosing 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+ appropriately.
+\end_layout
+
+\begin_layout Subsection*
+8.3.2 System Two-Stage Least Squares Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A choice of 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+ that leads to a useful and familiar-looking estimator is
+\begin_inset Formula 
+\begin{equation}
+\hat{W}=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}z_{i}\right)^{-1}=\left(\nicefrac{Z^{\prime}Z}{N}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+which is a consistent estimator of 
+\begin_inset Formula $\left[E(z_{i}^{\prime}z_{i})\right]^{-1}$
+\end_inset
+
+.
+ Assumption SIV.3 simply requires that 
+\begin_inset Formula $E(z_{i}^{\prime}z_{i})$
+\end_inset
+
+ exist and be nonsingular, and these requirements are not very restrictive.
+\end_layout
+
+\begin_layout Standard
+When we plug equation (16) into equation (12) and cancel 
+\begin_inset Formula $N$
+\end_inset
+
+ everywhere, we get
+\begin_inset Formula 
+\[
+\hat{\beta}=\left[X^{\prime}Z(Z^{\prime}Z)^{-1}Z^{\prime}X\right]^{-1}X^{\prime}Z(Z^{\prime}Z)^{-1}Z^{\prime}Y
+\]
+
+\end_inset
+
+This looks just like the single-equation 2SLS estimator, and so we call
+ it the 
+\series bold
+system 2SLS (S2SLS) estimator
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For the panel data model, when the instrument matrix is stacked as in (5),
+ which means that we have the same number of IVs for each time period, the
+ S2SLS estimator reduces to the 
+\series bold
+pooled 2SLS (P2SLS) estimator
+\series default
+.
+ In other words, one treats the stacked panel data as a long cross section
+ and performs standard 2SLS.
+ If 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ takes the form in (4), the S2SLS estimator has a different characterization.
+ Namely, we run a first-stage regression separately for each 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ on 
+\begin_inset Formula $z_{it}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,\ldots,N$
+\end_inset
+
+, and obtain the fitted values, 
+\begin_inset Formula $\hat{x}_{it}^{\prime}=z_{it}^{\prime}\hat{\Pi}_{t}$
+\end_inset
+
+, where 
+\begin_inset Formula $\hat{\Pi}_{t}$
+\end_inset
+
+ is 
+\begin_inset Formula $L_{t}\times K$
+\end_inset
+
+.
+ Then we obtain the pooled IV estimator using 
+\begin_inset Formula $\hat{x}_{it}$
+\end_inset
+
+ (which is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+) as the IVs for 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+.
+ The key difference in the two approaches is that the P2SLS estimator pools
+ across time in estimating the reduced form, while the second procedure
+ estimates a separate reduced form for each 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the next subsection, we will see that the S2SLS estimator is not necessarily
+ the asymptotically efficeint estimator.
+ Still, it is 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+-consistent and easy to compute given the data matrices 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $Y$
+\end_inset
+
+, and 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+8.3.3 Optimal Weighting Matrix
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Given that a GMM estimator exists for any positive definite weighting matrix,
+ it is important to have a way of choosing among all of the possibilities.
+ It turns out that there is a choice of 
+\begin_inset Formula $W$
+\end_inset
+
+ that produces the GMM estimator with the smallest asymptotic variance.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The expression (13) simplifies to 
+\begin_inset Formula $(C^{\prime}\Lambda C)^{-1}$
+\end_inset
+
+ if we set 
+\begin_inset Formula $W\equiv\Lambda^{-1}$
+\end_inset
+
+.
+ Using standard arguments from matrix algebra, it can be shown that 
+\begin_inset Formula $(C^{\prime}WC)^{-1}C^{\prime}W\Lambda WC(C^{\prime}WC)^{-1}-(C^{\prime}\Lambda C)^{-1}$
+\end_inset
+
+ is positive semidefinite for any 
+\begin_inset Formula $L\times L$
+\end_inset
+
+ positive definite matrix 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ The easiest way to prove this point is to show that
+\begin_inset Formula 
+\[
+(C^{\prime}\Lambda C)-(C^{\prime}WC)(C^{\prime}W\Lambda WC)^{-1}(C^{\prime}WC)
+\]
+
+\end_inset
+
+is positive semidefinite.
+ This discussion motivates the following assumption and theorem.
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\shape up
+SIV.4:
+\series default
+ 
+\begin_inset Formula $W=\Lambda^{-1}$
+\end_inset
+
+, 
+\emph on
+where 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ is defined by express (14)
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\emph on
+8.3 (Optimal Weighting Matrix).
+
+\series default
+ 
+\emph default
+Under Assumptions SIV.1-SIV.4, the resulting GMM estimator is efficient among
+ all GMM estimators of the form (12).
+\end_layout
+
+\begin_layout Standard
+Provided that we can consistently estimate 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+, we can obtain the asymptotically efficient GMM estimator.
+ Any consistent estimator of 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ delivers the efficient GMM estimator, but one estimator is commonly used
+ that imposes no structure on 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Algorithm*
+
+\series bold
+\shape up
+8.1 (GMM with Optimal Weighting Matrix):
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\emph on
+Let 
+\begin_inset Formula $\check{\beta}$
+\end_inset
+
+ be an initial consistent estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ In most case, this is the S2SLS estimator.
+\end_layout
+
+\begin_layout Enumerate
+
+\shape italic
+\emph on
+Obtain the 
+\begin_inset Formula $T\times1$
+\end_inset
+
+ residual vectors
+\begin_inset Formula 
+\begin{equation}
+\check{u}_{i}=y_{i}-x_{i}\check{\beta},\ i=1,\ldots,N
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\shape italic
+\emph on
+A generally consistent estimator of 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ is 
+\begin_inset Formula $\hat{\Lambda}=N^{-1}\sum_{i=1}^{N}z_{i}^{\prime}\check{u}_{i}\check{u}_{i}^{\prime}z_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\shape italic
+\emph on
+Choose
+\begin_inset Formula 
+\begin{equation}
+\hat{W}\equiv\hat{\Lambda}^{-1}=\left(N^{-1}\sum_{i=1}^{N}Z_{i}^{\prime}\check{u}_{i}\check{u}_{i}^{\prime}z_{i}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The estimator of 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ in part c of Algorithm 8.1 is consistent for 
+\begin_inset Formula $E(z_{i}^{\prime}u_{i}u_{i}^{\prime}z_{i})$
+\end_inset
+
+ under general conditions.
+ When each row of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ represent different time periods, so we have a single-equation panel data
+ model, the estimator 
+\begin_inset Formula $\hat{\Lambda}$
+\end_inset
+
+ allows for arbitrary heteroskedasticity (conditional or unconditional),
+ as well as arbitrary serial correlation (conditional or unconditional).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The asymptotic variance of the optimal GMM estimator is estimated as
+\begin_inset Formula 
+\begin{equation}
+\left[\left(X^{\prime}Z\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}\hat{u}_{i}\hat{u}_{i}z_{i}\right)^{-1}\left(Z^{\prime}X\right)\right]^{-1}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{u}_{i}\equiv y_{i}-X_{i}\hat{\beta}$
+\end_inset
+
+.
+ The square roots of diagonal elements of this matrix are the asymptotic
+ standard errors of the optimal GMM estimator.
+ This estimator is called a 
+\series bold
+minimum chi-square estimator
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When 
+\begin_inset Formula $z_{i}=x_{i}$
+\end_inset
+
+ and the 
+\begin_inset Formula $\hat{u}_{i}$
+\end_inset
+
+ are the system OLS residuals, expression (19) becomes the robust variances
+ matrix estimator for SOLS.
+ This expression reduces to the robust variances matrix esimator for FGLS
+ when 
+\begin_inset Formula $z_{i}=\hat{\Omega}^{-1}x_{i}$
+\end_inset
+
+ and the 
+\begin_inset Formula $\hat{u}_{i}$
+\end_inset
+
+ are the FGLS residuals.
+\end_layout
+
+\begin_layout Subsection*
+8.3.4 The Generalized Method of Moments Three-Stage Least Squares Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The GMM estimator using weighing matrix (18) places no restrictions on either
+ the unconditional or conditional (on 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+) variance matrix of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+.
+ Nevertheless, it is still common to assume that the conditional variance
+ matrix of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ is constant.
+ This assumption leads to the 
+\series bold
+GMM three-stage least squares (GMM 3SLS) estimator
+\series default
+.
+ To define the 3SLS estimator, let 
+\begin_inset Formula $\check{u}_{i}=y_{i}-x_{i}\check{\beta}$
+\end_inset
+
+ be the residuals from an initial estimation, usually S2SLS.
+ Define the 
+\begin_inset Formula $T\times T$
+\end_inset
+
+ matrix
+\begin_inset Formula 
+\begin{equation}
+\hat{\Omega}\equiv N^{-1}{\displaystyle \sum_{i=1}^{N}}\check{u}_{i}\check{u}_{i}^{\prime}
+\end{equation}
+
+\end_inset
+
+Note, 
+\begin_inset Formula $\hat{\Omega}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\Omega=E(u_{i}u_{i}^{\prime})$
+\end_inset
+
+.
+ The weighting matrix used by 3SLS is
+\begin_inset Formula 
+\begin{equation}
+\hat{W}=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}\hat{\Omega}z_{i}\right)^{-1}=\left[\nicefrac{Z^{\prime}\left(I_{N}\otimes\hat{\Omega}\right)Z}{N}\right]^{-1}
+\end{equation}
+
+\end_inset
+
+This equation always consistently estimates 
+\begin_inset Formula $\left[E(z_{i}^{\prime}\Omega z_{I})\right]^{-1}$
+\end_inset
+
+, and plugging it into (12) gives the 3SLS estimator
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}=\left[X^{\prime}Z\left\{ Z^{\prime}\left(I_{N}\otimes\hat{\Omega}\right)Z\right\} ^{-1}Z^{\prime}X\right]^{-1}X^{\prime}Z\left\{ Z^{\prime}\left(I_{N}\otimes\hat{\Omega}\right)Z\right\} ^{-1}Z^{\prime}Y
+\end{equation}
+
+\end_inset
+
+By Theorems 8.1 and 8.2, 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is consistent and asymptotically normal under Assumptions SIV.1-SIV.3.
+ Assumption SIV.3 requires 
+\begin_inset Formula $E(z_{i}^{\prime}\Omega z_{i})$
+\end_inset
+
+ to be nonsingular, a standard assumption.
+ Important to note, the computation of the 3SLS estimator does not require
+ three stages.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When is 3SLS an efficient GMM estimator? From Theorem 8.3, equation (21)
+ is an efficient weighting matrix provided 
+\begin_inset Formula $E(z_{i}^{\prime}\Omega z_{i})=\Lambda=E(z_{i}^{\prime}u_{i}u_{i}^{\prime}z_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\shape up
+SIV.5:
+\series default
+ 
+\begin_inset Formula $E(z_{i}^{\prime}u_{i}u_{i}^{\prime}z_{i})=E(z_{i}^{\prime}\Omega z_{i})$
+\end_inset
+
+, 
+\emph on
+where 
+\begin_inset Formula $\Omega\equiv E(u_{i}u_{i}^{\prime})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assumption SIV.5 is the system extension of the homoskedastiticy assumption
+ for 2SLS estimation of a single equation.
+ A sufficient condition for Assumption SIV.5, one that is easier to interpret,
+ is
+\begin_inset Formula 
+\begin{equation}
+E(u_{i}u_{i}^{\prime}|z_{i})=E(u_{i}u_{i}^{\prime})
+\end{equation}
+
+\end_inset
+
+We do not take (23) as the homoskedasticity assumption because there are
+ interesting applications where Assumption SIV.5 holds but equation (23)
+ does not.
+ When
+\begin_inset Formula 
+\begin{equation}
+E(u_{i}|z_{i})=0
+\end{equation}
+
+\end_inset
+
+is assumed in place of Assumption SIV.1, then equation (23) is equivalent
+ to 
+\begin_inset Formula $\mbox{Var}(u_{i}|z_{i})=\mbox{Var}(u_{i})$
+\end_inset
+
+.
+ It is important to see that the elements of the unconditional variance
+ matrix 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ are 
+\emph on
+not
+\emph default
+ resticted: 
+\begin_inset Formula $\sigma_{g}^{2}=\mbox{Var}(u_{g})$
+\end_inset
+
+ can change across 
+\begin_inset Formula $g$
+\end_inset
+
+, and 
+\begin_inset Formula $\sigma_{gh}=\mbox{Cov}(u_{g},u_{h})$
+\end_inset
+
+ can differ across 
+\begin_inset Formula $g$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Assumption SIV.5 implies that Assumption SIV.4 holds.
+ Therefore, we have the following theorem:
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+8.4 (Optimality of 3SLS):
+\series default
+ 
+\emph on
+Under Assumptions SIV.1, SIV.2, SIV.3, and SIV.5, the 3SLS estimator is an optimal
+ GMM estimator.
+ Futher the appropriate estimator of 
+\begin_inset Formula $\mbox{\emph{A}Var}(\hat{\beta})$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+\left[(X^{\prime}Z)\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}\hat{\Omega}z_{i}\right)^{-1}(Z^{\prime}X)\right]^{-1}=\left[X^{\prime}Z\left\{ Z^{\prime}\left(I_{N}\otimes\hat{\Omega}\right)Z\right\} Z^{\prime}X\right]^{-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is important to understand the implications of this theorem.
+ First, without Assumption SIV.5, the 3SLS estimator is generally less efficient,
+ asymptotically, than the minimum chi-square estimator, and the asymptotic
+ variance estimator for 3SLS (25) is inappropriate.
+ Second, even with Assumption SIV.5, the 3SLS estimator is no more asymptotically
+ efficient than the minimm chi-square estimator: expressions (21) and (25)
+ are both consistent estimators of 
+\begin_inset Formula $\Lambda^{-1}$
+\end_inset
+
+ under Assumption SIV.5.
+ In other words, the estimators based on these two different choices for
+ 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+ are 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+-equivalent under Assumption SIV.5 .
+\end_layout
+
+\end_body
+\end_document

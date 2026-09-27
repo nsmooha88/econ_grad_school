@@ -1,0 +1,1086 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Econometrics II: Exam 1 (2011)
+\end_layout
+
+\begin_layout Problem
+Consider the model
+\begin_inset Formula 
+\begin{equation}
+y_{i}=z_{i}\delta+w_{i}\lambda+\epsilon_{i},\ (1=1,\ldots,n)
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ are scalars, 
+\begin_inset Formula $E(z_{i}\epsilon_{i})=0$
+\end_inset
+
+, and 
+\begin_inset Formula $E(w_{i}\epsilon_{i})\neq0$
+\end_inset
+
+.
+ Additionally we observe an IV 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ for 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ such that 
+\begin_inset Formula $E(x_{i}w_{i})\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $E(x_{i}\epsilon_{i})=0$
+\end_inset
+
+.
+ Consider the estimator 
+\begin_inset Formula $(\hat{\delta},\hat{\lambda})$
+\end_inset
+
+ of 
+\begin_inset Formula $(\delta,\lambda)$
+\end_inset
+
+ which is obtained as 2SLS except that the first stage regresses 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ solely on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ (instead of both 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+).
+ Is the estimator consistent? If not, under which conditions is it consistent?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If we multiply equation (1) by the two exogenous variables and take expectation,
+ then by the moment conditions, we have 
+\begin_inset Formula 
+\begin{eqnarray*}
+E(z_{i}y_{i}) & = & E(z_{i}^{2})\delta+E(z_{i}w_{i})\lambda\\
+E(x_{i}y_{i}) & = & E(x_{i}z_{i})\delta+E(x_{i}w_{i})\lambda
+\end{eqnarray*}
+
+\end_inset
+
+We write these two equations in matrix form
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+E(z_{i}^{2}) & E(z_{i}w_{i})\\
+E(x_{i}z_{i}) & E(x_{i}w_{i})
+\end{array}\right]\left[\begin{array}{c}
+\delta\\
+\lambda
+\end{array}\right]=\left[\begin{array}{c}
+E(z_{i}y_{i})\\
+E(x_{i}y_{i})
+\end{array}\right]
+\]
+
+\end_inset
+
+So, we can obtain an expression for 
+\begin_inset Formula $(\delta,\lambda)$
+\end_inset
+
+ in terms of the population moment conditions
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\begin{array}{c}
+\delta\\
+\lambda
+\end{array}\right] & = & \frac{1}{E(z_{i}^{2})E(x_{i}w_{i})-E(x_{i}z_{i})E(z_{i}w_{i})}\left[\begin{array}{cc}
+E(x_{i}w_{i}) & -E(z_{i}w_{i})\\
+-E(x_{i}z_{i}) & E(z_{i}^{2})
+\end{array}\right]\left[\begin{array}{c}
+E(z_{i}y_{i})\\
+E(x_{i}y_{i})
+\end{array}\right]\\
+\delta & = & \frac{E(x_{i}w_{i})E(z_{i}y_{i})-E(z_{i}w_{i})E(x_{i}y_{i})}{E(z_{i}^{2})E(x_{i}w_{i})-E(x_{i}z_{i})E(z_{i}w_{i})}\\
+\lambda & = & \frac{E(z_{i}^{2})E(x_{i}y_{i})-E(x_{i}z_{i})E(z_{i}y_{i})}{E(z_{i}^{2})E(x_{i}w_{i})-E(x_{i}z_{i})E(z_{i}w_{i})}
+\end{eqnarray*}
+
+\end_inset
+
+Now, suppose we obtain a 2SLS estimator where we regress 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ solely on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ in the first stage to obtain
+\begin_inset Formula 
+\[
+\hat{w}=\frac{\sum_{i=1}^{n}x_{i}w_{i}}{\sum_{i=1}^{n}x_{i}^{2}}x_{i}
+\]
+
+\end_inset
+
+Then, replacing 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ with 
+\begin_inset Formula $\hat{w}_{i}$
+\end_inset
+
+, the model is rewritten as
+\begin_inset Formula 
+\[
+y_{i}=z_{i}\delta+\hat{w}_{i}\lambda+\epsilon_{i}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\hat{w}_{i}$
+\end_inset
+
+ is a function of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, then multiplying this equation by 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{w}_{i}$
+\end_inset
+
+ and taking expectation yields
+\begin_inset Formula 
+\begin{eqnarray*}
+E(z_{i}y_{i}) & = & E(z_{i}^{2})\delta+E(z_{i}\hat{w}_{i})\lambda\\
+E(\hat{w}_{i}y_{i}) & = & E(\hat{w}_{i}z_{i})\delta+E(\hat{w}_{i}^{2})\lambda
+\end{eqnarray*}
+
+\end_inset
+
+We write these two equations in matrix form
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+E(z_{i}^{2}) & E(z_{i}\hat{w}_{i})\\
+E(\hat{w}_{i}z_{i}) & E(\hat{w}_{i}^{2})
+\end{array}\right]\left[\begin{array}{c}
+\delta\\
+\lambda
+\end{array}\right]=\left[\begin{array}{c}
+E(z_{i}y_{i})\\
+E(\hat{w}_{i}y_{i})
+\end{array}\right]
+\]
+
+\end_inset
+
+and use the sample analogue to find the estimator 
+\begin_inset Formula $(\hat{\delta},\hat{\lambda})$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+n^{-1}\sum_{i=1}^{n}z_{i}^{2} & n^{-1}\sum_{i=1}^{n}z_{i}\hat{w}_{i}\\
+n^{-1}\sum_{i=1}^{n}\hat{w}_{i}z_{i} & n^{-1}\sum_{i=1}^{n}\hat{w}_{i}^{2}
+\end{array}\right]\left[\begin{array}{c}
+\hat{\delta}\\
+\hat{\lambda}
+\end{array}\right]=\left[\begin{array}{c}
+n^{-1}\sum_{i=1}^{n}z_{i}y_{i}\\
+n^{-1}\sum_{i=1}^{n}\hat{w}_{i}y_{i}
+\end{array}\right]
+\]
+
+\end_inset
+
+Solving for 
+\begin_inset Formula $(\hat{\delta},\hat{\lambda})$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\begin{array}{c}
+\hat{\delta}\\
+\hat{\lambda}
+\end{array}\right] & = & \frac{1}{\left(n^{-1}\sum_{i=1}^{n}z_{i}^{2}\right)\left(n^{-1}\sum_{i=1}^{n}\hat{w}_{i}^{2}\right)-\left(n^{-1}\sum_{i=1}^{n}\hat{w}_{i}z_{i}\right)^{2}}\left[\begin{array}{cc}
+n^{-1}\sum_{i=1}^{n}\hat{w}_{i}^{2} & -n^{-1}\sum_{i=1}^{n}z_{i}\hat{w}_{i}\\
+-n^{-1}\sum_{i=1}^{n}\hat{w}_{i}z_{i} & n^{-1}\sum_{i=1}^{n}z_{i}^{2}
+\end{array}\right]\\
+ &  & \times\left[\begin{array}{c}
+n^{-1}\sum_{i=1}^{n}z_{i}y_{i}\\
+n^{-1}\sum_{i=1}^{n}\hat{w}_{i}y_{i}
+\end{array}\right]
+\end{eqnarray*}
+
+\end_inset
+
+So, we now have an expresison for 
+\begin_inset Formula $\hat{\delta}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\delta} & = & \frac{\left(n^{-1}\sum_{i=1}^{n}\hat{w}_{i}^{2}\right)\left(n^{-1}\sum_{i=1}^{n}z_{i}y_{i}\right)-\left(n^{-1}\sum_{i=1}^{n}z_{i}\hat{w}_{i}\right)\left(n^{-1}\sum_{i=1}^{n}\hat{w}_{i}y_{i}\right)}{\left(n^{-1}\sum_{i=1}^{n}z_{i}^{2}\right)\left(n^{-1}\sum_{i=1}^{n}\hat{w}_{i}^{2}\right)-\left(n^{-1}\sum_{i=1}^{n}\hat{w}_{i}z_{i}\right)^{2}}\\
+ & = & \frac{\left(\frac{\sum_{i=1}^{n}x_{i}w_{i}}{\sum_{i=1}^{n}x_{i}^{2}}\right)^{2}\left(n^{-1}\sum_{i=1}^{n}x_{i}^{2}\right)\left(n^{-1}\sum_{i=1}^{n}z_{i}y_{i}\right)-\left(\frac{\sum_{i=1}^{n}x_{i}w_{i}}{\sum_{i=1}^{n}x_{i}^{2}}\right)^{2}\left(n^{-1}\sum_{i=1}^{n}z_{i}x_{i}\right)\left(n^{-1}\sum_{i=1}^{n}x_{i}y_{i}\right)}{\left(n^{-1}\sum_{i=1}^{n}z_{i}^{2}\right)\left(\frac{\sum_{i=1}^{n}x_{i}w_{i}}{\sum_{i=1}^{n}x_{i}^{2}}\right)^{2}\left(n^{-1}\sum_{i=1}^{n}x_{i}^{2}\right)-\left(\frac{\sum_{i=1}^{n}x_{i}w_{i}}{\sum_{i=1}^{n}x_{i}^{2}}\right)^{2}\left(n^{-1}\sum_{i=1}^{n}z_{i}x_{i}\right)^{2}}\\
+ & = & \frac{\left(n^{-1}\sum_{i=1}^{n}x_{i}^{2}\right)\left(n^{-1}\sum_{i=1}^{n}z_{i}y_{i}\right)-\left(n^{-1}\sum_{i=1}^{n}z_{i}x_{i}\right)\left(n^{-1}\sum_{i=1}^{n}x_{i}y_{i}\right)}{\left(n^{-1}\sum_{i=1}^{n}z_{i}^{2}\right)\left(n^{-1}\sum_{i=1}^{n}x_{i}^{2}\right)-\left(n^{-1}\sum_{i=1}^{n}z_{i}x_{i}\right)^{2}}\\
+ & \begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array} & \frac{E(x_{i}^{2})E(z_{i}y_{i})-E(z_{i}x_{i})E(x_{i}y_{i})}{E(z_{i}^{2})E(x_{i}^{2})-\left[E(z_{i}x_{i})\right]^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+and an expression for 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\lambda} & = & \frac{\left(n^{-1}\sum_{i=1}^{n}z_{i}^{2}\right)\left(n^{-1}\sum_{i=1}^{n}\hat{w}_{i}y_{i}\right)-\left(n^{-1}\sum_{i=1}^{n}\hat{w}_{i}z_{i}\right)\left(n^{-1}\sum_{i=1}^{n}z_{i}y_{i}\right)}{\left(n^{-1}\sum_{i=1}^{n}z_{i}^{2}\right)\left(n^{-1}\sum_{i=1}^{n}\hat{w}_{i}^{2}\right)-\left(n^{-1}\sum_{i=1}^{n}\hat{w}_{i}z_{i}\right)^{2}}\\
+ & = & \frac{\left(n^{-1}\sum_{i=1}^{n}z_{i}^{2}\right)\left(\frac{\sum_{i=1}^{n}x_{i}w_{i}}{\sum_{i=1}^{n}x_{i}^{2}}\right)\left(n^{-1}\sum_{i=1}^{n}x_{i}y_{i}\right)-\left(\frac{\sum_{i=1}^{n}x_{i}w_{i}}{\sum_{i=1}^{n}x_{i}^{2}}\right)\left(n^{-1}\sum_{i=1}^{n}z_{i}x_{i}\right)\left(n^{-1}\sum_{i=1}^{n}z_{i}y_{i}\right)}{\left(n^{-1}\sum_{i=1}^{n}z_{i}^{2}\right)\left(\frac{\sum_{i=1}^{n}x_{i}w_{i}}{\sum_{i=1}^{n}x_{i}^{2}}\right)^{2}\left(n^{-1}\sum_{i=1}^{n}x_{i}^{2}\right)-\left(\frac{\sum_{i=1}^{n}x_{i}w_{i}}{\sum_{i=1}^{n}x_{i}^{2}}\right)^{2}\left(n^{-1}\sum_{i=1}^{n}z_{i}x_{i}\right)^{2}}\\
+ & = & \frac{\left(n^{-1}\sum_{i=1}^{n}z_{i}^{2}\right)\left(n^{-1}\sum_{i=1}^{n}x_{i}y_{i}\right)-\left(n^{-1}\sum_{i=1}^{n}z_{i}x_{i}\right)\left(n^{-1}\sum_{i=1}^{n}z_{i}y_{i}\right)}{\left(n^{-1}\sum_{i=1}^{n}z_{i}^{2}\right)\left(\frac{n^{-1}\sum_{i=1}^{n}x_{i}w_{i}}{n^{-1}\sum_{i=1}^{n}x_{i}^{2}}\right)\left(n^{-1}\sum_{i=1}^{n}x_{i}^{2}\right)-\left(\frac{n^{-1}\sum_{i=1}^{n}x_{i}w_{i}}{n^{-1}\sum_{i=1}^{n}x_{i}^{2}}\right)\left(n^{-1}\sum_{i=1}^{n}z_{i}x_{i}\right)^{2}}\\
+ & \begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array} & \frac{E(z_{i}^{2})E(x_{i}y_{i})-E(z_{i}x_{i})E(z_{i}y_{i})}{E(z_{i}^{2})\left[\frac{E(x_{i}w_{i})}{E(x_{i}^{2})}\right]E(x_{i}^{2})-\left[\frac{E(x_{i}w_{i})}{E(x_{i}^{2})}\right]\left[E(z_{i}x_{i})\right]^{2}}\\
+ & = & \frac{E(z_{i}^{2})E(x_{i}y_{i})-E(z_{i}x_{i})E(z_{i}y_{i})}{E(z_{i}^{2})E(x_{i}w_{i})-\left[\frac{E(x_{i}w_{i})}{E(x_{i}^{2})}\right]\left[E(z_{i}x_{i})\right]^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, in general, the estimator is inconsistent.
+ However, under the condition that 
+\begin_inset Formula $E(w_{i}z_{i})=E(x_{i}z_{i})=0$
+\end_inset
+
+, then the estimator will be consistent.
+\end_layout
+
+\begin_layout Problem
+Consider the model (1) and assume now both 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ are endogenous.
+ We observe IVs 
+\begin_inset Formula $h_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ for 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ respectively.
+ Suppose 
+\begin_inset Formula $E(z_{i}h_{i})\neq0$
+\end_inset
+
+, 
+\begin_inset Formula $E(h_{i}\epsilon_{i})=0$
+\end_inset
+
+, 
+\begin_inset Formula $E(x_{i}w_{i})\neq0$
+\end_inset
+
+, but 
+\begin_inset Formula $E(x_{i}\epsilon_{i})\neq0$
+\end_inset
+
+ (i.e., one IV is misspecified).
+ Is the 2SLS estimator of 
+\begin_inset Formula $\delta$
+\end_inset
+
+ consistent? If not, under which conditions is it consistent?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $g_{i}=\left[\begin{array}{cc}
+z_{i} & w_{i}\end{array}\right]^{\prime}$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=\left[\begin{array}{cc}
+\delta & \lambda\end{array}\right]^{\prime}$
+\end_inset
+
+.
+ We can rewrite the model as
+\begin_inset Formula 
+\[
+y_{i}=g_{i}^{\prime}\beta+\epsilon_{i}
+\]
+
+\end_inset
+
+Also, let 
+\begin_inset Formula $r_{i}=\left[\begin{array}{cc}
+h_{i} & x_{i}\end{array}\right]^{\prime}$
+\end_inset
+
+ and let 
+\begin_inset Formula $\hat{g}_{i}$
+\end_inset
+
+ be the linear projection of 
+\begin_inset Formula $g_{i}$
+\end_inset
+
+ onto 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+.
+ Note that since 
+\begin_inset Formula $E(x_{i}\epsilon_{i})\neq0$
+\end_inset
+
+, then 
+\begin_inset Formula $E(r_{i}\epsilon_{i})\neq0$
+\end_inset
+
+.
+ Now, consider the 2SLS estimator
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta} & = & \left[n^{-1}{\displaystyle \sum_{i=1}^{n}}\hat{g}{}_{i}\hat{g}{}_{i}^{\prime}\right]^{-1}\left[n^{-1}{\displaystyle \sum_{i=1}^{n}}\hat{g}_{i}y_{i}\right]\\
+ & = & \left[\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}g_{i}r_{i}^{\prime}\right)\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}r_{i}r_{i}^{\prime}\right)^{-1}\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}r_{i}g_{i}^{\prime}\right)\right]^{-1}\\
+ &  & \times\left[\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}g_{i}r_{i}^{\prime}\right)\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}r_{i}r_{i}^{\prime}\right)^{-1}\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}r_{i}y_{i}\right)\right]\\
+\hat{\beta}_{2SLS}-\beta & = & \hat{A}^{-1}\left[\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}g_{i}r_{i}^{\prime}\right)\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}r_{i}r_{i}^{\prime}\right)^{-1}\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}r_{i}\epsilon_{i}\right)\right]
+\end{eqnarray*}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+\hat{A}\equiv\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}g_{i}r_{i}^{\prime}\right)\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}r_{i}r_{i}^{\prime}\right)^{-1}\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}r_{i}g_{i}^{\prime}\right)
+\]
+
+\end_inset
+
+Then, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta}_{2SLS}-\beta & = & \hat{A}^{-1}\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}\left[\begin{array}{c}
+z_{i}\\
+w_{i}
+\end{array}\right]\left[\begin{array}{cc}
+h_{i} & x_{i}\end{array}\right]\right)\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}\left[\begin{array}{c}
+h_{i}\\
+x_{i}
+\end{array}\right]\left[\begin{array}{cc}
+h_{i} & x_{i}\end{array}\right]\right)^{-1}\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}\left[\begin{array}{c}
+h_{i}\\
+x_{i}
+\end{array}\right]\epsilon_{i}\right)\\
+\hat{\beta}_{2SLS}-\beta & = & \hat{A}^{-1}\left[\left(n^{-1}\sum_{i=1}^{n}\left[\begin{array}{cc}
+z_{i}h_{i} & z_{i}x_{i}\\
+w_{i}h_{i} & w_{i}x_{i}
+\end{array}\right]\right)\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}\left[\begin{array}{cc}
+h_{i}^{2} & h_{i}x_{i}\\
+h_{i}x_{i} & x_{i}^{2}
+\end{array}\right]\right)^{-1}\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}\left[\begin{array}{c}
+h_{i}\epsilon_{i}\\
+x_{i}\epsilon_{i}
+\end{array}\right]\right)\right]\\
+ & \begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array} & A^{-1}\left[\begin{array}{cc}
+E(z_{i}h_{i}) & E(z_{i}x_{i})\\
+E(w_{i}h_{i}) & E(w_{i}x_{i})
+\end{array}\right]\left[\begin{array}{cc}
+E(h_{i}^{2}) & E(h_{i}x_{i})\\
+E(h_{i}x_{i}) & E(x_{i}^{2})
+\end{array}\right]^{-1}\left[\begin{array}{c}
+E(h_{i}\epsilon_{i})\\
+E(x_{i}\epsilon_{i})
+\end{array}\right]
+\end{eqnarray*}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+A\equiv E(g_{i}r_{i}^{\prime})\left[E(r_{i}r_{i}^{\prime})\right]^{-1}E(r_{i}g_{i}^{\prime})
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $E(x_{i}\epsilon_{i})\neq0$
+\end_inset
+
+, then, in general, the 2SLS estimator of 
+\begin_inset Formula $\delta$
+\end_inset
+
+ is not consistent.
+ However, under specific conditions, the estimator will be consistent.
+\begin_inset Formula 
+\[
+\hat{\beta}_{2SLS}-\beta\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}A^{-1}\left[\begin{array}{cc}
+E(z_{i}h_{i}) & E(z_{i}x_{i})\\
+E(w_{i}h_{i}) & E(w_{i}x_{i})
+\end{array}\right]\left[\begin{array}{cc}
+CE(x_{i}^{2}) & -CE(h_{i}x_{i})\\
+-CE(h_{i}x_{i}) & CE(h_{i}^{2})
+\end{array}\right]\left[\begin{array}{c}
+0\\
+E(x_{i}\epsilon_{i})
+\end{array}\right]
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+C\equiv\frac{1}{E(h_{i}^{2})E(x_{i}^{2})-E(h_{i}x_{i})^{2}}
+\]
+
+\end_inset
+
+Now, for 
+\begin_inset Formula $\hat{\beta}_{2SLS}$
+\end_inset
+
+ to be consistent, we must have 
+\begin_inset Formula $E(h_{i}x_{i})=E(z_{i}x_{i})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Consider the 2SLS regression (all variables are univariate): 
+\begin_inset Formula $y_{i}=x_{i}\beta+\epsilon_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}=z_{i}\delta+u_{i}$
+\end_inset
+
+ where 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is endogenous and 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ is a valid IV for 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\hat{x}_{i}$
+\end_inset
+
+ be the OLS fitted value of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ in the first stage.
+ Let 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ be the OLS estimator in the second stage and 
+\begin_inset Formula $\hat{\mbox{se}}_{\beta}$
+\end_inset
+
+ be the correponding OLS standard error [i.e., having the form of 
+\begin_inset Formula $\check{\sigma}_{\epsilon}^{2}\left(\sum_{i=1}^{n}\hat{x}_{i}^{2}\right)^{-\nicefrac{1}{2}}$
+\end_inset
+
+, where 
+\begin_inset Formula $\check{\sigma}_{\epsilon}^{2}=n^{-1}\sum_{i=1}^{n}\check{\epsilon}_{i}^{2}$
+\end_inset
+
+ with the OLS residual 
+\begin_inset Formula $\check{\epsilon}_{i}=y_{i}-\hat{x}_{i}\hat{\beta}$
+\end_inset
+
+] We know that 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is called the 2SLS estimator and consistently estimates 
+\begin_inset Formula $\beta$
+\end_inset
+
+ in the presence of endogeneity.
+ Show that 
+\begin_inset Formula $\hat{\mbox{se}}_{\beta}$
+\end_inset
+
+ is not a valid standard error for 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ and provide a correct one.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, consider the OLS residual specfied in the problem
+\begin_inset Formula 
+\begin{eqnarray*}
+\check{\epsilon}_{i} & = & y_{i}-\hat{x}_{i}\hat{\beta}\\
+ & = & x_{i}\beta+\epsilon_{i}-\hat{x}_{i}\hat{\beta}\\
+ & = & x_{i}\beta+\epsilon_{i}-\hat{x}_{i}\hat{\beta}+x_{i}\hat{\beta}-x_{i}\hat{\beta}\\
+ & = & \epsilon_{i}+x_{i}(\beta-\hat{\beta})+\hat{\beta}(x_{i}-\hat{x}_{i})\\
+\check{\epsilon}_{i}^{2} & = & \epsilon_{i}^{2}+x_{i}^{2}(\beta-\hat{\beta})^{2}+\hat{\beta}^{2}(x_{i}-\hat{x}_{i})^{2}+2\epsilon_{i}x_{i}(\beta-\hat{\beta})+2\epsilon_{i}\hat{\beta}(x_{i}-\hat{x}_{i})+2x_{i}\hat{\beta}(x_{i}-\hat{x}_{i})(\beta-\hat{\beta})\\
+n^{-1}\sum_{i=1}^{n}\check{\epsilon}_{i}^{2} & = & n^{-1}\sum_{i=1}^{n}\epsilon_{i}^{2}+n^{-1}\sum_{i=1}^{n}x_{i}^{2}(\beta-\hat{\beta})^{2}+n^{-1}\sum_{i=1}^{n}\hat{\beta}^{2}(x_{i}-\hat{x}_{i})^{2}\\
+ &  & +n^{-1}\sum_{i=1}^{n}2\epsilon_{i}x_{i}(\beta-\hat{\beta})+n^{-1}\sum_{i=1}^{n}2\epsilon_{i}\hat{\beta}(x_{i}-\hat{x}_{i})+n^{-1}\sum_{i=1}^{n}2x_{i}\hat{\beta}(x_{i}-\hat{x}_{i})(\beta-\hat{\beta})
+\end{eqnarray*}
+
+\end_inset
+
+Thus, by the law of large numbers
+\begin_inset Formula 
+\[
+n^{-1}\sum_{i=1}^{n}\check{\epsilon}_{i}^{2}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\sigma_{\epsilon}^{2}+E\left[\hat{\beta}^{2}(x_{i}-\hat{x}_{i})^{2}\right]+2E\left[\epsilon_{i}\hat{\beta}(x_{i}-\hat{x}_{i})\right]
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $E\left[\hat{\beta}^{2}(x_{i}-\hat{x}_{i})^{2}\right]\neq0$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\check{\sigma}_{\epsilon}^{2}=n^{-1}\sum_{i=1}^{n}\check{\epsilon}_{i}^{2}
+\]
+
+\end_inset
+
+is not a consistent estimator of 
+\begin_inset Formula $\sigma_{\epsilon}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We know that
+\begin_inset Formula 
+\[
+\hat{\sigma}_{\epsilon}^{2}=n^{-1}{\displaystyle \sum_{i=1}^{n}}\hat{\epsilon}_{i}^{2}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{\epsilon}_{i}=y_{i}-x_{i}\hat{\beta}$
+\end_inset
+
+ is a consistent estimator for 
+\begin_inset Formula $\sigma_{\epsilon}^{2}$
+\end_inset
+
+, i.e.,
+\begin_inset Formula 
+\[
+\hat{\sigma}_{\epsilon}^{2}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\sigma_{\epsilon}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Describe what is the continuously updating GMM estimator.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the model
+\begin_inset Formula 
+\[
+y_{i}=x_{i}^{\prime}\beta+u_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ and 
+\begin_inset Formula $E(x_{i}u_{i})\neq0$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ be a 
+\begin_inset Formula $L\times1$
+\end_inset
+
+ vector of IVs for 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ such that 
+\begin_inset Formula $E(z_{i}u_{i})=0$
+\end_inset
+
+.
+ We also assume that 
+\begin_inset Formula $\mbox{rank}\ E(z_{i}x_{i}^{\prime})=K$
+\end_inset
+
+.
+ To obtain the optimal GMM, we execute the following two-step procedure
+\end_layout
+
+\begin_layout Standard
+1.
+ Obtain the 2SLS estimator
+\begin_inset Formula 
+\[
+\hat{\beta}_{2SLS}=\left({\displaystyle \sum_{i=1}^{n}}\hat{x}_{i}x_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}\hat{x}_{i}y_{i}\right)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{x}_{i}$
+\end_inset
+
+ is the linear projection of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ onto 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $E(z_{i}u_{i})=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{rank}\ E(z_{i}x_{i}^{\prime})=K$
+\end_inset
+
+, then 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is a consistent estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Thus, we calculate the 2SLS residuals 
+\begin_inset Formula $\hat{u}_{i}=y_{i}-x_{i}\hat{\beta}_{2SLS}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ Next, we calculate the optimal weighting matrix
+\begin_inset Formula 
+\[
+\hat{W}=\left({\displaystyle \sum_{i=1}^{n}}\hat{u}_{i}^{2}z_{i}z_{i}^{\prime}\right)^{-1}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\hat{\beta}_{2SLS}$
+\end_inset
+
+ is a consistent estimator, then 
+\begin_inset Formula 
+\[
+\hat{W}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}W=\left[E(u_{i}^{2}z_{i}z_{i}^{\prime})\right]^{-1}
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+ is the optimal weighting matrix since it produces the GMM estimator with
+ the smallest asymptotic variance.
+ Finally, we perform GMM estimation using the optimal weighting matrix above
+ to obtain the optimal GMM estimator.
+\begin_inset Formula 
+\[
+\hat{\beta}_{GMM}^{opt}=\left[\left({\displaystyle \sum_{i=1}^{n}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{n}}\hat{u}_{i}^{2}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}z_{i}x_{i}^{\prime}\right)\right]^{-1}\left[\left({\displaystyle \sum_{i=1}^{n}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{n}}\hat{u}_{i}^{2}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}z_{i}y_{i}\right)\right]
+\]
+
+\end_inset
+
+The continuously updating GMM estimator repeats this process until 
+\begin_inset Formula $\left|\hat{\beta}_{j-1}-\hat{\beta}_{j}\right|<\epsilon$
+\end_inset
+
+, where 
+\begin_inset Formula $j$
+\end_inset
+
+ signifies the 
+\begin_inset Formula $j$
+\end_inset
+
+-th iteration of the procedure.
+\end_layout
+
+\begin_layout Problem
+Explain in which situation the 2SLS estimator is the optimal GMM estimator.
+ Why?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the model
+\begin_inset Formula 
+\[
+y_{i}=x_{i}^{\prime}\beta+u_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ and 
+\begin_inset Formula $E(x_{i}u_{i})\neq0$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ be a 
+\begin_inset Formula $L\times1$
+\end_inset
+
+ vector of IVs for 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ such that 
+\begin_inset Formula $E(z_{i}u_{i})=0$
+\end_inset
+
+.
+ We also assume that 
+\begin_inset Formula $\mbox{rank}\ E(z_{i}x_{i}^{\prime})=K$
+\end_inset
+
+.
+ The GMM estimator that employs the following matrix
+\begin_inset Formula 
+\[
+\hat{W}=\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}u_{i}^{2}z_{i}z_{i}^{\prime}\right)^{-1}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}W=\left[E(u_{i}^{2}z_{i}z_{i}^{\prime})\right]^{-1}
+\]
+
+\end_inset
+
+is considered the optimal GMM estimator since it is the estimator with the
+ small asymptotic variance.
+ The optimal GMM estimator is given by
+\begin_inset Formula 
+\[
+\hat{\beta}_{GMM}^{opt}=\left[\left({\displaystyle \sum_{i=1}^{n}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{n}}\hat{u}_{i}^{2}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}z_{i}x_{i}^{\prime}\right)\right]^{-1}\left[\left({\displaystyle \sum_{i=1}^{n}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{n}}\hat{u}_{i}^{2}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}z_{i}y_{i}\right)\right]
+\]
+
+\end_inset
+
+Now, the 2SLS estimator is a specific GMM estimator that employs the following
+ weighting matrix
+\begin_inset Formula 
+\[
+\hat{W}=\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}z_{i}z_{i}^{\prime}\right)^{-1}
+\]
+
+\end_inset
+
+If we assume conditional homoskedasticity, i.e.,
+\begin_inset Formula 
+\[
+E(u_{i}^{2}|z_{i})=\sigma^{2}
+\]
+
+\end_inset
+
+then the optimal weighting becomes
+\begin_inset Formula 
+\[
+\hat{W}=\left(\sigma^{2}n^{-1}{\displaystyle \sum_{i=1}^{n}}z_{i}z_{i}^{\prime}\right)^{-1}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}W=\left[\sigma^{2}E\left(z_{i}z_{i}^{\prime}\right)\right]^{-1}
+\]
+
+\end_inset
+
+and the optimal GMM estimator can be written
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta}_{GMM}^{opt} & = & \left[\left({\displaystyle \sum_{i=1}^{n}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{n}\sigma^{2}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}z_{i}x_{i}^{\prime}\right)\right]^{-1}\left[\left({\displaystyle \sum_{i=1}^{n}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{n}}\sigma^{2}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}z_{i}y_{i}\right)\right]\\
+ & = & \left[\left({\displaystyle \sum_{i=1}^{n}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{n}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}z_{i}x_{i}^{\prime}\right)\right]^{-1}\left[\left({\displaystyle \sum_{i=1}^{n}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{n}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}z_{i}y_{i}\right)\right]
+\end{eqnarray*}
+
+\end_inset
+
+Thus, under conditional homoskedasticity, the 2SLS esitmator is the optimal
+ GMM estimator.
+\end_layout
+
+\begin_layout Problem
+Describe how the Hausman principle is used in testing a subset of orthogonal
+ conditions (or exogenous conditions) in a GMM framework.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Problem
+What is a weak instrument and why does it cause problems in practice?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\end_body
+\end_document

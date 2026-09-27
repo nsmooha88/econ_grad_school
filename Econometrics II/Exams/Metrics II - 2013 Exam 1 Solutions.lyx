@@ -1,0 +1,1392 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Econometrics II: Exam 1 Solutions (2013)
+\end_layout
+
+\begin_layout Problem
+Suppose the structural equation is 
+\begin_inset Formula $E(y_{i}|x_{i},w_{i},q_{i})=\beta_{0}+\beta_{1}x_{i}+\beta_{2}w_{i}+\beta_{3}q_{i}$
+\end_inset
+
+.
+ Variables 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $x$
+\end_inset
+
+, and 
+\begin_inset Formula $w$
+\end_inset
+
+ are observable.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calculate the omitted variable bias of the OLS estimator caused by unobservabili
+ty of the variable 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ (Written in terms of moments of observables).
+\end_layout
+
+\begin_layout Enumerate
+Suppose we don't observe any other variables.
+ Is it possible to consistently estimate 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+ by imposing any assumption?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $z_{i}=\left[\begin{array}{ccc}
+1 & x_{i} & w_{i}\end{array}\right]^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta=\left[\begin{array}{ccc}
+\beta_{0} & \beta_{1} & \beta_{2}\end{array}\right]^{\prime}$
+\end_inset
+
+.
+ Now, rewrite the structural equation as
+\begin_inset Formula 
+\[
+y_{i}=z_{i}^{\prime}\beta+\beta_{3}q_{i}+u_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is the structural error and 
+\begin_inset Formula $E(u_{i}|z_{i},q_{i})=0$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ is unobservable, then let us define 
+\begin_inset Formula $e_{i}=\beta_{3}q_{i}+u_{i}$
+\end_inset
+
+.
+ Running OLS an OLS regression of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta} & = & \left[{\displaystyle \sum_{i=1}^{n}}z_{i}z_{i}^{\prime}\right]^{-1}\left[{\displaystyle \sum_{i=1}^{n}}z_{i}y_{i}\right]\\
+ & = & \left[{\displaystyle \sum_{i=1}^{n}}z_{i}z_{i}^{\prime}\right]^{-1}\left[{\displaystyle \sum_{i=1}^{n}}z_{i}\left(z_{i}^{\prime}\beta+e_{i}\right)\right]\\
+ & = & \beta+\left[{\displaystyle \sum_{i=1}^{n}}z_{i}z_{i}^{\prime}\right]^{-1}\left[{\displaystyle \sum_{i=1}^{n}}z_{i}e_{i}\right]\\
+ & = & \beta+\left[{\displaystyle \sum_{i=1}^{n}}z_{i}z_{i}^{\prime}\right]^{-1}\left[{\displaystyle \sum_{i=1}^{n}}z_{i}\beta_{3}q_{i}\right]+\left[{\displaystyle \sum_{i=1}^{n}}z_{i}z_{i}^{\prime}\right]^{-1}\left[{\displaystyle \sum_{i=1}^{n}}z_{i}u_{i}\right]\\
+ & \begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array} & \beta+\beta_{3}\left[E\left(z_{i}z_{i}^{\prime}\right)\right]^{-1}E\left[z_{i}q_{i}\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is possible to consistently estimate 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+ by imposing the assumption 
+\begin_inset Formula $L(q_{i}|x_{i},w_{i})=L(q_{i}|x_{i})$
+\end_inset
+
+.
+ The key idea of the assumption is that, once we conditions on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ is not partially correlated to 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+L(q|x)=\delta_{0}+\delta_{1}x_{i}+r_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $E(x_{i}r_{i})=0$
+\end_inset
+
+ and 
+\begin_inset Formula $E(r_{i}u_{i})=0$
+\end_inset
+
+.
+ Now, using the linear projection above, we can rewrite the structural equation
+ as
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{i} & = & \beta_{0}+\beta_{1}x_{i}+\beta_{2}w_{i}+\beta_{3}(\delta_{0}+\delta_{1}x_{i}+r_{i})+u_{i}\\
+y_{i} & = & \left(\beta_{0}+\beta_{3}\delta_{0}\right)+\left(\beta_{1}+\delta_{1}\right)x_{i}+\beta_{2}w_{i}+\left(u_{i}+\beta_{3}r_{i}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $E(w_{i}u_{i})=0$
+\end_inset
+
+ and 
+\begin_inset Formula $E(w_{i}r_{i})=0$
+\end_inset
+
+, then we can consistently estimate 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Consider the model
+\begin_inset Formula 
+\[
+y_{i}=x_{i}\delta+w_{i}\lambda+\epsilon_{i},\ (i=1,\ldots,n)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ are scalars, 
+\begin_inset Formula $E(x_{i}\epsilon_{i})=0$
+\end_inset
+
+, and 
+\begin_inset Formula $E(w_{i}\epsilon_{i})\neq0$
+\end_inset
+
+.
+ We observe two IVs for 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ : 
+\begin_inset Formula $z_{1i}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{2i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Describe the control-function estimate of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $\hat{\lambda}_{cf}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+How to calculate the standard error of 
+\begin_inset Formula $\hat{\lambda}_{cf}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+How to estimate 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ using the optimal GMM method?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the linear projection of 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ onto the exogenous variables
+\begin_inset Formula 
+\[
+w_{i}=\gamma_{0}+\gamma_{1}x_{i}+\gamma_{2}z_{1i}+\gamma_{3}z_{2i}+r_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $E(r_{i}z_{1i})=0$
+\end_inset
+
+, 
+\begin_inset Formula $E(r_{i}z_{2i})=0$
+\end_inset
+
+, and 
+\begin_inset Formula $E(r_{i}x_{i})=0$
+\end_inset
+
+.
+ Also, consider the linear projection of 
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+ onto 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\epsilon_{i}=\theta r_{i}+v_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $E(v_{i}r_{i})=0$
+\end_inset
+
+, 
+\begin_inset Formula $E(v_{i}z_{1i})=0$
+\end_inset
+
+, 
+\begin_inset Formula $E(v_{i}z_{2i})=0$
+\end_inset
+
+, and 
+\begin_inset Formula $E(v_{i}x_{i})=0$
+\end_inset
+
+.
+ Now, we plug this linear projection into the original model
+\begin_inset Formula 
+\[
+y_{i}=x_{i}\delta+w_{i}\lambda+\theta r_{i}+v_{i}
+\]
+
+\end_inset
+
+so all the variables are now exogenous with the new error term.
+ However, since 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ is unobservable, then we replace it by its residual 
+\begin_inset Formula $\hat{r}_{i}$
+\end_inset
+
+, which we obtain from the OLS regression of 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $1,z_{1i},z_{2i}$
+\end_inset
+
+, i.e.,
+\begin_inset Formula 
+\[
+\hat{r}_{i}=w_{i}-\hat{\gamma}_{0}-\hat{\gamma}_{1}x_{i}-\hat{\gamma}_{2}z_{1i}-\hat{\gamma}_{3}z_{2i}
+\]
+
+\end_inset
+
+The control-function estimate of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\hat{\lambda}_{cf}$
+\end_inset
+
+ is obtained by regressing 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i},w_{i},\hat{r}_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+By the FWL Theorem, 
+\begin_inset Formula $\hat{\lambda}_{cf}=\hat{\lambda}_{2SLS}$
+\end_inset
+
+.
+ Consider the linear projection of 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ onto the exogenous variables
+\begin_inset Formula 
+\[
+w_{i}=\gamma_{0}+\gamma_{1}x_{i}+\gamma_{2}z_{1i}+\gamma_{3}z_{2i}+r_{i}
+\]
+
+\end_inset
+
+We regresson 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ onto the exogenous variables to obtain 
+\begin_inset Formula $\hat{w}_{i}$
+\end_inset
+
+.
+ Define the vector 
+\begin_inset Formula $\hat{g_{i}}=\left[\begin{array}[b]{cc}
+x_{i} & \hat{w}_{i}\end{array}\right]^{\prime}$
+\end_inset
+
+, which we use as an IV for 
+\begin_inset Formula $g_{i}=\left[\begin{array}[b]{cc}
+x_{i} & w_{i}\end{array}\right]^{\prime}$
+\end_inset
+
+.
+ Also, let 
+\begin_inset Formula $\beta=\left[\begin{array}[b]{cc}
+\delta & \lambda\end{array}\right]$
+\end_inset
+
+.
+ Then, the 2SLS estimator is
+\begin_inset Formula 
+\[
+\hat{\beta}=\left({\displaystyle \sum_{i=1}^{n}}\hat{g}_{i}g_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}\hat{g}_{i}y_{i}\right)
+\]
+
+\end_inset
+
+The estimated heteroskedastic-robust asymptotic variance of this estimator
+ is
+\begin_inset Formula 
+\[
+\left({\displaystyle \sum_{i=1}^{n}}\hat{g}_{i}g_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}\hat{\epsilon}_{i}^{2}\hat{g}_{i}\hat{g}_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{n}}\hat{g}_{i}g_{i}^{\prime}\right)^{-1}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{\epsilon}_{i}=y_{i}-g_{i}\hat{\beta}_{2SLS}$
+\end_inset
+
+.
+ The standard error of 
+\begin_inset Formula $\hat{\lambda}_{cf}$
+\end_inset
+
+ is the square root of the 2nd row, 2nd column element of the matrix above.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Standard
+1.
+ Obtain the 2SLS estimator
+\begin_inset Formula 
+\[
+\hat{\beta}_{2SLS}=\left({\displaystyle \sum_{i=1}^{n}}\hat{g}_{i}g_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}\hat{g}_{i}y_{i}\right)
+\]
+
+\end_inset
+
+which is a consistent estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+, and calculate the residuals 
+\begin_inset Formula $\hat{\epsilon}_{i}=y_{i}-x_{i}\hat{\beta}_{2SLS}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ Next, we calculate the optimal weighting matrix
+\begin_inset Formula 
+\[
+\hat{W}=\left({\displaystyle \sum_{i=1}^{n}}\hat{\epsilon}_{i}^{2}z_{i}z_{i}^{\prime}\right)^{-1}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $z_{i}=\left[\begin{array}{ccc}
+x_{i} & z_{1i} & z_{2i}\end{array}\right]^{\prime}$
+\end_inset
+
+.
+ Finally, we perform GMM estimation using the optimal weighting matrix above
+ to obtain the optimal GMM estimator.
+\begin_inset Formula 
+\[
+\hat{\beta}_{GMM}^{opt}=\left[\left({\displaystyle \sum_{i=1}^{n}}g_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{n}}\hat{\epsilon}_{i}^{2}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}z_{i}g_{i}^{\prime}\right)\right]^{-1}\left[\left({\displaystyle \sum_{i=1}^{n}}g_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{n}}\hat{\epsilon}_{i}^{2}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}z_{i}y_{i}\right)\right]^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Consider the panel data model
+\begin_inset Formula 
+\[
+y_{it}=x_{it}^{\prime}\beta+c_{i}+u_{it}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is the term representing unobserved heterogeneity, 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+ and 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $T=2$
+\end_inset
+
+.
+ Show the error variance estimate from the FE (fixed-effects) method.
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $T=2$
+\end_inset
+
+.
+ Show the error variance estimate from the FD(first-difference) method.
+\end_layout
+
+\begin_layout Enumerate
+Which variance estimates in (a) and (b) are larger?
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $T=4$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{it}=y_{i,t-1}$
+\end_inset
+
+.
+ How would we consistently estimate 
+\begin_inset Formula $\beta$
+\end_inset
+
+? Specify assumptions.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We first apply the FE transformation to the panel data model.
+ First, we average the model over 
+\begin_inset Formula $T$
+\end_inset
+
+ to get the cross section equation 
+\begin_inset Formula 
+\[
+\bar{y}_{i}=\bar{x}_{i}^{\prime}\beta+c_{i}+\bar{u}_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\bar{y}_{i}=2^{-1}\sum_{t=1}^{2}y_{it}$
+\end_inset
+
+ and the other variables are defined accordingly.
+ Subtracting this equation from the panel data model for each 
+\begin_inset Formula $t$
+\end_inset
+
+ gives the FE transformed equation
+\begin_inset Formula 
+\[
+y_{it}-\bar{y}=(x_{it}-\bar{x}_{i})^{\prime}\beta+u_{it}-\bar{u}_{i}
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\[
+\ddot{y}_{it}=\ddot{x}_{it}^{\prime}\beta+\ddot{u}_{it},\ t=1,2
+\]
+
+\end_inset
+
+The FE estimator, denoted 
+\begin_inset Formula $\hat{\beta}_{FE}$
+\end_inset
+
+, is the POLS estimator from the regression 
+\begin_inset Formula $\ddot{y}_{it}$
+\end_inset
+
+ on 
+\begin_inset Formula $\ddot{x}_{it}$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,2;i=1,\ldots,n$
+\end_inset
+
+.
+ Thus, the error variance estimate from the FE method is
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{2}}\hat{\ddot{u}}_{it}^{2} & = & {\displaystyle \sum_{i=1}^{n}}\left(\hat{\ddot{u}}_{i1}^{2}+\hat{\ddot{u}}_{i2}^{2}\right)\\
+ & = & {\displaystyle \sum_{i=1}^{n}}\left[\left(\ddot{y}_{i1}-\ddot{x}_{i1}^{\prime}\hat{\beta}_{FE}\right)^{2}+\left(\ddot{y}_{i2}-\ddot{x}_{i2}^{\prime}\hat{\beta}_{FE}\right)^{2}\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The FD transformed formed model is given by
+\begin_inset Formula 
+\[
+\Delta y_{i2}=\Delta x_{i2}^{\prime}\beta+\Delta u_{i2}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\Delta y_{i2}=y_{i2}-y_{i1}$
+\end_inset
+
+ and the other variables are defined accordingly.
+ The FD estimator, denoted 
+\begin_inset Formula $\hat{\beta}_{FD}$
+\end_inset
+
+, is the POLS estimator from the regression 
+\begin_inset Formula $\Delta y_{i2}$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta x_{i2}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+.
+ Thus, the error variance estimate from the FD method is
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{n}}\Delta\hat{u}_{it}^{2}={\displaystyle \sum_{i=1}^{n}}\left(\Delta y_{i2}-\Delta x_{i2}^{\prime}\beta\right)^{2}
+\]
+
+\end_inset
+
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let us start with the error variance estimate from the FE method
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{2}}\hat{\ddot{u}}_{it}^{2} & = & {\displaystyle \sum_{i=1}^{n}}\left[\left(\ddot{y}_{i1}-\ddot{x}_{i1}^{\prime}\hat{\beta}_{FE}\right)^{2}+\left(\ddot{y}_{i2}-\ddot{x}_{i2}^{\prime}\hat{\beta}_{FE}\right)^{2}\right]\\
+ & = & {\displaystyle \sum_{i=1}^{n}}\left[\left(y_{i1}-\frac{1}{2}\left(y_{i1}+y_{i2}\right)\right)-\left(x_{i1}-\frac{1}{2}\left(x_{i1}+x_{i2}\right)\right)^{\prime}\hat{\beta}_{FE}\right]^{2}\\
+ & = & +\left[\left(y_{i2}-\frac{1}{2}\left(y_{i1}+y_{i2}\right)\right)-\left(x_{i2}-\frac{1}{2}\left(x_{i1}+x_{i2}\right)\right)^{\prime}\hat{\beta}_{FE}\right]^{2}\\
+ & = & {\displaystyle \sum_{i=1}^{n}}\left[\left(-\frac{1}{2}\right)\left(y_{i2}-y_{i1}\right)-\left(-\frac{1}{2}\right)\left(x_{i2}-x_{i1}\right)^{\prime}\hat{\beta}_{FE}\right]^{2}\\
+ &  & +\left[\frac{1}{2}\left(y_{i2}-y_{i1}\right)-\frac{1}{2}\left(x_{i2}-x_{i1}\right)^{\prime}\hat{\beta}_{FE}\right]^{2}\\
+ & = & \frac{1}{4}{\displaystyle \sum_{i=1}^{n}}2\left[\Delta y_{i2}-\Delta x_{i2}^{\prime}\hat{\beta}_{FE}\right]^{2}\\
+ & = & \frac{1}{4}{\displaystyle \sum_{i=1}^{n}}2\left[\Delta y_{i2}-\Delta x_{i2}^{\prime}\hat{\beta}_{FD}\right]^{2}\\
+ & = & \frac{1}{2}{\displaystyle \sum_{i=1}^{n}}\left[\Delta y_{i2}-\Delta x_{i2}^{\prime}\hat{\beta}_{FD}\right]^{2}\\
+ & = & \frac{1}{2}{\displaystyle \sum_{i=1}^{n}}\Delta\hat{u}_{it}^{2}
+\end{eqnarray*}
+
+\end_inset
+
+Note that 
+\begin_inset Formula $\hat{\beta}_{FE}=\hat{\beta}_{FD}$
+\end_inset
+
+ when 
+\begin_inset Formula $T=2$
+\end_inset
+
+.
+ This means that the FD error variance estimate is larger than the FE error
+ variance estimate.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part D.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To consistently estimate 
+\begin_inset Formula $\beta$
+\end_inset
+
+, we need the sequential exogeneity assumption
+\begin_inset Formula 
+\[
+E(u_{it}|x_{it},x_{i,t-1},\ldots,x_{i1},c_{i})=0
+\]
+
+\end_inset
+
+We apply the FD transformation on the model to obtain
+\begin_inset Formula 
+\[
+\Delta y_{it}=\Delta y_{i,t-1}+\Delta u_{it},\ t=2,\ldots,4;i=1,\ldots,n
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\Delta y_{i,t-1}=y_{i,t-1}-y_{i,t-2}$
+\end_inset
+
+.
+ The IVs used to estimate this model are
+\begin_inset Formula 
+\begin{gather*}
+t=2:\mbox{No IVs}\\
+t=3:y_{i1}\\
+t=4:y_{i1},y_{i2}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Describe one example each for identified and non-identified models (with
+ assumptions) in econometrics.
+ Explain why.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the single-equation linear model with exogenous regressors
+\begin_inset Formula 
+\[
+y_{i}=x_{i}^{\prime}\beta+u_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $\beta$
+\end_inset
+
+ to be identified, the following 2 assumptions need to be satisfied:
+\end_layout
+
+\begin_layout Standard
+Assumption 1: 
+\begin_inset Formula $E(x_{i}u_{i})=0$
+\end_inset
+
+.
+ This assumption allows us to consistently estimate 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\[
+E(x_{i}x_{i}^{\prime})\beta=E(x_{i}y_{i})
+\]
+
+\end_inset
+
+Assumption 2: 
+\begin_inset Formula $\mbox{rank}\ E(x_{i}x_{i}^{\prime})=K$
+\end_inset
+
+.
+ This assumption allows us to identify the unique 
+\begin_inset Formula $\beta$
+\end_inset
+
+ to estimate.
+\end_layout
+
+\begin_layout Standard
+With these two assumptions, the model is identified.
+ However, if either of the two assumptions fail, then the model is longer
+ identified.
+\end_layout
+
+\begin_layout Problem
+Consider the single equation model 
+\begin_inset Formula $y_{i}=x_{i}^{\prime}\beta+\epsilon_{i},\ i=1,\ldots,n$
+\end_inset
+
+, where 
+\begin_inset Formula $E(\epsilon|x)=0$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ be 
+\begin_inset Formula $K\times1$
+\end_inset
+
+.
+ Denote the Wald test statistic (based on the OLS estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+) for 
+\begin_inset Formula $H_{0}:\beta=1_{K\times1}$
+\end_inset
+
+ as 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ Describe the asymptotic behavior of the statistic 
+\begin_inset Formula $Q$
+\end_inset
+
+ under the following alternatives.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $H_{1}:\beta=2_{K\times1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $H_{1}:\beta=\nicefrac{1_{K\times1}}{\sqrt{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $H_{1}:\beta=\nicefrac{1_{K\times1}}{n}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The Wald statistic under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+Q=\sqrt{n}\left(R\hat{\beta}-1_{K\times1}\right)^{\prime}\left[R\hat{V}R^{\prime}\right]^{-1}\sqrt{n}\left(R\hat{\beta}-1_{K\times1}\right)\sim\chi^{2}(K)
+\]
+
+\end_inset
+
+Note that in this setup, 
+\begin_inset Formula $R=I_{K}$
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+\hat{V}=\left(X^{\prime}X\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}\hat{\epsilon}_{i}^{2}x_{i}x_{i}^{\prime}\right)\left(X^{\prime}X\right)^{-1}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{\epsilon}_{i}=y_{i}-x_{i}^{\prime}\hat{\beta}_{OLS}$
+\end_inset
+
+.
+ To describe the asymptotic behavior of the statistic 
+\begin_inset Formula $Q$
+\end_inset
+
+ under the alternatives, we rewrite the statistic as
+\begin_inset Formula 
+\begin{eqnarray*}
+Q & = & \sqrt{n}\left(R\hat{\beta}-q_{0}+q_{1}-q_{1}\right)^{\prime}\left[R\hat{V}R^{\prime}\right]^{-1}\sqrt{n}\left(R\hat{\beta}-q_{0}+q_{1}-q_{1}\right)\\
+Q & = & \left[\sqrt{n}\left(R\hat{\beta}-q_{1}\right)+\sqrt{n}(q_{1}-q_{0})\right]^{\prime}\left[R\hat{V}R^{\prime}\right]^{-1}\left[\sqrt{n}\left(R\hat{\beta}-q_{1}\right)+\sqrt{n}(q_{1}-q_{0})\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $H_{1}:\beta=2_{K\times1}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sqrt{n}(q_{1}-q_{0}) & = & \sqrt{n}\left(2_{K\times1}-1_{K\times1}\right)\\
+ & = & \sqrt{n}_{K\times1}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $Q\rightarrow\infty$
+\end_inset
+
+ as 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\beta=\nicefrac{1_{K\times1}}{\sqrt{n}}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sqrt{n}(q_{1}-q_{0}) & = & \sqrt{n}\left(\nicefrac{1_{K\times1}}{\sqrt{n}}-1_{K\times1}\right)\\
+ & = & 1_{K\times1}-\sqrt{n}_{K\times1}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $Q\rightarrow-\infty$
+\end_inset
+
+ as 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $H_{1}:\beta=\nicefrac{1_{K\times1}}{n}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sqrt{n}(q_{1}-q_{0}) & = & \sqrt{n}\left(\nicefrac{1_{K\times1}}{n}-1_{K\times1}\right)\\
+ & = & n_{K\times1}^{-\nicefrac{1}{2}}-\sqrt{n}_{K\times1}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $Q\rightarrow-\infty$
+\end_inset
+
+ as 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+What is the 3SLS estimator of a system of equations with endogeneity? Specify
+ the model under which the 3SLS estimator is explained.
+ How do you calculate its standard error?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the panel data model
+\begin_inset Formula 
+\[
+y_{it}=x_{it}^{\prime}\beta+u_{it},\ t=1,\ldots,T;\ i=1,\ldots,n
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+.
+ Suppose 
+\begin_inset Formula $E(x_{it}u_{it})\neq0$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $z_{it}$
+\end_inset
+
+ be a vector of 
+\begin_inset Formula $L_{t}\times1$
+\end_inset
+
+ IVs for equation 
+\begin_inset Formula $t$
+\end_inset
+
+ such that 
+\begin_inset Formula $E(z_{it}u_{it})=0,\ t=1,\ldots,T$
+\end_inset
+
+.
+ So, we will estimate the model using GMM.
+ First, stack the equations over 
+\begin_inset Formula $T$
+\end_inset
+
+ to obtain
+\begin_inset Formula 
+\[
+y_{i}=x_{i}\beta+u_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $T\times K$
+\end_inset
+
+, 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $T\times1$
+\end_inset
+
+, and 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $T\times1$
+\end_inset
+
+.
+ We also stack the vector of IVs
+\begin_inset Formula 
+\[
+z_{i}=\left[\begin{array}{ccc}
+z_{i1}^{\prime} &  & 0\\
+ & \ddots\\
+0 &  & z_{iT}^{\prime}
+\end{array}\right]_{T\times L}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $L=L_{1}+\cdots+L_{T}$
+\end_inset
+
+.
+ Now, we can write the population moment conditions as 
+\begin_inset Formula $E(z_{i}^{\prime}u_{i})=0$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $\beta$
+\end_inset
+
+ to be identified, we must also assume that 
+\begin_inset Formula $\mbox{rank}\ E(z_{i}^{\prime}x_{i})=K$
+\end_inset
+
+.
+ The 3SLS estimator is a system GMM estimator that implements the following
+ weighting matrix
+\begin_inset Formula 
+\[
+\hat{W}=\left[\frac{1}{n}{\displaystyle \sum_{i=1}^{n}}z_{i}^{\prime}\hat{\Omega}z_{i}\right]^{-1}
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+\hat{\Omega}=\frac{1}{n}{\displaystyle \sum_{i=1}^{n}}\check{u}_{i}\check{u}_{i}^{\prime}
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $\check{u}_{i}=y_{i}-x_{i}\check{\beta}$
+\end_inset
+
+, where 
+\begin_inset Formula $\check{\beta}$
+\end_inset
+
+ is a consistent estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ For the 3SLS estimator to be efficient, we must also assume that 
+\begin_inset Formula $E(u_{i}u_{i}^{\prime}|z_{i})=E(u_{i}u_{i}^{\prime})=\Omega$
+\end_inset
+
+.
+ Thus, the 3SLS estimator is given by
+\begin_inset Formula 
+\[
+\hat{\beta}_{3SLS}=\left[\left({\displaystyle \sum_{i=1}^{n}}x_{i}^{\prime}z_{i}\right)\left(\frac{1}{n}{\displaystyle \sum_{i=1}^{n}}z_{i}^{\prime}\hat{\Omega}z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}z_{i}^{\prime}x_{i}\right)\right]^{-1}\left[\left({\displaystyle \sum_{i=1}^{n}}x_{i}^{\prime}z_{i}\right)\left(\frac{1}{n}{\displaystyle \sum_{i=1}^{n}}z_{i}^{\prime}\hat{\Omega}z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}z_{i}^{\prime}y_{i}\right)\right]
+\]
+
+\end_inset
+
+By our given assumptions, the distribution of the 3SLS estimator is
+\begin_inset Formula 
+\begin{eqnarray*}
+\sqrt{n}\left(\hat{\beta}_{3SLS}-\beta\right) & = & \sqrt{n}\left[\left({\displaystyle \sum_{i=1}^{n}}x_{i}^{\prime}z_{i}\right)\left(\frac{1}{n}{\displaystyle \sum_{i=1}^{n}}z_{i}^{\prime}\hat{\Omega}z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}z_{i}^{\prime}x_{i}\right)\right]^{-1}\left[\left({\displaystyle \sum_{i=1}^{n}}x_{i}^{\prime}z_{i}\right)\left(\frac{1}{n}{\displaystyle \sum_{i=1}^{n}}z_{i}^{\prime}\hat{\Omega}z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}z_{i}^{\prime}u_{i}\right)\right]\\
+ & \begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array} & \left[E(x_{i}^{\prime}z_{i})E(z_{i}^{\prime}\Omega z_{i})E(z_{i}^{\prime}x_{i})\right]^{-1}E(x_{i}^{\prime}z_{i})E(z_{i}^{\prime}\Omega z_{i})^{-1}N(0,E(z_{i}^{\prime}\Omega z_{i}))
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the asymptotic variance of the 3SLS estimator is given
+\begin_inset Formula 
+\[
+\mbox{AVar}(\hat{\beta}_{3SLS})=\left[E(x_{i}^{\prime}z_{i})E(z_{i}^{\prime}\Omega z_{i})E(z_{i}^{\prime}x_{i})\right]^{-1}
+\]
+
+\end_inset
+
+while its estimator is
+\begin_inset Formula 
+\[
+\widehat{\mbox{AVar}(\hat{\beta}_{3SLS})}=\left[\left({\displaystyle \sum_{i=1}^{n}}x_{i}^{\prime}z_{i}\right)\left(\frac{1}{n}{\displaystyle \sum_{i=1}^{n}}z_{i}^{\prime}\hat{\Omega}z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}z_{i}^{\prime}x_{i}\right)\right]^{-1}
+\]
+
+\end_inset
+
+The standard errors are calculated by taking the square roots of the diagonal
+ elements of the matrix above.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1510 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Econometrics II: Homework 4
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+Problem 12.3
+\end_layout
+
+\begin_layout Standard
+Consider the exponential regression function 
+\begin_inset Formula $m(x,\theta)=\exp(x^{\prime}\theta)$
+\end_inset
+
+, where 
+\begin_inset Formula $x$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose you have estimated a special case of the model, 
+\begin_inset Formula $\hat{E}(y|z)=\exp\left[\hat{\theta}_{1}+\hat{\theta}_{2}\log(z_{1})+\hat{\theta}_{3}z_{2}\right]$
+\end_inset
+
+, where 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ are the conditioning variables.
+ Show that 
+\begin_inset Formula $\hat{\theta}_{2}$
+\end_inset
+
+ is approximately the elasticity of 
+\begin_inset Formula $\hat{E}(y|z)$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+In the same estimated model from part a, how would you approximate the percentag
+e change in 
+\begin_inset Formula $\hat{E}(y|x)$
+\end_inset
+
+ given 
+\begin_inset Formula $\Delta z_{2}=1$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Now suppose a square of 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ is added: 
+\begin_inset Formula $\hat{E}(y|z)=\exp\left[\hat{\theta}_{1}+\hat{\theta}_{2}\log(z_{1})+\hat{\theta}_{3}z_{2}+\hat{\theta}_{4}z_{2}^{2}\right]$
+\end_inset
+
+, where 
+\begin_inset Formula $\hat{\theta}_{3}>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\theta}_{4}<0$
+\end_inset
+
+.
+ How would you compute the value of 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ where the partial effect of 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ on 
+\begin_inset Formula $\hat{E}(y|z)$
+\end_inset
+
+ becomes negative?
+\end_layout
+
+\begin_layout Enumerate
+Now, write the general model as 
+\begin_inset Formula $\exp(x^{\prime}\theta)=\exp(x_{1}^{\prime}\theta_{1}+x_{2}^{\prime}\theta_{2})$
+\end_inset
+
+, where 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ is 
+\begin_inset Formula $K_{1}\times1$
+\end_inset
+
+ (and probably contains unity as an element) and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ is 
+\begin_inset Formula $K_{2}\times1$
+\end_inset
+
+.
+ Derive the usual (nonrobust) and heteroskedasticity-robust LM tests of
+ 
+\begin_inset Formula $H_{0}:\theta_{o2}=0$
+\end_inset
+
+, where 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ indexes 
+\begin_inset Formula $E(y|x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Solution
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part A.
+\series default
+\bar default
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{E}(y|z) & = & \exp\left[\hat{\theta}_{1}+\hat{\theta}_{2}\log(z_{1})+\hat{\theta}_{3}z_{2}\right]\\
+\log\hat{E}(y|z) & = & \hat{\theta}_{1}+\hat{\theta}_{2}\log(z_{1})+\hat{\theta}_{3}z_{2}\\
+\frac{\partial\log\hat{E}(y|z)}{\partial\log(z_{1})} & = & \hat{\theta}_{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part B.
+\series default
+\bar default
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{E}(y|z) & = & \exp\left[\hat{\theta}_{1}+\hat{\theta}_{2}\log(z_{1})+\hat{\theta}_{3}z_{2}\right]\\
+\log\hat{E}(y|z_{1},z_{2}) & = & \hat{\theta}_{1}+\hat{\theta}_{2}\log(z_{1})+\hat{\theta}_{3}z_{2}\\
+\log\hat{E}(y|z_{1},z_{2}+1) & = & \hat{\theta}_{1}+\hat{\theta}_{2}\log(z_{1})+\hat{\theta}_{3}\left(z_{2}+1\right)\\
+\log\hat{E}(y|z_{1},z_{2}+1)-\log\hat{E}(y|z_{1},z_{2}) & = & \hat{\theta}_{3}\\
+\log\left(\frac{\hat{E}(y|z_{1},z_{2}+1)}{\hat{E}(y|z_{1},z_{2})}\right) & = & \hat{\theta}_{3}\\
+\log\left(\frac{\hat{E}(y|z_{1},z_{2}+1)-\hat{E}(y|z_{1},z_{2})}{\hat{E}(y|z_{1},z_{2})}+1\right) & = & \hat{\theta}_{3}\\
+\frac{\hat{E}(y|z_{1},z_{2}+1)-\hat{E}(y|z_{1},z_{2})}{\hat{E}(y|z_{1},z_{2})} & = & \hat{\theta}_{3}
+\end{eqnarray*}
+
+\end_inset
+
+Note that 
+\begin_inset Formula $\log a-\log b=\log\frac{a}{b}=\log\left(\frac{a}{b}-1+1\right)\approx\frac{a}{b}-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part C.
+\series default
+\bar default
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{E}(y|z) & = & \exp\left[\hat{\theta}_{1}+\hat{\theta}_{2}\log(z_{1})+\hat{\theta}_{3}z_{2}+\hat{\theta}_{4}z_{2}^{2}\right]\\
+\log\hat{E}(y|z) & = & \hat{\theta}_{1}+\hat{\theta}_{2}\log(z_{1})+\hat{\theta}_{3}z_{2}+\hat{\theta}_{4}z_{2}^{2}\\
+\frac{\partial\log\hat{E}(y|z)}{\partial z_{2}} & = & \hat{\theta}_{3}+2\hat{\theta}_{4}z_{2}\\
+\hat{\theta}_{3}+2\hat{\theta}_{4}z_{2} & = & 0\\
+z_{2} & = & \frac{\hat{\theta}_{3}}{2\hat{\theta}_{4}}
+\end{eqnarray*}
+
+\end_inset
+
+If 
+\begin_inset Formula $z_{2}>\nicefrac{\hat{\theta}_{3}}{2\hat{\theta}_{4}}$
+\end_inset
+
+, then the partial effect of 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ on 
+\begin_inset Formula $\hat{E}(y|x)$
+\end_inset
+
+ becomes negative.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part D.
+\end_layout
+
+\begin_layout Standard
+To test the 
+\begin_inset Formula $K_{2}$
+\end_inset
+
+ restrictions, the null hypothesis can be written as
+\begin_inset Formula 
+\[
+H_{0}:c(\theta_{o})=0\iff R\left[\begin{array}{c}
+\theta_{o1}\\
+\theta_{o2}
+\end{array}\right]=0
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+R=\left[\begin{array}{cc}
+0_{K_{2}\times K_{1}} & I_{K_{2}}\end{array}\right]_{K_{2}\times K}
+\]
+
+\end_inset
+
+So, under the null hypothesis, we have
+\begin_inset Formula 
+\[
+m(x_{i},\theta)=\exp(x_{i1}^{\prime}\theta_{1})
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $\tilde{\theta}_{1}$
+\end_inset
+
+ be the constrained estimator of 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Under Assumption NLS.3 (homoskedasticity assumption),
+\begin_inset Formula 
+\[
+\mbox{Var}(y|x)=\mbox{Var}(u|x)=\sigma_{o}^{2}
+\]
+
+\end_inset
+
+we know that 
+\begin_inset Formula $E\left[H(w_{i},\theta_{o})\right]=E\left[s(w_{i},\theta_{o})s(w_{i},\theta_{o})^{\prime}\right]$
+\end_inset
+
+.
+ Thus, we can obtain the usual (nonrobust) LM test as follows:
+\end_layout
+
+\begin_layout Enumerate
+Without applying the null hypothesis, obtain the score of the unconstrained
+ objective function
+\begin_inset Formula 
+\[
+q_{i}(\theta)=\left[y_{i}-\exp(x_{i1}^{\prime}\theta_{1}+x_{i2}^{\prime}\theta_{2})\right]^{2}
+\]
+
+\end_inset
+
+ with respect to the entire vector 
+\begin_inset Formula $\theta=\left[\begin{array}{cc}
+\theta_{1} & \theta_{2}\end{array}\right]^{\prime}$
+\end_inset
+
+ for observation 
+\begin_inset Formula $i$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+s_{i}(\theta)=\frac{\partial\left[y_{i}-\exp(x_{i}^{\prime}\theta)\right]^{2}}{\partial\theta}=-2\nabla_{\theta}\exp(x_{i}^{\prime}\theta)u_{i}=-2x_{i}\cdot\exp(x_{i1}^{\prime}\theta_{1}+x_{i2}^{\prime}\theta_{2})u_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $u_{i}=y_{i}-\exp(x_{i}^{\prime}\theta)$
+\end_inset
+
+ are the nonlinear least squares errors.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Under the null hypothesis, obtain the constrained estimator 
+\begin_inset Formula $\tilde{\theta}_{1}$
+\end_inset
+
+ of 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ by solving
+\begin_inset Formula 
+\[
+{\displaystyle \min_{\theta\in\Theta}}\ N^{-1}\cdot{\displaystyle \sum_{i=1}^{N}}\left[y_{i}-\exp(x_{i1}^{\prime}\theta_{1})\right]^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+In the context of NLS, the expected Hessian form of the LM statistic needs
+ to be modified for the presence of 
+\begin_inset Formula $\sigma_{o}^{2}$
+\end_inset
+
+.
+ Let
+\begin_inset Formula 
+\[
+\tilde{\sigma}^{2}\equiv N^{-1}\cdot{\displaystyle \sum_{i=1}^{N}}\tilde{u}_{i}
+\]
+
+\end_inset
+
+be the estimate of 
+\begin_inset Formula $\sigma_{o}^{2}$
+\end_inset
+
+ using the restriced estimator of 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\tilde{u}_{i}\equiv y_{i}-\mbox{exp}(x_{i1}^{\prime}\tilde{\theta}_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute the score for observation 
+\begin_inset Formula $i$
+\end_inset
+
+ evaluated at the restricted estimates
+\begin_inset Formula 
+\[
+s_{i}(\tilde{\theta})=\tilde{s}_{i}=-2\nabla_{\theta}\exp(x_{i}^{\prime}\tilde{\theta})\tilde{u}_{i}=-2x_{i}\cdot\exp(x_{i1}^{\prime}\tilde{\theta}_{1})\tilde{u}_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The LM statistic that imposes homoskedasticity is
+\begin_inset Formula 
+\begin{eqnarray*}
+LM & = & \left({\displaystyle \sum_{i=1}^{N}}\tilde{s}_{i}\right)^{\prime}\left({\displaystyle \sum_{i=1}^{N}}\tilde{s}_{i}\tilde{s}_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}\tilde{s}_{i}\right)\\
+LM & = & \frac{1}{\tilde{\sigma}^{2}}\left({\displaystyle \sum_{i=1}^{N}}x_{i}\cdot\exp(x_{i1}^{\prime}\tilde{\theta}_{1})\tilde{u}_{i}\right)^{\prime}\left({\displaystyle \sum_{i=1}^{N}}x_{i}x_{i}^{\prime}\cdot\left[\exp(x_{i1}^{\prime}\tilde{\theta}_{1})\right]^{2}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}x_{i}\cdot\exp(x_{i1}^{\prime}\tilde{\theta}_{1})\tilde{u}_{i}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ andAssumption NLS.3, 
+\begin_inset Formula $LM\begin{array}[b]{c}
+_{a}\\
+\sim
+\end{array}\chi_{K_{2}}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A little algebra shows that this expression is identical to 
+\begin_inset Formula $N$
+\end_inset
+
+ times the uncentered 
+\begin_inset Formula $R$
+\end_inset
+
+-squared, 
+\begin_inset Formula $R_{u}^{2}$
+\end_inset
+
+, from the auxiliary regression
+\begin_inset Formula 
+\[
+\tilde{u}_{i}\ \mbox{on}\ \left[x_{i}\cdot\exp(x_{i1}\tilde{\theta}_{1})\right],\ i=1,\ldots,N
+\]
+
+\end_inset
+
+In other words, just regress the residuals from the restricted model on
+ the gradient with respect to the 
+\emph on
+unrestricted
+\emph default
+ mean function but evaluated at the 
+\emph on
+restricted 
+\emph default
+estimates.
+ Under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ and Assumption NLS.3, 
+\begin_inset Formula $LM=NR_{u}^{2}\begin{array}[b]{c}
+_{a}\\
+\sim
+\end{array}\chi_{K_{2}}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In order to be robust against failure of Assumption NLS.3, the more general
+ form of the statistic should be used.
+ The following procedure can be shown to produce this expression:
+\end_layout
+
+\begin_layout Enumerate
+Run a multivariate regression
+\begin_inset Formula 
+\[
+\left[x_{i2}\cdot\exp(x_{i1}\tilde{\theta}_{1})\right]\ \mbox{on}\ x_{i1}\left[\exp(x_{i1}\tilde{\theta}_{1})\right],\ i=1,\ldots,N
+\]
+
+\end_inset
+
+and save the 
+\begin_inset Formula $K_{2}\times1$
+\end_inset
+
+ vector residuals, 
+\begin_inset Formula $\tilde{r}_{i}$
+\end_inset
+
+.
+ Then, for each 
+\begin_inset Formula $i$
+\end_inset
+
+, form 
+\begin_inset Formula $\tilde{u}_{i}\tilde{r}_{i}$
+\end_inset
+
+.
+ (That is, multiply 
+\begin_inset Formula $\tilde{u}_{i}$
+\end_inset
+
+ by each element of 
+\begin_inset Formula $\tilde{r}_{i}$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $LM=N-SSR_{0}=NR_{0}^{2}$
+\end_inset
+
+ from the regression
+\begin_inset Formula 
+\[
+1\ \mbox{on}\ \tilde{u}_{i}\tilde{r}_{i},\ i=1,\ldots,N
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $SSR_{0}$
+\end_inset
+
+ is the usual sum of squared residuals and 
+\begin_inset Formula $R_{0}^{2}$
+\end_inset
+
+ is the uncentered 
+\begin_inset Formula $R$
+\end_inset
+
+-squared.
+\end_layout
+
+\begin_layout Standard
+Applying these steps produces a statistic that has a limiting 
+\begin_inset Formula $\chi_{K_{2}}^{2}$
+\end_inset
+
+ distribution whether or not Assumption NLS.3 holds.
+\end_layout
+
+\begin_layout Section*
+Problem 12.10
+\end_layout
+
+\begin_layout Standard
+For each 
+\begin_inset Formula $i$
+\end_inset
+
+, let 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ be a nonnegative integer with a conditional binomial distribution with
+ upper bound 
+\begin_inset Formula $n_{i}$
+\end_inset
+
+ (a positive integer) and probablity of success 
+\begin_inset Formula $p(x_{i},\beta_{o})$
+\end_inset
+
+, where 
+\begin_inset Formula $0<p(x,\beta)<1$
+\end_inset
+
+ for all 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ (A leading case is the logistic function.) Therefore, 
+\begin_inset Formula $E(y_{i}|x_{i},n_{i})=n_{i}p(x_{i},\beta_{o})$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{Var}(y_{i}|x_{i},n_{i})=n_{i}p(x_{i},\beta_{o})[1-p(x_{i},\beta_{o})]$
+\end_inset
+
+.
+ Explain in detail how to obtain the weighted nonlinear least square estimator
+ of 
+\begin_inset Formula $\beta_{o}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Solution
+\end_layout
+
+\begin_layout Standard
+The weighted nonlinear least squares (WNLS) estimator is a two-step estimator,
+ where the weights are estimated in an earlier stage.
+ In this scenario, 
+\begin_inset Formula $m(x_{i},n_{i},\beta)=E(y_{i}|x_{i},n_{i})=n_{i}p(x_{i},\beta_{o})$
+\end_inset
+
+.
+ The WNLS estimator of 
+\begin_inset Formula $\beta_{o}$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\hat{\beta}_{WNLS}$
+\end_inset
+
+, can be obtained as follows:
+\end_layout
+
+\begin_layout Enumerate
+Obtain the usual NLS estimator 
+\begin_inset Formula $\check{\beta}_{NLS}$
+\end_inset
+
+ of 
+\begin_inset Formula $\beta_{o}$
+\end_inset
+
+ by solving
+\begin_inset Formula 
+\[
+{\displaystyle \min_{\beta}}\ N^{-1}\cdot{\displaystyle \sum_{i=1}^{N}}\left[y_{i}-n_{i}p(x_{i},\beta)\right]^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Now, we estimate the conditional variance as
+\begin_inset Formula 
+\[
+\widehat{\mbox{Var}(y_{i}|x_{i},n_{i})}=n_{i}p(x_{i},\check{\beta}_{NLS})[1-p(x_{i},\check{\beta}_{NLS})]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Obtain the WNLS estimator 
+\begin_inset Formula $\hat{\beta}_{WNLS}$
+\end_inset
+
+ of 
+\begin_inset Formula $\beta_{o}$
+\end_inset
+
+ by solving
+\begin_inset Formula 
+\[
+{\displaystyle \min_{\beta}}\ N^{-1}\cdot{\displaystyle \sum_{i=1}^{N}}\frac{\left[y_{i}-n_{i}p(x_{i},\beta)\right]^{2}}{\widehat{\mbox{Var}(y_{i}|x_{i},n_{i})}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Problem 13.2
+\end_layout
+
+\begin_layout Standard
+Suppose that for a random sample, 
+\begin_inset Formula $y_{i}|x_{i}\sim N\left[m(x_{i},\beta_{o}),\sigma_{o}^{2}\right]$
+\end_inset
+
+, where 
+\begin_inset Formula $m(x,\beta)$
+\end_inset
+
+ is a function of the 
+\begin_inset Formula $K$
+\end_inset
+
+-vector of explanatory variables 
+\begin_inset Formula $x$
+\end_inset
+
+ and the 
+\begin_inset Formula $P\times1$
+\end_inset
+
+ parameter vector 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Recall that 
+\begin_inset Formula $E(y_{i}|x_{i})=m(x_{i},\beta_{o})$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{Var}(y_{i}|x_{i})=\sigma_{o}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Write down the conditional log-likelihood function for observation 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Show that the CMLE of 
+\begin_inset Formula $\beta_{o}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+, solves the problem 
+\begin_inset Formula $\min_{\beta}\sum_{i=1}^{N}\left[y_{i}-m(x_{i},\beta)\right]^{2}$
+\end_inset
+
+.
+ In other words, the CMLE for 
+\begin_inset Formula $\beta_{o}$
+\end_inset
+
+ is the nonlinear least squares estimator.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\theta\equiv(\beta^{\prime},\sigma^{2})^{\prime}$
+\end_inset
+
+ denote the 
+\begin_inset Formula $(P+1)\times1$
+\end_inset
+
+ vector of parameters.
+ Find the score the log likelihood for a generic 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Show directly that 
+\begin_inset Formula $E[s_{i}(\theta_{o})|x_{i}]=0$
+\end_inset
+
+.
+ What features of the normal distribution do you need to be correctly specified
+ in order to show that the conditional expectation of the score is zero?
+\end_layout
+
+\begin_layout Enumerate
+Use the first-order condition to find 
+\begin_inset Formula $\hat{\sigma}^{2}$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find the Hessian of the log-likelihood function with respect to 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Show directly that 
+\begin_inset Formula $-E[H_{i}(\theta_{o})|x_{i}]=E[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}|x_{i}]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Propose an estimated asymptotic variance of 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+, and explain how to obtain the asymptotic standard errors.
+\end_layout
+
+\begin_layout Subsection*
+Solution
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+The conditional log-likehood function for obersavation 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\log f(y_{i}|x_{i};\theta)=-\frac{1}{2}\log(\sigma^{2})-\frac{1}{2}\log(2\pi)-\frac{\left[y_{i}-m(x_{i},\beta)\right]^{2}}{2\sigma^{2}}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\theta\equiv\left[\begin{array}{cc}
+\beta^{\prime} & \sigma^{2}\end{array}\right]^{\prime}$
+\end_inset
+
+ denotes the 
+\begin_inset Formula $(P+1)\times1$
+\end_inset
+
+ vector of parameters.
+ The CMLE, 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+, solves the following minimization problem
+\begin_inset Formula 
+\begin{gather*}
+\min_{\theta\in\Theta}\ N^{-1}{\displaystyle \sum_{i=1}^{N}}-\log f(y_{i}|x_{i};\theta)\\
+\min_{\theta\in\Theta}\ N^{-1}{\displaystyle \sum_{i=1}^{N}}-\left(-\frac{1}{2}\log(\sigma^{2})-\frac{1}{2}\log(2\pi)-\frac{\left[y_{i}-m(x_{i},\beta)\right]^{2}}{2\sigma^{2}}\right)\\
+\min_{\theta\in\Theta}\ {\displaystyle N^{-1}\sum_{i=1}^{N}}\ \frac{1}{2}\log(\sigma^{2})+\frac{1}{2}\log(2\pi)+\frac{\left[y_{i}-m(x_{i},\beta)\right]^{2}}{2\sigma^{2}}
+\end{gather*}
+
+\end_inset
+
+The CMLE of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ are those that minimize the objective function above.
+ The score, i.e., the gradient vector, for observation 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{gather*}
+\frac{\partial l_{i}(\theta)}{\partial\beta}=N^{-1}\left\{ -\frac{1}{\sigma^{2}}\left[y_{i}-m(x_{i},\beta)\right]\left(\frac{\partial m(x_{i},\beta)}{\partial\beta}\right)\right\} \\
+\frac{\partial l_{i}(\theta)}{\partial\sigma^{2}}=N^{-1}\left(\frac{1}{2\sigma^{2}}-\frac{1}{2\sigma^{4}}\left[y_{i}-m(x_{i},\beta)\right]^{2}\right)
+\end{gather*}
+
+\end_inset
+
+Setting 
+\begin_inset Formula $\sum_{i=1}^{N}\frac{\partial l_{i}(\theta)}{\partial\beta}=0$
+\end_inset
+
+, i.e.,
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{N}}\left[y_{i}-m(x_{i},\beta)\right]\left(\frac{\partial m(x_{i},\beta)}{\partial\beta}\right)=0
+\]
+
+\end_inset
+
+and solving for 
+\begin_inset Formula $\beta$
+\end_inset
+
+ gives the CLME of 
+\begin_inset Formula $\beta_{o}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The NLS estimator of 
+\begin_inset Formula $\beta_{o}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ solves
+\begin_inset Formula 
+\[
+\min_{\theta\in\Theta}\ N^{-1}{\displaystyle \sum_{i=1}^{N}}\left[y_{i}-m(x_{i},\beta)\right]^{2}
+\]
+
+\end_inset
+
+The score, i.e., the gradient vector, for observation 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+s_{i}(\beta)=\frac{\partial q(w_{i},\beta)}{\partial\beta}=-N^{-1}2\left[y_{i}-m(x_{i},\beta)\right]\left(\frac{\partial m(x_{i},\beta)}{\partial\beta}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ solves the first-order condition 
+\begin_inset Formula $\sum_{i=1}^{N}s_{i}(\beta)=0$
+\end_inset
+
+, so we have
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{N}}\left[y_{i}-m(x_{i},\beta)\right]\left(\frac{\partial m(x_{i},\beta)}{\partial\beta}\right)=0
+\]
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $\min_{\beta}\sum_{i=1}^{N}\left[y_{i}-m(x_{i},\beta)\right]^{2}$
+\end_inset
+
+ has the same first-order condition for 
+\begin_inset Formula $\beta$
+\end_inset
+
+ as 
+\begin_inset Formula $\min_{\theta}\sum_{i=1}^{N}-l_{i}(\theta)$
+\end_inset
+
+.
+ Therefore, in other words, the CMLE for 
+\begin_inset Formula $\beta_{o}$
+\end_inset
+
+ is the nonlinear least squares estimator.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\theta\equiv\left[\begin{array}{cc}
+\beta^{\prime} & \sigma^{2}\end{array}\right]^{\prime}$
+\end_inset
+
+ denote the 
+\begin_inset Formula $(P+1)\times1$
+\end_inset
+
+ vector of parameters.
+ The score of the log-likeihood for a generic 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{gather*}
+\frac{\partial l_{i}(\theta)}{\partial\beta}=-\frac{1}{\sigma^{2}}\left[y_{i}-m(x_{i},\beta)\right]\left(\frac{\partial m(x_{i},\beta)}{\partial\beta}\right)\\
+\frac{\partial l_{i}(\theta)}{\partial\sigma^{2}}=\frac{1}{2\sigma^{2}}-\frac{1}{2\sigma^{4}}\left[y_{i}-m(x_{i},\beta)\right]^{2}
+\end{gather*}
+
+\end_inset
+
+We wish to show that 
+\begin_inset Formula $E[s_{i}(\theta_{o})|x_{i}]=0$
+\end_inset
+
+, which is equivalent to showing that 
+\begin_inset Formula $E\left[\left(\nicefrac{\partial l_{i}(\theta_{o})}{\partial\beta}\right)|x_{i}\right]=0$
+\end_inset
+
+ and 
+\begin_inset Formula $E\left[\left(\nicefrac{\partial l_{i}(\theta_{o})}{\partial\sigma^{2}}\right)|x_{i}\right]=0$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left[\frac{\partial l_{i}(\theta_{o})}{\partial\beta}|x_{i}\right] & = & E\left[-\frac{1}{\sigma_{o}^{2}}\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)\left[y_{i}-m(x_{i},\beta_{o})\right]|x_{i}\right]\\
+ & = & -\frac{1}{\sigma_{o}^{2}}\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)E\left\{ \left[y_{i}-m(x_{i},\beta_{o})\right]|x_{i}\right\} \\
+ & = & -\frac{1}{\sigma_{o}^{2}}\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)\left\{ E\left[y_{i}|x_{i}\right]-m(x_{i},\beta_{o})\right\} 
+\end{eqnarray*}
+
+\end_inset
+
+Note that 
+\begin_inset Formula $E\left[y_{i}|x_{i}\right]=m(x_{i},\beta_{o})$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $E\left[\left(\nicefrac{\partial l_{i}(\theta_{o})}{\partial\beta}\right)|x_{i}\right]=0$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left[\frac{\partial l_{i}(\theta_{o})}{\partial\sigma^{2}}|x_{i}\right] & = & E\left[\left(\frac{1}{2\sigma_{o}^{2}}-\frac{1}{2\sigma_{o}^{4}}\left[y_{i}-m(x_{i},\beta_{o})\right]^{2}\right)|x_{i}\right]\\
+ & = & \frac{1}{2\sigma_{o}^{2}}-\frac{1}{2\sigma_{o}^{4}}E\left\{ \left[y_{i}-m(x_{i},\beta_{o})\right]^{2}|x_{i}\right\} 
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $y_{i}|x_{i}\sim N\left[m(x_{i},\beta_{o}),\sigma_{o}^{2}\right]$
+\end_inset
+
+, then 
+\begin_inset Formula $\left\{ \left[y_{i}-m(x_{i},\beta_{o})\right]|x_{i}\right\} \sim N(0,\sigma_{o}^{2})$
+\end_inset
+
+, and 
+\begin_inset Formula $\mbox{Var}\left\{ \left[y_{i}-m(x_{i},\beta_{o})\right]|x_{i}\right\} =E\left\{ \left[\left[y_{i}-m(x_{i},\beta_{o})\right]^{2}|x_{i}\right]\right\} =\sigma_{o}^{2}$
+\end_inset
+
+.
+ So, we have
+\begin_inset Formula 
+\[
+E\left[\frac{\partial l_{i}(\theta_{o})}{\partial\sigma^{2}}|x_{i}\right]=\frac{1}{2\sigma_{o}^{2}}-\frac{1}{2\sigma_{o}^{4}}\sigma_{o}^{2}
+\]
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $E\left[\left(\nicefrac{\partial l_{i}(\theta_{o})}{\partial\sigma^{2}}\right)|x_{i}\right]=0$
+\end_inset
+
+.
+ We need the mean and variance of the normal distribution to be correctly
+ specified in order to show that the conditional expectation of the score
+ is zero.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Standard
+Setting 
+\begin_inset Formula $\sum_{i=1}^{N}\frac{\partial l_{i}(\theta)}{\partial\sigma^{2}}=0$
+\end_inset
+
+ and solving for 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ gives the CLME of 
+\begin_inset Formula $\sigma_{o}^{2}$
+\end_inset
+
+.
+ So, using this first-order condition, we can find 
+\begin_inset Formula $\hat{\sigma}^{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \sum_{i=1}^{N}}\left(\frac{1}{2\sigma^{2}}-\frac{1}{2\sigma^{4}}\left[y_{i}-m(x_{i},\beta)\right]^{2}\right) & = & 0\\
+\frac{N}{2\sigma^{2}} & = & \frac{1}{2\sigma^{4}}{\displaystyle \sum_{i=1}^{N}}\left[y_{i}-m(x_{i},\beta)\right]^{2}\\
+\hat{\sigma}^{2} & = & N^{-1}{\displaystyle \sum_{i=1}^{N}}\left[y_{i}-m(x_{i},\hat{\beta})\right]^{2}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, we have found 
+\begin_inset Formula $\hat{\sigma}^{2}$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part D.
+\end_layout
+
+\begin_layout Standard
+The Hessian of observation 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+H_{i}(\theta)\equiv\frac{l_{i}(\theta)}{\partial\theta\partial\theta^{\prime}}=\left[\begin{array}{cc}
+\frac{\partial^{2}l_{i}(\theta)}{\partial\beta\partial\beta^{\prime}} & \frac{\partial^{2}l_{i}(\theta)}{\partial\beta\partial\sigma^{2}}\\
+\frac{\partial^{2}l_{i}(\theta)}{\partial\sigma^{2}\partial\beta^{\prime}} & \frac{\partial^{2}l_{i}(\theta)}{\partial\sigma^{2}\partial\sigma^{2}}
+\end{array}\right]
+\]
+
+\end_inset
+
+So, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial^{2}l_{i}(\theta)}{\partial\beta\partial\beta^{\prime}} & = & -\frac{1}{\sigma^{2}}y_{i}\frac{\partial^{2}m(x_{i},\beta)}{\partial\beta\partial\beta^{\prime}}+\frac{1}{\sigma^{2}}\left[\frac{\partial m(x_{i},\beta)}{\partial\beta}\frac{\partial m(x_{i},\beta)}{\partial\beta^{\prime}}+m(x_{i},\beta)\frac{\partial^{2}m(x_{i},\beta)}{\partial\beta\partial\beta^{\prime}}\right]\\
+ & = & -\frac{1}{\sigma^{2}}\frac{\partial^{2}m(x_{i},\beta)}{\partial\beta\partial\beta^{\prime}}\left[y_{i}-m(x_{i},\beta)\right]+\frac{1}{\sigma^{2}}\frac{\partial m(x_{i},\beta)}{\partial\beta}\frac{\partial m(x_{i},\beta)}{\partial\beta^{\prime}}\\
+\frac{\partial^{2}l_{i}(\theta)}{\partial\beta\partial\sigma^{2}} & = & \frac{1}{\sigma^{4}}\left[y_{i}-m(x_{i},\beta)\right]\left(\frac{\partial m(x_{i},\beta)}{\partial\beta}\right)\\
+\frac{\partial^{2}l_{i}(\theta)}{\partial\sigma^{2}\partial\beta^{\prime}} & = & \frac{1}{\sigma^{4}}\left[y_{i}-m(x_{i},\beta)\right]\left(\frac{\partial m(x_{i},\beta)}{\partial\beta}\right)\\
+\frac{\partial^{2}l_{i}(\theta)}{\partial\sigma^{2}\partial\sigma^{2}} & = & -\frac{1}{2\sigma^{4}}+\frac{1}{\sigma^{6}}\left[y_{i}-m(x_{i},\beta)\right]^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part E.
+\end_layout
+
+\begin_layout Standard
+Since we began with a minimization problem, then 
+\begin_inset Formula $H_{i}(\theta_{o})$
+\end_inset
+
+ will be positive definite.
+ Thus, to apply the theory of M-estimators, there is no need to mulitply
+ 
+\begin_inset Formula $E[H_{i}(\theta_{o})|x_{i}]$
+\end_inset
+
+ by negative 1.
+ Therefore, we want to show that 
+\begin_inset Formula $E[H_{i}(\theta_{o})|x_{i}]=E[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}|x_{i}]$
+\end_inset
+
+.
+ To simply notation, let 
+\begin_inset Formula $u_{i}\equiv y_{i}-m(x_{i},\beta_{o})$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+E[H_{i}(\theta_{o})|x_{i}] & = & E\left[\begin{array}{cc}
+\frac{\partial^{2}l_{i}(\theta_{o})}{\partial\beta\partial\beta^{\prime}} & \frac{\partial^{2}l_{i}(\theta_{o})}{\partial\beta\partial\sigma^{2}}\\
+\frac{\partial^{2}l_{i}(\theta_{o})}{\partial\sigma^{2}\partial\beta^{\prime}} & \frac{\partial^{2}l_{i}(\theta_{o})}{\partial\sigma^{2}\partial\sigma^{2}}
+\end{array}|x_{i}\right]\\
+ & = & \left[\begin{array}{cc}
+\frac{1}{\sigma_{o}^{2}}\frac{\partial m(x_{i},\beta)}{\partial\beta}\frac{\partial m(x_{i},\beta)}{\partial\beta^{\prime}} & 0\\
+0 & \frac{1}{2\sigma_{o}^{4}}
+\end{array}\right]
+\end{eqnarray*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+E\left[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}|x_{i}\right]=E\left\{ \left[\begin{array}{c}
+-\frac{u_{i}}{\sigma_{o}^{2}}\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)\\
+\left(\frac{1}{2\sigma_{o}^{2}}-\frac{u_{i}^{2}}{2\sigma_{o}^{4}}\right)
+\end{array}\right]\left[\begin{array}{cc}
+-\frac{u_{i}}{\sigma_{o}^{2}}\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)^{\prime} & \left(\frac{1}{2\sigma_{o}^{2}}-\frac{u_{i}^{2}}{2\sigma_{o}^{4}}\right)\end{array}\right]|x_{i}\right\} 
+\]
+
+\end_inset
+
+For 
+\begin_inset Formula $E\left[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}|x_{i}\right]_{11}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}|x_{i}\right]_{11} & = & E\left[\frac{u_{i}^{2}}{\sigma_{o}^{4}}\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)^{\prime}|x_{i}\right]\\
+ & = & \frac{1}{\sigma_{o}^{4}}E\left[u_{i}^{2}|x_{i}\right]\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)^{\prime}\\
+ & = & \frac{1}{\sigma_{o}^{2}}\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)^{\prime}
+\end{eqnarray*}
+
+\end_inset
+
+since 
+\begin_inset Formula $E\left[u_{i}^{2}|x_{i}\right]=\sigma_{o}^{2}$
+\end_inset
+
+ by the moment properties of the normal distribution.
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $E\left[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}|x_{i}\right]_{12}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}|x_{i}\right]_{12} & = & E\left[-\frac{u_{i}}{\sigma_{o}^{2}}\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)\left(\frac{1}{2\sigma_{o}^{2}}-\frac{u_{i}^{2}}{2\sigma_{o}^{4}}\right)|x_{i}\right]\\
+ & = & E\left[-\frac{u_{i}}{2\sigma_{o}^{4}}\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)+\frac{u_{i}^{3}}{2\sigma_{o}^{6}}\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)|x_{i}\right]\\
+ & = & -\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)\frac{1}{2\sigma_{o}^{4}}E\left[u_{i}|x_{i}\right]+\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)\frac{1}{2\sigma_{o}^{6}}E\left[u_{i}^{3}|x_{i}\right]\\
+ & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+since 
+\begin_inset Formula $E\left[u_{i}|x_{i}\right]=E\left[u_{i}^{3}|x_{i}\right]=0$
+\end_inset
+
+ by the moment properties of the normal distribution.
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $E\left[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}|x_{i}\right]_{21}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}|x_{i}\right]_{21} & = & E\left[-\frac{u_{i}}{\sigma_{o}^{2}}\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)\left(\frac{1}{2\sigma_{o}^{2}}-\frac{u_{i}^{2}}{2\sigma_{o}^{4}}\right)|x_{i}\right]\\
+ & = & E\left[-\frac{u_{i}}{2\sigma_{o}^{4}}\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)+\frac{u_{i}^{3}}{2\sigma_{o}^{6}}\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)|x_{i}\right]\\
+ & = & -\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)\frac{1}{2\sigma_{o}^{4}}E\left[u_{i}|x_{i}\right]+\left(\frac{\partial m(x_{i},\beta_{o})}{\partial\beta}\right)\frac{1}{2\sigma_{o}^{6}}E\left[u_{i}^{3}|x_{i}\right]\\
+ & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+since 
+\begin_inset Formula $E\left[u_{i}|x_{i}\right]=E\left[u_{i}^{3}|x_{i}\right]=0$
+\end_inset
+
+ by the moment properties of the normal distribution.
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $E\left[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}|x_{i}\right]_{22}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}|x_{i}\right]_{22} & = & E\left[\left(\frac{1}{2\sigma_{o}^{2}}-\frac{u_{i}^{2}}{2\sigma_{o}^{4}}\right)^{2}|x_{i}\right]\\
+ & = & E\left[\frac{1}{4\sigma_{o}^{4}}-\frac{u_{i}^{2}}{2\sigma_{o}^{6}}+\frac{u_{i}^{4}}{4\sigma_{o}^{8}}|x_{i}\right]\\
+ & = & \frac{1}{4\sigma_{o}^{4}}-\frac{1}{2\sigma_{o}^{4}}+\frac{3}{4\sigma_{o}^{4}}\\
+ & = & \frac{1}{4\sigma_{o}^{4}}-\frac{2}{4\sigma_{o}^{4}}+\frac{3}{4\sigma_{o}^{2}}\\
+ & = & \frac{1}{2\sigma_{o}^{4}}
+\end{eqnarray*}
+
+\end_inset
+
+since 
+\begin_inset Formula $E\left[u_{i}^{2}|x_{i}\right]=\sigma_{o}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $E\left[u_{i}^{4}|x_{i}\right]=3\sigma_{o}^{4}$
+\end_inset
+
+ by the moment properties of the normal distribution.
+\end_layout
+
+\begin_layout Standard
+Thus,
+\begin_inset Formula 
+\[
+E\left[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}|x_{i}\right]=\left[\begin{array}{cc}
+\frac{1}{\sigma_{o}^{2}}\frac{\partial m(x_{i},\beta)}{\partial\beta}\frac{\partial m(x_{i},\beta)}{\partial\beta^{\prime}} & 0\\
+0 & \frac{1}{2\sigma_{o}^{4}}
+\end{array}\right]
+\]
+
+\end_inset
+
+Therefore, 
+\begin_inset Formula $E[H_{i}(\theta_{o})|x_{i}]=E[s_{i}(\theta_{o})s_{i}(\theta_{o})^{\prime}|x_{i}]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part F.
+\end_layout
+
+\begin_layout Standard
+By Theorem 13.2,
+\begin_inset Formula 
+\[
+\mbox{AVar}(\hat{\theta})=\frac{A_{o}^{-1}}{N}
+\]
+
+\end_inset
+
+Estimating 
+\begin_inset Formula $\mbox{AVar}(\hat{\theta})$
+\end_inset
+
+ requires estimating 
+\begin_inset Formula $A_{o}$
+\end_inset
+
+.
+ From part (E), there are at least two possible estimators of 
+\begin_inset Formula $A_{o}$
+\end_inset
+
+ in the CMLE context.
+ In fact, under slight extensions of the regularity conditions in Theorem
+ 13.2, both of the matrices
+\begin_inset Formula 
+\[
+N^{-1}{\displaystyle \sum_{i=1}^{N}}H_{i}(\hat{\theta}),\ \mbox{and}\ N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}(\hat{\theta})s_{i}(\hat{\theta})^{\prime}
+\]
+
+\end_inset
+
+converge to 
+\begin_inset Formula $A_{o}=B_{o}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\widehat{\mbox{AVar}(\hat{\theta})}$
+\end_inset
+
+ can be taken to be either of the two matrices
+\begin_inset Formula 
+\[
+\left[N^{-1}{\displaystyle \sum_{i=1}^{N}}H_{i}(\hat{\theta})\right]^{-1},\ \mbox{or}\ \left[N^{-1}{\displaystyle \sum_{i=1}^{N}}s_{i}(\hat{\theta})s_{i}(\hat{\theta})^{\prime}\right]^{-1}
+\]
+
+\end_inset
+
+and the asymptotic standard errors are the square roots of the diagonal
+ elements of any of the matrices.
+ The first estimator, based on the Hessian of the log-likelihood, requires
+ computing second derivatives.
+ When the inverse exists, the estimate is positive definite because 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ maximizies the objective funciton.
+ The second estimator is based on the outer product of the score, depends
+ only on first derivatives of the log-likelihood funciton.
+ Its primary drawback is that it can be poorly behaved in even moderate
+ sample sizes.
+\end_layout
+
+\begin_layout Section*
+Solutions
+\end_layout
+
+\begin_layout Subsection*
+Problem 13.2
+\end_layout
+
+\begin_layout Subsubsection*
+Part A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather*}
+\log L={\displaystyle \sum_{i=1}^{N}}\log f(y_{i}|x_{i})\\
+\hat{\beta}_{MLE}\in\arg\max_{\beta}{\displaystyle \sum_{i=1}^{N}}\log f(y_{i}|x_{i})\\
+\iff\arg\max_{\beta}-\frac{1}{2}{\displaystyle \sum_{i=1}^{N}}\left(\frac{y_{i}-m(x_{i}\beta)}{\sigma}\right)^{2}\\
+\iff\arg\min_{\beta}{\displaystyle \sum_{i=1}^{N}}\left[y_{i}-m(x_{i},\beta)\right]^{2}=\hat{\beta}_{NLS}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

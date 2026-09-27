@@ -1,0 +1,2896 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Outline of Single-Equation Linear Models
+\end_layout
+
+\begin_layout Section*
+Endogeneity
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Our focus is on the single-equation linear model
+\begin_inset Formula 
+\begin{equation}
+y_{i}=x_{i}^{\prime}\beta+u_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is a 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ vector of explanatory variables, i.e.,
+\begin_inset Formula 
+\[
+x_{i}=\left[\begin{array}{c}
+x_{i1}\\
+\vdots\\
+x_{iK}
+\end{array}\right]
+\]
+
+\end_inset
+
+However, we explicitly allow the unobservable error to be correlated with
+ the explanatory variables, i.e.,
+\begin_inset Formula 
+\begin{equation}
+E(x_{i}u_{i})\neq0
+\end{equation}
+
+\end_inset
+
+When this is the case, OLS estimation of equation (1) generally results
+ in inconsistent estimators of 
+\emph on
+all
+\emph default
+ the 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{\beta}_{OLS} & = & \left(N^{-1}{\displaystyle \sum_{i=1}^{N}}x_{i}x_{i}^{\prime}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}x_{i}y_{i}\right)\\
+ & = & \beta+\left({\displaystyle \sum_{i=1}^{N}}x_{i}x_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}x_{i}u_{i}\right)\nonumber \\
+ & \begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array} & \beta+\left[E(x_{i}x_{i}^{\prime})\right]^{-1}\left[E(x_{i}u_{i})\right]\neq\beta\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+We consider two notable causes of the endogeneity problem.
+\end_layout
+
+\begin_layout Subsection*
+Omitted Variable
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider a simple single-equation linear model
+\begin_inset Formula 
+\[
+E(y|x,q)=\beta_{0}+\beta_{1}x+\beta_{2}w+\beta_{3}q
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+ are scalars.
+ Written in regression form, we have
+\begin_inset Formula 
+\[
+y=\beta_{0}+\beta_{1}x+\beta_{2}w+\beta_{3}q+u
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $u\equiv y-E(y|x,q)$
+\end_inset
+
+ by definition, which is equivalent to the strict exogeneity condition 
+\begin_inset Formula $E(u|x,w,q)=0$
+\end_inset
+
+.
+ We refer to 
+\begin_inset Formula $u$
+\end_inset
+
+ as the structural error.
+ Note that strict exogeneity implies that 
+\begin_inset Formula $E(xu)=0$
+\end_inset
+
+.
+ Now, in this setup, 
+\begin_inset Formula $q$
+\end_inset
+
+ is unobserved and correlated with 
+\begin_inset Formula $x$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $E(xq)\neq0$
+\end_inset
+
+, so running an OLS regression of 
+\begin_inset Formula $y$
+\end_inset
+
+ on 
+\begin_inset Formula $x$
+\end_inset
+
+ will lead to inconsistent estimates of the population parameters 
+\begin_inset Formula $(\beta_{0},\beta_{1},\beta_{2})$
+\end_inset
+
+.
+ However, if we impose additional assumptions, it may still be possible
+ to consistently estimate 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+Let the dependent variable 
+\begin_inset Formula $y$
+\end_inset
+
+ denote future salary, the binary explanatory variable 
+\begin_inset Formula $x$
+\end_inset
+
+ takes on values 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ and signfies college attendance, and 
+\begin_inset Formula $q$
+\end_inset
+
+ is the unobservable variable that represents individual ability.
+ We must control for ability by trying to compare people with the same ability.
+\end_layout
+
+\begin_layout Subsection*
+Measurement Errors
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Once again, consider a simple single-equation linear model
+\begin_inset Formula 
+\[
+E(y|x)=\beta_{0}+\beta_{1}x
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x$
+\end_inset
+
+ is a scalar.
+ Written in regression form we have
+\begin_inset Formula 
+\[
+y=\beta_{0}+\beta_{1}x+u
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $u\equiv y-E(y|x)$
+\end_inset
+
+ by definition.
+ We don't observe 
+\begin_inset Formula $x$
+\end_inset
+
+, but instead we observe 
+\begin_inset Formula $x^{*}=x+v$
+\end_inset
+
+, where 
+\begin_inset Formula $v$
+\end_inset
+
+ denotes the measurement error.
+ We assume that 
+\begin_inset Formula $v$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ If we run an OLS regression of 
+\begin_inset Formula $y$
+\end_inset
+
+ on 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, then we will suffer from the endogeneity problem.
+\begin_inset Formula 
+\begin{eqnarray*}
+y & = & \beta_{0}+\beta_{1}x+u\\
+ & = & \beta_{0}+\beta_{1}(x^{*}-v)+u\\
+ & = & \beta_{0}+\beta_{1}x^{*}+\left(u-\beta_{1}v\right)
+\end{eqnarray*}
+
+\end_inset
+
+Now,
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left[x^{*}\left(u-\beta_{1}v\right)\right] & = & E\left[(x+v)(u-\beta_{1}v)\right]\\
+ & = & 0+0+0-\beta_{1}\sigma_{v}^{2}\neq0
+\end{eqnarray*}
+
+\end_inset
+
+which leads to an inconsistent estimator
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta}_{OLS} & = & \left(N^{-1}{\displaystyle \sum_{i=1}^{N}}x_{i}^{*}x_{i}^{*\prime}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}x_{i}^{*}y_{i}\right)\\
+ & = & \left(\sigma_{x}^{2}+\sigma_{v}^{2}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}x_{i}^{*}x_{i}\beta+N^{-1}{\displaystyle \sum_{i=1}^{N}}x_{i}^{*}u_{i}\right)\\
+ & = & \left(\sigma_{x}^{2}+\sigma_{v}^{2}\right)^{-1}\left(\beta\sigma_{x}^{2}\right)\\
+ & = & \beta\frac{\sigma_{x}^{2}}{\sigma_{x}^{2}+\sigma_{v}^{2}}<\beta
+\end{eqnarray*}
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\[
+\left|{\displaystyle \lim_{N\rightarrow\infty}}\hat{\beta}\right|<\left|\beta\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+IV Estimation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the linear model
+\begin_inset Formula 
+\begin{equation}
+y_{i}=\beta_{0}+\beta_{1}x_{i1}+\cdots+\beta_{K}x_{iK}=x_{i}^{\prime}\beta+u_{i}
+\end{equation}
+
+\end_inset
+
+where one of the regressors of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is a constant.
+ We assume 
+\begin_inset Formula $x_{i1},\ldots,x_{i,K-1}$
+\end_inset
+
+ are all exogenous regressors, i.e.,
+\begin_inset Formula 
+\begin{equation}
+E(x_{ij}u_{i})=0,\ j=1,\ldots,K-1
+\end{equation}
+
+\end_inset
+
+However, suppose 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ is an endogenous regressor, i.e.,
+\begin_inset Formula 
+\begin{equation}
+E(x_{iK}u_{i})\neq0
+\end{equation}
+
+\end_inset
+
+so 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+ are correlated.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We assume that we have an 
+\series bold
+instrumental variable (IV)
+\series default
+ for 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+, which we denote 
+\begin_inset Formula $z_{i1}$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $z_{i1}$
+\end_inset
+
+ to be satisfactory IV, it must satisfy the following two conditions:
+\end_layout
+
+\begin_layout Enumerate
+Exogeneity:
+\begin_inset Formula 
+\begin{equation}
+E(z_{i1}u_{i})=0
+\end{equation}
+
+\end_inset
+
+We are unable to test this condition.
+\end_layout
+
+\begin_layout Enumerate
+Relevance
+\begin_inset Formula 
+\begin{equation}
+E(z_{i1}x_{iK})\neq0
+\end{equation}
+
+\end_inset
+
+This condition is testable.
+\end_layout
+
+\begin_layout Standard
+We should avoid a 
+\series bold
+weak IV
+\series default
+ where 
+\begin_inset Formula $E(z_{i1}x_{iK})$
+\end_inset
+
+ is close to zero, i.e., 
+\begin_inset Formula $z_{i1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+ are only weakly correlated.
+\end_layout
+
+\begin_layout Subsection*
+Identification
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The column-vector 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ contains all the exogenous variables, including exogenous regressors and
+ instruments
+\begin_inset Formula 
+\begin{equation}
+z_{i}=\left[\begin{array}{c}
+x_{i1}\\
+\vdots\\
+x_{i,K-1}\\
+z_{i1}
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+Pre-multiply the linear regression equation (4) by 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+z_{i}y_{i}=z_{i}(x_{i}^{\prime}\beta+u_{i})
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $E(z_{i}u_{i})=0$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray*}
+E(z_{i}y_{i}) & = & E(z_{i}x_{i}^{\prime})\beta\\
+\beta & = & \left[E(z_{i}x_{i}^{\prime})\right]^{-1}E(z_{i}y_{i})
+\end{eqnarray*}
+
+\end_inset
+
+So, if 
+\begin_inset Formula $E(z_{i}x_{i}^{\prime})$
+\end_inset
+
+ has full rank, then 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is identified, and we have the 
+\series bold
+IV estimator
+\series default
+
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}_{IV}=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}z_{i}x_{i}^{\prime}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}z_{i}y_{i}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+1.
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ is salary; 
+\begin_inset Formula $x$
+\end_inset
+
+ is education, which can be correlated with an omitted variable, such as
+ ability; 
+\begin_inset Formula $z$
+\end_inset
+
+ is quarter of birth
+\end_layout
+
+\begin_layout Example*
+2.
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ is GPA; 
+\begin_inset Formula $x$
+\end_inset
+
+ is alcohol consumption; 
+\begin_inset Formula $z$
+\end_inset
+
+ is the regional price of alcohol.
+\end_layout
+
+\begin_layout Subsection*
+Relevance
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can't use an instrument that is a linear combination of the exogenous
+ regressors because it would not provide any additional information, and
+ it and cause perfect collinearity.
+ We need to find an instrument that adds information regarding the endogeous
+ regressor.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the 
+\series bold
+reduced form (RF) equation
+\series default
+ of 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+x_{iK}=\delta_{0}+\delta_{1}x_{i1}+\cdots+\delta_{K-1}x_{i,K-1}+\theta_{1}z_{i1}+v_{i}
+\end{equation}
+
+\end_inset
+
+This is just the linear projection of 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+ onto all of the exogenous variables.
+ 
+\series bold
+Relevance
+\series default
+ requires that 
+\begin_inset Formula $\theta_{1}\neq0$
+\end_inset
+
+.
+ This can be thought of as a stronger condition than the one listed above.
+ The RF regression is not necessarily related to the model, and it does
+ not need to have a linear conditional expectation because we can always
+ obtain the 
+\series bold
+linear projection
+\series default
+ 
+\series bold
+(LP)
+\series default
+.
+\end_layout
+
+\begin_layout Section*
+2SLS
+\end_layout
+
+\begin_layout Subsection*
+One Endogenous Regressor
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose we have multiple IVs for 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+: 
+\begin_inset Formula $z_{i1},\ldots,z_{iM}$
+\end_inset
+
+.
+ So,
+\begin_inset Formula 
+\begin{equation}
+z_{i}=\left[\begin{array}{c}
+x_{i1}\\
+\vdots\\
+x_{i,K-1}\\
+z_{i1}\\
+\vdots\\
+z_{iM}
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+The procedure of 
+\series bold
+2SLS 
+\series default
+finds a linear combination of the exogenous variables that is most highly
+ correlated with 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the following linear projection
+\begin_inset Formula 
+\begin{equation}
+x_{iK}=\delta_{0}+\delta_{1}x_{i1}+\cdots+\delta_{K-1}x_{i,K-1}+\theta_{1}z_{i1}+\cdots+\theta_{M}z_{iM}+v_{i}
+\end{equation}
+
+\end_inset
+
+The linear projection of 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+ onto the exogenous space, i.e., 
+\begin_inset Formula $\hat{x}_{iK}$
+\end_inset
+
+, will be used as the instrument for 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+.
+ Pre-multiply equation (4) by 
+\begin_inset Formula $\hat{x}_{i}$
+\end_inset
+
+, which contains the exogenous regressors and the linear projection 
+\begin_inset Formula $\hat{x}_{iK}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+\hat{x}_{i}=\left[\begin{array}{c}
+x_{i1}\\
+\vdots\\
+x_{i,K-1}\\
+\hat{x}_{iK}
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+Then, the 
+\series bold
+2SLS estimator
+\series default
+ is given by
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{\beta}_{2SLS} & = & \left(N^{-1}{\displaystyle \sum_{i=1}^{N}}\hat{x}_{i}x_{i}^{\prime}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}\hat{x}_{i}y_{i}\right)\\
+ & = & \left(\sum_{i=1}^{N}\hat{x_{i}}\hat{x}_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}\hat{x}_{i}y_{i}}\right)
+\end{eqnarray}
+
+\end_inset
+
+The second equation gives the name of 2SLS.
+ The steps for 2SLS are:
+\end_layout
+
+\begin_layout Enumerate
+Reduced form regression: Run OLS regression of 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+ on 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ to get 
+\begin_inset Formula $\hat{x}_{iK}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Run OLS regression on 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i1},\ldots,x_{i,K-1},\hat{x}_{iK}$
+\end_inset
+
+.
+ We then obtain 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+, which is a consistent estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+There are two important notes to remember in regards to 2SLS:
+\end_layout
+
+\begin_layout Enumerate
+All exogenous regressors should be included in the first stage regression.
+\end_layout
+
+\begin_layout Enumerate
+The OLS standard errors reported with the second stage regression are incorrent.
+\end_layout
+
+\begin_layout Subsection*
+General Setup
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the linear model
+\begin_inset Formula 
+\begin{equation}
+y_{i}=x_{i}^{\prime}\beta+u_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is a 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ vector of explanatory variables that contains a constant.
+ Suppose that at least one of the regressors is endogenous, i.e.,
+\begin_inset Formula 
+\begin{equation}
+E(x_{i}u_{i})\neq0
+\end{equation}
+
+\end_inset
+
+Consequently, 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is no longer a structural error.
+ Assume we have we have a 
+\begin_inset Formula $L\times1$
+\end_inset
+
+ vector of IVs 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, where 
+\begin_inset Formula $L\geq K$
+\end_inset
+
+.
+ The model is 
+\series bold
+just-identified
+\series default
+ when 
+\begin_inset Formula $L=K$
+\end_inset
+
+, and it is 
+\series bold
+over-identified
+\series default
+ when 
+\begin_inset Formula $L>K$
+\end_inset
+
+.
+ Remember that 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ must satisfy two requirements:
+\end_layout
+
+\begin_layout Enumerate
+Exogeneity:
+\begin_inset Formula 
+\begin{equation}
+E(z_{i}u_{i})=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Relevance:
+\begin_inset Formula 
+\begin{equation}
+\mbox{rank}\ E(z_{i}x_{i}^{\prime})=K
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the case with only one endogenous regressor, condition (20) is equivalent
+ to at least one 
+\begin_inset Formula $\theta_{j}\neq0$
+\end_inset
+
+, 
+\begin_inset Formula $j=1,\ldots,M$
+\end_inset
+
+ in the linear projection
+\begin_inset Formula 
+\[
+x_{iK}=\delta_{0}+\delta_{1}x_{i1}+\cdots+\delta_{K-1}x_{i,K-1}+\theta_{1}z_{i1}+\cdots+\theta_{M}z_{iM}+v_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Linear Projections
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can always write the linear projection of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ onto 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{equation}
+x_{i}^{*\prime}=z_{i}^{\prime}\theta
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+, 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $L\times1$
+\end_inset
+
+, and 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is 
+\begin_inset Formula $L\times K$
+\end_inset
+
+.
+ Now, write
+\begin_inset Formula 
+\begin{equation}
+x_{i}^{\prime}=x_{i}^{*\prime}+r_{i}^{\prime}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $E(z_{i}r_{i}^{\prime})=0$
+\end_inset
+
+ and so 
+\begin_inset Formula $E(x_{i}^{*}r_{i}^{\prime})=0$
+\end_inset
+
+.
+ Note that
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+x_{1i} & \cdots & x_{Ki}\end{array}\right]=z_{i}^{\prime}\left[\begin{array}{ccc}
+\theta_{1} & \cdots & \theta_{K}\end{array}\right]+\left[\begin{array}{ccc}
+r_{1i} & \cdots & r_{Ki}\end{array}\right]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\theta_{j}$
+\end_inset
+
+ is 
+\begin_inset Formula $L\times1$
+\end_inset
+
+ and 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $x_{ji}=z_{i}^{\prime}\theta_{j}+r_{ij}$
+\end_inset
+
+ for all 
+\begin_inset Formula $j=1,\ldots,K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Multiplying both sides of equation (22) by 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ and taking expectations, we get
+\begin_inset Formula 
+\begin{equation}
+E(z_{i}z_{i}^{\prime})\theta=E(z_{i}x_{i}^{\prime})
+\end{equation}
+
+\end_inset
+
+since 
+\begin_inset Formula $E(z_{i}r_{i}^{\prime})=E\left[z_{i}(x_{i}^{\prime}-z_{i}^{\prime}\theta)\right]=0$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\begin{equation}
+\theta=\left[E(z_{i}z_{i}^{\prime})\right]^{-1}E(z_{i}x_{i}^{\prime})
+\end{equation}
+
+\end_inset
+
+with
+\begin_inset Formula 
+\[
+\theta_{j}=\left[E(z_{i}z_{i}^{\prime})\right]^{-1}E(z_{i}x_{ij})
+\]
+
+\end_inset
+
+The 
+\series bold
+analogy principle
+\series default
+ for choosing an estimator says to turn the population problem into its
+ sample counterpart.
+ Therefore,
+\begin_inset Formula 
+\begin{equation}
+\hat{\theta}=\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}x_{i}^{\prime}\right)
+\end{equation}
+
+\end_inset
+
+with
+\begin_inset Formula 
+\[
+\hat{\theta}_{j}=\left({\displaystyle \sum_{i=1}^{N}z_{i}z_{i}^{\prime}}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}z_{i}x_{ij}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As a result,
+\begin_inset Formula 
+\begin{equation}
+\hat{x}_{i}^{\prime}=z_{i}^{\prime}\hat{\theta}=z_{i}^{\prime}\left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)^{-1}\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Deriving the 2SLS Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Using linear projections, there is a simple way to see how the relevance
+ and exogeneity assumptions identify 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ First, assuming that 
+\begin_inset Formula $E(z_{i}z_{i}^{\prime})$
+\end_inset
+
+ is nonsingular, we can always write the linear projection of 
+\begin_inset Formula $x_{i}^{\prime}$
+\end_inset
+
+ onto 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ as 
+\begin_inset Formula $x^{*\prime}=z_{i}^{\prime}\theta$
+\end_inset
+
+, where 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is the 
+\begin_inset Formula $L\times K$
+\end_inset
+
+ matrix 
+\begin_inset Formula $\theta=\left[E(z_{i}z_{i}^{\prime})\right]^{-1}E(z_{i}x_{i}^{\prime})$
+\end_inset
+
+.
+ Since each column of 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ can be consistently esitmated by regressing the appropriate element of
+ 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ onto 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, for the purposes of identification of 
+\begin_inset Formula $\beta$
+\end_inset
+
+, we can treat 
+\begin_inset Formula $\theta$
+\end_inset
+
+ as known.
+ Write 
+\begin_inset Formula $x_{i}^{\prime}=x_{i}^{*\prime}+r_{i}^{\prime}$
+\end_inset
+
+, where 
+\begin_inset Formula $E(z_{i}r_{i}^{\prime})=0$
+\end_inset
+
+ and so 
+\begin_inset Formula $E(x_{i}^{*}r_{i}^{\prime})=0$
+\end_inset
+
+.
+ Now, the 2SLS estimator is effectively the IV estimator using instruments
+ 
+\begin_inset Formula $x_{i}^{*}$
+\end_inset
+
+.
+ Multiplying equation (17) by 
+\begin_inset Formula $x_{i}^{*}$
+\end_inset
+
+, taking expectations, and rearranging gives
+\begin_inset Formula 
+\begin{equation}
+E(x_{i}^{*}x_{i}^{\prime})\beta=E(x_{i}^{*}y_{i})
+\end{equation}
+
+\end_inset
+
+since 
+\begin_inset Formula $E(x_{i}^{*}u_{i})=0$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is identified by 
+\begin_inset Formula $\beta=\left[E(x_{i}^{*}x_{i}^{\prime})\right]^{-1}E(x_{i}^{*}y_{i})$
+\end_inset
+
+ provided 
+\begin_inset Formula $E(x_{i}^{*}x_{i}^{\prime})$
+\end_inset
+
+ is nonsingular.
+ But
+\begin_inset Formula 
+\[
+E(x_{i}^{*}x_{i}^{\prime})=\theta^{\prime}E(z_{i}x_{i}^{\prime})=E(x_{i}z_{i}^{\prime})\left[E(z_{i}z_{i}^{\prime})\right]^{-1}E(z_{i}x_{i}^{\prime})
+\]
+
+\end_inset
+
+and this matrix is nonsingular if and only if 
+\begin_inset Formula $E(z_{i}x_{i}^{\prime})$
+\end_inset
+
+ has rank 
+\begin_inset Formula $K$
+\end_inset
+
+; that is, if and only if Assumption 2SLS.2b holds.
+ If 2SLS.2b fails, then 
+\begin_inset Formula $E(x_{i}^{*}x_{i}^{\prime})$
+\end_inset
+
+ is singular and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is not identified.
+ (Note that, because 
+\begin_inset Formula $x_{i}^{\prime}=x_{i}^{*\prime}+r_{i}^{\prime}$
+\end_inset
+
+ with 
+\begin_inset Formula $E(x_{i}^{*}r_{i}^{\prime})=0$
+\end_inset
+
+, 
+\begin_inset Formula $E(x_{i}^{*}x_{i}^{\prime})=E(x_{i}^{*}x_{i}^{*\prime})$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is identified if and only if 
+\begin_inset Formula $\mbox{rank}\ E(x_{i}^{*}x_{i}^{*\prime})=K$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The 2SLS estimator can be written as 
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}=\left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}x_{i}^{\prime}\right)\right]^{-1}\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}y_{i}\right)
+\end{equation}
+
+\end_inset
+
+We have the following consistency result.
+\end_layout
+
+\begin_layout Subsubsection*
+Equality of the Two Forms for the 2SLS Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Remember, the 2SLS estimator can be written as
+\begin_inset Formula 
+\[
+\hat{\beta}_{2SLS}=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}\hat{x}_{i}x_{i}^{\prime}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}\hat{x}_{i}y_{i}\right)
+\]
+
+\end_inset
+
+(IV interpretation), or
+\begin_inset Formula 
+\[
+\hat{\beta}_{2SLS}=\left(\sum_{i=1}^{N}\hat{x_{i}}\hat{x}_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}\hat{x}_{i}y_{i}}\right)
+\]
+
+\end_inset
+
+(2SLS procedure).
+ We now show that these two forms are equal.
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta}_{2SLS} & = & \left({\displaystyle \sum_{i=1}^{N}\hat{x_{i}}x_{i}^{\prime}}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}\hat{x}_{i}y_{i}}\right)\\
+ & = & \left({\displaystyle \sum_{i=1}^{N}}\hat{\theta}^{\prime}z_{i}x_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}\hat{\theta}^{\prime}z_{i}y_{i}}\right)\\
+ & = & \left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}x_{i}^{\prime}\right)\right]^{-1}\left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}y_{i}\right)\right]\\
+ & = & \left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}x_{i}^{\prime}\right)\right]^{-1}\\
+ &  & \times\left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}y_{i}\right)\right]\\
+ & = & \left({\displaystyle \sum_{i=1}^{N}}\hat{\theta}^{\prime}z_{i}z_{i}^{\prime}\hat{\theta}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}\hat{\theta}z_{i}y_{i}\right)\\
+ & = & \left(\sum_{i=1}^{N}\hat{x_{i}}\hat{x}_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}\hat{x}_{i}y_{i}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Asymptotics
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now summarize the asymptotic results for 2SLS in a single-equation model
+ with perhaps several endogenous varialbes among the explanatory variables.
+ The two assumptions needed for 
+\begin_inset Formula $\beta$
+\end_inset
+
+ to be indentified, and thus 
+\begin_inset Formula $\hat{\beta}_{2SLS}$
+\end_inset
+
+ to be consistent, are:
+\end_layout
+
+\begin_layout Standard
+1.
+ 
+\begin_inset Formula $E(z_{i}u_{i})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ (a) rank 
+\begin_inset Formula $E(z_{i}z_{i}^{\prime})=L$
+\end_inset
+
+, (b) rank 
+\begin_inset Formula $E(z_{i}x_{i}^{\prime})=K$
+\end_inset
+
+, 
+\begin_inset Formula $(L\geq K)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here we do not specify where the elements of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ come from, but any exogenous elemnts of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, including a constant, are included in 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+.
+ Unless every element of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is exogenous, 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ will have to contain variables obtained from outside the model.
+ Using linear projections, there is a simple way to see how the two assumptions
+ lead to 
+\begin_inset Formula $\hat{\beta}_{2SLS}$
+\end_inset
+
+ being a consistent estimator for 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Consistency
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now prove 
+\begin_inset Formula $\hat{\beta}_{2SLS}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\beta$
+\end_inset
+
+ as 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{\beta} & = & \left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}x_{i}^{\prime}\right)\right]^{-1}\left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}z_{i}y_{i}}\right)\right]\nonumber \\
+ & = & \beta+\left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}x_{i}^{\prime}\right)\right]^{-1}\left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}z_{i}u_{i}}\right)\right]
+\end{eqnarray}
+
+\end_inset
+
+Since 
+\begin_inset Formula $E(z_{i}u_{i})=0$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\hat{\beta}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\beta+\left[\left(Ex_{i}z_{i}^{\prime}\right)\left(Ez_{i}z_{i}^{\prime}\right)^{-1}\left(Ez_{i}x_{i}^{\prime}\right)\right]^{-1}\left[\left(Ex_{i}z_{i}^{\prime}\right)\left(Ez_{i}z_{i}^{\prime}\right)^{-1}\left(Ez_{i}u_{i}\right)\right]=\beta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Asymptotic Normality
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+By the CLT, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\sqrt{N}\left(\hat{\beta}-\beta\right) & \begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array} & \left[\left(Ex_{i}z_{i}^{\prime}\right)\left(Ez_{i}z_{i}^{\prime}\right)^{-1}\left(Ez_{i}x_{i}^{\prime}\right)\right]^{-1}\left[\left(Ex_{i}z_{i}^{\prime}\right)\left(Ez_{i}z_{i}^{\prime}\right)^{-1}\right]\cdot N\left(0,E\left(u_{i}^{2}z_{i}z_{i}^{\prime}\right)\right)\\
+ & = & N\left(0,V_{R}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Note that 
+\begin_inset Formula $A\cdot N(0,B)=N(0,ABA^{\prime})$
+\end_inset
+
+.
+ 
+\begin_inset Formula $V_{R}$
+\end_inset
+
+ is the robust variance matrix.
+ It is estimated by 
+\begin_inset Formula $\hat{V}_{R}$
+\end_inset
+
+, where the expectations in 
+\begin_inset Formula $V_{R}$
+\end_inset
+
+ are replaced by sample averages.
+ 
+\begin_inset Formula $E\left(u_{i}^{2}z_{i}z_{i}^{\prime}\right)$
+\end_inset
+
+ is estimated by
+\begin_inset Formula 
+\begin{equation}
+\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}\hat{u}_{i}^{2}z_{i}z_{i}^{\prime}\right)
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{u}_{i}=y_{i}-x_{i}^{\prime}\hat{\beta}_{2SLS}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now consider two cases that simply the asymptotic variance.
+\end_layout
+
+\begin_layout Enumerate
+Homoskedasticity Assumption:
+\begin_inset Formula 
+\begin{equation}
+E\left(u_{i}^{2}|z_{i}\right)=E(u_{i}^{2})=\sigma^{2}
+\end{equation}
+
+\end_inset
+
+By the law of iterated expectations, 
+\begin_inset Formula $E(u_{i}^{2}|z_{i})=E(u_{i}^{2})=\sigma^{2}$
+\end_inset
+
+ implies that 
+\begin_inset Formula $E(u_{i}^{2}z_{i}z_{i}^{\prime})=\sigma^{2}E(z_{i}z_{i}^{\prime})$
+\end_inset
+
+.
+ Under this assumption, the non-robust variance matrix is given by
+\begin_inset Formula 
+\begin{equation}
+V_{NR}=\sigma^{2}\left[\left(Ex_{i}z_{i}^{\prime}\right)\left(Ez_{i}z_{i}^{\prime}\right)^{-1}\left(Ez_{i}x_{i}^{\prime}\right)\right]^{-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The model is just-identified, i.e., 
+\begin_inset Formula $(K=L)$
+\end_inset
+
+.
+ Then, the asymptotic variance becomes
+\begin_inset Formula 
+\begin{equation}
+V_{R}=\left[\left(Ex_{i}z_{i}^{\prime}\right)\left(Eu_{i}^{2}z_{i}z_{i}^{\prime}\right)^{-1}\left(Ez_{i}x_{i}^{\prime}\right)\right]^{-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Hypothesis Testing
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the following null hypothesis
+\begin_inset Formula 
+\begin{equation}
+H_{0}:R\beta=\gamma
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $R$
+\end_inset
+
+ is 
+\begin_inset Formula $q\times K$
+\end_inset
+
+, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+, and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is 
+\begin_inset Formula $q\times1$
+\end_inset
+
+.
+ In the previous subsection, we showed
+\begin_inset Formula 
+\[
+\sqrt{N}(\hat{\beta}-\beta)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N(0,V_{R})
+\]
+
+\end_inset
+
+Under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\sqrt{N}(R\hat{\beta}-\gamma)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N(0,RV_{R}R^{\prime})
+\]
+
+\end_inset
+
+Thus, the Wald Test is given by
+\begin_inset Formula 
+\begin{equation}
+\sqrt{N}(R\hat{\beta}-\gamma)^{\prime}(R\hat{V}_{R}R^{\prime})^{-1}\sqrt{N}(R\hat{\beta}-\gamma)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}\chi_{q}^{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+Let 
+\begin_inset Formula $K=3$
+\end_inset
+
+, so we have and 
+\begin_inset Formula $(\beta_{1,}\beta_{2},\beta_{3})$
+\end_inset
+
+.
+ Suppose the null hypothesis is 
+\begin_inset Formula $H_{0}:\beta_{2}=\beta_{3}$
+\end_inset
+
+.
+ Then, we have 
+\begin_inset Formula $R=(0,1,-1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Why the Second-Stage Standard Errors are Incorrect
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the 2SLS procedure, there are two types of residuals.
+\end_layout
+
+\begin_layout Enumerate
+The 2SLS residuals
+\begin_inset Formula 
+\begin{equation}
+\hat{u}_{i}=y_{i}-x_{i}^{\prime}\hat{\beta}_{2SLS}
+\end{equation}
+
+\end_inset
+
+which 
+\begin_inset Quotes eld
+\end_inset
+
+consistently estimate
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+.
+ Note that
+\begin_inset Formula 
+\[
+\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}\hat{u_{i}}^{2}\right)\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\sigma^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The second-stage residuals
+\begin_inset Formula 
+\begin{eqnarray*}
+\tilde{u}_{i} & = & y_{i}-\hat{x}_{i}^{\prime}\hat{\beta}_{2SLS}\\
+ & = & y_{i}-\left(\hat{x}_{i}-x_{i}+x_{i}\right)^{\prime}\hat{\beta}_{2SLS}\\
+ & = & \hat{u}_{i}-(\hat{x}_{i}-x_{i})^{\prime}\hat{\beta}_{2SLS}
+\end{eqnarray*}
+
+\end_inset
+
+So, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}\tilde{u}_{i}^{2}\right) & = & N^{-1}{\displaystyle \sum_{i=1}^{N}}\hat{u}_{i}^{2}+N^{-1}{\displaystyle \sum_{i=1}^{N}\left[(\hat{x}_{i}-x_{i})^{\prime}\hat{\beta}_{2SLS}\right]^{2}-2N^{-1}{\displaystyle \sum_{i=1}^{N}}\hat{u}_{i}(\hat{x}_{i}-x_{i})^{\prime}\hat{\beta}_{2SLS}}\\
+ & \begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array} & \sigma_{u}^{2}+\beta^{2}\sigma_{v}^{2}-2\sigma_{uv}\beta
+\end{eqnarray*}
+
+\end_inset
+
+Note that
+\begin_inset Formula 
+\[
+y_{i}=x_{i}^{\prime}\beta+u_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $u_{i}\sim(0,\sigma_{u}^{2})$
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+x_{i}=z_{i}^{\prime}\gamma+v_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $v_{i}\sim(0,\sigma_{v}^{2})$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{v}_{i}=x_{i}-\hat{x}_{i}$
+\end_inset
+
+.
+ Then, under endogeneity, 
+\begin_inset Formula $E(u_{i}v_{i})=\sigma_{uv}\neq0$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\tilde{u}_{i}$
+\end_inset
+
+ is not a consistent estimator of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+GMM Estimation
+\end_layout
+
+\begin_layout Subsection*
+Moment Conditions Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the single-equation linear model
+\begin_inset Formula 
+\begin{equation}
+y_{i}=x_{i}^{\prime}\beta+u_{i},\ i=1,\ldots,N
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is a 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ vector of explanatory regressors that contains a constant.
+ Suppose
+\begin_inset Formula 
+\begin{equation}
+E(x_{i}u_{i})\neq0
+\end{equation}
+
+\end_inset
+
+so that at least one regressor is endogenous.
+ Assume we have a 
+\begin_inset Formula $L\times1$
+\end_inset
+
+ vector of IVs 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, where 
+\begin_inset Formula $L\geq K$
+\end_inset
+
+ and
+\begin_inset Formula 
+\begin{equation}
+E(z_{i}u_{i})=0
+\end{equation}
+
+\end_inset
+
+Note that when 
+\begin_inset Formula $L=K$
+\end_inset
+
+ the model is just identified, and when 
+\begin_inset Formula $L>K$
+\end_inset
+
+ the model is over-identified.
+ To alleviate the endogeneity problem, we have three possible solutions:
+ IV estimation, 2SLS, and GMM estimation.
+ Note that the IV and 2SLS estimators are both special cases under the class
+ of GMM estimators.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+From the set of moment conditions (39), we have
+\begin_inset Formula 
+\begin{eqnarray}
+E\left[z_{i}(y_{i}-x_{i}^{\prime}\beta)\right] & = & 0\\
+E\left[g(w_{i},\beta)\right] & = & 0
+\end{eqnarray}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+g(w_{i},\beta)=z_{i}(y_{i}-x_{i}^{\prime}\beta)
+\end{equation}
+
+\end_inset
+
+and 
+\begin_inset Formula $w_{i}=(x_{i},y_{i},z_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Identificaiton
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+From equation (40), we have
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left(z_{i}y_{i}\right)-E\left(z_{i}x_{i}^{\prime}\right)\beta & = & 0\\
+E\left(z_{i}x_{i}^{\prime}\right)\beta & = & E\left(z_{i}y_{i}\right)
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $E(z_{i}x_{i}^{\prime})$
+\end_inset
+
+ is 
+\begin_inset Formula $L\times K$
+\end_inset
+
+, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ , and 
+\begin_inset Formula $E\left(z_{i}y_{i}\right)$
+\end_inset
+
+ is 
+\begin_inset Formula $L\times1$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is identified if and only if 
+\begin_inset Formula $E(z_{i}x_{i}^{\prime})$
+\end_inset
+
+ has rank 
+\begin_inset Formula $K$
+\end_inset
+
+.
+ This is known as the 
+\series bold
+rank condition
+\series default
+.
+ A necessary condition for 
+\begin_inset Formula $\beta$
+\end_inset
+
+ to be identified is for 
+\begin_inset Formula $L\geq K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Estimation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We want the sample analogue of 
+\begin_inset Formula $E\left[g(w_{i},\beta)\right]=0$
+\end_inset
+
+, i.e,
+\begin_inset Formula 
+\begin{equation}
+N^{-1}{\displaystyle \sum_{i=1}^{N}}z_{i}(y_{i}-x_{i}^{\prime}\beta)
+\end{equation}
+
+\end_inset
+
+to be as close to zero as possible.
+ Thus, we will minimize the squared Euclidean distance of equation (43).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We define the GMM estimator as
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}_{GMM}=\arg{\displaystyle \min_{\beta}\left({\displaystyle \sum_{i=1}^{N}}g_{i}(\beta)\right)^{\prime}\hat{W}}\left({\displaystyle \sum_{i=1}^{N}}g_{i}(\beta)\right)
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+ is a 
+\begin_inset Formula $L\times L$
+\end_inset
+
+ weighting matrix that can be optimally chosen so as to minimize the asymptotic
+ variance of the estimator and make it efficient.
+ The GMM estimator satisfies the following first-order condition:
+\begin_inset Formula 
+\begin{equation}
+2\left(\frac{\partial{\displaystyle \sum_{i=1}^{N}g_{i}^{\prime}(\beta)}}{\partial\beta}\right)\hat{W}\left({\displaystyle \sum_{i=1}^{N}g_{i}(\beta})\right)=0
+\end{equation}
+
+\end_inset
+
+Solving 
+\begin_inset Formula $\beta$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\hat{W}\left({\displaystyle \sum_{i=1}^{N}g_{i}(\beta)}\right) & = & 0\\
+\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\hat{W}\left({\displaystyle \sum_{i=1}^{N}}z_{i}(y_{i}-x_{i}^{\prime}\beta)\right) & = & 0\\
+\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\hat{W}\left({\displaystyle \sum_{i=1}^{N}z_{i}y_{i}-{\displaystyle \sum_{i=1}^{N}}z_{i}x_{i}^{\prime}\beta}\right) & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the expression for the GMM estimator is given by
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}_{GMM}^{(\hat{W})}=\left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\hat{W}\left({\displaystyle \sum_{i=1}^{N}}z_{i}x_{i}^{\prime}\right)\right]^{-1}\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\hat{W}\left({\displaystyle \sum_{i=1}^{N}}z_{i}y_{i}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Consistency and Asymptotic Distribution
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We assume
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \mbox{p}\lim_{n\rightarrow\infty}}\hat{W}=W
+\end{equation}
+
+\end_inset
+
+Then,
+\begin_inset Formula 
+\begin{eqnarray*}
+\sqrt{N}\left(\hat{\beta}_{GMM}-\beta\right) & = & \left[\left({\displaystyle N^{-1}\sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\hat{W}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}z_{i}x_{i}^{\prime}\right)\right]^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\hat{W}\left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}z_{i}u_{i}\right)\\
+ & \begin{array}[b]{c}
+_{d}\\
+\longrightarrow
+\end{array} & \left[\left({\displaystyle E}x_{i}z_{i}^{\prime}\right)W\left(Ez_{i}x_{i}^{\prime}\right)\right]^{-1}\left(Ex_{i}z_{i}^{\prime}\right)W\cdot N\left(0,Eu_{i}^{2}z_{i}z_{i}^{\prime}\right)\\
+ & = & N\left(0,V(W)\right)
+\end{eqnarray*}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+V(W)=\left[\left({\displaystyle E}x_{i}z_{i}^{\prime}\right)W\left(Ez_{i}x_{i}^{\prime}\right)\right]^{-1}\left(Ex_{i}z_{i}^{\prime}\right)W\left(Eu_{i}^{2}z_{i}z_{i}^{\prime}\right)W\left(Ez_{i}x_{i}^{\prime}\right)\left[\left({\displaystyle E}x_{i}z_{i}^{\prime}\right)W\left(Ez_{i}x_{i}^{\prime}\right)\right]^{-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Asymptotic Distribution of the Optimal GMM Estimator
+\end_layout
+
+\begin_layout Theorem*
+The optimal weighting matrix 
+\begin_inset Formula $\hat{W}_{op}$
+\end_inset
+
+ is such that
+\begin_inset Formula 
+\begin{equation}
+W=\left(Eu_{i}^{2}z_{i}z_{i}^{\prime}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $V(\hat{W})-V(\hat{W}_{op})$
+\end_inset
+
+ is positive semi-definite (p.s.d.) for any 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The optimal GMM estimator is given by
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}_{GMM}=\left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\hat{W}\left(\sum_{i=1}^{N}z_{i}x_{i}^{\prime}\right)\right]^{-1}\left(\sum_{i=1}^{N}x_{i}z_{i}^{\prime}\right)\hat{W}\left(\sum_{i=1}^{N}z_{i}y_{i}\right)
+\end{equation}
+
+\end_inset
+
+and its asymptotic distribution is
+\begin_inset Formula 
+\[
+\sqrt{N}(\hat{\beta}-\beta)\begin{array}[b]{c}
+_{d}\\
+\longrightarrow
+\end{array}N\left(0,\left[(Ex_{i}z_{i}^{\prime})\left(Eu_{i}^{2}z_{i}z_{i}^{\prime}\right)^{-1}\left(Ez_{i}x_{i}^{\prime}\right)\right]^{-1}\right)
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+In general, the 2SLS estimator is non-optimal because 
+\begin_inset Formula $W_{2SLS}=\left[Ez_{i}z_{i}^{\prime}\right]^{-1}$
+\end_inset
+
+.
+ However, it is optimal under conditional homoskedasticity (CH).
+ By the law of iterated expectiations, conditional homoskedasticity, i.e.,
+\begin_inset Formula 
+\begin{equation}
+E(u_{i}^{2}|z_{i})=E(u_{i}^{2})=\sigma^{2}
+\end{equation}
+
+\end_inset
+
+implies that
+\begin_inset Formula 
+\begin{equation}
+E(u_{i}^{2}z_{i}z_{i}^{\prime})=\sigma^{2}E(z_{i}z_{i}^{\prime})
+\end{equation}
+
+\end_inset
+
+ Under one of these two homoskedasticity assumptions, the 2SLS estimator
+ is the efficient GMM estimator.
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset space \quad{}
+\end_inset
+
+Also note that OLS is just a special case of GMM estimation where all the
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+regressors are exogeneous, i.e., 
+\begin_inset Formula $x_{i}=z_{i}$
+\end_inset
+
+.
+ When this occurs, then the asymptotic variance becomes
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+\left[\left(Ex_{i}x_{i}^{\prime}\right)\left(Eu_{i}^{2}x_{i}x_{i}^{\prime}\right)^{-1}\left(Ex_{i}x_{i}^{\prime}\right)\right]^{-1}=\left(Ex_{i}x_{i}^{\prime}\right)^{-1}\left(Eu_{i}^{2}x_{i}x_{i}^{\prime}\right)\left(Ex_{i}x_{i}^{\prime}\right)^{-1}
+\]
+
+\end_inset
+
+which is the asymptotic variance for the OLS estimator under heteroskedasticity.
+ By the law of iterated expectations, conditional homoskedasticity, i.e.,
+\begin_inset Formula 
+\[
+E(u_{i}^{2}|x_{i})=\sigma^{2}
+\]
+
+\end_inset
+
+implies that
+\begin_inset Formula 
+\[
+E(u_{i}^{2}x_{i}x_{i}^{\prime})=\sigma^{2}\left(Ex_{i}x_{i}^{\prime}\right)
+\]
+
+\end_inset
+
+Under one of these two homoskedasticity assumptions, the OLS estimator is
+ efficient and its asymptotic variance becomes 
+\begin_inset Formula $\sigma^{2}\left(Ex_{i}x_{i}^{\prime}\right)^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Two-Step Efficient GMM
+\end_layout
+
+\begin_layout Enumerate
+Obtain
+\begin_inset Formula 
+\begin{equation}
+\hat{W}=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}\hat{u}_{i}^{2}z_{i}z_{i}^{\prime}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{u}_{i}=y_{i}-x_{i}^{\prime}\check{\beta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\check{\beta}$
+\end_inset
+
+ is a preliminary consistent estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+, such as the 2SLS estimator.
+\end_layout
+
+\begin_layout Enumerate
+Use 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+ in the GMM estimation to obtain the optimal GMM estimator.
+ The 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+ given by (53) is known as the optimal weighting matrix for GMM estimation
+ since
+\begin_inset Formula 
+\begin{equation}
+\hat{W}\begin{array}[b]{c}
+_{p}\\
+\longrightarrow
+\end{array}W=(Eu_{i}^{2}z_{i}z_{i}^{\prime})^{-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Other Choices of 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\hat{W}=I_{L}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The weighting matrix for 2SLS estimation:
+\begin_inset Formula 
+\begin{equation}
+\hat{W}=\left(n^{-1}{\displaystyle \sum_{i=1}^{n}}z_{i}z_{i}^{\prime}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The weighting matrix for IV estimation:
+\begin_inset Formula 
+\begin{equation}
+\hat{W}=\left(\begin{array}{cc}
+I_{K} & 0\\
+0 & 0
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Thus, the IV and 2SLS estimators can be identified as special forms of the
+ GMM estimator using a specific weighting matrix identfied by (55) and (56),
+ respectively.
+ If the model is just-identified, i.e, 
+\begin_inset Formula $L=K$
+\end_inset
+
+, then the IV and 2SLS estimators are the same.
+ If the model is over-identified, i.e., 
+\begin_inset Formula $L>K$
+\end_inset
+
+, then we must use either the 2SLS estimator or the GMM estimator.
+ If we assume homoskedasticity, then the 2SLS estimator is the efficient
+ GMM estimator.
+ If no homoskedasticity assumption is made, then the GMM estimator using
+ the optimal weighting matrix given by (50) is efficient.
+\end_layout
+
+\begin_layout Subsection*
+Over-Identification Test
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The following results hold only when we have the optimal 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+.
+ We wish to prove that
+\begin_inset Formula 
+\begin{equation}
+J(\hat{\beta})=\left(\frac{1}{\sqrt{n}}{\displaystyle \sum_{i=1}^{n}}g_{i}(\hat{\beta})\right)^{\prime}\hat{W}\left(\frac{1}{\sqrt{n}}{\displaystyle \sum_{i=1}^{n}}g_{i}(\hat{\beta})\right)\begin{array}[b]{c}
+_{d}\\
+\longrightarrow
+\end{array}\chi_{(L-K)}^{2}
+\end{equation}
+
+\end_inset
+
+First off,
+\begin_inset Formula 
+\begin{eqnarray*}
+g_{i}(\hat{\beta}) & = & z_{i}(y_{i}-x_{i}^{\prime}\hat{\beta})\\
+ & = & z_{i}(u_{i}-x_{i}^{\prime}(\hat{\beta}-\beta))\\
+ & = & z_{i}u_{i}-z_{i}x_{i}^{\prime}\left[\left(\sum x_{i}z_{i}^{\prime}\right)\hat{W}\left(\sum z_{i}x_{i}^{\prime}\right)\right]^{-1}\left(\sum x_{i}z_{i}^{\prime}\right)\hat{W}\left(\sum z_{i}u_{i}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Taking summation and multiplying both sides by 
+\begin_inset Formula $N^{-\nicefrac{1}{2}}$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{\sqrt{N}}\sum g_{i}(\hat{\beta}) & = & \left(I_{L}-\left(N^{-1}\sum z_{i}x_{i}^{\prime}\right)\left[\left(N^{-1}\sum x_{i}z_{i}^{\prime}\right)\hat{W}\left(nN^{-1}\sum z_{i}x_{i}^{\prime}\right)\right]^{-1}\right.\\
+ &  & \left.\cdot\left(N^{-1}\sum x_{i}z_{i}^{\prime}\right)\hat{W}\right)\left(\frac{1}{\sqrt{N}}\sum z_{i}u_{i}\right)\\
+ & = & B\cdot\bar{g}\\
+\bar{g} & = & \frac{1}{\sqrt{N}}{\displaystyle \sum_{i=1}^{n}}z_{i}u_{i}\begin{array}[b]{c}
+_{d}\\
+\longrightarrow
+\end{array}N(0,W^{-1})
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Hence,
+\begin_inset Formula 
+\[
+J=\bar{g}^{\prime}B^{\prime}\hat{W}B\bar{g}
+\]
+
+\end_inset
+
+We can write
+\begin_inset Formula 
+\[
+B^{\prime}\hat{W}B=C^{\prime}MC
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{W}^{-1}=\hat{C}^{\prime}\hat{C}$
+\end_inset
+
+ and 
+\begin_inset Formula $M=I_{L}-A(AA^{\prime})^{-1}A^{\prime}$
+\end_inset
+
+.
+ (We just applied a triangular decomposition on 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+.) 
+\begin_inset Formula $M$
+\end_inset
+
+ is known as an 
+\begin_inset Quotes eld
+\end_inset
+
+annihilator
+\begin_inset Quotes erd
+\end_inset
+
+ matrix, and it is idempotent, symmetric, and 
+\begin_inset Formula $\mbox{rank}(M)=L-K$
+\end_inset
+
+.
+ Now
+\begin_inset Formula 
+\[
+J=\bar{g}^{\prime}C^{\prime}MC\bar{g}
+\]
+
+\end_inset
+
+Since
+\begin_inset Formula 
+\[
+CW^{-1}C^{\prime}=C(C)^{-1}(C^{\prime})C^{\prime}=I_{L}
+\]
+
+\end_inset
+
+then
+\begin_inset Formula 
+\[
+C\bar{g}\begin{array}[b]{c}
+_{d}\\
+\longrightarrow
+\end{array}N(0,CW^{-1}C^{\prime})=N(0,I_{L})
+\]
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\[
+J=\left(N(0,I_{L})\right)^{\prime}M\left(N(0,I_{L})\right)\begin{array}[b]{c}
+_{d}\\
+\longrightarrow
+\end{array}\chi_{(L-K)}^{2}
+\]
+
+\end_inset
+
+The 
+\begin_inset Formula $J$
+\end_inset
+
+-test can be used to test the validity of additional IVs.
+ Here, 
+\begin_inset Formula $H_{0}:E\left(g_{i}\right)=0$
+\end_inset
+
+, i.e., all the IVs are valid.
+\end_layout
+
+\begin_layout Subsection*
+Weak IVs
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For simplicity, we will only consider the case of weak IVs for IV estimation,
+ but the results in this subsection can be extended to the GMM framework.
+ A weak IV occurs when the partial correlation, i.e., the relevance, between
+ 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ is small.
+ This leads to two serious consequences
+\end_layout
+
+\begin_layout Standard
+1.
+ 
+\begin_inset Formula $\hat{\beta}_{IV}$
+\end_inset
+
+ is inconsistent.
+\end_layout
+
+\begin_layout Standard
+2.
+ The standard errors,
+\begin_inset Formula $\mbox{se}\left(\hat{\beta}_{2SLS}\right)$
+\end_inset
+
+, are not shrinking as 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Consider the model
+\begin_inset Formula 
+\[
+y_{i}=\beta_{0}+x_{i}\beta_{1}+u_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is a scalar and possibly endogenous.
+ Suppose we have a single IV, 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, for 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ The linear projection of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ onto 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+x_{i}=\gamma_{0}+z_{i}\gamma_{1}+v_{i}
+\]
+
+\end_inset
+
+Suppose
+\begin_inset Formula 
+\[
+\gamma_{1}=\frac{c}{\sqrt{n}}
+\]
+
+\end_inset
+
+which means that 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is small.
+ Then,
+\begin_inset Formula 
+\[
+E\left(x_{i}z_{i}\right)=E\left(z_{i}^{2}\right)\cdot\frac{c}{\sqrt{n}}
+\]
+
+\end_inset
+
+and the sample analogue of 
+\begin_inset Formula $E(x_{i}z_{i})$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+n^{-1}{\displaystyle \sum_{i=1}^{N}x_{i}z_{i}=\frac{c}{\sqrt{n}}\cdot E\left(z_{i}^{2}\right)}
+\]
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\begin{eqnarray*}
+(\hat{\beta}_{IV}-\beta) & = & \left({\displaystyle \sum_{i=1}^{N}}z_{i}x_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}u_{i}\right)\\
+ & \begin{array}[b]{c}
+_{p}\\
+\longrightarrow
+\end{array} & \left[E\left(z_{i}x_{i}\right)\right]^{-1}E\left(u_{i}^{2}z_{i}^{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+which does not coverge in probability to 0.
+ Also,
+\begin_inset Formula 
+\[
+\sqrt{n}(\hat{\beta}_{IV}-\beta)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}\left[E(z_{i}x_{i})\right]^{-1}N\left(0,E(u_{i}^{2}z_{i}^{2})\right)
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+\mbox{Var}(\hat{\beta}_{IV})=\left[cEz_{i}^{2}\right]^{-1}E\left(u_{i}^{2}z_{i}^{2}\right)\left[cEz_{i}^{2}\right]^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let
+\begin_inset Formula 
+\[
+E\left(u_{i}^{2}z_{i}^{2}\right)=\sigma^{2}E(z_{i}^{2})
+\]
+
+\end_inset
+
+then
+\begin_inset Formula 
+\[
+\mbox{Var}(\hat{\beta}_{IV})=\frac{\sigma^{2}E(z_{i}^{2})^{-1}}{c}
+\]
+
+\end_inset
+
+which does not shrink as 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Control Function Approach
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the single-equation linear model:
+\begin_inset Formula 
+\begin{equation}
+y_{i}=x_{i}^{\prime}\beta+u_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $E\left(x_{i}u_{i}\right)\ne0$
+\end_inset
+
+.
+ Suppose we have a vector of IVs 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ such that 
+\begin_inset Formula $E\left(z_{i}u_{i}\right)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $E\left(z_{i}x_{i}\right)\neq0$
+\end_inset
+
+.
+ We perform a linear projection of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ onto 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ in response to the endogeneity of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+x_{i}=z_{i}^{\prime}\gamma+v_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $E\left(u_{i}v_{i}\right)\neq0$
+\end_inset
+
+.
+ The reason 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is endogenous is because 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, the error term in the linear projection, is related to 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+.
+ Then, we setup the linear projection of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ onto 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+u_{i}=\theta v_{i}+e_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $E\left(v_{i}e_{i}\right)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta=\frac{E\left(u_{i}v_{i}\right)}{E\left(v_{i}^{2}\right)}$
+\end_inset
+
+.
+ Also, 
+\begin_inset Formula $E(z_{i}e_{i})=0$
+\end_inset
+
+.
+ Plugging equation (60) into equation (58) yields
+\begin_inset Formula 
+\begin{equation}
+y_{i}=x_{i}^{\prime}\beta+\theta v_{i}+e_{i}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ is used to control for endogeneity.
+ Since 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is a linear combination of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+, then we must have 
+\begin_inset Formula $E(x_{i}e_{i})=E\left[e_{i}(z_{i}^{\prime}\gamma+v_{i})\right]=0$
+\end_inset
+
+.
+ However, 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ is unobserved, so we replace 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ by 
+\begin_inset Formula $\hat{v_{i}}=x_{i}-z_{i}^{\prime}\hat{\gamma}$
+\end_inset
+
+.
+ The 
+\series bold
+Control Function (CF) estimator
+\series default
+ of 
+\begin_inset Formula $\beta$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\hat{\beta}_{CF}$
+\end_inset
+
+, is obtained by regressing 
+\begin_inset Formula $y$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{v}_{i}$
+\end_inset
+
+.
+ It can be shown that 
+\begin_inset Formula $\hat{\beta}_{2SLS}=\hat{\beta}_{CF}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

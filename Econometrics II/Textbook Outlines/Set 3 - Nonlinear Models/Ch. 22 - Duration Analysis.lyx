@@ -1,0 +1,1290 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 22: Duration Analysis
+\end_layout
+
+\begin_layout Section*
+22.1
+\begin_inset space \quad{}
+\end_inset
+
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Some response variables in economics come in the form of a 
+\series bold
+duration
+\series default
+, which is the time elapsed until a certain event occurs.
+ A few examples include weeks unemployed, months spent on welfare, days
+ until arrest after incarceration, and quarters until an Internet firm files
+ for bankrupcy.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Duration analysis has its origins in what is typically called 
+\series bold
+survival analysis
+\series default
+, where the duration of interest is survival time of a subject.
+ In survival analysiss we are interested in how various treaments or demographic
+ characteristics affect surivval times.
+ In the social sciences, we are interested in any situation where an individual,
+ beings in an initial state and is either observed to exit the state or
+ is censored.
+ The calendar dates on which units enter the initial state is either observed
+ to exit the state or is censored.
+ The calendar dates on which units enter the initial state do not have to
+ be the same.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Traditional duration analysis begins by specifying a population distribution
+ for the duration, usually conditional on some explanatory variances (covariates
+) observed at the beginning of the duration.
+ Then we specify a distribution for the duration conditional on the covariates.
+ Any reasonable distribution reflects the fact that an unemployment duration
+ is nonnegative.
+ Once a comple conditional distribution has been specified, the same maximum
+ likelihood methods we studied in Chpater 19 for censored regression models
+ can be used.
+ In this framework, we are typically interested in estimating the effects
+ of the covariates on the expected duration.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Recent treatments of duration analysis tend to focus on the hazard funciton.
+ The hazard function allows us to approximate the proability of exiting
+ the initial state within a short interval, conditional on having survived
+ up to the starting time of the interval.
+ In econometric applications, hazard funcitons are usually conditional on
+ some covariates.
+ An important feature for policy analysis is allowing the hazard funciton
+ to depend on covariates that change over time.
+\end_layout
+
+\begin_layout Section*
+22.2
+\begin_inset space \quad{}
+\end_inset
+
+Hazard Functions
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The hazard function plays a central role in modern duration analysis.
+ In this section, we discuss various features of the hazard funciton, both
+ with and without covariates.
+\end_layout
+
+\begin_layout Subsection*
+22.2.1
+\begin_inset space \quad{}
+\end_inset
+
+Hazard Functions Without Covariates
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Often in this chapter it is convenient to distinguish random variables from
+ particular outcomes of random variables.
+ Let 
+\begin_inset Formula $T\geq0$
+\end_inset
+
+ denote the duration, which has some distribution in the population; 
+\begin_inset Formula $t$
+\end_inset
+
+ denotes a particular value of 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ (As with any econometric analysis, it is important to be very clear about
+ the relevant population.) In survival analysis, 
+\begin_inset Formula $T$
+\end_inset
+
+ is the length of time a subject lives.
+ Much of the current terminology in duration analysis comes from survival
+ applications.
+ For us, 
+\begin_inset Formula $T$
+\end_inset
+
+ is the time at which a person leave the initial state.
+ For example, if the initial state is unemployment, 
+\begin_inset Formula $T$
+\end_inset
+
+ woudl be the time, measured in, say, weeks, until a person becomes employed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The cumulative distribution function (cdf) of 
+\begin_inset Formula $T$
+\end_inset
+
+ is defined as
+\begin_inset Formula 
+\begin{equation}
+F(t)=P(T\leq t),\ t\geq0
+\end{equation}
+
+\end_inset
+
+The 
+\series bold
+survivor function
+\series default
+ is defined as 
+\begin_inset Formula $S(t)\equiv1-F(t)=P(T>t)$
+\end_inset
+
+, and this is the probability of 
+\begin_inset Quotes eld
+\end_inset
+
+surviving
+\begin_inset Quotes erd
+\end_inset
+
+ past time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ We assume in the rest of this section that 
+\begin_inset Formula $T$
+\end_inset
+
+ is continuous, and has a differentiable cdf because this assumption simplifies
+ statements of certain probabilities.
+ Discreteness in observed durations can be viewed as a consequence of the
+ sampling scheme.
+ Denote the density of 
+\begin_inset Formula $T$
+\end_inset
+
+ by 
+\begin_inset Formula $f(t)=\frac{dF}{dt}(t)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For 
+\begin_inset Formula $h>0$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+P(t\leq T<t+h|T\geq t)
+\end{equation}
+
+\end_inset
+
+is the probability of leaving the inital state in the interval 
+\begin_inset Formula $[t,t+h)$
+\end_inset
+
+ given survival up until time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ The 
+\series bold
+hazard function
+\series default
+ for 
+\begin_inset Formula $T$
+\end_inset
+
+ is defined as
+\begin_inset Formula 
+\begin{equation}
+\lambda(t)={\displaystyle \lim_{h\rightarrow0}}\frac{P(t\leq T<t+h|T\geq t)}{h}
+\end{equation}
+
+\end_inset
+
+For each 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda(t)$
+\end_inset
+
+ is the instantaneous rate of leaving per unit of time.
+ From equation (3) it follows that, for 
+\begin_inset Quotes eld
+\end_inset
+
+small
+\begin_inset Quotes erd
+\end_inset
+
+ h,
+\begin_inset Formula 
+\begin{equation}
+P(t\leq T\leq t+h|T\geq t)\approx\lambda(t)h
+\end{equation}
+
+\end_inset
+
+Thus, the hazard function can be used to approximate a conditional probability
+ in much the same way that the hieght of the density of 
+\begin_inset Formula $T$
+\end_inset
+
+ can be used to approximate an unconditional probability.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can express the hazard function in terms of the density and cdf very
+ simply.
+ First, write
+\begin_inset Formula 
+\[
+P(t\leq T<t+h|T\geq t)=\frac{P(t\leq T<t+h)}{P(T\geq t)}=\frac{F(t+h)-F(t)}{1-F(t)}
+\]
+
+\end_inset
+
+When the cdf is differentiable, we can take the limit of the right-hand
+ side, divided by 
+\begin_inset Formula $h$
+\end_inset
+
+, as 
+\begin_inset Formula $h$
+\end_inset
+
+ approaches zero from above:
+\begin_inset Formula 
+\begin{equation}
+\lambda(t)={\displaystyle \lim_{h\rightarrow0}}\frac{F(t+h)-F(t)}{h}\cdot\frac{1}{1-F(t)}=\frac{f(t)}{1-F(t)}=\frac{f(t)}{S(t)}
+\end{equation}
+
+\end_inset
+
+Because the derivative of 
+\begin_inset Formula $S(t)$
+\end_inset
+
+ is 
+\begin_inset Formula $-f(t)$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{equation}
+\lambda(t)=-\frac{d\log S(t)}{dt}
+\end{equation}
+
+\end_inset
+
+and, using 
+\begin_inset Formula $F(0)=0$
+\end_inset
+
+, we can integrate to get
+\begin_inset Formula 
+\begin{equation}
+F(t)=1-\exp\left[-{\displaystyle \int_{0}}^{t}\lambda(s)\ ds\right],\ t\geq0
+\end{equation}
+
+\end_inset
+
+Straightforward differentiation of equation (7) gives the density of 
+\begin_inset Formula $T$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{equation}
+f(t)=\lambda(t)\exp\left[-{\displaystyle \int_{0}^{t}}\lambda(s)\ ds\right]
+\end{equation}
+
+\end_inset
+
+Therefore, all proabilities can be computed using the hazard function.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The shape of the hazard funciton is of primary interest in many empirical
+ applications.
+ In the simplest case, the hazard function is a constant
+\begin_inset Formula 
+\begin{equation}
+\lambda(t)=\lambda,\ \forall\ t\geq0
+\end{equation}
+
+\end_inset
+
+This function means that the process driving 
+\begin_inset Formula $T$
+\end_inset
+
+ is 
+\emph on
+memoryless
+\emph default
+: the probability of exit in the next interval does not depend on how much
+ time has been spend in the initial state.
+ From equation (7), a constant hazard implies
+\begin_inset Formula 
+\[
+F(t)=1-\exp(-\lambda t)
+\]
+
+\end_inset
+
+which is the cdf of the 
+\series bold
+exponential distribution
+\series default
+.
+ Conversely, if 
+\begin_inset Formula $T$
+\end_inset
+
+ has an exponential distribution, it has a constant hazard.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When the hazard funciton is not constant, we say that the process exhibits
+ 
+\series bold
+duration dependence
+\series default
+.
+ Assuming that 
+\begin_inset Formula $\lambda(\cdot)$
+\end_inset
+
+ is differentialbe, there is 
+\series bold
+positive duration
+\series default
+ 
+\series bold
+dependence
+\series default
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+ if 
+\begin_inset Formula $\nicefrac{d\lambda(t)}{dt}>0$
+\end_inset
+
+; if 
+\begin_inset Formula $\nicefrac{d\lambda(t)}{dt}>0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t>0$
+\end_inset
+
+, then the process exhibits posititive duration dependence.
+ With positive duration dependence, the probability of exiting the initial
+ state increases the longer one is in the initial state.
+ If the derivative is negative, then there is 
+\series bold
+negative duration dependence
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $T$
+\end_inset
+
+ has a 
+\series bold
+Weibull distribution
+\series default
+, its cdf is given by 
+\begin_inset Formula $F(t)=1-\exp(-\gamma t^{\alpha})$
+\end_inset
+
+, where 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ are nonnegative parameters.
+ The density is 
+\begin_inset Formula $f(t)=\gamma\alpha t^{\alpha-1}\exp(-\gamma t^{\alpha}).$
+\end_inset
+
+ By equation (5), the hazard function is
+\begin_inset Formula 
+\begin{equation}
+\lambda(t)=\nicefrac{f(t)}{S(t)}=\gamma\alpha t^{\alpha-1}
+\end{equation}
+
+\end_inset
+
+When 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+, the Weibull distribution reduces to the exponential with 
+\begin_inset Formula $\lambda=\gamma$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\alpha>1$
+\end_inset
+
+, the hazard is monotonically increasing, so the hazard everywhere exhibits
+ positive duration dependence; for 
+\begin_inset Formula $\alpha<1$
+\end_inset
+
+, the hazard is monotonically decreasing.
+ Provided we think the hazard is monotonically increasing or decreasing,
+ the Weibull distribution is a relatively simple way to caputre the duration
+ dependence.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We often want to specify the hazard directly, in which case we can use equation
+ (7) to determine the duration distribution.
+\end_layout
+
+\begin_layout Subsection*
+22.2.2
+\begin_inset space \quad{}
+\end_inset
+
+Hazard Functions Conditional on Time-Invariant Covariates
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Usually in economics we are interested in hazard functions conditional on
+ a set of covariates or regressors.
+ When these do not change over time, as is often the case given the way
+ many duration data sets are collected, then we simply define the hazard
+ (and all other features of 
+\begin_inset Formula $T$
+\end_inset
+
+) conditional on the covariates.
+ Thus, the conditional hazard is
+\begin_inset Formula 
+\[
+\lambda(t;x)={\displaystyle \lim_{h\rightarrow0}}\frac{P(t\leq T<t+h|T\geq t,x)}{h}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x$
+\end_inset
+
+ is a vector of explanatory variables.
+ All the formulas from the previous subsection continue to hold provided
+ the cdf and density are defined conditional on 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ For example, if the conditional cdf 
+\begin_inset Formula $F(\cdot|x)$
+\end_inset
+
+ is differentialbe, we have
+\begin_inset Formula 
+\begin{equation}
+\lambda(t;x)=\frac{f(t|x)}{1-F(t|x)}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $f(\cdot|x)$
+\end_inset
+
+ is the density of 
+\begin_inset Formula $T$
+\end_inset
+
+ given 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Often we are interested in the partial effects of the 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ on 
+\begin_inset Formula $\lambda(t;x)$
+\end_inset
+
+, which are defined as partial derivatives for continuous 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ and as differences for discrete 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If the durations start at different calendar dates, which is usually the
+ case, we can include indicators for different starting dates in the covariates.
+ These allow us to control for seasonal differences in duration distributions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An especially important class of models with time-invariant regressors consists
+ of 
+\series bold
+proportional hazard models.
+
+\series default
+ A proportional hazard model can be written as
+\begin_inset Formula 
+\begin{equation}
+\lambda(t;x)=\kappa(x)\lambda_{0}(t)
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\kappa(\cdot)>0$
+\end_inset
+
+ is a positive funciton of 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{0}(t)>0$
+\end_inset
+
+ is called the 
+\series bold
+baseline hazard
+\series default
+.
+ The baseline hazard is common to all units in the population; individual
+ hazard functions differ proportionately based on a function 
+\begin_inset Formula $\kappa(x)$
+\end_inset
+
+ of observed covariates.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Typically, 
+\begin_inset Formula $\kappa(\cdot)$
+\end_inset
+
+ is parameterized as 
+\begin_inset Formula $\kappa(x)=\exp(x^{\prime}\beta)$
+\end_inset
+
+, where 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is a vector of parameters.
+ Then
+\begin_inset Formula 
+\begin{equation}
+\log\lambda(t;x)=x^{\prime}\beta+\log\lambda_{0}(t)
+\end{equation}
+
+\end_inset
+
+and 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ measures the semielasticity of the hazard with respect to 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ is the log of an underlying variable 
+\begin_inset Formula $z_{j}$
+\end_inset
+
+, then 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ is the elasticity of the hazard with respect to 
+\begin_inset Formula $z_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Occasionally we are interested only in how the covariates shift the hazard
+ funciton, in which case estimation of 
+\begin_inset Formula $\lambda_{0}$
+\end_inset
+
+ is not necessary.
+ In economics, much of the time we are interested in the shape of the baseline
+ hazard.
+ If in the Weibull hazard function (10) we replace 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ with 
+\begin_inset Formula $\exp(x^{\prime}\beta)$
+\end_inset
+
+, where the first element of 
+\begin_inset Formula $x$
+\end_inset
+
+ is unity, we obtain a proportional hazard model with 
+\begin_inset Formula $\lambda_{0}(t)\equiv\alpha t^{\alpha-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+22.3
+\begin_inset space \quad{}
+\end_inset
+
+Analysis of Single-Spell Data With Time-Invariant Covariates
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We assume that the population of interest is individuals entering the initial
+ state during a given interval of time, say 
+\begin_inset Formula $[0,b]$
+\end_inset
+
+, where 
+\begin_inset Formula $b>0$
+\end_inset
+
+ is a known constant.
+ (Naturally, 
+\begin_inset Quotes eld
+\end_inset
+
+individual
+\begin_inset Quotes erd
+\end_inset
+
+ can be replaced with any population unit of interest, such as 
+\begin_inset Quotes eld
+\end_inset
+
+family
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+firm.
+\begin_inset Quotes erd
+\end_inset
+
+) As in all econometric contexts, it is very important to be explicit about
+ the underlying population.
+ By convention, we let zero denote the earliest canedar ate that an individual
+ can enter the initial state, and 
+\begin_inset Formula $b$
+\end_inset
+
+ is the last possible date.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In using the methods of this section, we typically ignor the fact that durations
+ are often grouped into discrete intervals and treat them as continously
+ distributed.
+ If we want to explicitly recognize the discreteness of the measured durations,
+ we should treat them as grouped data.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We restrict attention to 
+\series bold
+single-spell data
+\series default
+.
+ That is, we use, at most, one completed spell per individual.
+ If, after leaving the initial state, an individual subsequently reenters
+ the initial state in the interval 
+\begin_inset Formula $[0,b]$
+\end_inset
+
+, we ignore this information.
+ In addition, covariates in the analysisis are time invariant, which means
+ we collect covariates on individuals at a given point in time, usually
+ at the beginning of the spell, and we do not re-collect data on the covariates
+ during the course of the spell.
+\end_layout
+
+\begin_layout Subsection*
+22.3.1
+\begin_inset space \quad{}
+\end_inset
+
+Flow Sampling
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+With 
+\series bold
+flow sampling
+\series default
+, we sample individuals who enter the state at some point during the interval
+ 
+\begin_inset Formula $[0,b]$
+\end_inset
+
+, and we record the length of time each individual is in the initial state.
+ We collect data on covariates known at the time the individual entered
+ the initial state.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Flow data are usually subject to 
+\series bold
+right cenoring
+\series default
+.
+ That is, after a certain amount of time, we stop following the individuals
+ in the sample, which we must do in order to analyze the data.
+ (Right censoring is the only kind that occurs with flow data, so we will
+ often refer to right censoring as 
+\begin_inset Quotes eld
+\end_inset
+
+censoring
+\begin_inset Quotes erd
+\end_inset
+
+ in this and the next subsection.) For individuals who have completed their
+ spells in the initial state, we observe the exact duration.
+ But for those still in the initial state state, we only know that the durating
+ lasted as long as the tracking period.
+\end_layout
+
+\begin_layout Subsection*
+22.3.2
+\begin_inset space \quad{}
+\end_inset
+
+Maximum Likelihood Estimation With Censored Flow Data
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For a random draw 
+\begin_inset Formula $i$
+\end_inset
+
+ from the population, let 
+\begin_inset Formula $a_{i}\in[0,b]$
+\end_inset
+
+ denot the time at which individual 
+\begin_inset Formula $i$
+\end_inset
+
+ enters the initial state (the 
+\begin_inset Quotes eld
+\end_inset
+
+starting time
+\begin_inset Quotes erd
+\end_inset
+
+), let 
+\begin_inset Formula $t_{i}^{*}$
+\end_inset
+
+ denote the length of time in the initial state (the duration), and let
+ 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ denote the vector of observed covariates.
+ We assume that 
+\begin_inset Formula $t_{i}^{*}$
+\end_inset
+
+ has a continuous conditional density 
+\begin_inset Formula $f(t|x_{i};\theta)$
+\end_inset
+
+, where 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is the vector of unknown parameters.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Without right censoring we would observe a random sample 
+\begin_inset Formula $(a_{i},t_{i}^{*},x_{i})$
+\end_inset
+
+, and estimation would be a standard exercise in conditional maximum liklihood.
+ To account for right censoring, we assume that the observed duration, 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+, is obtained as
+\begin_inset Formula 
+\begin{equation}
+t_{i}=\min(t_{i}^{*},c_{i})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is the censoring time for individual 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ In some cases, 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is constant across 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We assume that, conditional on the covariates, the true duration is independent
+ of the starting point, 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+, and the censoring time, 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+D(t_{i}^{*}|x_{i},a_{i},c_{i})=D(t_{i}^{*}|x_{i})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $D(\cdot|\cdot)$
+\end_inset
+
+ denotes the conditional distribution.
+ Assumption (15) clearly holds when 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ are constant for all 
+\begin_inset Formula $i$
+\end_inset
+
+, but it holds under much weaker assumptions.
+ Sometimes 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is constant for all 
+\begin_inset Formula $i$
+\end_inset
+
+, in which case assumption (15) holds when the duration is independent of
+ the starting time, conditional on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ If there are seasonal effects on the duration, then we may have to put
+ dummy variables for different starting dates in 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ to ensure that assumption (15) holds.
+ This approach would ensure that assumption (15) holds when a fixed calendar
+ date is used for censoring implying that 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is not constant across 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Assumption (15) holds for certian nonstandard censoring schemes, too.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Under assumption (15), the distribution of 
+\begin_inset Formula $t_{i}^{*}$
+\end_inset
+
+ given 
+\begin_inset Formula $(x_{i},a_{i},c_{i})$
+\end_inset
+
+ does not depend on 
+\begin_inset Formula $(a_{i},c_{i})$
+\end_inset
+
+.
+ Therefore, if the duration is not censored, the density of 
+\begin_inset Formula $t_{i}=t_{i}^{*}$
+\end_inset
+
+ given 
+\begin_inset Formula $(x_{i},a_{i},c_{i})$
+\end_inset
+
+ is simply 
+\begin_inset Formula $f(t|x_{i};\theta)$
+\end_inset
+
+.
+ The probability that 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ is censored is
+\begin_inset Formula 
+\[
+P(t_{i}^{*}\geq c_{i}|x_{i})=1-F(c_{i}|x_{i};\theta)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $F(t|x_{i};\theta)$
+\end_inset
+
+ is the conditional cdf of 
+\begin_inset Formula $t_{i}^{*}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Letting 
+\begin_inset Formula $d_{i}$
+\end_inset
+
+ be a censoring indicator (
+\begin_inset Formula $d_{i}=1$
+\end_inset
+
+ if uncensored, 
+\begin_inset Formula $d_{i}=0$
+\end_inset
+
+ if censored), the conditional likelihood for observation 
+\begin_inset Formula $i$
+\end_inset
+
+ can be written as
+\begin_inset Formula 
+\begin{equation}
+f(t_{i}|x_{i};\theta)^{d_{i}}\left[1-F(t_{i}|x_{i};\theta)\right]^{(1-d_{i})}
+\end{equation}
+
+\end_inset
+
+Importantly, neither the starting times, 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+, nor the length of the interval, 
+\begin_inset Formula $b$
+\end_inset
+
+, plays a role in the analysis.
+ (in fact, in the vast majority of treatments of flow data, 
+\begin_inset Formula $b$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ are not even introduced.
+ However, it is important to know that the reason 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ is not relevant for the analysis of flow data is the conditional independence
+ assumption in equation (15).) By contrast, the censoring times 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ do appear in the likelihood for censored observations because then 
+\begin_inset Formula $t_{i}=c_{i}$
+\end_inset
+
+.
+ Given data on 
+\begin_inset Formula $(t_{i},d_{i},x_{i})$
+\end_inset
+
+ for a random sample of size 
+\begin_inset Formula $N$
+\end_inset
+
+, the maximum likelihood estimator of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is obtained by maximizing
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{i=1}^{N}}\left\{ d_{i}\log\left[f(t_{i}|x_{i};\theta)\right]+\left(1-d_{i}\right)\log\left[1-F(t_{i}|x_{i};\theta)\right]\right\} 
+\end{equation}
+
+\end_inset
+
+For the choices of 
+\begin_inset Formula $f(\cdot|x;\theta)$
+\end_inset
+
+ used in practice, the conditional MLE regularity conditions old, and the
+ MLE is 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+-consistent and asymptotically normal.
+ (If there is no censoring, 
+\begin_inset Formula $d_{i}=1$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+ and the second term in expression (17) is dropped.) Because the hazard function
+ can be expressed as in equation (11), once we specify 
+\begin_inset Formula $f$
+\end_inset
+
+, the hazard function can be estimated once we have the MLE, 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

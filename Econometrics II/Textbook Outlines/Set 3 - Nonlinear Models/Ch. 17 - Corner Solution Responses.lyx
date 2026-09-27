@@ -1,0 +1,2584 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 17: Corner Solution Responses
+\end_layout
+
+\begin_layout Section*
+17.1
+\begin_inset space \quad{}
+\end_inset
+
+Motivation and Examples
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now turn to models for limited dependent variables that have features
+ of both continuous and discrete random variables.
+ In particular, they are continuously distributed over a range of values,
+ but they take on one or two focal points with positive probability.
+ Such variables arise often in modeling individual, family, or firm behavior,
+ and even when studyng outcomes at a more aggreagted level.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The most common case is when the nonnegative response variable, 
+\begin_inset Formula $y$
+\end_inset
+
+, has (roughly) continuous distribution over strictly positive values, but
+ 
+\begin_inset Formula $P(y=0)>0$
+\end_inset
+
+.
+ We call such a variable a 
+\series bold
+corner solution response
+\emph on
+ 
+\series default
+\emph default
+or 
+\series bold
+corner solution outcome
+\series default
+, where the corner in this case is at zero.
+ Corners can occur at other values, too.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Corner solution responses are often called 
+\begin_inset Quotes eld
+\end_inset
+
+censored responses,
+\begin_inset Quotes erd
+\end_inset
+
+ a label that comes from situations with actual data censoring.
+ Consequently, the leading model that we cover in this chapter is sometimes
+ called a 
+\begin_inset Quotes eld
+\end_inset
+
+censored regression model.
+\begin_inset Quotes erd
+\end_inset
+
+ Instead, we use the somewhat conventional name 
+\series bold
+corner solution model
+\series default
+ because we are trying to capture features of an observed corener solution
+ response.
+ The fact that observations of a dependent variable may pile up at certain
+ focal points means that we might want to use special econometric models.
+ But it is not a problem of data observability.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In Chapter 19, we will study true data-censoring problems.
+ There, we will be interested in an underlying response variable that we
+ do not fully observe because it 
+\emph on
+is
+\emph default
+ censored above or below certain values.
+ The econometric models for corner solution responses and censored data
+ have similar statistical structures, but the ways one uses the estimates
+ and thinks about violations of underlying assumptions are different.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the population, let 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ be the corner solution response and let 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ be the column vector of covariates (which contains unity as its first element).
+ Assume
+\begin_inset Formula 
+\begin{equation}
+y_{i}=\max(0,x_{i}^{\prime}\beta+u_{i})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is unobservable.
+ Naturally, 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ could have a variety of distributions, and its conditional distribution
+ 
+\begin_inset Formula $D(u_{i}|x_{i})$
+\end_inset
+
+ could depend on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ But we will mostly work with the assumption
+\begin_inset Formula 
+\begin{equation}
+u_{i}|x_{i}\sim N(0,\sigma^{2})
+\end{equation}
+
+\end_inset
+
+which implies that 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Assumptions (1) and (2) define the 
+\series bold
+type I Tobit model
+\series default
+.
+ It is handy to have a notation for when a variable follows a Tobit model.
+ If 
+\begin_inset Formula $D(y_{i}|x_{i})$
+\end_inset
+
+ is determined by (1) and (2), we write 
+\begin_inset Formula $D(y_{i}|x_{i})=\mbox{Tobit}(x_{i}^{\prime}\beta,\sigma^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The normality assumption for 
+\begin_inset Formula $u$
+\end_inset
+
+ means that it has unbounded support, and, because 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, there is always positive probability (for any 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and any value of 
+\begin_inset Formula $\beta$
+\end_inset
+
+) that 
+\begin_inset Formula $x_{i}^{\prime}\beta+u<0$
+\end_inset
+
+, which means 
+\begin_inset Formula $P(y_{i}=0|x_{i})>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Equation (1) has the benefit of directly relating the variable of interest,
+ 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, to observed explanatory variables and an unobservable.
+ Nevertheless, sometimes it is useful to write (1) as a latent variable
+ model:
+\begin_inset Formula 
+\begin{gather}
+y_{i}^{*}=x_{i}^{\prime}\beta+u_{i};\ u_{i}|x_{i}\sim N(0,\sigma^{2})\\
+y_{i}=\max(0,y^{*})
+\end{gather}
+
+\end_inset
+
+The latent variable formulation has the danger of suggesting that we are
+ interested in 
+\begin_inset Formula $E(y_{i}^{*}|x_{i})$
+\end_inset
+
+, but it will be valuable for certain derivations later on.
+ Given (3) the latent variable 
+\begin_inset Formula $y_{i}^{*}$
+\end_inset
+
+ satisfies the classical linear model assumptions.
+\end_layout
+
+\begin_layout Section*
+17.2
+\begin_inset space \quad{}
+\end_inset
+
+Useful Expressions for Type I Tobit
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Because 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is a nonlinear function of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+, we will want to derive various features of its conditional distribution,
+ 
+\begin_inset Formula $D(y_{i}|x_{i})$
+\end_inset
+
+.
+ Given that assumption (2) fully specifies 
+\begin_inset Formula $D(u_{i}|x_{i})$
+\end_inset
+
+, we can fully characterize 
+\begin_inset Formula $D(y_{i}|x_{i})$
+\end_inset
+
+.
+ But before doing so, it is useful to derive general features of the conditional
+ mean and median of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ that do not require full distributional assumptions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+First, suppose 
+\begin_inset Formula $E(u_{i}|x_{i})=0$
+\end_inset
+
+.
+ Then,because the function 
+\begin_inset Formula $g(z)\equiv\max(0,z)$
+\end_inset
+
+ is convex, it follows from the conditional Jensen's inequality that
+\begin_inset Formula 
+\begin{equation}
+E(y_{i}|x_{i})\geq\max(0,E(x_{i}^{\prime}\beta+u_{i}|x_{i}))=\max(0,x_{i}^{\prime}\beta)
+\end{equation}
+
+\end_inset
+
+Therefore, although we cannot find 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+ without further assumptions, we do have a lower bound as a function of
+ 
+\begin_inset Formula $x_{i}^{\prime}\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Next, assume that rather than a zero mean, 
+\begin_inset Formula $\mbox{Med}(u_{i}|x_{i})=0$
+\end_inset
+
+.
+ Unlike the expected value, the median operator pass through monotonic functions
+, and the function 
+\begin_inset Formula $g(z)$
+\end_inset
+
+ is monotonically increasing (though not strictly so).
+ Therefore,
+\begin_inset Formula 
+\begin{equation}
+\mbox{Med}(y_{i}|x_{i})=\max(0,\mbox{Med}(x_{i}^{\prime}\beta+u_{i}|x_{i}))=\max(0,x_{i}^{\prime}\beta)
+\end{equation}
+
+\end_inset
+
+and so, without any restrictions on 
+\begin_inset Formula $D(u_{i}|x_{i})$
+\end_inset
+
+ other than a zero median (and certainly independence between 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is not required), we have 
+\begin_inset Formula $\mbox{Med}(y_{i}|x_{i})$
+\end_inset
+
+ as a known function of 
+\begin_inset Formula $x_{i}^{\prime}\beta$
+\end_inset
+
+.
+ From equations (5) and (6), if 
+\begin_inset Formula $D(u_{i}|x_{i})$
+\end_inset
+
+ is symmetric about zero, it follows that 
+\begin_inset Formula $E(y_{i}|x_{i})\geq\mbox{Med}(y_{i}|x_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and has a normal distribution, we can find an explicit expression for 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+.
+ We first derive 
+\begin_inset Formula $P(y_{i}>0|x_{i})$
+\end_inset
+
+ and 
+\begin_inset Formula $E(y_{i}|x_{i},y_{i}>0)$
+\end_inset
+
+, which are of interest in their own right.
+ Then, we use the law of iterated expectations to obtain 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray}
+E(y_{i}|x_{i}) & = & P(y_{i}=0|x_{i})\cdot0+P(y_{i}>0|x_{i})\cdot E(y_{i}|x_{i}y_{i}>0)\nonumber \\
+ & = & P(y_{i}>0|x_{i})\cdot E(y_{i}|x_{i}y_{i}>0)
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Derive 
+\begin_inset Formula $P(y_{i}>0|x_{i})$
+\end_inset
+
+ is easy.
+ Define the binary variable 
+\begin_inset Formula $w_{i}=1$
+\end_inset
+
+ if 
+\begin_inset Formula $y_{i}>0$
+\end_inset
+
+, 
+\begin_inset Formula $w_{i}=0$
+\end_inset
+
+ if 
+\begin_inset Formula $y_{i}=0$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ follows a probit model:
+\begin_inset Formula 
+\begin{eqnarray}
+P(w_{i}=1|x_{i}) & = & P(y_{i}^{*}>0|x_{i})\nonumber \\
+ & = & P(u_{i}>-x_{i}^{\prime}\beta|x_{i})\nonumber \\
+ & = & P\left(\frac{u_{i}}{\sigma}<\frac{x_{i}^{\prime}\beta}{\sigma}\right)\nonumber \\
+P(w_{i}=1|x_{i}) & = & \Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)
+\end{eqnarray}
+
+\end_inset
+
+One implication of equation (8) is that 
+\begin_inset Formula $\gamma\equiv\nicefrac{\beta}{\sigma}$
+\end_inset
+
+, but not 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ separately, can be consistently estimated from a probit of 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To derive 
+\begin_inset Formula $E(y_{i}|x_{i}y_{i}>0)$
+\end_inset
+
+, we need the following fact about the normal distribution: if 
+\begin_inset Formula $z\sim N(0,1)$
+\end_inset
+
+, then, for any constant 
+\begin_inset Formula $c$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+E(z|z>c)=\frac{\phi(c)}{1-\Phi(c)}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\phi(\cdot)$
+\end_inset
+
+ is the standard normal density function.
+ (This is easily shown by noting that the density of 
+\begin_inset Formula $z$
+\end_inset
+
+ given 
+\begin_inset Formula $z>c$
+\end_inset
+
+ is 
+\begin_inset Formula $\nicefrac{\phi(\mathscr{Z})}{\left[1-\Phi(c)\right]}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathscr{Z}>c$
+\end_inset
+
+, and then integrating 
+\begin_inset Formula $\mathscr{Z}\phi(\mathscr{Z})$
+\end_inset
+
+ from 
+\begin_inset Formula $c$
+\end_inset
+
+ to 
+\begin_inset Formula $\infty$
+\end_inset
+
+.) Therefore, if 
+\begin_inset Formula $u_{i}\sim N(0,\sigma^{2})$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+E(u_{i}|u_{i}>c)=\sigma E\left(\left.\frac{u_{i}}{\sigma}\right|\frac{u_{i}}{\sigma}>\frac{c}{\sigma}\right)=\sigma\left[\frac{\phi(\nicefrac{c}{\sigma})}{1-\Phi(\nicefrac{c}{\sigma})}\right]
+\]
+
+\end_inset
+
+We can use this equation to find 
+\begin_inset Formula $E(y_{i}|x_{i},y_{i}>0)$
+\end_inset
+
+ when 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ follows a Tobit model:
+\begin_inset Formula 
+\begin{equation}
+E(y_{i}|x_{i},y_{i}>0)=x_{i}^{\prime}\beta+E(u_{i}|u_{i}>-x_{i}^{\prime}\beta)=x_{i}^{\prime}\beta+\sigma\left[\frac{\phi(\nicefrac{x_{i}^{\prime}\beta}{\sigma})}{\Phi(\nicefrac{x_{i}^{\prime}\beta}{\sigma})}\right]
+\end{equation}
+
+\end_inset
+
+since 
+\begin_inset Formula $1-\Phi(\nicefrac{-x_{i}^{\prime}\beta}{\sigma})=\Phi(\nicefrac{-x_{i}^{\prime}\beta}{\sigma})$
+\end_inset
+
+.
+ Although it is not obvious from looking at equation (9), the right-hand
+ side is positive for any values of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For any 
+\begin_inset Formula $c$
+\end_inset
+
+, the quantity 
+\begin_inset Formula $\lambda(c)\equiv\nicefrac{\phi(c)}{\Phi(c)}$
+\end_inset
+
+is called the 
+\series bold
+inverse Mills ratio
+\series default
+.
+ Thus, 
+\begin_inset Formula $E(y_{i}|x_{i},y_{i}>0)$
+\end_inset
+
+ is the sum of 
+\begin_inset Formula $x_{i}^{\prime}\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ times the inverse Mills ratio evaluated at 
+\begin_inset Formula $\nicefrac{x_{i}^{\prime}\beta}{\sigma}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+ is a continuous explanatory variable, then
+\begin_inset Formula 
+\[
+\frac{\partial E(y_{i}|x_{i},y_{i}>0)}{\partial x_{ij}}=\beta_{j}+\beta_{j}\left[\frac{d\lambda}{dc}(\nicefrac{x_{i}^{\prime}\beta}{\sigma})\right]
+\]
+
+\end_inset
+
+assuming that 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ is not functionally related to other regressors.
+ By differentiating 
+\begin_inset Formula $\lambda(c)=\nicefrac{\phi(c)}{\Phi(c)}$
+\end_inset
+
+, it can be shown that 
+\begin_inset Formula $\frac{d\lambda}{dc}=-\lambda(c)\left[c+\lambda(c)\right]$
+\end_inset
+
+, and therefore,
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial E(y_{i}|x_{i},y_{i}>0)}{\partial x_{Ij}}=\beta_{j}\left\{ 1-\lambda(\nicefrac{x_{i}^{\prime}\beta}{\sigma})\left[\nicefrac{x_{i}^{\prime}\beta}{\sigma}+\lambda(\nicefrac{x_{i}^{\prime}\beta}{\sigma})\right]\right\} 
+\end{equation}
+
+\end_inset
+
+This equation shows that the partial effect of 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ on 
+\begin_inset Formula $E(y_{i}|x_{i},y_{i}>0)$
+\end_inset
+
+ is not entirely determined by 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+; there is an adjustment factor multiplying 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+, the term in 
+\begin_inset Formula $\{\cdot\}$
+\end_inset
+
+, that depends on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ through the index 
+\begin_inset Formula $\nicefrac{x_{i}^{\prime}\beta}{\sigma}$
+\end_inset
+
+.
+ We can use the fact that if 
+\begin_inset Formula $z\sim N(0,1)$
+\end_inset
+
+, then 
+\begin_inset Formula $\mbox{Var}(z|z>-c)=1-\lambda(c)\left[c+\lambda(c)\right]$
+\end_inset
+
+ for any 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+, which implies that the adjustment factor in (10), call it 
+\begin_inset Formula $\theta(\nicefrac{x_{i}^{\prime}\beta}{\sigma})=\left\{ 1-\lambda(\nicefrac{x_{i}^{\prime}\beta}{\sigma})\left[\nicefrac{x_{i}^{\prime}\beta}{\sigma}+\lambda(\nicefrac{x_{i}^{\prime}\beta}{\sigma})\right]\right\} $
+\end_inset
+
+, is strictly between zero and one.
+ Therefore, the sign of 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ is the same as the sign of the partial effect of 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+.
+ Other functional forms for 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+ are easily handled.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+All of the usual economic quantities such as elasticites can be computed.
+ The elasticity of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $x_{i1}$
+\end_inset
+
+, conditional on 
+\begin_inset Formula $y_{i}>0$
+\end_inset
+
+, is
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial E(y_{i}|x_{i},y_{i}>0)}{\partial x_{i1}}\cdot\frac{x_{i1}}{E(y_{i}|x_{i},y_{i}>0)}
+\end{equation}
+
+\end_inset
+
+and equations (9) and (10) can be used to find the elasticity when 
+\begin_inset Formula $x_{i1}$
+\end_inset
+
+ appears in levels form.
+ If 
+\begin_inset Formula $z_{i1}$
+\end_inset
+
+ appears in logarithmic form, the elasticity is obtained simply as 
+\begin_inset Formula $\nicefrac{\partial\log E(y_{i}|x_{i},y_{i}>0)}{\partial\log(z_{i1})}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $x_{i1}$
+\end_inset
+
+ is a binary variable, the effect of interestis obtained as the difference
+ between 
+\begin_inset Formula $E(y_{i}|x_{i},y_{i}>0)$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{i1}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i1}=0$
+\end_inset
+
+.
+ Other discrete variables can be handled similarly.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can also compute 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+ from equation (7).
+\begin_inset Formula 
+\begin{eqnarray}
+E(y_{i}|x_{i}) & = & P(y_{i}>0|x_{i})\cdot E(y_{i}|x_{i}y_{i}>0)\nonumber \\
+ & = & \Phi(\nicefrac{x_{i}^{\prime}\beta}{\sigma})\left[x_{i}^{\prime}\beta+\sigma\lambda(\nicefrac{x_{i}^{\prime}\beta}{\sigma})\right]=\Phi(\nicefrac{x_{i}^{\prime}\beta}{\sigma})x_{i}^{\prime}\beta+\sigma\phi(\nicefrac{x_{i}^{\prime}\beta}{\sigma})
+\end{eqnarray}
+
+\end_inset
+
+We can find the partial derivatives of 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+ with respect to continuous 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+ using the chaing rule.
+ In examples where 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is some quantity chosen by individuals, this derivative accounts for the
+ fact that some people who start at 
+\begin_inset Formula $y_{i}=0$
+\end_inset
+
+ may switch to 
+\begin_inset Formula $y_{i}>0$
+\end_inset
+
+ when 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+ changes.
+ Formally,
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial E(y_{i}|x_{i})}{\partial x_{ij}} & = & \frac{\partial P(y_{i}>0|x_{i})}{\partial x_{ij}}\cdot E(y_{i}|x_{i},y_{i}>0)+P(y_{i}>0|x_{i})\cdot\frac{\partial E(y_{i}|x_{i},y_{i}>0)}{\partial x_{ij}}\\
+\frac{\partial E(y_{i}|x_{i})}{\partial x_{ij}} & = & \Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\beta_{j}
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The estimated scale factor for a given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $\Phi\left(\nicefrac{x_{i}^{\prime}\hat{\beta}}{\hat{\sigma}}\right)$
+\end_inset
+
+.
+ This scale factor has a very interesting interpretation: 
+\begin_inset Formula $\Phi\left(\nicefrac{x_{i}^{\prime}\hat{\beta}}{\hat{\sigma}}\right)=\hat{P}(y_{i}>0|x_{i})$
+\end_inset
+
+; that is, 
+\begin_inset Formula $\Phi\left(\nicefrac{x_{i}^{\prime}\hat{\beta}}{\hat{\sigma}}\right)$
+\end_inset
+
+ is the estimated probability of observing a positive response given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\Phi\left(\nicefrac{x_{i}^{\prime}\hat{\beta}}{\hat{\sigma}}\right)$
+\end_inset
+
+ is close to one, then it is unlikely we observe 
+\begin_inset Formula $y_{i}=0$
+\end_inset
+
+ for a given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, and the adjustment factor becomes unimportant.
+ We can evaluate 
+\begin_inset Formula $\Phi\left(\nicefrac{x_{i}^{\prime}\hat{\beta}}{\hat{\sigma}}\right)$
+\end_inset
+
+ at interesting values of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ to determine how the estimated partial effects change as the covariates
+ change.
+ One possibility is to plug in mean values, although this need not correspond
+ to any particular population unit when 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ contains discrete elements (and even sometimes when 
+\begin_inset Formula $x$
+\end_inset
+
+ contains all continuous elements).
+ We can use median values, or plug in various quantiles.
+ Often it is useful to have a single scale factor, and the scale factor
+ that delivers APEs is probably the most useful.
+ The APE for a continuous variable 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+ is estimated as
+\begin_inset Formula 
+\begin{equation}
+\left[N^{-1}{\displaystyle \sum_{i=1}^{N}}\Phi\left(\nicefrac{x_{i}^{\prime}\hat{\beta}}{\hat{\sigma}}\right)\right]\hat{\beta}_{j}
+\end{equation}
+
+\end_inset
+
+The scale factor in equation (15) is the average of 
+\begin_inset Formula $\hat{P}(y_{i}>0|x_{i})$
+\end_inset
+
+ across the sample.
+ The delta method can be used to obtain a valid asymptotic standard error
+ for 
+\begin_inset Formula $(15)$
+\end_inset
+
+but the bootstrap is convenient and feasible because estimation of Tobit
+ models can be done fairly quickly.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Naturally, the scale factor in (15) is always between zero and one, and
+ that fact helps explain why Tobit coefficients are typically larger than
+ OLS coefficients from a linear regression.
+ If 
+\begin_inset Formula $\hat{\gamma}_{j}$
+\end_inset
+
+ is the OLS estimate on a continuous variable 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+ from the regression 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, we can compare 
+\begin_inset Formula $\hat{\gamma}_{j}$
+\end_inset
+
+ to (15) as an indications of whether the linear model givens similare estimates
+ of the APEs.
+ Sometimes it will, but in other cases the linear model APEs can be notably
+ different from the Tobit APEs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For discrete explanatory variables or for large changes in continuous ones,
+ we can compute the difference in 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+ at different values of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ For example, suppose 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+ is a binary variable, and define, for each observation 
+\begin_inset Formula $i$
+\end_inset
+
+, the two indices 
+\begin_inset Formula $\hat{w}_{i1}=x_{i(K)}^{\prime}\hat{\beta}_{(K)}+\hat{\beta}_{K}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{w}_{i0}=x_{i(K)}^{\prime}\hat{\beta}_{(K)}$
+\end_inset
+
+, where 
+\begin_inset Formula $x_{i(K)}$
+\end_inset
+
+ is the 
+\begin_inset Formula $(K-1)\times1$
+\end_inset
+
+ column vector with 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+ dropped.
+ Then, 
+\begin_inset Formula $\hat{w}_{i1}$
+\end_inset
+
+ is the estimated index for person 
+\begin_inset Formula $i$
+\end_inset
+
+ when 
+\begin_inset Formula $x_{iK}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{w}_{i0}$
+\end_inset
+
+ is the estimated index for person 
+\begin_inset Formula $i$
+\end_inset
+
+ when 
+\begin_inset Formula $x_{iK}=0$
+\end_inset
+
+.
+ Then the average difference
+\begin_inset Formula 
+\begin{equation}
+N^{-1}{\displaystyle \sum_{i=1}^{N}}\left\{ \left[\Phi\left(\nicefrac{\hat{w}_{i1}}{\hat{\sigma}}\right)\hat{w}_{i1}+\hat{\sigma}\phi\left(\nicefrac{\hat{w}_{i1}}{\hat{\sigma}}\right)\right]-\left[\Phi\left(\nicefrac{\hat{w}_{i0}}{\hat{\sigma}}\right)\hat{w}_{i0}+\hat{\sigma}\phi\left(\nicefrac{\hat{w}_{i0}}{\hat{\sigma}}\right)\right]\right\} 
+\end{equation}
+
+\end_inset
+
+is the estimated APE of the vinary variable 
+\begin_inset Formula $x_{iK}$
+\end_inset
+
+.
+ Again, bootstrapping is a convenient method of computing standard errors.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The equations for the partial effects in the type I Tobit model, equations
+ (10) and (14), and the estimates (15) and (16), reveal an important point
+ about the parameters: 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ as well as 
+\begin_inset Formula $\beta$
+\end_inset
+
+ appears in the partial effects of the covariates on 
+\begin_inset Formula $E(y_{i}|x_{i}>0)$
+\end_inset
+
+ and 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+.
+ In a linear model, the variance of the errors plays no role in obtaining
+ partial effects on the mean, and so the estimated error variance plays
+ a role only in obtianing the usual OLS standard errors.
+ But the variance of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ in equation (3) directly enters the conditional means.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Equations (8), (10), and (12) show that, for continuous variables 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{ih}$
+\end_inset
+
+, the 
+\emph on
+relative
+\emph default
+ partial effects on 
+\begin_inset Formula $P(y_{i}>0|x_{i})$
+\end_inset
+
+, 
+\begin_inset Formula $E(y_{i}|x_{i},y_{i}>0)$
+\end_inset
+
+, and 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+ are all equal to 
+\begin_inset Formula $\nicefrac{\beta_{j}}{\beta_{h}}$
+\end_inset
+
+ (assuming that 
+\begin_inset Formula $\beta_{h}\neq0$
+\end_inset
+
+).
+ This feature can be a limitation of the Tobit model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+By taking the log of equation (7) and differentiating, we see that the elasticit
+y (or semielasticity) of 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+ with respect to any 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+ is simply the sum of the elasticities (or semielasticities) of 
+\begin_inset Formula $\Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $E(y_{i}|x_{i},y_{i}>0)$
+\end_inset
+
+, each with respect to 
+\begin_inset Formula $x_{ij}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+17.3
+\begin_inset space \quad{}
+\end_inset
+
+Estimation and Inference with the Type I Tobit Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\left\{ (x_{i},y_{i}):i=1,\ldots,N\right\} $
+\end_inset
+
+ be a random sample following the censored Tobit model.
+ To use maximum likelihood, we need to derive the density of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ We have already shown that 
+\begin_inset Formula $f(0|x_{i})=P(y_{i}=0|x_{i})=1-\Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)$
+\end_inset
+
+.
+ Further, for 
+\begin_inset Formula $\mathscr{Y}>0$
+\end_inset
+
+, 
+\begin_inset Formula $P(y_{i}\leq\mathscr{Y}|x_{i})=P(y_{i}^{*}\leq\mathscr{Y}|x_{i})$
+\end_inset
+
+, which implies that
+\begin_inset Formula 
+\[
+f(\mathscr{Y}|x_{i})=f^{*}(\mathscr{Y}|x_{i}),\ \forall\ \mathscr{Y}>0
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $f^{*}(\cdot|x_{i})$
+\end_inset
+
+ denotes the density of 
+\begin_inset Formula $y_{i}^{*}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ (We use 
+\begin_inset Formula $\mathscr{Y}$
+\end_inset
+
+ as the dummy argument in the density.) by assumption, 
+\begin_inset Formula $y_{i}^{*}|x_{i}\sim N(x_{i}^{\prime}\beta,\sigma^{2})$
+\end_inset
+
+, so
+\begin_inset Formula 
+\[
+f^{*}(\mathscr{Y}|x_{i})=\frac{1}{\sigma}\phi\left[\nicefrac{(\mathscr{Y}-x_{i}^{\prime}\beta)}{\sigma}\right],\ -\infty<\mathscr{Y}<\infty
+\]
+
+\end_inset
+
+We can write the density for 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ compactly using the indicator function 
+\begin_inset Formula $1[\cdot]$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{equation}
+f(\mathscr{Y}|x_{i})=\left\{ 1-\Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\right\} ^{1\left[\mathscr{Y}=0\right]}\left\{ (\nicefrac{1}{\sigma})\phi\left[\nicefrac{(\mathscr{Y}-x_{i}^{\prime}\beta)}{\sigma}\right]\right\} ^{1\left[\mathscr{Y}>0\right]}
+\end{equation}
+
+\end_inset
+
+where the density is zero for 
+\begin_inset Formula $\mathscr{Y}<0$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\theta\equiv\left(\beta,\sigma^{2}\right)^{\prime}$
+\end_inset
+
+denote the 
+\begin_inset Formula $(K+1)\times1$
+\end_inset
+
+ vector of parameters.
+ The log likelihood is
+\begin_inset Formula 
+\begin{equation}
+l_{i}(\theta)=1\left[y_{i}=0\right]\log\left[1-\Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\right]+1\left[y_{i}>0\right]\left\{ \log\phi\left[\nicefrac{(y_{i}-x_{i}^{\prime}\beta)}{\sigma}\right]-\nicefrac{\log(\sigma^{2})}{2}\right\} 
+\end{equation}
+
+\end_inset
+
+Apart from a constant that does not affect maximization, equation (18) can
+ be written as
+\begin_inset Formula 
+\[
+1\left[y_{i}=0\right]\log\left[1-\Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\right]+-1\left[y_{i}>0\right]\left\{ \nicefrac{(y_{i}-x_{i}^{\prime}\beta)^{2}}{2\sigma^{2}}+\nicefrac{\log(\sigma^{2})}{2}\right\} 
+\]
+
+\end_inset
+
+Therefore,
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial l_{i}(\theta)}{\partial\beta} & = & -1\left[y_{i}=0\right]\phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\left(\frac{x_{i}^{\prime}}{\sigma}\right)\left[1-\Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\right]+1\left[y_{i}>0\right]\frac{(y_{i}-x_{i}^{\prime}\beta)x_{i}^{\prime}}{\sigma^{2}}\\
+\frac{\partial l_{i}(\theta)}{\partial\sigma^{2}} & = & 1\left[y_{i}=0\right]\phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\frac{\left(x_{i}^{\prime}\beta\right)}{\left\{ 2\sigma^{3}\left[1-\Phi\left(\nicefrac{x_{i}^{\prime}\beta}{\sigma}\right)\right]\right\} }+1\left[y_{i}>0\right]\left\{ \frac{(y_{i}-x_{i}^{\prime}\beta)^{2}}{(2\sigma^{4})}-\frac{1}{2\sigma^{2}}\right\} 
+\end{eqnarray}
+
+\end_inset
+
+The second derivatives are complicated, but all we need is 
+\begin_inset Formula $A(x_{i},\theta)\equiv-E\left[H_{i}(\theta)|x_{i}\right]$
+\end_inset
+
+.
+ After tediaous calculations it can be shown that
+\begin_inset Formula 
+\begin{equation}
+A(x_{i},\theta)=\left[\begin{array}{cc}
+ax_{i}x_{i}^{\prime} & b_{i}x_{i}^{\prime}\\
+b_{i}x_{i} & c_{i}
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{eqnarray*}
+a_{i} & = & -\sigma^{-2}\left\{ x_{i}^{\prime}\gamma\phi_{i}-\left[\frac{\phi_{i}^{2}}{1-\Phi_{i}}\right]-\Phi_{i}\right\} \\
+b_{i} & = & \frac{1}{2}\sigma^{-3}\left\{ \left(x_{i}^{\prime}\gamma\right)\phi_{i}+\phi_{i}-\left[\frac{\left(x_{i}^{\prime}\gamma\right)\phi_{i}^{2}}{1-\Phi_{i}}\right]\right\} \\
+c_{i} & = & -\frac{1}{4}\sigma^{-4}\left\{ \left(x_{i}^{\prime}\gamma\right)^{3}\phi_{i}+\left(x_{i}^{\prime}\gamma\right)\phi_{i}-\left[\frac{\left(x_{i}^{\prime}\gamma\right)\phi_{i}^{2}}{1-\Phi_{i}}\right]-2\Phi_{i}\right\} 
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula $\gamma=\nicefrac{\beta}{\sigma}$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Phi_{i}$
+\end_inset
+
+ are evaluated at 
+\begin_inset Formula $x_{i}^{\prime}\gamma$
+\end_inset
+
+.
+ This matrix is used to obtian the estimate of 
+\begin_inset Formula $\mbox{AVar}(\hat{\theta})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Testing is easily carried out in a standard MLE framework.
+ Sincle exclusion restrictions are tested using asymptotic 
+\begin_inset Formula $t$
+\end_inset
+
+ statistics once 
+\begin_inset Formula $\hat{\beta}_{j}$
+\end_inset
+
+ and its asymptotic standard error have been obtained.
+ Multiple exclusion restrictions are easily tested using the LR statistic,
+ and some econometrics packages routinely compute the Wald statistic.
+ If the unrestricted model has so many variables that computation becomes
+ an issue, the LM statistic is an attractive alternative.
+ The Wald statistic is the easiest to compute for testing nonlienar restrictions
+ on 
+\begin_inset Formula $\beta$
+\end_inset
+
+, just as in binary response analysis, because the unrestricted model is
+ just standard Tobit.
+\end_layout
+
+\begin_layout Section*
+17.4
+\begin_inset space \quad{}
+\end_inset
+
+Reporting the Results
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As with any estimation of a parametric model, the parameter estimates 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\sigma}$
+\end_inset
+
+ and their standard errors should be reported.
+ We saw that the 
+\begin_inset Formula $\hat{\beta}_{j}$
+\end_inset
+
+ give the direction of the partial effects on the means, and the ratios
+ are the relative partial effects for continuous variables.
+ The value of the log likelihod should be included for testing purposes
+ and also to allow comparisons with other nonested models.
+ A goodness-of-fit statistic for the conditional mean 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+ is often of interest, particularly for comparing with other models of 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+ (including linear models).
+ A simple measure is the squared correlation between the actual outcomes,
+ 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, and fitted values, 
+\begin_inset Formula $\hat{y}_{i}$
+\end_inset
+
+, obtained by evaluating equation (12) at 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and the MLEs, 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\sigma}$
+\end_inset
+
+.
+ It is also important to report partial effects.
+ For continuous variables we can use (15) and for binary variables we can
+ use (16).
+\end_layout
+
+\begin_layout Section*
+17.5
+\begin_inset space \quad{}
+\end_inset
+
+Specification Issues in Tobit Models
+\end_layout
+
+\begin_layout Subsection*
+17.5.1
+\begin_inset space \quad{}
+\end_inset
+
+Neglected Heterogeneity
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose that we are initially interested in the model
+\begin_inset Formula 
+\begin{equation}
+y_{i}=\max(0,x_{i}^{\prime}\beta+\gamma q_{i}+u_{i});\ u_{i}|x_{i},q_{i}\sim N(0,\sigma^{2})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ is an observed variable that is assumed to be independent of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and has a 
+\begin_inset Formula $N(0,\tau^{2})$
+\end_inset
+
+ distribution.
+ It follows immediately that
+\begin_inset Formula 
+\begin{equation}
+y_{i}-\max(0,x_{i}^{\prime}\beta+v_{i});\ v_{i}\sim N(0,\sigma^{2}+\gamma^{2}\tau^{2})
+\end{equation}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ follows a Tobit model, and Tobit of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ consistently estimates 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\eta^{2}\equiv\sigma^{2}+\gamma^{2}\tau^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What about estimating partial effects on 
+\begin_inset Formula $E(y_{i}|x_{i},q_{i})$
+\end_inset
+
+? We are often interested in APEs, where say, 
+\begin_inset Formula $E(y_{i}|x_{i},q_{i})$
+\end_inset
+
+ is averaged over the population distribution of 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+, and then derivatives or differences with respect to elements of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ are obtained.
+ When the heterogeneity is independent of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, the APEs are obtained by finding 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+.
+ Naturally, this conditional mean comes from the distribution of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Under the preceding assumptions, it is exactly this distribuiton that Tobit
+ of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ estimates.
+ In other words, we estimate the desired quantities, the APEs, by simply
+ ignoring the heterogeneity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ is not normal, then these arguments do not carry over because 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ does not follow a Tobit model.
+ But the flabor of the argument does.
+ A more difficult issue arises when 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ are correlated, and we address that in the next subsection.
+\end_layout
+
+\begin_layout Subsection*
+17.5.2
+\begin_inset space \quad{}
+\end_inset
+
+Endogenous Explanatory Variables
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose we now allow one of the variables in the Tobit model to be endogenous.
+ The first model we consider has a continuous endogenous explanatory variable:
+\begin_inset Formula 
+\begin{eqnarray}
+y_{1i} & = & \max(0,z_{1i}^{\prime}\delta_{1}+\alpha_{1}y_{2i}+u_{i})\\
+y_{2i} & = & z_{i}^{\prime}\delta_{2}+v_{i}=z_{1i}^{\prime}\delta_{21}+z_{2i}^{\prime}\delta_{22}+v_{i}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+ are zero-mean normally distributed, independent of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ are correlated, then 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ is endogenous.
+ For indentification, we need the usual rank condition 
+\begin_inset Formula $\delta_{22}\neq0$
+\end_inset
+
+; 
+\begin_inset Formula $E(z_{i}z_{i}^{\prime})$
+\end_inset
+
+ is assumed to have full rank, as always.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Naturally, we are interested in estimating 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+, but we are also interested in estimating APEs, which depends on 
+\begin_inset Formula $\sigma_{u}^{2}=\mbox{Var}(u_{i})$
+\end_inset
+
+ .
+ The reasoning is just as for the probit model.
+ Holding other factors fixed, the difference in 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ when 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ changes from 
+\begin_inset Formula $\bar{y}_{2i}$
+\end_inset
+
+ to 
+\begin_inset Formula $\bar{y}_{2i}+1$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\max[0,\bar{z}_{1i}^{\prime}\delta_{1}+\alpha_{1}(\bar{y}_{2i}+1)+u_{i}]-\max[0,\bar{z}_{1i}^{\prime}\delta_{1}+\alpha_{1}\bar{y}_{2i}+u_{i}]
+\]
+
+\end_inset
+
+Averaging this expression across the distribution of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ gives differences in expectations that have the form (12), with 
+\begin_inset Formula $x_{i}=[\bar{z}_{1i},(\bar{y}_{2i}+1)]$
+\end_inset
+
+ in the first case, 
+\begin_inset Formula $x_{i}=(\bar{z}_{1i},\bar{y}_{2i})$
+\end_inset
+
+ in the second, and 
+\begin_inset Formula $\sigma=\sigma_{u}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Before estimating this model by MLE, a procedure that requires obtaining
+ the distribution of 
+\begin_inset Formula $(y_{1i},y_{2i})$
+\end_inset
+
+ given 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, it is convenient to have a two-step procedure that also delivers a simple
+ test for the endogeneity of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+.
+ Under bivariate normality of 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+, we can write
+\begin_inset Formula 
+\begin{equation}
+u_{i}=\theta v_{i}+e_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\theta=\nicefrac{\sigma_{uv}}{\sigma_{v}^{2}}$
+\end_inset
+
+, 
+\begin_inset Formula $\mbox{Var}(v_{i})=\sigma_{v}^{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ with zero-mean normal distribution and variance 
+\begin_inset Formula $\sigma_{e}^{2}$
+\end_inset
+
+.
+ Further, because 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $(z_{i},v_{i})$
+\end_inset
+
+.
+ Now, plugging in equation (26) into equation (24) gives
+\begin_inset Formula 
+\begin{equation}
+y_{1i}=\max(0,z_{1i}^{\prime}\delta_{1}+\alpha_{1}+\theta v_{i}+e_{i})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $e_{i}|z_{i},v_{i}\sim N(0,\sigma_{e}^{2})$
+\end_inset
+
+.
+ Using our previous notation, we can write
+\begin_inset Formula 
+\[
+D(y_{1i}|z_{i},y_{2i})=\mbox{Tobit}(z_{1i}^{\prime}\delta_{1}+\alpha_{1}y_{2i}+\theta(y_{2i}-z_{i}^{\prime}\delta_{2}),\sigma_{e}^{2})=\mbox{Tobit}(z_{1i}^{\prime}\delta_{1}+\alpha_{1}y_{2i}+\theta v_{i},\sigma_{e}^{2})
+\]
+
+\end_inset
+
+It follows that, if we knew 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, we would just estimate 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\theta$
+\end_inset
+
+, and 
+\begin_inset Formula $\sigma_{e}^{2}$
+\end_inset
+
+ by type I Tobit.
+ We do not observe 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ because it depends on the unknown vector 
+\begin_inset Formula $\delta_{2}$
+\end_inset
+
+.
+ However, we can easily estimate 
+\begin_inset Formula $\delta_{2}$
+\end_inset
+
+ by OLS in a first stage.
+ The procedure is as follows
+\end_layout
+
+\begin_layout Algorithm*
+(a) Estimate the reduced form of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ by OLS; this step gives 
+\begin_inset Formula $\hat{\delta}_{2}$
+\end_inset
+
+.
+ Define the reduced-form OLS residuals as 
+\begin_inset Formula $\hat{v}_{i}=y_{2i}-z^{\prime}\hat{\delta}_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Algorithm*
+(b) Estimate a standard Tobit of 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ on 
+\begin_inset Formula $z_{1i}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+, and 
+\begin_inset Formula $\hat{v}_{i}$
+\end_inset
+
+.
+ This step gives conssitent estimator of 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\theta$
+\end_inset
+
+, and 
+\begin_inset Formula $\sigma_{e}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The usual 
+\begin_inset Formula $t$
+\end_inset
+
+ statistic on 
+\begin_inset Formula $\hat{v}_{i}$
+\end_inset
+
+ reported by Tobit provides a simple test of the null 
+\begin_inset Formula $H_{0}:\theta=0$
+\end_inset
+
+, which says that 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ is exogenous.
+ Further, under 
+\begin_inset Formula $\theta=0$
+\end_inset
+
+, 
+\begin_inset Formula $e_{i}=u_{i}$
+\end_inset
+
+, and so normality of 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ plays no role: as a 
+\emph on
+test
+\emph default
+ for endogeneity of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+, this approach is valid without any distribution assumptions on the reduced
+ form of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When 
+\begin_inset Formula $\theta\neq0$
+\end_inset
+
+, the second-stage Tobit standard errors and test statistics are not asymptotica
+lly valid because 
+\begin_inset Formula $\hat{\delta}_{2}$
+\end_inset
+
+ has been used in place of 
+\begin_inset Formula $\delta_{2}$
+\end_inset
+
+.
+ Formulas for correcting the asymptotic variances can be derived using the
+ formulas for two-step M-estimators.
+ Note that joint normality of 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+ is not necessary for the two-step estimator to consistently estimate the
+ parameters.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can recover an estimate of 
+\begin_inset Formula $\sigma_{u}^{2}$
+\end_inset
+
+ from the estimates obtained from the two-step control function procedure.
+ From equation (26), we have 
+\begin_inset Formula $\sigma_{u}^{2}=\theta^{2}\sigma_{v}^{2}+\sigma_{e}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\sigma}_{v}^{2}$
+\end_inset
+
+ is obtained as the usual estimated error variance from the first-stage
+ regression, whereas, 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\sigma}_{e}^{2}$
+\end_inset
+
+ are obtained from the second-stage Tobit.
+ Forming 
+\begin_inset Formula $\hat{\sigma}_{u}^{2}=\hat{\theta}^{2}\hat{\sigma}_{v}^{2}+\hat{\sigma}_{e}^{2}$
+\end_inset
+
+ gives us all the estimates we need to obtain the APEs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As with all control function procedures, we can easily allow more general
+ functional forms in both the exogenous and endogenous variables (such as
+ squares and interactions).
+ In fact, we we replace 
+\begin_inset Formula $x_{1i}=(z_{1i},y_{2i})$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{1}=g_{1}(z_{1i},y_{2i})$
+\end_inset
+
+, then the esitmation procedure is unchanged.
+ Of course, we must believe that 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ has the reduced form (25) with the error term having the properties already
+ described.
+ Some additional flexibility is gained by allowing 
+\begin_inset Formula $E(u_{i}|v_{i})$
+\end_inset
+
+ to be nonlinear.
+ When doing this, one should be away that 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ will likely not have a normal distribution.
+ Pratcially we may be satisfied with a conditional normal distribution for
+ 
+\begin_inset Formula $D(u_{i}|v_{i})$
+\end_inset
+
+, even if that implies nonnormality of 
+\begin_inset Formula $D(u_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A full maximum likelihood approac avoids the two-step estimation problem.
+ The joint distribution of 
+\begin_inset Formula $(y_{1i},y_{2i})$
+\end_inset
+
+ given 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ is most easily found by using 
+\begin_inset Formula 
+\begin{equation}
+f(y_{1i},y_{2i}|z_{i})=f(y_{1i}|y_{2i},z_{i})\cdot f(y_{2i}|z_{i})
+\end{equation}
+
+\end_inset
+
+just as for the probit case.
+ Then density 
+\begin_inset Formula $f(y_{2i}|z_{i})$
+\end_inset
+
+ is 
+\begin_inset Formula $N(z_{i}^{\prime}\delta_{2},\sigma_{v}^{2})$
+\end_inset
+
+.
+ We already know that 
+\begin_inset Formula $D(y_{1i}|z_{i},y_{2i})=\mbox{Tobit}(x_{1i}^{\prime}\delta_{1}+\theta(y_{2i}-z_{i}^{\prime}\delta_{2}),\sigma_{e}^{2})$
+\end_inset
+
+, where 
+\begin_inset Formula $\sigma_{e}^{2}=\sigma_{u}^{2}-\theta^{2}\sigma_{v}^{2}$
+\end_inset
+
+.
+ Taking the log of equation (28), the log-likelihood function for 
+\begin_inset Formula $i$
+\end_inset
+
+ is easily constructed as a funciton of the parameters 
+\begin_inset Formula $(\delta_{1},\alpha_{1},\delta_{2},\sigma_{u}^{2},\sigma_{v}^{2},\sigma_{uv})$
+\end_inset
+
+.
+ The usual conditional maximum likelihood theory can be used for constructing
+ standard errors and test statistics.
+ When the structural equation is just identified, the two-step and MLE estimates
+ are identical (although the two-step inference needs to be adjusted).
+ Once the MLE has been obtained, we can easily test the null hypothesis
+ of exogeneity of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ by using the 
+\begin_inset Formula $t$
+\end_inset
+
+ statistic for 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What if 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ is a binary variable? Taking equation (24) as the structural equation,
+ we could add
+\begin_inset Formula 
+\begin{equation}
+y_{2i}=1\left[z_{i}^{\prime}\pi_{2}+v_{i}>0\right]
+\end{equation}
+
+\end_inset
+
+and assume that 
+\begin_inset Formula $(u_{i},v_{i})$
+\end_inset
+
+ has a zero-mean normal distribution and is independent of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+; 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ is standard normal, as always.
+ Equation (28) can be used to obtain the log-likelihood for each 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ given 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ is probit, its density is easy to obtian 
+\begin_inset Formula $f(y_{2i}|z_{i})=\Phi\left(z_{i}^{\prime}\pi_{2}\right)^{y_{2i}}\left[1-\Phi\left(z_{i}^{\prime}\pi_{2}\right)\right]^{1-y_{2i}}$
+\end_inset
+
+.
+ The hard part is obtaining the conditional density 
+\begin_inset Formula $f(y_{1i}|y_{2i}|z_{i})$
+\end_inset
+
+, which is done first for 
+\begin_inset Formula $y_{2i}=0$
+\end_inset
+
+ and then for 
+\begin_inset Formula $y_{2i}=1$
+\end_inset
+
+.
+ Unfortunately, as in the probit case (and nonlinear models generally),
+ the simple strategy of replacing the binary variable 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+, with its fited valued from a probit (or logit, or linear probability model)
+ does not work; it is another example of a forbidden regression.
+ In particular, the distribution of 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ given 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ does not follow a Tobit
+\begin_inset Formula $\left(z_{1i}^{\prime}\delta_{1}+\theta\Phi\left(z_{i}^{\prime}\pi_{2}\right),\kappa_{1}^{2}\right)$
+\end_inset
+
+ model for any variance parameter 
+\begin_inset Formula $\kappa_{1}^{2}$
+\end_inset
+
+.
+ Generally, 
+\begin_inset Formula $D(y_{1i}|z_{i})$
+\end_inset
+
+ is difficult to characterize, although we could properly use it along with
+ a probit specificaiton for 
+\begin_inset Formula $D(y_{2i}|z_{i})$
+\end_inset
+
+ to perform joint maximum likelihood estimation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ is itself a corner solution and follows a Tobie
+\begin_inset Formula $\left(z_{i}^{\prime}\pi_{2},\kappa_{2}^{2}\right)$
+\end_inset
+
+ model, then the MLE can also be derived.
+ But again, we should not replace 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ with the estimated expected value 
+\begin_inset Formula $E(y_{2i}|z_{i})$
+\end_inset
+
+ obtained form a first-stage Tobit.
+ Such a procedure does not produce consistent estimates and may be very
+ badly biased.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Because properly accouting for endogenous explanatory variables that have
+ nonormal conditional distributions in Tobit models is challenging, one
+ still sees linear models used when 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ is a corner, and then standard IV methods, such as 2SLS, can be applied
+ regardless of the nature of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+.
+ As with binary responses, the linear model has been much maligned for corner
+ solution responses, but a linear model estimated by 2SLS can deliver good
+ estimates of avarage effects.
+ One of the inappropriate two-step approaches described previously, where
+ fitted probit or Tobit estimates are inserted into a second-stage Tobit,
+ is likely inferior to a linear model that has been properly estimated by
+ instrumental variables.
+ An interesting topic is to find control function methods that can be used
+ for general 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ that do not suffer from a borbidden regression problem.
+\end_layout
+
+\begin_layout Subsection*
+17.5.3
+\begin_inset space \quad{}
+\end_inset
+
+Heteroskedasticity and Nonormality in the Latent Variable Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As in the case of probit, both heteroskedasticity and nonnormality result
+ in the Tobit estimator 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ being inconsistent for 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ This inconsistency occurs because the derived density of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ hinges crucially on 
+\begin_inset Formula $y_{i}^{*}|x_{i}\sim N(x_{i}^{\prime}\beta,\sigma^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Rather than focusing on parameters, we must remember that the presence of
+ heteroskedasticity or nonnormality in the latent variable model entirely
+ changes the functional forms for 
+\begin_inset Formula $E(y_{i}|x_{i},y_{i}>0)$
+\end_inset
+
+ and 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+.
+ Therefore, it does not make sense to focus only on the inconsistency in
+ estimating 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ We should study how departures from the homoskedastic normal assumption
+ affect the estimated partial derivatives of the conditional mean functions.
+ Alllowing for heteroskedasticity or nonnormality in the latent variable
+ model can be useful for generalizing functional form in corner solution
+ applications, and it should be viewed in that light.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Specification tests can be based on the score approach, where the standard
+ Tobit model is nested in a more general alternative.
+ Test for heteroskedasticity and nonnormality in the latent variable equation
+ are easily constructed if the outer product of the form statistic is used.
+ A useful test for heteroskedasticity is obtianed by assume 
+\begin_inset Formula $\mbox{Var}(u_{i}|x_{i})=\sigma^{2}\exp(x_{1i}^{\prime}\delta)$
+\end_inset
+
+, where 
+\begin_inset Formula $x_{1i}$
+\end_inset
+
+ is a 
+\begin_inset Formula $Q\times1$
+\end_inset
+
+ subvector of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ (
+\begin_inset Formula $x_{1i}$
+\end_inset
+
+ doe not include a constant).
+ The 
+\begin_inset Formula $Q$
+\end_inset
+
+ restrictions 
+\begin_inset Formula $H_{0}:\delta=0$
+\end_inset
+
+ can be tested using the LM statistic.
+ The partial derivatives of the log likelihood 
+\begin_inset Formula $l_{i}(\beta,\sigma^{2},\delta)$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+, evaluated at 
+\begin_inset Formula $\delta=0$
+\end_inset
+
+, are given exactly as in equations (19) and (20).
+ Further, we can show that 
+\begin_inset Formula $\nicefrac{\partial l_{i}}{\partial\delta}=\sigma^{2}x_{1i}\left(\nicefrac{\partial l_{i}}{\partial\sigma^{2}}\right)$
+\end_inset
+
+.
+ Thus the outer product of the score statistic 
+\begin_inset Formula $N-SSR_{0}$
+\end_inset
+
+ from the regression
+\begin_inset Formula 
+\[
+1\ \mbox{on}\ \nicefrac{\partial\hat{l}_{i}}{\partial\beta},\nicefrac{\partial\hat{l}_{i}}{\partial\sigma^{2}},\hat{\sigma}^{2}x_{1i}\left(\nicefrac{\partial\hat{l}_{i}}{\partial\sigma^{2}}\right),\ i=1,\ldots,N
+\]
+
+\end_inset
+
+where the derivatives are evaluated at the Tobit estimates (the restricted
+ estimates) and 
+\begin_inset Formula $SSR_{0}$
+\end_inset
+
+ is the usual sum of squared residuals.
+ Under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $N-SSR_{0}\begin{array}[b]{c}
+_{a}\\
+\sim
+\end{array}\chi_{Q}^{2}$
+\end_inset
+
+.
+ Unfortunately, the outer product form of the statistic can reject much
+ too often when the null hypothesis is true.
+ If MLE of the alternative model is possible, the LR statistic is a preferable
+ alternative.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can also construct tests of nonnormality that require only standard Tobit
+ estimation.
+ The most convenient of these are derived as conditional moment tests.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is not too difficult to estimate Tobit models with 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ heteroskedastic if a test reveals such a problem.
+ When 
+\begin_inset Formula $E(y_{i}|x_{i},y_{i}>0)$
+\end_inset
+
+ and 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+ are of interest, we should look at estimates of these expectations with
+ and without heteroskedasticity.
+ The partial effects on 
+\begin_inset Formula $E(y_{i}|x_{i},y_{i}>0)$
+\end_inset
+
+ and 
+\begin_inset Formula $E(y_{i}|x_{i})$
+\end_inset
+
+ could be similar even though the estimates of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ might be very different.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As a rough idea of the appropriateness of the standard Tobit model, we can
+ compare the probit esitmates, say 
+\begin_inset Formula $\hat{\gamma}$
+\end_inset
+
+, to the Tobit estimate of 
+\begin_inset Formula $\gamma=\nicefrac{\beta}{\sigma}$
+\end_inset
+
+, namely, 
+\begin_inset Formula $\nicefrac{\hat{\beta}}{\hat{\sigma}}$
+\end_inset
+
+.
+ These will never be identical, but the should not be statistically different.
+ Statistically significant sign changes are indications of misspecification.
+ For example, if 
+\begin_inset Formula $\hat{\gamma}_{j}$
+\end_inset
+
+ is positive and significant but 
+\begin_inset Formula $\hat{\beta}_{j}$
+\end_inset
+
+ is negative and berhaps significant, the Tobit model is probably misspecified.
+\end_layout
+
+\end_body
+\end_document

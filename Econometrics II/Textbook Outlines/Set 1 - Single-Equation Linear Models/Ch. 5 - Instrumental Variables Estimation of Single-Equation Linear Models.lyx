@@ -1,0 +1,2621 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 5: Instrumental Variables Estimation of Single-Equation Linear Models
+\end_layout
+
+\begin_layout Section*
+5.1
+\begin_inset space \quad{}
+\end_inset
+
+Instrumental Variables and Two-Stage Least Squares
+\end_layout
+
+\begin_layout Subsection*
+5.1.1
+\begin_inset space \quad{}
+\end_inset
+
+Motivation for Instrumental Variables Estimation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To motivate the need for the method of instrumental variables, consider
+ a linear population model
+\begin_inset Formula 
+\begin{gather}
+y=\beta_{0}+\beta_{1}x_{1}+\cdots+\beta_{K}x_{K}+u\\
+E(u)=0,\ \mbox{Cov}(x_{j},u)=0,\ j=1,2,\ldots,K-1
+\end{gather}
+
+\end_inset
+
+but where 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ might be correlated with 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ In other words, the explanatory variables 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{K-1}$
+\end_inset
+
+ are exogenous, but 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ is potentially endogenous in equation (1).
+ The endogeneity can come from an omitted variable, measurement error, etc.
+ To fix ideas, it might help to think of 
+\begin_inset Formula $u$
+\end_inset
+
+ as containing an omitted variable that is uncorrelated with all explanatory
+ variables except 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+.
+ So, we may be interested in a conditional expectation, we do not observe
+ 
+\begin_inset Formula $q$
+\end_inset
+
+, and 
+\begin_inset Formula $q$
+\end_inset
+
+ is correlated with 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+OLS esitmation of equation (1) generally results in inconsistent estimators
+ of 
+\emph on
+all
+\emph default
+ the 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ if 
+\begin_inset Formula $\mbox{Cov}(x_{K},u)\neq0$
+\end_inset
+
+.
+ Further, without more information, we cannot consistently estimate any
+ of the parameters in equation (1).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The method of instrumental variables (IV) provides a general solution to
+ the problem of an endogenous explanatory variable.
+ To use the IV approach with 
+\begin_inset Formula $k_{K}$
+\end_inset
+
+endogenous, we need an observable variable, 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+, 
+\emph on
+not
+\emph default
+ in equation (1) that satisfies two conditions.
+ First, 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ must be uncorrelated with 
+\begin_inset Formula $u$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\mbox{Cov}(z_{1},u)=0
+\end{equation}
+
+\end_inset
+
+In other words, like 
+\begin_inset Formula $x_{1},\ldots,x_{K-1},z_{1}$
+\end_inset
+
+ is exogenous in equation (1).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The second requirement involves the relationship between 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ and the endogenous variable, 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+.
+ A precise statemnt requires the linear projection of 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ onto 
+\emph on
+all
+\emph default
+ the exogenous variables:
+\begin_inset Formula 
+\begin{equation}
+x_{K}=\delta_{0}+\delta_{1}x_{1}+\cdots+\delta_{K-1}x_{K-1}+\theta_{1}z_{1}+r_{k}
+\end{equation}
+
+\end_inset
+
+where, by definition of a linear projection error, 
+\begin_inset Formula $E(r_{K})=0$
+\end_inset
+
+ and 
+\begin_inset Formula $r_{K}$
+\end_inset
+
+is uncorreated with 
+\begin_inset Formula $x_{1},\ldots,x_{K-1}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+.
+ The key assumption on this linear projection is that the coefficient on
+ 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ is nonzero:
+\begin_inset Formula 
+\begin{equation}
+\theta_{1}\neq0
+\end{equation}
+
+\end_inset
+
+This condition is often loosely described as 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ correlated with 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+,
+\begin_inset Quotes erd
+\end_inset
+
+ but that statement is not quite correct.
+ The condition 
+\begin_inset Formula $\theta_{1}\neq0$
+\end_inset
+
+ means that 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ is 
+\emph on
+partially
+\emph default
+ correlated with 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ once the other exogenous variables 
+\begin_inset Formula $x_{1},\ldots,x_{K-1}$
+\end_inset
+
+ have been netted out.
+ If 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ is the only explanatory variable in equaiton (1), then the linear projection
+ is 
+\begin_inset Formula $x_{K}=\delta_{0}+\theta_{1}z_{1}+r_{K}$
+\end_inset
+
+, where 
+\begin_inset Formula $\theta_{1}=\nicefrac{\mbox{Cov}(z_{1},x_{K})}{\mbox{Var}(z_{1})}$
+\end_inset
+
+, and so condition (5) and 
+\begin_inset Formula $\mbox{Cov}(z_{1},x_{K})\neq0$
+\end_inset
+
+ are the same.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+At this point, we should mention that we have put no restrictions on the
+ distribution of 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ or 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+.
+ In many cases 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ will be both essentially continuous, but sometimes 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+, 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+, or both are discrete.
+ In fact, one or both of 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ can be binary variables, or have continuous and discrete characteristics
+ at the same time.
+ Equation (4) is simply a linear projections, and this is always defined
+ when second moments of all variables are finite.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ satisfies conditions (3) and (5), then it is said to be an 
+\series bold
+instrumental variable (IV)
+\series default
+ candidate for 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+.
+ (Sometimes 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ is simply called an 
+\emph on
+instrument
+\emph default
+ for 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+.) Because 
+\begin_inset Formula $x_{1},\ldots,x_{K-1}$
+\end_inset
+
+ are already uncorrelated with 
+\begin_inset Formula $u$
+\end_inset
+
+, they serve as their own instrumental varibles in equation (1).
+ In other words, the full list of instrumental variables is the same as
+ the list of exogenous variables, but we often just refer to the instrument
+ for the endogenous explanatory variable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The linear projection in equation (4) is called a 
+\series bold
+reduced-form equation
+\series default
+ for the endogenous explanatory variable 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+.
+ In the context of single-equation linear models, a reduced form always
+ involves writing an endogenous variable as a linear projection onto all
+ exogenous variables.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+reduced form
+\begin_inset Quotes erd
+\end_inset
+
+ terminology comes from simultanous equation analysis, and it makes more
+ sens in that context.
+ We use it in all IV contexts because it is a concise way of stating than
+ an endogenous variable has been linearly projected onto the exogenous variables.
+ The terminology also conveys there is nothing necessarily structural about
+ equation (4).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+From the structural equation (1) and the reduced form for 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+, we obtain a reduced form for 
+\begin_inset Formula $y$
+\end_inset
+
+ by plugging equation (4) into equation (1) and rearranging
+\begin_inset Formula 
+\begin{equation}
+y=\alpha_{0}+\alpha_{1}x_{1}+\cdots+\alpha_{K}x_{K-1}+\lambda_{1}z_{1}+v
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $v=u+\beta_{K}r_{K}$
+\end_inset
+
+ is the reduced-form error, 
+\begin_inset Formula $\alpha_{j}=\beta_{j}+\beta_{K}\delta_{j}$
+\end_inset
+
+, and 
+\begin_inset Formula $\lambda_{1}=\beta_{K}\theta_{1}$
+\end_inset
+
+.
+ By our assumptions, 
+\begin_inset Formula $v$
+\end_inset
+
+ is uncorrelated with all explanatory variables in equation (6), and so
+ OLS consistently estimates the reduced-form parameters, the 
+\begin_inset Formula $\alpha_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+.
+ Estimates of the reduced-form parameters are sometimes of interest in their
+ own right, but estimating the structural parameters is generally more useful.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can now show that the assumptions we have made on the IV 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ solve the 
+\series bold
+identification problem
+\series default
+ for the 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ in equation (1).
+ By identification we mean that we can write 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ in terms of population moments in observable variables.
+ To see how, write equation (1) as
+\begin_inset Formula 
+\begin{equation}
+y_{i}=x_{i}^{\prime}\beta+u_{i}
+\end{equation}
+
+\end_inset
+
+where the constant is abosrbed into 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ so that 
+\begin_inset Formula $x_{i}=(1,x_{i2},\ldots,x_{iK})^{\prime}$
+\end_inset
+
+.
+ Write the 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ vector of all exogenous variables as
+\begin_inset Formula 
+\[
+z_{i}\equiv\left[\begin{array}{c}
+\begin{array}{c}
+1\\
+x_{i2}\\
+\vdots\\
+x_{K-1}
+\end{array}\\
+z_{i1}
+\end{array}\right]
+\]
+
+\end_inset
+
+Assumptions (2) and (3) imply the 
+\begin_inset Formula $K$
+\end_inset
+
+ population orthogonality conditions
+\begin_inset Formula 
+\begin{equation}
+E(z_{i}u_{i})=0
+\end{equation}
+
+\end_inset
+
+Multiplying (7) through by 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, taking expectations, and using equation (8) gives
+\begin_inset Formula 
+\begin{equation}
+E(z_{i}x_{i}^{\prime})\beta=E(z_{i}y_{i})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $E(z_{i}x_{i}^{\prime})$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times K$
+\end_inset
+
+ and 
+\begin_inset Formula $E(z_{i}y_{i})$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+.
+ Equation (9) represents a system of 
+\begin_inset Formula $K$
+\end_inset
+
+ linear equations in the 
+\begin_inset Formula $K$
+\end_inset
+
+ unknowns 
+\begin_inset Formula $\beta_{1},\ldots,\beta_{K}$
+\end_inset
+
+.
+ This system has a unique solution if and only if the 
+\begin_inset Formula $K\times K$
+\end_inset
+
+ matrix 
+\begin_inset Formula $E(z_{i}x_{i}^{\prime})$
+\end_inset
+
+ has full rank; that is
+\begin_inset Formula 
+\begin{equation}
+\mbox{rank}E(z_{i}x_{i}^{\prime})=K
+\end{equation}
+
+\end_inset
+
+in which case the solution is
+\begin_inset Formula 
+\begin{equation}
+\beta=\left[E(z_{i}x_{i}^{\prime})\right]^{-1}E(z_{i}y_{i})
+\end{equation}
+
+\end_inset
+
+The expectations 
+\begin_inset Formula $E(z_{i}x_{i}^{\prime})$
+\end_inset
+
+ and 
+\begin_inset Formula $E(z_{i}y_{i})$
+\end_inset
+
+ can be consistently estimated using a random sample on 
+\begin_inset Formula $(x,y,z_{1})$
+\end_inset
+
+ and so equaiton (11) identifies the vector 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is clear that condition (3) was used to obtain equation (11).
+ But where have we used condition (5)? Let us maintain that there are no
+ linear dependencies among the exogenous variables, so that 
+\begin_inset Formula $E(z_{i}z_{i}^{\prime})$
+\end_inset
+
+ has full rank 
+\begin_inset Formula $K$
+\end_inset
+
+; this simply rules out perfect collinearity in 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ in the population.
+ Then, it can be shown that equation (10) holds if and only if 
+\begin_inset Formula $\theta_{1}\neq0$
+\end_inset
+
+.
+ Therefore, along with the exogeneity condition (3), assumption (5) is the
+ key identification condition.
+ Assumption (10) is the 
+\series bold
+rank condition
+\series default
+ for identification.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Given a random sample 
+\begin_inset Formula $\left\{ (x_{i},y_{i},z_{i1}):i=1,\ldots,N\right\} $
+\end_inset
+
+ from the population, the 
+\series bold
+instrumental variables estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\series default
+ is
+\begin_inset Formula 
+\[
+\hat{\beta}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}z_{i}x_{i}^{\prime}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}z_{i}y_{i}\right)=\left(Z^{\prime}X\right)^{-1}Z^{\prime}Y
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $Z$
+\end_inset
+
+ and 
+\begin_inset Formula $X$
+\end_inset
+
+ are 
+\begin_inset Formula $N\times K$
+\end_inset
+
+ data matrices and 
+\begin_inset Formula $Y$
+\end_inset
+
+ is the 
+\begin_inset Formula $N\times1$
+\end_inset
+
+ data vector on the 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+.
+ The consistency of this esitmator is immediate from equation (11) and the
+ law of large numbers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When searching for instruments for an endogenous explanatory variable, condition
+s (3) and (5) are equally importnat in identifying 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ There is, however, one practically important difference between them: condition
+ (5) can be tested, whereas condition (3) must be maintained.
+ The reason for this disparity is simple, the covariance in condition (3)
+ involves 
+\emph on
+unobservable u
+\emph default
+, and therefore we cannot test anything about 
+\begin_inset Formula $\mbox{Cov}(z_{1},u)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Testing condition (5) in the reduced form (4) is a simple matter of computing
+ a 
+\begin_inset Formula $t$
+\end_inset
+
+ test after OLS estimation.
+ Nothing guarantees the 
+\begin_inset Formula $r_{K}$
+\end_inset
+
+ satisfies the equisite homoskedasticity assumption (Assumption OLS.3), so
+ a heteroskedasiticity-robust 
+\begin_inset Formula $t$
+\end_inset
+
+ statistic for 
+\begin_inset Formula $\hat{\theta}_{1}$
+\end_inset
+
+ is often warranted.
+ This statement is especially ture if 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ is a binary variable or some other variable with discrete characteristics.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the conext of omitted variables, an instrumental variable, like a proxy
+ variable, must be redundant in the structural model (that is, the model
+ that explicitly contains the unobservables).
+ However, unlike a proxy variable, an IV for 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ should be 
+\emph on
+uncorrelated
+\emph default
+ with the omitted variable.
+ Remember, we want a proxy variable to be highly correlated with the omitted
+ variable.
+ A proxy variables makes a poor IV, and an IV makes a poor proxy variable.
+\end_layout
+
+\begin_layout Subsection*
+5.1.2
+\begin_inset space \quad{}
+\end_inset
+
+Multiple Instruments: Two-Stage Least Squares
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider again the model (1) and (2), where 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ can be correlated with 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ Now, however, assume that we have more than one instrumental variable 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $z_{1},z_{2},\ldots,z_{M}$
+\end_inset
+
+ be variables such that
+\begin_inset Formula 
+\begin{equation}
+\mbox{Cov}(z_{h},u)=0,\ h=1,2,\ldots,M
+\end{equation}
+
+\end_inset
+
+so that each 
+\begin_inset Formula $z_{h}$
+\end_inset
+
+ is exogenous in equation (1).
+ If each of these has some partial correlation with 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+, we could have 
+\begin_inset Formula $M$
+\end_inset
+
+ different IV estimators.
+ Actually, there are many more than this, more than we can count, since
+ any linear combination of 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{K-1},z_{1},z_{2},\ldots,z_{M}$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ So which IV estimator should we use?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In Section 5.2.3 we show that, under certain assumptions, the 
+\series bold
+two-stage least squares (2SLS) estimator
+\series default
+ is the most efficient IV estimator.
+ For now, we rely on intuition.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To illustrate the method of 2SLS, define the vector of exogenous variables
+ again by 
+\begin_inset Formula $z\equiv(1,x_{1},x_{2},\ldots,x_{K-1},z_{1},\ldots,z_{M})^{\prime}$
+\end_inset
+
+, a 
+\begin_inset Formula $L\times1$
+\end_inset
+
+ vector 
+\begin_inset Formula $(L=K+M)$
+\end_inset
+
+.
+ Out of all possible linear combinations of 
+\begin_inset Formula $z$
+\end_inset
+
+ that can be used as an insturment for 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+, the method of 2SLS chooses that which is most highly correlated with 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ were exogenous, then this choice would imply that the best instrument for
+ 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ is simply itself.
+ Ruling this case out, the linear combination of 
+\begin_inset Formula $z$
+\end_inset
+
+ most highly correlated with 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ is given by the lienar projection of 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ on 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Write the reduced form for 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{equation}
+x_{K}=\delta_{0}+\delta_{1}x_{1}+\cdots+\delta_{K-1}x_{K-1}+\theta_{1}z_{1}+\cdots+\theta_{M}z_{M}+r_{K}
+\end{equation}
+
+\end_inset
+
+where, by definition, 
+\begin_inset Formula $r_{K}$
+\end_inset
+
+ has zero mean and is uncorrelated with each right-hand-side variable.
+ As any linear combination of 
+\begin_inset Formula $z$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $u$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+x_{K}^{*}\equiv\delta_{0}+\delta_{1}x_{1}+\cdots+\delta_{K-1}x_{K-1}+\theta_{1}z_{1}+\cdots+\theta_{M}z_{M}
+\end{equation}
+
+\end_inset
+
+In fact, 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+ is often interpreted as the part of 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ that is uncorrelated with 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ is exogenous, it is because 
+\begin_inset Formula $r_{K}$
+\end_inset
+
+ is correlated with 
+\begin_inset Formula $u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If we coulde observe 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+, we would use it as an instrument for 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ in equation (1) and use the IV estimator form the previous subsection.
+ Since the 
+\begin_inset Formula $\delta_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta_{j}$
+\end_inset
+
+ are population parameters, 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+ is not a usable instrument.
+ However, as long as we make the standard assumption that there are no exact
+ lienar dependencies among the exogenous variables, we can consistently
+ esitmate the parameters in equation (13) by OLS.
+ The sample analogues of the 
+\begin_inset Formula $x_{iK}^{*}$
+\end_inset
+
+ for each observation 
+\begin_inset Formula $i$
+\end_inset
+
+ are simply the OLS fitted values:
+\begin_inset Formula 
+\begin{equation}
+x_{iK}^{*}=\hat{\delta}_{0}+\hat{\delta}_{1}x_{i1}+\cdots+\hat{\delta}_{K-1}x_{i,K-1}+\hat{\theta}_{1}z_{i1}+\cdots+\hat{\theta}_{M}z_{iM}
+\end{equation}
+
+\end_inset
+
+Now, for each observation 
+\begin_inset Formula $i$
+\end_inset
+
+, define the vector 
+\begin_inset Formula $\hat{x}_{i}\equiv(1,x_{i1},\ldots,x_{i,K-1},\hat{x}_{iK})^{\prime},\ i=1,\ldots,N$
+\end_inset
+
+.
+ Using 
+\begin_inset Formula $\hat{x}_{i}$
+\end_inset
+
+ as the instruments for 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ gives the IV estimator
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}=\left({\displaystyle \sum_{i=1}^{N}}\hat{x}_{i}x_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}\hat{x}_{i}y_{i}\right)=\left(\hat{X}^{\prime}X\right)^{-1}\hat{X}^{\prime}Y
+\end{equation}
+
+\end_inset
+
+where unity is also the first element of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The IV estimator in equation (16) turns out to be an OLS estimator.
+ To see this fact, note that the 
+\begin_inset Formula $N\times(K+1)$
+\end_inset
+
+ matrix 
+\begin_inset Formula $\hat{X}$
+\end_inset
+
+ can be expressed as 
+\begin_inset Formula $\hat{X}=Z(Z^{\prime}Z)^{-1}Z^{\prime}X=P_{Z}X$
+\end_inset
+
+, where the projection matrix 
+\begin_inset Formula $P_{Z}=Z(Z^{\prime}Z)^{-1}Z^{\prime}$
+\end_inset
+
+ is idempotent and symmetric.
+ Therefore, 
+\begin_inset Formula $\hat{X}^{\prime}X=X^{\prime}P_{Z}X=\left(P_{Z}X\right)^{\prime}P_{Z}X=\hat{X}^{\prime}\hat{X}$
+\end_inset
+
+.
+ Plugging this expression into equation (16) shows that the IV estimator
+ that uses instruments 
+\begin_inset Formula $\hat{x}_{i}$
+\end_inset
+
+ can be written as 
+\begin_inset Formula $\hat{\beta}=\left(\hat{X}^{\prime}\hat{X}\right)^{-1}\hat{X}^{\prime}Y$
+\end_inset
+
+.
+ The name 
+\begin_inset Quotes eld
+\end_inset
+
+two-stage least squares
+\begin_inset Quotes erd
+\end_inset
+
+ comes from this procedure.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To summarize, 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ can be obtianed from the following steps:
+\end_layout
+
+\begin_layout Enumerate
+Obtain fitted values 
+\begin_inset Formula $\hat{x}_{K}$
+\end_inset
+
+ from the regression
+\begin_inset Formula 
+\begin{equation}
+x_{K}\ \mbox{on}\ 1,x_{1},\ldots,x_{K-1},z_{1},\ldots,z_{M}
+\end{equation}
+
+\end_inset
+
+where the 
+\begin_inset Formula $i$
+\end_inset
+
+ subscript is omitted for simplicity.
+ This is called the 
+\series bold
+first-stage regression
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+Run the OLS regression
+\begin_inset Formula 
+\begin{equation}
+y\ \mbox{on}\ 1,x_{1},\ldots,x_{K-1},\hat{x}_{K}
+\end{equation}
+
+\end_inset
+
+This is called the 
+\series bold
+second-stage regression
+\series default
+, and it produces the 
+\begin_inset Formula $\hat{\beta}_{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The 2SLS esitmator and the IV estimator from Section 5.1.1 are identical when
+ there is only one isntrument for 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+.
+ Unless stated otherwise, we mean 2SLS whenever we talk about IV estimation
+ of a single equation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What is the analogue of the condition (5) when more than one instrument
+ is available? 
+\begin_inset Formula $E(z_{i}x_{i}^{\prime})$
+\end_inset
+
+ has full column rank if and only if at least one of the 
+\begin_inset Formula $\theta_{j}$
+\end_inset
+
+ in equation (13) is nonzero.
+ The intuition behind this requirement is pretty clear: we need at least
+ one exogenous variable that does not appear in equation (1) to induce varaition
+ in 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ that cannot be explained by 
+\begin_inset Formula $x_{1},\ldots,x_{K-1}$
+\end_inset
+
+.
+ Identification of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ does 
+\emph on
+not
+\emph default
+ depend on the values of the 
+\begin_inset Formula $\delta_{h}$
+\end_inset
+
+ in equation (13).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Testing the rank condition with a single endogenous explanatory variable
+ and multiple instruments is straightforward.
+ In equation (13) we simply test the null hypothesis
+\begin_inset Formula 
+\begin{equation}
+H_{0}:\theta_{1}=0,\theta_{2}=0,\ldots,\theta_{M}=0
+\end{equation}
+
+\end_inset
+
+against the alternative that at least one of the 
+\begin_inset Formula $\theta_{j}$
+\end_inset
+
+ is different from zero.
+ This test gives a compelling reason for explicity running the first-stage
+ regression.
+ If 
+\begin_inset Formula $r_{K}$
+\end_inset
+
+ in equation (13) satisfies the OLS homoskedasticity assumption OLS.3, a
+ standard 
+\begin_inset Formula $F$
+\end_inset
+
+ statistic or Lagrange multiplier statistic can be used to test hypothesis
+ (19).
+ Often a heteroskedasticity-robust statistic is more appropriate, especially
+ if 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ has discrete characteristics.
+ If we cannot reject hypothesis (19) against the alternative that at least
+ one 
+\begin_inset Formula $\theta_{h}$
+\end_inset
+
+ is different from zero, at a reasonably small significance level, then
+ we should have serious reservations about the proposed 2SLS procedure:
+ the instruments do not pass a minimal requirement.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The model with a single endogenous variable is said to be 
+\series bold
+overidentified
+\series default
+ when 
+\begin_inset Formula $M>1$
+\end_inset
+
+ and there are 
+\begin_inset Formula $M-1$
+\end_inset
+
+ 
+\series bold
+overidentifing restrictions
+\series default
+.
+ This terminology comes from the fact that, if each 
+\begin_inset Formula $z_{h}$
+\end_inset
+
+ has some partial correlation with 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+, then we have 
+\begin_inset Formula $M-1$
+\end_inset
+
+ more exogenous variables than needed to identify the parameters in equation
+ (1).
+\end_layout
+
+\begin_layout Section*
+5.2
+\begin_inset space \quad{}
+\end_inset
+
+General Treatment of Two-Stage Least Squares
+\end_layout
+
+\begin_layout Subsection*
+5.2.1
+\begin_inset space \quad{}
+\end_inset
+
+Consistency
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now summarize the asymptotic results for 2SLS in a single-equation model
+ with perhaps several endogenous variables among the explanatory variables.
+ Write the population model as in equation (7), where 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ and generally includes unity.
+ Several elements of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ may be correlated with 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+.
+ As usual, we assume that a random sample is available from the population.
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\emph on
+2SLS.1:
+\series default
+ 
+\emph default
+For some 
+\begin_inset Formula $L\times1$
+\end_inset
+
+ vector 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $E(z_{i}u_{i})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here we do not specify where the elements of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ come from, but any exogenous elements of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, including a constant, are included in 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+.
+ Unless every element of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is exogenous, 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ will have to contain variables obtained from outside the model.
+ The zero conditional mean assumption, 
+\begin_inset Formula $E(u_{i}|z_{i})=0$
+\end_inset
+
+, implies Assumption 2SLS.1
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The next assumption contains the general rank condition for single-equation
+ analysis.
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\shape up
+2SLS.2:
+\series default
+ 
+\emph on
+(a) 
+\begin_inset Formula $\mbox{rank}\ E(z_{i}z_{i}^{\prime})=L$
+\end_inset
+
+; (b) 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\mbox{rank}\ E(z_{i}x_{i}^{\prime})=K$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Technically, part (a) of this assumption is needed, but it is not especially
+ important, since the exogenous variables, unless chosen unwisely, will
+ be linearly independent in the population (as well as in a typical sample).
+ Part (b) is the crucial 
+\series bold
+rank condition
+\series default
+ for identificaiton.
+ In a precise sense it means that 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ is sufficiently linearly related to 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ so that rank 
+\begin_inset Formula $E(z_{i}x_{i}^{\prime})$
+\end_inset
+
+ has full column rank.
+ When 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is exogenous, so that 
+\begin_inset Formula $z_{i}=x_{i}$
+\end_inset
+
+, Assumption 2SLS.1 reduces to Assumption OLS.1 and Assumption 2SLS.2 reduced
+ to Assumption OLS.2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Necessary for the rank condition is the 
+\series bold
+order condition
+\series default
+, 
+\begin_inset Formula $L\geq K$
+\end_inset
+
+.
+ In other words, we must have at least as many instruments as we have explanator
+y variables.
+ If we do not have as many instruments as right-hand-side variables, then
+ 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is not identified.
+ However, 
+\begin_inset Formula $L\geq K$
+\end_inset
+
+ is no guarantee that 2SLS.2b holds: the elements of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ might not be appropriately correlated with the elements of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We already know how to test Assumption 2SLS.2b with a single endogenous explanato
+ry variable.
+ In the general case, it is possible to test Assumption 2SLS.2b, given a
+ random sample on 
+\begin_inset Formula $(x,z)$
+\end_inset
+
+, essentially be performing tests on the sample analogue of 
+\begin_inset Formula $E(z_{i}x_{i}^{\prime})$
+\end_inset
+
+, 
+\begin_inset Formula $\nicefrac{Z^{\prime}X}{N}$
+\end_inset
+
+.
+ The tests are somewhat complicated.
+ Often we estimate the reduced form for each engoenous explanatory variable
+ to make sure that at least one element of 
+\begin_inset Formula $z$
+\end_inset
+
+ not in 
+\begin_inset Formula $x$
+\end_inset
+
+ is significant.
+ This is not sufficient for the rank condition in general, but it can help
+ us determine if the rank condition fails.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Using linear projections, there is a simple way to see how Assumptions 2SLS.1
+ and 2SLS.2 identify 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ First, assuming that 
+\begin_inset Formula $E(z_{i}z_{i}^{\prime})$
+\end_inset
+
+ is nonsingular, we can always write the linear projection of 
+\begin_inset Formula $x_{i}^{\prime}$
+\end_inset
+
+ onto 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ as 
+\begin_inset Formula $x^{*\prime}=z_{i}^{\prime}\Pi$
+\end_inset
+
+, where 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ is the 
+\begin_inset Formula $L\times K$
+\end_inset
+
+ matrix 
+\begin_inset Formula $\Pi=\left[E(z_{i}z_{i}^{\prime})\right]^{-1}E(z_{i}x_{i}^{\prime})$
+\end_inset
+
+.
+ Since each column of 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ can be consistently esitmated by regressing the appropriate element of
+ 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ onto 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, for the purposes of identification of 
+\begin_inset Formula $\beta$
+\end_inset
+
+, we can treat 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ as known.
+ Write 
+\begin_inset Formula $x_{i}^{\prime}=x_{i}^{*\prime}+r_{i}^{\prime}$
+\end_inset
+
+, where 
+\begin_inset Formula $E(z_{i}r_{i}^{\prime})=0$
+\end_inset
+
+ and so 
+\begin_inset Formula $E(x_{i}^{*}r_{i}^{\prime})=0$
+\end_inset
+
+.
+ Now, the 2SLS estimator is effectively the IV estimator using instruments
+ 
+\begin_inset Formula $x_{i}^{*}$
+\end_inset
+
+.
+ Multiplying equation (7) by 
+\begin_inset Formula $x_{i}^{*}$
+\end_inset
+
+, taking expectations, and rearranging gives
+\begin_inset Formula 
+\begin{equation}
+E(x_{i}^{*}x_{i}^{\prime})\beta=E(x_{i}^{*}y_{i})
+\end{equation}
+
+\end_inset
+
+since 
+\begin_inset Formula $E(x_{i}^{*}u_{i})=0$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is identified by 
+\begin_inset Formula $\beta=\left[E(x_{i}^{*}x_{i}^{\prime})\right]^{-1}E(x_{i}^{*}y_{i})$
+\end_inset
+
+ provided 
+\begin_inset Formula $E(x_{i}^{*}x_{i}^{\prime})$
+\end_inset
+
+ is nonsingular.
+ But
+\begin_inset Formula 
+\[
+E(x_{i}^{*}x_{i}^{\prime})=\Pi^{\prime}E(z_{i}x_{i}^{\prime})=E(x_{i}z_{i}^{\prime})\left[E(z_{i}z_{i}^{\prime})\right]^{-1}E(z_{i}x_{i}^{\prime})
+\]
+
+\end_inset
+
+and this matrix is nonsingular if and only if 
+\begin_inset Formula $E(z_{i}x_{i}^{\prime})$
+\end_inset
+
+ has rank 
+\begin_inset Formula $K$
+\end_inset
+
+; that is, if and only if Assumption 2SLS.2b holds.
+ If 2SLS.2b fails, then 
+\begin_inset Formula $E(x_{i}^{*}x_{i}^{\prime})$
+\end_inset
+
+ is singular and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is not identified.
+ (Note that, because 
+\begin_inset Formula $x_{i}^{\prime}=x_{i}^{*\prime}+r_{i}^{\prime}$
+\end_inset
+
+ with 
+\begin_inset Formula $E(x_{i}^{*}r_{i}^{\prime})=0$
+\end_inset
+
+, 
+\begin_inset Formula $E(x_{i}^{*}x_{i}^{\prime})=E(x_{i}^{*}x_{i}^{*\prime})$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is identified if and only if 
+\begin_inset Formula $\mbox{rank}\ E(x_{i}^{*}x_{i}^{*\prime})=K$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The 2SLS estimator can be written as in equation (16) or as
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}=\left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}x_{i}^{\prime}\right)\right]^{-1}\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}y_{i}\right)
+\end{equation}
+
+\end_inset
+
+We have the following consistency result.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+5.1 (Consistency of 2SLS):
+\series default
+ 
+\emph on
+Under Assumptions 2SLS.1 and 2SLS.2, the 2SLS estimator obtianed from a random
+ sample is consistent for 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Write
+\begin_inset Formula 
+\[
+\hat{\beta}=\beta+\left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}x_{i}^{\prime}\right)\right]^{-1}\left({\displaystyle \sum_{i=1}^{N}}x_{i}z_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}z_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}u_{i}\right)
+\]
+
+\end_inset
+
+and, using Assumptions 2SLS.1 and 2SLS.2, apply the law of large numbers to
+ each term along with Slutsky's theorem.
+\end_layout
+
+\begin_layout Subsection*
+5.2.2
+\begin_inset space \quad{}
+\end_inset
+
+Asymptotic Normality of Two-Stage Least Squares
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The asymptotic normality of 
+\begin_inset Formula $\sqrt{N}(\hat{\beta}-\beta)$
+\end_inset
+
+ follows from the asymptotic normality of 
+\begin_inset Formula $N^{-\nicefrac{1}{2}}\sum_{i=1}^{N}z_{i}u_{i}$
+\end_inset
+
+, which follows from the central limit theorm under Assumption 2SLS.1 and
+ mild finite second-moment assumptions.
+ The asymptotic variance is simplest under a homoskedasticity assumption:
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\shape up
+2SLS.3:
+\series default
+ 
+\begin_inset Formula $E(u_{i}^{2}z_{i}z_{i}^{\prime})=\sigma^{2}E(z_{i}z_{i}^{\prime})$
+\end_inset
+
+, where 
+\begin_inset Formula $\sigma^{2}=E(u_{i}^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This assumption is the same as Assumption OLS.3 except that the vector of
+ instruments appears in place of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ By the usual LIE argument, sufficient for Assumption 2SLS.3 is the assumption
+\begin_inset Formula 
+\begin{equation}
+E(u_{i}^{2}|z_{i})=\sigma^{2}
+\end{equation}
+
+\end_inset
+
+which is the same as 
+\begin_inset Formula $\mbox{Var}(u_{i}|z_{i})=\sigma^{2}$
+\end_inset
+
+ if 
+\begin_inset Formula $E(u_{i}|z_{i})=0$
+\end_inset
+
+.
+ (When 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ contains endogenous elements, it makes no sense to make assumptions about
+ 
+\begin_inset Formula $\mbox{Var}(u_{i}|x_{i})$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+5.2 (Asymptotic Normality of 2SLS):
+\series default
+ 
+\emph on
+Under Assumptions 2SLS.1-2SLS.3, 
+\begin_inset Formula $\sqrt{N}(\hat{\beta}-\beta)$
+\end_inset
+
+ is asymptotically normally distributed with mean zero and variance matrix
+\begin_inset Formula 
+\begin{equation}
+\sigma^{2}\left(\left[E(z_{i}x_{i}^{\prime})\right]\left[E(z_{i}z_{i}^{\prime})\right]^{-1}\left[E(z_{i}x_{i}^{\prime})\right]\right)^{-1}=\sigma^{2}\left[E(x_{i}^{*}x_{i}^{*\prime})\right]^{-1}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{i}^{*\prime}=z_{i}^{\prime}\Pi$
+\end_inset
+
+ is the 
+\begin_inset Formula $1\times K$
+\end_inset
+
+ vector of linear projections.
+\end_layout
+
+\begin_layout Standard
+The right-hand side of equation (23) is convenient because it has the same
+ form as the expression for the OLS estimator, but with 
+\begin_inset Formula $x_{i}^{*}$
+\end_inset
+
+ replaced 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ In particular, we can easily obtain a simple expression for the asymptotic
+ varaince for a single coefficient: 
+\begin_inset Formula $\mbox{AVar}\ \sqrt{N}(\hat{\beta}_{K}-\beta_{K})=\nicefrac{\sigma^{2}}{\mbox{Var}(r_{K}^{*})}$
+\end_inset
+
+, where 
+\begin_inset Formula $r_{K}^{*}$
+\end_inset
+
+ is the population residual from regressing 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{1}^{*},\ldots,x_{K-1}^{*}$
+\end_inset
+
+ (where, typically, 
+\begin_inset Formula $x_{1}^{*}=1$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The matrix in expression (23) is easily estimated using sample averages.
+ To estimate 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ we will need appropriate estimates of the 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+.
+ Define the 
+\series bold
+2SLS residuals
+\series default
+ as
+\begin_inset Formula 
+\begin{equation}
+\hat{u}_{i}=y_{i}-x_{i}^{\prime}\hat{\beta},\ i=1,\ldots,N
+\end{equation}
+
+\end_inset
+
+Note carefully that these residuals are 
+\emph on
+not
+\emph default
+ the residuals from the second-stage OLS regression that can be used to
+ obtain the 2SLS estimates.
+ The residuals from the second-stage regression are 
+\begin_inset Formula $y_{i}-\hat{x}_{i}\hat{\beta}$
+\end_inset
+
+.
+ Any 2SLS software routine will compute equation (24) as the 2SLS residuals,
+ and these are what we need to estimate 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Given the 2SLS residuals, a consistent (though not unbiased) estimator of
+ 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ under Assumptions 2SLS.1-2SLS.3 is
+\begin_inset Formula 
+\begin{equation}
+\hat{\sigma}^{2}\equiv(N-K)^{-1}{\displaystyle \sum_{i=1}^{N}}\hat{u}_{i}^{2}
+\end{equation}
+
+\end_inset
+
+Many regression packages use the degrees-of-freedom adjustment 
+\begin_inset Formula $N-K$
+\end_inset
+
+ in place of 
+\begin_inset Formula $N$
+\end_inset
+
+, but this usage does not affec tthe consistency of the estimator.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The 
+\begin_inset Formula $K\times K$
+\end_inset
+
+ matrix
+\begin_inset Formula 
+\begin{equation}
+\hat{\sigma}^{2}\left({\displaystyle \sum_{i=1}^{N}}\hat{x}_{i}\hat{x}_{i}^{\prime}\right)^{-1}=\hat{\sigma}^{2}\left(\hat{X}^{\prime}\hat{X}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+is a valid estimator of the asymptotic variance of 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ under Assumptions 2SLS.1-2SLS.3.
+ The (asymptotic) standard error of 
+\begin_inset Formula $\hat{\beta}_{j}$
+\end_inset
+
+ is just the square root of the 
+\begin_inset Formula $j$
+\end_inset
+
+th diagonal element of matrix (26).
+ Asymptotic confidence intervals and 
+\begin_inset Formula $t$
+\end_inset
+
+ statistics are obtained in the usual fashion.
+\end_layout
+
+\begin_layout Subsection*
+5.2.3.
+\begin_inset space \quad{}
+\end_inset
+
+Asymptotic Efficiency of Two-stage Least Squares
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The appeal of 2SLS comes from its efficiency in a class of IV estimators.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+5.3 (Relative Efficiency of 2SLS):
+\series default
+ 
+\emph on
+Under Assumptions 2SLS.1-2SLS.3, the 2SLS estimator is efficient in the class
+ of all instrumental variables estimators using instruments linear in 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ be the 2SLS estimator, and let 
+\begin_inset Formula $\tilde{\beta}$
+\end_inset
+
+ be any other IV estimator using instruments linear in 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+.
+ Let the instruments for 
+\begin_inset Formula $\tilde{\beta}$
+\end_inset
+
+ be 
+\begin_inset Formula $\tilde{x}_{i}^{\prime}=z_{i}^{\prime}\Gamma$
+\end_inset
+
+, where 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ is an 
+\begin_inset Formula $L\times K$
+\end_inset
+
+ nonstochastic matrix.
+ (Note that 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ is the 
+\begin_inset Formula $L\times1$
+\end_inset
+
+ random vector in the population.) We assume that the rank condition holds
+ for 
+\begin_inset Formula $\tilde{x}_{i}$
+\end_inset
+
+.
+ For 2SLS, the choice of IVs is effectively 
+\begin_inset Formula $x_{i}^{*\prime}=z_{i}^{\prime}\Pi$
+\end_inset
+
+, where 
+\begin_inset Formula $\Pi=\left[E(z_{i}z_{i}^{\prime})\right]^{-1}E(z_{i}x_{i}^{\prime})\equiv D^{-1}C$
+\end_inset
+
+.
+ (In both cases, we can replace 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ with 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+-consistent estimators without changing the asymptotic variances.) Now, under
+ Assumptions 2SLS.1-2SLS.3, we know the asymptotic variance of 
+\begin_inset Formula $\sqrt{N}(\hat{\beta}-\beta)$
+\end_inset
+
+ is 
+\begin_inset Formula $\sigma^{2}\left[E(x_{i}^{*}x_{i}^{*\prime})\right]^{-1}$
+\end_inset
+
+, where 
+\begin_inset Formula $x^{*^{\prime}}=z_{i}^{\prime}\Pi$
+\end_inset
+
+.
+ It is straightforward to show that 
+\begin_inset Formula $\mbox{AVar}\left[\sqrt{N}(\tilde{\beta}-\beta)\right]=\sigma^{2}\left[E(\tilde{x}_{i}x_{i}^{\prime})\right]^{-1}\left[E(\tilde{x}_{i}\tilde{x}_{i}^{\prime})\right]\left[E(x_{i}\tilde{x}_{i})\right]^{-1}$
+\end_inset
+
+.
+ To show that 
+\begin_inset Formula $\mbox{AVar}\left[\sqrt{N}(\tilde{\beta}-\beta)\right]-\mbox{AVar}\left[\sqrt{N}(\hat{\beta}-\beta)\right]$
+\end_inset
+
+ is positive semidefinite (p.s.d.), it suffices to show that 
+\begin_inset Formula $E(x_{i}^{*}x_{i}^{*\prime})-E(x_{i}\tilde{x}_{i}^{\prime})\left[E(\tilde{x}_{i}\tilde{x}_{i}^{\prime})\right]^{-1}E(\tilde{x}_{i}x_{i}^{\prime})$
+\end_inset
+
+ is p.s.d.
+ But 
+\begin_inset Formula $x_{i}^{\prime}=x_{i}^{*\prime}+r_{i}^{\prime}$
+\end_inset
+
+, where 
+\begin_inset Formula $E(z_{i}r_{i}^{\prime})=0$
+\end_inset
+
+, and so 
+\begin_inset Formula $E(\tilde{x}_{i}r_{i}^{\prime})=0$
+\end_inset
+
+.
+ It follows that 
+\begin_inset Formula $E(\tilde{x}_{i}x_{i}^{\prime})=E(\tilde{x}_{i}x_{i}^{*\prime})$
+\end_inset
+
+, and so
+\begin_inset Formula 
+\[
+E(x_{i}^{*}x_{i}^{*\prime})-E(x_{i}\tilde{x}_{i}^{\prime})\left[E(\tilde{x}_{i}\tilde{x}_{i}^{\prime})\right]^{-1}E(\tilde{x}_{i}x_{i}^{\prime})=E(x_{i}^{*}x_{i}^{*\prime})-E(x_{i}^{*}\tilde{x}_{i}^{\prime})\left[E(\tilde{x}_{i}\tilde{x}_{i}^{\prime})\right]^{-1}E(\tilde{x}_{i}x_{i}^{*\prime})=E(s_{i}^{*}s_{i}^{*\prime})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $s_{i}^{*}=x_{i}^{*}-L(x_{i}^{*}|\tilde{x}_{i})$
+\end_inset
+
+ is the population residual from the linear projection of 
+\begin_inset Formula $x_{i}^{*}$
+\end_inset
+
+ on 
+\begin_inset Formula $\tilde{x}$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $E(s_{i}^{*}s_{i}^{*\prime})$
+\end_inset
+
+ is p.s.d., the proof is complete.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Theorem 5.3 is vacuous when 
+\begin_inset Formula $L=K$
+\end_inset
+
+ because any (nonsingular) choice of 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ leads to the same estimator: the IV estimator derived in Secion 5.1.1.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is exogenous, Theorem 5.3 implies that, under Assumptions 2SLS.1-2SLS.3, the
+ OLS estimator is efficient in the class of all estimators using instruments
+ in all exogenous variables 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+.
+ Why? Because 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is a subset of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ and so 
+\begin_inset Formula $L(x_{i}|z_{i})=x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Another important implication of Theorem 5.3 is that, asymptotically, we
+ always do better by using as many instruments as are available, at least
+ under homoskedasticity.
+ This conclusion follows because using a subset of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ as instruments corresponds to using a particular linear combination of
+ 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+.
+ For certain subsets we might achieve the same efficiency as 2SLS using
+ all of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, but we can do no better.
+ This observation makes it tempting to add many instruments so that 
+\begin_inset Formula $L$
+\end_inset
+
+ is much larger than 
+\begin_inset Formula $K$
+\end_inset
+
+.
+ Unfortunately, 2SLS estimators based on many overidentifying restrictions
+ can cause finite sample problems.
+ Because Assumption 2SLS.3 is assumed for Theorem 5.3, it is not surprising
+ that more efficient estimators are available if Assumption 2SLS.3 fails.
+ 
+\end_layout
+
+\begin_layout Subsection*
+5.2.4
+\begin_inset space \quad{}
+\end_inset
+
+Hypothesis Testing with Two-Stage Least Squares
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We have already seen that tsting hypotheses about a single 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ is straightforward using an asymptotic 
+\begin_inset Formula $t$
+\end_inset
+
+ statistic, which has an asymptotic normal distribution under the null;
+ some prefer to use the 
+\begin_inset Formula $t$
+\end_inset
+
+ distribution when 
+\begin_inset Formula $N$
+\end_inset
+
+ is small.
+ Generally, one should be aware that the normal and 
+\begin_inset Formula $t$
+\end_inset
+
+ approximations can be poor if 
+\begin_inset Formula $N$
+\end_inset
+
+ is small.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To test multiple linear restrictions of the form 
+\begin_inset Formula $H_{0}:R\beta=r$
+\end_inset
+
+, the Wald statistic is the same as for traditional OLS regression, but
+ with 
+\begin_inset Formula $\hat{V}$
+\end_inset
+
+ given by equation (26).
+ The Wald statistic, as usual, is a limiting null 
+\begin_inset Formula $\chi_{Q}^{2}$
+\end_inset
+
+ distribution.
+\end_layout
+
+\begin_layout Subsection*
+5.2.5
+\begin_inset space \quad{}
+\end_inset
+
+Heteroskedasticity-Robust Inference for Two-Stage Least Squares
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Assumption 2SLS.3 can be restrictive, so we should have a variance matrix
+ estimator that is robust in the presense of heteroskedasticity of unknown
+ form.
+ As usual, we need to estimate 
+\begin_inset Formula $B$
+\end_inset
+
+ along with 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Under Assumptions 2SLS.1 and 2SLS.2 only, 
+\begin_inset Formula $\mbox{AVar}(\hat{\beta})$
+\end_inset
+
+ can be estimated as
+\begin_inset Formula 
+\begin{equation}
+\left(\hat{X}^{\prime}\hat{X}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}\hat{u}_{i}^{2}\hat{x}_{i}\hat{x}_{i}^{\prime}\right)\left(\hat{X}^{\prime}\hat{X}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+Sometimes this matrix is multiplied by 
+\begin_inset Formula $\nicefrac{N}{(N-K)}$
+\end_inset
+
+ as a degrees-of-freedom adjustment.
+ This heteroskedasticity-robust estimator can be used anywhere the estimator
+ 
+\begin_inset Formula $\hat{\sigma}^{2}(\hat{X}^{\prime}\hat{X})^{-1}$
+\end_inset
+
+.
+ In particular, the square roots of the diagonal elements of the matrix
+ (27) are the heteroskedasticiy-robust standard errors for 2SLS.
+\end_layout
+
+\begin_layout Subsection*
+5.2.6
+\begin_inset space \quad{}
+\end_inset
+
+Potential Pitfalls with Two-Stage Least Squares
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When properly applied, the method of instrumental variables can be a powerful
+ tool for estimating structural equations using nonexperimental data.
+ Nevertheless, there are some problems that one can encounter when applying
+ IV in practice.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+One thing to remember is that, unlike OLS under a zero conditional mean
+ assumption, IV methods are never unbiased when at least one explanatory
+ variable is endogenous in the model.
+ In fact, under standard distributional assumptions, the expected value
+ of the 2SLS estimator does not even exist.
+ In the case when all endogenous variables have homoskedastic normal distributio
+ns with expectations linear in the exogenous variables, the number of moments
+ of the 2SLS estimator that exists is one fewer than the number of overidentifyi
+ng restrictions.
+ This finding implies that when the number of instruments equals the number
+ of explanatory variables, the IV estimator does not have an expected value.
+ This is one reason we rely on large-sample analysis to justify 2SLS.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Even in large samples, IV methods can be ill-behaved if we have 
+\series bold
+weak instruments
+\series default
+.
+ Consider the simple model 
+\begin_inset Formula $y=\beta_{0}+\beta_{1}x_{1}+u$
+\end_inset
+
+, where we use 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ as an instrument for 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+.
+ Assuming that 
+\begin_inset Formula $\mbox{Cov}(z_{1},x_{1})\neq0$
+\end_inset
+
+, the 
+\begin_inset Formula $\mbox{p\lim}$
+\end_inset
+
+ of the IV estimator is easily shown to be
+\begin_inset Formula 
+\[
+\mbox{p\lim}\ \hat{\beta}_{1}=\beta_{1}+\frac{\mbox{Cov}(z_{1},u)}{\mbox{Cov}(z_{1},x_{1})}
+\]
+
+\end_inset
+
+which can be written as
+\begin_inset Formula 
+\begin{equation}
+\mbox{p\lim}\ \hat{\beta}_{1}=\beta_{1}+\left(\frac{\sigma_{u}}{\sigma_{x_{1}}}\right)\left[\frac{\mbox{Corr}(z_{1},u)}{\mbox{Corr}(z_{1},x_{1})}\right]
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mbox{Corr}(\cdot,\cdot)$
+\end_inset
+
+ denotes correlation.
+ From this equation we see that if 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $u$
+\end_inset
+
+ are correlated, the inconsistency in the IV estimator gets arbitrarily
+ large as 
+\begin_inset Formula $\mbox{Corr}(z_{1},x_{1})$
+\end_inset
+
+ gets close to zero.
+ Thus, seemingly small correlations between 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $u$
+\end_inset
+
+ can cause severe inconsistency, and therefore severe finite sample bias,
+ if 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ is only weakly correlated with 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+.
+ In fact, it may be better to just use OLS, even if we look only at the
+ inconsistencies in the estimators.
+ To see why, let 
+\begin_inset Formula $\tilde{\beta}_{1}$
+\end_inset
+
+ denote the OLS estimator and write its 
+\begin_inset Formula $\mbox{p\lim}$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{equation}
+\mbox{p\lim}(\tilde{\beta}_{1})=\beta_{1}+\left(\frac{\sigma_{u}}{\sigma_{x_{1}}}\right)\mbox{Corr}(x_{1},u)
+\end{equation}
+
+\end_inset
+
+Comparing equations (28) and (29), the signs of the inconsistency of OLS
+ and IV can be different.
+ Further, the magnitude of the inconsistency in OLS is smaller than that
+ of the IV estimator if 
+\begin_inset Formula $\left|\mbox{Corr}(x_{1},u)\right|\cdot\left|\mbox{Corr}(z_{1},x_{1})\right|<\left|\mbox{Corr}(z_{1},u)\right|$
+\end_inset
+
+.
+ This simple inequality makes it apparent that a weak instrument, captured
+ here be small 
+\begin_inset Formula $\left|\mbox{Corr}(z_{1},x_{1})\right|$
+\end_inset
+
+, can easily make IV have more asymptotic bias than OLS.
+ Unfortunately, we never observe 
+\begin_inset Formula $u$
+\end_inset
+
+, so we cannot know how large 
+\begin_inset Formula $\left|\mbox{Corr}(z_{1},u)\right|$
+\end_inset
+
+ is relative to 
+\begin_inset Formula $\left|\mbox{Corr}(x_{1},u)\right|$
+\end_inset
+
+.
+ But what is certain is that a small correlation between 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+, which we can estimate should raise concerns, even if we think 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ is 
+\begin_inset Quotes eld
+\end_inset
+
+almost
+\begin_inset Quotes erd
+\end_inset
+
+ exogenous.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Another potential problem with applying 2SLS and other IV procedures is
+ that the 2SLS standard errors have a tendency to be 
+\begin_inset Quotes eld
+\end_inset
+
+large.
+\begin_inset Quotes erd
+\end_inset
+
+ What is typically meant by this statement is either that 2SLS coefficients
+ are statistically insignifcant or that the 2SLS standard errors are much
+ large than the OLS standard errors.
+ Not surprisingly, the magnitudes of the 2SLS standard errors, depend among
+ other things, on the quality of the instruments used in estimation.
+\end_layout
+
+\end_body
+\end_document

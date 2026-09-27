@@ -1,0 +1,2631 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Systems of Equations
+\end_layout
+
+\begin_layout Part*
+Wooldridge Slides
+\end_layout
+
+\begin_layout Section*
+Introduction to Panel Data
+\end_layout
+
+\begin_layout Subsection*
+Preliminaries
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We assume random sampling of units from a well-define population.
+ We only concentrate on the panel data case, so we sample different time
+ periods on the same response and explanatory variables.
+ Also, we assume a small number of time periods; to apply standard limit
+ theorems, we can use results for independent, identically distributed observati
+ons.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We suppose that, for each unit in the population, we have a (usually short)
+ time series, 
+\begin_inset Formula $\{(x_{t},y_{t}):t=1,\ldots,T\}$
+\end_inset
+
+.
+ A linear panel data model is
+\begin_inset Formula 
+\begin{equation}
+y_{t}=x_{t}^{\prime}\beta+u_{t},\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+In this setup, there is a single response variable, 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+, that we observe in several time periods.
+ Having the same 
+\begin_inset Formula $\beta$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+ is not restrictive because 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+ can be very general.
+ It can (and usually should) include time-period dummies to allow a different
+ intercept in each period.
+ It can include interactions between time period dummies and other variables
+ to allow effects to change over time.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For panel data, we can write equation (1) in system form (for a random draw
+ 
+\begin_inset Formula $i$
+\end_inset
+
+) as
+\begin_inset Formula 
+\begin{equation}
+y_{i}=X_{i}\beta+u_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $y_{i}=\left[\begin{array}{ccc}
+y_{i1} & \cdots & y_{iT}\end{array}\right]_{T\times1}^{\prime}$
+\end_inset
+
+, 
+\begin_inset Formula $u_{i}=\left[\begin{array}{ccc}
+u_{i1} & \cdots & u_{iT}\end{array}\right]_{T\times1}^{\prime}$
+\end_inset
+
+, and
+\begin_inset Formula 
+\[
+X_{i}=\left[\begin{array}{c}
+x_{i1}^{\prime}\\
+\vdots\\
+x_{it}^{\prime}
+\end{array}\right]_{T\times K}
+\]
+
+\end_inset
+
+where each 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+.
+ So, we have
+\begin_inset Formula 
+\[
+X_{i}^{\prime}X_{i}=\left[\begin{array}{ccc}
+x_{i1} & \cdots & x_{iT}\end{array}\right]\left[\begin{array}{c}
+x_{i1}^{\prime}\\
+\vdots\\
+x_{it}^{\prime}
+\end{array}\right]={\displaystyle \sum_{t=1}^{T}}x_{it}x_{it}^{\prime}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Exogeneity Assumptions
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An atractive assumption in the general equation 
+\begin_inset Formula $y_{t}=x_{t}^{\prime}\beta+u_{t}$
+\end_inset
+
+ is 
+\series bold
+contemporaneous exogeneity
+\series default
+:
+\begin_inset Formula 
+\begin{equation}
+E(u_{t}|x_{t})=0,\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+which implies
+\begin_inset Formula 
+\begin{equation}
+E(y_{t}|x_{t})=x_{t}^{\prime}\beta,\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+This assumption rules out omitted variables, measurement error, and so on,
+ but it does not restrict correlation between 
+\begin_inset Formula $x_{s}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ for 
+\begin_inset Formula $s\neq t$
+\end_inset
+
+.
+ Stated as a zero conditional mean, it also implies correct functional form
+ of 
+\begin_inset Formula $E(y_{t}|x_{t})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An assumption that is stronger than (3), but can be justified when we assume
+ the dynamics are completely specified (with respect to the elements of
+ 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+) is 
+\series bold
+sequential exogeneity
+\series default
+:
+\begin_inset Formula 
+\begin{equation}
+E(u_{t}|x_{t},x_{t-1},\ldots,x_{1})=0,\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As we will see, (5) can be applied to distributed lag models and models
+ with lagged dependent variables.
+ (5) implies
+\begin_inset Formula 
+\begin{equation}
+E(y_{t}|x_{t},x_{t-1},\ldots,x_{1})=E(y_{t}|x_{t})=x_{t}^{\prime}\beta
+\end{equation}
+
+\end_inset
+
+which makes it clear that enough lags of whatever have been included in
+ 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+ so that no further lags are needed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An even stronger assumption, both technically and practically, is 
+\series bold
+strict exogeneity
+\series default
+:
+\begin_inset Formula 
+\begin{equation}
+E(u_{t}|x_{1},\ldots,x_{t-1},x_{t},x_{t+1},\ldots,x_{T})=0,\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+This implies that 
+\begin_inset Formula $x_{s}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ are uncorrelated for all 
+\begin_inset Formula $s$
+\end_inset
+
+ and 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ (7) is the same as
+\begin_inset Formula 
+\begin{equation}
+E(y_{t}|x_{1},\ldots,x_{t-1},x_{t},x_{t+1},\ldots,x_{T})=E(y_{t}|x_{t})=x_{t}^{\prime}\beta
+\end{equation}
+
+\end_inset
+
+where the first equality is the critical one.
+ It says that, given whatever is in 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+, the covariates from other time periods do not help explain 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+.
+ The main concern with (8) is that it rules out feedback from shocks to
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+ to future outcomes on 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ In particular, 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{t+1}$
+\end_inset
+
+ cannot be correlated.
+ So, any model with a lagged dependent variable 
+\emph on
+must
+\emph default
+ violate strict exogeneity.
+\end_layout
+
+\begin_layout Section*
+System OLS (SOLS)
+\end_layout
+
+\begin_layout Subsection*
+Consistency
+\end_layout
+
+\begin_layout Subsubsection*
+Assumptions
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption SOLS.1
+\series default
+:
+\begin_inset Formula 
+\begin{equation}
+E(X_{i}^{\prime}u_{i})=0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+This is the weakest possible assumption without moving into instrumental
+ variables territory.
+ Clearly, (9) is implied by
+\begin_inset Formula 
+\begin{equation}
+E(u_{i}|X_{i})=0
+\end{equation}
+
+\end_inset
+
+almost the strongest assumption we could make.
+ For panel data,
+\begin_inset Formula 
+\begin{equation}
+X_{i}^{\prime}u_{i}={\displaystyle \sum_{t=1}^{T}}x_{it}u_{it}
+\end{equation}
+
+\end_inset
+
+and so SOLS.1 is the same as
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{t=1}^{T}}E(x_{it}u_{it})=0
+\end{equation}
+
+\end_inset
+
+It is unlikely we would assume (12) without just assuming
+\begin_inset Formula 
+\[
+E(x_{it}u_{it})=0,\ t=1,\ldots,T
+\]
+
+\end_inset
+
+So, SOLS.1 for panel data is contemporaneous exogeneity.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption SOLS.2
+\series default
+:
+\begin_inset Formula 
+\begin{equation}
+\mbox{rank}E(X_{i}^{\prime}X_{i})=K
+\end{equation}
+
+\end_inset
+
+For panel data, SOLS.2 holds if and only if
+\begin_inset Formula 
+\[
+\mbox{rank}\left[{\displaystyle \sum_{t=1}^{T}}E(x_{it}x_{it}^{\prime})\right]=K
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Population Orthogonality Conditions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left[X_{i}^{\prime}\left(y_{i}-X_{i}\beta\right)\right] & = & 0\ \mbox{by SOLS.1}\\
+E(X_{i}^{\prime}X_{i})\beta & = & E(X_{i}^{\prime}y_{i})\\
+\beta & = & \left[E(X_{i}^{\prime}X_{i})\right]^{-1}E(X_{i}^{\prime}y_{i})\ \mbox{by SOLS.2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+SOLS Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}_{SOLS}=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}X_{i}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}y_{i}\right)
+\end{equation}
+
+\end_inset
+
+which can be writeen as 
+\begin_inset Formula $\hat{\beta}_{SOLS}=(X^{\prime}X)^{-1}X^{\prime}Y$
+\end_inset
+
+ where 
+\begin_inset Formula $X$
+\end_inset
+
+ is 
+\begin_inset Formula $NT\times K$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ is 
+\begin_inset Formula $NT\times1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Under SOLS.1 and SOLS.2, OLS on a random sample is consistent:
+\begin_inset Formula 
+\begin{equation}
+\mbox{p\lim}_{N\rightarrow\infty}\left(\hat{\beta}_{SOLS}\right)=\beta
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+System OLS is not unbiased under SOLS.1 and SOLS.2.
+ It is if we use
+\begin_inset Formula 
+\begin{equation}
+E(u_{i}|X_{i})=0
+\end{equation}
+
+\end_inset
+
+but this is very strong.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For panel data, we assume fixed 
+\begin_inset Formula $T$
+\end_inset
+
+ with 
+\begin_inset Formula $N$
+\end_inset
+
+ growing.
+ Reflects most micro panel data sets: many units, few time periods per unit.
+ The fixed 
+\begin_inset Formula $T$
+\end_inset
+
+ scenario is very convenient: it means the limit theorems are for random
+ sampling.
+ Further, the results allow for 
+\emph on
+any
+\emph default
+ kind of time series dependence in the explanatory variables or errors.
+\end_layout
+
+\begin_layout Subsection*
+Asymptotic Normality and Inference
+\end_layout
+
+\begin_layout Subsubsection*
+Asymptotic Normality
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sqrt{N}(\hat{\beta}-\beta)=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}X_{i}\right)^{-1}\left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}u_{i}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By the CLT for i.i.d.
+ random vectors
+\begin_inset Formula 
+\begin{gather}
+\left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}u_{i}\right)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N(0,B)\\
+B=\mbox{Var}(X_{i}^{\prime}u_{i})=E(X_{i}^{\prime}u_{i}u_{i}^{\prime}X_{i})
+\end{gather}
+
+\end_inset
+
+Let 
+\begin_inset Formula 
+\begin{equation}
+A=E(X_{i}^{\prime}X_{i})
+\end{equation}
+
+\end_inset
+
+Then,
+\begin_inset Formula 
+\begin{eqnarray}
+\sqrt{N}(\hat{\beta}-\beta) & = & A^{-1}\left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}u_{i}\right)+\left[\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}X_{i}\right)^{-1}-A^{-1}\right]\left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}u_{i}\right)\\
+ & = & A^{-1}\left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}u_{i}\right)+o_{p}(1)\cdot O_{p}(1)\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+So,
+\begin_inset Formula 
+\begin{equation}
+\sqrt{N}(\hat{\beta}-\beta)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N(0,A^{-1}BA^{-1})
+\end{equation}
+
+\end_inset
+
+The SOLS residuals are
+\begin_inset Formula 
+\begin{equation}
+\hat{u}_{i}=y_{i}-X_{i}\hat{\beta}\ (\mbox{each}\ T\times1)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Variance Estimators
+\end_layout
+
+\begin_layout Standard
+A fully robust estimator of 
+\begin_inset Formula $B$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+\hat{B}=(N-K)^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\hat{u}_{i}\hat{u}_{i}^{\prime}X_{i}
+\end{equation}
+
+\end_inset
+
+The resulting sandwich estimator is
+\begin_inset Formula 
+\begin{equation}
+\widehat{\mbox{AVar}(\hat{\beta})}=\frac{N}{N-K}\left({\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}X_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\hat{u}_{i}\hat{u}_{i}^{\prime}X_{i}\right)\left({\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}X_{i}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+For panel data, (24) allows the variances, 
+\begin_inset Formula $\mbox{Var}(u_{t})$
+\end_inset
+
+, and covariances, 
+\begin_inset Formula $\mbox{Cov}(u_{t},u_{s})$
+\end_inset
+
+, to be unrestricted.
+ Thus, it is robust to arbitrary heteroskedasticity as a function of time
+ and to any serial correlation pattern in the errors, 
+\begin_inset Formula $\left\{ u_{it}:t=1,\ldots,T\right\} $
+\end_inset
+
+.
+ In addition, it is robust to the conditional variances and covariances
+ being any function of 
+\begin_inset Formula $\left\{ x_{it}:t=1,\ldots,T\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Testing
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Obtain asymptotic standard errors form (24) to construct large-sample 
+\begin_inset Formula $t$
+\end_inset
+
+ statistics (which converge to standard normal under null as 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+) and confidence intervals.
+ Consider hypotheses
+\begin_inset Formula 
+\begin{equation}
+H_{0}:R\beta=r
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $R$
+\end_inset
+
+ is 
+\begin_inset Formula $Q\times K$
+\end_inset
+
+, 
+\begin_inset Formula $r$
+\end_inset
+
+ is 
+\begin_inset Formula $Q\times1$
+\end_inset
+
+, 
+\begin_inset Formula $Q\leq K$
+\end_inset
+
+.
+ Most convenient is the 
+\series bold
+Wald statisti
+\series default
+c
+\begin_inset Formula 
+\[
+W=\left(R\hat{\beta}-r\right)^{\prime}\left[R\hat{V}R^{\prime}\right]^{-1}\left(R\hat{\beta}-r\right)\begin{array}[b]{c}
+_{a}\\
+\sim
+\end{array}\chi^{2}(Q)
+\]
+
+\end_inset
+
+under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, where 
+\begin_inset Formula $\hat{V}$
+\end_inset
+
+ is given in (24).
+\end_layout
+
+\begin_layout Subsection*
+Pooled OLS (POLS)
+\end_layout
+
+\begin_layout Subsubsection*
+Consistency Assumptions
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption POLS.1
+\series default
+ (Contemporaneous Exogeneity):
+\begin_inset Formula 
+\begin{equation}
+E(x_{it}u_{it})=0,\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+Remember, POLS.1 allows for lagged dependent variables as well as other non-stric
+tly exogenous regressors.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption POLS.2
+\series default
+ (Rank Condition):
+\begin_inset Formula 
+\begin{equation}
+\mbox{rank}\left[{\displaystyle \sum_{t=1}^{T}}E\left(x_{it}x_{it}^{\prime}\right)\right]=K
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Under POLS.1 and POLS.2, the 
+\series bold
+pooled OLS estimator
+\series default
+ is
+\begin_inset Formula 
+\[
+\hat{\beta}_{POLS}=\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}x_{it}x_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}x_{it}y_{it}\right)
+\]
+
+\end_inset
+
+and the asymptotic variance of 
+\begin_inset Formula $\sqrt{N}\left(\hat{\beta}_{POLS}-\beta\right)$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+\left[{\displaystyle \sum_{t=1}^{T}}E\left(x_{it}x_{it}^{\prime}\right)\right]^{-1}\left[{\displaystyle \sum_{t=1}^{T}}{\displaystyle \sum_{s=1}^{T}}E\left(u_{it}u_{is}x_{it}x_{is}^{\prime}\right)\right]\left[{\displaystyle \sum_{t=1}^{T}}E\left(x_{it}x_{it}^{\prime}\right)\right]^{-1}
+\end{equation}
+
+\end_inset
+
+This expression simplifies if we appropriately restrict the conditional
+ variances and covariances.
+\end_layout
+
+\begin_layout Subsubsection*
+Homoskedasticity and No Serial Correlation
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption POLS.3
+\series default
+ (Homoskedasticity and No Serial Correlation):
+\begin_inset Formula 
+\begin{eqnarray}
+(a)\ E\left(u_{it}^{2}x_{it}x_{it}^{\prime}\right) & = & E(u_{it}^{2})E(x_{it}x_{it}^{\prime})\nonumber \\
+ & = & \sigma^{2}E(x_{it}x_{it}^{\prime}),\ \mbox{where}\ \sigma^{2}=E(u_{it}^{2})\ \forall\ t\\
+(b)\ E(u_{it}u_{is}x_{it}x_{is}^{\prime}) & = & 0\ \forall\ t\neq s
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Under POLS.3, (28) becomes
+\begin_inset Formula 
+\[
+\sigma^{2}\left[{\displaystyle \sum_{t=1}^{T}}E\left(x_{it}x_{it}^{\prime}\right)\right]^{-1}
+\]
+
+\end_inset
+
+POLS.3 implies that the 
+\begin_inset Quotes eld
+\end_inset
+
+usual
+\begin_inset Quotes erd
+\end_inset
+
+ asymptotic variance matrix estimator of 
+\begin_inset Formula $\hat{\beta}_{POLS}$
+\end_inset
+
+ is valid:
+\begin_inset Formula 
+\begin{eqnarray}
+\widehat{\mbox{AVar}(\hat{\beta}_{POLS})} & = & \hat{\sigma}^{2}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}x_{it}x_{it}^{\prime}\right)^{-1}=\hat{\sigma}^{2}(X^{\prime}X)^{-1}\\
+\hat{\sigma}^{2} & = & (NT-K)^{-1}{\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\hat{u}_{it}^{2}=\nicefrac{SSR}{NT-K}
+\end{eqnarray}
+
+\end_inset
+
+We can use the usual 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $F$
+\end_inset
+
+ statistics as approximately valid for large 
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Without POLS.3, generally need fully robust variance matrix.
+ That is, robust to arbitrary heteroskedasticity and serial correlation.
+\begin_inset Formula 
+\begin{equation}
+\widehat{\mbox{AVar}(\hat{\beta}_{POLS})}=\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}x_{it}x_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}{\displaystyle \sum_{s=1}^{T}}\hat{u}_{it}\hat{u}_{is}x_{it}x_{is}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}x_{it}x_{it}^{\prime}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+This estimator in Stata is computed using a 
+\begin_inset Quotes eld
+\end_inset
+
+cluster
+\begin_inset Quotes erd
+\end_inset
+
+ option, where each unit 
+\begin_inset Formula $i$
+\end_inset
+
+ is a cluster of 
+\begin_inset Formula $T$
+\end_inset
+
+ time series observations.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If we maintain the no serial correlation part of POLS.3, then a heteroskedasticit
+y-robust form is valid:
+\begin_inset Formula 
+\[
+\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}x_{it}x_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\hat{u}_{it}^{2}x_{it}x_{is}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}x_{it}x_{it}^{\prime}\right)^{-1}
+\]
+
+\end_inset
+
+In Stata, this estimator is obtained with a 
+\begin_inset Quotes eld
+\end_inset
+
+robust
+\begin_inset Quotes erd
+\end_inset
+
+ option, but its robustness is limited to heteroskedasticity, not serial
+ correlation.
+\end_layout
+
+\begin_layout Section*
+System Generalized Least Squares (SGLS)
+\end_layout
+
+\begin_layout Subsection*
+Asymptotic Properties of SGLS
+\end_layout
+
+\begin_layout Subsubsection*
+SGLS Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+By 
+\begin_inset Quotes eld
+\end_inset
+
+generalized least squares,
+\begin_inset Quotes erd
+\end_inset
+
+ we mean exploiting different 
+\emph on
+unconditional 
+\emph default
+variances across time and nonzero 
+\emph on
+unconditional
+\emph default
+ covariances across equations.
+ We do not exploit situations where the variance-covariance matrix is a
+ function of 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The 
+\begin_inset Formula $T\times T$
+\end_inset
+
+ unconditional variance-covariance matrix plays a key role.
+\begin_inset Formula 
+\begin{equation}
+\Omega\equiv E(u_{i}u_{i}^{\prime})=\left[\begin{array}{cccc}
+\sigma_{1}^{2} & \sigma_{12} & \cdots & \sigma_{1T}\\
+\sigma_{12} & \sigma_{2}^{2} & \cdots & \sigma_{2T}\\
+\vdots & \vdots & \ddots & \vdots\\
+\sigma_{1T} & \sigma_{2T} & \cdots & \sigma_{T}^{2}
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+The following language is as if 
+\begin_inset Formula $E(u_{i})=0$
+\end_inset
+
+, which is maintained in virtually all applications and is no assumption
+ at all when the various equations contain an intercept.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Assume, for now, that we know 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ Transform the equation to remove the correlations in errors and make variances
+ constant
+\begin_inset Formula 
+\begin{equation}
+\Omega^{-\nicefrac{1}{2}}y_{i}=\Omega^{-\nicefrac{1}{2}}X_{i}\beta+\Omega^{-\nicefrac{1}{2}}u_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ is assumed to be nonsingular and 
+\begin_inset Formula $\Omega^{-\nicefrac{1}{2}}$
+\end_inset
+
+ is a symmetric matrix such that 
+\begin_inset Formula $\Omega^{-\nicefrac{1}{2}}\Omega^{-\nicefrac{1}{2}}=\Omega^{-1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Omega^{-\nicefrac{1}{2}}\Omega\Omega^{-\nicefrac{1}{2}}=I_{T}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $X_{i}^{*}=\Omega^{-\nicefrac{1}{2}}X_{i}$
+\end_inset
+
+, and similarly for 
+\begin_inset Formula $y_{i}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{i}^{*}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $E(u_{i}^{*}u_{i}^{*\prime})=\Omega^{-\nicefrac{1}{2}}E(u_{i}u_{i}^{\prime})\Omega^{-\nicefrac{1}{2}}=I_{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Apply system OLS to 
+\begin_inset Formula $y_{i}^{*}=X_{i}^{*}\beta+u_{i}^{*}$
+\end_inset
+
+.
+ The GLS estimator is
+\begin_inset Formula 
+\begin{eqnarray*}
+\beta_{GLS}^{*} & = & \left(N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{*\prime}X_{i}^{*}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{*\prime}y_{i}^{*}\right)\\
+ & = & \left(N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\Omega^{-1}X_{i}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\Omega^{-1}y_{i}\right)\\
+ & = & \beta+\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\Omega^{-1}X_{i}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\Omega^{-1}u_{i}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The 
+\begin_inset Formula $K\times K$
+\end_inset
+
+ matrix average converges in probability to 
+\begin_inset Formula $E(X_{i}^{\prime}\Omega^{-1}X_{i})$
+\end_inset
+
+; assume this is nonsingular.
+ Then, consistency of 
+\begin_inset Formula $\beta^{*}$
+\end_inset
+
+ holds if
+\begin_inset Formula 
+\begin{equation}
+E(X_{i}^{\prime}\Omega^{-1}u_{i})=0
+\end{equation}
+
+\end_inset
+
+In general, (36) is not implied by SOLS.1.
+ GLS transforms the orthogonality conditions; it may not be consistent when
+ SOLS is.
+\end_layout
+
+\begin_layout Subsubsection*
+Consistency Assumptions
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption SGLS.1
+\series default
+ (Strict Exogeneity):
+\begin_inset Formula 
+\begin{equation}
+E(X_{i}\otimes u_{i})=0
+\end{equation}
+
+\end_inset
+
+Every element of 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ is uncorrelated with every element of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+, so (36) holds because any linear combination of 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+.
+ SGLS.1 implies SOLS.1.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption SGLS.2
+\series default
+ (Rank Condition): 
+\begin_inset Formula $E(X_{i}^{\prime}\Omega^{-1}X_{i})$
+\end_inset
+
+ is nonsingular
+\end_layout
+
+\begin_layout Theorem*
+Under SGLS.1 and SGLS.2, 
+\begin_inset Formula $\beta^{*}$
+\end_inset
+
+ is consistent for 
+\begin_inset Formula $\beta$
+\end_inset
+
+ as 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Asymptotic Normality
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Asymptotic normality is straightforward:
+\begin_inset Formula 
+\begin{eqnarray*}
+\sqrt{N}(\beta^{*}-\beta) & = & \left(N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\Omega^{-1}X_{i}\right)^{-1}\left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\Omega^{-1}u_{i}\right)\\
+ & = & A^{-1}\left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\Omega^{-1}u_{i}\right)\\
+ &  & +\left[\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\Omega^{-1}X_{i}\right)^{-1}-A^{-1}\right]\left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\Omega^{-1}u_{i}\right)\\
+ & = & A^{-1}\left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\Omega^{-1}u_{i}\right)+o_{p}(1)
+\end{eqnarray*}
+
+\end_inset
+
+Now,
+\begin_inset Formula 
+\begin{equation}
+A=E(X_{i}^{\prime}\Omega^{-1}X_{i})
+\end{equation}
+
+\end_inset
+
+By the CLT,
+\begin_inset Formula 
+\begin{gather}
+\sqrt{N}(\beta^{*}-\beta)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N(0,A^{-1}BA^{-1})\\
+B=\mbox{Var}(X_{i}^{\prime}\Omega^{-1}u_{i})=E(X_{i}^{\prime}\Omega^{-1}u_{i}u_{i}^{\prime}\Omega^{-1}X_{i})
+\end{gather}
+
+\end_inset
+
+At this point, we cannot simplify 
+\begin_inset Formula $B$
+\end_inset
+
+ further.
+ We are not assuming 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ is nonrandom, and we dow not have enough assumptions about the distribution
+ of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ to reduce 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Under SGLS.1, SOLS.2, and SGLS.2, GLS need 
+\emph on
+not
+\emph default
+ be more efficient than SOLS.
+\end_layout
+
+\begin_layout Subsection*
+Feasible GLS (FGLS)
+\end_layout
+
+\begin_layout Subsubsection*
+The Estimator and Asymptotic Properties
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now we study the estimator from the previous subsection but where an estimator
+ of 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ is used in place of 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ Generally, let 
+\begin_inset Formula $\hat{\Omega}$
+\end_inset
+
+ be a 
+\begin_inset Formula $T\times T$
+\end_inset
+
+ matrix such that
+\begin_inset Formula 
+\begin{equation}
+\mbox{p\lim}_{N\rightarrow\infty}\hat{\Omega}=\Omega
+\end{equation}
+
+\end_inset
+
+For panel data, we almost always use
+\begin_inset Formula 
+\begin{equation}
+\hat{\Omega}=N^{-1}{\displaystyle \sum_{i=1}^{N}}\check{u}_{i}\check{u}_{i}^{\prime}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\check{u}_{i}=y_{i}-X_{i}\check{\beta}$
+\end_inset
+
+ are the 
+\begin_inset Formula $T\times1$
+\end_inset
+
+ POLS residuals (
+\begin_inset Formula $\check{\beta}$
+\end_inset
+
+ is the POLS estimator).Write
+\begin_inset Formula 
+\begin{eqnarray}
+\check{u}_{i} & = & y_{i}-X_{i}\beta-X_{i}(\check{\beta}-\beta)\nonumber \\
+ & = & u_{i}-X_{i}(\check{\beta}-\beta)\nonumber \\
+\check{u}_{i}\check{u}_{i}^{\prime} & = & u_{i}u_{i}^{\prime}-u_{i}(\check{\beta}-\beta)^{\prime}X_{i}^{\prime}-X_{i}(\check{\beta}-\beta)u_{i}^{\prime}+X_{i}(\check{\beta}-\beta)(\check{\beta}-\beta)^{\prime}X_{i}^{\prime}
+\end{eqnarray}
+
+\end_inset
+
+We can show that
+\begin_inset Formula 
+\begin{equation}
+\hat{\Omega}=N^{-1}{\displaystyle \sum_{i=1}^{N}}u_{i}u_{i}^{\prime}+o_{p}(1)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The 
+\series bold
+FGLS estimator
+\series default
+ is
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{\beta}_{FGLS} & = & \left(N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\hat{\Omega}^{-1}X_{i}\right)^{-1}\left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\hat{\Omega}^{-1}y_{i}\right)\\
+ & = & \beta+\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\hat{\Omega}^{-1}X_{i}\right)^{-1}\left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\hat{\Omega}^{-1}u_{i}\right)\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+Write
+\begin_inset Formula 
+\[
+N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\hat{\Omega}^{-1}X_{i}-N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\Omega^{-1}X_{i}=N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\left(\hat{\Omega}^{-1}-\Omega^{-1}\right)X_{i}
+\]
+
+\end_inset
+
+From matrix algebra, for conformable matrices 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, and 
+\begin_inset Formula $C$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\mbox{vec}(ABC)=(C^{\prime}\otimes A)\mbox{vec}(B)
+\]
+
+\end_inset
+
+Under SGLS.1, SGLS.2, and 
+\begin_inset Formula $\hat{\Omega}=N^{-1}\sum_{i=1}^{N}u_{i}u_{i}^{\prime}+o_{p}(1)$
+\end_inset
+
+ ,
+\begin_inset Formula 
+\begin{eqnarray*}
+\mbox{vec}\left[N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\left(\hat{\Omega}^{-1}-\Omega^{-1}\right)X_{i}\right] & = & \left[N^{-1}{\displaystyle \sum_{i=1}^{N}}\left(X_{i}^{\prime}\otimes X_{i}^{\prime}\right)\right]\mbox{vec}\left(\hat{\Omega}^{-1}-\Omega^{-1}\right)\\
+ & = & O_{p}(1)\cdot o_{p}(1)
+\end{eqnarray*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{eqnarray*}
+N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}\left(X_{i}^{\prime}\hat{\Omega}^{-1}u_{i}-X_{i}^{\prime}\Omega^{-1}u_{i}\right) & = & N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\left(\hat{\Omega}^{-1}-\Omega^{-1}\right)u_{i}\\
+ & = & \left[N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}\left(u_{i}\otimes X_{i}\right)^{\prime}\right]\mbox{vec}\left(\hat{\Omega}^{-1}-\Omega^{-1}\right)\\
+ & = & O_{p}(1)\cdot o_{p}(1)
+\end{eqnarray*}
+
+\end_inset
+
+Combining the above two results gives
+\begin_inset Formula 
+\begin{eqnarray}
+\sqrt{N}\left(\hat{\beta}-\beta\right) & = & \left(N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\Omega^{-1}X_{i}\right)^{-1}\left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\Omega^{-1}u_{i}\right)+o_{p}(1)\\
+ & = & \sqrt{N}(\beta^{*}-\beta)+o_{p}(1)
+\end{eqnarray}
+
+\end_inset
+
+By the asymptotic equivalence lemma, the asymptotic distribution of 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\sqrt{N}\left(\hat{\beta}-\beta\right)$
+\end_inset
+
+ is the same as that of 
+\begin_inset Formula $\sqrt{N}(\beta^{*}-\beta)$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $\sqrt{N}(\hat{\beta}-\beta^{*})=o_{p}(1)$
+\end_inset
+
+ we say that 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta^{*}$
+\end_inset
+
+ are 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+- equivalent.
+\begin_inset Quotes erd
+\end_inset
+
+ Thus, we can treat FGLS as if it is GLS.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A fully robust sandwish variance matrix estimator can be used under SGLS.1
+ and SGLS.2.
+ Let 
+\begin_inset Formula $\hat{u}_{i}\equiv y_{i}-X_{i}\hat{\beta}$
+\end_inset
+
+ be the FGLS residuals.
+ Then,
+\begin_inset Formula 
+\[
+\widehat{\mbox{AVar}(\hat{\beta})}=\left({\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\hat{\Omega}^{-1}X_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\hat{\Omega}^{-1}\hat{u}_{i}\hat{u}_{i}^{\prime}\hat{\Omega}^{-1}X_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\hat{\Omega}^{-1}X_{i}\right)^{-1}
+\]
+
+\end_inset
+
+This estimator is robust to 
+\begin_inset Quotes eld
+\end_inset
+
+system heteroskedasticity.
+\begin_inset Quotes erd
+\end_inset
+
+ Loosely, the variance-covariance matrix of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ doe not depend on 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Homoskedasticity and Efficiency
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption SGLS.3
+\series default
+ (System Homoskedasticity):
+\begin_inset Formula 
+\begin{equation}
+E\left(X_{i}^{\prime}\Omega^{-1}u_{i}u_{i}^{\prime}\Omega^{-1}X_{i}\right)=E(X_{i}^{\prime}\Omega^{-1}X_{i})
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Effectively, all squares and cross products of elements in 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ are uncorrelated with the squares and cross products of elements in 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+ This assumption says that 
+\begin_inset Formula $B=A$
+\end_inset
+
+, which means we can use
+\begin_inset Formula 
+\begin{equation}
+\widehat{\mbox{AVar}(\hat{\beta})}=\left({\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}\hat{\Omega}^{-1}X_{i}\right)
+\end{equation}
+
+\end_inset
+
+which is the nonrobust (
+\begin_inset Quotes eld
+\end_inset
+
+usual
+\begin_inset Quotes erd
+\end_inset
+
+) FGLS variance matrix estimator.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Sufficient for SGLS.3
+\begin_inset Formula 
+\begin{equation}
+E(u_{i}u_{i}^{\prime}|X_{i})=E(u_{i}u_{i}^{\prime})
+\end{equation}
+
+\end_inset
+
+Use the law of iterated expectations
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left(X_{i}^{\prime}\Omega^{-1}u_{i}u_{i}^{\prime}\Omega^{-1}X_{i}\right) & = & E\left[E\left(X_{i}^{\prime}\Omega^{-1}u_{i}u_{i}^{\prime}\Omega^{-1}X_{i}\right)|X_{i}\right]\\
+ & = & E\left[\left(X_{i}^{\prime}\Omega^{-1}E\left(u_{i}u_{i}^{\prime}|X_{i}\right)\Omega^{-1}X_{i}\right)\right]\\
+ & = & E\left(X_{i}^{\prime}\Omega^{-1}\Omega\Omega^{-1}X_{i}\right)\\
+ & = & E(X_{i}^{\prime}\Omega^{-1}X_{i})
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Most straightforward and traditional
+\begin_inset Formula 
+\begin{gather}
+E(u_{i}|X_{i})=0\\
+\mbox{Var}(u_{i}|X_{i})=\mbox{Var}(u_{i})=\Omega
+\end{gather}
+
+\end_inset
+
+Given the zero conditional mean assumption, the key conditions are
+\begin_inset Formula 
+\begin{gather*}
+\mbox{Var}(u_{it}|X_{i})=\mbox{Var}(u_{it}),\ t=1,\ldots,T\\
+\mbox{Cov}(u_{it},u_{is}|X_{i})=\mbox{Cov}(u_{it},u_{is}),\ \forall\ t\neq s
+\end{gather*}
+
+\end_inset
+
+By the random sampling assumption, the unconditional variance-covarce matrices
+ 
+\begin_inset Formula $E(u_{i}u_{i}^{\prime})$
+\end_inset
+
+ must be identical across 
+\begin_inset Formula $i$
+\end_inset
+
+, and equal to 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ The question is whether conditional variance and covariances conditional
+ on 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ are constant.
+ Particularly in panel data applications without strict exogenetiy it will
+ not make sense to condition on all of 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+When is FGLS more efficient than SOLS?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose we start with SGLS.1 (which implies SOLS.1), SOLS.2 and SGLS.2, and
+ this form of the system homoskedasticity assumption:
+\begin_inset Formula 
+\[
+E(u_{i}u_{i}^{\prime}|X_{i})=E(u_{i}u_{i}^{\prime})
+\]
+
+\end_inset
+
+Then
+\begin_inset Formula 
+\begin{eqnarray*}
+\mbox{AVar}(\hat{\beta}_{FGLS}) & = & N^{-1}\cdot\left[E(X_{i}^{\prime}\Omega^{-1}X_{i})\right]^{-1}\\
+\mbox{AVar}(\hat{\beta}_{SOLS}) & = & N^{-1}\cdot\left[E(X_{i}^{\prime}X_{i})\right]^{-1}E(X_{i}^{\prime}\Omega X_{i})\left[E(X_{i}^{\prime}X_{i})\right]^{-1}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\left[E(X_{i}^{\prime}X_{i})\right]^{-1}E(X_{i}^{\prime}\Omega X_{i})\left[E(X_{i}^{\prime}X_{i})\right]^{-1}-\left[E(X_{i}^{\prime}\Omega^{-1}X_{i})\right]^{-1}
+\]
+
+\end_inset
+
+is positive semi-definite.
+\end_layout
+
+\begin_layout Proof
+Write the difference as 
+\begin_inset Formula $C-D$
+\end_inset
+
+.
+ It sufficies to show 
+\begin_inset Formula $D^{-1}-C^{-1}$
+\end_inset
+
+ is p.s.d., that is
+\begin_inset Formula 
+\[
+E(X_{i}^{\prime}\Omega^{-1}X_{i})-E(X_{i}^{\prime}X_{i})\left[E(X_{i}^{\prime}\Omega X_{i})\right]^{-1}E(X_{i}^{\prime}X_{i})
+\]
+
+\end_inset
+
+is p.s.d.
+ Use the following trick.
+ Let 
+\begin_inset Formula $Z_{i}\equiv\Omega^{-\nicefrac{1}{2}}X_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $W_{i}\equiv\Omega^{\nicefrac{1}{2}}X_{i}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $E(Z_{i}^{\prime}Z_{i})=E(X_{i}^{\prime}\Omega^{-1}X_{i})$
+\end_inset
+
+, 
+\begin_inset Formula $E(W_{i}^{\prime}W_{i})=E(X_{i}^{\prime}\Omega X_{i})$
+\end_inset
+
+, and 
+\begin_inset Formula $E(Z_{i}^{\prime}W_{i})=E(X_{i}^{\prime}X_{i})$
+\end_inset
+
+.
+ Therefore, the difference in the equation above is
+\begin_inset Formula 
+\[
+E(Z_{i}^{\prime}Z_{i})-E(Z_{i}^{\prime}W_{i})\left[E(W_{i}^{\prime}W_{i})\right]^{-1}E(Z_{i}^{\prime}W_{i})
+\]
+
+\end_inset
+
+which looks like a matrix sum of squared residuals in the population.
+ In fact, if we define the matrix residuals 
+\begin_inset Formula $R_{i}=Z_{i}-W_{i}\Pi$
+\end_inset
+
+ with 
+\begin_inset Formula $\Pi\equiv\left[E(W_{i}^{\prime}W_{i})\right]^{-1}E(Z_{i}^{\prime}W_{i})$
+\end_inset
+
+, then we have 
+\begin_inset Formula $E(R_{i}^{\prime}R_{i})$
+\end_inset
+
+, which is necessarily p.s.d.
+\end_layout
+
+\begin_layout Section*
+System IV
+\end_layout
+
+\begin_layout Subsection*
+System IV Estimator
+\end_layout
+
+\begin_layout Subsubsection*
+Identification Assumptions
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption SIV.1
+\series default
+ (Moment Conditions): For a 
+\begin_inset Formula $T\times L$
+\end_inset
+
+ matrix 
+\begin_inset Formula $Z_{i}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+E(Z_{i}^{\prime}u_{i})=0
+\end{equation}
+
+\end_inset
+
+The assumption is weaker than 
+\begin_inset Formula $E(Z_{i}\otimes u_{i})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption SIV.2
+\series default
+ (Rank Condition):
+\begin_inset Formula 
+\[
+\mbox{rank}E(Z_{i}^{\prime}X_{i})=K
+\]
+
+\end_inset
+
+A necessary condition for SIV.2 to hold is the order condition, 
+\begin_inset Formula $L\geq K$
+\end_inset
+
+.
+ Later, it is useful to define 
+\begin_inset Formula $C=E(Z_{i}^{\prime}X_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the panel data case, if
+\begin_inset Formula 
+\begin{equation}
+Z_{i}=\left[\begin{array}{ccc}
+z_{i1}^{\prime} &  & 0\\
+ & \ddots\\
+0 &  & z_{iT}^{\prime}
+\end{array}\right]_{T\times L}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $z_{it}$
+\end_inset
+
+ is 
+\begin_inset Formula $L\times1$
+\end_inset
+
+ 
+\begin_inset Formula $(L=L_{1}+\cdots+L_{t})$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray}
+E(Z_{i}^{\prime}X_{i}) & = & \left[\begin{array}{c}
+E(z_{i1}x_{i1}^{\prime})\\
+\vdots\\
+E(z_{iT}x_{iT}^{\prime})
+\end{array}\right]\\
+E(Z_{i}^{\prime}u_{i}) & = & \left[\begin{array}{c}
+E(z_{i1}u_{i1})\\
+\vdots\\
+E(z_{iT}u_{iT})
+\end{array}\right]=0
+\end{eqnarray}
+
+\end_inset
+
+If
+\begin_inset Formula 
+\begin{equation}
+Z_{i}=\left[\begin{array}{c}
+z_{i1}^{\prime}\\
+\vdots\\
+z_{iT}^{\prime}
+\end{array}\right]_{T\times L}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $L_{t}=L\ \forall\ t$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray}
+E(Z_{i}^{\prime}X_{i}) & = & {\displaystyle \sum_{t=1}^{T}}E(z_{it}x_{it}^{\prime})\\
+E(Z_{i}^{\prime}u_{i}) & = & {\displaystyle \sum_{t=1}^{T}}E(z_{it}u_{it})=0
+\end{eqnarray}
+
+\end_inset
+
+the choice of instrument matrix in (57) means we are only using the moment
+ conditions aggregated across time, i.e, 
+\begin_inset Formula $\sum_{t=1}^{T}E(z_{it}u_{it})=0$
+\end_inset
+
+.
+ Thus, to obtain the efficient GMM estimator that uses only the moments
+ 
+\begin_inset Formula $E(z_{it}^{\prime}u_{it})=0$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+, the matrix of instruments should be as in (54) because this expresses
+ the full set of moment conditions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Estimation proceeds from method of moments.
+ The moment condition in Assumption SIV.1 can be written as
+\begin_inset Formula 
+\begin{eqnarray}
+E\left[Z_{i}^{\prime}\left(y_{i}-X_{i}\beta\right)\right] & = & 0\nonumber \\
+E(Z_{i}^{\prime}X_{i})\beta & = & E(Z_{i}^{\prime}y_{i})
+\end{eqnarray}
+
+\end_inset
+
+If the rank condition is violated, the system 
+\begin_inset Formula $E(Z_{i}^{\prime}X_{i})b=E(Z_{i}^{\prime}y_{i})$
+\end_inset
+
+ has more than one solution for 
+\begin_inset Formula $b$
+\end_inset
+
+, and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is not identified.
+\end_layout
+
+\begin_layout Subsubsection*
+SIV and PIV Estimators
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose 
+\begin_inset Formula $L=K$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\begin{equation}
+\beta=\left[E(Z_{i}^{\prime}X_{i})\right]^{-1}E(Z_{i}^{\prime}y_{i})
+\end{equation}
+
+\end_inset
+
+From here, there is only one thing to do: replace population averages with
+ sample averages to get the 
+\series bold
+system instrumental variables (SIV)
+\series default
+ estimator:
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{\beta}_{SIV} & = & \left(N^{-1}{\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}X_{i}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}y_{i}\right)\\
+ & = & \beta+\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}X_{i}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}u_{i}\right)
+\end{eqnarray}
+
+\end_inset
+
+Consistency is immediate by the usual WLLN argument since 
+\begin_inset Formula $N^{-1}\sum_{i=1}^{N}Z_{i}^{\prime}u_{i}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}E(Z_{i}^{\prime}u_{i})=0$
+\end_inset
+
+.
+ Equation (63) is more convenient for studying the asymptotic distribution.
+ The SIV estimator for the panel data system with IVs stacked as in (57)
+ with 
+\begin_inset Formula $L=K$
+\end_inset
+
+ is a pooled IV estimator
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}_{PIV}=\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}z_{it}x_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}z_{it}y_{it}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Generalized Method of Moments Estimation
+\end_layout
+
+\begin_layout Subsubsection*
+A General Weighting Matrix
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now turn to a general treatment with overidentification, that is, 
+\begin_inset Formula $L>K$
+\end_inset
+
+.
+ Though we assume the population moment conditions 
+\begin_inset Formula $E(Z_{i}^{\prime}X_{i})\beta=E(Z_{i}^{\prime}y_{i})$
+\end_inset
+
+ uniquely determine 
+\begin_inset Formula $\beta$
+\end_inset
+
+, the sample analog,
+\begin_inset Formula 
+\begin{equation}
+\left(\sum_{i=1}^{N}Z_{i}^{\prime}X_{i}\right)\hat{\beta}=\left({\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}y_{i}\right)
+\end{equation}
+
+\end_inset
+
+generally has no solution when 
+\begin_inset Formula $L>K$
+\end_inset
+
+ (
+\begin_inset Formula $L$
+\end_inset
+
+ equations in 
+\begin_inset Formula $K$
+\end_inset
+
+ unknowns).
+ We choose 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ to make the 
+\emph on
+weighted 
+\emph default
+Euclidean length of the vector 
+\begin_inset Formula $\sum_{i=1}^{N}Z_{i}^{\prime}\left(y_{i}-X_{i}\hat{\beta}\right)$
+\end_inset
+
+ as small as possible, that is, choose 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ to solve
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \min_{b\in\mathbb{R}^{K}}}\ \left[{\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}\left(y_{i}-X_{i}b\right)\right]^{\prime}\hat{W}\left[{\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}\left(y_{i}-X_{i}\hat{\beta}\right)\right]
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{W}$
+\end_inset
+
+ is an 
+\begin_inset Formula $L\times L$
+\end_inset
+
+ symmetric, positive semi-definite matrix, which can be random.
+ The solution to (66) is called a 
+\series bold
+generalized method of moments (GMM) 
+\series default
+estimator.
+ We can solve this problem using multivariable calculus.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $Z$
+\end_inset
+
+ be the 
+\begin_inset Formula $NT\times L$
+\end_inset
+
+ matrix of instruments stacked by observation and similarly for 
+\begin_inset Formula $X\ (NT\times K)$
+\end_inset
+
+ and 
+\begin_inset Formula $Y\ (NT\times1)$
+\end_inset
+
+.
+ We can show that
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{\beta}_{GMM} & = & \left[\left({\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}Z_{i}\right)\hat{W}\left({\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}X_{i}\right)\right]^{-1}\left[\left({\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}Z_{i}\right)\hat{W}\left({\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}y_{i}\right)\right]\\
+ & = & \left(X^{\prime}Z\hat{W}Z^{\prime}X\right)^{-1}\left(X^{\prime}Z\hat{W}Z^{\prime}Y\right)\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\series bold
+Assumption SIV.3
+\series default
+ (Positive Definite Limit): For an 
+\begin_inset Formula $L\times L$
+\end_inset
+
+ nonrandom positive definite matrix 
+\begin_inset Formula $W$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+\hat{W}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}W\ \mbox{as}\ N\rightarrow\infty
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Under SIV.1 to SIV.3, 
+\begin_inset Formula $\hat{\beta}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\beta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Write
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta} & = & \beta+\left[\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}Z_{i}\right)\hat{W}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}X_{i}\right)\right]^{-1}\left[\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}X_{i}^{\prime}Z_{i}\right)\hat{W}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}u_{i}\right)\right]\\
+{\displaystyle \mbox{p}\lim_{N\rightarrow\infty}}(\hat{\beta}) & = & \beta+\left(C^{\prime}WC\right)^{-1}C^{\prime}W\left({\displaystyle \mbox{p}\lim_{N\rightarrow\infty}}N^{-1}{\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}u_{i}\right)\\
+ & = & \beta+\left(C^{\prime}WC\right)^{-1}C^{\prime}W\cdot0=\beta
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Under SIV.1, SIV.2, and SIV.3, 
+\begin_inset Formula $\sqrt{N}(\hat{\beta}-\beta)$
+\end_inset
+
+ is asymptotically normal with mean zero and variance matrix
+\begin_inset Formula 
+\begin{equation}
+\mbox{AVar}\sqrt{N}(\hat{\beta}-\beta)=\left(C^{\prime}WC\right)^{-1}C^{\prime}W\Lambda WC\left(C^{\prime}WC\right)^{-1}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+\Lambda=\mbox{Var}(Z_{i}^{\prime}u_{i})=E(Z_{i}^{\prime}u_{i}u_{i}^{\prime}Z_{i})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+System 2SLS
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The 
+\series bold
+system 2SLS
+\series default
+ estimator uses weighting matrix
+\begin_inset Formula 
+\begin{equation}
+\hat{W}=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}Z_{i}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+and the estimator can be written as
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}_{S2SLS}=\left[X^{\prime}Z(Z^{\prime}Z)^{-1}Z^{\prime}X\right]^{-1}X^{\prime}Z(Z^{\prime}Z)^{-1}Z^{\prime}Y
+\end{equation}
+
+\end_inset
+
+Assumption SIV.3 is equivalent to
+\begin_inset Formula 
+\begin{equation}
+\mbox{rank}E(Z_{i}^{\prime}Z_{i})=L
+\end{equation}
+
+\end_inset
+
+In the panel data case with 
+\begin_inset Formula $Z_{i}$
+\end_inset
+
+ as in (57), we can show that the 2SLS is the 
+\series bold
+pooled 2SLS 
+\series default
+estimator
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta}_{P2SLS} & = & \left[\left({\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}x_{it}z_{it}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}z_{it}z_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}z_{it}x_{it}^{\prime}\right)\right]^{-1}\\
+ &  & \cdot\left({\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}x_{it}z_{it}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}z_{it}z_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}z_{it}y_{it}\right)
+\end{eqnarray*}
+
+\end_inset
+
+The P2SLS estimator estimates a common 
+\begin_inset Formula $\hat{\Pi}$
+\end_inset
+
+ by pooling the regression in (74) across 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $i$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When 
+\begin_inset Formula $Z_{i}$
+\end_inset
+
+ is block diagonal as in (54), the S2SLS estimator is different.
+ It can be obtained as follows.
+ (1) For each 
+\begin_inset Formula $t$
+\end_inset
+
+, estimate a reduced form from a cross section regression
+\begin_inset Formula 
+\begin{equation}
+x_{it}\ \mbox{on}\ z_{it},\ i=1,\ldots,N
+\end{equation}
+
+\end_inset
+
+and obtain fitted values,
+\begin_inset Formula 
+\begin{equation}
+\hat{x}_{it}^{\prime}=z_{it}^{\prime}\hat{\Pi}_{t}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{\Pi}_{t}$
+\end_inset
+
+ is 
+\begin_inset Formula $L_{t}\times K$
+\end_inset
+
+ in general.
+ Note that 
+\begin_inset Formula $\hat{x}_{it}^{\prime}$
+\end_inset
+
+ is always 
+\begin_inset Formula $1\times K$
+\end_inset
+
+.
+ (2) Estimate 
+\begin_inset Formula $\beta$
+\end_inset
+
+ via pooled IV in the equation
+\begin_inset Formula 
+\begin{equation}
+y_{it}=x_{it}^{\prime}\beta+u_{it},\ t=1,\ldots,T;\ i=1,\ldots,N
+\end{equation}
+
+\end_inset
+
+using 
+\begin_inset Formula $\hat{x}_{it}$
+\end_inset
+
+ as instruments (not regressors)
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}_{2SLS}=\left({\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}\hat{x}_{it}x_{it}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}\hat{x}_{it}y_{it}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Optimal Weighting Matrix
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Given an infinite number of choices for 
+\begin_inset Formula $W$
+\end_inset
+
+, we can choose the best.
+ The optimal weighting matri is the inverse of the variance matrix of 
+\begin_inset Formula $Z_{i}^{\prime}u_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $\Lambda=\mbox{Var}(Z_{i}^{\prime}u_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption SIV.4
+\series default
+ (Optimal Weighting Matrix):
+\begin_inset Formula 
+\begin{equation}
+W=\Lambda^{-1}
+\end{equation}
+
+\end_inset
+
+With this choice of 
+\begin_inset Formula $W$
+\end_inset
+
+, the asymptotic variance collapses to
+\begin_inset Formula 
+\begin{equation}
+\left(C^{\prime}\Lambda C\right)^{-1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+It can be shown that 
+\begin_inset Formula $\left(C^{\prime}\Lambda C\right)^{-1}$
+\end_inset
+
+ is the 
+\begin_inset Quotes eld
+\end_inset
+
+smallest
+\begin_inset Quotes erd
+\end_inset
+
+ possible by showing
+\begin_inset Formula 
+\[
+\left(C^{\prime}\Lambda C\right)^{-1}-\left(C^{\prime}WC\right)\left(C^{\prime}W\Lambda WC\right)^{-1}\left(C^{\prime}WC\right)
+\]
+
+\end_inset
+
+is positive semi-definite for any 
+\begin_inset Formula $L\times L$
+\end_inset
+
+ positive definite matrix 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $D=\Lambda^{\nicefrac{1}{2}}WC$
+\end_inset
+
+ and show the difference can be expressed as
+\begin_inset Formula 
+\[
+C^{\prime}\Lambda^{-\nicefrac{1}{2}}\left[I_{L}-D(D^{\prime}D)^{-1}D^{\prime}\right]\Lambda^{-\nicefrac{1}{2}}C
+\]
+
+\end_inset
+
+and note that 
+\begin_inset Formula $I_{L}-D(D^{\prime}D)^{-1}D^{\prime}$
+\end_inset
+
+ is symmetric and idempotent (and hence positive semi-definite).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To obtain an actual GMM estimator using an efficient weighting matrix, use
+ a two-step procedure.
+\end_layout
+
+\begin_layout Standard
+(1) Let 
+\begin_inset Formula $\check{\beta}$
+\end_inset
+
+ be an inital consistent estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+, usually the S2SLS estimator.
+ Obtain the 
+\begin_inset Formula $T\times1$
+\end_inset
+
+ residual vectors, 
+\begin_inset Formula $\check{u}_{i}=y_{i}-X_{i}\check{\beta},\ i=1,\ldots,N$
+\end_inset
+
+ and compute
+\begin_inset Formula 
+\begin{equation}
+\hat{\Lambda}=N^{-1}{\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}\check{u}_{i}\check{u}_{i}^{\prime}Z_{i}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\Lambda
+\end{equation}
+
+\end_inset
+
+(2) Choose
+\begin_inset Formula 
+\begin{equation}
+\hat{W}=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}\check{u}_{i}\check{u}_{i}^{\prime}Z_{i}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+We call such an estimator an 
+\series bold
+optimal GMM
+\series default
+ estimator.
+ The optimal weighting matrix provides an asymptotically efficient estimator
+ in the class of estimators based on the given set of population moment
+ conditions.
+ When 
+\begin_inset Formula $L=K$
+\end_inset
+
+, the weighting matrix is irrelevant.
+ There is only one consistent estimator, and that is the system IV estimator.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is now an optimal GMM estimator and 
+\begin_inset Formula $\hat{u}_{i}=y_{i}-X_{i}\hat{\beta}$
+\end_inset
+
+ are the optimal GMM residuals
+\begin_inset Formula 
+\begin{equation}
+\widehat{\mbox{AVar}(\hat{\beta})}=\left[\left(X^{\prime}Z\right)\left({\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}\check{u}_{i}\check{u}_{i}^{\prime}Z_{i}\right)^{-1}\left(Z^{\prime}X\right)\right]^{-1}
+\end{equation}
+
+\end_inset
+
+There is usually more than one way to estiamte 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+, and so the optimal GMM estimator is not unique.
+ But, they all are 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+-asymptotically efficient.
+\end_layout
+
+\begin_layout Subsubsection*
+The GMM 3SLS Estimator
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption SIV.5
+\series default
+ (System Homoskedasticity): Let 
+\begin_inset Formula $\Omega=E(u_{i}u_{i}^{\prime})$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\begin{equation}
+E(Z_{i}^{\prime}u_{i}u_{i}^{\prime}Z_{i})=E(Z_{i}^{\prime}\Omega Z_{i})
+\end{equation}
+
+\end_inset
+
+By the usual iterated expectations argument, a sufficient condition is
+\begin_inset Formula 
+\begin{equation}
+E(u_{i}u_{i}^{\prime}|Z_{i})=E(u_{i}u_{i}^{\prime})
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Under SIV.5, we can estimate 
+\begin_inset Formula $\Lambda=E(Z_{i}^{\prime}\Omega Z_{i})$
+\end_inset
+
+ differently.
+ First,
+\begin_inset Formula 
+\begin{equation}
+\hat{\Omega}=N^{-1}{\displaystyle \sum_{i=1}^{N}}\check{u}_{i}\check{u}_{i}^{\prime}
+\end{equation}
+
+\end_inset
+
+and then
+\begin_inset Formula 
+\begin{equation}
+\hat{\Lambda}=N^{-1}{\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}\hat{\Omega}Z_{i}=\nicefrac{Z^{\prime}\left(I_{N}\otimes\hat{\Omega}\right)Z}{N}
+\end{equation}
+
+\end_inset
+
+Under SIV.1 to SIV.5, an optimal GMM estimator that uses the inverse of (86)
+ as the weighting matrix can be written as
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}_{3SLS}=\left\{ X^{\prime}Z\left[Z^{\prime}\left(I_{N}\otimes\hat{\Omega}\right)Z\right]^{-1}Z^{\prime}X\right\} X^{\prime}Z\left[Z^{\prime}\left(I_{N}\otimes\hat{\Omega}\right)Z\right]^{-1}Z^{\prime}Y
+\end{equation}
+
+\end_inset
+
+We call (87) the 
+\series bold
+GMM 3SLS
+\series default
+ estimator.For first-order asymptotics, there is no gain in using SIV.5.
+ In other words, the general weighting matrix gives the same 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+-asymptotic distribution as the GMM-3SLS weighting matrix.
+ Of course, the latter is inefficient in the presence of system heteroskedastici
+ty.
+\end_layout
+
+\end_body
+\end_document

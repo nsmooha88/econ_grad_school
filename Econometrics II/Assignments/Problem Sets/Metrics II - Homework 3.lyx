@@ -1,0 +1,3463 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Econometrics II: Homework 3
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+Problem 7.2
+\end_layout
+
+\begin_layout Standard
+In the model
+\begin_inset Formula 
+\begin{equation}
+y_{i}=x_{i}\beta+u_{i}
+\end{equation}
+
+\end_inset
+
+ maintain Assumptions SOLS.1 and SOLS.2, and assume 
+\begin_inset Formula $E(x_{i}^{\prime}u_{i}u_{i}^{\prime}x_{i})=E(x_{i}^{\prime}\Omega x_{i})$
+\end_inset
+
+, where 
+\begin_inset Formula $\Omega\equiv E(u_{i}u_{i}^{\prime})$
+\end_inset
+
+.
+ The last assumption is a different way of stating the homoskedasticity
+ assumption for systems of equations.
+\end_layout
+
+\begin_layout Enumerate
+Show that 
+\begin_inset Formula $\mbox{AVar}(\hat{\beta}_{SOLS})=N^{-1}\cdot\left[E(x_{i}^{\prime}x_{i})\right]^{-1}\left[E(x_{i}^{\prime}\Omega x_{i})\right]\left[E(x_{i}^{\prime}x_{i})\right]^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+How would you estimate the asymptotic variance in part a?
+\end_layout
+
+\begin_layout Enumerate
+Now add Assumptions SGLS.1-SGLS.3 Show that 
+\begin_inset Formula $\mbox{AVar}(\hat{\beta}_{SOLS})-\mbox{AVar}(\hat{\beta}_{FGLS})$
+\end_inset
+
+ is positive semidefinite.
+ (Hint: Show that 
+\begin_inset Formula $\left[\mbox{AVar}(\hat{\beta}_{FGLS})\right]^{-1}-\left[\mbox{AVar}(\hat{\beta}_{SOLS})\right]^{-1}$
+\end_inset
+
+ is p.s.d.)
+\end_layout
+
+\begin_layout Enumerate
+If, in addition to the previous assumptions, 
+\begin_inset Formula $\Omega=\sigma^{2}I_{G}$
+\end_inset
+
+, show that SOLS and FGLS have the same asymptotic variance.
+\end_layout
+
+\begin_layout Enumerate
+Evaluate the following statement: 
+\begin_inset Quotes eld
+\end_inset
+
+Under the assumptions of part c, FGLS is never asymptotically worse than
+ SOLS, even if 
+\begin_inset Formula $\Omega=\sigma^{2}I_{G}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Solution
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Part a.
+\end_layout
+
+\begin_layout Standard
+Under Assumptions SOLS.1 and SOLS.2, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is identified and a consistent estimator is given by
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}_{SOLS}=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}x_{i}\right)^{-1}\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}y_{i}\right)
+\end{equation}
+
+\end_inset
+
+From (1) and (2), write
+\begin_inset Formula 
+\[
+\sqrt{N}\left(\hat{\beta}_{SOLS}-\beta\right)=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}x_{i}\right)\left(N^{-\frac{1}{2}}{\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}u_{i}\right)
+\]
+
+\end_inset
+
+Because 
+\begin_inset Formula $E(x_{i}^{\prime}u_{i})=0$
+\end_inset
+
+ under Assumption SOLS.1, the CLT implies that
+\begin_inset Formula 
+\begin{equation}
+N^{-\frac{1}{2}}{\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}u_{i}\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N\left(0,E[x_{i}^{\prime}u_{i}u_{i}^{\prime}x_{i}]\right)
+\end{equation}
+
+\end_inset
+
+In particular, 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $N^{-\frac{1}{2}}\sum_{i=1}^{N}x_{i}^{\prime}u_{i}=O_{p}(1)$
+\end_inset
+
+.
+ But, by the law of large numbers, 
+\begin_inset Formula $\left(\nicefrac{X^{\prime}X}{N}\right)^{-1}=\left[E(x_{i}^{\prime}x_{i})\right]^{-1}+o_{p}(1)$
+\end_inset
+
+, so
+\begin_inset Formula 
+\begin{eqnarray}
+\sqrt{N}\left(\hat{\beta}_{SOLS}-\beta\right) & = & \left(\left[\left(\nicefrac{X^{\prime}X}{N}\right)^{-1}-\left[E(x_{i}^{\prime}x_{i})\right]^{-1}\right]+\left[E(x_{i}^{\prime}x_{i})\right]^{-1}\right)\left(N^{-\frac{1}{2}}{\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}u_{i}\right)\nonumber \\
+ & = & \left[E(x_{i}^{\prime}x_{i})\right]^{-1}\left(N^{-\frac{1}{2}}{\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}u_{i}\right)+\left[\left(\frac{X^{\prime}X}{N}\right)^{-1}-\left[E(x_{i}^{\prime}x_{i})\right]^{-1}\right]\left(N^{-\frac{1}{2}}{\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}u_{i}\right)\nonumber \\
+ & = & \left[E(x_{i}^{\prime}x_{i})\right]^{-1}\left(N^{-\frac{1}{2}}{\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}u_{i}\right)+o_{p}(1)\cdot O_{p}(1)\nonumber \\
+ & = & \left[E(x_{i}^{\prime}x_{i})\right]^{-1}\left(N^{-\frac{1}{2}}{\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}u_{i}\right)+o_{p}(1)
+\end{eqnarray}
+
+\end_inset
+
+Thus, by the CLT, equations (3) and (4) and the asymptotic equivalence lemma
+ imply
+\begin_inset Formula 
+\[
+\sqrt{N}\left(\hat{\beta}_{SOLS}-\beta\right)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N\left(0,\left[E(x_{i}^{\prime}x_{i})\right]^{-1}E\left(x_{i}^{\prime}u_{i}u_{i}^{\prime}x_{i}\right)\left[E(x_{i}^{\prime}x_{i})\right]^{-1}\right)
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $E(x_{i}^{\prime}u_{i}u_{i}^{\prime}x_{i})=E(x_{i}^{\prime}\Omega x_{i})$
+\end_inset
+
+, then the asymptotic variance of 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+\mbox{AVar}(\hat{\beta}_{SOLS})=N^{-1}\cdot\left[E(x_{i}^{\prime}x_{i})\right]^{-1}\left[E(x_{i}^{\prime}\Omega x_{i})\right]\left[E(x_{i}^{\prime}x_{i})\right]^{-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Part b.
+\end_layout
+
+\begin_layout Standard
+To obtain a consistent estimator of the asymptotic variance in part a, we
+ must first find a consistent estimator of 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ By the WLLN, 
+\begin_inset Formula $\mbox{plim}\left(N^{-1}\sum_{i=1}^{N}u_{i}u_{i}^{\prime}\right)=\Omega$
+\end_inset
+
+.
+ So, a natural estimator of 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+\hat{\Omega}\equiv N^{-1}{\displaystyle \sum_{i=1}^{N}}\hat{u}_{i}\hat{u}_{i}^{\prime}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{u}_{i}=y_{i}-x_{i}\hat{\beta}_{SOLS}$
+\end_inset
+
+.
+ It can be shown that this estimator is consistent for 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ Therefore, I would estimate the asymptotic variance in part a by using
+ the sample analogue of (5), i.e.,
+\begin_inset Formula 
+\begin{equation}
+\widehat{\mbox{AVar}(\hat{\beta}_{SOLS})}=\left(X^{\prime}X\right)^{-1}\left[{\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}\hat{\Omega}x_{i}\right]\left(X^{\prime}X\right)^{-1}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{\Omega}$
+\end_inset
+
+ is given by equation (6).
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Part c.
+\end_layout
+
+\begin_layout Standard
+If Assumptions SGLS.1-SGLS.3 hold, then by Theorem 7.4, the asymptotic variance
+ of the FGLS estimator is
+\begin_inset Formula 
+\begin{equation}
+\mbox{AVar}(\hat{\beta}_{FGLS})=N^{-1}\cdot\left[E(x_{i}^{\prime}\Omega^{-1}x_{i})\right]^{-1}
+\end{equation}
+
+\end_inset
+
+Now, showing that 
+\begin_inset Formula $\mbox{AVar}(\hat{\beta}_{SOLS})-\mbox{AVar}(\hat{\beta}_{FGLS})$
+\end_inset
+
+ is p.s.d.
+ is equivlent to showing that 
+\begin_inset Formula $\left[\mbox{AVar}(\hat{\beta}_{FGLS})\right]^{-1}-\left[\mbox{AVar}(\hat{\beta}_{SOLS})\right]^{-1}$
+\end_inset
+
+ is p.s.d.
+ So, consider 
+\begin_inset Formula 
+\[
+\left[\mbox{AVar}(\hat{\beta}_{FGLS})\right]^{-1}-\left[\mbox{AVar}(\hat{\beta}_{SOLS})\right]^{-1}=N\cdot\left(E(x_{i}^{\prime}\Omega^{-1}x_{i})-E(x_{i}^{\prime}x_{i})\left[E(x_{i}^{\prime}\Omega x_{i})\right]^{-1}E(x_{i}^{\prime}x_{i})\right)
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ is positive definite by Assumption SGLS.2 and nonsingular, then we can decompose
+ 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ as follows: 
+\begin_inset Formula $\Omega=\Omega^{\nicefrac{1}{2}}\Omega^{\nicefrac{1}{2}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Omega^{-1}=\Omega^{-\nicefrac{1}{2}}\Omega^{-\nicefrac{1}{2}}$
+\end_inset
+
+.
+ Also, define 
+\begin_inset Formula $A_{i}\equiv\Omega^{-\nicefrac{1}{2}}x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $B_{i}\equiv\Omega^{\nicefrac{1}{2}}x_{i}$
+\end_inset
+
+.
+ Now, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\mbox{AVar}(\hat{\beta}_{FGLS})\right]^{-1}-\left[\mbox{AVar}(\hat{\beta}_{SOLS})\right]^{-1} & = & N\cdot\left(E(A_{i}^{\prime}A_{i})-E(A_{i}^{\prime}B_{i})\left[E(B_{i}^{\prime}B_{i})\right]^{-1}E(B_{i}^{\prime}A_{i})\right)\\
+ & = & N\cdot E(C_{i}^{\prime}C_{i})
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $C_{i}=A_{i}-B_{i}\left[E(B_{i}^{\prime}B_{i})\right]^{-1}E(B_{i}^{\prime}A_{i})$
+\end_inset
+
+.
+ Note that
+\begin_inset Formula 
+\begin{eqnarray*}
+E(C_{i}^{\prime}C_{i}) & = & E\left[(A_{i}^{\prime}-E(A_{i}^{\prime}B_{i})\left[E(B_{i}^{\prime}B_{i})\right]^{-1}B_{i}^{\prime})(A_{i}-B_{i}\left[E(B_{i}^{\prime}B_{i})\right]^{-1}E(B_{i}^{\prime}A_{i}))\right]\\
+ & = & E(A_{i}^{\prime}A_{i})-E(A_{i}^{\prime}B_{i})\left[E(B_{i}^{\prime}B_{i})\right]^{-1}E(B_{i}^{\prime}A_{i})-E(A_{i}^{\prime}B_{i})\left[E(B_{i}^{\prime}B_{i})\right]^{-1}E(B_{i}^{\prime}A_{i})\\
+ &  & +E(A_{i}^{\prime}B_{i})\left[E(B_{i}^{\prime}B_{i})\right]^{-1}E(B_{i}^{\prime}B_{i})\left[E(B_{i}^{\prime}B_{i})\right]^{-1}E(B_{i}^{\prime}A_{i})\\
+ & = & E(A_{i}^{\prime}A_{i})-E(A_{i}^{\prime}B_{i})\left[E(B_{i}^{\prime}B_{i})\right]^{-1}E(B_{i}^{\prime}A_{i})
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $E(C_{i}^{\prime}C_{i})$
+\end_inset
+
+ is positive semi-definite, then 
+\begin_inset Formula $\left[\mbox{AVar}(\hat{\beta}_{FGLS})\right]^{-1}-\left[\mbox{AVar}(\hat{\beta}_{SOLS})\right]^{-1}$
+\end_inset
+
+ is positive semi-definite.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Part d.
+\end_layout
+
+\begin_layout Standard
+If, in addition to the previous assumptions, 
+\begin_inset Formula $\Omega=\sigma^{2}I_{G}$
+\end_inset
+
+, then the asymptotic variances become
+\begin_inset Formula 
+\begin{eqnarray*}
+\mbox{AVar}(\hat{\beta}_{SOLS}) & = & N^{-1}\cdot\left[E(x_{i}^{\prime}x_{i})\right]^{-1}\left[E(x_{i}^{\prime}\sigma^{2}I_{G}x_{i})\right]\left[E(x_{i}^{\prime}x_{i})\right]^{-1}\\
+ & = & N^{-1}\cdot\sigma^{2}\left[E(x_{i}^{\prime}x_{i})\right]^{-1}\left[E(x_{i}^{\prime}x_{i})\right]\left[E(x_{i}^{\prime}x_{i})\right]^{-1}\\
+ & = & N^{-1}\cdot\sigma^{2}\left[E(x_{i}^{\prime}x_{i})\right]^{-1}
+\end{eqnarray*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{eqnarray*}
+\mbox{AVar}(\hat{\beta}_{FGLS}) & = & N^{-1}\cdot\left[E(x_{i}^{\prime}\sigma^{2}I_{G}x_{i})\right]^{-1}\\
+ & = & N^{-1}\cdot\sigma^{2}\left[E(x_{i}^{\prime}x_{i})\right]^{-1}
+\end{eqnarray*}
+
+\end_inset
+
+Therefore, if 
+\begin_inset Formula $\Omega=\sigma^{2}I_{G}$
+\end_inset
+
+, then SOLS and FGLS have the same asymptotic variance.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Part e.
+\end_layout
+
+\begin_layout Standard
+In part (c), it was shown that under Assumptions SGLS.1-SGLS.3, 
+\begin_inset Formula $\mbox{AVar}(\hat{\beta}_{SOLS})-\mbox{AVar}(\hat{\beta}_{FGLS})$
+\end_inset
+
+ is positive semi-definite.
+ From part (d), it was shown that under 
+\begin_inset Formula $\Omega=\sigma^{2}I_{G}$
+\end_inset
+
+, the asymptotic variances of the two estimators are the same.
+ From these two results, we can conclude that under Assumptions SGLS.1-SGLS,
+ the FGLS estimator is at least as asymptotically efficient as the SOLS
+ estimator.
+ This means that the FGLS estimator is never asymptotically worse than SOLS,
+ even if 
+\begin_inset Formula $\Omega=\sigma^{2}I_{G}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Problem 7.14
+\end_layout
+
+\begin_layout Standard
+Consider the system of equations 
+\begin_inset Formula $y_{i}=x_{i}\beta+u_{i}$
+\end_inset
+
+ under 
+\begin_inset Formula $E(x_{i}\otimes u_{i})=0$
+\end_inset
+
+ and 
+\begin_inset Formula $E(u_{i}u_{i}^{\prime}|x_{i})=\Omega$
+\end_inset
+
+.
+ Consider the FGLS estimator with 
+\begin_inset Formula $\hat{\Omega}$
+\end_inset
+
+ consistent for 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ and another FGLS estimator using 
+\begin_inset Formula $\hat{\Lambda}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\Lambda\neq\Omega$
+\end_inset
+
+.
+ Show that the former is at least as asymptotically efficient as the latter.
+\end_layout
+
+\begin_layout Subsection*
+Solution
+\end_layout
+
+\begin_layout Standard
+Since Assumptions SGLS.1-SGLS.3 hold, then by Theorem 7.4, the asymptotic variance
+ of the FGLS estimator with 
+\begin_inset Formula $\hat{\Omega}$
+\end_inset
+
+ consistent for 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+\mbox{AVar}(\hat{\beta}_{C})=N^{-1}\cdot\left[E(x_{i}^{\prime}\Omega^{-1}x_{i})\right]^{-1}
+\end{equation}
+
+\end_inset
+
+Since 
+\begin_inset Formula $E(x_{i}\otimes u_{i})=0$
+\end_inset
+
+ holds, then the FGLS estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ using 
+\begin_inset Formula $\hat{\Lambda}$
+\end_inset
+
+ as the variance matrix is consistent.
+ Under 
+\begin_inset Formula $E(u_{i}u_{i}^{\prime}|x_{i})=\Omega$
+\end_inset
+
+, its asymptotic variance is
+\begin_inset Formula 
+\[
+\mbox{AVar}(\hat{\beta}_{I})=N^{-1}\cdot\left[E(x_{i}^{\prime}\Lambda^{-1}x_{i})\right]^{-1}\left[E(x_{i}^{\prime}\Lambda^{-1}\Omega\Lambda^{-1}x_{i})\right]\left[E(x_{i}^{\prime}\Lambda^{-1}x_{i})\right]^{-1}
+\]
+
+\end_inset
+
+To show 
+\begin_inset Formula $\hat{\beta}_{C}$
+\end_inset
+
+ is at least as asymptotically efficient as 
+\begin_inset Formula $\hat{\beta}_{I}$
+\end_inset
+
+, we will show that 
+\begin_inset Formula $\mbox{AVar}(\hat{\beta}_{I})-\mbox{AVar}(\hat{\beta}_{C})$
+\end_inset
+
+ is p.s.d, which is equivalent to showing that 
+\begin_inset Formula $\left[\mbox{AVar}(\hat{\beta}_{C})\right]^{-1}-\left[\mbox{AVar}(\hat{\beta}_{I})\right]^{-1}$
+\end_inset
+
+ is p.s.d.
+ So, consider
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\mbox{AVar}(\hat{\beta}_{C})\right]^{-1}-\left[\mbox{AVar}(\hat{\beta}_{I})\right]^{-1} & = & N\cdot E(x_{i}^{\prime}\Omega^{-1}x_{i})\\
+ &  & -N\cdot E(x_{i}^{\prime}\Lambda^{-1}x_{i})\left[E(x_{i}^{\prime}\Lambda^{-1}\Omega\Lambda^{-1}x_{i})\right]^{-1}E(x_{i}^{\prime}\Lambda^{-1}x_{i})
+\end{eqnarray*}
+
+\end_inset
+
+Note that 
+\begin_inset Formula $\Lambda\equiv\Lambda^{\nicefrac{1}{2}}\Lambda^{\nicefrac{1}{2}}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\tilde{x}_{i}=\Lambda^{-\nicefrac{1}{2}}x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{\Omega}=\Lambda^{-\nicefrac{1}{2}}\Omega\Lambda^{-\nicefrac{1}{2}}$
+\end_inset
+
+.
+ Now, we have
+\begin_inset Formula 
+\[
+\left[\mbox{AVar}(\hat{\beta}_{FGLS})\right]^{-1}-\left[\mbox{AVar}(\hat{\beta}_{SOLS})\right]^{-1}=N\cdot\left[E\left(\tilde{x}_{i}^{\prime}\tilde{\Omega}^{-1}\tilde{x}_{i}\right)-E(\tilde{x}_{i}^{\prime}\tilde{x}_{i})\left[E(\tilde{x}_{i}^{\prime}\tilde{\Omega}\tilde{x}_{i})\right]^{-1}E(\tilde{x}_{i}^{\prime}\tilde{x}_{i})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Problem 8.8
+\end_layout
+
+\begin_layout Standard
+Consider the standard panel data model
+\begin_inset Formula 
+\begin{equation}
+y_{it}=x_{it}^{\prime}\beta+u_{it}
+\end{equation}
+
+\end_inset
+
+where the 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ vector 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ might have some elements correlated with 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+.
+ Stacking over 
+\begin_inset Formula $T$
+\end_inset
+
+, the panel data model can be rewritten as
+\begin_inset Formula 
+\[
+y_{i}=x_{i}\beta+u_{i}
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+x_{i}=\left(\begin{array}{c}
+x_{i1}^{\prime}\\
+\vdots\\
+x_{iT}^{\prime}
+\end{array}\right)_{T\times K}
+\end{equation}
+
+\end_inset
+
+Let 
+\begin_inset Formula $z_{it}$
+\end_inset
+
+ be a 
+\begin_inset Formula $L\times1$
+\end_inset
+
+ vector of instruments, 
+\begin_inset Formula $L\geq K$
+\end_inset
+
+, such that 
+\begin_inset Formula $E(z_{it}u_{it})=0$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+.
+ (In practice, 
+\begin_inset Formula $z_{it}$
+\end_inset
+
+ would contain some elements of 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+, including a constant and possibly time dummies.) Stacking over 
+\begin_inset Formula $T$
+\end_inset
+
+, we have
+\end_layout
+
+\begin_layout Enumerate
+Write down the system 2SLS estimator if the instrument matrix is
+\begin_inset Formula 
+\begin{equation}
+z_{i}=\left(\begin{array}{c}
+z_{i1}^{\prime}\\
+\vdots\\
+z_{iT}^{\prime}
+\end{array}\right)_{T\times L}
+\end{equation}
+
+\end_inset
+
+Show that this estimator is a pooled 2SLS estimator.
+ That is, it is the estimator obtained by 2SLS estimation of (1) using instrumen
+ts 
+\begin_inset Formula $z_{it}$
+\end_inset
+
+, pooled across all 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+What is the rank condition for the pooled 2SLS estimator?
+\end_layout
+
+\begin_layout Enumerate
+Without further assumptions, show how to estimate the asymptotic variance
+ of the pooled 2SLS estimator.
+\end_layout
+
+\begin_layout Enumerate
+Without further assumptions, how would you estimate the optimal weighting
+ matrix?
+\end_layout
+
+\begin_layout Enumerate
+Show that the assumptions
+\begin_inset Formula 
+\begin{equation}
+E(u_{it}|z_{it},u_{i,t-1},z_{i,t-1},\ldots,u_{i1},z_{i1})=0,\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+E(u_{it}^{2}|z_{it})=\sigma^{2},\ t=1,\ldots,T
+\end{equation}
+
+\end_inset
+
+imply that the usual standard errors and test statistics reported from the
+ pooled 2SLS estimation are valid.
+ These assumptions make implementing 2SLS for panel data very simple.
+\end_layout
+
+\begin_layout Enumerate
+What estimator would you use under condition (13) but where we relax condition
+ (14) to 
+\begin_inset Formula $E(u_{it}^{2}|z_{it})=E(u_{it}^{2})\equiv\sigma_{t}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+? This approach will involve an initial pooled 2SLS estimation.
+\end_layout
+
+\begin_layout Enumerate
+Suppose you choose the instrument matrix as 
+\begin_inset Formula $z_{i}=\mbox{diag}(z_{i1}^{\prime},\ldots,z_{iT}^{\prime})$
+\end_inset
+
+.
+ Show that the system 2SLS estimator can be obtained as follows.
+ (1) For each 
+\begin_inset Formula $t$
+\end_inset
+
+, regress 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ on 
+\begin_inset Formula $z_{it}$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+, and obtain the fitted values, 
+\begin_inset Formula $\hat{x}_{it}$
+\end_inset
+
+.
+ (2) Compute the pooled IV estimator using 
+\begin_inset Formula $\hat{x}_{it}$
+\end_inset
+
+ as IVs for 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+What is the most efficient way to use the moment conditions 
+\begin_inset Formula $E(z_{it}u_{it})=0$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Subsection*
+Solution
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Part a.
+\end_layout
+
+\begin_layout Standard
+The system 2SLS estimator is just the system GMM estimator that uses
+\begin_inset Formula 
+\[
+\hat{W}=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}z_{i}\right)^{-1}
+\]
+
+\end_inset
+
+as its weighting matrix.
+ Thus, after canceling 
+\begin_inset Formula $N$
+\end_inset
+
+, the system 2SLS estimator is
+\begin_inset Formula 
+\[
+\hat{\beta}_{S2SLS}=\left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}z_{i}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}x_{i}\right)\right]^{-1}\left({\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}z_{i}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}y_{i}\right)
+\]
+
+\end_inset
+
+When 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ has the form of (11), the weighting matrix becomes
+\begin_inset Formula 
+\[
+\hat{W}=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}z_{it}z_{it}^{\prime}\right)^{-1}
+\]
+
+\end_inset
+
+and the estimator can be rewritten as
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta} & = & \left[\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}x_{it}z_{it}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}z_{it}z_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}z_{it}x_{it}^{\prime}\right)\right]^{-1}\\
+ &  & \times\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}x_{it}z_{it}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}z_{it}z_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}z_{it}y_{it}\right)
+\end{eqnarray*}
+
+\end_inset
+
+which is the pooled 2SLS estimator.
+ The pooled 2SLS estimator treats the stacked panel data as a long cross
+ section and performs 2SLS, i.e., it pools across time in estimating the reduced
+ from.
+ That is, the first-stage fitted values, 
+\begin_inset Formula $\hat{x}_{it}$
+\end_inset
+
+, are obtained from the pooled regression 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ on 
+\begin_inset Formula $z_{it}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,\ldots,N$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Part b.
+\end_layout
+
+\begin_layout Standard
+For the pooled 2SLS estimator to be consistent, the following two conditions
+ must be satisfied: 
+\begin_inset Formula $\mbox{rank}\ \left[E(z_{i}^{\prime}x_{i})\right]=\mbox{rank}\left[E\left(\sum_{t=1}^{T}z_{it}x_{it}^{\prime}\right)\right]=K$
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+\hat{W}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}W=\left[E(z_{i}^{\prime}z_{i})\right]^{-1}\ \mbox{as}\ N\rightarrow\infty
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $W$
+\end_inset
+
+ is a nonrandom, symmetric, and 
+\begin_inset Formula $L\times L$
+\end_inset
+
+ positive definite matrix.
+ So, the second condition requires that 
+\begin_inset Formula $E(z_{i}^{\prime}z_{i})$
+\end_inset
+
+ exist and be nonsingular, so we have 
+\begin_inset Formula $\mbox{rank}\ \left[E(z_{i}^{\prime}z_{i})\right]=\mbox{rank}\ \left[E\left(\sum_{t=1}^{T}z_{it}z_{it}^{\prime}\right)\right]=L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Part c.
+\end_layout
+
+\begin_layout Standard
+Substituting 
+\begin_inset Formula $y_{it}=x_{it}^{\prime}\beta+u_{it}$
+\end_inset
+
+ in the pooled 2SLS estimator and stacking over 
+\begin_inset Formula $T$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\hat{\beta}_{P2SLS}-\beta\right) & = & \left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}z_{i}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}x_{i}\right)\right]^{-1}\\
+ &  & \times\left({\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}z_{i}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}u_{i}\right)\\
+\sqrt{N}\left(\hat{\beta}_{P2SLS}-\beta\right) & = & \left[S_{xz}\hat{W}S_{zx}\right]^{-1}S_{xz}\hat{W}\left({\displaystyle N^{-\frac{1}{2}}\sum_{i=1}^{N}}z_{i}^{\prime}u_{i}\right)
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $S_{xz}=N^{-1}\sum_{i=1}^{N}x_{i}^{\prime}z_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{zx}=N^{-1}\sum_{i=1}^{N}z_{i}^{\prime}x_{i}$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $E(z_{i}^{\prime}u_{i})=0$
+\end_inset
+
+, the CLT implies that
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle N^{-\frac{1}{2}}\sum_{i=1}^{N}}z_{i}^{\prime}u_{i}\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N\left(0,B\right)
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $B\equiv E(z_{i}^{\prime}u_{i}u_{i}^{\prime}z_{i})$
+\end_inset
+
+.
+ In particular, 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $N^{-\frac{1}{2}}\sum_{i=1}^{N}z_{i}^{\prime}u_{i}=O_{p}(1)$
+\end_inset
+
+.
+ But, by the law of large numbers,
+\begin_inset Formula 
+\begin{equation}
+\left[S_{xz}\hat{W}S_{zx}\right]^{-1}S_{xz}\hat{W}=\left[\Sigma_{xz}W\Sigma_{zx}\right]^{-1}\Sigma_{xz}W+o_{p}(1)
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Sigma_{xz}=E(x_{i}^{\prime}z_{i})$
+\end_inset
+
+ and 
+\begin_inset Formula $\Sigma_{zx}=E(z_{i}^{\prime}x_{i})$
+\end_inset
+
+.
+ So, we have
+\begin_inset Formula 
+\begin{eqnarray}
+\sqrt{N}\left(\hat{\beta}_{P2SLS}-\beta\right) & = & \left[\Sigma_{xz}W\Sigma_{zx}\right]^{-1}\Sigma_{xz}W\left(N^{-\frac{1}{2}}{\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}u_{i}\right)\nonumber \\
+ &  & +\left(\left[S_{xz}\hat{W}S_{zx}\right]^{-1}S_{xz}\hat{W}-\left[\Sigma_{xz}W\Sigma_{zx}\right]^{-1}\Sigma_{xz}W\right)\left(N^{-\frac{1}{2}}{\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}u_{i}\right)\nonumber \\
+ & = & \left[\Sigma_{xz}W\Sigma_{zx}\right]^{-1}\Sigma_{xz}W\left(N^{-\frac{1}{2}}{\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}u_{i}\right)+o_{p}(1)\cdot O_{p}(1)\nonumber \\
+ & = & \left[\Sigma_{xz}W\Sigma_{zx}\right]^{-1}\Sigma_{xz}W\left(N^{-\frac{1}{2}}{\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}u_{i}\right)+o_{p}(1)
+\end{eqnarray}
+
+\end_inset
+
+Thus, by the CLT, equations (16) and (17) and the asymptotic equivalence
+ lemma imply
+\begin_inset Formula 
+\[
+\sqrt{N}\left(\hat{\beta}_{P2LS}-\beta\right)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N\left(0,ABA^{\prime}\right)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $A\equiv\left[\Sigma_{xz}W\Sigma_{zx}\right]^{-1}\Sigma_{xz}W$
+\end_inset
+
+.
+ Thus, the asymptotic variance of the pooled 2SLS estimator is
+\begin_inset Formula 
+\begin{equation}
+\mbox{AVar}(\hat{\beta}_{P2SLS})=N^{-1}\cdot ABA^{\prime}
+\end{equation}
+
+\end_inset
+
+Therefore, the asymptotic variance is consistently estimated by 
+\begin_inset Formula 
+\begin{equation}
+\widehat{\mbox{AVar}(\hat{\beta}_{P2SLS})}=N^{-1}\cdot\hat{A}\hat{B}\hat{A}^{\prime}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{A}\equiv\left[S_{xz}\hat{W}S_{zx}\right]^{-1}S_{xz}\hat{W}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{B}\equiv N^{-1}\sum_{i=1}^{N}z_{i}^{\prime}u_{i}u_{i}^{\prime}z_{i}$
+\end_inset
+
+.
+ Equivalently, equation (19) can also be written as
+\begin_inset Formula 
+\begin{equation}
+\widehat{\mbox{AVar}(\hat{\beta}_{P2SLS})}=C\left(\sum_{i=1}^{N}{\displaystyle \sum_{t=1}^{T}}\sum_{s=1}^{T}u_{it}u_{is}z_{it}z_{is}^{\prime}\right)C^{\prime}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $C\equiv\left[\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}x_{it}z_{it}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}z_{it}z_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}z_{it}x_{it}^{\prime}\right)\right]^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}x_{it}z_{it}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}z_{it}z_{it}^{\prime}\right)^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Part d.
+\end_layout
+
+\begin_layout Standard
+Without further assumptions, the pooled 2SLS estimator is not necessarily
+ the asymptotically efficient estimator.
+ The most efficient GMM estimator is the GMM estimator where the weighting
+ matrix is chosen to be
+\begin_inset Formula 
+\begin{eqnarray*}
+W & = & \left[E(z_{i}^{\prime}u_{i}u_{i}^{\prime}z_{i})\right]^{-1}\\
+ & = & \left[E\left(\sum_{t=1}^{T}\sum_{s=1}^{T}u_{it}u_{is}z_{it}z_{is}^{\prime}\right)\right]^{-1}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula $W$
+\end_inset
+
+ is known as the optimal weighting matrix since it produces the GMM estimator
+ with the smallest asymptotic variance.
+ A consistent estimator of this weighting matrix is
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{W} & = & \left[N^{-1}{\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}u_{i}u_{i}^{\prime}z_{i}\right]^{-1}\\
+ & = & \left[N^{-1}{\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}{\displaystyle \sum_{s=1}^{T}}u_{it}u_{is}z_{it}z_{is}^{\prime}\right]^{-1}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Part e.
+\end_layout
+
+\begin_layout Standard
+Asumptions (13) and (14) imply that
+\begin_inset Formula 
+\[
+E(z_{i}^{\prime}u_{i}u_{i}^{\prime}z_{i})=E(z_{i}^{\prime}\Omega z_{i})
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+E(u_{i}u_{i}^{\prime})\equiv\Omega=\sigma^{2}I_{T}
+\]
+
+\end_inset
+
+Thus, system homoskedasticity holds, and 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ has a spherical second moment.
+ Then, the optimal weighting matrix becomes
+\begin_inset Formula 
+\[
+W=\left[\sigma^{2}E(z_{i}^{\prime}z_{i})\right]^{-1}=\left[\sigma^{2}\Sigma_{zz}\right]^{-1}
+\]
+
+\end_inset
+
+which is consistently estimated by
+\begin_inset Formula 
+\begin{equation}
+\hat{W}=\left[\hat{\sigma}^{2}\frac{1}{N}{\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}z_{i}\right]^{-1}=\left[\hat{\sigma}^{2}S_{zz}\right]^{-1}
+\end{equation}
+
+\end_inset
+
+Plugging equation (21) into the expression for the GMM estimator, along
+ with canceling out 
+\begin_inset Formula $\hat{\sigma}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+, we obtain the pooled 2SLS estimator.
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta} & = & \left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}z_{i}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}x_{i}\right)\right]^{-1}\left({\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}z_{i}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}y_{i}\right)\\
+ & = & \left[\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}x_{it}z_{it}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}z_{it}z_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}z_{it}x_{it}^{\prime}\right)\right]^{-1}\\
+ &  & \times\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}x_{it}z_{it}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}z_{it}z_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}z_{it}y_{it}\right)
+\end{eqnarray*}
+
+\end_inset
+
+So, under Assumptions (13) and (14), the efficient GMM estimator that uses
+ (21) as its optimal weighting matrix is equivalent to the pooled 2SLS estimator
+, which is the GMM estimator that uses
+\begin_inset Formula 
+\[
+\hat{W}=\left[N^{-1}{\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}z_{i}\right]^{-1}
+\]
+
+\end_inset
+
+as its weighting matrix.
+ Also, under system homoskedasticity, the asymptotic variance of the pooled
+ 2SLS estimator becomes
+\begin_inset Formula 
+\begin{eqnarray*}
+\mbox{AVar}(\hat{\beta}_{P2SLS}) & = & N^{-1}\cdot ABA^{\prime}\\
+ & = & N^{-1}\cdot\left[\Sigma_{xz}W\Sigma_{zx}\right]^{-1}\Sigma_{xz}WE(z_{i}^{\prime}u_{i}u_{i}^{\prime}z_{i})W\Sigma_{zx}\left[\Sigma_{xz}W\Sigma_{zx}\right]^{-1}\\
+ & = & N^{-1}\cdot\left[\Sigma_{xz}\left(\sigma^{2}\Sigma_{zz}\right)^{-1}\Sigma_{zx}\right]^{-1}\Sigma_{xz}\left(\sigma^{2}\Sigma_{zz}\right)^{-1}\Sigma_{zx}\left[\Sigma_{xz}\left(\sigma^{2}\Sigma_{zz}\right)^{-1}\Sigma_{zx}\right]^{-1}\\
+ & = & N^{-1}\cdot\sigma^{2}\left[\Sigma_{xz}(\Sigma_{zz})^{-1}\Sigma_{zx}\right]^{-1}
+\end{eqnarray*}
+
+\end_inset
+
+Hence, the asymptotic variance is consistently estimated by
+\begin_inset Formula 
+\begin{equation}
+\widehat{\mbox{AVar}(\hat{\beta}_{P2SLS})}=N^{-1}\cdot\hat{\sigma}^{2}\left[S_{xz}(S_{zz})^{-1}S_{zx}\right]^{-1}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+\hat{\sigma}^{2}\equiv N^{-1}\sum_{i=1}^{N}\sum_{t=1}^{T}\hat{u}_{it}^{2}
+\end{equation}
+
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{u}_{it}=y_{it}-x_{it}^{\prime}\hat{\beta}_{P2SLS}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $ $
+\end_inset
+
+Equivalently, equation (22) can be written as
+\begin_inset Formula 
+\[
+\widehat{\mbox{AVar}(\hat{\beta}_{P2SLS})}=\hat{\sigma}^{2}\left[\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}x_{it}z_{it}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}z_{it}z_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}z_{it}x_{it}^{\prime}\right)\right]^{-1}
+\]
+
+\end_inset
+
+Therefore, assumptions (13) and (14) imply that the usual standard errors
+ and test statistics reported from the pooled 2SLS estimation are valid.
+\end_layout
+
+\begin_layout Subsubsection*
+Part f.
+\end_layout
+
+\begin_layout Standard
+In this part, we still maintain condition (13), but condition (14) has been
+ relaxed to
+\begin_inset Formula 
+\begin{equation}
+E(u_{it}^{2}|z_{it})=E(u_{it}^{2})\equiv\sigma_{T}^{2}
+\end{equation}
+
+\end_inset
+
+Assumptions (13) and (24) imply that
+\begin_inset Formula 
+\[
+E(z_{i}^{\prime}u_{i}u_{i}^{\prime}z_{i})=E(z_{i}^{\prime}\Omega z_{i})
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+E(u_{i}u_{i}^{\prime})\equiv\Omega=\left[\begin{array}{ccc}
+\sigma_{1}^{2} &  & 0\\
+ & \ddots\\
+0 &  & \sigma_{T}^{2}
+\end{array}\right]
+\]
+
+\end_inset
+
+So, system homoskedasticity still holds, but 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ no longer has a sperical second moment.
+ Consequently, the pooled 2SLS estimator is no longer the asymptotically
+ efficient GMM estimator.
+ Since system homoskedasticity still holds, then by Theorem 8.4, the 3SLS
+ estimator is an optimal GMM estimator.
+ The GMM 3SLS estimator is a GMM estimator that uses
+\begin_inset Formula 
+\begin{equation}
+\hat{W}=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}\hat{\Omega}z_{i}\right)^{-1}=\left[N^{-1}\cdot Z^{\prime}\left(I_{N}\otimes\hat{\Omega}\right)Z\right]^{-1}
+\end{equation}
+
+\end_inset
+
+as its particular weighting matrix.
+ Let 
+\begin_inset Formula $\check{u}_{i}=y_{i}-x_{i}\check{\beta}$
+\end_inset
+
+ be the residuals from an initial P2SLS estimator.
+ It can be shown that
+\begin_inset Formula 
+\begin{equation}
+\hat{\Omega}\equiv N^{-1}{\displaystyle \sum_{i=1}^{N}}\check{u}_{i}\check{u}_{i}^{\prime}
+\end{equation}
+
+\end_inset
+
+is a consistent estimator of 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ Plugging equation (25) into the equation for the GMM estimator and canceling
+ out 
+\begin_inset Formula $N$
+\end_inset
+
+ gives the 3SLS estimator
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta} & = & \left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}z_{i}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}\hat{\Omega}z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}x_{i}\right)\right]^{-1}\left({\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}z_{i}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}\hat{\Omega}z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}y_{i}\right)\\
+ & = & \left[X^{\prime}Z\left\{ Z^{\prime}\left(I_{N}\otimes\hat{\Omega}\right)Z\right\} ^{-1}Z^{\prime}X\right]^{-1}X^{\prime}Z\left\{ Z^{\prime}\left(I_{N}\otimes\hat{\Omega}\right)Z\right\} ^{-1}Z^{\prime}Y
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Part g.
+\end_layout
+
+\begin_layout Standard
+In this part, we have chosen the instrument matrix as
+\begin_inset Formula 
+\begin{equation}
+z_{i}=\mbox{diag}(z_{i1}^{\prime},\ldots,z_{iT}^{\prime})
+\end{equation}
+
+\end_inset
+
+and we choose the weighting matrix to be
+\begin_inset Formula 
+\begin{equation}
+\hat{W}=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}z_{i}\right)
+\end{equation}
+
+\end_inset
+
+Plugging equation (28) into the equation for the GMM estimator and cancel
+ 
+\begin_inset Formula $N$
+\end_inset
+
+ everywhere, we get the S2LS estimator
+\begin_inset Formula 
+\[
+\hat{\beta}_{2SLS}=\left[\left({\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}z_{i}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}x_{i}\right)\right]^{-1}\left({\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}z_{i}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}y_{i}\right)
+\]
+
+\end_inset
+
+Straightforward partitioned multiplication shows that
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}z_{i} & = & \left[\begin{array}{ccc}
+{\displaystyle \sum_{i=1}^{N}}z_{i1}z_{i1}^{\prime}\\
+ & \ddots\\
+ &  & {\displaystyle \sum_{i=1}^{N}}z_{iT}z_{iT}^{\prime}
+\end{array}\right]\\
+\sum_{i=1}^{N}z_{i}^{\prime}x_{i} & = & \left[\begin{array}{c}
+{\displaystyle \sum_{i=1}^{N}}z_{i1}x_{i1}^{\prime}\\
+\vdots\\
+{\displaystyle \sum_{i=1}^{N}}z_{iT}x_{iT}^{\prime}
+\end{array}\right]\\
+{\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}y_{i} & = & \left[\begin{array}{c}
+{\displaystyle \sum_{i=1}^{N}}z_{i1}y_{i1}\\
+\vdots\\
+{\displaystyle \sum_{i=1}^{N}}z_{iT}y_{iT}
+\end{array}\right]
+\end{eqnarray*}
+
+\end_inset
+
+Now, block partitioned inversion and multiplication given
+\begin_inset Formula 
+\begin{eqnarray*}
+\left({\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}z_{i}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}x_{i}\right) & = & {\displaystyle \sum_{t=1}^{T}}\left({\displaystyle \sum_{i=1}^{N}}x_{it}z_{it}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{it}z_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{it}x_{it}^{\prime}\right)\\
+ & = & {\displaystyle \sum_{t=1}^{T}}{\displaystyle \sum_{i=1}^{N}}\hat{x}_{it}x_{it}^{\prime}\\
+ & = & {\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\hat{x}_{it}x_{it}^{\prime}
+\end{eqnarray*}
+
+\end_inset
+
+ where 
+\begin_inset Formula $\hat{x}_{it}^{\prime}=z_{it}^{\prime}\hat{\Pi}_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\Pi}_{t}=\left({\displaystyle \sum_{i=1}^{n}}z_{it}z_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}z_{it}x_{it}^{\prime}\right)$
+\end_inset
+
+ is the matrix of first-stage regression coefficients for time period 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Similarly,
+\begin_inset Formula 
+\[
+\left({\displaystyle \sum_{i=1}^{N}}x_{i}^{\prime}z_{i}\right)\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}z_{i}^{\prime}y_{i}\right)={\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\hat{x}_{it}^{\prime}y_{it}
+\]
+
+\end_inset
+
+Putting these results together gives
+\begin_inset Formula 
+\[
+\hat{\beta}_{S2SLS}=\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\hat{x}_{it}x_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\hat{x}_{it}^{\prime}y_{it}\right)
+\]
+
+\end_inset
+
+Now, suppose we regress 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ on 
+\begin_inset Formula $z_{it}$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+, and obtain the fitted values, 
+\begin_inset Formula $\hat{x}_{it}^{\prime}=z_{it}^{\prime}\hat{\Pi}_{t}$
+\end_inset
+
+, where 
+\begin_inset Formula $\hat{\Pi}_{t}=\left({\displaystyle \sum_{i=1}^{n}}z_{it}z_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}z_{it}x_{it}^{\prime}\right)$
+\end_inset
+
+ is 
+\begin_inset Formula $L_{t}\times K$
+\end_inset
+
+.
+ Then, we compute the pooled IV estimator using 
+\begin_inset Formula $\hat{x}_{it}$
+\end_inset
+
+ as IVs for 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\hat{\beta}_{IV}=\left({\displaystyle \sum_{i=1}^{N}}\hat{x}_{i}^{\prime}x_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}\hat{x}_{i}^{\prime}y_{i}\right)
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{x}_{i} & = & \left[\begin{array}{c}
+\hat{x}_{i1}^{\prime}\\
+\vdots\\
+\hat{x}_{iT}^{\prime}
+\end{array}\right]\\
+\end{eqnarray*}
+
+\end_inset
+
+Therefore, the S2SLS estimator can be obtained by finding the fitted values
+ 
+\begin_inset Formula $\hat{x}_{it}$
+\end_inset
+
+ for each time period, and then calculate 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ as the pooled IV estimator, listing 
+\begin_inset Formula $\hat{x}_{it}$
+\end_inset
+
+ as instruments.
+\end_layout
+
+\begin_layout Subsubsection*
+Part h.
+\end_layout
+
+\begin_layout Standard
+The efficeint estimator that uses only the moments 
+\begin_inset Formula $E(z_{it}u_{it})=0$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+ is the generalized method of moments (GMM) estimator with an optimal weighting
+ matrix.
+ The choice of instrument matrix (12) means we are only using the moment
+ conditions aggregated across time, 
+\begin_inset Formula $\sum_{t=1}^{T}E(z_{it}u_{it})=0$
+\end_inset
+
+.
+ The matrix of instruments should be as in as in (27).
+ The system 2SLS estimator can be used in the first step to obtain the optimal
+ weighting matrix.
+\end_layout
+
+\begin_layout Section*
+Problem 10.10
+\end_layout
+
+\begin_layout Standard
+An unobserved effects model explaning current murder rates in terms of the
+ number of executions in the last three years is
+\begin_inset Formula 
+\[
+\mbox{\emph{mrdrte}}_{it}=\theta_{t}+\beta_{1}\mbox{\emph{exec}}_{it}+\beta_{2}\mbox{\emph{unem}}_{it}+c_{i}+u_{it}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mbox{\emph{mrdrte}}_{it}$
+\end_inset
+
+ is the number of murders in state 
+\begin_inset Formula $i$
+\end_inset
+
+ during year 
+\begin_inset Formula $t$
+\end_inset
+
+, per 10,000 people; 
+\begin_inset Formula $\mbox{\emph{exec}}_{it}$
+\end_inset
+
+ is the total number of executions for the current and prior two years;
+ and 
+\begin_inset Formula $\mbox{\emph{unem}}_{it}$
+\end_inset
+
+ is the current unemployment rate, included as a control.
+\end_layout
+
+\begin_layout Enumerate
+Using the data in MURDER.RAW, estiamte this model by FD.
+ Notice that you should allow different year intercepts.
+ Test the errors in the FD equation for serial correlation.
+\end_layout
+
+\begin_layout Enumerate
+Estiamte the model by FE.
+ Are there any important differences from the FD estimates? What about in
+ their fully robust standard errors?
+\end_layout
+
+\begin_layout Enumerate
+Under what circumstances would 
+\begin_inset Formula $\mbox{\emph{exec}}_{it}$
+\end_inset
+
+ not be strictly exogenous (conditional on 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+)?
+\end_layout
+
+\begin_layout Subsection*
+Solution
+\end_layout
+
+\begin_layout Subsubsection*
+Part a.
+\end_layout
+
+\begin_layout Standard
+An unobserved effects model explaning current murder rates in terms of the
+ number of executions in the last three years is
+\begin_inset Formula 
+\[
+\mbox{\emph{mrdrte}}_{it}=\theta_{t}+\beta_{1}\mbox{\emph{exec}}_{it}+\beta_{2}\mbox{\emph{unem}}_{it}+c_{i}+u_{it}
+\]
+
+\end_inset
+
+Notice that we have allowed different year intercepts.
+ We estimate the model by FD with 
+\begin_inset Formula $\alpha=0.5$
+\end_inset
+
+, and we calculate the robust standard errors.
+ The estimates from the FD regression are given in the table below, while
+ the code is attached separately.
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mbox{\emph{mrdrte}}_{it}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Coef.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Robust Std.
+ Err.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset Formula $t$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset Formula $P>|t|$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+[95% Conf.
+ Interval]
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mbox{\emph{d90}}_{t}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.5110
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.0303
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.4665
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1457
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.8134
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.2085
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mbox{\emph{d93}}_{t}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.7253
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.8391
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.0560
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0424
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.1572
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.2934
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mbox{\emph{exec}}_{it}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.1151
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0376
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-3.0563
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0029
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.1406
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.0896
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mbox{\emph{unem}}_{it}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1631 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.2925
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5576
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5784
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.0349
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3611
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In order to check for serial correlation of the errors 
+\begin_inset Formula $e_{it}\equiv\Delta u_{it}$
+\end_inset
+
+, we can perform a regression based on two time periods
+\begin_inset Formula 
+\[
+\hat{e}_{it}=\hat{\rho}_{1}\hat{e}_{i,t-1}+\mbox{\emph{error}}_{it},\ t=3,\ldots,T;i=1,\ldots,N
+\]
+
+\end_inset
+
+The test statistic is the usual 
+\begin_inset Formula $t$
+\end_inset
+
+ statistic on 
+\begin_inset Formula $\hat{\rho}_{1}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $T=3$
+\end_inset
+
+, the regression is just a cross section regression because we lose the
+ 
+\begin_inset Formula $t=1$
+\end_inset
+
+ and 
+\begin_inset Formula $t=2$
+\end_inset
+
+ time periods.
+ The estimates from the regression are given in the following table:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\hat{e}_{i3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Coef.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Robust Std.
+ Err.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset Formula $t$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset Formula $P>|t|$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+[95% Conf.
+ Interval]
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\hat{e}_{i2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0066
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0098
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6698
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5061
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.0127
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0258
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since the coefficient of 
+\begin_inset Formula $\hat{e}_{i2}$
+\end_inset
+
+ is statistically insignificant, we fail to reject the null hypothesis that
+ 
+\begin_inset Formula $\Delta u_{it}$
+\end_inset
+
+ are serially uncorrelated.
+\end_layout
+
+\begin_layout Subsubsection*
+Part b.
+\end_layout
+
+\begin_layout Standard
+Now, we estimate the model by FE with 
+\begin_inset Formula $\alpha=0.5$
+\end_inset
+
+, and we calculate the robust standard errors.
+ The estimates from the FE regression are given in the table below, while
+ the code is attached separately.
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mbox{\emph{mrdrte}}_{it}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Coef.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Robust Std.
+ Err.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset Formula $t$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset Formula $P>|t|$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+[95% Conf.
+ Interval]
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mbox{\emph{d90}}_{t}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.5562 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.0933
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.4234
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1567
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.8170
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.2954
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mbox{\emph{d93}}_{t}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.7332
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.8486
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.0426
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0429
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.1595
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.3070
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mbox{\emph{exec}}_{it}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.1383 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0787
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1.7571
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0810
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.1916
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.0851
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mbox{\emph{unem}}_{it}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.2213
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3663
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6042
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5466
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.0263
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.4690
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The main difference in estimates from the two regressions is significance
+ of coefficient of 
+\begin_inset Formula $\mbox{\emph{exec}}_{it}$
+\end_inset
+
+.
+ For FD estimation, the coefficient of 
+\begin_inset Formula $\mbox{\emph{exec}}_{it}$
+\end_inset
+
+ is -0.1151 with a p-value of 0.0029, and for FE estimation, the coefficient
+ is -0.1383 with a p-value of 0.081.
+ Hence, at the 5% level, 
+\begin_inset Formula $\mbox{\emph{exec}}_{it}$
+\end_inset
+
+ is significant for FD estimation and insignificant for FE estimation.
+ Although the coefficients of all the other variables are (slightly) different
+ for FD and FE estimations, there is no change in significance of 
+\begin_inset Formula $\mbox{\emph{unem}}_{it}$
+\end_inset
+
+, 
+\begin_inset Formula $\mbox{\emph{d90}}_{t}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mbox{\emph{d93}}_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Part c.
+\end_layout
+
+\begin_layout Standard
+There are a few circumstances that would cause 
+\begin_inset Formula $\mbox{\emph{exec}}_{it}$
+\end_inset
+
+ not to be strictly exogenous (conditional on 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+).
+ One case is enacting or revoking legislation concerning the punishment
+ of execution.
+ Another would be the party affiliation of the leadership governing the
+ state.
+ States that lean conservative are more likely to have the death penalty,
+ while many liberal states have done away with capital punishment.
+\end_layout
+
+\begin_layout Section*
+Problem 11.16
+\end_layout
+
+\begin_layout Standard
+Consider a Hausman and Taylor type model with a single time-constant explanatory
+ variable
+\begin_inset Formula 
+\begin{gather}
+y_{it}=\gamma w_{i}+x_{it}^{\prime}\beta+c_{i}+u_{it}\\
+E(u_{it}|w_{i},x_{i},c_{i})=0,\ t=1,\ldots,T
+\end{gather}
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ vector of time-varying explanatory variables.
+\end_layout
+
+\begin_layout Enumerate
+If we are interested only in estimating 
+\begin_inset Formula $\beta$
+\end_inset
+
+, how should we proceed, without making additional assumptions (other than
+ a standard rank assumption)?
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ be a time-constant proxy variable for 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ in the sense that
+\begin_inset Formula 
+\[
+E(c_{i}|r_{i},w_{i},x_{i})=E(c_{i}|r_{i},x_{i})=\delta_{0}+\delta_{1}r_{i}+\bar{x}_{i}\delta_{2}
+\]
+
+\end_inset
+
+The key assumption is that, once we condition on 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ is not partially related to 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+ Assuming the standard proxy variable redundancy assumption 
+\begin_inset Formula $E(u_{it}|w_{i},x_{i},c_{i},r_{i})=0$
+\end_inset
+
+, find 
+\begin_inset Formula $E(y_{it}|w_{i},x_{i},r_{i})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Using part b, argue that 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is identified.
+ Suggest a pooled OLS estimator.
+\end_layout
+
+\begin_layout Enumerate
+Assume that (1) 
+\begin_inset Formula $\mbox{Var}(u_{it}|w_{i},x_{i},c_{i},r_{i})=\sigma_{u}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+; (2) 
+\begin_inset Formula $\mbox{Cov}(u_{it},u_{is}|w_{i},x_{i},c_{i},r_{i})=0$
+\end_inset
+
+, all 
+\begin_inset Formula $t\neq s$
+\end_inset
+
+; (3) 
+\begin_inset Formula $\mbox{Var}(c_{i}|w_{i},x_{i},r_{i})=\sigma_{a}^{2}$
+\end_inset
+
+.
+ How would you efficiently estiamte 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ (along with 
+\begin_inset Formula $\beta$
+\end_inset
+
+, 
+\begin_inset Formula $\delta_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+, and 
+\begin_inset Formula $\delta_{2}$
+\end_inset
+
+)? [Hint: It might be helpful to write 
+\begin_inset Formula $c_{i}=\delta_{0}+\delta_{1}r_{i}+\bar{x}_{i}\delta_{2}+a_{i}$
+\end_inset
+
+, where 
+\begin_inset Formula $E(a_{i}|w_{i},x_{i},r_{i})=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{Var}(a_{i}|w_{i},x_{i},r_{i})=\sigma_{a}^{2}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Solution
+\end_layout
+
+\begin_layout Subsubsection*
+Part a.
+\end_layout
+
+\begin_layout Standard
+If we are only interested in estimating 
+\begin_inset Formula $\beta$
+\end_inset
+
+, then we can perform an FE estimation on (29).
+ First, we stack the equations over 
+\begin_inset Formula $T$
+\end_inset
+
+ to get
+\begin_inset Formula 
+\begin{equation}
+y_{i}=\gamma w_{i}j_{T}+x_{i}\beta+c_{i}j_{T}+u_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $j_{T}$
+\end_inset
+
+ is still the 
+\begin_inset Formula $T\times1$
+\end_inset
+
+ vector of ones and
+\begin_inset Formula 
+\[
+x_{i}=\left[\begin{array}{c}
+x_{i1}^{\prime}\\
+\vdots\\
+x_{iT}^{\prime}
+\end{array}\right]
+\]
+
+\end_inset
+
+Next, we use the fixed effects transformation to obtain
+\begin_inset Formula 
+\begin{equation}
+\ddot{y}_{i}=\ddot{x}_{i}\beta+\ddot{u}_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\ddot{y}_{i}=Q_{T}y_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $\ddot{x}_{i}=Q_{T}x_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $\ddot{u}_{i}=Q_{T}u_{i}$
+\end_inset
+
+, and 
+\begin_inset Formula $Q_{T}=I_{T}-j_{T}(j_{T}^{\prime}j_{T})^{-1}j_{T}^{\prime}$
+\end_inset
+
+.
+ By Assumption (30), 
+\begin_inset Formula $E(\ddot{u}_{it}|x_{i})=E(u_{it}|x_{i})-E(\bar{u}_{i}|x)=0$
+\end_inset
+
+, which in turns implies that 
+\begin_inset Formula $E(\ddot{u}_{it}|\ddot{x}_{i1},\ldots,\ddot{x}_{iT})=0$
+\end_inset
+
+ since 
+\begin_inset Formula $\ddot{x}_{it}$
+\end_inset
+
+ is just a function of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $E(\ddot{x}_{it}\ddot{u}_{it})=0$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+, and if we also assume a standard rank condition, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ will be identified.
+ Therefore, we can perform pooled OLS estimation on equation (32), and we
+ obtain the fixed effects estimator
+\begin_inset Formula 
+\[
+\hat{\beta}_{FE}=\left({\displaystyle \sum_{i=1}^{N}}\ddot{x}_{i}^{\prime}\ddot{x}_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}\ddot{x}_{i}^{\prime}\ddot{y}_{i}\right)
+\]
+
+\end_inset
+
+which is a consistent estimator of 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Part b.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ be a time constant proxy for 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\begin{equation}
+E(c_{i}|r_{i},w_{i},x_{i})=E(c_{i}|r_{i},x_{i})=\delta_{0}+\delta_{1}r_{i}+\bar{x}_{i}\delta_{2}
+\end{equation}
+
+\end_inset
+
+The key assumption is that, once we condition on 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ is not partially related to 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+ Furthermore, we assume that assume 
+\begin_inset Formula $E(u_{it}|w_{i},x_{i},c_{i},r_{i})=0$
+\end_inset
+
+.
+ We need to find 
+\begin_inset Formula $E\left(y_{it}|w_{i},x_{i},r_{i}\right)$
+\end_inset
+
+.
+ Consider equation (29)
+\begin_inset Formula 
+\[
+y_{it}=\gamma w_{i}+x_{it}^{\prime}\beta+c_{i}+u_{it}
+\]
+
+\end_inset
+
+Taking expectation on both sides conditional on 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ we obtain
+\begin_inset Formula 
+\begin{equation}
+E\left(y_{it}|w_{i},x_{i},r_{i}\right)=\gamma w_{i}+x_{it}^{\prime}\beta+E\left(c_{i}|w_{i},x_{i},r_{i}\right)+E\left(u_{it}|w_{i},x_{i},r_{i}\right)
+\end{equation}
+
+\end_inset
+
+Plugging 
+\begin_inset Formula $ $
+\end_inset
+
+(33) into (34) we have
+\begin_inset Formula 
+\[
+E\left(y_{it}|w_{i},x_{i},r_{i}\right)=\gamma w_{i}+x_{it}^{\prime}\beta+\delta_{0}+\delta_{1}r_{i}+\bar{x}_{i}\delta_{2}+E\left(u_{it}|w_{i},x_{i},r_{i}\right)
+\]
+
+\end_inset
+
+By the law of iterated expectations, 
+\begin_inset Formula $E(u_{it}|w_{i},x_{i},r_{i})=E\left[E(u_{it}|w_{i},x_{i},c_{i},r_{i})|w_{i},x_{i},r_{i}\right]$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $E(u_{it}|w_{i},x_{i},c_{i},r_{i})=0$
+\end_inset
+
+ by assumption, then 
+\begin_inset Formula $E(u_{it}|w_{i},x_{i},r_{i})=0$
+\end_inset
+
+.
+ Therefore, we have
+\begin_inset Formula 
+\begin{equation}
+E\left(y_{it}|w_{i},x_{i},r_{i}\right)=\gamma w_{i}+x_{it}^{\prime}\beta+\delta_{0}+\delta_{1}r_{i}+\bar{x}_{i}\delta_{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Part c.
+\end_layout
+
+\begin_layout Standard
+From part (b), we can rewrite the structural model (35) in error form as
+\begin_inset Formula 
+\begin{equation}
+y_{it}=\gamma w_{i}+x_{it}^{\prime}\beta+\delta_{0}+\delta_{1}r_{i}+\bar{x}_{i}\delta_{2}+e_{it}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+E(e_{it}|w_{i},x_{i},r_{i})=0
+\end{equation}
+
+\end_inset
+
+by definition.
+ Let 
+\begin_inset Formula $Z_{it}^{\prime}\equiv\left[w_{i},x_{it}^{\prime},1,r_{i},\bar{x}_{i}\right]$
+\end_inset
+
+, which has dimension 
+\begin_inset Formula $1\times(K+4)$
+\end_inset
+
+, 
+\begin_inset Formula $ $
+\end_inset
+
+and 
+\begin_inset Formula $\Upsilon\equiv[\gamma,\beta,\delta_{0},\delta_{1},\delta_{2}]^{\prime}$
+\end_inset
+
+, and after stacking over 
+\begin_inset Formula $T$
+\end_inset
+
+, rewrite (36) as
+\begin_inset Formula 
+\begin{equation}
+y_{i}=Z_{i}\Upsilon+e_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+Z_{i}=\left[\begin{array}{c}
+Z_{i1}^{\prime}\\
+\vdots\\
+Z_{iT}^{\prime}
+\end{array}\right]
+\]
+
+\end_inset
+
+Equation (37) is a sufficient for 
+\begin_inset Formula $E(Z_{i}^{\prime}e_{i})=0$
+\end_inset
+
+.
+ We also assume that 
+\begin_inset Formula $\mbox{rank}\ E(Z_{i}^{\prime}Z_{i})=(K+4)$
+\end_inset
+
+.
+ Under these two conditions, 
+\begin_inset Formula $\Upsilon$
+\end_inset
+
+ is identified, and we have
+\begin_inset Formula 
+\begin{eqnarray}
+E(Z_{i}^{\prime}e_{i}) & = & 0\nonumber \\
+E\left[Z_{i}^{\prime}(y_{i}-Z_{i}\Upsilon)\right] & = & 0\nonumber \\
+E(Z_{i}^{\prime}Z_{i})\Upsilon & = & E(Z_{i}^{\prime}y_{i})\nonumber \\
+\Upsilon & = & \left[E(Z_{i}^{\prime}Z_{i})\right]^{-1}E(Z_{i}^{\prime}y_{i})
+\end{eqnarray}
+
+\end_inset
+
+The analogy principle suggests that we estimate 
+\begin_inset Formula $\Upsilon$
+\end_inset
+
+ by the sample analogue of equation (39).
+ Thus, we obtain the pooled OLS estimator
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\Upsilon}_{POLS} & = & \left({\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}Z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}y_{i}\right)\\
+ & = & \left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}Z_{it}Z_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}Z_{it}y_{it}\right)
+\end{eqnarray*}
+
+\end_inset
+
+which is a consitent estimator of 
+\begin_inset Formula $\Upsilon$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is identified.
+\end_layout
+
+\begin_layout Subsubsection*
+Part d.
+\end_layout
+
+\begin_layout Standard
+We can write rewrite equation (29) as
+\begin_inset Formula 
+\begin{equation}
+y_{it}=\gamma w_{i}+x_{it}^{\prime}\beta+\delta_{0}+\delta_{1}r_{i}+\bar{x}_{i}\delta_{2}+a_{i}+u_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $c_{i}=\delta_{0}+\delta_{1}r_{i}+\bar{x}_{i}\delta_{2}+a_{i}$
+\end_inset
+
+.
+ Note, it is assumed that 
+\begin_inset Formula $E(u_{it}|w_{i},x_{i},c_{i})=0,\ t=1,\ldots,T$
+\end_inset
+
+.
+ We also assume now that (1) 
+\begin_inset Formula $\mbox{Var}(u_{it}|w_{i},x_{i},c_{i},r_{i})=\sigma_{u}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+; (2) 
+\begin_inset Formula $\mbox{Cov}(u_{it},u_{is}|w_{i},x_{i},c_{i},r_{i})=0$
+\end_inset
+
+, all 
+\begin_inset Formula $t\neq s$
+\end_inset
+
+; (3) 
+\begin_inset Formula $E(a_{i}|w_{i},x_{i},r_{i})=0$
+\end_inset
+
+; and (4) 
+\begin_inset Formula $\mbox{Var}(a_{i}|w_{i},x_{i},r_{i})=\sigma_{a}^{2}$
+\end_inset
+
+.
+ Keeping the same definitions as before and stacking over the 
+\begin_inset Formula $T$
+\end_inset
+
+ equations, we can rewrite equation (40) as
+\begin_inset Formula 
+\begin{equation}
+y_{i}=Z_{i}\Upsilon+v_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $v_{i}=a_{i}j_{T}+u_{i}$
+\end_inset
+
+.
+ Under our given assumptions, 
+\begin_inset Formula $E(v_{it}|Z_{i})=E(u_{it}+a_{i}|Z_{i})=0$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+, so the regressors are strictly exogenous.
+ In addition, we have that the variance matrix of 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ is constant,
+\begin_inset Formula 
+\begin{equation}
+E(v_{i}v_{i}^{\prime}|z_{i})=E(v_{i}v_{i}^{\prime})
+\end{equation}
+
+\end_inset
+
+and that the variance matrix of 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ has the random effects structure.
+\begin_inset Formula 
+\begin{equation}
+\Omega\equiv E(v_{i}v_{i}^{\prime})=\left[\begin{array}{ccc}
+\sigma_{u}^{2}+\sigma_{a}^{2} &  & \sigma_{a}^{2}\\
+ & \ddots\\
+\sigma_{a}^{2} &  & \sigma_{u}^{2}+\sigma_{a}^{2}
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+We can write the matrix (43) as
+\begin_inset Formula 
+\begin{equation}
+\Omega=\sigma_{u}^{2}I_{T}+\sigma_{a}^{2}j_{T}j_{T}^{\prime}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $\Omega$
+\end_inset
+
+ only depends on two parameters, 
+\begin_inset Formula $\sigma_{u}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{a}^{2}$
+\end_inset
+
+, regardless of the size of 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Define 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\sigma_{v}^{2}=\sigma_{u}^{2}+\sigma_{a}^{2}$
+\end_inset
+
+.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ Since the regressors are strictly exogenous, then we can perform FGLS estimatio
+n.
+ To implement an FGLS procedure, we must assume the usual rank condition
+ for GLS: 
+\begin_inset Formula $\mbox{rank}E(Z_{i}^{\prime}\Omega^{-1}Z_{i})=(K+4)$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\Upsilon$
+\end_inset
+
+ is now identified, and in a panel data context, the FGLS estimator that
+ uses the variance matrix (44) is what is known as the random effects estimator
+\begin_inset Formula 
+\[
+\hat{\beta}_{RE}=\left({\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}\hat{\Omega}Z_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}Z_{i}^{\prime}\hat{\Omega}^{-1}y_{i}\right)
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+\hat{\Omega}\equiv\hat{\sigma}_{u}^{2}I_{T}+\hat{\sigma}_{a}^{2}j_{T}j_{T}^{\prime}
+\end{equation}
+
+\end_inset
+
+In order to implement the RE procedure, we need to obtain 
+\begin_inset Formula $\hat{\sigma}_{a}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\sigma}_{u}^{2}$
+\end_inset
+
+.
+ First, we find 
+\begin_inset Formula $\hat{\sigma}_{v}^{2}=\hat{\sigma}_{a}^{2}+\hat{\sigma}_{u}^{2}$
+\end_inset
+
+.
+ A consistent estimator of 
+\begin_inset Formula $\sigma_{v}^{2}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\hat{\sigma}_{v}^{2}=\frac{1}{(NT-K)}{\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\check{v}_{it}^{2}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\check{v}_{it}=y_{it}-Z_{it}^{\prime}\Upsilon$
+\end_inset
+
+ denotes the pooled OLS residuals.
+ Next, under our given assumptions, a 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+- consistent estimator of 
+\begin_inset Formula $\sigma_{a}^{2}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+\hat{\sigma}_{a}^{2}=\frac{1}{\left[\nicefrac{NT(T-1)}{2-K}\right]}{\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T-1}}\sum_{s=t+1}^{T}\check{v}_{it}\check{v}_{is}
+\]
+
+\end_inset
+
+Given 
+\begin_inset Formula $\hat{\sigma}_{v}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\sigma}_{a}^{2}$
+\end_inset
+
+, we can find 
+\begin_inset Formula $\hat{\sigma}_{u}^{2}=\hat{\sigma}_{v}^{2}-\hat{\sigma}_{a}^{2}$
+\end_inset
+
+ .
+ Finally, under our given assumptions, the RE estimator is asymptotically
+ equivalent to GLS, so it is the efficient in the class of estimators consistent
+ under 
+\begin_inset Formula $E(v_{i}|Z_{i})=0$
+\end_inset
+
+, including pooled OLS and a variety of weighted least squares estimators.
+\end_layout
+
+\end_body
+\end_document

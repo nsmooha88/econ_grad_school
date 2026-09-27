@@ -1,0 +1,1386 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 4: Single-Equation Linear Model and OLS Estimation
+\end_layout
+
+\begin_layout Part*
+Omitted Variable Problem and Measurement Error
+\end_layout
+
+\begin_layout Section*
+4.3
+\begin_inset space \quad{}
+\end_inset
+
+Ordinary Least Squares Solutions to the Omitted Variables Problem
+\end_layout
+
+\begin_layout Subsection*
+4.3.1
+\begin_inset space \quad{}
+\end_inset
+
+Ordinary Least Squares Ignoring the Omitted Variables
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Because it is so prevalent in applied work, we now consider the omitted
+ varaibles problem in more detail.
+ A model that assumes an additive effect of the omitted variable is
+\begin_inset Formula 
+\begin{equation}
+E(y|x_{1},\ldots,x_{K},q)=\beta_{0}+\beta_{1}x_{1}+\cdots+\beta_{K}x_{K}+\gamma q
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $q$
+\end_inset
+
+ is the omitted factor.
+ In particular, we are interested in the 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+, which are the partial effects of the observed explanatory variables, holding
+ the other explanatory variables constant, 
+\emph on
+including
+\emph default
+ the unobservable 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ In the context of this additive mdoel, there is no point in allowing for
+ more than one unobservable; any omitted factors are lumped into 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ Henceforth, we simply refer to 
+\begin_inset Formula $q$
+\end_inset
+
+ as the omitted variable.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Viewing equation (1) as a structural model, we can always write it in error
+ form as
+\begin_inset Formula 
+\begin{eqnarray}
+y & = & \beta_{0}+\beta_{1}x_{1}+\cdots+\beta_{K}x_{K}+\gamma q+v\\
+E(v|x_{1},\ldots,x_{K},q) & = & 0
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $v$
+\end_inset
+
+ is the 
+\series bold
+structural error
+\series default
+.
+ One way to handle the nonobservability of 
+\begin_inset Formula $q$
+\end_inset
+
+ is to put it into the error term.
+ In doing so, nothing is lost by assuming 
+\begin_inset Formula $E(q)=0$
+\end_inset
+
+, because an intercept is included in equation (2).
+ Putting 
+\begin_inset Formula $q$
+\end_inset
+
+ into the rror terms means we rewrite equation (2) as
+\begin_inset Formula 
+\begin{eqnarray}
+y & = & \beta_{0}+\beta_{1}x_{1}+\cdots+\beta_{K}x_{K}+u\\
+u & \equiv & \gamma q+v
+\end{eqnarray}
+
+\end_inset
+
+The error in equation (4) consists of two parts.
+ Under equation (3), 
+\begin_inset Formula $v$
+\end_inset
+
+ has zero mean and is uncorrelated with 
+\begin_inset Formula $x_{1},\ldots,x_{K}$
+\end_inset
+
+ (and 
+\begin_inset Formula $q$
+\end_inset
+
+).
+ By normalization, 
+\begin_inset Formula $q$
+\end_inset
+
+ also has zero mean.
+ Thus, 
+\begin_inset Formula $E(u)=0$
+\end_inset
+
+.
+ However, 
+\begin_inset Formula $u$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $q$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $q$
+\end_inset
+
+ is correlated with any of the regressors, then so is 
+\begin_inset Formula $u$
+\end_inset
+
+, and we have an endogeneity problem.
+ We cannot expect OLS to consistently estimate 
+\emph on
+any
+\emph default
+ 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+.
+ Although 
+\begin_inset Formula $E(u|x)\neq E(u)$
+\end_inset
+
+ in equation (4), the 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ do have a structural interpretation because they appear in equation (2).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is easy to characterize the 
+\begin_inset Formula $\mbox{p\lim s}$
+\end_inset
+
+ of the OLS estimators when the omitted variable is ignored; we will call
+ this the 
+\series bold
+OLS omitted variables inconsistency
+\series default
+ or 
+\series bold
+OLS omitted variables bias
+\series default
+ (even though the latter term is not always precise).
+ Write the linear projection of 
+\begin_inset Formula $q$
+\end_inset
+
+ onto the observable explanatory variables as
+\begin_inset Formula 
+\begin{equation}
+q=\delta_{0}+\delta_{1}x_{1}+\cdots+\delta_{K}x_{K}+r
+\end{equation}
+
+\end_inset
+
+where, by definition of a linear projection, 
+\begin_inset Formula $E(r)=0$
+\end_inset
+
+, 
+\begin_inset Formula $\mbox{Cov}(x_{j},r)=0$
+\end_inset
+
+, 
+\begin_inset Formula $j=1,\ldots,K$
+\end_inset
+
+.
+ The parameter 
+\begin_inset Formula $\delta_{j}$
+\end_inset
+
+ measures the relationship between 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ after 
+\begin_inset Quotes eld
+\end_inset
+
+partialing out
+\begin_inset Quotes erd
+\end_inset
+
+ the other 
+\begin_inset Formula $x_{h}$
+\end_inset
+
+.
+ Then we can easily infer the 
+\begin_inset Formula $\mbox{p\lim}$
+\end_inset
+
+ of the OLS estimators from regressing 
+\begin_inset Formula $y$
+\end_inset
+
+ onto 
+\begin_inset Formula $1,x_{1},\ldots,x_{K}$
+\end_inset
+
+ by finding an equation that does satisfy Assumptions OLS.1 and OLS.2.
+ Plugging in equation (6) into equation (2) and doing simple algebra gives
+\begin_inset Formula 
+\[
+y=(\beta_{0}+\gamma\delta_{0})+(\beta_{1}+\gamma\delta_{1})x_{1}+\cdots+(\beta_{K}+\gamma\delta_{K})x_{K}+v+\gamma r
+\]
+
+\end_inset
+
+Now, the error 
+\begin_inset Formula $v+\gamma r$
+\end_inset
+
+ has zero mean and is uncorrelated with each regressor.
+ It follows that we can just read off the 
+\begin_inset Formula $\mbox{p\lim}$
+\end_inset
+
+ of the OLS estimators from the regression of 
+\begin_inset Formula $y$
+\end_inset
+
+ on 
+\begin_inset Formula $1,x_{1},\ldots,x_{K}$
+\end_inset
+
+: 
+\begin_inset Formula $\mbox{p\lim}\ \hat{\beta}_{j}=\beta_{j}+\gamma\delta_{j}$
+\end_inset
+
+.
+ Sometimes it is assumed that most of the 
+\begin_inset Formula $\delta_{j}$
+\end_inset
+
+ are zero.
+ When the correlation between 
+\begin_inset Formula $q$
+\end_inset
+
+ and a particular variable, say 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+, is the focus, a common (usually implicit) assumption is that all 
+\begin_inset Formula $\delta_{j}$
+\end_inset
+
+ in equation (6) except the intercept and coefficient on 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ are zero.
+ Then 
+\begin_inset Formula $\mbox{p\lim}$
+\end_inset
+
+ 
+\begin_inset Formula $\hat{\beta}_{j}=\beta_{j}$
+\end_inset
+
+, 
+\begin_inset Formula $j=1,\ldots,K-1$
+\end_inset
+
+, and
+\begin_inset Formula 
+\begin{equation}
+\mbox{p\lim}\ \hat{\beta}_{K}=\beta_{K}+\gamma\left[\frac{\mbox{Cov}(x_{K},q)}{\mbox{Var}(x_{K})}\right]
+\end{equation}
+
+\end_inset
+
+(because 
+\begin_inset Formula $\delta_{K}=\nicefrac{\mbox{Cov}(x_{K},q)}{\mbox{Var}(x_{K})}$
+\end_inset
+
+ in this case).
+ This formula gives us a simple way to determine the sign, and perhaps the
+ magnitude, of the inconsistency in 
+\begin_inset Formula $\hat{\beta}_{K}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+ are positively correlated, the asymptotic bias is positive.
+ The other combinations are easily worked out.
+ If 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ has substantial variation in the population relative to the covariance
+ between 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+, then the bias can be small.
+ In the general case of equation (6), it is difficult to sign 
+\begin_inset Formula $\delta_{K}$
+\end_inset
+
+ because it measures a partial correlation.
+ It is for this reason that 
+\begin_inset Formula $\delta_{j}=0$
+\end_inset
+
+, 
+\begin_inset Formula $j=1,\ldots,K-1$
+\end_inset
+
+ is often maintained for determining the likely asymptotic bias in 
+\begin_inset Formula $\hat{\beta}_{K}$
+\end_inset
+
+ when only 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ is endogenous.
+\end_layout
+
+\begin_layout Section*
+4.4
+\begin_inset space \quad{}
+\end_inset
+
+Properties of Ordinary Least Squares under Measurement Error
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Another way that endogenous explanatory variables can arise in economic
+ applications occurs when one or more of the variables in our model contains
+ 
+\series bold
+measurement error
+\series default
+.
+ In this section, we derive the consequences of measurement error for ordinary
+ least squares estimation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The measurement error problem has a statistical structure similar to the
+ omitted variable problem discussed in the previous section.
+ However, they are conceptually very different.
+ In the measurement error case, the variable that we do not observe has
+ a well-defined, quantitative meaning, but our measures of it may contain
+ error.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Another important difference between the omitted variable and measurment
+ error problems is that, in the latter case, often the mismeasured explanatory
+ variable is the one whose effect is of primary interest.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Before we turn to the analysis, it is important to remember that measurement
+ error is an issue only when the variables on which we can collect data
+ differ from the variables that influence decisions by individuals, families,
+ firms, and so on.
+\end_layout
+
+\begin_layout Subsection*
+4.4.1
+\begin_inset space \quad{}
+\end_inset
+
+Measurement Error in the Dependent Variable
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We begin with the case where the dependent variable is the only variable
+ measured with error.
+ Let 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+ denote the variable (in the population, as always) that we would like to
+ explain.
+ The regression model has the usual linear form
+\begin_inset Formula 
+\begin{equation}
+y^{*}=\beta_{0}+\beta_{1}x_{1}+\cdots+\beta_{K}x_{K}+v
+\end{equation}
+
+\end_inset
+
+and we assume that is satisfies at least Assumptions OLS.1 and OLS.2.
+ Typically, we are interested in 
+\begin_inset Formula $E(y^{*}|x_{1},\ldots,x_{K})$
+\end_inset
+
+.
+ We let 
+\begin_inset Formula $y$
+\end_inset
+
+ represent the observable measure of 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+ where 
+\begin_inset Formula $y\neq y^{*}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The population measurement error is defined as the difference between the
+ observed value and the actual value:
+\begin_inset Formula 
+\begin{equation}
+e_{0}=y-y^{*}
+\end{equation}
+
+\end_inset
+
+For a random draw 
+\begin_inset Formula $i$
+\end_inset
+
+ from the population, we can write 
+\begin_inset Formula $e_{i0}=y_{i}-y_{i}^{*}$
+\end_inset
+
+, but what is important is how the measurement error in the population is
+ related to other factors.
+ To obtain an estimable model, we write 
+\begin_inset Formula $y^{*}=y-e_{0}$
+\end_inset
+
+, plug this into equation (8), and rearrange:
+\begin_inset Formula 
+\begin{equation}
+y=\beta_{0}+\beta_{1}x_{1}+\cdots+\beta_{K}x_{K}+v+e_{0}
+\end{equation}
+
+\end_inset
+
+Since 
+\begin_inset Formula $y,x_{1},\ldots,x_{K}$
+\end_inset
+
+ are observed, we can estimate this model by OLS.
+ In effect, we just ignore the fact that 
+\begin_inset Formula $y$
+\end_inset
+
+ is an imperfect measure of 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+ and proceed as usual.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When does OLS with 
+\begin_inset Formula $y$
+\end_inset
+
+ in place of 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+ produce consistent estimators of the 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+? Since the originial model (8) satisfies Assumption OLS.1, 
+\begin_inset Formula $v$
+\end_inset
+
+ has zero mean and its uncorrelated with each 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+.
+ It is only natural to assume that the measurement error has zero mean;
+ if it does not, this fact only affects estimation of the intercept, 
+\begin_inset Formula $\beta_{0}$
+\end_inset
+
+.
+ Much more important is what we assume about the relationship between measuremen
+t error 
+\begin_inset Formula $e_{0}$
+\end_inset
+
+ and the explanatory variables 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+.
+ The usual assumption is that the measurement error in 
+\begin_inset Formula $y$
+\end_inset
+
+ is statistically independent of each explanatory variable, which implies
+ that 
+\begin_inset Formula $e_{0}$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Then, the OLS estimators from equation (10) are consistent (and possibly
+ unbiased as well).
+ Furhter, the usual OLS inference procedures (
+\begin_inset Formula $t$
+\end_inset
+
+ statistics, 
+\begin_inset Formula $F$
+\end_inset
+
+ statistics, 
+\begin_inset Formula $LM$
+\end_inset
+
+ statistics) are asymptotically valid under appropriate homoskedasticity
+ assumptions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $e_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ are uncorrelated, as is usually assumed, then 
+\begin_inset Formula $\mbox{Var}(v+e_{0})=\sigma_{v}^{2}+\sigma_{0}^{2}>\sigma_{v}^{2}$
+\end_inset
+
+.
+ Therefore, the measurement error in the dependent variable results in a
+ larger error variance than wehn the dependent variable is not measured
+ with error.
+ This result is hardly surprising and translates into larger asymptotic
+ variances for the OLS estimators than if we could observe 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+.
+ But the larger error variance violates none of the assumptions needed for
+ OLS estimation to have its desirable large-sample properties.
+\end_layout
+
+\begin_layout Subsection*
+4.4.2
+\begin_inset space \quad{}
+\end_inset
+
+Measurement Error in an Explanatory Variable
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Traditionally, measurement error in an explanatory variable has been considered
+ a much more important problem than measurement error in the response variable.
+ In this subsection, we develop the general case.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We consider the model with a single explanatory measured with error
+\begin_inset Formula 
+\begin{equation}
+y=\beta_{0}+\beta_{1}x_{1}+\cdots+\beta_{K}x_{K}^{*}+v
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $y,x_{1},\ldots,x_{K-1}$
+\end_inset
+
+ are observable but 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+ is not.
+ We assume at a minimum that 
+\begin_inset Formula $v$
+\end_inset
+
+ has zero mean is uncorrelated with 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{K-1},x_{K}^{*}$
+\end_inset
+
+; in fact, we usually have in mind the structural model 
+\begin_inset Formula $E(y|x_{1},\ldots,x_{K-1},x_{K}^{*})=\beta_{0}+\beta_{1}x_{1}+\cdots+\beta_{K}x_{K}^{*}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+ were observed, OLS estimation would produce consistent estimators.
+ Instead, we have a measure of 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+; call it 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+.
+ A maintained assumption is that 
+\begin_inset Formula $v$
+\end_inset
+
+ is also uncorrelated with 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+.
+ This follows under the redundancy assumption 
+\begin_inset Formula $E(y|x_{1},\ldots,x_{K-1},x_{K}^{*},x_{K})=E(y|x_{1},\ldots,x_{K-1},x_{K}^{*})$
+\end_inset
+
+.
+ This means that 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ has no effect on 
+\begin_inset Formula $y$
+\end_inset
+
+ once the other explanatory variables, including 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+, have been controlled for.
+ Because 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+ is assumed to be the variable that affects 
+\begin_inset Formula $y$
+\end_inset
+
+, this assumption is uncontroversial.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The measurement error in the population is simply
+\begin_inset Formula 
+\begin{equation}
+e_{K}=x_{K}-x_{K}^{*}
+\end{equation}
+
+\end_inset
+
+and this can be positive, negative, or zero.
+ We assume that the average measurement error in the population is zero:
+ 
+\begin_inset Formula $E(e_{K})=0$
+\end_inset
+
+, which has no practical consequences because we include an intercept in
+ equation (11).
+ Since 
+\begin_inset Formula $v$
+\end_inset
+
+ is assumed to be uncorrelated with 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+, 
+\begin_inset Formula $v$
+\end_inset
+
+ is also uncorrelated with 
+\begin_inset Formula $e_{K}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We want to know the properties of OLS if we simply replace 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ and run the regression of 
+\begin_inset Formula $y$
+\end_inset
+
+ on 
+\begin_inset Formula $1,x_{1},x_{2},\ldots,x_{K}$
+\end_inset
+
+.
+ These depend crucially on the assumptions we make about the measurement
+ error.
+ An assumption that is almost always maintained is that 
+\begin_inset Formula $e_{K}$
+\end_inset
+
+ is uncorrelated with the explanatory variables not measured with error:
+ 
+\begin_inset Formula $E(x_{j}e_{K})=0$
+\end_inset
+
+, 
+\begin_inset Formula $j=1,\ldots,K-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The key assumptions involve the relationship between the measurement error
+ and 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+.
+ Two assumptions have been the focus in econometrics literature, and these
+ represent polar extremes.
+ The first assumption is that 
+\begin_inset Formula $e_{K}$
+\end_inset
+
+ is uncorrelated with the 
+\emph on
+observed
+\series bold
+ 
+\series default
+\emph default
+measure, 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+\mbox{Cov}(x_{K},e_{K})=0
+\end{equation}
+
+\end_inset
+
+From equation (12), if assumption (13) is true, then 
+\begin_inset Formula $e_{K}$
+\end_inset
+
+ must be correlated with the unobserved 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+.
+ To determine the properties of OLS in this case, we write 
+\begin_inset Formula $x_{K}^{*}=x_{K}-e_{K}$
+\end_inset
+
+ and plug this into equation (11):
+\begin_inset Formula 
+\begin{equation}
+y=\beta_{0}+\beta_{1}x_{1}+\cdots+\beta_{K}x_{K}+(v-\beta_{K}e_{K})
+\end{equation}
+
+\end_inset
+
+Now, we have assumed that 
+\begin_inset Formula $v$
+\end_inset
+
+ and 
+\begin_inset Formula $e_{K}$
+\end_inset
+
+ both have zero mean and are uncorrelated with each 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+, including 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+; therefore, 
+\begin_inset Formula $v-\beta_{K}e_{K}$
+\end_inset
+
+ has zero mean and is uncorrelated with the 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+.
+ It follows that the OLS estimation with 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ in place of 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+ produces consistent estimators of all the 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ (assuming the standard rank condition Assumption OLS.2).
+ Since 
+\begin_inset Formula $v$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $e_{K}$
+\end_inset
+
+, the variance of the error in equation (14) is 
+\begin_inset Formula $\mbox{Var}(v-\beta_{K}e_{K})=\sigma_{v}^{2}+\beta_{K}^{2}\sigma_{e_{K}}^{2}$
+\end_inset
+
+.
+ Therefore, except when 
+\begin_inset Formula $\beta_{K}=0$
+\end_inset
+
+, measurement error increases the error variance, which is not a surprising
+ finding and violates note of the OLS assumptions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Since the assumption that 
+\begin_inset Formula $e_{K}$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ implies that OLS has all its nice properties, this is not usually what
+ econometricians have in mind when referring to measurement error in the
+ explanatory variable.
+ The 
+\series bold
+classical errors-in-variables (CEV)
+\series default
+ assumption replaces assumption (13) with the assumption that the measurement
+ error is uncorrelated with the 
+\emph on
+unobserved 
+\emph default
+explanatory variable:
+\begin_inset Formula 
+\begin{equation}
+\mbox{Cov}(x_{K}^{*},e_{K})=0
+\end{equation}
+
+\end_inset
+
+This assumption comes from writing the observed measure as the sum of the
+ true explanatory variable and the measurement error, 
+\begin_inset Formula $x_{K}=x_{K}^{*}+e_{K}$
+\end_inset
+
+, and then assuming the two components of 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ are uncorrelated.
+ (This has nothing to do with assumptions about 
+\begin_inset Formula $v$
+\end_inset
+
+; we are always maintaining that 
+\begin_inset Formula $v$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+, and therefore with 
+\begin_inset Formula $e_{K}$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If assumption (15) holds, then 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ and 
+\begin_inset Formula $e_{K}$
+\end_inset
+
+ 
+\emph on
+must
+\emph default
+ be correlated:
+\begin_inset Formula 
+\begin{equation}
+\mbox{Cov}(x_{K},e_{K})=E(x_{K}e_{K})=E(x_{K}^{*}e_{K})+E(e_{K}^{2})=\sigma_{e_{K}}^{2}
+\end{equation}
+
+\end_inset
+
+Thus, under the CEV assumption, the covariance between 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ and 
+\begin_inset Formula $e_{K}$
+\end_inset
+
+ is equal to the variance of the measurement error.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Looking at equation (14), we see that correlation between 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ and 
+\begin_inset Formula $e_{K}$
+\end_inset
+
+ causes problems for OLS.
+ Because 
+\begin_inset Formula $v$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ are uncorrelated, the covariance between 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+ and the composite error 
+\begin_inset Formula $v-\beta_{K}e_{K}$
+\end_inset
+
+ is 
+\begin_inset Formula $\mbox{Cov}(x_{K},v-\beta_{K}e_{K})=-\beta_{K}\mbox{Cov}(x_{K},e_{K})=-\beta_{K}\sigma_{e_{K}}^{2}$
+\end_inset
+
+.
+ It follows that, in the CEV case, the OLS regression of 
+\begin_inset Formula $y$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{1},\ldots,x_{K}$
+\end_inset
+
+ generally gives inconsistent estimators of 
+\emph on
+all
+\emph default
+ of the 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The 
+\begin_inset Formula $\mbox{p\lim s}$
+\end_inset
+
+ of the 
+\begin_inset Formula $\hat{\beta}_{j}$
+\end_inset
+
+ for 
+\begin_inset Formula $j\neq k$
+\end_inset
+
+ are difficult to characterize except under special assumptions.
+ If 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+, all 
+\begin_inset Formula $j\neq K$
+\end_inset
+
+, then so is 
+\begin_inset Formula $x_{K}$
+\end_inset
+
+, and it follows that 
+\begin_inset Formula $\mbox{plim}\ \hat{\beta}_{j}=\beta_{j}$
+\end_inset
+
+, all 
+\begin_inset Formula $j\neq K$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $\mbox{p\lim}$
+\end_inset
+
+ of 
+\begin_inset Formula $\hat{\beta}_{K}$
+\end_inset
+
+ can be characterized in any case.
+ We can show that
+\begin_inset Formula 
+\begin{equation}
+\mbox{p\lim}(\hat{\beta}_{K})=\beta_{K}\left(\frac{\sigma_{r_{K}^{*}}^{2}}{\sigma_{r_{K}^{*}}^{2}+\sigma_{e_{K}}^{2}}\right)
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $r_{K}^{*}$
+\end_inset
+
+ is the linear projection error in
+\begin_inset Formula 
+\[
+x_{K}^{*}=\delta_{0}+\delta_{1}x_{1}+\cdots+\delta_{K-1}x_{K-1}+r_{K}^{*}
+\]
+
+\end_inset
+
+An important implication of equation (17) is that, because the term multiplying
+ 
+\begin_inset Formula $\beta_{K}$
+\end_inset
+
+ is always between zero and one, 
+\begin_inset Formula $\left|\mbox{p\lim}(\hat{\beta}_{K})\right|<\left|\beta_{K}\right|$
+\end_inset
+
+.
+ This is called the 
+\series bold
+attenuation bias
+\series default
+ in OLS due to CEVs: on average (or in large samples), the estimated OLS
+ effect will be 
+\emph on
+attenuated
+\emph default
+ as a result of the presence of CEVs.
+ If 
+\begin_inset Formula $\beta_{K}$
+\end_inset
+
+ is positive, 
+\begin_inset Formula $\hat{\beta}_{K}$
+\end_inset
+
+ will tend to underestimate 
+\begin_inset Formula $\beta_{K}$
+\end_inset
+
+; if 
+\begin_inset Formula $\beta_{K}$
+\end_inset
+
+ is negative, 
+\begin_inset Formula $\hat{\beta}_{K}$
+\end_inset
+
+ will tend to overestimate 
+\begin_inset Formula $\beta_{K}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the case of a single explanatory variable measured with error, equation
+ (17) becomes
+\begin_inset Formula 
+\begin{equation}
+\mbox{p\lim}(\hat{\beta}_{1})=\beta_{1}\left(\frac{\sigma_{x_{1}^{*}}^{2}}{\sigma_{x_{1}^{*}}^{2}+\sigma_{e_{1}}^{2}}\right)
+\end{equation}
+
+\end_inset
+
+The term multiplying 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ in equation (18) is 
+\begin_inset Formula $\nicefrac{\mbox{Var}(x_{1}^{*})}{\mbox{Var}(x_{1})}$
+\end_inset
+
+, which is always less than unity under the CEV assumption (15).
+ As 
+\begin_inset Formula $\mbox{Var}(e_{1})$
+\end_inset
+
+ shrinks relative to 
+\begin_inset Formula $\mbox{Var}(x_{1}^{*})$
+\end_inset
+
+, the attenuation bias disappears.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the case with multiple explanatory variables, equation (17) shows that
+ it is not 
+\begin_inset Formula $\sigma_{x_{K}^{*}}^{2}$
+\end_inset
+
+ that affect 
+\begin_inset Formula $\mbox{p\lim}(\hat{\beta}_{K})$
+\end_inset
+
+ but the variance in 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+ after netting out the other explanatory variables.
+ Thus, the more collinear 
+\begin_inset Formula $x_{K}^{*}$
+\end_inset
+
+ is with other explanatory variables, the worse is the attenuation bias.
+\end_layout
+
+\end_body
+\end_document

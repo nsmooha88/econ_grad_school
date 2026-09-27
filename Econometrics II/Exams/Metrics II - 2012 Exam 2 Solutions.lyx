@@ -1,0 +1,1501 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Econometrics II: Exam 2 Solutions (2012)
+\end_layout
+
+\begin_layout Problem
+Consider a 
+\emph on
+Hausman-Taylor
+\emph default
+ panel data model:
+\begin_inset Formula 
+\[
+y_{it}=w_{i1}^{\prime}\gamma_{1}+w_{i2}^{\prime}\gamma_{2}+x_{it1}^{\prime}\beta_{1}+x_{it2}^{\prime}\beta_{2}+c_{i}+u_{it},\ t=1,\ldots,T;\ i=1,\ldots,n
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $w_{i1}$
+\end_inset
+
+ is 
+\begin_inset Formula $J_{1}\times1$
+\end_inset
+
+, 
+\begin_inset Formula $w_{i2}$
+\end_inset
+
+ is 
+\begin_inset Formula $J_{2}\times1$
+\end_inset
+
+, 
+\begin_inset Formula $x_{it1}$
+\end_inset
+
+ is 
+\begin_inset Formula $K_{1}\times1$
+\end_inset
+
+, and 
+\begin_inset Formula $x_{it2}$
+\end_inset
+
+ is 
+\begin_inset Formula $K_{2}\times1$
+\end_inset
+
+.
+ 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ represents the unobserved hetoergeneity and 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+ is the structural error.
+ The regressors 
+\begin_inset Formula $w_{i1}$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{i2}$
+\end_inset
+
+ are time-variant.
+ Assume 
+\begin_inset Formula $E(w_{i1}c_{i})=E(x_{it1}c_{i})=0$
+\end_inset
+
+, but 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ might be correlated with 
+\begin_inset Formula $w_{i2}$
+\end_inset
+
+ or 
+\begin_inset Formula $x_{it2}$
+\end_inset
+
+.
+ Suppose we don't observe variables other than 
+\begin_inset Formula $y_{it}$
+\end_inset
+
+, 
+\begin_inset Formula $w_{i1}$
+\end_inset
+
+, 
+\begin_inset Formula $w_{i2}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{it1}$
+\end_inset
+
+, and 
+\begin_inset Formula $x_{it2}$
+\end_inset
+
+.
+ Propose an estimator of parameters 
+\begin_inset Formula $(\gamma_{1},\gamma_{2},\beta_{1},\beta_{2})$
+\end_inset
+
+.
+ Express the estimator in terms of observables.
+ be specific about other assumptions you may need.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+First, we must assume strict exogeneity conditional on 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+E(u_{it}|w_{i},x_{i1},\ldots,x_{iT},c_{i})=0
+\]
+
+\end_inset
+
+So, 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{is}$
+\end_inset
+
+ are uncorrelated with 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ This assumption, along with 
+\begin_inset Formula $E(w_{i1}c_{i})=E(x_{it1}c_{i})=0$
+\end_inset
+
+, provide orthogonality conditions that can be used in a method of moments
+ procedure.
+ Next, let us stack the panel data model over the 
+\begin_inset Formula $T$
+\end_inset
+
+ equations
+\begin_inset Formula 
+\[
+y_{i}=W_{i}\gamma+X_{i}\beta+v_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $v_{i}=c_{i}j_{T}+u_{i}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ are strictly exogenous and 
+\begin_inset Formula $Q_{T}v_{i}=Q_{T}u_{i}$
+\end_inset
+
+, where 
+\begin_inset Formula $Q_{T}=I_{T}-j_{T}(j_{T}^{\prime}j_{T})^{-1}j_{T}^{\prime}$
+\end_inset
+
+ is the time-demeaning matrix, it follows that 
+\begin_inset Formula $E\left[\left(Q_{T}X_{i}\right)^{\prime}v_{i}\right]=0$
+\end_inset
+
+.
+ Thus, the 
+\begin_inset Formula $T\times K$
+\end_inset
+
+ matrix 
+\begin_inset Formula $Q_{T}X_{i}$
+\end_inset
+
+ can be used as instruments in estimation.
+ Additional instruments come from 
+\begin_inset Formula $E(w_{i1}c_{i})=E(x_{it1}c_{i})=0$
+\end_inset
+
+.
+ In particular, 
+\begin_inset Formula $w_{i1}$
+\end_inset
+
+ is orthogonal to 
+\begin_inset Formula $v_{it}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+, and so is 
+\begin_inset Formula $x_{i1}^{o}$
+\end_inset
+
+, the 
+\begin_inset Formula $TK_{1}\times1$
+\end_inset
+
+ vector containing 
+\begin_inset Formula $x_{it1}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+So, for each 
+\begin_inset Formula $t$
+\end_inset
+
+, we have the set of instrumets 
+\begin_inset Formula $z_{it}\equiv\left[\begin{array}{ccc}
+\ddot{x}_{it} & w_{i1} & x_{i1}^{o}\end{array}\right]^{\prime}$
+\end_inset
+
+.
+ With this set of instruments, the order condition for identificaiton of
+ 
+\begin_inset Formula $(\gamma,\beta)$
+\end_inset
+
+ is that 
+\begin_inset Formula $TK_{1}\geq J_{2}$
+\end_inset
+
+.
+ In effect, we must have a sufficient number of elements in 
+\begin_inset Formula $x_{i1}^{o}$
+\end_inset
+
+ to act as instruments for 
+\begin_inset Formula $w_{i2}$
+\end_inset
+
+.
+ (
+\begin_inset Formula $\ddot{x}_{it}$
+\end_inset
+
+ are the IVs for 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+, and 
+\begin_inset Formula $w_{i1}$
+\end_inset
+
+ act as their own IVs).
+ Now, we can obtain consistent estimator of 
+\begin_inset Formula $(\gamma,\beta)$
+\end_inset
+
+ by implementing a P2SLS procedure.
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\Lambda} & = & \left[\left({\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}g_{it}z_{it}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}z_{it}z_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}z_{it}g_{it}^{\prime}\right)\right]^{-1}\\
+ &  & \times\left[\left({\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}g_{it}z_{it}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}z_{it}z_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}z_{it}y_{it}\right)\right]
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $g_{it}=\left[\begin{array}{cc}
+w_{i} & x_{it}\end{array}\right]^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Lambda=\left[\begin{array}{cc}
+\gamma & \beta\end{array}\right]^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Consider the 
+\emph on
+correlated random effects probit
+\emph default
+ model
+\begin_inset Formula 
+\[
+P(y_{it}=1|x_{i},c_{i})=\Phi(x_{it}^{\prime}\beta+c_{i})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+, 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ represents the unobserved heterogeneity, 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+ is the structural error, 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ is the CDF of the standard normal distribution, and 
+\begin_inset Formula $x_{i}=(x_{i1}^{\prime},\ldots,x_{iT}^{\prime})^{\prime}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\bar{x}_{i}=T^{-1}\sum_{t=1}^{T}x_{it}$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $c_{i}|x_{i}\sim N(\bar{x}_{i}^{\prime}\gamma,\sigma_{c}^{2}\exp(\bar{x}_{i}^{\prime}\xi))$
+\end_inset
+
+ so that 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ given 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ has exponential heteroskedasticity.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Derive and explain the 
+\emph on
+attenuation bias
+\emph default
+ of the pooled MLE estimator.
+\end_layout
+
+\begin_layout Enumerate
+Propose an estimator of parameters 
+\begin_inset Formula $(\beta^{\prime},\gamma^{\prime},\xi^{\prime},\sigma_{c}^{2})^{\prime}$
+\end_inset
+
+.
+ Express the estimator in terms of observables.
+ Be specific about other assumptions you may need.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the latent variable model
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{it}^{*} & = & x_{it}^{\prime}\beta+c_{i}+u_{it}\\
+y_{it} & = & 1[y_{it}^{*}>0]
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $u_{it}|x_{it},c_{i}\sim N(0,1)$
+\end_inset
+
+.
+ With 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ being unobserved, define 
+\begin_inset Formula $v_{it}=u_{it}+c_{i}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $c_{i}|x_{i}\sim N(\bar{x}_{i}^{\prime}\gamma,\sigma_{c}^{2}\exp(\bar{x}_{i}^{\prime}\xi))$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{it}|x_{it},c_{i}\sim N(0,1)$
+\end_inset
+
+, then 
+\begin_inset Formula $\mbox{Cov}(u_{it},c_{i})=0$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}|x_{i}\sim N(\bar{x}_{i}^{\prime}\gamma,1+\sigma_{c}^{2}\exp(\bar{x}_{i}^{\prime}\xi))$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $y_{it}^{*}=x_{it}^{\prime}\beta+v_{it}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+P(y_{it}=1|x_{i}) & = & P(y_{it}^{*}>0|x_{i},c_{i})\\
+ & = & P(v_{it}>-x_{it}^{\prime}\beta|x_{i},c_{i})\\
+ & = & P(v_{it}-\bar{x}_{i}^{\prime}\gamma>-x_{it}^{\prime}\beta-\bar{x}_{i}^{\prime}\gamma|x_{i},c_{i})\\
+ & = & P\left(\left.\frac{v_{it}-\bar{x}_{i}^{\prime}\gamma}{\sqrt{1+\sigma_{c}^{2}\exp(\bar{x}_{i}^{\prime}\xi)}}<\frac{x_{it}^{\prime}\beta+\bar{x}_{i}^{\prime}\gamma}{\sqrt{1+\sigma_{c}^{2}\exp(\bar{x}_{i}^{\prime}\xi)}}\right|x_{i},c_{i}\right)\\
+ & = & \Phi\left(\frac{x_{it}^{\prime}\beta+\bar{x}_{i}^{\prime}\gamma}{\sqrt{1+\sigma_{c}^{2}\exp(\bar{x}_{i}^{\prime}\xi)}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the attenuation bias of the pooled MLE estimator is
+\begin_inset Formula 
+\[
+\hat{\beta}\rightarrow\frac{\beta}{\sqrt{1+\sigma_{c}^{2}\exp(\bar{x}_{i}^{\prime}\xi)}}
+\]
+
+\end_inset
+
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For the unobserved effects probit model, we specify a response probability
+ that fully determines the conditional distribution 
+\begin_inset Formula $D(y_{it}|x_{it},c_{i})$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+P(y_{it}=1|x_{it},c_{i})=\Phi(x_{it}^{\prime}\beta+c_{i})
+\]
+
+\end_inset
+
+We need to assume
+\end_layout
+
+\begin_layout Enumerate
+Strict Exogeneity (SE): 
+\begin_inset Formula $D(y_{it}|x_{i},c_{i})=D(y_{it}|x_{it},c_{i})$
+\end_inset
+
+ where 
+\begin_inset Formula $D$
+\end_inset
+
+ is a conditional distribution.
+ Under strict exogeneity assumption, 
+\begin_inset Formula $D$
+\end_inset
+
+ only depends on the current time period.
+\end_layout
+
+\begin_layout Enumerate
+Conditional Independence (CI): 
+\begin_inset Formula $y_{i1},\ldots,y_{iT}$
+\end_inset
+
+ are independent conditional on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider the latent variable model,
+\begin_inset Formula 
+\[
+y_{it}^{*}=x_{it}^{\prime}\beta+c_{i}+u_{it};\ y_{it}=1\left[y_{it}^{*}>0\right]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $c_{i}|x_{i}\sim N(\bar{x}_{i}^{\prime}\gamma,\sigma_{c}^{2}\exp(\bar{x}_{i}^{\prime}\xi))$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u_{it}|x_{it},c_{i}\sim N(0,1)$
+\end_inset
+
+, then 
+\begin_inset Formula $\mbox{Cov}(u_{i},c_{i})=0$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $v_{it}=c_{i}+u_{it}$
+\end_inset
+
+, and note that
+\begin_inset Formula 
+\[
+v_{it}|x_{i}\sim N(\bar{x}_{i}^{\prime}\gamma,1+\sigma_{c}^{2}\exp(\bar{x}_{i}^{\prime}\xi))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Under the given assumptions, conditional maximum likelihood approach is
+ available for estimating 
+\begin_inset Formula $(\beta^{\prime},\gamma^{\prime},\xi^{\prime},\sigma_{c}^{2})^{\prime}$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is not observed, it cannot appear in the likelihood function.
+ Instead, we find the joint distribution of 
+\begin_inset Formula $(y_{i1},\ldots,y_{iT})$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, a step that requires us to integrate out 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $c_{i}|x_{i}\sim N(\bar{x}_{i}^{\prime}\gamma,\sigma_{c}^{2}\exp(\bar{x}_{i}^{\prime}\xi))$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray*}
+f(y_{i1},\ldots,y_{iT}|x_{i};\theta) & = & {\displaystyle \intop_{-\infty}^{\infty}}f(y_{i},c_{i}|x_{i})\ dc_{i}\\
+ & = & {\displaystyle \intop_{-\infty}^{\infty}}f(y_{i1},\ldots,y_{iT}|x_{i},c_{i})\cdot f(c_{i}|x_{i})\ dc_{i}
+\end{eqnarray*}
+
+\end_inset
+
+By conditional independence and strict exogeneity, we have
+\begin_inset Formula 
+\[
+f(y_{i1},\ldots,y_{iT}|x_{i},a_{i})={\displaystyle \prod_{i=1}^{T}}f(y_{it}|x_{i},c_{i})={\displaystyle \prod_{i=1}^{T}}f(y_{it}|x_{it},c_{i})
+\]
+
+\end_inset
+
+and from part A,
+\begin_inset Formula 
+\[
+f(y_{i1},\ldots,y_{iT}|x_{i},c_{i})={\displaystyle \prod_{i=1}^{T}}\Phi(w_{it})^{y_{it}}\left[1-\Phi(w_{it})\right]^{1-y_{it}}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $w_{it}\equiv\frac{x_{it}^{\prime}\beta+\bar{x}_{i}^{\prime}\gamma}{\sqrt{1+\sigma_{c}^{2}\exp(\bar{x}_{i}^{\prime}\xi)}}$
+\end_inset
+
+.
+ Finally, given the distrubtion of 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+f(c_{i}|x_{i})=\left(\nicefrac{1}{\sqrt{1+\sigma_{c}^{2}\exp(\bar{x}_{i}^{\prime}\xi)}}\right)\phi\left[\nicefrac{c_{i}-\bar{x}_{i}^{\prime}\gamma}{\sqrt{1+\sigma_{c}^{2}\exp(\bar{x}_{i}^{\prime}\xi)}}\right]\equiv h(c_{i},\sigma_{c},\bar{x}_{i},\xi)
+\]
+
+\end_inset
+
+Hence, 
+\begin_inset Formula 
+\[
+f(y_{i1},\ldots,y_{iT}|x_{i};\theta)={\displaystyle \intop_{-\infty}^{\infty}}\left\{ {\displaystyle \prod_{i=1}^{T}}\Phi(w_{it})^{y_{it}}\left[1-\Phi(w_{it})\right]^{1-y_{it}}\right\} \cdot h(c_{i},\sigma_{c},\bar{x}_{i},\xi)\ dc_{i}
+\]
+
+\end_inset
+
+Taking the log of the equation above gives the conditional log likelihood
+ 
+\begin_inset Formula $l_{i}(\theta)$
+\end_inset
+
+ for each 
+\begin_inset Formula $i$
+\end_inset
+
+ where 
+\begin_inset Formula $\theta$
+\end_inset
+
+ contains 
+\begin_inset Formula $(\beta^{\prime},\gamma^{\prime},\xi^{\prime},\sigma_{c}^{2})^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Consider the panel data model
+\begin_inset Formula 
+\[
+y_{it}=x_{it}^{\prime}\beta+c_{i}+u_{it}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+, 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ represents the uobserved heterogeneity, 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+ is the structural error.
+ The parameter 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is of interest and is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $T\geq3$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Describe the standard 
+\emph on
+fixed effects 
+\emph default
+(FE) estimator of 
+\begin_inset Formula $\hat{\beta}_{FE}$
+\end_inset
+
+.
+ Be specific about other assumptions you may need.
+\end_layout
+
+\begin_layout Enumerate
+Discuss the advantage of using the FE estimator over the RE (random effects)
+ estimator.
+\end_layout
+
+\begin_layout Enumerate
+How to calculate the robust/non-robust standard errors for 
+\begin_inset Formula $\hat{\beta}_{FE}$
+\end_inset
+
+? Discuss what the robustness means.
+\end_layout
+
+\begin_layout Enumerate
+Propose an FE estimator that is more efficient than 
+\begin_inset Formula $\hat{\beta}_{FE}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the panel data model
+\begin_inset Formula 
+\[
+y_{it}=x_{it}^{\prime}\beta+c_{i}+u_{it}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+, 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is unobserved heterogeneity and 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+ is idiosyncratic error.
+ The parameter 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is of interest and is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $T\geq3$
+\end_inset
+
+.
+ Suppose 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ is strictly exogenous, i.e.,
+\begin_inset Formula 
+\[
+E(u_{it}|x_{i1},\ldots,x_{iT},c_{i})=0,\ t=1,\ldots,T
+\]
+
+\end_inset
+
+ and time varying.
+ However, we allow 
+\begin_inset Formula $E(x_{it}c_{i})\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+One way to consistently estimate 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is the fixed effects method.
+ First we average the regression equation over 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+ to get
+\begin_inset Formula 
+\[
+\bar{y}_{i}=\bar{x}_{i}^{\prime}\beta+c_{i}+\bar{u}_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\bar{y}_{i}=T^{-1}{\displaystyle \sum}_{t=1}^{T}y_{it}$
+\end_inset
+
+, 
+\begin_inset Formula $\bar{x}_{i}=T^{-1}\sum_{t=1}^{T}x_{it}$
+\end_inset
+
+, and 
+\begin_inset Formula $\bar{u}=T^{-1}\sum_{t=1}^{T}u_{it}$
+\end_inset
+
+.
+ Subtracting this cross seciton equation from the panel data equation for
+ each 
+\begin_inset Formula $t$
+\end_inset
+
+ gives the FE transformed equation
+\begin_inset Formula 
+\[
+\ddot{y}_{it}=\ddot{x}_{it}^{\prime}\beta+\ddot{u}_{it}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\ddot{y}_{it}=y_{it}-\bar{y}_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $\ddot{x}_{it}=x_{it}-\bar{x}_{i}$
+\end_inset
+
+, and 
+\begin_inset Formula $\ddot{\eta}_{it}=\eta_{it}-\bar{\eta}_{i}$
+\end_inset
+
+.
+ Note that the fixed-effects transformation eliminates the unobserved effect
+ 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $Cov(x_{it},\eta_{is})=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+, then 
+\begin_inset Formula $E(\ddot{x}_{it}\ddot{u}_{it})=E\left[(x_{it}-\bar{x}_{i})(u_{it}-\bar{u}_{i})\right]=0$
+\end_inset
+
+.
+ In order to ensure the FE estimator is well behaved asymptotically, we
+ also need a standard rank condition on the matrix of time-demeanded expalantory
+ variables, i.e.,
+\begin_inset Formula 
+\[
+\mbox{rank}\left(\sum_{t=1}^{T}E(\ddot{x}_{it}\ddot{x}_{it}^{\prime})\right)=K
+\]
+
+\end_inset
+
+Under the these two assumptions, we can obtain the consistent FE estimator,
+ which is the POLS estimator from the regression 
+\begin_inset Formula $\ddot{y}_{it}$
+\end_inset
+
+ on 
+\begin_inset Formula $\ddot{x}_{it}$
+\end_inset
+
+, 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+; 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\hat{\beta}_{FE}=\left({\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}\ddot{x}_{it}\ddot{x}_{it}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}\ddot{x}_{it}\ddot{y}_{it}\right)^{-1}
+\]
+
+\end_inset
+
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The RE approach to estimating 
+\begin_inset Formula $\beta$
+\end_inset
+
+ effectively puts 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ into the error term, under the assumption that 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is orthogonal to 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+, and then accounts for the implied serial correlation in the composite
+ error 
+\begin_inset Formula $v_{it}=c_{i}+u_{it}$
+\end_inset
+
+ using a GLS analysis.
+ In many applications, the whole point of using panel data is to allow for
+ 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ to be arbitrarily correlated with 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+.
+ A fixed effects analysis achieves this purpose explicitly.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can write the FE transformed equation for all time periods as
+\begin_inset Formula 
+\[
+\ddot{y}_{i}=\ddot{X}_{i}\beta+\ddot{u}_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\ddot{y}_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $T\times1$
+\end_inset
+
+, 
+\begin_inset Formula $\ddot{X}_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $T\times K$
+\end_inset
+
+, and 
+\begin_inset Formula $\ddot{u}_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $T\times1$
+\end_inset
+
+.
+ This set of equations is obtained by pre-multiplying
+\begin_inset Formula 
+\[
+y_{i}=X_{i}\beta+j_{T}c_{i}+u_{i}
+\]
+
+\end_inset
+
+by a time-demeaning matrix.
+ Define 
+\begin_inset Formula $Q_{T}\equiv I_{T}-j_{T}(j_{T}^{\prime}j_{T})^{-1}j_{T}^{\prime}$
+\end_inset
+
+, which is a 
+\begin_inset Formula $T\times T$
+\end_inset
+
+ symmetric, idempotent matrix with rank 
+\begin_inset Formula $T-1$
+\end_inset
+
+.
+ Further, 
+\begin_inset Formula $Q_{T}j_{T}=0$
+\end_inset
+
+, 
+\begin_inset Formula $\ddot{y}_{i}=Q_{T}y_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $\ddot{X}_{i}=Q_{T}X_{i}$
+\end_inset
+
+, and 
+\begin_inset Formula $\ddot{u}_{i}=Q_{T}u_{i}$
+\end_inset
+
+.
+ So, the FE estimator can be expressed as
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta}_{FE} & = & \left({\displaystyle \sum_{i=1}^{n}}\ddot{X}_{i}^{\prime}\ddot{X}_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}\ddot{X}_{i}^{\prime}\ddot{y}_{i}\right)\\
+ & = & \beta+\left({\displaystyle \sum_{i=1}^{n}}\ddot{X}_{i}^{\prime}\ddot{X}_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}\ddot{X}_{i}^{\prime}\ddot{u}_{i}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\ddot{X}_{i}^{\prime}\ddot{u}_{i}=\left(Q_{T}X_{i}\right)^{\prime}\left(Q_{T}u_{i}\right)=X_{i}^{\prime}Q_{T}Q_{T}u_{i}=X_{i}^{\prime}Q_{T}u_{i}=\ddot{X}_{i}^{\prime}u_{i}$
+\end_inset
+
+, then we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta}_{FE}-\beta & = & \left({\displaystyle \sum_{i=1}^{n}}\ddot{X}_{i}^{\prime}\ddot{X}_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}\ddot{X}_{i}^{\prime}u_{i}\right)\\
+\sqrt{n}\left(\hat{\beta}_{FE}-\beta\right) & = & \left(\frac{1}{n}{\displaystyle \sum_{i=1}^{n}}\ddot{X}_{i}^{\prime}\ddot{X}_{i}\right)^{-1}\left(\frac{1}{\sqrt{n}}{\displaystyle \sum_{i=1}^{n}}\ddot{X}_{i}^{\prime}u_{i}\right)
+\end{eqnarray*}
+
+\end_inset
+
+By the CLT,
+\begin_inset Formula 
+\[
+\sqrt{n}\left(\hat{\beta}_{FE}-\beta\right)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N\left(0,\left[E(\ddot{X}_{i}^{\prime}\ddot{X}_{i})\right]^{-1}E(\ddot{X}_{i}^{\prime}\ddot{u}_{i}\ddot{u}_{i}^{\prime}\ddot{X}_{i})\left[E(\ddot{X}_{i}^{\prime}\ddot{X}_{i})\right]^{-1}\right)
+\]
+
+\end_inset
+
+Thus, the robust variance matrix estimator of 
+\begin_inset Formula $\hat{\beta}_{FE}$
+\end_inset
+
+, which is valid in the presence of any heteroskedasticy or serial correlation
+ in 
+\begin_inset Formula $\{u_{it}:t=1,\ldots,T\}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\widehat{\mbox{AVar}(\hat{\beta}_{FE})}=\left(\ddot{X}^{\prime}\ddot{X}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}\ddot{X}_{i}^{\prime}\hat{\ddot{u}}_{i}\hat{\ddot{u}}_{i}^{\prime}\ddot{X}_{i}\right)\left(\ddot{X}^{\prime}\ddot{X}\right)^{-1}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{\ddot{u}}_{i}=\ddot{y}_{i}-\ddot{X}_{i}\hat{\beta}_{FE}$
+\end_inset
+
+.
+ The robust standard errors are obtained as the square roots of the diagonal
+ elements of this matrix.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, if we assume spherical conditional homoskedasticity, i.e.,
+\begin_inset Formula 
+\[
+E(u_{i}u_{i}^{\prime}|x_{i},c_{i})=\sigma_{u}^{2}I_{T}
+\]
+
+\end_inset
+
+then
+\begin_inset Formula 
+\[
+\sqrt{n}\left(\hat{\beta}_{FE}-\beta\right)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N\left(0,\sigma_{u}^{2}\left[E(\ddot{X}_{i}^{\prime}\ddot{X}_{i})\right]^{-1}\right)
+\]
+
+\end_inset
+
+The variance of 
+\begin_inset Formula $\ddot{u}_{it}$
+\end_inset
+
+ can be computed as
+\begin_inset Formula 
+\begin{eqnarray*}
+E(\ddot{u}_{it}^{2}) & = & E\left[(u_{it}-\bar{u}_{i})^{2}\right]\\
+ & = & E(u_{it}^{2})+E(\bar{u}_{i}^{2})-2E(u_{it}\bar{u}_{i})\\
+ & = & \sigma_{u}^{2}+\frac{\sigma_{u}^{2}}{T}-2\frac{\sigma_{u}^{2}}{T}\\
+ & = & \sigma_{u}^{2}\left(1-\frac{1}{T}\right)
+\end{eqnarray*}
+
+\end_inset
+
+If we sum this equation across 
+\begin_inset Formula $t$
+\end_inset
+
+, then we can obtain a consistent estimator of 
+\begin_inset Formula $\sigma_{u}^{2}$
+\end_inset
+
+ since
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{t=1}^{T}}E(\ddot{u}_{it}^{2})=(T-1)\sigma_{u}^{2}
+\]
+
+\end_inset
+
+and so
+\begin_inset Formula 
+\[
+\frac{1}{N(T-1)}{\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}E(\ddot{u}_{it}^{2})=\sigma_{u}^{2}
+\]
+
+\end_inset
+
+So, a consistent estimator of 
+\begin_inset Formula $\sigma_{u}^{2}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\hat{\sigma}_{u}^{2}=\frac{SSR}{\left[N(T-1)-K\right]}
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+SSR={\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{t=1}^{T}}\hat{\ddot{u}}_{i}^{2}
+\]
+
+\end_inset
+
+Thus, the non-robust variance matrix estimator of 
+\begin_inset Formula $\hat{\beta}_{FE}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\widehat{\mbox{AVar}(\hat{\beta}_{FE})}=\hat{\sigma}_{u}^{2}\left(\ddot{X}^{\prime}\ddot{X}\right)^{-1}
+\]
+
+\end_inset
+
+
+\bar under
+Part D.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The FE estimator is only efficient under the spherical conditional homoskedastic
+ity assumption, which can fail if heteroskedasticity or serial correlation
+ are present in 
+\begin_inset Formula $\{u_{it}:t=1,\ldots,T\}$
+\end_inset
+
+.
+ Rather than compute a robust variance matrix for the FE estimator, we can
+ instead relax spherical conditional homoskedasticity to allow for an unresitrct
+ed, albeit constant, conditional covariance matrix.
+\begin_inset Formula 
+\[
+E(u_{i}u_{i}^{\prime}|x_{i},c_{i})=\Lambda
+\]
+
+\end_inset
+
+a 
+\begin_inset Formula $T\times T$
+\end_inset
+
+ positive definite matrix.
+ Under this assumption, 
+\begin_inset Formula $E(\ddot{u}_{i}\ddot{u}_{i}^{\prime}|\ddot{x}_{i})=E(\ddot{u}_{i}\ddot{u}_{i}^{\prime})=Q_{T}\Lambda Q_{T}$
+\end_inset
+
+, which has rank 
+\begin_inset Formula $T-1$
+\end_inset
+
+.
+ Note that the variance matrix cannot be inverted unlesswe drop one of the
+ time periods from the analysis.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose we drop time period 
+\begin_inset Formula $T$
+\end_inset
+
+, leaving equations
+\begin_inset Formula 
+\begin{eqnarray*}
+\ddot{y}_{i1} & = & \ddot{x}_{i1}^{\prime}\beta+\ddot{u}_{i1}\\
+ & \vdots\\
+\ddot{y}_{i,T-1} & = & \ddot{x}_{i,T-1}^{\prime}\beta+\ddot{u}_{i,T-1}
+\end{eqnarray*}
+
+\end_inset
+
+Now, 
+\begin_inset Formula $\ddot{y}_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $(T-1)\times1$
+\end_inset
+
+, 
+\begin_inset Formula $\ddot{X}_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $(T-1)\times K$
+\end_inset
+
+, and 
+\begin_inset Formula $\ddot{u}_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $(T-1)\times1$
+\end_inset
+
+.
+ Also, define the 
+\begin_inset Formula $(T-1)\times(T-1)$
+\end_inset
+
+ positive definite matrix 
+\begin_inset Formula $\Omega=E(\ddot{u}_{i}\ddot{u}_{i}^{\prime})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To estimate 
+\begin_inset Formula $\Omega$
+\end_inset
+
+, we estimate 
+\begin_inset Formula $\beta$
+\end_inset
+
+ by FE in the first stage.
+ After dropping the last time period for each 
+\begin_inset Formula $i$
+\end_inset
+
+, define the 
+\begin_inset Formula $(T-1)\times1$
+\end_inset
+
+ residuals 
+\begin_inset Formula $\check{\ddot{u}}_{i}=\ddot{y}_{i}-\ddot{X}_{i}\hat{\beta}_{FE}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+.
+ A consistent estimator of 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\hat{\Omega}=\frac{1}{n}{\displaystyle \sum_{i=1}^{n}}\check{\ddot{u}}_{i}\check{\ddot{u}}_{i}^{\prime}
+\]
+
+\end_inset
+
+The fixed effects GLS (FEGLS) estimator is defined by
+\begin_inset Formula 
+\[
+\hat{\beta}_{FEGLS}=\left({\displaystyle \sum_{i=1}^{n}}\ddot{X}_{i}^{\prime}\hat{\Omega}^{-1}\ddot{X}_{i}\right)^{-1}\left({\displaystyle \sum_{i=1}^{n}}\ddot{X}_{i}^{\prime}\hat{\Omega}^{-1}\ddot{y}_{i}\right)
+\]
+
+\end_inset
+
+For consistency of FEGLS, we assume the rank condition
+\begin_inset Formula 
+\[
+\mbox{rank}E\left(\ddot{X}_{i}^{\prime}\hat{\Omega}^{-1}\ddot{X}_{i}\right)=K
+\]
+
+\end_inset
+
+The estimated asymptotic variance is
+\begin_inset Formula 
+\[
+\widehat{\mbox{AVar}(\hat{\beta}_{FEGLS})}=\left({\displaystyle \sum_{i=1}^{n}}\ddot{X}_{i}^{\prime}\hat{\Omega}^{-1}\ddot{X}_{i}\right)^{-1}
+\]
+
+\end_inset
+
+The FEGLS estimator is asymptotically no less efficient than the FE estimator
+ under 
+\begin_inset Formula $E(u_{i}u_{i}^{\prime}|x_{i},c_{i})=\Lambda$
+\end_inset
+
+, even when 
+\begin_inset Formula $\Lambda=\sigma_{u}^{2}I_{T}$
+\end_inset
+
+.
+ Generally, if 
+\begin_inset Formula $\Lambda\neq\sigma_{u}^{2}I_{T}$
+\end_inset
+
+, FEGLS is more efficient than FE, but this conclusion relies on the large-
+\begin_inset Formula $N$
+\end_inset
+
+, fixed-
+\begin_inset Formula $T$
+\end_inset
+
+ asymptotics.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1275 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 6: Additional Single-Equation Topics
+\end_layout
+
+\begin_layout Part*
+Control Function Approach, Over-Identification Test
+\end_layout
+
+\begin_layout Section*
+6.2
+\begin_inset space \quad{}
+\end_inset
+
+Control Function Approach to Endogeneity
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For several reasons, including handling endogeneity in nonlinear models,
+ it is very useful to have a different approach for dealing with endogenous
+ variables.
+ Generally, the 
+\series bold
+control function
+\series default
+ approach uses extra regressors to break the correlation between endogenous
+ explanatory variables and unobservables affecting the response.
+ As we will see, the method still relies on the availability of exogenous
+ varaibles that do not appear in the structural equation.
+ For notational clarity, 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ denotes the response variable, 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ is the endogenous explanatory variable (a scalar for simplicity), and 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ is the 
+\begin_inset Formula $L\times1$
+\end_inset
+
+ vector of exogenous variables (which includes unity as its first element).
+ Consider the model
+\begin_inset Formula 
+\begin{equation}
+y_{1i}=z_{1i}^{\prime}\delta_{1}+\alpha_{1}y_{2i}+u_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $z_{1i}$
+\end_inset
+
+ is a 
+\begin_inset Formula $L_{1}\times1$
+\end_inset
+
+ strict subvector of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ that also includes a constant.
+ The sense in which 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ is exogenous is given by the 
+\begin_inset Formula $L$
+\end_inset
+
+ orthogonality (zero covariance) conditions
+\begin_inset Formula 
+\begin{equation}
+E(z_{i}u_{i})=0
+\end{equation}
+
+\end_inset
+
+Of course, this is the same exogeneity condition we use for consistency
+ of the 2SLS estimator, and we can consistently estimate 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ by 2SLS under (2) and the rank condition, Assumption 2SLS.2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Just as with 2SLS, the reduced form of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+, i.e., the linear projection of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ onto the exogenous variables, plays a crucial role.
+ Write the reduced form with an error term as
+\begin_inset Formula 
+\begin{eqnarray}
+y_{2i} & = & z_{i}^{\prime}\pi_{2}+v_{i}\\
+E(z_{i}v_{i}) & = & 0
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $\pi_{2}$
+\end_inset
+
+ is 
+\begin_inset Formula $L\times1$
+\end_inset
+
+.
+ From equations (3) and (4), endogeneity of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ arises if and only if 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is correlated with 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+.
+ Write the linear projection of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, in error form, as
+\begin_inset Formula 
+\begin{equation}
+u_{i}=\rho_{1}v_{i}+e_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\rho_{1}=\nicefrac{E(v_{i}u_{i})}{E(v_{i}^{2})}$
+\end_inset
+
+ is the population regression coefficient.
+ By definition, 
+\begin_inset Formula $E(v_{i}e_{i})=0$
+\end_inset
+
+, and 
+\begin_inset Formula $E(z_{i}e_{i})=0$
+\end_inset
+
+ because 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ are both uncorrelated with 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Plugging (5) into equation (1) gives
+\begin_inset Formula 
+\begin{equation}
+y_{1i}=z_{1i}^{\prime}\delta_{1}+\alpha_{1}y_{2i}+\rho_{1}v_{i}+e_{i}
+\end{equation}
+
+\end_inset
+
+where we now view 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ as an explanatory variable in the equation.
+ As just noted, 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+.
+ Plus, 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ is a linear function of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, and so 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ is also uncorrelated with 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Because 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+, and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, equation (6) suggests a simple procedure for consistently estimating 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ (as well as 
+\begin_inset Formula $\rho_{1})$
+\end_inset
+
+: run the OLS regression of 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ on 
+\begin_inset Formula $z_{1i}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+, and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ using a random sample.
+ (Remember, OLS consistently estimates the parameters in any equation where
+ the error term is uncorrelated with the right-hand-side variables.) The
+ only problem with this suggestion is that we do not obverve 
+\begin_inset Formula $v_{2i}$
+\end_inset
+
+; it is the error of the reduced-form equation for 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+.
+ Nevertheless, we can write 
+\begin_inset Formula $v_{i}=y_{2i}-z_{i}^{\prime}\pi_{2}$
+\end_inset
+
+, and, because we collect data on 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, we can consistently estimate 
+\begin_inset Formula $\pi_{2}$
+\end_inset
+
+ by OLS.
+ Therefore, we can replace 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ with 
+\begin_inset Formula $\hat{v}_{i}$
+\end_inset
+
+, the OLS residuals from the first-stage regression of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ on 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+.
+ Simple substitution gives
+\begin_inset Formula 
+\begin{equation}
+y_{1i}=z_{1i}^{\prime}\delta_{1}+\alpha_{1}y_{2i}+\rho_{1}\hat{v}_{i}+\mbox{\emph{error}}_{i}
+\end{equation}
+
+\end_inset
+
+where, fore each 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $\mbox{\emph{error}}_{i}=e_{i}+\rho_{1}z_{i}^{\prime}(\hat{\pi}_{2}-\pi_{2})$
+\end_inset
+
+, which depends on the sampling error in 
+\begin_inset Formula $\hat{\pi}_{2}$
+\end_inset
+
+ unless 
+\begin_inset Formula $\rho_{1}=0$
+\end_inset
+
+.
+ We can now use the consistency result for generated regressors from Section
+ 6.1.1 to conclude that the OLS estimators from equation (7) will be consistent
+ for 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+, and 
+\begin_inset Formula $\rho_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The OLS estimator from equation (7) is an example of a 
+\series bold
+control function (CF)
+\series default
+ 
+\series bold
+estimator
+\series default
+.
+ The inclusion of the residuals 
+\begin_inset Formula $\hat{v}_{i}$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+controls
+\begin_inset Quotes erd
+\end_inset
+
+ for the endogeneity of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ in the original equation (although it does so with sampling error because
+ 
+\begin_inset Formula $\hat{\pi}_{2}\neq\pi_{2}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+How does the CF approach compare with the standard instrumental variables
+ (IV) approach, which, for now, means 2SLS? Interestingly, the OLS estimates
+ of 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ from equation (7) are 
+\emph on
+identical 
+\emph default
+to the 2SLS estimates.
+ In other words, the two approaches lead to the sample place.
+ Equation (7) contains a generated regressor, and so obtaining the appropriate
+ standard errors for the CF estimators requires applying the correction
+ derived in Appendix 6A.
+ Why, then, have we introduced the control funciton approach when it leads
+ to the same place as 2SLS?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There are a few reasons.
+ First, equation (7) leads to a straightforward test of the null hypothesisi
+ that 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ is exogenous.
+ Second, and perhaps more important, the CF approach can be adapted to certain
+ nonlinear models in cases where analogues of 2SLS have undesirable properties.
+ Finally, although we just argued that the CF approach is identical to 2SLS
+ in a linear model, this equivalence does not carry over to models contianing
+ more than one function of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+You have perhaps already figured out where the CF approch relies on having
+ at least one element of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ not also in 
+\begin_inset Formula $z_{1i}$
+\end_inset
+
+, as also required by 2SLS.
+ We can easily see this from equation (7) and the expression 
+\begin_inset Formula $\hat{v}_{i}=y_{2i}-z_{i}^{\prime}\hat{\pi}_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,\ldots,N$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $z_{i}=z_{1i}$
+\end_inset
+
+, then the 
+\begin_inset Formula $\hat{v}_{i}$
+\end_inset
+
+ are exact linear functions of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{1i}$
+\end_inset
+
+, in which case equation (7) sufferes from perfect collinearity.
+ If 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ contains at least one element in 
+\begin_inset Formula $z_{1i}$
+\end_inset
+
+, this breaks the perfect collinearity (at least in the sample).
+ If we write 
+\begin_inset Formula $z_{i}=(z_{1i},z_{2i})$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi_{22}=0$
+\end_inset
+
+, then, asymptotically, the CF approach suffers from perfect collinearity,
+ and 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+ are not identified.
+\end_layout
+
+\begin_layout Section*
+6.3
+\begin_inset space \quad{}
+\end_inset
+
+Some Specification Tests
+\end_layout
+
+\begin_layout Subsection*
+6.3.1
+\begin_inset space \quad{}
+\end_inset
+
+Testing for Endogeneity
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There are various ways to motivate test for whether some explanatory variables
+ are endogenous.
+ If the null hypothesis is that all explanatory variables are exogenous,
+ and we allow one or more to be endogenous under the alternative, then we
+ can base a test on the difference between the 2SLS and OLS estimators,
+ provided we have sufficient exogenous instruments to identify the parameters
+ by 2SLS.
+ In the general equation 
+\begin_inset Formula $y_{i}=x_{i}^{\prime}\beta+u_{i}$
+\end_inset
+
+ with instruments 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+, the 
+\series bold
+Durbin-Wu-Hausman (DWH)
+\series default
+ test is based on the difference 
+\begin_inset Formula $\hat{\beta}_{2SLS}-\hat{\beta}_{OLS}$
+\end_inset
+
+.
+ If all elements of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ are exogenous (and 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ is also exogenous, a maintained assumption), then 2SLS and OLS should differ
+ only due to sampling error.
+ Of course, to determine whether this is so, we need to estimate the asymptotic
+ variance of 
+\begin_inset Formula $\sqrt{N}(\hat{\beta}_{2SLS}-\hat{\beta}_{OLS})$
+\end_inset
+
+.
+ Generally, the calculation is combersome, but is simplifies considerably
+ if we maintain homoskedasticity under the null hypothesis.
+ We can verfiy that, under the null hypothesis 
+\begin_inset Formula $E(x_{i}u_{i})=0$
+\end_inset
+
+, and the appropriate homosekdasticity assumption,
+\begin_inset Formula 
+\begin{equation}
+\mbox{AVar}\left[\sqrt{N}\left(\hat{\beta}_{2SLS}-\hat{\beta}_{OLS}\right)\right]=\sigma^{2}\left[E(x_{i}^{*}x_{i}^{*\prime})\right]^{-1}-\sigma^{2}\left[E(x_{i}x_{i}^{\prime})\right]^{-1}
+\end{equation}
+
+\end_inset
+
+which is simply the difference between the asymptotic variances.
+ It has been shown that this kind of result holds more generally when one
+ estimator, OLS, in this case, is asymptotically efficient under the null.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Once we estimate each component in equation (8) we can construnct a quadratic
+ form in 
+\begin_inset Formula $\hat{\beta}_{2SLS}-\hat{\beta}_{OLS}$
+\end_inset
+
+ that has an asymptotic chi-square distribution.
+ The estimators of the moment matrices are the usual ones, with the first-stage
+ fitted values 
+\begin_inset Formula $\hat{x}_{i}^{\prime}=z_{i}^{\prime}\hat{\Pi}$
+\end_inset
+
+ replacing 
+\begin_inset Formula $x_{i}^{*\prime}$
+\end_inset
+
+, as usual.
+ For 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+, there are three possibilities.
+ The first is to estimate the rror variances separately for 2SLS and OLS
+ and insert these in the first and second occurrences of 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+, respectively.
+ Or we can just use the 2SLS estimate or just use the OLS estimate in both
+ places.
+ Using the latter, we obtain one version of the DWH statistic:
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{\hat{\sigma}_{OLS}^{2}}\left(\hat{\beta}_{2SLS}-\hat{\beta}_{OLS}\right)^{\prime}\left[\left(\hat{X}^{\prime}X\right)^{-1}-\left(X^{\prime}X\right)^{-1}\right]^{-1}\left(\hat{\beta}_{2SLS}-\hat{\beta}_{OLS}\right)
+\end{equation}
+
+\end_inset
+
+where we must use a generalized inverse, except in the very usual case that
+ all elements of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ are allowed to be endogenous under the alternatie.
+ In fact, the rank of 
+\begin_inset Formula $\mbox{AVar}\left[\sqrt{N}\left(\hat{\beta}_{2SLS}-\hat{\beta}_{OLS}\right)\right]$
+\end_inset
+
+ is equal to the number of elements of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ allowed to be endogenous under the alternative.
+ The singularity of the matrix in expression (9) makes computing the statistic
+ cumbersome.
+ Nevertheless, some variant of the statistic is routinely computed by several
+ popular econometrics packages.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A more serious drawback with any statistic based on equation (8) is that
+ it is not robut to heteroskedasticity.
+ A robut variance matrix estimator for 
+\begin_inset Formula $\mbox{AVar}\left[\sqrt{N}\left(\hat{\beta}_{2SLS}-\hat{\beta}_{OLS}\right)\right]$
+\end_inset
+
+ can be obtained.
+ Unfortunately, calculating robust DWH statistics is doen much less frequently
+ than computing standard errors and classical test statistics that are robust
+ to heteroskedasticity.
+ Infrequent use of a fully robust DWH statistic may be partly due to misundersta
+ndings of when the principle of comparing estimators applies.
+ It is commonly thought that the estimator should be asymptotically efficient
+ under the null hypothesis, but this is not necessary; indeed, it is essentially
+ irrelevant.
+ The principle applies whenever two estimators are consisitent under the
+ null hypothesis and one estimator, 2SLS in this case, retains consistency
+ under the alternative.
+ Asymptotic efficiency only simplifies the asymptotic variance estimation.
+ In fact, while the standard form of the DWH test maintains OLS.3 and 2SLS.3
+ in order to have the correct asymptotic size, it has no systematic power
+ for detecting heteroskedasticity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Regression-based endogeneity tests are very convenient because tey are easily
+ computed and almost trivial to make robust to heteroskedasticity.
+ There is a regression-based statistic asymptotically equivalent to equation
+ (1).
+ Suppose initially that we have a single potentailly endogenous explanatory
+ variable.
+ We maintain assumption (2), that is, each element of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ is exogenous.
+ We want to test
+\begin_inset Formula 
+\begin{equation}
+H_{0}:\mbox{Cov}(y_{2i},u_{i})=0
+\end{equation}
+
+\end_inset
+
+against the alternative that 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ is correlated with 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+.
+ Given the reduced-form equation (3), equation (10) is equivalent to 
+\begin_inset Formula $\mbox{Cov}(v_{i},u_{i})=E(v_{i}u_{i})=0$
+\end_inset
+
+, or 
+\begin_inset Formula $H_{0}=\rho_{1}=0$
+\end_inset
+
+ where 
+\begin_inset Formula $\rho_{1}$
+\end_inset
+
+ is the regression coefficient defined in equation (5).
+ Even though 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ are not observed, we can use equation (7) to test that 
+\begin_inset Formula $\rho_{1}=0$
+\end_inset
+
+.
+ In fact, when we estimate equation (7) by OLS, we obtain an OLS coefficient
+ on 
+\begin_inset Formula $\hat{v}_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\rho}_{1}$
+\end_inset
+
+.
+ Conveniently, when 
+\begin_inset Formula $\rho_{1}=0$
+\end_inset
+
+ we do not have to adjust the standard error of 
+\begin_inset Formula $\hat{\rho}_{1}$
+\end_inset
+
+ for the first-stage estimation of 
+\begin_inset Formula $\pi_{2}$
+\end_inset
+
+.
+ Therefore, if the homoskedasticity assumption 
+\begin_inset Formula $E(u_{i}^{2}|z_{i},y_{2i})=E(u_{i}^{2})$
+\end_inset
+
+ holds under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, we can use the usual 
+\begin_inset Formula $t$
+\end_inset
+
+ statistic for 
+\begin_inset Formula $\hat{\rho}_{1}$
+\end_inset
+
+ as an asymptotically valid test.
+ Conveniently, we can simply use a heteroskedasticity-robust 
+\begin_inset Formula $t$
+\end_inset
+
+ statistic if heteroskedasticity is suspected under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We should remember that the OLS standard errors that would be reported from
+ equation (7) are not valid unless 
+\begin_inset Formula $\rho_{1}=0$
+\end_inset
+
+, because 
+\begin_inset Formula $\hat{v}_{i}$
+\end_inset
+
+ is a generated regressor.
+ In practice, if we reject 
+\begin_inset Formula $H_{0}:\rho_{1}=0$
+\end_inset
+
+, then, to get the appropriate standard errors and other test statistics,
+ we estimate equation (1) by 2SLS.
+\end_layout
+
+\begin_layout Subsection*
+6.3.2
+\begin_inset space \quad{}
+\end_inset
+
+Testing Overidentifying Restrictions
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When we have more instruments than we need to identify an equation, we can
+ test whether the additional instruments are valid in the sense that they
+ are uncorrelated with 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+.
+ To explain the various procedures, write the equation in the form
+\begin_inset Formula 
+\begin{equation}
+y_{1i}=z_{1i}^{\prime}\delta_{1}+y_{2i}^{\prime}\alpha_{1}+u_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $z_{1i}$
+\end_inset
+
+ is 
+\begin_inset Formula $L_{1}\times1$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ is 
+\begin_inset Formula $G_{1}\times1$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $L\times1$
+\end_inset
+
+ vector of all exogenous variables is again 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+; partition this as 
+\begin_inset Formula $z=(z_{1i},z_{2i})$
+\end_inset
+
+ where 
+\begin_inset Formula $z_{2i}$
+\end_inset
+
+ is 
+\begin_inset Formula $L_{2}\times1$
+\end_inset
+
+ and 
+\begin_inset Formula $L=L_{1}+L_{2}$
+\end_inset
+
+.
+ Because the model is overidentified, 
+\begin_inset Formula $L_{2}>G_{1}$
+\end_inset
+
+.
+ Under the usual identification conditions we could use any 
+\begin_inset Formula $G_{1}\times1$
+\end_inset
+
+ subset of 
+\begin_inset Formula $z_{2i}$
+\end_inset
+
+ as instruments for 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ in estimating equation (11) (remember the elements of 
+\begin_inset Formula $z_{1i}$
+\end_inset
+
+ act as their own instruments).
+ Following this general principle, Hausman suggested comparing the 2SLS
+ estimator using all instruments to 2SLS using a subset that just identifies
+ equation (11).
+ If all instruments are valid, the estimates should differ only as a result
+ of sampling error.
+ As with testing for endogeneity, the Hausman test based on a quadratic
+ form in the coefficient differences can be cumbsersome to compute.
+ Fortunately, a regression-based test is available.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The Sargan test maintains homoskedasticity (Assumption 2SLS.3) under the
+ null hypothesis.
+ It is easily obtained as 
+\begin_inset Formula $NR_{u}^{2}$
+\end_inset
+
+ from the OLS regression
+\begin_inset Formula 
+\begin{equation}
+\hat{u}_{i}\ \mbox{on}\ z_{i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{u}_{i}$
+\end_inset
+
+ are the 2SLS residuals using 
+\emph on
+all
+\emph default
+ of the instruments 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $R_{u}^{2}$
+\end_inset
+
+ is the usual 
+\begin_inset Formula $R$
+\end_inset
+
+-squared (assuming that 
+\begin_inset Formula $z_{1i}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ contain a constant; otherwise it is the uncentered 
+\begin_inset Formula $R$
+\end_inset
+
+-squared).
+ In other words, simply estimate regression (11) by 2SLS and obtain the
+ 2SLS residuals, 
+\begin_inset Formula $\hat{u}_{i}$
+\end_inset
+
+.
+ Then regress these on all exogenous variables (including a constant).
+ Under the null that 
+\begin_inset Formula $E(z_{i}u_{i})=0$
+\end_inset
+
+ and Assumption 2SLS.3 
+\begin_inset Formula $NR_{u}^{2}\begin{array}[b]{c}
+_{a}\\
+\sim
+\end{array}\chi_{Q_{1}}^{2}$
+\end_inset
+
+, where 
+\begin_inset Formula $Q_{1}\equiv L_{2}-G_{1}$
+\end_inset
+
+ is the number of overidentifying restrictions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The usefulness of the Sargan-Hausman test is that, if we reject the null
+ hypothesis, then our logic for choosing the IVs must be reexamined.
+ Unfortunately, the test does not tell us which IVs fail the exogeneity
+ requirement; it could be one of them or all of them.
+ (The symmetric way that all exogenous variables appear in regression in
+ (12) makes it clear the test cannot single out faulty instruments.) If we
+ fail to reject the null hypothesis, then we can have some confidence in
+ the set of instruments used, up to a point.
+ Even if we do not reject the null hypothesis, it is possible that more
+ than one isntrument is endogenous, and that the 2SLS estimators using a
+ full and reduced set of instruments are asymptotically biased in similar
+ ways.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is straightforward to obtain a heteroskedasticity-robust test of the
+ over-identifying restrictions, but we need to separate the instrumental
+ variables into two groups.
+ Let 
+\begin_inset Formula $z_{2i}$
+\end_inset
+
+ be the 
+\begin_inset Formula $L_{2}\times1$
+\end_inset
+
+ vector of exogenous variables excluded
+\begin_inset Formula 
+\begin{equation}
+y_{1i}=z_{1i}^{\prime}\delta_{1}+y_{2i}^{\prime}\alpha_{1}+u_{i},\ E(z_{i}u_{i})=0
+\end{equation}
+
+\end_inset
+
+and write 
+\begin_inset Formula $z_{2i}=(g_{2i},h_{2i})$
+\end_inset
+
+ where 
+\begin_inset Formula $g_{2i}$
+\end_inset
+
+ is 
+\begin_inset Formula $G_{1}\times1$
+\end_inset
+
+, the same dimension as 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+, and 
+\begin_inset Formula $h_{2i}$
+\end_inset
+
+ is 
+\begin_inset Formula $Q_{1}\times1$
+\end_inset
+
+, the number of overidentifying restrictions.
+ It turns out not to matter how we do this division, provided 
+\begin_inset Formula $h_{2i}$
+\end_inset
+
+ has 
+\begin_inset Formula $Q_{1}$
+\end_inset
+
+ elements.
+ As in equation (12), let 
+\begin_inset Formula $\hat{u}_{i}$
+\end_inset
+
+ be the 2SLS residuals form estimating equation (13), and let 
+\begin_inset Formula $\hat{y}_{2i}$
+\end_inset
+
+ denot the fitted values form the first stage regression, 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ on 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ (each element of 
+\begin_inset Formula $y_{2i}$
+\end_inset
+
+ onto 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+).
+ Next, regress each element of 
+\begin_inset Formula $h_{2i}$
+\end_inset
+
+ onto 
+\begin_inset Formula $(z_{1i},\hat{y}_{2i})$
+\end_inset
+
+ and save the residuals, say 
+\begin_inset Formula $\hat{r}_{i}$
+\end_inset
+
+ (
+\begin_inset Formula $Q_{1}\times1$
+\end_inset
+
+ for each observation).
+ Then the LM statistic obtained as 
+\begin_inset Formula $N-SSR_{0}$
+\end_inset
+
+, where 
+\begin_inset Formula $SSR_{0}$
+\end_inset
+
+ is the sum of squared residuals from the regression 
+\begin_inset Formula $1$
+\end_inset
+
+ on 
+\begin_inset Formula $\hat{u}_{i}\hat{r}_{i}$
+\end_inset
+
+.
+ Under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, and without assuming homoskedasticity, 
+\begin_inset Formula $N-SSR_{0}\begin{array}[b]{c}
+_{a}\\
+\sim
+\end{array}\chi_{Q_{1}}^{2}$
+\end_inset
+
+.
+ Alternatively, one may use a heteroskedasticity-robust Wald test of 
+\begin_inset Formula $H_{0}:\eta=0$
+\end_inset
+
+ in the auxiliary model
+\begin_inset Formula 
+\begin{equation}
+\hat{u}_{i}=\hat{r}_{i}^{\prime}\eta+\mbox{\emph{error}}
+\end{equation}
+
+\end_inset
+
+This approach differs from the LM statistic in that residuals 
+\begin_inset Formula $\hat{e}_{i}\equiv\hat{u}_{i}-\hat{r}_{i}\hat{\eta}$
+\end_inset
+
+ are used in the implicit variance matrix estimator, rather than 
+\begin_inset Formula $\hat{u}_{i}$
+\end_inset
+
+.
+ Under the null hypothesis (and local alternatives), 
+\begin_inset Formula $\hat{\eta}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}0$
+\end_inset
+
+, and so the statistics are asymptotically equivalent.
+\end_layout
+
+\end_body
+\end_document

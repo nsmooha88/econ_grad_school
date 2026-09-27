@@ -1,0 +1,3307 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 12: M-Estimation and Nonlinear Regression
+\end_layout
+
+\begin_layout Section*
+12.1 Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We begin our study of nonlinear estimation with a general class of estimators
+ known as M-estimators.
+ M-estimaton methods include maximum likelihood, nonlinear least squares,
+ least absolute deviations, quasi-maximum likelihood, and many other procedures.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In a 
+\series bold
+nonlinear regression model
+\series default
+, we have a random variable, 
+\begin_inset Formula $y$
+\end_inset
+
+, and we would like to model 
+\begin_inset Formula $E(y|x)$
+\end_inset
+
+ as a function of the explanatory variables 
+\begin_inset Formula $x$
+\end_inset
+
+, a 
+\begin_inset Formula $K$
+\end_inset
+
+-vector.
+ We already know how to estimate models of 
+\begin_inset Formula $E(y|x)$
+\end_inset
+
+ when the model model is linear in parameters.
+ What happens if the regression function is nonlinear in its parameters?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Generally, let 
+\begin_inset Formula $m(x,\theta)$
+\end_inset
+
+ be a 
+\series bold
+parametric model
+\series default
+ for 
+\begin_inset Formula $E(y|x)$
+\end_inset
+
+, where 
+\begin_inset Formula $m$
+\end_inset
+
+ is a 
+\emph on
+known
+\emph default
+ function of 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta$
+\end_inset
+
+, and 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is a 
+\begin_inset Formula $P\times1$
+\end_inset
+
+ parameter vector.
+ (This is a parametric model because 
+\begin_inset Formula $m(\cdot,\theta)$
+\end_inset
+
+ is assumed to be known up to a 
+\emph on
+finite
+\emph default
+ number of parameters.) The dimension of the parameters, 
+\begin_inset Formula $P$
+\end_inset
+
+, can be less than or greater than 
+\begin_inset Formula $K$
+\end_inset
+
+.
+ The 
+\series bold
+parameter space
+\series default
+, 
+\begin_inset Formula $\Theta$
+\end_inset
+
+, is a subset of 
+\begin_inset Formula $\mathbb{R}^{P}$
+\end_inset
+
+.
+ This is the set of values of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ that we are willing to consider in the regression function.
+ Unlike in linear models, for nonlinear models the asymptotic analysis requires
+ explicit assumptions on the parameter space.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In any application, there is no guarantee that our chosen model is adequate
+ for 
+\begin_inset Formula $E(y|x)$
+\end_inset
+
+.
+ We say that we have a 
+\series bold
+correctly specified model for the conditional mean
+\series default
+, 
+\begin_inset Formula $E(y|x)$
+\end_inset
+
+, if, for some 
+\begin_inset Formula $\theta_{o}\in\Theta$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+E(y|x)=m(x,\theta_{o})
+\end{equation}
+
+\end_inset
+
+We introduce the subscript 
+\begin_inset Quotes eld
+\end_inset
+
+o
+\begin_inset Quotes erd
+\end_inset
+
+ on theta to distinguish the parameter vector appearing in 
+\begin_inset Formula $E(y|x)$
+\end_inset
+
+ from other candidates for that vector.
+ Often, the value 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is called 
+\begin_inset Quotes eld
+\end_inset
+
+the true value of theta
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+the true parameter.
+\begin_inset Quotes erd
+\end_inset
+
+ We will never know the actual 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+, but, if the model is correctly specified, then the true value exists,
+ and we would like to estimate it.
+ In our theoretical development, we need to distinguish the vector appearing
+ in 
+\begin_inset Formula $E(y|x)$
+\end_inset
+
+ from a generic element of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Equation (1) is the most general way of thinking about what nonlinear least
+ squares is inteded to do: estimate models of conditional expectations.
+ But, as a statistical matter, equation (1) is equivalent to a model with
+ an additive, unobservalbe error with a zero conditional mean:
+\begin_inset Formula 
+\begin{equation}
+y=m(x,\theta_{o})+u,\ E(u|x)=0
+\end{equation}
+
+\end_inset
+
+Given equation (2), equation (1) clearly holds.
+ Conversely, given equation (1), we obtain equation (2) by 
+\emph on
+defining
+\emph default
+ the error to be 
+\begin_inset Formula $u\equiv y-m(x,\theta_{o})$
+\end_inset
+
+.
+ We must remember that, in writing the model in additive error form, the
+ 
+\emph on
+only
+\emph default
+ thing implied by equation (1) is 
+\begin_inset Formula $E(u|x)=0$
+\end_inset
+
+.
+ Depending on the nature of 
+\begin_inset Formula $y$
+\end_inset
+
+, the error 
+\begin_inset Formula $u$
+\end_inset
+
+ may have some unusual properties.
+ For example, if 
+\begin_inset Formula $y\geq0$
+\end_inset
+
+, then 
+\begin_inset Formula $u\geq-m(x,\theta_{o})$
+\end_inset
+
+, in which case 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+ cannot be independent.
+ Heteroskedasticity is present whenever 
+\begin_inset Formula $\mbox{Var}(y|x)$
+\end_inset
+
+ depends on 
+\begin_inset Formula $x$
+\end_inset
+
+, as is very common when 
+\begin_inset Formula $y$
+\end_inset
+
+ takes on a restricted range of values.
+ So, for a random sample of observations, the assumption that 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ are i.i.d.
+ is often much too strong.
+ However, the error form of the model does turn out to be usefull for defining
+ estimators of asymptotic variances and for obtaining test statistics.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We formalize the first 
+\series bold
+nonlinear least squares (NLS)
+\series default
+ assumption as follows:
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\shape up
+NLS.1:
+\series default
+ 
+\emph on
+For some 
+\begin_inset Formula $\theta_{o}\in\Theta$
+\end_inset
+
+, 
+\begin_inset Formula $E(y|x)=m(x,\theta_{o})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In our general development of M-estimators that follows, we will need to
+ add conditions involving moments of 
+\begin_inset Formula $m(x,\theta)$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+, as well as continuity assumptions on 
+\begin_inset Formula $m(x,\cdot)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If we let 
+\begin_inset Formula $w\equiv(x,y)$
+\end_inset
+
+, then 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ indexes a feature of the population distribution of 
+\begin_inset Formula $w$
+\end_inset
+
+, namely, the conditional mean of 
+\begin_inset Formula $y$
+\end_inset
+
+ given 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ More generally, let 
+\begin_inset Formula $w$
+\end_inset
+
+ be an 
+\begin_inset Formula $M$
+\end_inset
+
+-vector of random variables with some distribution in the population.
+ We let 
+\begin_inset Formula $\mathscr{W}$
+\end_inset
+
+ denote the subset of 
+\begin_inset Formula $\mathbb{R}^{M}$
+\end_inset
+
+ representing the possible values of 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ denote a parameter vector describing some feature of the distribution of
+ 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ This could be a conditional mean, a conditional mean and conditional variance,
+ a conditional median, or a conditional distribution.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We assume that our data come as a random sample of size 
+\begin_inset Formula $N$
+\end_inset
+
+ from the population; we label this random sample 
+\begin_inset Formula $\{w_{i}:i=1,,\ldots,N\}$
+\end_inset
+
+, where each 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ is an 
+\begin_inset Formula $M$
+\end_inset
+
+-vector.
+ This assumption covers cross section models with many equations, and it
+ also covers panel data settings with small time series dimension.
+ In the NLS, 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ consists of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, the 
+\begin_inset Formula $i$
+\end_inset
+
+th draw from the population on 
+\begin_inset Formula $x$
+\end_inset
+
+ and y.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What allows use to estimate 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ when it indexes 
+\begin_inset Formula $E(y|x)$
+\end_inset
+
+? It is the fact that 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is the value of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ that minimizes the expected squared error between 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $m(x,\theta)$
+\end_inset
+
+.
+ This is 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ solves the population problem
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \min_{\theta\in\Theta}}\ E\left\{ \left[y-m(x,\theta)\right]^{2}\right\} 
+\end{equation}
+
+\end_inset
+
+where the expectation is over the joint distribution of 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+.
+ This conclustion follows immediately from basic properties of conditional
+ expectations.
+ Write
+\begin_inset Formula 
+\begin{eqnarray}
+\left[y-m(x,\theta)\right]^{2} & = & \left[(y-m(x,\theta_{o})+(m(x,\theta_{o})-m(x,\theta))\right]^{2}\nonumber \\
+ & = & \left[y-m(x,\theta_{o})\right]^{2}+2\left[m(x,\theta_{o})-m(x,\theta)\right]u+\left[m(x,\theta_{o})-m(x,\theta)\right]^{2}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $u$
+\end_inset
+
+ is defined in equation (2).
+ Now, since 
+\begin_inset Formula $E(u|x)=0$
+\end_inset
+
+, 
+\begin_inset Formula $u$
+\end_inset
+
+ is uncorrelated with 
+\emph on
+any
+\emph default
+ function of 
+\begin_inset Formula $x$
+\end_inset
+
+, including 
+\begin_inset Formula $m(x,\theta_{o})-m(x,\theta)$
+\end_inset
+
+.
+ Thus, taking the expected value of equation (4) gives
+\begin_inset Formula 
+\begin{equation}
+E\left\{ \left[y-m(x,\theta)\right]^{2}\right\} =E\left\{ \left[y-m(x,\theta_{o})\right]^{2}\right\} +E\left\{ \left[m(x,\theta_{o})-m(x,\theta)\right]^{2}\right\} 
+\end{equation}
+
+\end_inset
+
+Since the last term in equation (5) is nonnegative, it follws that
+\begin_inset Formula 
+\begin{equation}
+E\left\{ \left[y-m(x,\theta)\right]^{2}\right\} \geq E\left\{ \left[y-m(x,\theta_{o})\right]^{2}\right\} ,\ \forall\ \theta\in\Theta
+\end{equation}
+
+\end_inset
+
+The inequality is strict when 
+\begin_inset Formula $\theta\neq\theta_{o}$
+\end_inset
+
+ unless 
+\begin_inset Formula $E\left\{ \left[m(x,\theta_{o})-m(x,\theta)\right]^{2}\right\} =0$
+\end_inset
+
+; for 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ to be identified, we will have to rule this possibility out.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Because 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ solves the population problem in expression (3), the analogy principle
+ suggests etimating 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ by solving the sample analogue.
+ In other words, we replace the population moment 
+\begin_inset Formula $E\left\{ \left[y-m(x,\theta)\right]^{2}\right\} $
+\end_inset
+
+ with the sample average.
+ The 
+\series bold
+NLS estimator
+\series default
+\emph on
+ 
+\emph default
+of 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+, solves
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \min_{\theta\in\Theta}}\ N^{-1}{\displaystyle \sum_{i=1}^{N}}\left[y_{i}-m(x_{i},\theta)\right]^{2}
+\end{equation}
+
+\end_inset
+
+For now, we assume that a solution to this problem exists.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The NLS objective funciton in expression (7) is a special case of a more
+ general class of estimators.
+ Let 
+\begin_inset Formula $q(w,\theta)$
+\end_inset
+
+ be a function of the random vector 
+\begin_inset Formula $w$
+\end_inset
+
+ and the parameter vector 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ An 
+\series bold
+M-estimator
+\series default
+ of 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ solves the problem
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \min_{\theta\in\Theta}}\ N^{-1}{\displaystyle \sum_{i=1}^{N}}q(w_{i},\theta)
+\end{equation}
+
+\end_inset
+
+assuming that a solution, 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+, exists.
+ The estimator clearly depends on the sample 
+\begin_inset Formula $\{w_{i}:i=1,,\ldots,N\}$
+\end_inset
+
+, but we suppress that fact in the notation.
+ The objective funciton for an M-estimator is a sample average of a function
+ of 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The parameter vector 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is assumed to uniquely solve the population problem
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \min_{\theta\in\Theta}}\ E\left[q(w,\theta)\right]
+\end{equation}
+
+\end_inset
+
+Comparing equations (8) and (9), we see that M-estimators are based on the
+ analogy principle.
+ Once 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ has been defined, finding an appropriate function 
+\begin_inset Formula $q$
+\end_inset
+
+ that delivers 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ as the solution to problem (9) requires basic results from probability
+ theory.
+ Often there is more than one choice of 
+\begin_inset Formula $q$
+\end_inset
+
+ such that 
+\begin_inset Formula $\theta_{0}$
+\end_inset
+
+ solves problem (9), in which case the choice depends on efficiency or computati
+onal issues.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+How do we translate the fact that 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ solves the population problem (9) into consistency of the M-estimator 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ that solves problem (8)? Since for each 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+, 
+\begin_inset Formula $\left\{ q(w_{i},\theta):i=1,\ldots,N\right\} $
+\end_inset
+
+ is just an i.i.d.
+ sequence, the law of large numbers implies that
+\begin_inset Formula 
+\begin{equation}
+N^{-1}{\displaystyle \sum_{i=1}^{N}}q(w_{i},\theta)\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}E\left[q(w,\theta)\right]
+\end{equation}
+
+\end_inset
+
+under very weak finite moment assumptions.
+ Since 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ minimizes the function on the left side of equation (1) and 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ minimizes the function on the right, it seems plausible that 
+\begin_inset Formula $\hat{\theta}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\theta_{o}$
+\end_inset
+
+.
+ This informal argument turns out to be correct, except in pathological
+ cases.
+ We also need to address the identifiability of 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ and the convergence in equation (10).
+\end_layout
+
+\begin_layout Section*
+12.2 Identification, Uniform Convergence, and Consistency
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now present a formal consistency result for M-estimators under fairly
+ weak assumptions.
+ As mentioned previously, the conditions can be broken down into two parts.
+ The first part is the 
+\series bold
+identification
+\series default
+ or 
+\series bold
+identifiability
+\series default
+ of 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ .
+ For nonlinear regression, we showed how 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ solves the population problem (3).
+ However, we did not argue that 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is always the 
+\emph on
+unique
+\emph default
+ solution to problem (3).
+ Whether or not this is the case depends on the distribution of 
+\begin_inset Formula $x$
+\end_inset
+
+ and the nature of the regression function:
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\shape up
+NLS.2:
+\series default
+ 
+\begin_inset Formula $E\left\{ \left[m(x,\theta_{o})-m(x,\theta)\right]^{2}\right\} >0,\ \forall\ \theta\in\Theta,\theta\neq\theta_{o}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This assumption can fail if the explanatory variables 
+\begin_inset Formula $x$
+\end_inset
+
+ do not have sufficient variation in the population.
+ In nonlinear models, Assumption NLS.2 can fail if 
+\begin_inset Formula $m(x,\theta_{o})$
+\end_inset
+
+ depends on fewer parameters than are actually in 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Identification in commonly used nonlinear regression models holds under
+ weak conditions, provided perfect collinearity in 
+\begin_inset Formula $x$
+\end_inset
+
+ can be ruled out.
+ For the most part, we will just assume that, when the model is correctly
+ specified, 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is the unique solution to problem (3).
+ For the general M-estimation case, we assume that 
+\begin_inset Formula $q(w,\theta)$
+\end_inset
+
+ has been chosen so that 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is a solution to problem (9).
+ Identification requires that 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ be the unique solution
+\begin_inset Formula 
+\begin{equation}
+E\left[q(w,\theta_{o})\right]<E\left[q(w,\theta)\right],\ \forall\ \theta\in\Theta,\theta\neq\theta_{o}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The second component for consistency of the M-estimator is convergence of
+ the sample average 
+\begin_inset Formula $N^{-1}\sum_{i=1}^{N}q(w_{i},\theta)$
+\end_inset
+
+ to its expected value.
+ It turns out that 
+\series bold
+point-wise convergence in probability
+\series default
+, as stated in equation (10), is not sufficient for consistency.
+ That is, it is not enough to simply invoke the usual weak law of large
+ numbets at each 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+.
+ Instead, 
+\series bold
+uniform convergence in probability
+\series default
+ is sufficient.
+ Mathematically,
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \max_{\theta\in\Theta}}\left|N^{-1}{\displaystyle \sum_{i=1}^{N}}q(w_{i},\theta)-E\left[q(w,\theta)\right]\right|\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}0
+\end{equation}
+
+\end_inset
+
+Uniform convergence clearly implies pointwise convergence, but the converse
+ is not true.
+ Nevertheless, under certain regularity conditions, the pointwise convergence
+ in equation (10) translates into the uniform convergence in equation (12).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Since we are taking expected values of 
+\begin_inset Formula $q(w,\theta)$
+\end_inset
+
+ with respect to the distribution of 
+\begin_inset Formula $w$
+\end_inset
+
+, 
+\begin_inset Formula $q(w,\theta)$
+\end_inset
+
+ must be a random variable for each 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+.
+ Technically, we should assume that 
+\begin_inset Formula $q(\cdot,\theta)$
+\end_inset
+
+ is a 
+\emph on
+Borel measurable function
+\emph default
+ on 
+\begin_inset Formula $\mathscr{W}$
+\end_inset
+
+ for each 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+.
+ The next assumption concering 
+\begin_inset Formula $q$
+\end_inset
+
+ is practically more important.
+ We assume that, for each 
+\begin_inset Formula $w\in\mathscr{W}$
+\end_inset
+
+, 
+\begin_inset Formula $q(w,\cdot)$
+\end_inset
+
+ is a 
+\emph on
+continuous function
+\emph default
+ over the parameter space 
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+ All of the problems we treat in detail have objective functions that are
+ continuous in the parameters, but these do not cover all cases of interest.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Obtaining uniform convergence is generally difficult for unbouded parameter
+ sets, such as 
+\begin_inset Formula $\Theta=\mathbb{R}^{P}$
+\end_inset
+
+.
+ It is easiest to assume that 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ is a 
+\emph on
+compact subset
+\emph default
+ of 
+\begin_inset Formula $\mathbb{R}^{P}$
+\end_inset
+
+.
+ Because the natural parameter spaces in most applications are not bounded
+ (and sometimes not closed), the compactness assumption is untidy for developing
+ a general theory of estimation.
+ However, for must applications it is not an assumption to worry about:
+ 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ can be defined to be such a large closed and bounded set as to always contain
+ 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can now state a theorem concerning uniform convergence appropriate for
+ the random sampling environment.
+ This result is known as the 
+\series bold
+uniform weak law of large numbers (UWLLN)
+\series default
+.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+12.1 (Uniform Weak Law of Large Numbers).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $w$
+\end_inset
+
+ be a random vector taking values in 
+\begin_inset Formula $\mathscr{W}\subset\mathbb{R}^{M}$
+\end_inset
+
+, let 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ be subset of 
+\begin_inset Formula $\mathbb{R}^{P}$
+\end_inset
+
+, and let 
+\begin_inset Formula $q:\mathscr{W}\times\Theta\rightarrow\mathbb{R}$
+\end_inset
+
+ be a real-valued function.
+ Assume that 
+\series bold
+(a)
+\series default
+ 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ is compact; 
+\series bold
+(b)
+\series default
+ for each 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+, 
+\begin_inset Formula $q(\cdot,\theta)$
+\end_inset
+
+ is Borel measurable on 
+\begin_inset Formula $\mathscr{W}$
+\end_inset
+
+; 
+\series bold
+(c)
+\series default
+ for each 
+\begin_inset Formula $w\in\mathscr{W}$
+\end_inset
+
+, 
+\begin_inset Formula $q(w,\cdot)$
+\end_inset
+
+ is continuous on 
+\begin_inset Formula $\Theta$
+\end_inset
+
+; and 
+\series bold
+(d)
+\series default
+ 
+\begin_inset Formula $\left|q(w,\theta)\right|\leq b(w)$
+\end_inset
+
+ for all 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+, where 
+\begin_inset Formula $b$
+\end_inset
+
+ is a nonegative function on 
+\begin_inset Formula $\mathscr{W}$
+\end_inset
+
+ such that 
+\begin_inset Formula $E\left[b(w)\right]<\infty$
+\end_inset
+
+.
+ Then equation (12) holds.
+\end_layout
+
+\begin_layout Standard
+Assumption d requires the expected absolute value of 
+\begin_inset Formula $q(w,\theta)$
+\end_inset
+
+ to be bounded across 
+\begin_inset Formula $\theta$
+\end_inset
+
+, but it is rarely verified in practice even though it can be.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The continuity and compactness assumptions are important for establishing
+ uniform convergence, and they also ensure that both the sample minimization
+ problem (8) and the population minimization problem (9) actually have solutions.
+ Consider problem (8) first.
+ Under the assumptions of Theorem 12.1, the sample average is a continuous
+ function of 
+\begin_inset Formula $\theta$
+\end_inset
+
+, since 
+\begin_inset Formula $q(w_{i},\theta)$
+\end_inset
+
+ is continuous for each 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+.
+ Since a continuous function on a compact space always achieves its minimum,
+ the M-estimation problem is well defined (there could be more than one
+ solution).
+ As a technical matter, it can be shown that 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ is actually a random variable under the measurability assumption on 
+\begin_inset Formula $q(\cdot,\theta)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It can also be shown that, under the assumptions of Theorem 12.1, the function
+ 
+\begin_inset Formula $E\left[q(w,\theta)\right]$
+\end_inset
+
+ is continuous as a function of 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ Therefore, problem (9) also has at least one solution; identifiability
+ ensures that it has only one olution, wich in turn implies consistency
+ of the M-estimator.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+12.2 (Consistency of M-Estimators).
+
+\series default
+ 
+\emph on
+Under assumptions of Theorem 12.1, assume that the identification assumption
+ (11) holds.
+ Then a random vector, 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+, solves problem (8), and 
+\begin_inset Formula $\hat{\theta}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\theta_{o}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For nonlinear least squares, once Assumptions NLS.1 and NLS.2 are maintained,
+ the practical requirement is that 
+\begin_inset Formula $m(x,\cdot)$
+\end_inset
+
+ be a continuous funciton over 
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+ This assumption is almost always true in application of NLS.
+ Noncompactness of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ is not much of a concern for most applications.
+\end_layout
+
+\begin_layout Lemma*
+
+\series bold
+\shape up
+12.1.
+
+\series default
+ 
+\emph on
+Suppose that 
+\begin_inset Formula $\hat{\theta}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\theta_{o}$
+\end_inset
+
+, and assume that 
+\begin_inset Formula $r(w,\theta)$
+\end_inset
+
+ satisfies the same assumptions on 
+\begin_inset Formula $q(w,\theta)$
+\end_inset
+
+ in Theorem 12.2.
+ Then
+\begin_inset Formula 
+\begin{equation}
+N^{-1}{\displaystyle \sum_{i=1}^{N}}r(w_{i},\hat{\theta})\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}E\left[r(w,\theta_{o})\right]
+\end{equation}
+
+\end_inset
+
+That is, 
+\begin_inset Formula $N^{-1}{\displaystyle \sum_{i=1}^{N}}r(w_{i},\hat{\theta})$
+\end_inset
+
+ is a consistent estimator of 
+\begin_inset Formula $E\left[r(w,\theta_{o})\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lemma 12.1 shows that, if we replace 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ in the sample average with a consistent estimator, the convergence still
+ holds, at least under standard regularity conditions.
+\end_layout
+
+\begin_layout Section*
+12.3 Asymptotic Normality
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The simplest asymptotic normality proof proceeds as follows.
+ Assume that 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is in the interior of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+, which means that 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ must have nonempty interior; this assumption is true in most applications.
+ Then, since 
+\begin_inset Formula $\hat{\theta}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\theta_{o}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ is in the interior of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ with probability approaching one.
+ If 
+\begin_inset Formula $q(w,\cdot)$
+\end_inset
+
+ is continuously differentiable on the interior of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+, then (with probablity approaching one) 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ solves the first-order condition
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{i=1}^{N}}s(w_{i},\hat{\theta})=0
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $s(w,\theta)$
+\end_inset
+
+ is the 
+\begin_inset Formula $P\times1$
+\end_inset
+
+ vector of partial derivatives of 
+\begin_inset Formula $q(w,\theta):s(w,\theta)=\nabla_{\theta}q(w,\theta)\equiv\left[\nicefrac{\partial q(w,\theta)}{\partial\theta_{1}},\ldots,\nicefrac{\partial q(w,\theta)}{\partial\theta_{P}}\right]^{\prime}$
+\end_inset
+
+.
+ We call 
+\begin_inset Formula $s(w,\theta)$
+\end_inset
+
+ the 
+\series bold
+score of the objective function
+\series default
+ 
+\begin_inset Formula $q(w,\theta)$
+\end_inset
+
+.
+ While condition (14) can only be guaranteed to hold with probability approachin
+g one, usually it holds exactly.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $q(w,\cdot)$
+\end_inset
+
+ is twice continuously differentiable, then each row of the left-hand side
+ of equation (14) can be expanded about 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ in a mean-value expansion:
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{i=1}^{N}}s(w_{i},\hat{\theta})={\displaystyle \sum_{i=1}^{N}}s(w_{i},\theta_{o})+\left({\displaystyle \sum_{i=1}^{N}}\ddot{H}_{i}\right)(\hat{\theta}-\theta_{o})
+\end{equation}
+
+\end_inset
+
+The notation 
+\begin_inset Formula $\ddot{H}_{i}$
+\end_inset
+
+ denotes the 
+\begin_inset Formula $P\times P$
+\end_inset
+
+ 
+\series bold
+Hessian of the object function
+\series default
+, 
+\begin_inset Formula $q(w_{i},\theta)$
+\end_inset
+
+, with respect to 
+\begin_inset Formula $\theta$
+\end_inset
+
+, but with each row of 
+\begin_inset Formula $H(w_{i},\theta)\equiv\nicefrac{\partial^{2}q(w_{i},\theta)}{\partial\theta\partial\theta^{\prime}}\equiv\nabla_{\theta}^{2}q(w_{i},\theta)$
+\end_inset
+
+ evaluated at a different mean value.
+ Each of the 
+\begin_inset Formula $P$
+\end_inset
+
+ mean values is on the line segment between 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+.
+ We cannot know what these mean values are, but we do know that each must
+ converge in probability to 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Combining equations (14) and (15) and multiplying through by 
+\begin_inset Formula $\nicefrac{1}{\sqrt{N}}$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\[
+0=N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}s(w_{i},\theta_{o})+\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}\ddot{H}_{i}\right)\sqrt{N}(\hat{\theta}-\theta_{o})
+\]
+
+\end_inset
+
+Now, we can apply Lemma 12.1 to get 
+\begin_inset Formula $N^{-1}\sum_{i=1}^{N}\ddot{H}_{i}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}E\left[H(w,\theta_{o})\right]$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $A_{o}\equiv E\left[H(w,\theta_{o})\right]$
+\end_inset
+
+ is nonsingular, then 
+\begin_inset Formula $N^{-1}\sum_{i=1}^{N}\ddot{H}_{i}$
+\end_inset
+
+ is nonsingular w.p.a.1 and 
+\begin_inset Formula $\left(N^{-1}\sum_{i=1}^{N}\ddot{H}_{i}\right)^{-1}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}A_{o}^{-1}$
+\end_inset
+
+.
+ Therefore, we can write
+\begin_inset Formula 
+\[
+\sqrt{N}(\hat{\theta}-\theta_{o})=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}\ddot{H}_{i}\right)^{-1}\left[-N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}s_{i}(\theta_{o})\right]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $s_{i}\equiv s(w_{i},\theta_{o})$
+\end_inset
+
+.
+ As we will show, 
+\begin_inset Formula $E\left[s_{i}(\theta_{o})\right]=0$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $N^{-\nicefrac{1}{2}}\sum_{i=1}^{N}s_{i}(\theta_{o})$
+\end_inset
+
+ generally satisfies the CLT because it is the average of i.i.d.
+ random vectors with zero mean, multiplied by the usual 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $o_{p}(1)\cdot O_{p}(1)=o_{p}(1)$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{equation}
+\sqrt{N}\left(\hat{\theta}-\theta_{o}\right)=A_{o}^{-1}\left[-N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}s_{i}(\theta_{o})\right]+o_{p}(1)
+\end{equation}
+
+\end_inset
+
+This equation shows that 
+\begin_inset Formula $\sqrt{N}\left(\hat{\theta}-\theta_{o}\right)$
+\end_inset
+
+ inherits its limiting distribution from the average of the scores, evaluated
+ at 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+.
+ The matrix 
+\begin_inset Formula $A_{o}^{-1}$
+\end_inset
+
+ simply acts as a linear transformation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Equation (16) allows us to derive the 
+\series bold
+first-order asymptotic distribution
+\series default
+ of 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+.
+ We have essentially proved the following result.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+12.3 (Asymptotic Normality of M-Estimators):
+\series default
+ 
+\emph on
+In addition to the assumptions in Theorem 12.2, assume 
+\series bold
+(a)
+\series default
+ 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is in the interior of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+; 
+\series bold
+(b)
+\series default
+ 
+\begin_inset Formula $s(w,\cdot)$
+\end_inset
+
+ is continuously differentiable on the interior of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ for all 
+\begin_inset Formula $w\in\mathscr{W}$
+\end_inset
+
+; 
+\series bold
+(c)
+\series default
+ Each element of 
+\begin_inset Formula $H(w,\theta)$
+\end_inset
+
+ is bounded in absolute value by a function 
+\begin_inset Formula $b(w)$
+\end_inset
+
+, where 
+\begin_inset Formula $E\left[b(w)\right]<\infty$
+\end_inset
+
+; 
+\series bold
+(d)
+\series default
+ 
+\begin_inset Formula $A_{o}\equiv E\left[H(w,\theta_{o})\right]$
+\end_inset
+
+ is positive definite; 
+\series bold
+(e)
+\series default
+ 
+\begin_inset Formula $E\left[s(w,\theta_{o})\right]=0$
+\end_inset
+
+; and 
+\series bold
+(f)
+\series default
+ each element of 
+\begin_inset Formula $s(w,\theta_{o})$
+\end_inset
+
+ has finite second moment.
+ Then
+\begin_inset Formula 
+\begin{equation}
+\sqrt{N}\left(\hat{\theta}-\theta_{o}\right)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N(0,A_{o}^{-1}B_{o}A_{o}^{-1})
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+A_{o}\equiv E\left[H(w,\theta_{o})\right]
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+B_{o}\equiv E\left[s(w,\theta_{o})s(w,\theta_{o})^{\prime}\right]=\mbox{Var}\left[s(w,\theta_{o})\right]
+\end{equation}
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\begin{equation}
+\mbox{AVar}(\hat{\theta})=\frac{A_{o}^{-1}B_{o}A_{o}^{-1}}{N}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Theorem 12.3 implies asymptotic normality of most of the remaining estimators
+ we study.
+ A key component of this theorem is that the score evaluated at 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ has expected value zero.
+ If we can interchange the expectation and the derivative, then this result
+ holds directly in the abstract M-estimation framework.
+ To see this point, note that if 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is in the interior of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+, and 
+\begin_inset Formula $E\left[q(w,\theta)\right]$
+\end_inset
+
+ is differentiable for 
+\begin_inset Formula $\theta\in\mbox{int}\ \Theta$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{equation}
+\nabla_{\theta}E\left[q(w,\theta)\right]_{\theta=\theta_{o}}=0
+\end{equation}
+
+\end_inset
+
+Now, if the derivative and expectations operator can be interchanged, wich
+ is the case quite generally, then equation (21) implies
+\begin_inset Formula 
+\begin{equation}
+E\left[\nabla_{\theta}q(w,\theta_{o})\right]=E\left[s(w,\theta_{o})\right]=0
+\end{equation}
+
+\end_inset
+
+A similar argument shows that, in general, 
+\begin_inset Formula $E\left[H(w,\theta_{o})\right]$
+\end_inset
+
+ is positive semidefinite.
+ If 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is identified, 
+\begin_inset Formula $E\left[H(w,\theta_{o})\right]$
+\end_inset
+
+ is positive definite.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For the remainder of this chapter, it is convneient to divide the original
+ NLS objective function by two:
+\begin_inset Formula 
+\begin{equation}
+q(w_{i},\theta)=\frac{\left[y_{i}-m(x_{i},\theta)\right]^{2}}{2}
+\end{equation}
+
+\end_inset
+
+The score of equation (23) can be written as
+\begin_inset Formula 
+\begin{equation}
+s(w_{i},\theta)=-\nabla_{\theta}m(x_{i},\theta)\left[y-m(x_{i},\theta)\right]
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\nabla_{\theta}m(x_{i},\theta)$
+\end_inset
+
+ is the 
+\begin_inset Formula $P\times1$
+\end_inset
+
+ gradient of 
+\begin_inset Formula $m(x,\theta)$
+\end_inset
+
+.
+ We can show directly that this expression has an expected value of zero
+ at 
+\begin_inset Formula $\theta=\theta_{o}$
+\end_inset
+
+ by showing that epected value of 
+\begin_inset Formula $s(w,\theta_{o})$
+\end_inset
+
+ conditional on 
+\begin_inset Formula $x$
+\end_inset
+
+ is zero:
+\begin_inset Formula 
+\begin{equation}
+E\left[s(w,\theta_{o})|x\right]=-\nabla_{\theta}m(x_{i},\theta)\left[E(y|x)-m(x_{i},\theta)\right]=0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The variance of 
+\begin_inset Formula $s(w_{i},\theta_{o})$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+B_{o}\equiv E\left[s(w,\theta_{o})s(w,\theta_{o})^{\prime}\right]=E\left[u_{i}^{2}\nabla_{\theta}m(x_{i},\theta_{o})\nabla_{\theta}m(x_{i},\theta_{o})^{\prime}\right]
+\end{equation}
+
+\end_inset
+
+where the error 
+\begin_inset Formula $u_{i}\equiv y-m(x_{i},\theta_{o})$
+\end_inset
+
+ is the difference between 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $E(y|x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The Hessian of 
+\begin_inset Formula $q(w,\theta)$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+H(w,\theta)=\nabla_{\theta}m(x_{i},\theta_{o})\nabla_{\theta}m(x_{i},\theta_{o})^{\prime}-\nabla_{\theta}^{2}m(x_{i},\theta)\left[y_{i}-m(x_{i},\theta)\right]
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\nabla_{\theta}^{2}m(x_{i},\theta)$
+\end_inset
+
+ is the 
+\begin_inset Formula $P\times P$
+\end_inset
+
+ Hessian matrix of 
+\begin_inset Formula $m(x_{i},\theta)$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ To find the expected value of 
+\begin_inset Formula $H(w,\theta)$
+\end_inset
+
+ at 
+\begin_inset Formula $\theta=\theta_{o}$
+\end_inset
+
+, we first find the expectation conditional on 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ When evaluated at 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+, the second term in equation (27) is 
+\begin_inset Formula $\nabla_{\theta}^{2}m(x_{i},\theta)u_{i}$
+\end_inset
+
+, and it therefore has a zero mean conditional on 
+\begin_inset Formula $x$
+\end_inset
+
+ since 
+\begin_inset Formula $E(u|x)=0$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\begin{equation}
+E\left[H(w,\theta_{o})|x\right]=\nabla_{\theta}m(x_{i},\theta_{o})\nabla_{\theta}m(x_{i},\theta_{o})^{\prime}
+\end{equation}
+
+\end_inset
+
+Taking the expected value of equation (28) over the distribution of 
+\begin_inset Formula $x$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\begin{equation}
+A_{o}=E\left[\nabla_{\theta}m(x_{i},\theta_{o})\nabla_{\theta}m(x_{i},\theta_{o})^{\prime}\right]
+\end{equation}
+
+\end_inset
+
+This matrix plays a fundamental role in nonlinear regression.
+ When 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is identified, 
+\begin_inset Formula $A_{o}$
+\end_inset
+
+ is generally positive definite.
+\end_layout
+
+\begin_layout Section*
+12.5 Estimating the Asymptotic Variance
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We wish to consistently estimate the matrices 
+\begin_inset Formula $A_{o}$
+\end_inset
+
+ and 
+\begin_inset Formula $B_{o}$
+\end_inset
+
+.
+ We can always estimate 
+\begin_inset Formula $A_{o}$
+\end_inset
+
+ consistently by taking away the expectaiton and replacing 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ with 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+.
+ Under regularity conditions that ensure uniform convergence of the Hessian,
+ the estimator
+\begin_inset Formula 
+\begin{equation}
+N^{-1}\sum_{i=1}^{N}H(w_{i},\hat{\theta})\equiv N^{-1}{\displaystyle \sum_{i=1}^{N}}\hat{H}_{i}
+\end{equation}
+
+\end_inset
+
+is consistent for 
+\begin_inset Formula $A_{o}$
+\end_inset
+
+, by Lemma 12.1.
+ Estimator (30) is always available in problems with a twice continuously
+ differentiable objective function.
+ This includes cases where 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ does not index a feature of an unconditional or conditional distribution
+ (such as nonlinear regression with the conditional mean function misspecified).
+ Its main drawback is computational: it requires calculation of second derivativ
+es, which is a nontrivial task for certian problems.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Because we assume 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ solves the minimzation problem in equation (8), and 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ is in the interior of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+, we know that the Hessian evaluated at 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ is at least p.s.d.
+ If the model is well specified in the sense that 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is identified, then the estimator in (30) will actually be positive definite
+ with high probability because 
+\begin_inset Formula $E\left[H(w_{i},\theta_{o})\right]$
+\end_inset
+
+ is positive definite.
+ In some cases, the objective funciton is strictly convex on 
+\begin_inset Formula $\Theta$
+\end_inset
+
+, in which case 
+\begin_inset Formula $\sum_{i=1}^{N}H(w_{i},\theta)$
+\end_inset
+
+ is positive definite for all 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Obtaining a p.s.d.
+ estimator of 
+\begin_inset Formula $B_{o}$
+\end_inset
+
+ is straightforward.
+ By Lemma 12.1, under standard regularity conditions we have
+\begin_inset Formula 
+\begin{equation}
+N^{-1}{\displaystyle \sum_{i=1}^{N}}s(w_{i},\hat{\theta})s(w_{i},\hat{\theta})^{\prime}\equiv N^{-1}{\displaystyle \sum_{i=1}^{N}}\hat{s}_{i}\hat{s}_{i}^{\prime}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}B_{o}
+\end{equation}
+
+\end_inset
+
+Combining the estimator (31) with the consistent estimator for 
+\begin_inset Formula $A_{o}$
+\end_inset
+
+, we can consistently estimate 
+\begin_inset Formula $\mbox{Avar}\sqrt{N}(\hat{\theta}-\theta_{o})$
+\end_inset
+
+ by
+\begin_inset Formula 
+\begin{equation}
+\widehat{\mbox{AVar}(\hat{\theta}-\theta_{o})}=\hat{A}^{-1}\hat{B}\hat{A}^{-1}
+\end{equation}
+
+\end_inset
+
+The asymptotic standard errors are obtained from the matrix
+\begin_inset Formula 
+\begin{equation}
+\hat{V}\equiv\widehat{\mbox{AVar}(\hat{\theta})}=\frac{\hat{A}^{-1}\hat{B}\hat{A}^{-1}}{N}
+\end{equation}
+
+\end_inset
+
+which can be expressed as
+\begin_inset Formula 
+\begin{equation}
+\left({\displaystyle \sum_{i=1}^{N}}\hat{H}_{i}\right)^{-1}\left({\displaystyle N^{-1}{\displaystyle \sum_{i=1}^{N}}\hat{s}_{i}\hat{s}_{i}^{\prime}}\right)\left({\displaystyle \sum_{i=1}^{N}}\hat{H}_{i}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+Expression (34) is at least p.s.d.
+ when it is well-defined.
+ The variance matrix estimator in (34) is an example of a 
+\series bold
+Huber-White sandwhich estimator
+\series default
+, and it is a 
+\series bold
+fully robust variance matrix estimator
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the case of NLS, the estimator of 
+\begin_inset Formula $A_{o}$
+\end_inset
+
+ in equation (30) is always available when 
+\begin_inset Formula $E(y_{i}|x_{i})=m(x_{i},\theta_{o})$
+\end_inset
+
+, and it is usually used if we think the mean function is correctly specified:
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{i=1}^{N}}\nabla_{\theta}\hat{m}_{i}\nabla_{\theta}\hat{m}_{i}^{\prime}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\nabla_{\theta}\hat{m}_{i}\equiv\nabla_{\theta}m(x_{i},\hat{\theta})$
+\end_inset
+
+ for every observation 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Also, the estimated score for NLS can be written as
+\begin_inset Formula 
+\begin{equation}
+\hat{s}_{i}=-\nabla_{\theta}\hat{m}_{i}\left[y_{i}-m(x_{i},\hat{\theta})\right]=-\nabla_{\theta}\hat{m}_{i}\hat{u}_{i}
+\end{equation}
+
+\end_inset
+
+where the 
+\series bold
+nonlinear least squares residuals
+\series default
+, 
+\begin_inset Formula $\hat{u}_{i}$
+\end_inset
+
+, are defined as
+\begin_inset Formula 
+\begin{equation}
+\hat{u}_{i}\equiv y_{i}-m(x_{i},\hat{\theta})
+\end{equation}
+
+\end_inset
+
+The estimated asymptotic variance of the NLS estimator is
+\begin_inset Formula 
+\begin{equation}
+\widehat{\mbox{AVar}(\hat{\theta})}=\left({\displaystyle \sum_{i=1}^{N}}\nabla_{\theta}\hat{m}_{i}\nabla_{\theta}\hat{m}_{i}^{\prime}\right)^{-1}\left({\displaystyle \sum_{i=1}^{N}}\hat{u}_{i}^{2}\nabla_{\theta}\hat{m}_{i}\nabla_{\theta}\hat{m}_{i}^{\prime}\right)\left({\displaystyle \sum_{i=1}^{N}}\nabla_{\theta}\hat{m}_{i}\nabla_{\theta}\hat{m}_{i}^{\prime}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+This is called the 
+\series bold
+heteroskedasticity-robust variance matrix estimator for NLS
+\series default
+ because it places no restrictions on 
+\begin_inset Formula $\mbox{Var}(y|x)$
+\end_inset
+
+.
+ As always, the asymptotic standard error of each element of 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ is the square root of the appropriate diagonal element of matrix (38).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In many contexts, including NLS, the asymptotic variance estimator can be
+ simplified under additional assumptions.
+ For our purposes, we state the assumption as follows:
+\begin_inset Formula 
+\begin{equation}
+E\left[s(w_{i},\theta_{o})s(w_{i},\theta_{o})^{\prime}\right]\equiv\sigma_{o}^{2}E\left[H(w_{i},\theta_{o})\right]
+\end{equation}
+
+\end_inset
+
+This assumption simply says that the expected outer product of the score,
+ evaluated at 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+, is proportional to the expected value of the Hessian (evaluated at 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+): 
+\begin_inset Formula $B_{o}=\sigma_{o}^{2}A_{o}$
+\end_inset
+
+.
+ We refer to assumption (35) as the 
+\series bold
+generalized information matrix equality (GIME)
+\series default
+.
+\end_layout
+
+\begin_layout Lemma*
+
+\series bold
+\shape up
+12.2:
+\series default
+ 
+\emph on
+Under regularity conditions of the type contained in Theorem 12.3 and assumption
+ (35), 
+\begin_inset Formula $\mbox{AVar}(\hat{\theta})=\nicefrac{\sigma_{o}^{2}A_{o}^{-1}}{N}$
+\end_inset
+
+.
+ Therefore, under assumption (35), the asymptotic variance of 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ can be estimated as
+\begin_inset Formula 
+\begin{equation}
+\hat{V}=\hat{\sigma}^{2}\left({\displaystyle \sum_{i=1}^{N}}\hat{H}_{i}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{H}_{i}$
+\end_inset
+
+ is defined as before, and 
+\begin_inset Formula $\hat{\sigma}^{2}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}\sigma_{o}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the case of nonlinear regression, the parameter 
+\begin_inset Formula $\sigma_{o}^{2}$
+\end_inset
+
+ is the variance of 
+\begin_inset Formula $y$
+\end_inset
+
+ given 
+\begin_inset Formula $x$
+\end_inset
+
+, or equivalently 
+\begin_inset Formula $\mbox{Var}(u|x)$
+\end_inset
+
+, under homoskedasiticty:
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+\shape up
+NLS.3:
+\series default
+ 
+\begin_inset Formula $\mbox{Var}(y|x)=\mbox{Var}(u|x)=\sigma_{o}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Under Assumption NLS.3, we can show that assumption (39) holds with 
+\begin_inset Formula $\sigma_{o}^{2}=\mbox{Var}(y|x)$
+\end_inset
+
+.
+ First, since 
+\begin_inset Formula $s(w_{i},\theta_{o})s(w_{i},\theta_{o})^{\prime}=u_{i}^{2}\nabla_{\theta}m(x_{i},\theta_{o})\nabla_{\theta}m(x_{i},\theta_{o})^{\prime}$
+\end_inset
+
+, it follows that
+\begin_inset Formula 
+\begin{eqnarray}
+E\left[s(w_{i},\theta_{o})s(w_{i},\theta_{o})^{\prime}|x\right] & = & E(u_{i}^{2}|x)\nabla_{\theta}m(x_{i},\theta_{o})\nabla_{\theta}m(x_{i},\theta_{o})^{\prime}\nonumber \\
+ & = & \sigma_{o}^{2}\nabla_{\theta}m(x_{i},\theta_{o})\nabla_{\theta}m(x_{i},\theta_{o})^{\prime}
+\end{eqnarray}
+
+\end_inset
+
+under Assumptions NLS.1 and NLS.3.
+ Taking the expected value with respect to 
+\begin_inset Formula $x$
+\end_inset
+
+ gives equation (39).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Under Assumption NLS.3, a simplified estimator of the asymptotic variance
+ of the NLS estiamtor exists from equation (41).
+ Let
+\begin_inset Formula 
+\begin{equation}
+\hat{\sigma}^{2}=\frac{1}{N-P}{\displaystyle \sum_{i=1}^{N}}\hat{u}_{i}^{2}=\frac{SSR}{N-P}
+\end{equation}
+
+\end_inset
+
+where the 
+\begin_inset Formula $\hat{u}_{i}$
+\end_inset
+
+ are the NLS residuals and SSR is the sum of squared NLS residuals.
+ Using Lemmas 12.1, 
+\begin_inset Formula $\hat{\sigma}^{2}$
+\end_inset
+
+ can be shown to be consistent very generally.
+ The subtraction of 
+\begin_inset Formula $P$
+\end_inset
+
+ in the denominator of equation (38) is an adjustment that is thought to
+ improve the small sample properties of 
+\begin_inset Formula $\hat{\sigma}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Under Assumptions NLS.1-NLS.3, the asymptotic variance of the NLS esitmator
+ is estimated as
+\begin_inset Formula 
+\begin{equation}
+\hat{\sigma}^{2}\left({\displaystyle \sum_{i=1}^{N}}\nabla_{\theta}\hat{m}_{i}\nabla_{\theta}\hat{m}_{i}^{\prime}\right)^{-1}
+\end{equation}
+
+\end_inset
+
+This is the default variance estimator for NLS, but it is valid only under
+ homoskedasticity; the estimator (38) is valid with or without Assumption
+ NLS.3.
+\end_layout
+
+\begin_layout Section*
+12.6 Hypothesis Testing
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We wish to test the 
+\begin_inset Formula $Q$
+\end_inset
+
+ restrictions 
+\begin_inset Formula $H_{0}:c(\theta_{o})=0$
+\end_inset
+
+, where 
+\begin_inset Formula $c:\mathbb{R}^{P}\rightarrow\mathbb{R}^{Q}$
+\end_inset
+
+.
+ In these notes, when taking the derivative of a scalar function with respect
+ to a column vector, we obtain the gradient, which we treat as a column
+ vector.
+ As a result, let 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\nabla_{\theta}c(\theta_{o})\equiv\frac{\partial\left[c(\theta_{o})\right]^{\prime}}{\partial\theta}$
+\end_inset
+
+, which is a 
+\begin_inset Formula $P\times Q$
+\end_inset
+
+ matrix.
+ Thus, to simply notation and keep it consistent with the book, define 
+\begin_inset Formula $C(\theta_{o})$
+\end_inset
+
+ to be the transpose of 
+\begin_inset Formula $\nabla_{\theta}c(\theta_{o})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+12.6.1 Wald Tests
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Wald tests are easily obtained.
+ To test the 
+\begin_inset Formula $Q$
+\end_inset
+
+ restrictions 
+\begin_inset Formula $H_{0}:c(\theta_{o})=0$
+\end_inset
+
+, we can form the Wald statistic
+\begin_inset Formula 
+\begin{equation}
+W\equiv c(\hat{\theta})^{\prime}(\hat{C}\hat{V}\hat{C}^{\prime})^{-1}c(\hat{\theta})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{V}$
+\end_inset
+
+is an asymptotic variance matrix estimator of 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{C}\equiv C(\hat{\theta})$
+\end_inset
+
+, and 
+\begin_inset Formula $C(\theta)$
+\end_inset
+
+ is the 
+\begin_inset Formula $Q\times P$
+\end_inset
+
+ Jacobian of 
+\begin_inset Formula $c(\theta)$
+\end_inset
+
+.
+ The estimator of 
+\begin_inset Formula $\hat{V}$
+\end_inset
+
+ can be chosen to be fully robust, as in expression (34); under assumption
+ (39), the simpler form in Lemma 12.2 is available.
+ Provided 
+\begin_inset Formula $\hat{V}$
+\end_inset
+
+ has been chosen appropriately, 
+\begin_inset Formula $W\begin{array}[b]{c}
+_{a}\\
+\sim
+\end{array}\chi_{Q}^{2}$
+\end_inset
+
+ under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A couple of practical restrictions are needed for 
+\begin_inset Formula $W$
+\end_inset
+
+ to have a limiting 
+\begin_inset Formula $\chi_{Q}^{2}$
+\end_inset
+
+ distribution.
+ First, 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ must be in ther interior of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+; that is, 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ cannot be on the boundary.
+ If, for example, the first element of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ must be nonnegative, and we impose this restriction in the estimation,
+ then expression (44) does not have a limiting chi-square distribution under
+ 
+\begin_inset Formula $H_{0}:\theta_{o1}=0$
+\end_inset
+
+.
+ The second condition is that 
+\begin_inset Formula $C(\theta_{o})=\left[\nabla_{\theta}c(\theta_{o})\right]^{\prime}$
+\end_inset
+
+ must have rank 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ This rules out cases where 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is unidentified under the null hypothesis.
+ One drawback to the Wald statistic is that it is not invariant to how the
+ nonlinear restrictions are imposed.
+ We can change the outcome of a hypothesis test by redefining the constraint
+ function, 
+\begin_inset Formula $c(\cdot)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+12.6.2 Score (or Lagrange Multiplier) Tests
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In cases where the unrestricted model is difficult to estimate but the restriced
+ model is relatively simple to estimate, it is convenient to have a statistic
+ that only requires estimation under the null.
+ Such a statistic is the 
+\series bold
+score statistic
+\series default
+, also called the 
+\series bold
+Lagrange multiplier statistic
+\series default
+ in econometrics.
+ Note that the score principle is applicable to any problem where the estimators
+ solve a first-order condition, including the general class of M-estimators.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The score approach is ideally suited for 
+\series bold
+specification testing
+\series default
+.
+ Typically, the first step in specification testing is to being with a popular
+ model, one that is relatively easy to estimate and interpret, and nest
+ it within a more complicated model.
+ Then the popular model is tested against the more general alternative to
+ determine if the original model is misspecified.
+ We do not want to estimate the more complicated model unless there is significa
+nt evidence against the restricted form of the model.
+ In stating the null and alternative hypotheses, there is no difference
+ between specification testing and classical tests of parameter restrictions.
+ However, in practice, specification testing gives primary importance to
+ the restricted model, and we have no intention of actually estimating the
+ general model even if the null model is rejected.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To derive the score test, we again assume that there are 
+\begin_inset Formula $Q$
+\end_inset
+
+ continuously differentiable restrictions imposed on 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $c(\theta_{o})=0$
+\end_inset
+
+.
+ However, we must also assume that the restrictions define a mapping from
+ 
+\begin_inset Formula $\mathbb{R}^{P-Q}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbb{R}^{P}$
+\end_inset
+
+, say 
+\begin_inset Formula $d:\mathbb{R}^{P-Q}\rightarrow\mathbb{R}^{P}$
+\end_inset
+
+.
+ In particular, under the null hypothesis, we can write 
+\begin_inset Formula $\theta_{o}=d(\lambda_{o})$
+\end_inset
+
+, where 
+\begin_inset Formula $\lambda_{o}$
+\end_inset
+
+ is a 
+\begin_inset Formula $(P-Q)\times1$
+\end_inset
+
+ vector.
+ We must assume that 
+\begin_inset Formula $\lambda_{o}$
+\end_inset
+
+ is in the interior of its parameter space, 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+, under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+ We also assume that 
+\begin_inset Formula $d$
+\end_inset
+
+ is twice continuously differentiable on the interior of 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\tilde{\lambda}$
+\end_inset
+
+be the solution to the constrained minimization problem
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \min_{\lambda\in\Lambda}}{\displaystyle \sum_{i=1}^{N}}q\left[w_{i},d(\lambda)\right]
+\end{equation}
+
+\end_inset
+
+The constrined estimator of 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is simply 
+\begin_inset Formula $\tilde{\theta}\equiv d(\tilde{\lambda})$
+\end_inset
+
+.
+ In practice, we do not have to explicitly find the funciton 
+\begin_inset Formula $d$
+\end_inset
+
+; solving problem (45) is easily done just by directly imposing the restrictions
+, especially when the restrictions set certain parameters to hypothesized
+ values (such as zero).
+ Then, we just minimize the resulting objective function over the free parameter
+s.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The LM statistic is based on the limiting distribution of
+\begin_inset Formula 
+\begin{equation}
+N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}s_{i}(\tilde{\theta})
+\end{equation}
+
+\end_inset
+
+under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+ This is the score with respect to the entire vector 
+\begin_inset Formula $\theta$
+\end_inset
+
+, but we are evaluating it at the restricted estimates.
+ If 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+ were replaced by 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+, then expression (46) would be identically zero, which would make it useless
+ as a test statistic.
+ If the restrictions imposed by the null hypothesis are true, then expression
+ (46) will not be statistically different from zero.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Assume initially that 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is in the interior of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $\sqrt{N}(\tilde{\theta}-\theta_{o})=O_{p}(1)$
+\end_inset
+
+ by the delta method because 
+\begin_inset Formula $\sqrt{N}(\tilde{\lambda}-\lambda_{o})=O_{p}(1)$
+\end_inset
+
+ under the given assumptions.
+ A standard mean value expansion yields
+\begin_inset Formula 
+\begin{equation}
+N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}s_{i}(\tilde{\theta})=N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}s_{i}(\theta_{o})+A_{o}\sqrt{N}(\tilde{\theta}-\theta_{o})+o_{p}(1)
+\end{equation}
+
+\end_inset
+
+under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, where 
+\begin_inset Formula $A_{o}$
+\end_inset
+
+ is given in expression (18).
+ But 
+\begin_inset Formula $0=\sqrt{N}c(\tilde{\theta})=\sqrt{N}c(\theta_{o})+\ddot{C}\sqrt{N}(\tilde{\theta}-\theta_{o})$
+\end_inset
+
+, where 
+\begin_inset Formula $\ddot{C}$
+\end_inset
+
+is the 
+\begin_inset Formula $Q\times P$
+\end_inset
+
+ Jacobian matrix 
+\begin_inset Formula $C(\theta)$
+\end_inset
+
+ with rows evaluated at mean values between 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+.
+ Under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $c(\theta_{o})=0$
+\end_inset
+
+, and 
+\begin_inset Formula $\mbox{p\lim}\ddot{C}=C(\theta_{o})\equiv C_{o}$
+\end_inset
+
+.
+ Therefore, under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{o}\sqrt{N}(\tilde{\theta}-\theta_{o})=o_{p}(1)$
+\end_inset
+
+, and so multiplying equation (47) through by 
+\begin_inset Formula $C_{o}A_{o}^{-1}$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\begin{equation}
+C_{o}A_{o}^{-1}N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}s_{i}(\tilde{\theta})=C_{o}A_{o}^{-1}N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}s_{i}(\theta_{o})+o_{p}(1)
+\end{equation}
+
+\end_inset
+
+By the CLT, 
+\begin_inset Formula $C_{o}A_{o}^{-1}N^{-\nicefrac{1}{2}}\sum_{i=1}^{N}s_{i}(\theta_{o})\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N\left(0,C_{o}A_{o}^{-1}B_{o}A_{o}^{-1}C_{o}^{\prime}\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $B_{o}$
+\end_inset
+
+ is defined in expression (19).
+ Under our assumptions, 
+\begin_inset Formula $C_{o}A_{o}^{-1}B_{o}A_{o}^{-1}C_{o}^{\prime}$
+\end_inset
+
+ has full rank 
+\begin_inset Formula $Q$
+\end_inset
+
+, and so
+\begin_inset Formula 
+\[
+\left[N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}s_{i}(\tilde{\theta})\right]^{\prime}A_{o}^{-1}C_{o}^{\prime}\left(C_{o}A_{o}^{-1}B_{o}A_{o}^{-1}C_{o}^{\prime}\right)^{-1}C_{o}A_{o}^{-1}\left[N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}s_{i}(\tilde{\theta})\right]\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}\chi_{Q}^{2}
+\]
+
+\end_inset
+
+The score or LM statistic is given by
+\begin_inset Formula 
+\begin{equation}
+LM\equiv N^{-1}\cdot\left({\displaystyle \sum_{i=1}^{N}}\tilde{s}_{i}\right)^{\prime}\tilde{A}^{-1}\tilde{C}^{\prime}\left(\tilde{C}\tilde{A}^{-1}\tilde{B}\tilde{A}^{-1}\tilde{C}^{\prime}\right)^{-1}\tilde{C}\tilde{A}^{-1}\left({\displaystyle \sum_{i=1}^{N}}\tilde{s}_{i}\right)
+\end{equation}
+
+\end_inset
+
+where all quantities are evaluated at 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+.
+ For example, 
+\begin_inset Formula $\tilde{C}\equiv C(\tilde{\theta})$
+\end_inset
+
+, 
+\begin_inset Formula $\tilde{B}$
+\end_inset
+
+ is given in expression (31), but with 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+ in place of 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+, and 
+\begin_inset Formula $\tilde{A}$
+\end_inset
+
+ is the estimator in expression (30), again evaluated at 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+.
+ Under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $LM\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}\chi_{Q}^{2}$
+\end_inset
+
+ .
+ Because 
+\begin_inset Formula $\tilde{B}$
+\end_inset
+
+ is at least p.s.d., 
+\begin_inset Formula $LM\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The general derivation of the LM statistic also assumed that 
+\begin_inset Formula $\theta_{o}\in\mbox{int}(\Theta)$
+\end_inset
+
+ under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+ Nevertheless, for certain applications of the LM test we can drop the requireme
+nt that 
+\begin_inset Formula $\theta_{o}$
+\end_inset
+
+ is in the interior of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+ A leading case occurs when 
+\begin_inset Formula $\theta$
+\end_inset
+
+ can be partitioned as 
+\begin_inset Formula $\theta\equiv(\theta_{1},\theta_{2})^{\prime}$
+\end_inset
+
+, where 
+\begin_inset Formula $\theta_{1}$
+\end_inset
+
+ is 
+\begin_inset Formula $(P-Q)\times1$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta_{2}$
+\end_inset
+
+ is 
+\begin_inset Formula $Q\times1$
+\end_inset
+
+.
+ The null hypothesis is 
+\begin_inset Formula $H_{0}:\theta_{o2}=0$
+\end_inset
+
+, so that 
+\begin_inset Formula $c(\theta)\equiv\theta_{2}$
+\end_inset
+
+.
+ It is easy to see that the mean value expansion used to derive the LM statistic
+ is valid provided 
+\begin_inset Formula $\lambda_{o}\equiv\theta_{o1}$
+\end_inset
+
+ is in the interior of its parameter space under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+; 
+\begin_inset Formula $\theta_{o}\equiv(\theta_{o1},0)^{\prime}$
+\end_inset
+
+ can be on the boundary of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+ This observation is useful especially when testing hypotheses about parameters
+ that must be either nonegative or nonpositive.
+\end_layout
+
+\begin_layout Subsection*
+12.6.3 Tests Based on the Change in the Objective Function.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When both the restricted and unrestriced models are easy to estimate, a
+ test based on the change in the objective function can greatly simplify
+ the mechanics of obtaining a test statistic: we only need to obtain the
+ value of the objective function with and without the restrictions imposed.
+ However, the computational simplicity comes at a price in terms of robustness.
+ Unlike the Wald and score tests, a test based on the change in the objective
+ funciton 
+\emph on
+cannot
+\emph default
+ be made robust to general failure of assumption (39).
+ Therefore, throughout this subsection, we assume that the generalized informati
+on matrix equality holds.
+ Because the minimized objective function is invariance with respect to
+ reparmeterization, the test statistic is invariance.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We first consider the case where 
+\begin_inset Formula $\sigma_{o}^{2}=1$
+\end_inset
+
+, so that 
+\begin_inset Formula $B_{o}=A_{o}$
+\end_inset
+
+.
+ Using a second-order Taylor expansion,
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{N}}q(w_{i},\tilde{\theta})-{\displaystyle \sum_{i=1}^{N}}q(w_{i},\hat{\theta})=\left({\displaystyle \sum_{i=1}^{N}}s_{i}(\hat{\theta})\right)(\hat{\theta}-\theta_{o})+(\nicefrac{1}{2})(\tilde{\theta}-\hat{\theta})^{\prime}\left({\displaystyle \sum_{i=1}^{N}}\ddot{H}_{i}\right)(\tilde{\theta}-\hat{\theta})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\ddot{H}_{i}$
+\end_inset
+
+ is the 
+\begin_inset Formula $P\times P$
+\end_inset
+
+ Hessian evaluated at mean values between 
+\begin_inset Formula $\tilde{\theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+.
+ Therefore, under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ (using the first-order condition for 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+), we have
+\begin_inset Formula 
+\begin{equation}
+2\left[{\displaystyle \sum_{i=1}^{N}}q(w_{i},\tilde{\theta})-{\displaystyle \sum_{i=1}^{N}}q(w_{i},\hat{\theta})\right]=\left[\sqrt{N}(\tilde{\theta}-\hat{\theta})\right]^{\prime}A_{o}\left[\sqrt{N}(\tilde{\theta}-\hat{\theta})\right]+o_{p}(1)
+\end{equation}
+
+\end_inset
+
+since 
+\begin_inset Formula $N^{-1}\sum_{i=1}^{N}\ddot{H}_{i}=A_{o}+o_{p}(1)$
+\end_inset
+
+ and 
+\begin_inset Formula $\sqrt{N}(\tilde{\theta}-\hat{\theta})=O_{p}(1)$
+\end_inset
+
+.
+ In fact, it follows from equation (47) that 
+\begin_inset Formula $\sqrt{N}(\tilde{\theta}-\hat{\theta})=A_{o}^{-1}N^{-\nicefrac{1}{2}}\sum_{i=1}^{N}s_{i}(\tilde{\theta})+o_{p}(1)$
+\end_inset
+
+.
+ Plugging this into equation (50) shows that
+\begin_inset Formula 
+\begin{eqnarray}
+QLR & \equiv & 2\left[{\displaystyle \sum_{i=1}^{N}}q(w_{i},\tilde{\theta})-{\displaystyle \sum_{i=1}^{N}}q(w_{i},\hat{\theta})\right]\nonumber \\
+ & = & \left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}\tilde{s}_{i}\right)^{\prime}A_{o}^{-1}\left(N^{-\nicefrac{1}{2}}{\displaystyle \sum_{i=1}^{N}}\tilde{s}_{i}\right)+o_{p}(1)
+\end{eqnarray}
+
+\end_inset
+
+so that QLR has the same limiting distribution, 
+\begin_inset Formula $\chi_{Q}^{2}$
+\end_inset
+
+, as the LM statistic under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+ We call statistic (51) the 
+\series bold
+quasi-likelihood ratio (QLR) statistic
+\series default
+, which comes from the fact that the leading example of equation (51) is
+ the likelihood ratio statistic in the contect of maximum likelihood estimation.
+ We could call equation (51) a 
+\series bold
+criterion function statistic
+\series default
+, as it is based on the difference in the criterion or objective function
+ with and without the restrictions imposed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $\sigma_{o}^{2}\neq1$
+\end_inset
+
+, we simply divide OLR by 
+\begin_inset Formula $\hat{\sigma}^{2}$
+\end_inset
+
+, which is a consistent estimator of 
+\begin_inset Formula $\sigma_{o}^{2}$
+\end_inset
+
+ obtained from the unrestricted estimation.
+ For example, consider NLS under Assumptions NLS.1-NLS.3.
+ When equation (51) is divided by 
+\begin_inset Formula $\hat{\sigma}^{2}$
+\end_inset
+
+ in equation (42), we obtain 
+\begin_inset Formula $\nicefrac{(SSR_{r}-SSR_{ur})}{\left[\nicefrac{SSR_{ur}}{(N-P)}\right]}$
+\end_inset
+
+, where 
+\begin_inset Formula $SSR_{r}$
+\end_inset
+
+ and 
+\begin_inset Formula $SSR_{ur}$
+\end_inset
+
+ are the restricted and unrestricted sum of squared residuals.
+ Sometimes an 
+\begin_inset Formula $F$
+\end_inset
+
+version of this statistic is used instead, which is obtained by dividing
+ the chi-square version by 
+\begin_inset Formula $Q$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+F=\frac{SSR_{r}-SSR_{ur}}{SSR_{ur}}\cdot\frac{(N-P)}{Q}
+\]
+
+\end_inset
+
+This has exactly the same form as the 
+\begin_inset Formula $F$
+\end_inset
+
+ statistic from classical linear regression analysis.
+ Under the null hypothesis and homoskedasticity, 
+\begin_inset Formula $F$
+\end_inset
+
+ can be treated as having an approximate 
+\begin_inset Formula $\mathscr{F}_{Q,N-P}$
+\end_inset
+
+ distribution.
+\end_layout
+
+\end_body
+\end_document
