@@ -1,0 +1,749 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Set 2 - Vector Autoregression (VAR)
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Abstract
+The primary papers are: Sargent and Sims (Nobel Prize in 2011); Christiano
+ and Eichenbaum and Evans (1999); Leeper, Sims, and Zha (1996).
+ This set of lecture notes presents a basic overview of vector autogregression,
+ and it provides a brief explanation of the role and effects of monetary
+ policy.
+\end_layout
+
+\begin_layout Section*
+Intuition
+\end_layout
+
+\begin_layout Subsection*
+Question: What does monetary policy do?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Historical answer:
+\series default
+ Friedman-Schwartz answered this question by analyzing the sequences of
+ output and monetary aggregates.
+ The primary method used to perform this analysis is to construct a bi-variate
+ regression model 
+\begin_inset Formula $(y_{t},m_{t})$
+\end_inset
+
+ where 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ represents output and 
+\begin_inset Formula $m_{t}$
+\end_inset
+
+ represents monetary aggregates.
+\end_layout
+
+\begin_layout Subsection*
+Single Equation Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{t}=c_{y}+{\displaystyle \sum_{s=1}^{S}}\alpha_{ys}y_{t-s}+{\displaystyle \sum_{s=1}^{S}}\beta_{ys}m_{t-s}+u_{yt}
+\]
+
+\end_inset
+
+This model can be estimated by OLS to obtain the estimated coefficients
+ 
+\begin_inset Formula $(\hat{c}_{y},\{\hat{\alpha}\}_{s=1}^{S},\{\hat{\beta}_{ys}\}_{s=1}^{S})$
+\end_inset
+
+, and we may argue that 
+\begin_inset Formula $\{\hat{\beta}_{ys}\}_{s=1}^{S}$
+\end_inset
+
+ represent the effects of the monetary policy.
+ However, what is wrong with this method?
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Criticism:
+\series default
+ Endogeneity
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Observed movements in 
+\begin_inset Formula $m$
+\end_inset
+
+ may be driven by several factors, which can affect the change in the money
+ supply, 
+\begin_inset Formula $\Delta m$
+\end_inset
+
+.
+ Two possible factors are: 
+\end_layout
+
+\begin_layout Enumerate
+An unexpected policy change (pure monetary policy shock).
+\end_layout
+
+\begin_layout Enumerate
+The Fed's systematic response to macroeconomics conditions, i.e., business
+ cycles, financial shocks, inflation, current technology, etc.
+ 
+\end_layout
+
+\begin_layout Standard
+If this is true, then the coefficients, 
+\begin_inset Formula $\{\hat{\beta}_{ys}\}_{s=1}^{S}$
+\end_inset
+
+, contain the mixtures of these effects.
+ We cannot assume that correlation implies causality.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Regression of 
+\begin_inset Formula $m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For simplicity, lets assume that the monetary policy is described by
+\begin_inset Formula 
+\begin{eqnarray*}
+m_{t} & = & c_{m}+{\displaystyle \sum_{s=1}^{S}}\alpha_{ms}y_{t-s}+{\displaystyle \sum_{s=1}^{S}}\beta_{ms}m_{t-s}+u_{ms}\\
+m_{t} & = & A_{mt}+u_{ms}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $A_{mt}$
+\end_inset
+
+ captures the Fed's systematc response to past information and 
+\begin_inset Formula $u_{ms}$
+\end_inset
+
+ is the disturbance.
+ This model can be estimated by OLS to obtain the estimated coefficients
+ 
+\begin_inset Formula $(\hat{c}_{m},\{\hat{\alpha}_{ms}\}_{s=1}^{S},\{\hat{\beta}_{ms}\}_{s=1}^{S})$
+\end_inset
+
+ and the residuals 
+\begin_inset Formula $\{\hat{u}_{mt}\}_{t=1}^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Interpretation of 
+\begin_inset Formula $\hat{u}_{mt}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\hat{u}_{mt}$
+\end_inset
+
+ is closer to the pure monetary policy shock because at least effects of
+ past 
+\begin_inset Formula $y_{s}$
+\end_inset
+
+ and past 
+\begin_inset Formula $m_{s}$
+\end_inset
+
+ are washed away.
+\end_layout
+
+\begin_layout Enumerate
+It's not pure monetary policy shock because there are contemporaneous technology
+ shocks, financial shocks, etc.
+ Most likely, the Fed will react to these occurences as well.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{mt}=e_{mt}+\phi e_{yt}$
+\end_inset
+
+, where 
+\begin_inset Formula $e_{mt}$
+\end_inset
+
+ represents monetary policy shock and 
+\begin_inset Formula $e_{yt}$
+\end_inset
+
+ represents the combinations of the 
+\begin_inset Quotes eld
+\end_inset
+
+other shocks.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+The problem
+\end_layout
+
+\begin_layout Standard
+We observe 
+\begin_inset Formula $u_{mt}$
+\end_inset
+
+, but what we want to know is 
+\begin_inset Formula $e_{mt}$
+\end_inset
+
+.
+ So, we have to wash 
+\begin_inset Formula $e_{yt}$
+\end_inset
+
+ away.
+\end_layout
+
+\begin_layout Section*
+VAR
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, we construct a bi-variate regression model 
+\begin_inset Formula $(y_{t},m_{t})$
+\end_inset
+
+ where 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ represents output and 
+\begin_inset Formula $m_{t}$
+\end_inset
+
+ represents monetary aggregates.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\begin{array}{c}
+y_{t}\\
+m_{t}
+\end{array}\right) & = & \left(\begin{array}{c}
+c_{y}\\
+c_{m}
+\end{array}\right)+{\displaystyle \sum_{s=1}^{S}}\left(\begin{array}{cc}
+\alpha_{ys} & \beta_{ys}\\
+\alpha_{ms} & \beta_{ms}
+\end{array}\right)\left(\begin{array}{c}
+y_{t-s}\\
+m_{t-s}
+\end{array}\right)+\left(\begin{array}{c}
+u_{yt}\\
+u_{mt}
+\end{array}\right)\\
+u_{mt} & = & e_{mt}+\phi e_{yt}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $e_{mt}$
+\end_inset
+
+ is monetary policy shock and 
+\begin_inset Formula $e_{yt}$
+\end_inset
+
+ represents the other shocks.
+ What about 
+\begin_inset Formula $u_{yt}$
+\end_inset
+
+? Maybe 
+\begin_inset Formula $u_{yt}$
+\end_inset
+
+ does not depend on 
+\begin_inset Formula $e_{mt}$
+\end_inset
+
+ (the monetary policy has effects on the real economy with time lag).
+ If we accept this, then 
+\begin_inset Formula $u_{yt}=e_{yt}$
+\end_inset
+
+.
+ Now, we find that
+\begin_inset Formula 
+\begin{eqnarray*}
+e_{mt} & = & u_{mt}-\phi e_{yt}\\
+ & = & u_{mt}-\phi u_{yt}
+\end{eqnarray*}
+
+\end_inset
+
+ So, we can back out 
+\begin_inset Quotes eld
+\end_inset
+
+pure
+\begin_inset Quotes erd
+\end_inset
+
+ monetary policy shock.
+\begin_inset Formula 
+\[
+\hat{e}_{mt}=\hat{u}_{mt}-\phi\hat{u}_{yt}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Structural VAR (Hamilton Ch.
+ 11)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{t}=c+{\displaystyle \sum_{s=1}^{S}}A_{s}y_{t-s}+u_{t}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $A_{s}$
+\end_inset
+
+ is a 
+\begin_inset Formula $K\times K$
+\end_inset
+
+ vector of coefficients, and all the variables are 
+\begin_inset Formula $K\times1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We view elements of 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ as a mixture of structural shocks.
+ An economic interpretation of a 
+\begin_inset Quotes eld
+\end_inset
+
+structural shock
+\begin_inset Quotes erd
+\end_inset
+
+ is a pure shock that only affects one part of the economy.
+ In particular, we assume
+\begin_inset Formula 
+\[
+u_{t}=C\epsilon_{t}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $u_{t}:K\times1$
+\end_inset
+
+ are shocks in VAR, 
+\begin_inset Formula $\epsilon_{t}:K\times1$
+\end_inset
+
+ are structural shocks (unobserved; independent of monetary policy), and
+ 
+\begin_inset Formula $C:K\times K$
+\end_inset
+
+ is an unknown matrix.
+ We assume that 
+\begin_inset Formula $\mbox{Cov}(\epsilon_{t})=I_{K}$
+\end_inset
+
+, i.e., all the structrual shocks are uncorrelated.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Once we recover 
+\begin_inset Formula $C$
+\end_inset
+
+, while combining it with the the residuals from the VAR regression 
+\begin_inset Formula $(\hat{u}_{t})$
+\end_inset
+
+, we can obtain the full history of structural shocks.
+ Some useful information to know about 
+\begin_inset Formula $C$
+\end_inset
+
+ is the moment restriction
+\begin_inset Formula 
+\[
+\mbox{Cov}(u_{t})=CC^{\prime}
+\]
+
+\end_inset
+
+This covariance matrix gives us a system of 
+\begin_inset Formula $\nicefrac{K(K+1)}{2}$
+\end_inset
+
+ equations and 
+\begin_inset Formula $K^{2}$
+\end_inset
+
+ unknowns.
+ We need 
+\begin_inset Formula $\nicefrac{K(K-1)}{2}$
+\end_inset
+
+ additional equations to pin down 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ This is the 
+\begin_inset Quotes eld
+\end_inset
+
+Identification Assumption.
+\begin_inset Quotes erd
+\end_inset
+
+ One particularly common assumption is recursive identification, which assumes
+ 
+\begin_inset Formula $C$
+\end_inset
+
+ is lower triangular
+\begin_inset Formula 
+\[
+C=\left[\begin{array}{ccc}
+x &  & 0\\
+ & \ddots\\
+x &  & x
+\end{array}\right]
+\]
+
+\end_inset
+
+An innovation to the 
+\begin_inset Formula $k$
+\end_inset
+
+-th variable does not have contemporaneous effects on the 1st 
+\begin_inset Formula $(k-1)$
+\end_inset
+
+-th variables.
+ An innovation to the 
+\begin_inset Formula $(k-1)$
+\end_inset
+
+-th variables does not have contemporaneous effects on the 1st 
+\begin_inset Formula $(K-2)$
+\end_inset
+
+-th variables, and so on.
+ We now have 
+\begin_inset Formula $\mbox{Cov}(u_{t})=CC^{\prime}$
+\end_inset
+
+ 
+\begin_inset Formula $(\nicefrac{K(K+1)}{2}\ \mbox{equations})$
+\end_inset
+
+ and 
+\begin_inset Formula $C$
+\end_inset
+
+ is lower triangular 
+\begin_inset Formula $(\nicefrac{K(K-1)}{2}\ \mbox{equations})$
+\end_inset
+
+.
+ So, there are now 
+\begin_inset Formula $K^{2}$
+\end_inset
+
+ equations and 
+\begin_inset Formula $K^{2}$
+\end_inset
+
+ unknowns.
+ Therefore, it seems that we can find 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ How can we do this? Using Cholesky decomposition.
+\end_layout
+
+\begin_layout Section*
+Advancement in the Literature
+\end_layout
+
+\begin_layout Subsection*
+Identification assumptions
+\end_layout
+
+\begin_layout Subsubsection*
+Block recurisve identifcation (Christiano, Eichenbaum, Evans (1999))
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+\begin_inset Formula $y_{t}=\left(\begin{array}{c}
+x_{1t}\\
+s_{t}\\
+x_{2t}
+\end{array}\right)\begin{array}{c}
+k_{1}\times1\\
+\mbox{policy instrument}\\
+k_{2}\times1
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Long-run restriction (Blanchard and Quah (1989); Gali (?))
+\end_layout
+
+\begin_layout Standard
+Blanchard and Quah study bi-variate VAR.
+ 
+\begin_inset Formula $(\Delta Y_{t},u_{t})$
+\end_inset
+
+ where 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+ is GNP and 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ is unemployment.
+ Their identification assumption relies on 
+\begin_inset Quotes eld
+\end_inset
+
+the demand shock that does not have permanent effect on GNP.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Factor-Augmented Vector Regression (FAVAR) (Bernake and Boivin (2003); Bernake,
+ Boivin, and Eliasz (2005))
+\end_layout
+
+\begin_layout Standard
+There is a spectrum from small VAR to large VAR.
+ Small VAR conserves the degrees of freedom, but it is unlikely to span
+ the monetary authority's information set.
+ Large VAR is more realistic, but it needs more identification assumptions
+ and it has lower estimation power.
+\end_layout
+
+\begin_layout Standard
+The setup for large VAR is given by
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+F_{t}\\
+Y_{t}
+\end{array}\right)=c+{\displaystyle \sum_{s=1}^{S}}A_{s}\left(\begin{array}{c}
+F_{t-s}\\
+Y_{t-s}
+\end{array}\right)+u_{t}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+ is a 
+\begin_inset Formula $M\times1$
+\end_inset
+
+ vector of observed economic variables and 
+\begin_inset Formula $F_{t}$
+\end_inset
+
+ is a 
+\begin_inset Formula $K\times1$
+\end_inset
+
+ vector of 
+\begin_inset Quotes eld
+\end_inset
+
+factors.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $F_{t}$
+\end_inset
+
+ is extracted form a large number of time series 
+\begin_inset Formula $X_{t}:N\times1$
+\end_inset
+
+ by applying principle component analysis 
+\emph on
+(Stock and Watson (2002), JBES)
+\emph default
+.
+\end_layout
+
+\end_body
+\end_document

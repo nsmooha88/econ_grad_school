@@ -1,0 +1,933 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Set 3 - A Classical Monetary Model
+\end_layout
+
+\begin_layout Part*
+Chapter 2 of Gali (2008)
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, the dominant analytical framework to study monetary policy is the New
+ Keynesian (NK) model (presented in Gali, Chapter 3).
+ Its elements are: monopolistic competition and price stickiness.
+ Before going into the NK model, we will study a classical monetary model
+ featuring: perfect competition and fully flexible prices.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As stressed below, many of the predicitons of that classical economy are
+ strongly at odds with empirical evidence.
+ That notwithstanding, the analysis of the classical economy provides a
+ benchmark that will be useful in subsequent notes when some of its strong
+ assumptions are relaxed.
+ It also allows for the introduction of some notation, as well as assumptions
+ on preferences and techology that are used in the remainder of our discussion.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this economy, there are households (consume, supply labor); firms (produce,
+ hire labor); the central bank (sets nominal interest rates and/or the money
+ supply).
+ Following much of the recent literature, the baseline classical model developed
+ here attaches a very limited role to money.
+ This is a cashless economy, so the only explicit role played by money is
+ to serve as a unit of account.
+\end_layout
+
+\begin_layout Section*
+Households
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The representative household seeks to maximize the objective function
+\begin_inset Formula 
+\begin{equation}
+E_{0}{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}U(C_{t},N_{t})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ is the quantity consumed of the single good, and 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ denotes hours of work or employment.
+ (Note that 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ can be interpreted as the number of household members employed, assuming
+ a large household and ignoring integer constraints).
+ The period utility 
+\begin_inset Formula $U(C_{t},N_{t})$
+\end_inset
+
+ is assumed to be continuous and twice differentiable, with
+\begin_inset Formula 
+\begin{gather*}
+U_{c,t}\equiv\frac{\partial U(C_{t},N_{t})}{\partial C_{t}}>0,\ U_{cc,t}\equiv\frac{\partial^{2}U(C_{t},N_{t})}{\partial C_{t}^{2}}\leq0\\
+U_{n,t}\equiv\frac{\partial U(C_{t},N_{t})}{\partial N_{t}}\le0,\ U_{nn,t}\equiv\frac{\partial^{2}U(C_{t},N_{t})}{\partial N_{t}^{2}}\leq0
+\end{gather*}
+
+\end_inset
+
+In words, the marginal utility of consumption 
+\begin_inset Formula $U_{c,t}$
+\end_inset
+
+ is assumed to be positive and nonincreasing, while the marginal disutility
+ of labor, 
+\begin_inset Formula $-Un,t$
+\end_inset
+
+, is positive and nondecreasing.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Maximization of (1) is subject to a sequence of flow budget constraints
+ given by
+\begin_inset Formula 
+\begin{equation}
+P_{t}C_{t}+Q_{t}B_{t}\leq B_{t-1}+W_{t}N_{t}-T_{t};\ \forall\ t=0,1,\dots
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $P_{t}$
+\end_inset
+
+ is the price of the consumption good.
+ 
+\begin_inset Formula $W_{t}$
+\end_inset
+
+ denotes the nominal wage, 
+\begin_inset Formula $B_{t}$
+\end_inset
+
+ represents the quantity of one-period nominally riskless discount bonds
+ purchased in period 
+\begin_inset Formula $t$
+\end_inset
+
+ and maturing in period 
+\begin_inset Formula $t+1$
+\end_inset
+
+.
+ Each bond pays one unit of money at maturity and its price is 
+\begin_inset Formula $Q_{t}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $T_{t}$
+\end_inset
+
+ represents lump-sum additions or subtractions to period (i.e., lump-sum taxes,
+ dividends, etc.), express in nominal terms.
+ When solving the problem above, the household is assumed to take as given
+ the price of the good, the wage, and the price of bonds.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In addition to (2), it is assume that the household is subject to a solvency
+ constraint that prevents it from engaging in Ponzi-type schemes.
+ The following constraint:
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \lim_{T\rightarrow\infty}}E_{t}\left\{ B_{T}\right\} \geq0;\ \forall\ t
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Optimal Consumption and Labor Supply
+\end_layout
+
+\begin_layout Standard
+The Lagrangian is
+\begin_inset Formula 
+\[
+L=E_{0}\left[{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\{U(C_{t},N_{t})+\lambda_{t}(-P_{t}C_{t}-Q_{t}B_{t}+B_{t-1}+W_{t}N_{t}-T_{t})\}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and the first-order conditions are
+\begin_inset Formula 
+\begin{gather}
+U_{c,t}-\lambda_{t}P_{t}=0\iff\lambda_{t}=\frac{U_{c,t}}{P_{t}}\\
+U_{n,t}+\lambda_{t}W_{t}=0\\
+\lambda_{t}(-Q_{t})+E_{t}\left[\beta\lambda_{t+1}\right]=0
+\end{gather}
+
+\end_inset
+
+Combining equations (4) and (5) we have
+\begin_inset Formula 
+\begin{gather}
+U_{n,t}+\frac{1}{P_{t}}U_{c,t}W_{t}=0\nonumber \\
+-U_{N,t}=U_{c,t}\left(\frac{W_{t}}{P_{t}}\right)
+\end{gather}
+
+\end_inset
+
+Combining equations (4) and (6)
+\begin_inset Formula 
+\begin{equation}
+\frac{Q_{t}}{P_{t}}U_{c,t}=E_{t}\left[\beta\frac{U_{c,t+1}}{P_{t+1}}\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Interpretations 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+(4):
+\series default
+ 
+\begin_inset Formula $\lambda_{t}$
+\end_inset
+
+ is the marginal utility of nominal income.
+ If the household gets an extra dollar, he can purchase 
+\begin_inset Formula $(\frac{1}{P_{t}})$
+\end_inset
+
+ additional units of the consumption good, while 
+\begin_inset Formula $U_{c,t}$
+\end_inset
+
+ is his marginal utility of consumption.
+ Thus, 
+\begin_inset Formula $\left(\frac{U_{c,t}}{P_{t}}\right)$
+\end_inset
+
+ is the marginal benefit of nominal income, measured in utility.
+ It is the additional utility the household receives by obtaining one more
+ unit of income.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+(7):
+\series default
+ On the LHS, 
+\begin_inset Formula $-U_{n,t}$
+\end_inset
+
+ is the opportunity cost of working (i.e., the marginal disutility of labor).
+ On the RHS, 
+\begin_inset Formula $(\frac{W_{t}}{P_{t}})$
+\end_inset
+
+ is the additional units of the consumption good the household can purchase
+ if he works an extra hour, while 
+\begin_inset Formula $U_{c,t}$
+\end_inset
+
+ is his marginal utility of consumption.
+ Thus, the RHS shows the marginal benefit of working, measured in utility.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+(8):
+\series default
+ On the LHS, 
+\begin_inset Formula $(\frac{Q_{t}}{P_{t}})$
+\end_inset
+
+ is the additional units of the consumption good the household can purchase
+ if he sells a bond at time 
+\begin_inset Formula $t$
+\end_inset
+
+, while 
+\begin_inset Formula $U_{c,t}$
+\end_inset
+
+ is his marginal utility of consumption.
+
+\emph on
+ 
+\emph default
+Thus, the LHS is the marginal benefit you get by selling a bond in period
+ 
+\begin_inset Formula $t$
+\end_inset
+
+, measured in utility.
+ On the RHS, 
+\begin_inset Formula $E_{t}\left\{ \beta\frac{U_{c,t+1}}{P_{t+1}}\right\} $
+\end_inset
+
+ is the expected discounted marginal benefit of consumption in period 
+\begin_inset Formula $t+1$
+\end_inset
+
+, which is the additional utility the household receives if he keeps the
+ bond until period 
+\begin_inset Formula $t+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Assumption on Utility
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Much of what follows, assumes that the period utility takes the form 
+\begin_inset Formula 
+\begin{equation}
+U(C_{t},N_{t})=\frac{C_{t}^{1-\sigma}}{1-\sigma}-\frac{N_{t}^{1+\varphi}}{1+\varphi}
+\end{equation}
+
+\end_inset
+
+Thus, the consumer's optimality conditions (7) and (8) become
+\begin_inset Formula 
+\begin{eqnarray}
+N_{t}^{\varphi} & = & C_{t}^{-\sigma}\left(\frac{W_{t}}{P_{t}}\right)\\
+Q_{t} & = & E_{t}\left[\beta\left(\frac{C_{t+1}}{C_{t}}\right)^{-\sigma}\frac{P_{t}}{P_{t+1}}\right]
+\end{eqnarray}
+
+\end_inset
+
+Condition (10) can be interpreted as a competitive labor supply schedule,
+ determining the quantity of labor supplied as a function of the real wage,
+ given the marginal utility of consumption (which under the assumptions
+ is a function of consumption only).
+\end_layout
+
+\begin_layout Subsection*
+Log-Linearization
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Note, for future reference, that equation (10) can be rewritten in log-linear
+ form as
+\begin_inset Formula 
+\begin{equation}
+w_{t}-p_{t}=\sigma c_{t}+\varphi n_{t}
+\end{equation}
+
+\end_inset
+
+where the lower case letters denote the natural logs of the corresponding
+ variable (i.e., 
+\begin_inset Formula $x_{t}\equiv\log X_{t}$
+\end_inset
+
+).
+ We can also obtain a log-linear approximation of (11) around a steady state
+ with constant rates of inflation and consumption growth
+\begin_inset Formula 
+\begin{eqnarray*}
+1 & = & E_{t}\left[\beta\left(\frac{C_{t+1}}{C_{t}}\right)^{-\sigma}\frac{P_{t}}{P_{t+1}}\frac{1}{Q_{t}}\right]\\
+1 & = & E_{t}\left\{ \exp\left[-\sigma(c_{t+1}-c_{t})-\pi_{t+1}+i_{t}-\rho\right]\right\} 
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\pi_{t+1}\equiv p_{t+1}-p_{t}$
+\end_inset
+
+ is the inflation between 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $t+1$
+\end_inset
+
+, 
+\begin_inset Formula $i_{t}\equiv-\log Q_{t}$
+\end_inset
+
+, and 
+\begin_inset Formula $\rho\equiv-\log\beta$
+\end_inset
+
+ is the discount rate.
+ We now construct the first-order Taylor approximation of the RHS around
+ the zero inflation steady state, i.e., 
+\begin_inset Formula $(c_{t},c_{t+1},\pi_{t+1},i_{t})=(c,c,0,\rho)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray}
+1 & = & E_{t}\left\{ 1+(-\sigma)(c_{t+1}-c)+\sigma(c_{t}-c)-\pi_{t+1}+(i_{t}-\rho)\right\} \nonumber \\
+0 & = & E_{t}\left\{ -\sigma(c_{t+1}-c_{t})-\pi_{t+1}+i_{t}-\rho\right\} \nonumber \\
+c_{t} & = & E_{t}\left\{ c_{t+1}\right\} -\frac{1}{\sigma}\left(i_{t}-E_{t}\left\{ \pi_{t+1}\right\} -\rho\right)
+\end{eqnarray}
+
+\end_inset
+
+Notice that 
+\begin_inset Formula $i_{t}$
+\end_inset
+
+ corresponds to the log of the gross yield on the one-period bond; henceforth,
+ it is referred to as the 
+\emph on
+nominal interest rate
+\emph default
+.
+ The yield on the one period bond is defined by 
+\begin_inset Formula $Q_{t}\equiv(1+\mbox{yield})^{-1}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $i_{t}\equiv-\log Q_{t}=\log(1+\mbox{yield})\approx\mbox{yield}_{t}$
+\end_inset
+
+, where the latter approximation will be accurate as long as the nominal
+ yield is 
+\begin_inset Quotes eld
+\end_inset
+
+small.
+\begin_inset Quotes erd
+\end_inset
+
+ Similarly, 
+\begin_inset Formula $\rho$
+\end_inset
+
+ can be interpreted as the household's discount rate.
+\end_layout
+
+\begin_layout Section*
+Firms
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A representative firm is assumed whose technology is described by a production
+ function given by
+\begin_inset Formula 
+\begin{equation}
+Y_{t}=A_{t}N_{t}^{1-\alpha}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $A_{t}$
+\end_inset
+
+ represents the level of technology, and 
+\begin_inset Formula $a_{t}\equiv\log A_{t}$
+\end_inset
+
+ evolves exogenously according to some stochastic process.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Each period the firm maximizes profits
+\begin_inset Formula 
+\begin{equation}
+P_{t}Y_{t}-W_{t}N_{t}
+\end{equation}
+
+\end_inset
+
+subject to (11), taking the price and wage as given.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Maximization of (14) subject to (15) yields the optimality condition
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+P_{t}(1-\alpha)\frac{Y_{t}}{N_{t}}-W_{t} & = & 0\nonumber \\
+(1-\alpha)\frac{Y_{t}}{N_{t}} & = & \frac{W_{t}}{P_{t}}
+\end{eqnarray}
+
+\end_inset
+
+Thus, optimal labor is obtained by the firm when the marginal product of
+ labor (LHS) equals the real wage (RHS).
+ Equivalently, the marginal cost 
+\begin_inset Formula $\frac{W_{t}}{(1-\alpha)A_{t}N_{t}^{-\alpha}}$
+\end_inset
+
+ must be equated to the price 
+\begin_inset Formula $P_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Log-Linearization
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The log-linear aggregate production relationship is
+\begin_inset Formula 
+\begin{equation}
+y_{t}=a_{t}+(1-\alpha)n_{t}
+\end{equation}
+
+\end_inset
+
+We can also rewrite the firm's optimality condition in log-linear terms
+ 
+\begin_inset Formula 
+\begin{eqnarray}
+\log\left[\frac{W_{t}}{P_{t}}\right] & = & \log\left[(1-\alpha)\frac{Y_{t}}{N_{t}}\right]\nonumber \\
+\log W_{t}-\log P_{t} & = & \log\left[(1-\alpha)A_{t}N_{t}^{-\alpha}\right]\nonumber \\
+w_{t}-p_{t} & = & a_{t}-\alpha n_{t}+\log(1-\alpha)
+\end{eqnarray}
+
+\end_inset
+
+Equation (18) can be interpreted as labor demand schedule, mapping the real
+ wage into the quantity of labor demanded, give the level of technology.
+\end_layout
+
+\begin_layout Section*
+Equilibrium
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The baseline model abstracts from aggregate demand components like investment,
+ government purchases, or net exports.
+ Accordingly, the goods market clearing conditions is given by
+\begin_inset Formula 
+\begin{equation}
+y_{t}=c_{t}
+\end{equation}
+
+\end_inset
+
+Most importantly, the central bank chooses the nominal interest rate, 
+\begin_inset Formula $i_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can summarize the model using the following equations:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather*}
+\omega_{t}=\sigma c_{t}+\varphi n_{t}\\
+c_{t}=E_{t}\left\{ c_{t+1}\right\} -\frac{1}{\sigma}\left(i_{t}-E_{t}\left\{ \pi_{t+1}\right\} -\rho\right)\\
+\omega_{t}=a_{t}-\alpha n_{t}+\log(1-\alpha)\\
+y_{t}=a_{t}+(1-\alpha)n_{t}
+\end{gather*}
+
+\end_inset
+
+This is a system of 4 equations and 4 endogenous variables 
+\begin_inset Formula $(n_{t},y_{t},\omega_{t},\pi_{t+1})$
+\end_inset
+
+ where 
+\begin_inset Formula $\omega_{t}\equiv w_{t}-p_{t}$
+\end_inset
+
+ is the real wage at time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+First, we combine the optimality conditions of households and firms with
+ (19) and the log-linear aggregate production relationship and solve for
+ 
+\begin_inset Formula $n_{t}$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{eqnarray}
+\sigma\left[a_{t}+(1-\alpha)n_{t}\right]+\varphi n_{t} & = & a_{t}-\alpha n_{t}+\log(1-\alpha)\nonumber \\
+\sigma(1-\alpha)n_{t}+\varphi n_{t}+\alpha n_{t} & = & a_{t}-\sigma a_{t}+\log(1-\alpha)\nonumber \\
+\left[\sigma(1-\alpha)+\varphi+\alpha\right]n_{t} & = & (1-\sigma)a_{t}+\log(1-\alpha)\nonumber \\
+n_{t} & = & \frac{1-\sigma}{\sigma(1-\alpha)+\varphi+\alpha}a_{t}+\frac{\log(1-\alpha)}{\sigma(1-\alpha)+\varphi+\alpha}\nonumber \\
+n_{t} & = & \psi_{na}a_{t}+\nu_{n}
+\end{eqnarray}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+\psi_{na}\equiv\frac{1-\sigma}{\sigma(1-\alpha)+\varphi+\alpha}\ \mbox{and}\ \nu_{n}\equiv\frac{\log(1-\alpha)}{\sigma(1-\alpha)+\varphi+\alpha}
+\]
+
+\end_inset
+
+Equation (20) is the equilibrium level of employment as a function of the
+ level of technology in the current period.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Next, we will analyze the firm's production function
+\begin_inset Formula 
+\begin{eqnarray}
+y_{t} & = & a_{t}+(1-\alpha)n_{t}\nonumber \\
+ & = & a_{t}+(1-\alpha)\left[\psi_{na}a_{t}+\nu_{n}\right]\nonumber \\
+ & = & \left[1+(1-\alpha)\psi_{na}\right]a_{t}+(1-\alpha)\nu_{n}\nonumber \\
+ & = & \psi_{ya}a_{t}+\nu_{y}
+\end{eqnarray}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+\psi_{ya}\equiv\frac{1+\varphi}{\sigma(1-\alpha)+\varphi+\alpha}\ \mbox{and}\ \nu_{y}\equiv(1-\alpha)\nu_{n}
+\]
+
+\end_inset
+
+Equation (21) is the equilibrium level of output as a function of the level
+ of technology in the current period.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Furthermore, given the equilibrium process for output, (13) can be used
+ to determine the implied real interest rate, 
+\begin_inset Formula $r_{t}\equiv i_{t}-E_{t}\left\{ \pi_{t+1}\right\} $
+\end_inset
+
+, as 
+\begin_inset Formula 
+\begin{eqnarray}
+y_{t} & = & E_{t}\left\{ y_{t+1}\right\} -\frac{1}{\sigma}(r_{t}-\rho)\nonumber \\
+\frac{1}{\sigma}(r_{t}-\rho) & = & E_{t}\left\{ \Delta y_{t+1}\right\} \nonumber \\
+r_{t} & = & \rho+\sigma\psi_{ya}E_{t}\left[\Delta a_{t+1}\right]
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Delta y_{t+1}\equiv y_{t+1}-y_{t}$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta a_{t+1}\equiv a_{t+1}-a_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Finally, the equilibrium real wage 
+\begin_inset Formula $\omega_{t}\equiv w_{t}-p_{t}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+\omega_{t} & = & a_{t}-\alpha n_{t}+\log(1-\alpha)\\
+ & = & a_{t}-\alpha\left(\psi_{na}a_{t}+\nu_{n}\right)+\log(1-\alpha)\\
+ & = & \left(1-\alpha\psi_{na}\right)a_{t}-\left[\alpha\nu_{n}+\log(1-\alpha)\right]\\
+ & = & \psi_{\omega a}a_{t}+\nu_{\omega}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\begin_inset Formula 
+\[
+\psi_{\omega a}\equiv\frac{\sigma+\varphi}{\sigma(1-\alpha)+\varphi+\alpha}\ \mbox{and}\ \nu_{\omega}\equiv\frac{\left[\sigma(1-\alpha)+\varphi\right]\log(1-\alpha)}{\sigma(1-\alpha)+\varphi+\alpha}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Summary
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Notice that the equilibrium dynamics of employment, output, the real interest
+ rate, and the real wage rate are determined 
+\emph on
+independently of monetary policy
+\emph default
+.
+ In other words, monetary policy is 
+\emph on
+neutral
+\emph default
+ with respect to those real variables.
+ In the simple model, output and employment fluctuate in response to variations
+ in technology, which is assumed to be the only real driving force.
+ It would be straightforward to introduce other real driving forces like
+ variations in government purchases or exogenous shifts in preferences.
+ In general, real variables will be affected by all those real shocks in
+ equilibrium.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In particular, output always rises in the face of a productivity increase,
+ with the size of the increase being given by 
+\begin_inset Formula $\psi_{ya}>0$
+\end_inset
+
+.
+ The same is true for the real wage.
+ On the other hand, the sign of the employment is ambiguous depending on
+ whether 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ (which measures the strength of the wealth effect of labor supply) is larger
+ or smaller than one.
+ When 
+\begin_inset Formula $\sigma<1$
+\end_inset
+
+, the substitution effect on labor supply resulting from a higher real wage
+ dominates the negative effect caused by a smaller marginal utility of consumpti
+on, leading to an increase in employment.
+ The converse is true whenever 
+\begin_inset Formula $\sigma>1$
+\end_inset
+
+.
+ When the utility of consumption is logarithmic 
+\begin_inset Formula $(\sigma=1)$
+\end_inset
+
+, employment remains unchanged in the face of technology variations for
+ substitution and wealth effects exactly cancel one another.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Next, the response of the real interest rate depends critically on the time
+ series properties of technology.
+ If the current imporvement in technology is transitory so that 
+\begin_inset Formula $E_{t}\left\{ a_{t+1}\right\} <a_{t}$
+\end_inset
+
+, then the real rate will go down.
+ Otherwise, if technology is expected to keep improving, then 
+\begin_inset Formula $E_{t}\left\{ a_{t+1}\right\} >a_{t}$
+\end_inset
+
+ and the real rate will increase with a rise in 
+\begin_inset Formula $a_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Finally, we consider nominal variables, like inflation or the nominal interest
+ rate.
+ Not surprisingly, and in contrast with real variables, their equilibrium
+ behavior cannot be determined uniquely by real forces.
+ Instead, it requires specification of how monetary policy is conducted.
+\end_layout
+
+\end_body
+\end_document

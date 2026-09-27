@@ -1,0 +1,540 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Set 5 - Monetary Policy Design in the Basic New Keynesian Model
+\end_layout
+
+\begin_layout Part*
+Gali (2008), Chapter 4
+\end_layout
+
+\begin_layout Section*
+Class Notes: 4/17/13
+\end_layout
+
+\begin_layout Subsection*
+Basic New Keynesian
+\end_layout
+
+\begin_layout Standard
+1.
+ Monopolistic competition
+\end_layout
+
+\begin_layout Standard
+2.
+ Staggered price adjustment
+\end_layout
+
+\begin_layout Subsubsection*
+Is monopolistic competition a problem? 
+\end_layout
+
+\begin_layout Standard
+Yes, 
+\begin_inset Formula $y_{t}^{e}>y_{t}^{n}$
+\end_inset
+
+.
+ This gap is known as distortion.
+ Production is unnecessarily small due to monopoly power.
+\end_layout
+
+\begin_layout Subsubsection*
+Is there a way (i.e., a policy) to fix it?
+\end_layout
+
+\begin_layout Standard
+Yes, employment subsidies can help solve the problem.
+ This method is more like fiscal policy because the central banker has no
+ control over taxes and subsidies.
+\end_layout
+
+\begin_layout Standard
+Lets assume that the optimal employment subsidy is in place, so that the
+ natural level of output is efficient.
+ 
+\begin_inset Formula $y_{t}^{n}=y_{t}^{e}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Is staggered price adjustment a problem? If so, why?
+\end_layout
+
+\begin_layout Standard
+(i) 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ can deviate from 
+\begin_inset Formula $y_{t}^{n}$
+\end_inset
+
+.
+ The central bank helps reduce the fluctuations of 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(ii) Staggeed price adjustment causes relative price distortion.
+ To explain, the technology level of each firm is the same and firms are
+ symmetric.
+ The elasticity between any two goods for a consumer is constant.
+ As result, households decrease their purchases of goods with relatively
+ higher prices.
+ Yet, this should not happen since all the firms are symmetric.
+ When 
+\begin_inset Formula $\epsilon\rightarrow0$
+\end_inset
+
+, then the household has Leontief preferences, and it wishes to purchase
+ equal amounts of all goods.
+ However, if price distortion is present, then the household will purchase
+ less goods overall, which leads to lower utility.
+\end_layout
+
+\begin_layout Subsection*
+Central Bank's Objective
+\end_layout
+
+\begin_layout Standard
+A second-order approximation of the utility function leads to
+\begin_inset Formula 
+\[
+W=\frac{1}{2}E_{0}\left\{ {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\left[(\sigma+\varphi)\tilde{y}_{t}^{2}+\frac{\epsilon}{\lambda}\pi_{t}^{2}\right]\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $W$
+\end_inset
+
+ is the welfare loss function (see Rotenberg and Woodford).
+ The inflation rate enters into the welfare loss function due to relative
+ price distortion.
+ 
+\begin_inset Formula $W$
+\end_inset
+
+ is the central bank's objective function, which it wishes to minimize by
+ lessening the weighted average of the output gap and inflation rate.
+\end_layout
+
+\begin_layout Standard
+Lets assume that 
+\begin_inset Formula $P_{-1}(i)=P_{-1}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i\in[0,1]$
+\end_inset
+
+, i.e, there is no inherited relative price distortions.
+ The optimal policy requires that
+\begin_inset Formula 
+\begin{gather*}
+\tilde{y}_{t}=y_{t}-y_{t}^{n}=0\\
+\pi_{t}=0
+\end{gather*}
+
+\end_inset
+
+for all 
+\begin_inset Formula $t$
+\end_inset
+
+, where 
+\begin_inset Formula $\pi_{t}=0$
+\end_inset
+
+ means that there is no relative price distortion.
+\end_layout
+
+\begin_layout Standard
+Two important observations:
+\end_layout
+
+\begin_layout Standard
+1.
+ Output stability (i.e., 
+\begin_inset Formula $y_{t}=\bar{y}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+) is suboptimal.
+ Instead, output should vary one for one with the natural level of output
+ (i.e.,
+\begin_inset Formula $y_{t}=y_{t}^{n}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+2.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Price stability
+\begin_inset Quotes erd
+\end_inset
+
+ is an satisfactory outcome.
+ This is not an assumption, but a theortical prediction.
+ 
+\end_layout
+
+\begin_layout Section*
+Class Notes: 4/22/13
+\end_layout
+
+\begin_layout Subsection*
+Optimal Policy
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The optimal policy requires 
+\begin_inset Formula $\tilde{y}_{t}=y_{t}-y_{t}^{n}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi_{t}=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ The system we derived is:
+\begin_inset Formula 
+\begin{eqnarray*}
+\tilde{y}_{t} & = & E_{t}\left\{ \tilde{y}_{t+1}\right\} -\frac{1}{\sigma}\left(i_{t}-E_{t}\left\{ \pi_{t+1}\right\} -r_{t}^{n}\right)\\
+\pi_{t} & = & \beta E_{t}\left\{ \pi_{t+1}\right\} +\kappa\tilde{y}_{t}
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+Question:
+\series default
+ How can the optimal policy be implemented?
+\end_layout
+
+\begin_layout Subsubsection*
+Method 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An exogenous interest rate rule.
+\begin_inset Formula 
+\[
+\forall\ t:i_{t}=r_{t}^{n}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $r_{t}^{n}$
+\end_inset
+
+ is the natural rate of interest.
+ This implies that
+\begin_inset Formula 
+\begin{eqnarray*}
+\tilde{y}_{t} & = & E_{t}\left\{ \tilde{y}_{t+1}\right\} +\frac{1}{\sigma}E_{t}\left\{ \pi_{t+1}\right\} \\
+\pi_{t} & = & \beta E_{t}\left\{ \pi_{t+1}\right\} +\kappa\tilde{y}_{t}
+\end{eqnarray*}
+
+\end_inset
+
+So, 
+\begin_inset Formula $\tilde{y}_{t}=\pi_{t}=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+ is a solution.
+ However, the Blanchard and Kahn condition is not satisfied.
+ Thus, there are a multiplicity of equilibria.
+\end_layout
+
+\begin_layout Subsubsection*
+Method 2
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An interest rate rule with an exogenous component.
+\begin_inset Formula 
+\[
+i_{t}=r_{t}^{n}+\phi_{\pi}\pi_{t}+\phi_{y}\tilde{y}_{t}
+\]
+
+\end_inset
+
+Substitute 
+\begin_inset Formula $i$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\tilde{y}_{t} & = & E_{t}\left\{ \tilde{y}_{t+1}\right\} -\frac{1}{\sigma}\left(\phi_{\pi}+\phi_{y}\tilde{y}_{t}-E_{t}\left\{ \pi_{t+1}\right\} \right)\\
+\pi_{t} & = & \beta E_{t}\left\{ \pi_{t+1}\right\} +\kappa\tilde{y}_{t}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula $\tilde{y}_{t}=\pi_{t}=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+ is a solution.
+ It is a unique solution if
+\begin_inset Formula 
+\[
+\kappa(\phi_{\pi}-1)+(1-\beta)\phi_{y}>0
+\]
+
+\end_inset
+
+The monetary authority should respond to deviations of 
+\begin_inset Formula $\pi_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ from their target levels with sufficient strength.
+ But, since 
+\begin_inset Formula $\pi_{t}=\tilde{y}_{t}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+, then the central bank ends up setting 
+\begin_inset Formula $i_{t}=r_{t}^{n}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+ ex post.
+ It is the presence of a 
+\begin_inset Quotes eld
+\end_inset
+
+threat
+\begin_inset Quotes erd
+\end_inset
+
+ (i.e., 
+\begin_inset Formula $\phi_{\pi}+\phi_{y}\tilde{y}_{t}$
+\end_inset
+
+) that achieves 
+\begin_inset Formula $\pi_{t}=\tilde{y}_{t}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+However, there is a 
+\begin_inset Quotes eld
+\end_inset
+
+problem
+\begin_inset Quotes erd
+\end_inset
+
+ in New Keynesian models.
+ In the basic New Keynesian model, the central bank does not face a meaningful
+ policy trade-off between inflation stabilization and output gap stabilization.
+ To elaborate, if 
+\begin_inset Formula $\pi_{t}=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+ is achieved, then the New Keynesian Phillips Curve implies that 
+\begin_inset Formula $\tilde{y}_{t}=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ So, strict inflation targeting is the best policy.
+ The model is too trivial because achieving the optimal policy is undemanding
+ compared to what the central bank does in reality.
+\end_layout
+
+\begin_layout Subsubsection*
+Ways To Go
+\end_layout
+
+\begin_layout Enumerate
+Intoducing cost push shock (Gali Chapter 5).
+\begin_inset Formula 
+\[
+\pi_{t}=\beta E_{t}\left\{ \pi_{t+1}\right\} +\kappa\tilde{y}_{t}+u_{t}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ is cost push shock.
+ This exogenous factor causes the New Keynesian Phillips Curve to fluctuate,
+ which ends up affecting the inflation expectation.
+ Thus, in each period, the central bank experiences a different nontrivial
+ trade-off problem of choosing the combination of 
+\begin_inset Formula $(\pi_{t},\tilde{y}_{t})$
+\end_inset
+
+ that best achieves stabilization.
+\end_layout
+
+\begin_layout Enumerate
+Introducing wage stickiness (Gali Chapter 6).
+\end_layout
+
+\begin_layout Enumerate
+Zero lower bound.
+ We will never see a negative interest rate.
+\end_layout
+
+\end_body
+\end_document

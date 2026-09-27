@@ -1,0 +1,1900 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Set 1 - The Real Business Cycle
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Abstract
+The primary paper is King and Rebelo (2000).
+ This set of lecture notes presents a basic overview of the model, as well
+ as providing an alternative solution method to Dyanmic Programming, known
+ as the Perturbation Method.
+\end_layout
+
+\begin_layout Section*
+Preliminaries
+\end_layout
+
+\begin_layout Standard
+The model is established by combining several components 
+\begin_inset Formula 
+\begin{equation}
+\mbox{Preferences:}\ E_{0}{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(C_{t},L_{t})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $0<\beta<1$
+\end_inset
+
+, 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+ is a utility funciton for a representative agent, 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ is consumption at time 
+\begin_inset Formula $t$
+\end_inset
+
+, and 
+\begin_inset Formula $L_{t}$
+\end_inset
+
+ is leisure at time 
+\begin_inset Formula $t$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mbox{Endowments:}\ N_{t}+L_{t}=1
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ is work at time 
+\begin_inset Formula $t$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mbox{Technology:}\ Y_{t}=A_{t}F(K_{t},N_{t}X_{t})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+ is output at time 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $A_{t}$
+\end_inset
+
+ is a productivity shock at time 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $F(\cdot)$
+\end_inset
+
+ is a production function with constant returns to scale, 
+\begin_inset Formula $K_{t}$
+\end_inset
+
+ is capital at time 
+\begin_inset Formula $t$
+\end_inset
+
+, and 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ is the deterministic component of productivity where we can write 
+\begin_inset Formula $X_{t+1}=\gamma X_{t}$
+\end_inset
+
+ with 
+\begin_inset Formula $\gamma>1$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ is known as 
+\begin_inset Quotes eld
+\end_inset
+
+labor augmenting growth.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+\mbox{Resource Constraint:}\ Y_{t}=C_{t}+I_{t}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $I_{t}$
+\end_inset
+
+ is investment at time 
+\begin_inset Formula $t$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mbox{Capital Accumulation Rule:}\ K_{t+1}=I_{t}+(1-\delta)K_{t}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\delta$
+\end_inset
+
+ is the depreciation rate of capital
+\begin_inset Formula 
+\begin{equation}
+\mbox{Initial Conditions:}\ K_{0}>0,X_{0}>0,A_{0}>0\ \mbox{are given}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+We can frame the RBC model into mathematical form, and we determine its
+ solution by solving the following constrained maximization problem:
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & E_{0}\left[{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(C_{t},L_{t})\right]\\
+\mbox{s.t.} & N_{t}+L_{t}=1\\
+ & Y_{t}=A_{t}K_{t}^{1-\alpha}(N_{t}X_{t})^{\alpha}\\
+ & X_{t+1}=\gamma X_{t}\\
+ & Y_{t}=C_{t}+I_{t}\\
+ & K_{t+1}=I_{t}+(1-\delta)K_{t}\\
+ & K_{0}>0,X_{0}>0,A_{0}>0\ \mbox{are given}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Questions to Consider
+\end_layout
+
+\begin_layout Subsubsection*
+1.
+ Where are the factor markets?
+\end_layout
+
+\begin_layout Standard
+We can introduce them if we want, but such modification does not change
+ predictions about the endogenous variables, i.e., 
+\begin_inset Formula $(C_{t},I_{t},N_{t},\ldots)$
+\end_inset
+
+.
+ This is a consequence of the Fundamental Welfare Theorems of Economics.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+2.
+ Why is there a representative agent, as opposed to a continuum of consumers?
+\end_layout
+
+\begin_layout Standard
+In this model, we are assuming markets are complete.
+\end_layout
+
+\begin_layout Section*
+Summarizing the Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We wish to maximize expected utility subject to the production technology
+ and feasibility constraints of the economy.
+ We can use dynamic programming to solve this problem.
+ However, this method can take some time due to value function iteration
+ (VFI).
+ Consequently, we may need to apply other techniques to find a solution.
+ In this class, we will learn how to solve the model using local methods.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+First, we setup the Lagrangian and derive the first-order conditions.
+ An economic interpretation of each first-order condition has been provided.
+ The Lagrangian is given by
+\begin_inset Formula 
+\begin{equation}
+\mathscr{L}=E_{0}\left[{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\left\{ u(C_{t},1-N_{t})+\lambda_{t}(-C_{t}-K_{t+1}+(1-\delta)K_{t}+A_{t}K_{t}^{1-\alpha}(N_{t}X_{t})^{\alpha})\right\} \right]
+\end{equation}
+
+\end_inset
+
+and the first order conditions are listed below.
+\begin_inset Formula 
+\begin{equation}
+(C_{t}):\ u_{c}(t)-\lambda_{t}=0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $\lambda_{t}$
+\end_inset
+
+ known as the shadow price.
+ It measures the marginal utility of consumption at time 
+\begin_inset Formula $t$
+\end_inset
+
+, i.e., the approximate additional utility obtained from an extra unit of
+ consumption.
+\begin_inset Formula 
+\begin{equation}
+(N_{t}):\ u_{L}(t)(-1)+\lambda_{t}\alpha\frac{Y_{t}}{N_{t}}=0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $-u_{L}(t)$
+\end_inset
+
+ is the marginal disutility of labor, i.e., it is the opportunity cost of
+ losing a unit of leisure.
+ 
+\begin_inset Formula $\lambda_{t}$
+\end_inset
+
+ is the approximate additional utility obtained from an extra unit of consumptio
+n, while 
+\begin_inset Formula $\alpha\frac{Y_{t}}{N_{t}}$
+\end_inset
+
+ is the marginal product of labor (MPL).
+ So, 
+\begin_inset Formula $\lambda_{t}\alpha\frac{Y_{t}}{X_{t}}$
+\end_inset
+
+ is the marginal utility product of labor, and it is approximately how much
+ utility the agent gains when he works an extra hour.
+ Thus, the marginal cost of labor equals the marginal benefit of labor.
+\begin_inset Formula 
+\begin{equation}
+(K_{t+1}):\ \lambda_{t}(-1)+E_{t}\left[\beta\lambda_{t+1}\left((1-\alpha)\frac{Y_{t+1}}{K_{t+1}}+(1-\delta)\right)\right]=0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(-\lambda_{t})$
+\end_inset
+
+ is the approximate reduction in utility if one unit of consumption is taken
+ away for investment, i.e., the marginal cost of investment.
+ 
+\begin_inset Formula $(1-\alpha)\frac{Y_{t+1}}{K_{t+1}}$
+\end_inset
+
+ is the marginal product of capital (MPK).
+ 
+\begin_inset Formula $(1-\delta)$
+\end_inset
+
+ tells us how much capital is left over after production.
+ 
+\begin_inset Formula $\lambda_{t+1}$
+\end_inset
+
+ is the approximate additional utility obtained from an extra unit of consumptio
+n in time 
+\begin_inset Formula $t+1$
+\end_inset
+
+.
+ Because the expression on the right side of the equation takes place in
+ 
+\begin_inset Formula $t+1$
+\end_inset
+
+, we must multiply it by the discount factor, 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Also, we take expectation of the right side because what happens in 
+\begin_inset Formula $t+1$
+\end_inset
+
+ is random.
+ So, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $E_{t}\left[\beta\lambda_{t+1}\left((1-\alpha)\frac{Y_{t+1}}{K_{t+1}}+(1-\delta)\right)\right]$
+\end_inset
+
+ can be thought of as the discounted expected marginal benefit of investment,
+ measured in utility.
+ Thus, the marginal cost of investment equals the discounted expected marginal
+ benefit of investment.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Using the feasibility constraints and the three first-order conditions,
+ we can summarize the model as follows:
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{L}(t) & = & u_{C}(t)\alpha\frac{Y_{t}}{N_{t}}\\
+1 & = & E_{t}\left[\beta\frac{u_{C}(t+1)}{u_{C}(t)}\left((1-\alpha)\frac{Y_{t+1}}{K_{t+1}}+(1-\delta)\right)\right]\\
+C_{t}+I_{t} & = & Y_{t}\\
+K_{t+1} & = & (1-\delta)K_{t}+I_{t}\\
+Y_{t} & = & A_{t}K_{t}^{1-\alpha}(N_{t}X_{t})^{\alpha}\\
+1 & = & N_{t}+L_{t}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, we have summarized the model into a concise system of 6 equations
+ and 6 endogenous variables 
+\begin_inset Formula $\{Y_{t},N_{t},L_{t},K_{t+1},C_{t},I_{t}\}$
+\end_inset
+
+, while 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $A_{t}$
+\end_inset
+
+ are assumed to be exogenous.
+ Some of the difficulties that can arise from this reduced version are:
+\end_layout
+
+\begin_layout Enumerate
+Some equations are nonlinear
+\end_layout
+
+\begin_layout Enumerate
+Variables are 
+\begin_inset Quotes eld
+\end_inset
+
+dated
+\begin_inset Quotes erd
+\end_inset
+
+, i.e., 
+\begin_inset Formula $E_{t}=[\cdot]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+There is a trend term, 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Detrending the Model
+\end_layout
+
+\begin_layout Subsection*
+Steady State Growth
+\end_layout
+
+\begin_layout Standard
+Here are two important facts to consider regarding the endogenous variables
+ in the real world:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Y_{t},C_{t},I_{t},K_{t}$
+\end_inset
+
+ grow, more or less, at a constant rate
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ is, more or less, constant
+\end_layout
+
+\begin_layout Subsubsection*
+Question: Does out model economy exhibit such a pattern?
+\end_layout
+
+\begin_layout Standard
+A way to check this is to divide all the trending variables by 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ and see if we get a new system without 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+.
+ So, we will detrend the necessary endogenous variables, 
+\begin_inset Formula $\{Y_{t},C_{t},I_{t},K_{t}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Production Functio
+\series default
+n
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+Y_{t} & = & A_{t}K_{t}^{1-\alpha}(N_{t}X_{t})^{\alpha}\nonumber \\
+X_{t}\left(\frac{Y_{t}}{X_{t}}\right) & = & =A_{t}\left(\frac{K_{t}}{X_{t}}\right)^{1-\alpha}X_{t}^{1-\alpha}\left(N_{t}X_{t}\right)^{\alpha}\nonumber \\
+X_{t}y_{t} & = & A_{t}k_{t}^{1-\alpha}X_{t}^{1-\alpha}(N_{t}X_{t})^{\alpha}\nonumber \\
+y_{t} & = & A_{t}k_{t}^{1-\alpha}N_{t}^{\alpha}
+\end{eqnarray}
+
+\end_inset
+
+
+\series medium
+where 
+\begin_inset Formula $y_{t}=\frac{Y_{t}}{X_{t}}$
+\end_inset
+
+ and 
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $k_{t}=\frac{K_{t}}{X_{t}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Capital Accumulation Rule
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+K_{t+1} & = & (1-\delta)K_{t}+I_{t}\nonumber \\
+X_{t+1}\frac{K_{t+1}}{X_{t+1}} & = & (1-\delta)\frac{K_{t}}{X_{t}}X_{t}+\frac{I_{t}}{X_{t}}X_{t}\nonumber \\
+X_{t+1}k_{t+1} & = & (1-\delta)k_{t}X_{t}+i_{t}X_{t}\nonumber \\
+\frac{X_{t+1}}{X_{t}}k_{t+1} & = & (1-\delta)k_{t}+i_{t}\nonumber \\
+\gamma k_{t+1} & = & (1-\delta)k_{t}+i_{t}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $\gamma=\frac{X_{t+1}}{X_{t}}$
+\end_inset
+
+, 
+\begin_inset Formula $k_{t+1}=\frac{K_{t+1}}{X_{t+1}}$
+\end_inset
+
+, 
+\begin_inset Formula $k_{t}=\frac{K_{t}}{X_{t}}$
+\end_inset
+
+, and 
+\begin_inset Formula $i_{t}=\frac{I_{t}}{X_{t}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Resource Constraint
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+C_{t}+I_{t} & = & Y_{t}\nonumber \\
+X_{t}\frac{C_{t}}{X_{t}}+X_{t}\frac{I_{t}}{X_{t}} & = & X_{t}\frac{Y_{t}}{X_{t}}\nonumber \\
+X_{t}(c_{t}+i_{t}) & = & X_{t}y_{t}\nonumber \\
+c_{t}+i_{t} & = & y_{t}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $c_{t}=\frac{C_{t}}{X_{t}}$
+\end_inset
+
+, 
+\begin_inset Formula $i_{t}=\frac{I_{t}}{X_{t}}$
+\end_inset
+
+, and 
+\begin_inset Formula $y_{t}=\frac{Y_{t}}{X_{t}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Equations Involving Utility
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{L}(t) & = & u_{C}(t)\alpha\frac{Y_{t}}{N_{t}}\\
+1 & = & E_{t}\left[\beta\frac{u_{C}(t+1)}{u_{C}(t)}\left((1-\alpha)\frac{Y_{t+1}}{K_{t+1}}+1-\delta\right)\right]
+\end{eqnarray*}
+
+\end_inset
+
+We need restrictions on 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+.
+ One particularly important class: King-Plasser-Rebelo (KPR) utility function
+\begin_inset Formula 
+\begin{equation}
+u(C,L)=\begin{cases}
+\frac{1}{1-\sigma}\left(\left[C\nu(L)\right]^{1-\sigma}-1\right) & \mbox{if}\ \sigma\neq1\\
+\ln C+\nu(L) & \mbox{if}\ \sigma=1
+\end{cases}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\nu(\cdot)$
+\end_inset
+
+ is an increasing and concave function.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $\sigma$
+\end_inset
+
+ represents the relative risk aversion of the agent, 
+\begin_inset Formula $r_{R}^{u}(C)=-C\frac{u^{\prime\prime}(C)}{u{}^{\prime}(C)}$
+\end_inset
+
+, which is equivalent to 
+\begin_inset Formula $\frac{d\log(u^{\prime}(C))}{d\log C}$
+\end_inset
+
+.
+ As 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ grows, the agent's aversion to risk escalates since the utility function
+ becomes more concave.
+ In addition, increasing 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ causes a larger percentage change in marginal utility when there is a percentag
+e change in consumption.
+ 
+\begin_inset Formula 
+\[
+\frac{d\ln\left(\frac{C_{t+1}}{C_{t}}\right)}{d\ln\left(\frac{u^{\prime}(C_{t+1})}{u^{\prime}(C_{t})}\right)}=-\frac{1}{\sigma}\iff\frac{d\ln(MU)}{d\ln C}=-\sigma
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\frac{1}{\sigma}$
+\end_inset
+
+ is also considered to be the intertemporal elasticity of substitution,
+ which captures the sensitivity of the intertemporal substitution, 
+\begin_inset Formula $\frac{c_{t+1}}{c_{t}}$
+\end_inset
+
+, to the interest rate.
+ Thus, as 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ increases, consumption becomes less responsive to the interest rate.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, we plug the utility function into the first equation by taking the
+ proper derivatives, and then we detrend the necessary variables:
+\begin_inset Formula 
+\begin{eqnarray}
+\left[C_{t}\nu(L_{t})\right]^{-\sigma}C_{t}\nu^{\prime}(L_{t}) & = & \left[C_{t}\nu(L_{t})\right]^{-\sigma}\nu(L_{t})\alpha\frac{Y_{t}}{N_{t}}\nonumber \\
+C_{t}\nu^{\prime}(L_{t}) & = & \nu(L_{t})\alpha\frac{Y_{t}}{N_{t}}\nonumber \\
+c_{t}\nu^{\prime}(L_{t}) & = & \nu(L_{t})\alpha\frac{y_{t}}{N_{t}}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $c_{t}=\frac{C_{t}}{X_{t}}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{t}=\frac{Y_{t}}{X_{t}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Finally, we plug the utility function into the intertemporal condition by
+ taking the proper derivatives, and then we detrend the necessary variables:
+\begin_inset Formula 
+\begin{eqnarray}
+1 & = & E_{t}\left[\beta\frac{u_{C}(t+1)}{u_{C}(t)}\left((1-\alpha)\frac{Y_{t+1}}{K_{t+1}}+1-\delta\right)\right]\nonumber \\
+\frac{u_{C}(t+1)}{u_{C}(t)} & = & \frac{\left[C_{t+1}\nu(L_{t+1})\right]^{-\sigma}\nu(L_{t+1})}{\left[C_{t}\nu(L_{t})\right]^{-\sigma}\nu(L_{t})}\nonumber \\
+ & = & \left(\frac{C_{t+1}}{C_{t}}\right)^{-\sigma}\left(\frac{\nu(L_{t+1})}{\nu(L_{t})}\right)^{1-\sigma}\nonumber \\
+ & = & \left(\frac{X_{t+1}c_{t+1}}{X_{t}c_{t}}\right)^{-\sigma}\left(\frac{\nu(L_{t+1})}{\nu(L_{t})}\right)^{1-\sigma}\nonumber \\
+ & = & \left(\gamma\frac{c_{t+1}}{c_{t}}\right)^{-\sigma}\left(\frac{\nu(L_{t+1})}{\nu(L_{t})}\right)^{1-\sigma}\nonumber \\
+1 & = & E_{t}\left[\beta\left(\gamma\frac{c_{t+1}}{c_{t}}\right)^{-\sigma}\left(\frac{\nu(L_{t+1})}{\nu(L_{t})}\right)^{1-\sigma}\left((1-\alpha)\frac{y_{t+1}}{k_{t+1}}+1-\delta\right)\right]
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $c_{t}=\frac{C_{t}}{X_{t}}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{t+1}=\frac{C_{t+1}}{X_{t+1}}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{t+1}=\frac{Y_{t+1}}{X_{t+1}}$
+\end_inset
+
+, 
+\begin_inset Formula $k_{t+1}=\frac{K_{t+1}}{X_{t+1}}$
+\end_inset
+
+, and 
+\begin_inset Formula $\gamma=\frac{X_{t+1}}{X_{t}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+Lets see what will happen if 
+\begin_inset Formula $u(C_{t},L_{t})=\frac{C_{t}^{1-\sigma}}{1-\sigma}+L_{t}$
+\end_inset
+
+ with 
+\begin_inset Formula $\sigma\neq1$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{L}(t) & = & u_{C}(t)\alpha\frac{Y_{t}}{N_{t}}\\
+1 & = & C_{t}^{-\sigma}\alpha\frac{Y_{t}}{N_{t}}\\
+ & = & \left(X_{t}c_{t}\right)^{-\sigma}\alpha\frac{X_{t}y_{t}}{N_{t}}\\
+ & = & \left(X_{t}\right)^{1-\sigma}c_{t}^{-\sigma}\alpha\frac{y_{t}}{N_{t}}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $X_{t}^{1-\sigma}$
+\end_inset
+
+ does not disapper.
+ Therefore, we are not able to use 
+\begin_inset Formula $u(C_{t},L_{t})=\frac{C_{t}^{1-\sigma}}{1-\sigma}+L_{t}$
+\end_inset
+
+ with 
+\begin_inset Formula $\sigma\neq1$
+\end_inset
+
+ as our utility function since labor augmenting growth, i.e., 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+, does not disappear.
+\end_layout
+
+\begin_layout Subsubsection*
+Explanation for KPR Utility
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{u_{L}(t)}{u_{C}(t)}=\alpha\frac{Y_{t}}{N_{t}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The left hand side is the marginal rate of substitution of leisure for consumpti
+on.
+ It represents how much the household values leisure time in terms of consumptio
+n.
+\end_layout
+
+\begin_layout Itemize
+The right hand side is the marginal product of labor, and it is the market
+ price of work.
+ It grows as technology grows, and it should grow at the same rate of GDP.
+ 
+\end_layout
+
+\begin_layout Itemize
+The KPR utility function makes the MRS grow at a constant rate and at the
+ same rate as labor productivity.
+ It implies exactly offsetting income and substitution effects of wage changes
+ on labor supply.
+\end_layout
+
+\begin_layout Subsection*
+The Detrended System
+\end_layout
+
+\begin_layout Standard
+Recall that we have derived the first-order conditions and detrended them
+ to obtain:
+\begin_inset Formula 
+\begin{eqnarray*}
+c_{t}\nu^{\prime}(L_{t}) & = & \nu(L_{t})\alpha\frac{y_{t}}{N_{t}}\\
+1 & = & E_{t}\left[\beta\left(\beta\gamma\frac{c_{t+1}}{c_{t}}\right)^{-\sigma}\left(\frac{\nu(L_{t+1})}{\nu(L_{t})}\right)^{1-\sigma}\left((1-\alpha)\frac{y_{t+1}}{k_{t+1}}+1-\delta\right)\right]\\
+c_{t}+i_{t} & = & y_{t}\\
+\gamma k_{t+1} & = & (1-\delta)k_{t}+i_{t}\\
+y_{t} & = & A_{t}k_{t}^{1-\alpha}N_{t}^{\alpha}\\
+1 & = & N_{t}+L_{t}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Here, we have a system of 6 equations and 6 endogenous variables 
+\begin_inset Formula $(L_{t},c_{t},y_{t},N_{t},k_{t},i_{t})$
+\end_inset
+
+.
+ We want to know find the optimal 
+\begin_inset Formula $(L_{t},c_{t},y_{t},N_{t},i_{t})$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $(k_{t},A_{t})$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $k_{t}$
+\end_inset
+
+ is an endogenous state variable.
+ As stated before, we can always apply dynamic programming to solve the
+ model by finding the optimal value and policy functions.
+ The 6 equations above provide very useful information that we wish to utilize,
+ but how, exactly? 
+\end_layout
+
+\begin_layout Section*
+Simplified Model
+\end_layout
+
+\begin_layout Standard
+Let us work with a simplified version of the RBC model
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\ln(C_{t})\\
+\mbox{s.t.} & C_{t}+K_{t+1}=K_{t}^{1-\alpha}+(1-\delta)K_{t}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+In this simple model, there are no stochastic shocks, no endogenous labor
+ supply, and no deterministic variable.
+ The Lagrangian of this constrained maximizaiton problem is:
+\begin_inset Formula 
+\begin{equation}
+L={\displaystyle \sum_{t=1}^{\infty}}\beta^{t}\left[\ln(C_{t})+\lambda_{t}\left(-C_{t}-K_{t+1}+K_{t}^{1-\alpha}+(1-\delta)K_{t}\right)\right]
+\end{equation}
+
+\end_inset
+
+and the first order conditions are:
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{1}{C_{t}}-\lambda_{t} & = & 0\\
+-\lambda_{t}+\beta\lambda_{t+1}\left((1-\alpha)K_{t+1}^{-\alpha}+1-\delta\right) & = & 0\\
+{\displaystyle \lim_{t\rightarrow\infty}}\ \beta^{t}\lambda_{t}K_{t} & \leq & 0\ \mbox{(Transversality Condition)}
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Simplifying the conditions above, we get:
+\begin_inset Formula 
+\begin{eqnarray}
+1 & = & \beta\frac{C_{t}}{C_{t+1}}\left[(1-\alpha)K_{t+1}^{-\alpha}+1-\delta\right]\ \mbox{(Euler Equation; Intertemporal Condition)}\\
+K_{t+1}-K_{t} & = & K_{t}^{1-\alpha}-C_{t}-\delta K_{t}\ \mbox{(Resource Constraint)}
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset Formula $\left[(1-\alpha)K_{t+1}^{-\alpha}+1-\delta\right]$
+\end_inset
+
+ can be thought of as the gross real interest rate, and it is a function
+ of how much capital is available in period 
+\begin_inset Formula $t+1$
+\end_inset
+
+.
+ More captial means that the interest rate is low because of the production
+ function.
+ If interest rate is high, then 
+\begin_inset Formula $\frac{C_{t}}{C_{t+1}}\leq1\iff C_{t+1}\geq C_{t}$
+\end_inset
+
+.
+ So, a higher interst rate leads to a higher consumption growth rate.
+ Note, 
+\begin_inset Formula $\Delta C_{t+1}\equiv C_{t+1}-C_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta K_{t+1}\equiv K_{t+1}-K_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What we want to find the optimal choice 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ as a function of state 
+\begin_inset Formula $K_{t}$
+\end_inset
+
+.
+ The household wants to choose an initial point 
+\begin_inset Formula $(K_{0},C_{0})$
+\end_inset
+
+ on the stable arm.
+ We have two variables 
+\begin_inset Formula $(C_{t},K_{t})$
+\end_inset
+
+ and two equations, the combined Euler Equation and resource constraint.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+From the resource constratint, we obtain the transition rule for capital:
+\begin_inset Formula 
+\begin{eqnarray}
+K_{t}^{1-\alpha}+(1-\delta)K_{t} & = & C_{t}+K_{t+1}\nonumber \\
+K_{t}^{1-\alpha}+K_{t}-\delta K_{t} & = & C_{t}+K_{t+1}\nonumber \\
+K_{t}^{1-\alpha}-\delta K_{t}-C_{t} & = & K_{t+1}-K_{t}\equiv\triangle K_{t+1}\nonumber \\
+\triangle K_{t+1} & = & K_{t}^{1-\alpha}-\delta K_{t}-C_{t}
+\end{eqnarray}
+
+\end_inset
+
+Note, 
+\begin_inset Formula $\Delta K_{t+1}=0\iff C_{t}=K_{t}^{1-\alpha}-\delta K_{t}-C_{t}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\Delta K_{t+1}>0\iff C_{t}<K_{t}^{1-\alpha}-\delta K_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta K_{t+1}<0\iff C_{t}>K_{t}^{1-\alpha}-\delta K_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, at the steady state, 
+\begin_inset Formula $K_{t+1}=K_{t}=K_{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $C_{t+1}=C_{t}=C_{*}$
+\end_inset
+
+.
+ So, from the Euler equation, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+1 & = & \beta\left[(1-\alpha)K_{*}^{-\alpha}+1-\delta\right]\\
+K_{*} & = & \left[\frac{1}{\beta(1-\alpha)}+\frac{\delta-1}{1-\alpha}\right]^{-\frac{1}{\alpha}}
+\end{eqnarray*}
+
+\end_inset
+
+Note, at the steady stead 
+\begin_inset Formula $\Delta C_{t+1}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta K_{t+1}=0$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $C_{t+1}<C_{t}\iff K_{t+1}>K_{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $C_{t+1}>C_{t}\iff K_{t+1}<K_{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Log-Linearization
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Instead of doing a global analysis of the phase diagram, we will focus on
+ the local behavior at the intersection of 
+\begin_inset Formula $\Delta C_{t+1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta K_{t+1}$
+\end_inset
+
+, which is the steady state point 
+\begin_inset Formula $(K^{*},C^{*})$
+\end_inset
+
+.
+ We will linearize the Euler Equation and the resource constraint by the
+ first order Taylor expansion.
+ (We disregard higher order terms because we are only concerned with local
+ behavior).
+\end_layout
+
+\begin_layout Subsubsection*
+Log-Linearlize the Euler Equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $F(C_{t},C_{t+1},K_{t+1})=\beta\frac{C_{t}}{C_{t+1}}\left[(1-\alpha)K_{t+1}^{-\alpha}+1-\delta\right]=1$
+\end_inset
+
+.
+ The first-order Taylor approximation of 
+\begin_inset Formula $F(\cdot)$
+\end_inset
+
+ around 
+\begin_inset Formula $(C^{*},C^{*},K^{*})$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{eqnarray*}
+F(C_{t},C_{t+1},K_{t+1}) & \approx & F(C^{*},C^{*},K^{*})\\
+ &  & +F_{1}(C^{*},C^{*},K^{*})(C_{t}-C^{*})\\
+ &  & +F_{2}(C^{*},C^{*},K^{*})(C_{t+1}-C^{*})\\
+ &  & +F_{3}(C^{*},C^{*},K^{*})(K_{t+1}-K^{*})\\
+F(C^{*},C^{*},K^{*}) & = & 1\\
+F_{1}(C^{*},C^{*},K^{*}) & = & \frac{1}{C^{*}}\\
+F_{2}(C^{*},C^{*},K^{*}) & = & \left(-\frac{1}{C^{*}}\right)\\
+F_{3}(C^{*},C^{*},K^{*}) & = & \beta(1-\alpha)(-\alpha)(K^{*})^{-\alpha-1}
+\end{eqnarray*}
+
+\end_inset
+
+Plugging these expression into the Taylor approximation we get:
+\begin_inset Formula 
+\begin{eqnarray*}
+1 & \approx & +\frac{1}{C^{*}}(C_{t}-C^{*})-\frac{1}{C^{*}}(C_{t+1}-C^{*})-\beta(1-\alpha)\alpha(K^{*})^{-\alpha-1}(K_{t+1}-K^{*})\\
+0 & \approx & \frac{C_{t}-C^{*}}{C^{*}}-\frac{C_{t+1}-C^{*}}{C^{*}}-\beta(1-\alpha)\alpha(K^{*})^{-\alpha}\frac{K_{t+1}-K^{*}}{K^{*}}
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\log(1+x)\approx x$
+\end_inset
+
+ if 
+\begin_inset Formula $x\approx0$
+\end_inset
+
+, then we can approximate 
+\begin_inset Formula $\frac{C_{t}-C^{*}}{C^{*}}\approx\log\left(\frac{C_{t}}{C^{*}}\right)$
+\end_inset
+
+.
+ When apply this approximation method to the Taylor approximation, we get:
+\begin_inset Formula 
+\begin{equation}
+0\approx\hat{c}_{t}-\hat{c}_{t+1}-\beta(1-\alpha)\alpha(K^{*})^{-\alpha}\hat{k}_{t+1}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{c}_{t}=\log\left(\frac{C_{t}}{C^{*}}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{c}_{t+1}=\log\left(\frac{C_{t+1}}{C^{*}}\right)$
+\end_inset
+
+, and 
+\begin_inset Formula $\hat{k}_{t+1}=\log\left(\frac{K_{t+1}}{K^{*}}\right)$
+\end_inset
+
+.
+ This is the log-linearlized version of the Euler Equation.
+\end_layout
+
+\begin_layout Subsubsection*
+Log-Linearize the Resource Constraint
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $G(C_{t},K_{t},K_{t+1})=K_{t+1}+C_{t}-K_{t}^{1-\alpha}+(1-\delta)K_{t}=0$
+\end_inset
+
+.
+ The first-order Taylor approximation of 
+\begin_inset Formula $G(\cdot)$
+\end_inset
+
+ around 
+\begin_inset Formula $(C^{*},K^{*},K^{*})$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{eqnarray*}
+G(C_{t},K_{t},K_{t+1}) & \approx & G(C^{*},K^{*},K^{*})\\
+ &  & +G_{1}(C^{*},K^{*},K^{*})(C_{t}-C^{*})\\
+ &  & +G_{2}(C^{*},K^{*},K^{*})(K_{t}-K^{*})\\
+ &  & +G_{3}(C^{*},K^{*},K^{*})(K_{t+1}-K^{*})\\
+G(C^{*},K^{*},K^{*}) & = & 0\\
+G_{1}(C^{*},K^{*},K^{*}) & = & 1\\
+G_{2}(C^{*},K^{*},K^{*}) & = & -(1-\alpha)(K^{*})^{-\alpha}-(1-\delta)\\
+G_{3}(C^{*},K^{*},K^{*}) & = & 1
+\end{eqnarray*}
+
+\end_inset
+
+Plugging these expression into the Taylor approximation, we get:
+\begin_inset Formula 
+\begin{eqnarray}
+0 & \approx & (C_{t}-C^{*})-\left[(1-\alpha)(K^{*})^{-\alpha}-(1-\delta)\right](K_{t}-K^{*})+(K_{t+1}-K^{*})\nonumber \\
+0 & \approx & C^{*}\left(\frac{C_{t}-C^{*}}{C^{*}}\right)-\left[(1-\alpha)(K^{*})^{-\alpha}-(1-\delta)\right]K^{*}\left(\frac{K_{t}-K^{*}}{K^{*}}\right)+K^{*}\left(\frac{K_{t}-K^{*}}{K^{*}}\right)\nonumber \\
+0 & \approx & \left(\frac{C^{*}}{K^{*}}\right)\hat{c}_{t}-\left[(1-\alpha)(K^{*})^{-\alpha}-(1-\delta)\right]\hat{k}_{t}+\hat{k}_{t+1}
+\end{eqnarray}
+
+\end_inset
+
+This is the log-linearlized version of the capital accumulation rule.
+\end_layout
+
+\begin_layout Subsection*
+Matrix Form
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We put the two log-linearlized equations into matrix form:
+\begin_inset Formula 
+\begin{gather}
+\left(\begin{array}{cc}
+1 & 0\\
+\alpha\left(1-\beta(1-\delta)\right) & 1
+\end{array}\right)\left(\begin{array}{c}
+\hat{k}_{t+1}\\
+\hat{c}_{t+1}
+\end{array}\right)=\left(\begin{array}{cc}
+\frac{1}{\beta} & -\left[\frac{1}{1-\alpha}\left(\frac{1}{\beta}-1+\delta\right)-\delta\right]\\
+0 & 1
+\end{array}\right)\left(\begin{array}{c}
+\hat{k}_{t}\\
+\hat{c}_{t}
+\end{array}\right)\nonumber \\
+\left(\begin{array}{c}
+\hat{k}_{t+1}\\
+\hat{c}_{t+1}
+\end{array}\right)=\left(\begin{array}{cc}
+1 & 0\\
+\alpha\left(1-\beta(1-\delta)\right) & 1
+\end{array}\right)^{-1}\left(\begin{array}{cc}
+\frac{1}{\beta} & -\left[\frac{1}{1-\alpha}\left(\frac{1}{\beta}-1+\delta\right)-\delta\right]\\
+0 & 1
+\end{array}\right)\left(\begin{array}{c}
+\hat{k}_{t}\\
+\hat{c}_{t}
+\end{array}\right)\nonumber \\
+\left(\begin{array}{c}
+\hat{k}_{t+1}\\
+\hat{c}_{t+1}
+\end{array}\right)=M\left(\begin{array}{c}
+\hat{k}_{t}\\
+\hat{c}_{t}
+\end{array}\right)
+\end{gather}
+
+\end_inset
+
+The matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ summarizes the information of the Euler equation (first-order condition)
+ and capital accumulation rule (resource constraint), and it tells us how
+ the household travels from an initial 
+\begin_inset Formula $(\hat{k}_{0},\hat{c}_{0})$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $M$
+\end_inset
+
+ only provides a necessary condition to find the optimal path.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Our next task is to deterimine the properties of 
+\begin_inset Formula $M$
+\end_inset
+
+ by obtaining its eigenvectors and eigenvalues.
+ Consider the equation
+\begin_inset Formula 
+\begin{equation}
+M\psi=\mu\psi
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\psi$
+\end_inset
+
+ is the eigenvector and 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is the eigenvalue.
+ Such a 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is found by solving 
+\begin_inset Formula $\det(M-\mu I)=0$
+\end_inset
+
+, which is a quadratic when 
+\begin_inset Formula $M$
+\end_inset
+
+ is 
+\begin_inset Formula $2\times2$
+\end_inset
+
+.
+ After solving the equation, we will find two roots, 
+\begin_inset Formula $\mu_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu_{2}$
+\end_inset
+
+.
+ For now, we assume 
+\begin_inset Formula $\mu_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu_{2}$
+\end_inset
+
+ are real roots and that 
+\begin_inset Formula $\mu_{1}\neq\mu_{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\psi_{i}$
+\end_inset
+
+ denote the eigenvector associated with 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+.
+ So, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+M\psi_{1} & = & \mu_{1}\psi_{1}\\
+M\psi_{2} & = & \mu_{2}\psi_{2}
+\end{eqnarray*}
+
+\end_inset
+
+We then put these two equations into matrix form:
+\begin_inset Formula 
+\begin{eqnarray}
+M\left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right] & = & \left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]\left[\begin{array}{cc}
+\mu_{1} & 0\\
+0 & \mu_{2}
+\end{array}\right]\nonumber \\
+M & = & \left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]\left[\begin{array}{cc}
+\mu_{1} & 0\\
+0 & \mu_{2}
+\end{array}\right]\left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]^{-1}
+\end{eqnarray}
+
+\end_inset
+
+We plug this expressing for 
+\begin_inset Formula $M$
+\end_inset
+
+ into the matrix equation for 
+\begin_inset Formula $\hat{k}_{t+1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{c}_{t+1}$
+\end_inset
+
+ to obtain 
+\begin_inset Formula 
+\begin{eqnarray}
+\left(\begin{array}{c}
+\hat{k}_{t+1}\\
+\hat{c}_{t+1}
+\end{array}\right) & = & \left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]\left[\begin{array}{cc}
+\mu_{1} & 0\\
+0 & \mu_{2}
+\end{array}\right]\left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]^{-1}\left(\begin{array}{c}
+\hat{k}_{t}\\
+\hat{c}_{t}
+\end{array}\right)\nonumber \\
+\left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]^{-1}\left(\begin{array}{c}
+\hat{k}_{t+1}\\
+\hat{c}_{t+1}
+\end{array}\right) & = & \left[\begin{array}{cc}
+\mu_{1} & 0\\
+0 & \mu_{2}
+\end{array}\right]\left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]^{-1}\left(\begin{array}{c}
+\hat{k}_{t}\\
+\hat{c}_{t}
+\end{array}\right)
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, we have established a new cooridnate system that uses 
+\begin_inset Formula $\psi_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{2}$
+\end_inset
+
+ as axes, while the origin represents the steady state.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\left(\begin{array}{cc}
+\hat{k}_{0}^{A} & \hat{c}_{0}^{A}\end{array}\right)^{\prime}$
+\end_inset
+
+ be a vector where both components are less than their steady state values.
+ Note, in the diagram, the vector of point 
+\begin_inset Formula $A$
+\end_inset
+
+ is proportional to 
+\begin_inset Formula $\psi_{1}$
+\end_inset
+
+, so its second component in the new coordinate system will be zero.
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\begin{array}{c}
+\hat{k}^{A}\\
+\hat{c}^{A}
+\end{array}\right) & = & M\left(\begin{array}{c}
+\hat{k}_{0}^{A}\\
+\hat{c}_{0}^{A}
+\end{array}\right)\\
+\left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]^{-1}\left(\begin{array}{c}
+\hat{k}^{A}\\
+\hat{c}^{A}
+\end{array}\right) & = & \left[\begin{array}{cc}
+\mu_{1} & 0\\
+0 & \mu_{2}
+\end{array}\right]\left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]^{-1}\left(\begin{array}{c}
+\hat{k}_{0}^{A}\\
+\hat{c}_{0}^{A}
+\end{array}\right)\\
+\left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]^{-1}\left(\begin{array}{c}
+\hat{k}^{A}\\
+\hat{c}^{A}
+\end{array}\right) & = & \left[\begin{array}{cc}
+\mu_{1} & 0\\
+0 & \mu_{2}
+\end{array}\right]\left(\begin{array}{c}
+x\\
+0
+\end{array}\right)\\
+\left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]^{-1}\left(\begin{array}{c}
+\hat{k}^{A}\\
+\hat{c}^{A}
+\end{array}\right) & = & \left(\begin{array}{c}
+\mu_{1}x\\
+0
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\left(\begin{array}{cc}
+\hat{k}_{0}^{B} & \hat{c}_{0}^{B}\end{array}\right)^{\prime}$
+\end_inset
+
+ be a vector where both components are greater than their steady state values.
+ Note, in the diagram, the vector of point 
+\begin_inset Formula $B$
+\end_inset
+
+ is proportional to 
+\begin_inset Formula $\psi_{2}$
+\end_inset
+
+, so its first component in the new coordinate system will be zero.
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\begin{array}{c}
+\hat{k}^{B}\\
+\hat{c}^{B}
+\end{array}\right) & = & M\left(\begin{array}{c}
+\hat{k}_{0}^{B}\\
+\hat{c}_{0}^{B}
+\end{array}\right)\\
+\left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]^{-1}\left(\begin{array}{c}
+\hat{k}^{B}\\
+\hat{c}^{B}
+\end{array}\right) & = & \left[\begin{array}{cc}
+\mu_{1} & 0\\
+0 & \mu_{2}
+\end{array}\right]\left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]^{-1}\left(\begin{array}{c}
+\hat{k}_{0}^{B}\\
+\hat{c}_{0}^{B}
+\end{array}\right)\\
+\left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]^{-1}\left(\begin{array}{c}
+\hat{k}^{A}\\
+\hat{c}^{A}
+\end{array}\right) & = & \left[\begin{array}{cc}
+\mu_{1} & 0\\
+0 & \mu_{2}
+\end{array}\right]\left(\begin{array}{c}
+0\\
+x
+\end{array}\right)\\
+\left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]^{-1}\left(\begin{array}{c}
+\hat{k}^{A}\\
+\hat{c}^{A}
+\end{array}\right) & = & \left(\begin{array}{c}
+0\\
+\mu_{2}x
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ has one eigenvalue that is less than one in absolute value and one that
+ is greater than 1 in absolute value.
+ Then, given an initial 
+\begin_inset Formula $\hat{k}_{0}$
+\end_inset
+
+, we want to choose 
+\begin_inset Formula $\hat{c}_{0}$
+\end_inset
+
+ on the line formed by the eigenvector with the corresponding eigenvalue
+ that is less than one in absolute value because this is the stable arm.
+ As a result, that the path converges to the origin, i.e., the steady state.
+ Below is an outline of the different cases concerning the eigenvalues
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $|\mu_{1}|>1>|\mu_{2}|$
+\end_inset
+
+, then 
+\begin_inset Formula $\psi_{2}$
+\end_inset
+
+ is the stable arm.
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $|\mu_{2}|>1>|\mu_{1}|$
+\end_inset
+
+, then 
+\begin_inset Formula $\psi_{1}$
+\end_inset
+
+ is the stable arm.
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $|\mu_{1}|>|\mu_{2}|>1$
+\end_inset
+
+ or 
+\begin_inset Formula $|\mu_{2}|>|\mu_{1}|>1$
+\end_inset
+
+, then there is no converegence to the steady state.
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $1>|\mu_{1}|>|\mu_{2}|$
+\end_inset
+
+ or 
+\begin_inset Formula $1>|\mu_{2}|>|\mu_{1}|$
+\end_inset
+
+, then we are close to global convergence, so there are infinitely many
+ solutions.
+\end_layout
+
+\begin_layout Example*
+If 
+\begin_inset Formula $\hat{k}_{t}=4\%$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{c}_{t}=3\%$
+\end_inset
+
+, we can rewrite the coordinates of this vector in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ using eigenvectors
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\begin{array}{c}
+4\%\\
+3\%
+\end{array}\right) & = & 0.8\psi_{1}+1.1\psi_{2}=\left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]\left(\begin{array}{c}
+0.8\\
+1.1
+\end{array}\right)\\
+\left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]^{-1}\left(\begin{array}{c}
+4\%\\
+3\%
+\end{array}\right) & = & \left(\begin{array}{c}
+0.8\\
+1.1
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Multiplying the vector 
+\begin_inset Formula $\left(\begin{array}{cc}
+\hat{k}_{t} & \hat{c}_{t}\end{array}\right)^{\prime}$
+\end_inset
+
+ on the left by 
+\begin_inset Formula $\left[\begin{array}{cc}
+\psi_{1} & \psi_{2}\end{array}\right]^{-1}$
+\end_inset
+
+ gives a 
+\begin_inset Quotes eld
+\end_inset
+
+new address
+\begin_inset Quotes erd
+\end_inset
+
+ to the point using 
+\begin_inset Formula $\psi_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{2}$
+\end_inset
+
+ as axes.
+\end_layout
+
+\begin_layout Section*
+Simplified Stochastic Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We will now add stochastic shocks to the simplified RBC model.
+ The constrained maximization problem is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & E_{0}\left[{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\log C_{t}\right]\\
+\mbox{s.t.} & K_{t+1}-K_{t}=A_{t}K_{t}^{1-\alpha}-C_{t}-\delta K_{t}\\
+ & \log A_{t}=\rho\log A_{t-1}+\epsilon_{t}\\
+ & \epsilon_{t}\sim i.i.d.N(0,\sigma^{2})
+\end{eqnarray*}
+
+\end_inset
+
+In order to solve the model, we want to find the policy function 
+\begin_inset Formula $C_{t}=f(K_{t},A_{t})$
+\end_inset
+
+.
+ To do this, we log-linearize the Euler equation (intertemporal condition)
+ and the two constraints:
+\begin_inset Formula 
+\begin{eqnarray}
+0 & = & E_{t}\left[\hat{c}_{t}-\hat{c}_{t+1}+\left(1-\beta(1-\delta)\right)\left(\hat{a}_{t+1}-\alpha\hat{k}_{t+1}\right)\right]\\
+0 & = & -\left[\frac{1}{1-\alpha}\left(\frac{1}{\beta}-1+\delta\right)-\delta\right]\hat{c}_{t}+\frac{1}{1-\alpha}\left(\frac{1}{\beta}-1+\delta\right)\hat{a}_{t}-\hat{k}_{t+1}+\frac{1}{\beta}\hat{k}_{t}\\
+\hat{a}_{t} & = & \rho\hat{a}_{t-1}+\epsilon_{t}
+\end{eqnarray}
+
+\end_inset
+
+In this system, we have 2 state variables 
+\begin_inset Formula $(\hat{a}_{t},\hat{k}_{t})$
+\end_inset
+
+ and 1 control variable 
+\begin_inset Formula $(\hat{c}_{t})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can rewrite this sytem of 3 variables and 3 equations in matrix form
+ by finding a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ that characterizes the three equations above.
+ Remember, 
+\begin_inset Formula $M$
+\end_inset
+
+ only provides a necessary condition to find the optimal path.
+ If 
+\begin_inset Formula $M$
+\end_inset
+
+ has two eigenvalues that are less than one in absolute value and one eigenvalue
+ that is greater than 1 in absolute value (i.e., it has 2 stable roots and
+ 1 unstable root), then we want to choose 
+\begin_inset Formula $\hat{c}_{0}$
+\end_inset
+
+ on the plane formed by 
+\begin_inset Formula $\hat{k}_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{a}_{0}$
+\end_inset
+
+.
+ As a result, the path converges to the origin, i.e., the steady state.
+\end_layout
+
+\end_body
+\end_document

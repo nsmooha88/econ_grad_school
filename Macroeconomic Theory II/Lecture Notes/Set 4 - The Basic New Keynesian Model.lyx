@@ -1,0 +1,2895 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Set 4 - The Basic New Keynesian Model
+\end_layout
+
+\begin_layout Part*
+Gali (2008), Chapter 3
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There are several key elements of the baseline model that are a departure
+ from the assumptions of the classical monetary economy.
+ First, imperfect competition (i.e., monopolistic competition) in the goods
+ market is introduced by assuming that each firm produces a differentiated
+ good for which it sets the price (Dixit-Stiglite), instead of taking the
+ price as given.
+ Moreover, there are a continuum of goods.
+ As a result, an individual firm can change its own price, but it has no
+ affect on the aggregate price.
+ Also, there is no strategic component between the firms.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Second, some constraints are imposed on the price adjustment mechanism by
+ assuming that only a fraction of firms can reset their prices in any given
+ period.
+ In particular, and following much of the literature, a model of staggered
+ price adjustment due to Calvo (1983) and characterized by random price
+ durations is adopted.
+ The resulting framework is referred to as the 
+\emph on
+basic New Keynesian model
+\emph default
+.
+ In recent years, this model has become the workhorse for the analysis of
+ monetary policy, fluctuations, and welfare.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The introduction of differentiated goods requires that the household problem
+ be modified slightly relative to the one considered previously.
+ That modification is discussed before turning to the firms' optimal price-setti
+ng problem and the implied inflation dynamics.
+\end_layout
+
+\begin_layout Section*
+Households
+\end_layout
+
+\begin_layout Standard
+Once again, assume a representative infinitely-lived household, seeking
+ to maximize
+\begin_inset Formula 
+\[
+E_{0}\left\{ {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}U\left(C_{t},N_{t}\right)\right\} 
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ is now a consumption index given by
+\begin_inset Formula 
+\[
+C_{t}\equiv\left[{\displaystyle \int_{0}^{1}}C_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula $C_{t}(i)$
+\end_inset
+
+ representing the quantity of good 
+\begin_inset Formula $i$
+\end_inset
+
+ consumed by the household in period 
+\begin_inset Formula $t$
+\end_inset
+
+, while 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ represents the total amount of goods consumed.
+ As stated before, assume the existence of a continuum of goods represented
+ by the interval 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The period budget constraint now takes the form
+\begin_inset Formula 
+\[
+{\displaystyle \int_{0}^{1}}P_{t}(i)C_{t}(i)di+Q_{t}B_{t}\leq B_{t-1}+W_{t}N_{t}+T_{t};\ \forall\ t=0,1,\ldots
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $P_{t}(i)$
+\end_inset
+
+ is the price of good 
+\begin_inset Formula $i$
+\end_inset
+
+ in period 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ denotes hours of work (or the measure of household members employed), and
+ 
+\begin_inset Formula $W_{t}$
+\end_inset
+
+ is the nominal wage.
+ In addition, 
+\begin_inset Formula $B_{t}$
+\end_inset
+
+ represents purchases of one-period bonds (at a price 
+\begin_inset Formula $Q_{t}$
+\end_inset
+
+).
+ 
+\begin_inset Formula $B_{t}>0$
+\end_inset
+
+ means that the household purchased bonds (i.e., it saved), and 
+\begin_inset Formula $B_{t}<0$
+\end_inset
+
+ means that the household sold bonds (i.e., it borrowed).
+ Finally, 
+\begin_inset Formula $T_{t}$
+\end_inset
+
+ is a lump-sum component of income (which may include, among other items,
+ dividends from ownership of firms).
+ The above sequence of period budget constraints is supplemented with a
+ non-Ponzi game condition of the form
+\begin_inset Formula 
+\[
+{\displaystyle \lim_{T\rightarrow\infty}}E_{t}\left\{ B_{T}\right\} \geq0,\ \forall\ t.
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Notice that 
+\begin_inset Formula $\{C_{t}(i)\}_{i\in[0,1]}$
+\end_inset
+
+, 
+\begin_inset Formula $B_{t}$
+\end_inset
+
+, and 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ are the control variables of the model.
+ We assume that 
+\begin_inset Formula $U_{N,t}<0$
+\end_inset
+
+, so working causes disutility for the agent.
+ For the consumer, 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ can be thought of as the elasticity of substituion between the goods.
+ If 
+\begin_inset Formula $\epsilon\rightarrow\infty$
+\end_inset
+
+, then then consumer considers all the goods perfect substitutes.
+ If 
+\begin_inset Formula $\epsilon\rightarrow1$
+\end_inset
+
+, then the consumer considers all the goods perfect complements, i.e., he
+ wants to consume each good in equal amounts.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can 
+\begin_inset Quotes eld
+\end_inset
+
+divide
+\begin_inset Quotes erd
+\end_inset
+
+ the problem into two steps:
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{\{Z_{t},B_{t},N_{t}\}}} & E_{0}\left\{ {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}U(C_{t}^{*},N_{t})\right\} \\
+\mbox{s.t.} & Z_{t}+Q_{t}B_{t}=B_{t-1}+W_{t}N_{t}+T_{t}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $C_{t}^{*}$
+\end_inset
+
+ is the solution of
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{\{C_{t}(i)\}_{i\in[0,1]}}} & \left[{\displaystyle \int_{0}^{1}}C_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+\mbox{s.t.} & {\displaystyle \int_{0}^{1}}P_{t}(i)C_{t}(i)di=Z_{t}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Solving for 
+\begin_inset Formula $C_{t}^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+First, we wish to maximize the consumption index 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ for any given level of expenditures 
+\begin_inset Formula $\int_{0}^{1}P_{t}(i)C_{t}(i)$
+\end_inset
+
+.
+ The objective funciton of this maximization problem is known as the constant
+ elasticity of substitution (CES) aggregator function.
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{\{C_{t}(i)\}_{i\in[0,1]}}} & \left[{\displaystyle \int_{0}^{1}}C_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+\mbox{s.t.} & {\displaystyle \int_{0}^{1}}P_{t}(i)C_{t}(i)di=Z_{t}
+\end{eqnarray*}
+
+\end_inset
+
+Lets setup the Lagrangian
+\begin_inset Formula 
+\[
+L=\left[{\displaystyle \int_{0}^{1}}C_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}+\lambda\left[Z_{t}-{\displaystyle \int_{0}^{1}}P_{t}(i)C_{t}(i)di\right]
+\]
+
+\end_inset
+
+Important to note, in this construction, 
+\begin_inset Formula $i$
+\end_inset
+
+ is just an index characterizing all the goods.
+ Our goal is to optimize 
+\begin_inset Formula $L$
+\end_inset
+
+ with respect to a specific good (i.e., good 
+\begin_inset Formula $j$
+\end_inset
+
+).
+ Thus, the first-order condition of 
+\begin_inset Formula $L$
+\end_inset
+
+ with respect to good 
+\begin_inset Formula $j$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{gather}
+\frac{\partial L}{\partial C_{t}(j)}=0\nonumber \\
+\frac{\epsilon}{\epsilon-1}\left[{\displaystyle \int_{0}^{1}}C_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{1}{\epsilon-1}}\frac{\epsilon-1}{\epsilon}C_{t}(j)^{-\frac{1}{\epsilon}}-\lambda P_{t}(j)=0\nonumber \\
+\left[{\displaystyle \int_{0}^{1}}C_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{1}{\epsilon-1}}\left[C_{t}(j)\right]^{-\frac{1}{\epsilon}}=\lambda P_{t}(j);\ \forall\ j\in[0,1]\nonumber \\
+\left(\frac{C_{t}(j)}{C_{t}(k)}\right)^{-\frac{1}{\epsilon}}=\left(\frac{P_{t}(j)}{P_{t}(k)}\right);\ \forall\ k,j\in[0,1]\\
+\log\left(\frac{C_{t}(j)}{C_{t}(k)}\right)=-\epsilon\log\left(\frac{P_{t}(j)}{P_{t}(k)}\right);\ \forall\ k,j\in[0,1]\nonumber \\
+-\frac{d\log\left(\frac{C_{t}(j)}{C_{t}(k)}\right)}{d\log\left(\frac{P_{t}(j)}{P_{t}(k)}\right)}=\epsilon
+\end{gather}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The left hand side of equation (2) is known as the elasticity of substitution
+ between every pair of products.
+ As one can see, the elasticity of substitution in the Dixit-Stiglitz economy
+ is constant, which is not very realistic, but it makes the derivations
+ much simpler.
+ With a large 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+, the agent does not care about mixing because he only wishes to consume
+ the goods that are relatively cheaper.
+ As a result, demand is very responsive to a price change.
+ With a small 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+, the agent wishes to diversify his consumption independent of the price.
+ Hence, demand is not very responsive to a price change.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+From equation (1), we have
+\begin_inset Formula 
+\begin{equation}
+C_{t}(j)=C_{t}(k)\left(\frac{P_{t}(j)}{P_{t}(k)}\right)^{-\epsilon};\ \forall\ j,k\in[0,1]
+\end{equation}
+
+\end_inset
+
+Let us substitute equation (3) into the constraint.
+ 
+\begin_inset Formula 
+\begin{eqnarray}
+{\displaystyle \int_{0}^{1}}P_{t}(j)C_{t}(j)dj & = & Z_{t}\nonumber \\
+{\displaystyle \int_{0}^{1}}P_{t}(j)\left(\frac{P_{t}(j)}{P_{t}(k)}\right)^{-\epsilon}C_{t}(k)dj & = & Z_{t}\nonumber \\
+C_{t}(k)\left[P_{t}(k)\right]^{\epsilon}{\displaystyle \int_{0}^{1}}\left[P_{t}(j)\right]^{1-\epsilon}d_{j} & = & Z_{t}
+\end{eqnarray}
+
+\end_inset
+
+Now, we define the Dixit-Stiglitx aggregate price index 
+\begin_inset Formula $P_{t}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+P_{t}\equiv\left[{\displaystyle \int_{0}^{1}}P_{t}(j)^{1-\epsilon}d_{j}\right]^{\frac{1}{1-\epsilon}}
+\end{equation}
+
+\end_inset
+
+Since 
+\begin_inset Formula $P_{t}^{1-\epsilon}\equiv{\displaystyle \int_{0}^{1}}P_{t}(j)^{1-\epsilon}d_{j}$
+\end_inset
+
+, then equation (4) becomes
+\begin_inset Formula 
+\begin{eqnarray}
+C_{t}(k)\left[P_{t}(k)\right]^{\epsilon}P_{t}^{1-\epsilon} & = & Z_{t}\nonumber \\
+C_{t}(k) & = & \left(\frac{P_{t}(k)}{P_{t}}\right)^{-\epsilon}\frac{Z_{t}}{P_{t}}
+\end{eqnarray}
+
+\end_inset
+
+which is a necessary condition for maximizing the consumption index.
+ Next, we substitute equation (6) into the consumption idex.
+\begin_inset Formula 
+\begin{eqnarray}
+\left[{\displaystyle \int_{0}^{1}}C_{t}(k)^{1-\frac{1}{\epsilon}}dk\right]^{\frac{\epsilon}{\epsilon-1}} & = & \left\{ {\displaystyle \int_{0}^{1}}\left[\left(\frac{P_{t}(k)}{P_{t}}\right)^{-\epsilon}\left(\frac{Z_{t}}{P_{t}}\right)\right]^{1-\frac{1}{\epsilon}}dk\right\} ^{\frac{\epsilon}{\epsilon-1}}\nonumber \\
+ & = & \left\{ \left[\left(\frac{1}{P_{t}}\right)^{-\epsilon}\left(\frac{Z_{t}}{P_{t}}\right)\right]^{\frac{\epsilon-1}{\epsilon}}{\displaystyle \int_{0}^{1}}\left(P_{t}(k)^{-\epsilon}\right)^{\frac{\epsilon-1}{\epsilon}}dk\right\} ^{\frac{\epsilon}{\epsilon-1}}\nonumber \\
+ & = & \left(\frac{1}{P_{t}}\right)^{-\epsilon}\left(\frac{Z_{t}}{P_{t}}\right)\left[{\displaystyle \int_{0}^{1}}P_{t}(k)^{1-\epsilon}dk\right]^{\frac{\epsilon}{\epsilon-1}}
+\end{eqnarray}
+
+\end_inset
+
+Finally, from the aggregate price index, equation (7) yields
+\begin_inset Formula 
+\begin{gather}
+\left(\frac{1}{P_{t}}\right)^{-\epsilon}\left(\frac{Z_{t}}{P_{t}}\right)P_{t}^{-\epsilon}=\frac{Z_{t}}{P_{t}}
+\end{gather}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+To summarize our derivations, the solution to the problem
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{\{C_{t}(i)\}_{i\in[0,1]}}} & \left[{\displaystyle \int_{0}^{1}}C_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+\mbox{s.t.} & {\displaystyle \int_{0}^{1}}P_{t}(i)C_{t}(i)di=Z_{t}
+\end{eqnarray*}
+
+\end_inset
+
+yields the set of demand equations
+\begin_inset Formula 
+\begin{equation}
+C_{t}(i)=\left(\frac{P_{t}(i)}{P_{t}}\right)^{-\epsilon}\frac{Z_{t}}{P_{t}};\ \forall\ i\in[0,1]
+\end{equation}
+
+\end_inset
+
+and the maximized level of the consumption basket
+\begin_inset Formula 
+\begin{equation}
+C_{t}^{*}=\frac{Z_{t}}{P_{t}}
+\end{equation}
+
+\end_inset
+
+where 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $P_{t}\equiv\left[\int_{0}^{1}P_{t}(i)^{1-\epsilon}d_{j}\right]^{\frac{1}{1-\epsilon}}$
+\end_inset
+
+ is the aggregate price index
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ Furthermore, and conditional on such optimal behavior,
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \int}_{0}^{1}P_{t}(i)C_{t}(i)di=P_{t}C_{t}^{*}
+\end{equation}
+
+\end_inset
+
+i.e., total consumption expenditures can be written as the product of the
+ price index times the quantity index.
+ Now, we can plug equations (9) and (10) it into the household's constrained
+ utility maximization problem.
+\end_layout
+
+\begin_layout Subsection*
+The Households' Problem Revisited
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the previous subsection, we found the set of demand equations for each
+ individual good, the maximized consumption index, and total consumption
+ expenditure.
+ With this information, the household no longer has to worry about choosing
+ its consumption for each individual good.
+ Instead, it chooses its consumption basket as a whole.
+ Thus, its constrained maximization problem becomes
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{\{C_{t},B_{t},N_{t}\}}\ } & E_{0}\left\{ \sum_{t=0}^{\infty}\beta^{t}U(C_{t},N_{t})\right\} \\
+\mbox{s.t.} & P_{t}C_{t}+Q_{t}B_{t}=B_{t-1}+W_{t}N_{t}+T_{t}
+\end{eqnarray*}
+
+\end_inset
+
+which is formally identical to the problem faced by the households in the
+ single good economy analyzed in Set 3 of the lecture notes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+After setting up the Lagrangian
+\begin_inset Formula 
+\[
+L=E_{0}\left\{ {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\left[U(C_{t},N_{t})+\lambda_{t}\left(-P_{t}C_{t}-Q_{t}B_{t}+B_{t-1}+W_{t}N_{t}+T_{t}\right)\right]\right\} 
+\]
+
+\end_inset
+
+we obtain the following first-order conditions
+\begin_inset Formula 
+\begin{eqnarray}
+U_{c,t}-\lambda_{t}P_{t} & = & 0\\
+U_{n,t}+\lambda_{t}W_{t} & = & 0\\
+\lambda_{t}(-Q_{t})+E_{t}\left\{ \beta\lambda_{t+1}\right\}  & = & 0
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Equations (12) and (13) imply
+\begin_inset Formula 
+\begin{equation}
+-U_{n,t}=\left(\frac{W_{t}}{P_{t}}\right)U_{c,t}
+\end{equation}
+
+\end_inset
+
+The LHS is the marginal disutility of labor.
+ The RHS is the real wage times the marginal utility of consumption.
+ So, the marignal cost of working equals the marginal benefit of working.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Equations (12) and (14) imply
+\begin_inset Formula 
+\begin{eqnarray}
+Q_{t} & = & E_{t}\left\{ \beta\frac{U_{c,t+1}}{U_{c,t}}\frac{P_{t}}{P_{t+1}}\right\} \nonumber \\
+\frac{Q_{t}}{P_{t}}U_{c,t} & = & E_{t}\left\{ \beta\frac{U_{c,t+1}}{P_{t+1}}\right\} 
+\end{eqnarray}
+
+\end_inset
+
+Note that 
+\begin_inset Formula $Q_{t}$
+\end_inset
+
+ is the nominal price of a bond.
+ So, the LHS is the real price of the bond times the marginal utility of
+ consumption; it is what the household would receive by selling a bond.
+ The RHS is the expected discounted marginal benefit of consumption the
+ household gives up in 
+\begin_inset Formula $t+1$
+\end_inset
+
+ by selling the bond.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Under the assumption of a period utility given by
+\begin_inset Formula 
+\begin{equation}
+U(C_{t},N_{t})=\frac{C_{t}^{1-\sigma}}{1-\sigma}-\frac{N_{t}^{1+\varphi}}{1+\varphi}
+\end{equation}
+
+\end_inset
+
+the first-order conditions become
+\begin_inset Formula 
+\begin{eqnarray}
+N_{t}^{\varphi} & = & \left(\frac{W_{t}}{P_{t}}\right)C_{t}^{-\sigma}\\
+Q_{t} & = & E_{t}\left\{ \beta\left(\frac{C_{t+1}}{C_{t}}\right)^{-\sigma}\frac{P_{t}}{P_{t+1}}\right\} 
+\end{eqnarray}
+
+\end_inset
+
+Condition (18) can be interpreted as a competitive labor supply schedule,
+ determining the quantity of labor supplied as a function of the real wage,
+ given the marginal utility of consumption (which under the assumptions
+ is a function of consumption only).
+ We will return to the household's problem when we study general equilibrium.
+\end_layout
+
+\begin_layout Section*
+Firms
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A continuum of firms indexed by 
+\begin_inset Formula $i\in[0,1]$
+\end_inset
+
+.
+ Each firm produces a differentiated good, but they all use an identical
+ technology, represented by the production function
+\begin_inset Formula 
+\begin{equation}
+Y_{t}(i)=A_{t}N_{t}(i)
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $A_{t}$
+\end_inset
+
+ represents the level of technology assumed to be common to all firms and
+ to evolve exogenously over time.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+All firms face an identical isoelastic demand schedule given by (9), and
+ take the aggregate price level 
+\begin_inset Formula $P_{t}$
+\end_inset
+
+ and aggregate consumption index 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ as given.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Following the formalism proposed in Calvo (1983), each firm may reset its
+ price only with probability 
+\begin_inset Formula $1-\theta$
+\end_inset
+
+ in any given period, independent of the time elapsed since the last adjustment.
+ So, 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is the probability that a firm's price will remain the same in any given
+ period.
+ Thus, each period a measure of 
+\begin_inset Formula $1-\theta$
+\end_inset
+
+ producers reset their prices, while a fraction 
+\begin_inset Formula $\theta$
+\end_inset
+
+ keep their prices unchanged.
+ As a result, the average duration of a price is given by 
+\begin_inset Formula $(1-\theta)^{-1}$
+\end_inset
+
+.
+ In this context, 
+\begin_inset Formula $\theta$
+\end_inset
+
+ becomes a natural index of price stickiness.
+\end_layout
+
+\begin_layout Subsection*
+Optimal Price Setting
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Firm 
+\begin_inset Formula $i$
+\end_inset
+
+ reoptimizing in period 
+\begin_inset Formula $t$
+\end_inset
+
+ will choose its price 
+\begin_inset Formula $P_{t}^{*}$
+\end_inset
+
+ that maximizes the current market value of its profits generated while
+ that price remains effective.
+ Formally, it solves the problem
+\begin_inset Formula 
+\[
+{\displaystyle \max_{P_{t}^{*}}{\displaystyle \sum_{k=0}^{\infty}}}\theta^{k}E_{t}\left\{ Q_{t,t+k}\left(P_{t}^{*}Y_{t+k|t}-\frac{W_{t+k}}{A_{t+k}}Y_{t+k|t}\right)\right\} 
+\]
+
+\end_inset
+
+subject to the sequence of demand constraints
+\begin_inset Formula 
+\begin{equation}
+Y_{t+k|t}=\left(\frac{P_{t}^{*}}{P_{t+k}}\right)^{-\epsilon}C_{t+k};\ \forall\ k=0,1,\ldots
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+Q_{t,t+k}\equiv\beta^{k}\left(\frac{C_{t+k}}{C_{t}}\right)^{-\sigma}\frac{P_{t}}{P_{t+k}}
+\]
+
+\end_inset
+
+is the stochastic discount factor for nominal payoffs, 
+\begin_inset Formula $Y_{t+k|t}$
+\end_inset
+
+ denotes output in period 
+\begin_inset Formula $t+k$
+\end_inset
+
+ for a firm that last reset its price in period 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $P_{t}$
+\end_inset
+
+ is the Dixit-Stiglitx aggregate price index (it is the general price level
+ faced by all the firms in period 
+\begin_inset Formula $t$
+\end_inset
+
+), and 
+\begin_inset Formula $P_{t}^{*}$
+\end_inset
+
+ is the optimal price set in period 
+\begin_inset Formula $t$
+\end_inset
+
+ by firms reoptimizing their price in that period.
+ Notice that, as shown above, all firms will choose the same price because
+ they face an identical problem.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The first-order condition associated with the problem above takes the form
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \sum_{k=0}^{\infty}}\theta^{k}E_{t}\left\{ Q_{t,t+k}\left(Y_{t+k|t}+P_{t}^{*}\frac{\partial Y_{t+k|t}}{\partial P_{t}^{*}}-\frac{W_{t+k}}{A_{t+k}}\frac{\partial Y_{t+k|t}}{\partial P_{t}^{*}}\right)\right\}  & = & 0\\
+{\displaystyle \sum_{k=0}^{\infty}}\theta^{k}E_{t}\left\{ Q_{t,t+k}\left[Y_{t+k|t}+\left(P_{t}^{*}-\frac{W_{t+k}}{A_{t+k}}\right)\frac{\partial Y_{t+k|t}}{\partial P_{t}^{*}}\right]\right\}  & = & 0\\
+{\displaystyle \sum_{k=0}^{\infty}}\theta^{k}E_{t}\left\{ Q_{t,t+k}\left[Y_{t+k|t}+\left(P_{t}^{*}-\frac{W_{t+k}}{A_{t+k}}\right)\left(-\epsilon\right)\frac{Y_{t+k|t}}{P_{t}^{*}}\right]\right\}  & = & 0\\
+{\displaystyle \sum_{k=0}^{\infty}}\theta^{k}E_{t}\left\{ Q_{t,t+k}Y_{t+k|t}\left(1-\epsilon+\epsilon\frac{1}{P_{t}^{*}}\frac{W_{t+k}}{A_{t+k}}\right)\right\}  & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+Multiplying both sides by 
+\begin_inset Formula $P_{t}^{*}\frac{1}{1-\epsilon}$
+\end_inset
+
+ yields 
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{k=0}^{\infty}}\theta^{k}E_{t}\left\{ Q_{t,t+k}Y_{t+k|t}\left(P_{t}^{*}-M\frac{W_{t+k}}{A_{t+k}}\right)\right\} =0
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\frac{W_{t+k}}{A_{t+k}}$
+\end_inset
+
+ is the nominal marginal cost in period 
+\begin_inset Formula $t+k$
+\end_inset
+
+ for a firm which last reset its price in period 
+\begin_inset Formula $t$
+\end_inset
+
+, and 
+\begin_inset Formula $M\equiv\frac{\epsilon}{\epsilon-1}>1$
+\end_inset
+
+.
+ This is known as the optimal price setting condition.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Note that in the limiting case of no price rigidities 
+\begin_inset Formula $(\theta=0)$
+\end_inset
+
+, each firm reoptimizes every period.
+ Then, the previous condition collapses to the familiar optimal price-setting
+ condition under flexible prices
+\begin_inset Formula 
+\[
+P_{t}^{*}-M\frac{W_{t}}{A_{t}}=0\iff P_{t}^{*}=M\frac{W_{t}}{A_{t}}
+\]
+
+\end_inset
+
+which allows us to interpret 
+\begin_inset Formula $M$
+\end_inset
+
+ as the desired markup in the absense of constraints on the frequency of
+ price adjustment.
+ Henceforth, 
+\begin_inset Formula $M$
+\end_inset
+
+ is referred to as the desired, or frictionless, gross markup.
+\end_layout
+
+\begin_layout Subsection*
+Aggregate Price Dynamics
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+From the above environment, we can derive an equation that describes the
+ aggregate price dynamics.
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{t} & = & \left[{\displaystyle \int_{0}^{1}}P_{t}(i)^{1-\epsilon}di\right]^{\frac{1}{1-\epsilon}}\\
+ & = & \left[(1-\theta)\left(P_{t}^{*}\right)^{1-\epsilon}+{\displaystyle \int_{i\in S(t)}}P_{t-1}(i)^{1-\epsilon}di\right]^{\frac{1}{1-\epsilon}}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $S(t)\subset[0,1]$
+\end_inset
+
+ is the set of firms that are not reoptimizing their price in period 
+\begin_inset Formula $t$
+\end_inset
+
+, and 
+\begin_inset Formula $P_{t}^{*}$
+\end_inset
+
+ is the same for all the firms reoptimizing their price in period 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray}
+P_{t} & = & \left[(1-\theta)\left(P_{t}^{*}\right)^{1-\epsilon}+\theta\left(P_{t-1}\right)^{1-\epsilon}\right]^{\frac{1}{1-\epsilon}}\nonumber \\
+P_{t} & = & \left[\theta\left(P_{t-1}\right)^{1-\epsilon}+(1-\theta)\left(P_{t}^{*}\right)^{1-\epsilon}\right]^{\frac{1}{1-\epsilon}}\nonumber \\
+P_{t}^{1-\epsilon} & = & \theta\left(P_{t-1}\right)^{1-\epsilon}+(1-\theta)\left(P_{t}^{*}\right)^{1-\epsilon}\nonumber \\
+\Pi_{t}^{1-\epsilon} & = & \theta+(1-\theta)\left(\frac{P_{t}^{*}}{P_{t-1}}\right)^{1-\epsilon}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Pi_{t}\equiv\frac{P_{t}}{P_{t-1}}$
+\end_inset
+
+ is gross inflation rate between 
+\begin_inset Formula $t-1$
+\end_inset
+
+ and 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Note that aggregate price dynamics are described by equation (23).
+ 
+\end_layout
+
+\begin_layout Section*
+Equilibrium
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There are two market clearing conditions:
+\end_layout
+
+\begin_layout Enumerate
+Market clearing in the goods market requires
+\begin_inset Formula 
+\[
+Y_{t}(i)=C_{t}(i)
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $i\in[0,1]$
+\end_inset
+
+ and all 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Letting aggregate output be defined as 
+\begin_inset Formula $Y_{t}\equiv\left[\int_{0}^{1}Y_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}$
+\end_inset
+
+ it follows that
+\begin_inset Formula 
+\[
+Y_{t}=C_{t}
+\]
+
+\end_inset
+
+must hold for all 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Aggregate supply equals aggregate consumption.
+\end_layout
+
+\begin_layout Enumerate
+Market clearing in the labor market requires
+\begin_inset Formula 
+\[
+N_{t}={\displaystyle \int_{0}^{1}}N_{t}(i)di
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ The hours of work chosen by the households equals the hours of work demanded
+ by firms.
+\end_layout
+
+\begin_layout Standard
+Using the optimality conditions of the household and firms, along with the
+ market clearing conditions, the economy can be summarized by the following
+ seven equations.
+\begin_inset Formula 
+\begin{gather*}
+N_{t}^{\varphi}=\frac{W_{t}}{P_{t}}C_{t}^{-\sigma}\\
+Q_{t}=E_{t}\left\{ \beta\left(\frac{C_{t+1}}{C_{t}}\right)^{-\sigma}\frac{P_{t}}{P_{t+1}}\right\} \\
+{\displaystyle \sum_{k=0}^{\infty}}\theta^{k}E_{t}\left\{ Q_{t,t+k}Y_{t+k|t}\left(P_{t}^{*}-M\frac{W_{t+k}}{A_{t+k}}\right)\right\} =0\\
+\Pi_{t}^{1-\epsilon}=\theta+(1-\theta)\left(\frac{P_{t}^{*}}{P_{t-1}}\right)^{1-\epsilon}\\
+Y_{t}=C_{t}\\
+N_{t}={\displaystyle \int_{0}^{1}}N_{t}(i)di\\
+Q_{t}\ \mbox{is set be the central bank}
+\end{gather*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Now, we will study the dynamics of this economy by simplifying the above
+ system of equations, performing log-linearization on the equations that
+ remain, and then analyzing the log-linearized equations in Dynare.
+\end_layout
+
+\begin_layout Subsection*
+Simplification
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Using the competitive labor supply schedule (equation 18)
+\begin_inset Formula 
+\begin{eqnarray*}
+N_{t}^{\varphi} & = & \left(\frac{W_{t}}{P_{t}}\right)C_{t}^{-\sigma}\\
+W_{t} & = & N_{t}^{\varphi}C_{t}^{\sigma}P_{t}
+\end{eqnarray*}
+
+\end_inset
+
+and the market clearing condition for the goods market, the above system
+ of seven equations can be simplified.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather}
+Q_{t}=E_{t}\left\{ \beta\left(\frac{C_{t+1}}{C_{t}}\right)^{-\sigma}\frac{1}{\Pi_{t+1}}\right\} \\
+{\displaystyle \sum_{k=0}^{\infty}}\theta^{k}E_{t}\left\{ Q_{t,t+k}Y_{t+k|t}\left[\frac{P_{t}^{*}}{P_{t-1}}-M\left(\frac{N_{t+k}^{\varphi}Y_{t+k}^{\sigma}}{A_{t+k}}\right)\Pi_{t-1,t+k}\right]\right\} =0\\
+\Pi_{t}^{1-\epsilon}=\theta+(1-\theta)\left(\frac{P_{t}^{*}}{P_{t-1}}\right)^{1-\epsilon}\\
+N_{t}={\displaystyle \int_{0}^{1}}N_{t}(i)di\\
+Q_{t}\ \mbox{is set by the central bank}
+\end{gather}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Pi_{t-1,t+k}\equiv\nicefrac{P_{t+k}}{P_{t-1}}$
+\end_inset
+
+.
+ We now have a system of 5 equations and 5 endogenous variables 
+\begin_inset Formula $\left(Q_{t},Y_{t},\Pi_{t},\frac{P_{t}^{*}}{P_{t-1}},N_{t}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Benchmark Case
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As stated previously, a useful benchmark is the case of flexible prices
+ 
+\begin_inset Formula $(\theta=0)$
+\end_inset
+
+.
+ Our focus is on a zero inflation, steady state equilibrium.
+ It follows from (26) that in a steady state equilibrium with zero inflation
+ (i.e., 
+\begin_inset Formula $\Pi=1$
+\end_inset
+
+),
+\begin_inset Formula 
+\[
+\Pi_{t}=1\iff\frac{P_{t}^{*}}{P_{t-1}}=1
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula $P_{t}^{*}=P_{t-1}=P_{t}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Then, at 
+\begin_inset Formula $k=0$
+\end_inset
+
+, equation (25) implies
+\begin_inset Formula 
+\begin{equation}
+Y_{t|t}\left(1-M\frac{N_{t}^{\varphi}Y_{t}^{\sigma}}{A_{t}}\right)=0\iff MN_{t}^{\varphi}Y_{t}^{\sigma}=A_{t}
+\end{equation}
+
+\end_inset
+
+Also, since all firms are symmetric, then
+\begin_inset Formula 
+\begin{eqnarray}
+Y_{t} & = & \left[{\displaystyle \int_{0}^{1}}Y_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\ \mbox{(definition)}\nonumber \\
+ & = & \left[{\displaystyle \int_{0}^{1}}\left(A_{t}N_{t}(i)\right)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\ \mbox{(definition)}\nonumber \\
+ & = & \left[{\displaystyle \int_{0}^{1}}\left(A_{t}N_{t}\right)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\ \mbox{(symmetry)}\nonumber \\
+ & = & A_{t}N_{t}
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Thus, from equations (29) and (30), we have 
+\begin_inset Formula 
+\begin{eqnarray}
+M\left(\frac{Y_{t}}{A_{t}}\right)^{\varphi}Y_{t}^{\sigma} & = & A_{t}\nonumber \\
+Y_{t}^{\sigma+\varphi} & = & \frac{1}{M}A_{t}^{1+\varphi}\nonumber \\
+Y_{t} & = & \left[\frac{1}{M}A_{t}^{1+\varphi}\right]^{\frac{1}{\varphi+\sigma}}\equiv Y_{t}^{n}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $Y_{t}^{n}$
+\end_inset
+
+ is known as the natural level of output.
+ It is the equilibrium level of output under flexible prices, and it is
+ determined independently of monetary policy (again).
+ This is why we will introduce 
+\begin_inset Quotes eld
+\end_inset
+
+price stickiness.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The level of output that solves the social planner's problem
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{\{C_{t}(i),N_{t}(i)\}_{i\in[0,1],t=0,1,\ldots}}} & E_{0}\left\{ {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\left(\frac{C_{t}^{1-\sigma}}{1-\sigma}-\frac{N_{t}^{1+\varphi}}{1+\varphi}\right)\right\} \\
+\mbox{s.t.} & C_{t}=\left[{\displaystyle \intop_{0}^{1}}C_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+ & N_{t}={\displaystyle \intop_{0}^{1}}N_{t}(i)di\\
+ & C_{t}(i)=A_{t}N_{t}(i)
+\end{eqnarray*}
+
+\end_inset
+
+is the socially efficient level of output.
+ In Homework 6, it was shown that this optimal level of output is
+\begin_inset Formula 
+\[
+C_{t}^{*}=A_{t}^{\frac{1+\varphi}{\varphi+\sigma}}\equiv Y_{t}^{e}
+\]
+
+\end_inset
+
+Notice that when 
+\begin_inset Formula $M=1$
+\end_inset
+
+ (perfect competition), the natural level of output corresponds to the equilibri
+um level of ouput in the classial economy, as derived in the Set 3 notes.
+ The presence of market power by firms has the effect of lowering that output
+ level uniformly over time, without affecting its sensitivity to changes
+ in technology.
+ Thus, because of markup power, 
+\begin_inset Formula $Y_{t}^{n}$
+\end_inset
+
+ is less than the socially efficient level of output.
+\end_layout
+
+\begin_layout Section*
+The 
+\begin_inset Quotes eld
+\end_inset
+
+Sticky Price
+\begin_inset Quotes erd
+\end_inset
+
+ Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As stated previously, we have a simplified the sticky price model into a
+ system of 5 equations (equations 24 through 28) and 5 endogenous variables
+ 
+\begin_inset Formula $\left(Q_{t},Y_{t},\Pi_{t},\frac{P_{t}^{*}}{P_{t-1}},N_{t}\right)$
+\end_inset
+
+.
+ After some tedious calculation, we can reduce our current system into a
+ brand new one with only 3 equations and 3 endogenous variables 
+\begin_inset Formula $(\pi_{t},\tilde{y}_{t},i_{t})$
+\end_inset
+
+, where 
+\begin_inset Formula $\tilde{y}_{t}\equiv y_{t}-y_{t}^{n}$
+\end_inset
+
+ is the log deviation of output from its flexible price counterpart, and
+ following convention, it is referred to as the 
+\series bold
+output gap
+\series default
+.
+ Important to note, the lower case variables represent the 
+\begin_inset Formula $\log$
+\end_inset
+
+ values of their upper case counterparts (i.e., 
+\begin_inset Formula $x_{t}\equiv\log X_{t}$
+\end_inset
+
+).
+ Using equation (24), we will derive the 
+\series bold
+Dynamic IS Equation
+\series default
+, and using equations 24 through 27, we will derive the 
+\series bold
+New Keynesian Phillips Curve
+\series default
+.
+\end_layout
+
+\begin_layout Subsection*
+Log-Linearization
+\end_layout
+
+\begin_layout Subsubsection*
+Dynamic IS Equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To begin, we rewrite equation (24) as follows
+\begin_inset Formula 
+\begin{eqnarray*}
+Q_{t} & = & E_{t}\left\{ \beta\left(\frac{Y_{t+1}}{Y_{t}}\right)^{-\sigma}\frac{1}{\Pi_{t+1}}\right\} \\
+\exp(-i_{t}) & = & E_{t}\left\{ \exp\left[-\rho-\sigma(y_{t+1}-y_{t})-\pi_{t+1}\right]\right\} 
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $i_{t}\equiv-\log Q_{t}$
+\end_inset
+
+ is the is nominal interest rate, 
+\begin_inset Formula $\pi_{t}\equiv\log\Pi_{t}$
+\end_inset
+
+ is the inflation rate, and 
+\begin_inset Formula $\rho\equiv-\log\beta$
+\end_inset
+
+ is the real interest rate in the steady state.
+\end_layout
+
+\begin_layout Example*
+Here is a numerical example concerning the nature of the different variables.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $Q_{t}=0.95$
+\end_inset
+
+; 
+\begin_inset Formula $\log Q_{t}\approx-0.0513$
+\end_inset
+
+; 
+\begin_inset Formula $i_{t}\equiv-\log Q_{t}\approx0.0513$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $P_{t}=1.5$
+\end_inset
+
+; 
+\begin_inset Formula $P_{t-1}=1$
+\end_inset
+
+; 
+\begin_inset Formula $\Pi_{t}=\nicefrac{P_{t}}{P_{t-1}}=1.5$
+\end_inset
+
+; 
+\begin_inset Formula $\pi_{t}\equiv\log\Pi_{t}=0.4054651081$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, we log-linearize the new version of equation (24) around the steady
+ state.
+\begin_inset Formula 
+\[
+-\hat{i}_{t}=E_{t}\left\{ \left[-\sigma(\hat{y}_{t+1}-\hat{y}_{t})-\pi_{t+1}\right]\right\} 
+\]
+
+\end_inset
+
+Important to note, the 
+\begin_inset Quotes eld
+\end_inset
+
+hat
+\begin_inset Quotes erd
+\end_inset
+
+ over the lower-case variables represents the deviation of the variable
+ from its steady state (i.e., 
+\begin_inset Formula $\hat{x}_{t}\equiv x_{t}-x_{ss}$
+\end_inset
+
+).
+ So, we have 
+\begin_inset Formula $\hat{i}_{t}=i_{t}-i_{ss}$
+\end_inset
+
+.
+ Since there is no inflation in the steady state (i.e., 
+\begin_inset Formula $\pi_{t}=0$
+\end_inset
+
+), then 
+\begin_inset Formula $i_{ss}=\rho$
+\end_inset
+
+.
+ Moreover, 
+\begin_inset Formula $\hat{y}_{t+1}-\hat{y}=y_{t+1}-y-y_{t}+y=y_{t+1}-y_{t}$
+\end_inset
+
+.
+ Thus, we can rewrite the equation above as
+\begin_inset Formula 
+\begin{eqnarray}
+-(i_{t}-\rho) & = & E_{t}\left\{ -\sigma(y_{t+1}-y_{t})-\pi_{t+1}\right\} \nonumber \\
+y_{t} & = & E_{t}\left\{ y_{t+1}\right\} -\frac{1}{\sigma}\left(i_{t}-E_{t}\{\pi_{t+1}\}-\rho\right)\nonumber \\
+y_{t}-y_{t}^{n} & = & E_{t}\left\{ y_{t+1}-y_{t+1}^{n}\right\} -\frac{1}{\sigma}\left(i_{t}-E_{t}\left\{ \pi_{t+1}\right\} -\rho\right)-y_{t}^{n}+E_{t}\left\{ y_{t+1}^{n}\right\} \nonumber \\
+y_{t}-y_{t}^{n} & = & E_{t}\left\{ y_{t+1}-y_{t+1}^{n}\right\} -\frac{1}{\sigma}\left[i_{t}-E_{t}\left\{ \pi_{t+1}\right\} -\rho+\sigma\left(y_{t}^{n}-E_{t}\left\{ y_{t+1}^{n}\right\} \right)\right]\nonumber \\
+\tilde{y}_{t} & = & E_{t}\left\{ \tilde{y}_{t+1}\right\} -\frac{1}{\sigma}\left[i_{t}-E_{t}\left\{ \pi_{t+1}\right\} -r_{t}^{n}\right]
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $\tilde{y}_{t}\equiv y_{t}-y_{t}^{n}$
+\end_inset
+
+ is the output gap and 
+\begin_inset Formula $r_{t}^{n}$
+\end_inset
+
+ is the 
+\series bold
+natural rate of interest
+\series default
+ given by
+\begin_inset Formula 
+\begin{eqnarray}
+r_{t}^{n} & = & \rho-\sigma\left(y_{t}^{n}-E_{t}\left\{ y_{t+1}^{n}\right\} \right)\nonumber \\
+ & = & \rho+\sigma\left(E_{t}\left\{ y_{t+1}^{n}\right\} -y_{t}^{n}\right)\nonumber \\
+r_{t}^{n} & = & \rho+\sigma E_{t}\left\{ \Delta y_{t+1}^{n}\right\} 
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Henceforth, equation (32) is known as the 
+\series bold
+Dynamic IS Equation 
+\series default
+(or DIS, for short).
+ It was shown that the natural level of output, 
+\begin_inset Formula $y_{t}^{n}$
+\end_inset
+
+, is a linear function of technology shock, so it is an exogenous variable.
+ Hence, the natural rate of interest, 
+\begin_inset Formula $r_{t}^{n}$
+\end_inset
+
+, is also exogenous.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Remember, in a steady state with zero inflation, 
+\begin_inset Formula $y_{t}^{n}$
+\end_inset
+
+ is the equilibrium level of output under flexible prices.
+ Because of monopoly power, the natural rate of output is strictly less
+ than the efficient rate of output, 
+\begin_inset Formula $y_{t}^{e}$
+\end_inset
+
+, while the actual rate of output, 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+, fluctuates around 
+\begin_inset Formula $y_{t}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Under the assumption that the effects of nominal rigidities vanish asymptoticall
+y, 
+\begin_inset Formula $\lim_{T\rightarrow\infty}E_{t}\left\{ \tilde{y}_{t+T}\right\} =0$
+\end_inset
+
+.
+ In that case one can solve equation (32) forward to yield the expression
+\begin_inset Formula 
+\[
+\tilde{y}_{t}=-\frac{1}{\sigma}{\displaystyle \sum_{k=0}^{\infty}}(r_{t+k}-r_{t+k}^{n})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $r_{t}\equiv i_{t}-E_{t}\left\{ \pi_{t+1}\right\} $
+\end_inset
+
+ is the expected real return on a one period bond (i.e., the real interest
+ rate).
+ The previous expression emphasizes the fact that the output gap is proportional
+ to the sum of current and anticipated deviations between the real interest
+ rate and its natural counterpart.
+\end_layout
+
+\begin_layout Subsubsection*
+New Keynesian Phillips Curve
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Continuing with the derivations, we log-linearize equation (25), i.e., the
+ optimal price-setting condition,
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{k=0}^{\infty}}\theta^{k}E_{t}\left\{ Q_{t,t+k}Y_{t+k|t}\left[\frac{P_{t}^{*}}{P_{t-1}}-M\left(\frac{N_{t+k}^{\varphi}Y_{t+k}^{\sigma}}{A_{t+k}}\right)\Pi_{t-1,t+k}\right]\right\} =0
+\]
+
+\end_inset
+
+around the zero inflation steady state.
+ In the zero inflation steady state, 
+\begin_inset Formula $\nicefrac{P_{t}^{*}}{P_{t-1}}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\Pi_{t-1,t+k}=1$
+\end_inset
+
+.
+ Furthermore, constancy of the price level implies that 
+\begin_inset Formula $P_{t}^{*}=P_{t+k}$
+\end_inset
+
+ in that steady state, from which it follows that 
+\begin_inset Formula $Y_{t+k|t}=Y$
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+\frac{N_{t+k}^{\varphi}Y_{t+k}^{\sigma}}{A_{t+k}}=\frac{N^{\varphi}Y^{\sigma}}{A}
+\]
+
+\end_inset
+
+because all firms will be producing the same quantity of output.
+ In addition, 
+\begin_inset Formula $Q_{t,t+k}=\beta^{k}$
+\end_inset
+
+ must hold in that steady state.
+ Let us focus on the expression within the expectation.
+ We apply a first-order Taylor approximation of equation (25) around the
+ zero inflation steady state.
+\begin_inset Formula 
+\begin{gather*}
+Q_{t,t+k}Y_{t+k|t}\left[\frac{P_{t}^{*}}{P_{t-1}}-M\left(\frac{N_{t+k}^{\varphi}Y_{t+k}^{\sigma}}{A_{t+k}}\right)\Pi_{t-1,t+k}\right]\approx\beta^{k}Y\left[1-M\left(\frac{N^{\varphi}Y^{\sigma}}{A}\right)\right]\\
++(\mbox{first order terms of \ensuremath{Q_{t+k}Y_{t+k|t}})}\left[1-M\left(\frac{N^{\varphi}Y^{\sigma}}{A}\right)\right]\\
++\beta^{k}Y\left[\log\frac{P_{t}^{*}}{P_{t-1}}-M\frac{N^{\varphi}Y^{\sigma}}{A}\left(\varphi\hat{n}_{t+k}+\sigma\hat{y}_{t+k}-\hat{a}_{t+k}+\log\Pi_{t-1,t+k}\right)\right]
+\end{gather*}
+
+\end_inset
+
+Note that
+\begin_inset Formula 
+\[
+\left(\frac{N_{t+k}^{\varphi}Y_{t+k}^{\sigma}}{A_{t+k}}\right)
+\]
+
+\end_inset
+
+is the 
+\emph on
+real
+\emph default
+ marginal cost in period 
+\begin_inset Formula $t+k$
+\end_inset
+
+ for a firm whose price was last set in period 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Since
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{t}^{*} & = & M\cdot(\mbox{nominal marginal cost)}\\
+\frac{P_{t}^{*}}{P_{t}} & = & M\cdot\left(\frac{N_{t}^{\varphi}Y_{t}^{\sigma}}{A_{t}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+then, in the steady state with zero inflation (i.e., 
+\begin_inset Formula $P_{t}^{*}=P_{t}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+), we have 
+\begin_inset Formula 
+\[
+\left[1-M\left(\frac{N^{\varphi}Y^{\sigma}}{A}\right)\right]=0\iff M\left(\frac{N^{\varphi}Y^{\sigma}}{A}\right)=1\iff\left(\frac{N^{\varphi}Y^{\sigma}}{A}\right)=\frac{1}{M}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+As a result, we can rewrite equation (25) as
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{k=0}^{\infty}}\theta^{k}E_{t}\left\{ \beta^{k}Y\left[p_{t}^{*}-p_{t-1}-\left(\hat{mc}_{t+k}+p_{t+k}-p_{t-1}\right)\right]\right\} =0
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{mc}_{t+k}\equiv\varphi\hat{n}_{t+k}+\sigma\hat{y}_{t+k}-\hat{a}_{t+k}=mc_{t+k}-mc$
+\end_inset
+
+ denotes the log-deviation of the marginal cost from its steady state value
+ 
+\begin_inset Formula $mc=-\mu$
+\end_inset
+
+, and where 
+\begin_inset Formula $\mu\equiv\log M$
+\end_inset
+
+ is the log of the desired gross markup (which, for 
+\begin_inset Formula $M$
+\end_inset
+
+ close to one, is approximately equal to the net markup 
+\begin_inset Formula $M-1$
+\end_inset
+
+).
+ After rearranging terms, we have
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{k=0}^{\infty}}\left(\beta\theta\right)^{k}(p_{t}^{*}-p_{t-1})={\displaystyle \sum_{k=0}^{\infty}}\left(\beta\theta\right)^{k}E_{t}\left\{ \hat{mc}_{t+k}+\left(p_{t+k}-p_{t-1}\right)\right\} 
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $0<\beta\theta<1$
+\end_inset
+
+, then 
+\begin_inset Formula $\sum_{k=0}^{\infty}\left(\beta\theta\right)^{k}=\frac{1}{(1-\beta\theta)}$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\begin{equation}
+p_{t}^{*}-p_{t-1}=(1-\beta\theta){\displaystyle \sum_{k=0}^{\infty}}(\beta\theta)^{k}E_{t}\left\{ \hat{mc}_{t+k}+\left(p_{t+k}-p_{t-1}\right)\right\} 
+\end{equation}
+
+\end_inset
+
+If marginal cost is high, then a firm will set its price high and above
+ marginal cost.
+ Also, if the general price level, 
+\begin_inset Formula $p_{t+k}-p_{t-1}$
+\end_inset
+
+, is high, then the firm will also set a higher price.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In order to gain some additional intuition about the factors determining
+ a firm's price-setting decision, it is useful to rewrite (34) as
+\begin_inset Formula 
+\[
+p_{t}^{*}=\mu+(1-\beta\theta){\displaystyle \sum_{k=0}^{\infty}}(\beta\theta)^{k}E_{t}\{mc_{t+k}+p_{t+k}\}
+\]
+
+\end_inset
+
+Hence, firms resetting their prices will choose a price that corresponds
+ to the desired markup over a weighted average of their currenct and expected
+ (
+\emph on
+nominal
+\emph default
+) marginal costs, with the weights being proportional to the probability
+ of the price remaining effective at each horizon 
+\begin_inset Formula $\theta^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For a moment, we will turn our attention towards the remaining equations
+ in the system.
+ First, we focus on equation (26), which illustrates the aggregate price
+ dyanmics.
+\begin_inset Formula 
+\begin{eqnarray}
+\Pi_{t}^{1-\epsilon} & = & \theta+(1-\theta)\left(\frac{P_{t}^{*}}{P_{t-1}}\right)^{1-\epsilon}\nonumber \\
+(1-\epsilon)\pi_{t} & = & (1-\theta)(1-\epsilon)\left(p_{t}^{*}-p_{t-1}\right)\nonumber \\
+\pi_{t} & = & (1-\theta)(p_{t}^{*}-p_{t-1})
+\end{eqnarray}
+
+\end_inset
+
+Equation (35) makes clear that, in the present setup, inflation results
+ from the fact that firms reoptimizing in any given period choose a price
+ that differs from the economy's average price in the previous period.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Moving on, we consider equation (27).
+\begin_inset Formula 
+\begin{eqnarray*}
+N_{t} & = & {\displaystyle \int_{0}^{1}}N_{t}(i)\ di\\
+ & = & {\displaystyle \int_{0}^{1}}\frac{Y_{t}(i)}{A_{t}}\ d_{i}\\
+ & = & {\displaystyle \int_{0}^{1}}\frac{1}{A_{t}}\left(\frac{P_{t}(i)}{P_{t}}\right)^{-\epsilon}Y_{t}\ di\\
+ & = & \frac{Y_{t}}{A_{t}}{\displaystyle \int_{0}^{1}}\left(\frac{P_{t}(i)}{P_{t}}\right)^{-\epsilon}di
+\end{eqnarray*}
+
+\end_inset
+
+where the third equality follows from equations (9) and (10) and the goods
+ market clearing condition.
+ Taking 
+\begin_inset Formula $\log$
+\end_inset
+
+ on both sides,
+\begin_inset Formula 
+\[
+n_{t}=y_{t}-a_{t}+d_{t}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $d_{t}\equiv\log\left[{\displaystyle \int_{0}^{1}}\left(\frac{P_{t}(i)}{P_{t}}\right)^{-\epsilon}di\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $di$
+\end_inset
+
+ is a measure of price (and, hence, output) dispersion across firms.
+ In a neighborhood of the zero inflation steady state, 
+\begin_inset Formula $d_{t}$
+\end_inset
+
+ is equal to zero up to a first-order approximation.
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \int_{0}^{1}}\left(\frac{P_{t}(i)}{P_{t}}\right)^{-\epsilon}di & = & {\displaystyle \int_{0}^{1}}\exp\left[-\epsilon\left(p_{t}(i)-p_{t}\right)\right]di\\
+ & \approx & {\displaystyle \int_{0}^{1}}\left[1-\epsilon(p_{t}(i)-p_{t})\right]di\\
+ & = & 1-\left[\epsilon{\displaystyle \int_{0}^{1}}\left(p_{t}(i)-p_{t}\right)d_{i}\right]
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $P_{t}=\left[{\displaystyle \int_{0}^{1}}P_{t}(i)^{1-\epsilon}di\right]^{\frac{1}{1-\epsilon}}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray*}
+1 & = & \int_{0}^{1}\left(\frac{P_{t}(i)}{P_{t}}\right)^{1-\epsilon}d_{i}\\
+ & = & \int_{0}^{1}\exp\left[(1-\epsilon)(p_{t}(i)-p_{t})\right]d_{i}\\
+1 & \approx & {\displaystyle \int_{0}^{1}}\left[1+(1-\epsilon)(p_{t}(i)-p_{t})\right]d_{i}\\
+0 & \approx & (1-\epsilon){\displaystyle \int_{0}^{1}}(p_{t}(i)-p_{t})di
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\epsilon>1$
+\end_inset
+
+, then 
+\begin_inset Formula $(1-\epsilon)\neq0$
+\end_inset
+
+, so we must have 
+\begin_inset Formula ${\displaystyle \int_{0}^{1}}(p_{t}(i)-p_{t})di=0$
+\end_inset
+
+.
+ Hence,
+\begin_inset Formula 
+\[
+dt\equiv\log\left[{\displaystyle \int_{0}^{1}}\left(\frac{P_{t}(i)}{P_{t}}\right)^{-\epsilon}di\right]\approx\log(1)=0
+\]
+
+\end_inset
+
+Thus, one can write the following approximate relation between aggregate
+ output, employment, and technology
+\begin_inset Formula 
+\begin{equation}
+y_{t}=a_{t}+n_{t}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+To summarize, we have derived the following three equations
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{t}^{*} & = & (1-\beta\theta){\displaystyle \sum_{k=0}^{\infty}}\left(\beta\theta\right)^{k}E_{t}\left\{ \hat{mc}_{t+k}+p_{t+k}\right\} \\
+\pi_{t} & = & (1-\theta)(p_{t}^{*}-p_{t-1})\\
+y_{t} & = & a_{t}+n_{t}
+\end{eqnarray*}
+
+\end_inset
+
+i.e., equations (34), (35), and (36), which we use to rewrite the optimal
+ price setting equation.
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{t}^{*} & = & (1-\beta\theta){\displaystyle \sum_{k=0}^{\infty}}\left(\beta\theta\right)^{k}E_{t}\left\{ \hat{mc}_{t+k}+p_{t+k}\right\} \\
+ & = & (1-\beta\theta)\left(\hat{mc}_{t}+p_{t}\right)+(1-\beta\theta){\displaystyle \sum_{k=1}^{\infty}}(\beta\theta)^{k}E_{t}\left\{ \hat{mc}_{t+k}+p_{t+k}\right\} \\
+ & = & (1-\beta\theta)\left(\hat{mc}_{t}+p_{t}\right)+(\beta\theta)E_{t}\left\{ (1-\beta\theta){\displaystyle \sum_{k=0}^{\infty}}(\beta\theta)^{k}E_{t+1}\left[\hat{mc}_{t+1+k}+p_{t+1+k}\right]\right\} 
+\end{eqnarray*}
+
+\end_inset
+
+Important to note, that we use the 
+\begin_inset Quotes eld
+\end_inset
+
+power rule
+\begin_inset Quotes erd
+\end_inset
+
+ for expectations, i.e., 
+\begin_inset Formula $E_{t}\left\{ E_{t+1}\left[x_{t+k}\right]\right\} =E_{t}\left\{ x_{t+k}\right\} $
+\end_inset
+
+.
+ Hence, the optimal price setting equation can be rewritten as
+\begin_inset Formula 
+\[
+p_{t}^{*}=(1-\beta\theta)(\hat{mc}_{t}+p_{t})+\beta\theta E_{t}\left\{ p_{t+1}^{*}\right\} 
+\]
+
+\end_inset
+
+is a weighted average.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A firm reoptimizing in period 
+\begin_inset Formula $t$
+\end_inset
+
+ will set a price higher if marginal cost and/or the relative price is high.
+ Furthermore, since the firm may not be able to reset its price again in
+ period 
+\begin_inset Formula $t+1$
+\end_inset
+
+, then it must also take into account its expected optimal price for next
+ period.
+ So, if a firm expects the general price level to be higher in period 
+\begin_inset Formula $t+1$
+\end_inset
+
+, then the firm will set a higher optimal price in period 
+\begin_inset Formula $t$
+\end_inset
+
+ as insurance since it may not be able to change its price in the next period.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Subtracting 
+\begin_inset Formula $p_{t-1}$
+\end_inset
+
+ from both sides yields
+\begin_inset Formula 
+\begin{equation}
+p_{t}^{*}-p_{t-1}=(1-\beta\theta)\hat{mc}_{t}+\pi_{t}+\beta\theta E_{t}\left\{ p_{t+1}^{*}-p_{t}\right\} 
+\end{equation}
+
+\end_inset
+
+Equation (35) implies
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\pi_{t}}{(1-\theta)} & = & (1-\beta\theta)\hat{mc}_{t}+\pi_{t}+\beta\theta E_{t}\left\{ \frac{\pi_{t+1}}{(1-\theta)}\right\} \nonumber \\
+\pi_{t}-(1-\theta)\pi_{t} & = & (1-\theta)(1-\beta\theta)\hat{mc}_{t}+\beta\theta E_{t}\left\{ \pi_{t+1}\right\} \nonumber \\
+\pi_{t} & = & \frac{(1-\theta)(1-\beta\theta)}{\theta}\hat{mc}_{t}+\beta E_{t}\left\{ \pi_{t+1}\right\} \nonumber \\
+\pi_{t} & = & \lambda\hat{mc}_{t}+\beta E_{t}\left\{ \pi_{t+1}\right\} 
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $\lambda\equiv\frac{(1-\theta)(1-\beta\theta)}{\theta}$
+\end_inset
+
+.
+ This equation determines inflation dynamics.
+ Current inflation rate depends on the current marginal cost and the discounted
+ expected inflation rate in the next period.
+ So, if a higher inflation rate is expected in 
+\begin_inset Formula $t+1$
+\end_inset
+
+, then current inflation will increase as a result
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is high, the probability of firms being able to change their prices is
+ low.
+ Consequently, firms change their prices less often signifying that prices
+ are 
+\begin_inset Quotes eld
+\end_inset
+
+stickier.
+\begin_inset Quotes erd
+\end_inset
+
+ Important to note, 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is strictly decreasing in the index of price stickiness 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ Thus, a large rise in marginal cost does not have a substantial impact
+ on the inflation rate.
+ So, in the case of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ being large, when a firm does have the opportunity to change its price,
+ the firm will choose not to deviate greatly from the prices of its competitors
+ because it is trying to keep its relative price ratio in line with the
+ other firms.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Solving (38) forward, inflation is expressed as the discounted sum of current
+ and expected future deviations of 
+\emph on
+real
+\emph default
+ marginal costs from the steady state
+\begin_inset Formula 
+\[
+\pi_{t}=\lambda{\displaystyle \sum_{k=0}^{\infty}}\beta^{k}E_{t}\left\{ \hat{mc}_{t+k}\right\} 
+\]
+
+\end_inset
+
+Equivalently, and defining the average markup in the economy as 
+\begin_inset Formula $\mu_{t}=-mc_{t}$
+\end_inset
+
+, it is seen that inflation will be high when firms expect average markups
+ to be below their steady state (i.e., desired) level 
+\begin_inset Formula $\mu$
+\end_inset
+
+, for in that case firms that have the opportunity to reset prices will
+ choose a price above the economy's average price level in order to realign
+ their markup closer to its desired level.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is worth emphasizing here that the mechanism underlying fluctuations
+ in the aggregate price level and inflation as laid out above have little
+ in common with the mechanism at work in the classical monetary economy.
+ Thus, in the present model, inflation results from the aggregate consequences
+ of purposeful price-setting decisions by firms, which adjust their prices
+ in light of current and anticipated cost conditions.
+ By contrast, in the classical monetary economy analyzed in Set 3, inflation
+ is a consequence of the changes in the aggregate price level that, given
+ the monetary policy rule in place, are required in order to support an
+ equilibrium allocation that is independent of the evolution of nominal
+ variables, with no account given of the mechanism (other than an invisible
+ hand) that will bring about those price level changes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Next, we hypothesize that the output gap is related to marginal cost.
+ If the output is overheated above the reference level, i.e., the natural
+ output level, then marginal cost will be higher than its reference point.
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{mc}_{t} & = & \varphi\hat{n}_{t}+\sigma\hat{y}_{t}-\hat{a}_{t}\\
+ & = & \varphi n_{t}+\sigma y_{t}-a_{t}-(\varphi n+\sigma y-a)
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $n$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+, and 
+\begin_inset Formula $a$
+\end_inset
+
+ are the log steady state values, so 
+\begin_inset Formula $(\varphi n+\sigma y-a)$
+\end_inset
+
+ is the log steady state marginal cost.
+ Since the steady state value of marginal cost is 
+\begin_inset Formula $mc=-\mu$
+\end_inset
+
+, then the above equation becomes
+\begin_inset Formula 
+\[
+\hat{mc}_{t}=\varphi n_{t}+\sigma y_{t}-a_{t}+\mu
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mu\equiv\log M$
+\end_inset
+
+.
+ Recall that in a flexible price equilibrium, 
+\begin_inset Formula $\frac{P_{t}(i)}{P_{t}}=1$
+\end_inset
+
+, and thus,
+\begin_inset Formula 
+\begin{eqnarray*}
+1 & = & M\frac{\left(N_{t}^{n}\right)^{\varphi}\left(Y_{t}^{n}\right)^{\sigma}}{A_{t}}\\
+0 & = & \varphi n_{t}^{n}+\sigma y_{t}^{n}-a_{t}+\mu\\
+\mu & = & -\varphi n_{t}^{n}-\sigma y_{t}^{n}+a_{t}
+\end{eqnarray*}
+
+\end_inset
+
+We plug this expression for 
+\begin_inset Formula $\mu$
+\end_inset
+
+ into the equation for marginal cost.
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{mc}_{t} & = & \varphi n_{t}+\sigma y_{t}-a_{t}-\left(\varphi n_{t}^{n}+\sigma y_{t}^{n}-a_{t}\right)\\
+ & = & \varphi(n_{t}-n_{t}^{n})+\sigma(y_{t}-y_{t}^{n})
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $y_{t}=a_{t}+n_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{t}^{n}=a_{t}+n_{t}^{n}$
+\end_inset
+
+, then we obtain
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{mc}_{t} & = & \varphi(y_{t}-a_{t}-y_{t}^{n}+a_{t})+\sigma\tilde{y}_{t}\nonumber \\
+ & = & \varphi\tilde{y}_{t}+\sigma\tilde{y}_{t}\nonumber \\
+\hat{mc} & = & (\varphi+\sigma)\tilde{y}_{t}
+\end{eqnarray}
+
+\end_inset
+
+i.e., the log deviation of real marginal cost from its steady state is proportiona
+l to the output gap.
+ When the economy is 
+\begin_inset Quotes eld
+\end_inset
+
+overheated
+\begin_inset Quotes erd
+\end_inset
+
+ relative to the adjusted benchmark (i.e., the natural rate of output, which
+ accounts for the technology level), then the marginal cost will be high,
+ relative to some benchmark.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+By combining equation (39) with equation (38), one can obtain an equation
+ relating inflation to its one period ahead forecast and the output gap
+\begin_inset Formula 
+\begin{equation}
+\pi_{t}=\beta E_{t}\left\{ \pi_{t+1}\right\} +\kappa\tilde{y}_{t}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\kappa\equiv\lambda(\sigma+\varphi)$
+\end_inset
+
+.
+ Equation (40) is ofter referred to as the 
+\series bold
+New Keynesian Phillips curve
+\series default
+ (or NKPC, for short), and constitutes one of the key building blocks of
+ the basic New Keynesian model.
+\end_layout
+
+\begin_layout Section*
+Summary of Results
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The Dynamic IS Equation and the New Keynesian Phillips curve together with
+ an equilibrium process for the natural rate 
+\begin_inset Formula $r_{t}^{n}$
+\end_inset
+
+ (which in general will depend on all the real exogenous forces in the model,
+ i.e., the technology shocks) constitute the non-policy block of the basic
+ New Keynesian model.
+ That block has a simple recursive structure: The NKPC determines inflation
+ given a path for the output gap, whereas the DIS equation determines the
+ output gap given a path for the (exogenous) natural rate and the actual
+ real rate.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In order to close the model, supplement those two equations with one or
+ more equations determining how the nominal interest rate 
+\begin_inset Formula $i_{t}$
+\end_inset
+
+ evolves over time, i.e., a description of how monetary policy is conducted.
+ One such equation is known as the 
+\series bold
+Taylor Rule
+\series default
+, which is given by
+\begin_inset Formula 
+\begin{equation}
+i_{t}=\rho+\phi_{\pi}\pi_{t}+\phi_{y}\tilde{y}_{t}+\nu_{t}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\nu_{t}$
+\end_inset
+
+ has been included to account for monetary policy shocks.
+ It is one interest rate rule that the central bank can follow to determine
+ the nominal interest rate.
+ Assume 
+\begin_inset Formula $\phi_{\pi}$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi_{y}$
+\end_inset
+
+ are non-negative coefficients, chosen by the monetary authority.
+ Note that the choice of the intercept 
+\begin_inset Formula $\rho$
+\end_inset
+
+ makes the rule consistent with a zero inflation steady state.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, we have a system of 3 equations, 3 endogenous variables 
+\begin_inset Formula $(\tilde{y}_{t},\pi_{t},i_{t})$
+\end_inset
+
+, and 2 exogenous shocks 
+\begin_inset Formula $(r_{t}^{n},\nu_{t})$
+\end_inset
+
+.
+ All of the remaining endogenous variables in the model can be explained
+ by relating them to one or more of the three equations and endogenous variables
+ above.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Thus, and in contrast with the classical model analyzed in Set 3, when prices
+ are sticky the equilibrium path of real variables cannot be determined
+ independently of monetary policy.
+ In other words, monetary policy is non-neutral.
+\end_layout
+
+\begin_layout Subsection*
+Economic Intuition
+\end_layout
+
+\begin_layout Subsubsection*
+Dynamic IS curve
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tilde{y}_{t}=E_{t}\left\{ \tilde{y}_{t+1}\right\} -\frac{1}{\sigma}\left(i_{t}-E_{t}\left\{ \pi_{t+1}\right\} -r_{t}^{n}\right)
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+If real interest is higher than some benchmark, then the households will
+ decrease consumption in period 
+\begin_inset Formula $t$
+\end_inset
+
+, and instead reallocate the resources to purchase more bonds (i.e., households
+ will 
+\begin_inset Quotes eld
+\end_inset
+
+save
+\begin_inset Quotes erd
+\end_inset
+
+).
+ This is essentially another version of the Euler equation.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+New Keynesian Phillips Curve
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi_{t}=\kappa\tilde{y}_{t}+\beta E_{t}\left\{ \pi_{t+1}\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+When a firm sets its price, it considers the relative price (the price it
+ sets compared to its peers, i.e., the price index) and marginal cost.
+ 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ captures how long the firm must keep the price it sets before it can change
+ it again.
+ If production is higher than the benchmark (higher than the current technology
+ dictates), then households must supply more labor and suffer more disutility.
+ To compensate the households, the firms must increase wages, and as a result,
+ marginal cost will be higher, which will lead to higher prices and inflation.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Taylor Rule
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+i_{t}=\rho+\phi_{\pi}\pi_{t}+\phi_{y}\tilde{y}_{t}+\nu_{t}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Under the assumption of non-negative coefficients 
+\begin_inset Formula $(\phi_{\pi},\phi_{y})$
+\end_inset
+
+, it can be shown that a necessary and sufficient condition for uniqueness
+ is given by
+\begin_inset Formula 
+\begin{equation}
+\kappa(\phi_{\pi}-1)+(1-\beta)\phi_{y}>0
+\end{equation}
+
+\end_inset
+
+[Bullard and Mitra (2002)], which is assumed to hold, unless stated otherwise.
+ Hence, the economy is stable around the steady state (i.e., the natural level
+ of the endogenous variables), if and only if condition (42) is satisfied.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To interpret this condition, let us ignore 
+\begin_inset Formula $(1-\beta)\phi_{y}$
+\end_inset
+
+ because 
+\begin_inset Formula $\beta\approx1$
+\end_inset
+
+.
+ Then, we get
+\begin_inset Formula 
+\begin{equation}
+\phi_{\pi}-1>0
+\end{equation}
+
+\end_inset
+
+which is known as the 
+\series bold
+Taylor Principle
+\series default
+.
+ Thus, if the central bank follows this recommendation, then a 1% increase
+ in inflation must lead to a more than 1% increase in nominal interest rate.
+ Consequently, real interest rate will rise, which, in turn, prevents the
+ emergence of multiple equilibria.
+ Under the Taylor Rule, the model dictates that the central bank must fight
+ inflation so as to keep the economy stable and prevent multiple equilibria.
+\end_layout
+
+\begin_layout Subsection*
+Clarida, Gali, and Gertler (CGG)
+\end_layout
+
+\begin_layout Standard
+The paper starts with 2 observations
+\end_layout
+
+\begin_layout Standard
+1.
+ Both inflation and output gap become stable.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Great Moderation.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Standard Deviation of
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Chairman of the Fed
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inflation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Output Gap
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pre-Volker
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.77
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.71
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Volker - Greenspan (79:3 - 96:4)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.18
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.36
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Post - 82
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.06
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ CGG policy rule estimate
+\begin_inset Formula 
+\begin{eqnarray*}
+r_{t}^{*} & = & \beta E_{t}\left\{ \pi_{t+1}\right\} +\gamma\chi_{t}\\
+r_{t} & = & \rho r_{t-1}+(1-\rho)r_{t}^{*}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\rho$
+\end_inset
+
+ is known as inflation rate inertia, 
+\begin_inset Formula $\chi_{t}$
+\end_inset
+
+ is the output gap, 
+\begin_inset Formula $r_{t}$
+\end_inset
+
+ is the nominal interest rate, and 
+\begin_inset Formula $r_{t}^{*}$
+\end_inset
+
+ is the target rate.
+ They estimate the parameters by using the data associated with the previous
+ table.
+ Important to note, the central bank changes its behaviors by altering the
+ following parameter values.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter Values
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Chariman of the Fed
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\rho$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pre-Volker
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.83
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.27
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.68
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Volker-Greenspan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.93
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.79
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+CGG's Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi_{t} & = & \delta E_{t}\left\{ \pi_{t+1}\right\} +\lambda(y_{t}-z_{t})\\
+y_{t} & = & E_{t}\left\{ y_{t+1}\right\} -\frac{1}{\sigma}\left(r_{t}-E_{t}\left\{ \pi_{t+1}\right\} \right)+g_{t}\\
+r_{t}^{*} & = & \beta E_{t}\left\{ \pi_{t+1}\right\} +\gamma\chi_{t}\\
+r_{t} & = & \rho r_{t-1}+(1-\rho)r_{t}^{*}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\delta$
+\end_inset
+
+ is the discount rate, 
+\begin_inset Formula $z_{t}$
+\end_inset
+
+ is the natural rate of output, and 
+\begin_inset Formula $g_{t}$
+\end_inset
+
+ exogenous demand shock.
+ The first equation is the New Keynesian Phillips Curve and the second is
+ Dynamic IS Curve, while the third and fourth polic rule equations are policy
+ rules.
+ These parameter values do not satisfy the Taylor Principle, so the existence
+ of a unique equilibrium is not guaranteed.
+\end_layout
+
+\end_body
+\end_document
