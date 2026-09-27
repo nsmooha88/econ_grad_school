@@ -1,0 +1,1267 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Macroeconomic Theory II: Homework
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Problem
+(Household's Problem): A representative household's utility function is
+\begin_inset Formula 
+\[
+U(C)
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula $U^{\prime}(\cdot)>0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $C$
+\end_inset
+
+ is a consumption index given by
+\begin_inset Formula 
+\[
+C=\left[{\displaystyle \int_{0}^{N}}C(i)^{\frac{\epsilon-1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula $C(i)$
+\end_inset
+
+ representating the quantity of good 
+\begin_inset Formula $i$
+\end_inset
+
+ consumed by the household.
+ I assume the existence of a continuum of goods represented by the interval
+ 
+\begin_inset Formula $\left[0,N\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ is greater than 1.
+ 
+\begin_inset Formula $H$
+\end_inset
+
+ hours of time are inelastically supplied for work (in other words, 
+\begin_inset Formula $H$
+\end_inset
+
+ is fixed, not a choice variable).
+ The budget constraint is
+\begin_inset Formula 
+\[
+{\displaystyle \int_{0}^{N}}P(i)C(i)di=WH+T
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $W$
+\end_inset
+
+ is the nominal wage and 
+\begin_inset Formula $T$
+\end_inset
+
+ is a lump-sum component of income, more specifically 
+\begin_inset Formula $T$
+\end_inset
+
+ is the dividend income (the household is the owner of the firms).
+ Since the righ-hand side of the budget constraint is exogenous to the household.
+ the remaining problem is finding the optimal allocation of consumption
+ expenditure, which we will solve below.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+The problem of maximizing 
+\begin_inset Formula $C$
+\end_inset
+
+ given
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \int}_{0}^{N}P(i)C(i)di=WH+T
+\end{equation}
+
+\end_inset
+
+can be expressed by means of the Lagrangian
+\begin_inset Formula 
+\[
+L=\left[{\displaystyle \int_{0}^{N}}C(i)^{\frac{\epsilon-1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}+\lambda\left[WH+T-{\displaystyle \int_{0}^{N}}P(i)C(i)di\right]
+\]
+
+\end_inset
+
+Derive the associated first-order conditions
+\begin_inset Formula 
+\[
+\frac{P(i)}{P(j)}=\left(\frac{C(i)}{C(j)}\right)^{-\frac{1}{\epsilon}}
+\]
+
+\end_inset
+
+for any 
+\begin_inset Formula $i,j\in[0,N]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+The first-order condition of 
+\begin_inset Formula $L$
+\end_inset
+
+ with respect to the consumption of a specific good 
+\begin_inset Formula $i$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\epsilon}{\epsilon-1}\left[{\displaystyle \int_{0}^{N}}C(i)^{\frac{\epsilon-1}{\epsilon}}\right]^{\frac{1}{\epsilon-1}}\frac{\epsilon-1}{\epsilon}C(i)^{-\frac{1}{\epsilon}}-\lambda P(i) & = & 0\\
+\left[{\displaystyle \int_{0}^{N}}C(i)^{\frac{\epsilon-1}{\epsilon}}\right]^{\frac{1}{\epsilon-1}}C(i)^{-\frac{1}{\epsilon}} & = & \lambda P(i)
+\end{eqnarray*}
+
+\end_inset
+
+We also obtain the same expression for good 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ Thus, we have our desired first-order condition
+\begin_inset Formula 
+\[
+\left(\frac{C(i)}{C(j)}\right)^{-\frac{1}{\epsilon}}=\frac{P(i)}{P(j)}
+\]
+
+\end_inset
+
+for any 
+\begin_inset Formula $i,j\in[0,N]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+The first-order condition can be written as
+\begin_inset Formula 
+\begin{equation}
+C(i)=C(j)\left(\frac{P(i)}{P(j)}\right)^{-\epsilon}
+\end{equation}
+
+\end_inset
+
+Show that substituting (2) into (1) obtains
+\begin_inset Formula 
+\begin{equation}
+C(j)\left(\frac{1}{P(j)}\right)^{-\epsilon}{\displaystyle \int_{0}^{N}}P(i)^{1-\epsilon}di=WH+T
+\end{equation}
+
+\end_inset
+
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+Substituting (2) into (1) yields
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \int}_{0}^{N}P(i)\left[C(j)\left(\frac{P(i)}{P(j)}\right)^{-\epsilon}\right]di & = & WH+T\\
+{\displaystyle \int}_{0}^{N}P(i)C(j)P(i)^{-\epsilon}\left(\frac{1}{P(j)}\right)^{-\epsilon}di & = & WH+T\\
+C(j)\left(\frac{1}{P(j)}\right)^{-\epsilon}{\displaystyle \int_{0}^{N}}P(i)^{1-\epsilon}di & = & WH+T
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Standard
+Define 
+\begin_inset Formula $P\equiv\left[{\displaystyle \int_{0}^{N}}P(i)^{1-\epsilon}di\right]^{\frac{1}{1-\epsilon}}$
+\end_inset
+
+.
+ Show that (3) can be written as
+\begin_inset Formula 
+\begin{equation}
+C(j)=\left(\frac{P(j)}{P}\right)^{-\epsilon}\frac{WH+T}{P}
+\end{equation}
+
+\end_inset
+
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+We substitute the expression for 
+\begin_inset Formula $P$
+\end_inset
+
+ into equation (3) to obtain
+\begin_inset Formula 
+\begin{eqnarray*}
+C(j)\left(\frac{1}{P(j)}\right)^{-\epsilon}P^{1-\epsilon} & = & WH+T\\
+C(j)\left(\frac{P(j)}{P}\right)^{\epsilon} & = & \frac{WH+T}{P}\\
+C(j) & = & \left(\frac{P(j)}{P}\right)^{-\epsilon}\frac{WH+T}{P}
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part D.
+\end_layout
+
+\begin_layout Standard
+By substituting (4) into the definition of 
+\begin_inset Formula $C$
+\end_inset
+
+, show that
+\begin_inset Formula 
+\[
+{\displaystyle \int_{0}^{N}}P(i)C(i)di=PC
+\]
+
+\end_inset
+
+and therefore the total expenditure is the product of price index time the
+ quantity index.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+Substituting (4) into the definition of 
+\begin_inset Formula $C$
+\end_inset
+
+ we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[{\displaystyle \int_{0}^{N}}\left\{ \left(\frac{P(j)}{P}\right)^{-\epsilon}\frac{WH+T}{P}\right\} ^{\frac{\epsilon-1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}} & = & C\\
+\left[\left(\frac{WH+T}{P}\right)^{\frac{\epsilon-1}{\epsilon}}P^{\epsilon-1}\int_{0}^{N}P(j)^{1-\epsilon}di\right]^{\frac{\epsilon}{\epsilon-1}} & = & C\\
+\left(\frac{WH+T}{P}\right)P^{\epsilon}\left[\int_{0}^{N}P(j)^{1-\epsilon}di\right]^{\frac{\epsilon}{\epsilon-1}} & = & C\\
+\left(WH+T\right)P^{\epsilon-1}P^{-\epsilon} & = & C\\
+WH+T & = & PC\\
+{\displaystyle \int}_{0}^{N}P(i)C(i)di & = & PC
+\end{eqnarray*}
+
+\end_inset
+
+since 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\int_{0}^{N}P(i)C(i)di=WH+T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part E.
+\end_layout
+
+\begin_layout Standard
+(4) is the downward sloping demand curve.
+ Draw two demand curves with different values of 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ in a diagram with 
+\begin_inset Formula $P(j)$
+\end_inset
+
+ plotted on the vertical axis and 
+\begin_inset Formula $C(j)$
+\end_inset
+
+ plotted on the horizontal axis.
+ Clearly indicate which curve corresponds to a high 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ and which curve corresponds to a low 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+We need to draw two demand curves with different values of 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+ From (3), we have
+\begin_inset Formula 
+\[
+C\left(j\right)=\left[\frac{P\left(j\right)}{P}\right]^{-\epsilon}\left[\frac{WH+T}{P}\right]
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $A=WH+T$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\begin{eqnarray*}
+P\left(j\right)^{\epsilon}C\left(j\right)P^{1-\epsilon} & = & A\\
+\epsilon P\left(j\right)^{\epsilon-1}C\left(j\right)P^{1-\epsilon}\frac{\partial P\left(j\right)}{\partial C\left(j\right)}+P\left(j\right)^{\epsilon}P^{1-\epsilon} & = & 0\\
+\frac{\partial P\left(j\right)}{\partial C\left(j\right)} & = & -\frac{P\left(j\right)}{\epsilon C\left(j\right)}\\
+\frac{\nicefrac{\partial P\left(j\right)}{P\left(j\right)}}{\nicefrac{\partial C\left(j\right)}{C\left(j\right)}} & = & -\frac{1}{\epsilon}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, for higher values of 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+, the percentage decrease in 
+\begin_inset Formula $P\left(j\right)$
+\end_inset
+
+ is lower for a percentage increase in 
+\begin_inset Formula $C\left(j\right)$
+\end_inset
+
+.
+ Thus, the graph can be drawn as follows:
+\end_layout
+
+\begin_layout Problem
+(Firm's Problem): Each firm produces a differentiated good with technology
+\begin_inset Formula 
+\[
+Y(i)=H(i)
+\]
+
+\end_inset
+
+
+\begin_inset Formula $H(i)$
+\end_inset
+
+ is firm 
+\begin_inset Formula $i$
+\end_inset
+
+'s labor input.
+ There is no price stickness.
+ Each firm chooses 
+\begin_inset Formula $P(i)$
+\end_inset
+
+ to maximize profits defined as
+\begin_inset Formula 
+\[
+P(i)Y(i)-WH(i)
+\]
+
+\end_inset
+
+subject to the demand constraint
+\begin_inset Formula 
+\[
+Y(i)=\left(\frac{P(i)}{P}\right)^{-\epsilon}C
+\]
+
+\end_inset
+
+Individual firms take aggregate price level 
+\begin_inset Formula $P$
+\end_inset
+
+ and aggregate consumption index 
+\begin_inset Formula $C$
+\end_inset
+
+ as given.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+Show that the optimal price is
+\begin_inset Formula 
+\[
+P(i)=\frac{\epsilon}{\epsilon-1}W
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Profits can be written as
+\begin_inset Formula 
+\begin{eqnarray*}
+P(i)Y(i)-WH(i) & = & (P(i)-W)Y(i)\\
+ & = & (P(i)-W)\left(\frac{P(i)}{P}\right)^{-\epsilon}C
+\end{eqnarray*}
+
+\end_inset
+
+The first-order condition of the last condition with respect to 
+\begin_inset Formula $P(i)$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\frac{P(i)}{P}\right)^{-\epsilon}C-\epsilon(P(i)-W)\left(\frac{P(i)}{P}\right)^{-\epsilon-1}\left(\frac{1}{P}\right)C & = & 0\\
+\left(\frac{P(i)}{P}\right)^{-\epsilon} & = & \epsilon(P(i)-W)\left(\frac{P(i)}{P}\right)^{-\epsilon}\frac{1}{P(i)}P\left(\frac{1}{P}\right)\\
+1 & = & \epsilon(P(i)-W)\frac{1}{P(i)}\\
+P(i) & = & \epsilon P(i)-\epsilon W\\
+\epsilon P(i)-P(i) & = & \epsilon W\\
+P(i) & = & \frac{\epsilon}{\epsilon-1}W
+\end{eqnarray*}
+
+\end_inset
+
+
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\bar under
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+Part B.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\pi(i)$
+\end_inset
+
+ denote the maximized profits.
+ What is the ratio of profits to costs, i.e.
+ 
+\begin_inset Formula 
+\[
+\frac{\pi(i)}{WH(i)}
+\]
+
+\end_inset
+
+for the firm which is optimally choosing 
+\begin_inset Formula $P(i)$
+\end_inset
+
+? How does it depend on the parameter 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+? Why does it so?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+Plugging the expression for the optimal price for firm 
+\begin_inset Formula $i$
+\end_inset
+
+ into its profit function we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi(i) & = & P(i)Y(i)-WH(i)\\
+ & = & \frac{\epsilon}{\epsilon-1}WY(i)-WH(i)\\
+ & = & \frac{\epsilon}{\epsilon-1}WH(i)-WH(i)\\
+ & = & \left(\frac{\epsilon}{\epsilon-1}-1\right)WH(i)
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the ratio of profits to costs is
+\begin_inset Formula 
+\[
+\frac{\pi(i)}{WH(i)}=\frac{1}{\epsilon-1}
+\]
+
+\end_inset
+
+As 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ increases the ratio of profits to costs decreases.
+ Since costs are constant, then this means profits have decreased.
+ To explain this, consider the ratio of production between firms 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+, i.e., 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{Y(i)}{Y(j)} & = & \left(\frac{P(i)}{P(j)}\right)^{-\epsilon}\\
+\log\frac{Y(i)}{Y(j)} & = & -\epsilon\log\left(\frac{P(i)}{P(j)}\right)\\
+\frac{d\left[\log\frac{Y(i)}{Y(j)}\right]}{d\left[\log\frac{P(i)}{P(j)}\right]} & = & -\epsilon
+\end{eqnarray*}
+
+\end_inset
+
+This shows that 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ is the elasticity of substitution between goods 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ Thus, a 
+\begin_inset Formula $1\%$
+\end_inset
+
+ increase in the relative price of goods 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+ leads to a 
+\begin_inset Formula $\epsilon\%$
+\end_inset
+
+ decrease in the relative demand of goods 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ If we keep the price and production of firm 
+\begin_inset Formula $j$
+\end_inset
+
+ constant, then the demand for good 
+\begin_inset Formula $i$
+\end_inset
+
+ has reduced by 
+\begin_inset Formula $\epsilon\%$
+\end_inset
+
+.
+ From the demand constraint, this will, in turn, cause an equivalent decrease
+ in production for firm 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\epsilon>1$
+\end_inset
+
+, then the percentage decrease in production is greater than the percentage
+ increase in price, which leads to lower profits for firm 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Problem
+(Equilibrium): Goods market clearing condition and labor market clearing
+ condition require
+\begin_inset Formula 
+\begin{eqnarray*}
+C(i) & = & Y(i),\ \forall\ i\in[0,N]\\
+H & = & {\displaystyle \int_{0}^{N}}H(i)di
+\end{eqnarray*}
+
+\end_inset
+
+Because of the symmetry between firms, we can easily find 
+\begin_inset Formula $H(i)=\nicefrac{H}{N}$
+\end_inset
+
+ in equilibrium.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+Find the equilibrium aggregate consumption index 
+\begin_inset Formula $C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+We are given that
+\begin_inset Formula 
+\[
+H={\displaystyle \int_{0}^{N}}H(i)di
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $H(i)$
+\end_inset
+
+ is constant for all 
+\begin_inset Formula $i$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray*}
+H & = & H(i){\displaystyle \int_{0}^{N}}di\\
+H & = & H(i)N\\
+H(i) & = & \frac{H}{N}
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $Y(i)=H(i)$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+, then from the market clearing condition, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+C(i) & = & H(i)\\
+C(i) & = & \frac{H}{N}\\
+{\displaystyle \int_{0}^{N}}C(i)^{\frac{\epsilon-1}{\epsilon}}di & = & {\displaystyle \int_{0}^{N}}\left(\frac{H}{N}\right)^{\frac{\epsilon-1}{\epsilon}}di\\
+\left[{\displaystyle \int_{0}^{N}}C(i)^{\frac{\epsilon-1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}} & = & \left[\left(\frac{H}{N}\right)^{\frac{\epsilon-1}{\epsilon}}N\right]^{\frac{\epsilon}{\epsilon-1}}\\
+C & = & \frac{H}{N}N^{\frac{\epsilon}{\epsilon-1}}\\
+C & = & HN^{\frac{1}{\epsilon-1}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+Find the equilibrium relative price 
+\begin_inset Formula $\nicefrac{P(i)}{P}$
+\end_inset
+
+ for any 
+\begin_inset Formula $i\in[0,N]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+The optimal price for firm 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+P(i)=\frac{\epsilon}{\epsilon-1}W
+\]
+
+\end_inset
+
+Plugging this expression into 
+\begin_inset Formula $P$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\begin{eqnarray*}
+P & = & \left[{\displaystyle \int_{0}^{N}}P(i)^{1-\epsilon}di\right]^{\frac{1}{1-\epsilon}}\\
+ & = & \left[{\displaystyle \int_{0}^{N}}\left(\frac{\epsilon}{\epsilon-1}W\right)^{1-\epsilon}di\right]^{\frac{1}{1-\epsilon}}\\
+P & = & \left(\frac{\epsilon}{\epsilon-1}W\right)N^{\frac{1}{1-\epsilon}}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the equilibrium relative price for any 
+\begin_inset Formula $i\in[0,N]$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{P(i)}{P} & = & \frac{\frac{\epsilon}{\epsilon-1}W}{\left(\frac{\epsilon}{\epsilon-1}W\right)N^{\frac{1}{1-\epsilon}}}\\
+\frac{P(i)}{P} & = & N^{\frac{1}{\epsilon-1}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Standard
+Find the equilibrium real wage 
+\begin_inset Formula $\nicefrac{W}{P}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+Using the expression for 
+\begin_inset Formula $P$
+\end_inset
+
+ obtained in part (b), the real wage is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{W}{P} & = & \frac{W}{\left(\frac{\epsilon}{\epsilon-1}W\right)N^{\frac{1}{1-\epsilon}}}\\
+\frac{W}{P} & = & \frac{\epsilon-1}{\epsilon}N^{\frac{1}{\epsilon-1}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part D.
+\end_layout
+
+\begin_layout Standard
+The the labor share 
+\begin_inset Formula $\nicefrac{WH}{PC}$
+\end_inset
+
+ and the profits share 
+\begin_inset Formula $\nicefrac{\pi(i)N}{PC}$
+\end_inset
+
+ in equilibrium.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+Using the expressions for 
+\begin_inset Formula $P$
+\end_inset
+
+ and 
+\begin_inset Formula $C$
+\end_inset
+
+, the labor share is
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{WH}{PC} & = & \frac{WH}{\left(\frac{\epsilon}{\epsilon-1}W\right)N^{\frac{1}{1-\epsilon}}HN^{\frac{1}{\epsilon-1}}}\\
+ & = & \frac{\epsilon-1}{\epsilon}N^{\frac{1}{\epsilon-1}-\frac{1}{\epsilon-1}}\\
+\frac{WH}{PC} & = & \frac{\epsilon-1}{\epsilon}
+\end{eqnarray*}
+
+\end_inset
+
+Using the expression for 
+\begin_inset Formula $\pi(i)$
+\end_inset
+
+, 
+\begin_inset Formula $P$
+\end_inset
+
+, and 
+\begin_inset Formula $C$
+\end_inset
+
+, the profits share is
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\pi(i)N}{PC} & = & \frac{\frac{\epsilon}{\epsilon-1}NWH(i)-NWH(i)}{\left(\frac{\epsilon}{\epsilon-1}W\right)N^{\frac{1}{1-\epsilon}}HN^{\frac{1}{\epsilon-1}}}\\
+ & = & \frac{\frac{\epsilon}{\epsilon-1}WH-WH}{\left(\frac{\epsilon}{\epsilon-1}W\right)N^{\frac{1}{1-\epsilon}}HN^{\frac{1}{\epsilon-1}}}\\
+ & = & \frac{\frac{\epsilon}{\epsilon-1}WH}{\left(\frac{\epsilon}{\epsilon-1}W\right)N^{\frac{1}{1-\epsilon}}HN^{\frac{1}{\epsilon-1}}}-\frac{WH}{\left(\frac{\epsilon}{\epsilon-1}W\right)N^{\frac{1}{1-\epsilon}}HN^{\frac{1}{\epsilon-1}}}\\
+ & = & 1-\frac{\epsilon-1}{\epsilon}\\
+\frac{\pi(i)N}{PC} & = & \frac{1}{\epsilon}
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part E.
+\end_layout
+
+\begin_layout Standard
+Is the equilibrium allocation efficient? Answer yes or no, and explain why.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+We can find the efficient allocation by solving the social planner's problem.
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{C}} & U(C)\\
+\mbox{s.t.} & C=\left[{\displaystyle \int_{0}^{N}}C(i)^{\frac{\epsilon-1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+ & C(i)=Y(i)=H(i)\\
+ & {\displaystyle \int_{0}^{N}}H(i)di=H
+\end{eqnarray*}
+
+\end_inset
+
+Setting up the Lagrangian, we have
+\begin_inset Formula 
+\[
+L={\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\cdot U\left\{ \left[{\displaystyle \int_{0}^{N}}C_{i}(i)^{\frac{\epsilon-1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\right\} +\lambda\left[H-{\displaystyle \int_{0}^{N}}C(i)di\right]
+\]
+
+\end_inset
+
+The first-order condition with respect to 
+\begin_inset Formula $H(i)$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{eqnarray*}
+\beta^{t}U^{\prime}(C)\frac{\epsilon}{\epsilon-1}\left[{\displaystyle \int_{0}^{N}}C(i)^{\frac{\epsilon-1}{\epsilon}}di\right]^{\frac{1}{\epsilon-1}}\frac{\epsilon-1}{\epsilon}C(i)^{-\frac{1}{\epsilon}}-\lambda C(i) & = & 0\\
+\beta^{t}U^{\prime}(C)\left[{\displaystyle \int_{0}^{N}}C(i)^{\frac{\epsilon-1}{\epsilon}}di\right]^{\frac{1}{\epsilon-1}} & = & \lambda C(i)^{1+\frac{1}{\epsilon}}\\
+\beta^{t}U^{\prime}(C)C^{\frac{1}{\epsilon}} & = & \lambda C(i)^{1+\frac{1}{\epsilon}}\\
+1 & = & \frac{C(i)^{1+\frac{1}{\epsilon}}}{C(j)^{1+\frac{1}{\epsilon}}}\\
+C(i) & = & C(j);\ \forall\ i,j\in[0,N]
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $C(i)$
+\end_inset
+
+ is constant 
+\begin_inset Formula $\forall\ i\in[0,N]$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $C(i)=H(i)$
+\end_inset
+
+, then 
+\begin_inset Formula $H(i)$
+\end_inset
+
+ is also constant 
+\begin_inset Formula $\forall\ i\in[0,N]$
+\end_inset
+
+.
+ This implies that 
+\begin_inset Formula $H=N\cdot H(i)$
+\end_inset
+
+, and hence, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+C & = & \left[{\displaystyle \int_{0}^{N}}\left(\frac{H}{N}\right)^{\frac{e-1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+ & = & \frac{H}{N}N^{\frac{\epsilon}{\epsilon-1}}\\
+C & = & HN^{\frac{1}{\epsilon-1}}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the equilibrium allocation is equal to the allocation achieved in
+ the social planner's problem, so the equilibrium allocation is efficient.
+ This occurs because the labor supply is inelastic, and in equilibrium,
+ the market clearing condition requires:
+\begin_inset Formula 
+\[
+H=\intop_{0}^{N}H\left(i\right)di
+\]
+
+\end_inset
+
+Since the firms are symmetric and labor is the only input for a firm's productio
+n, then there is no unemployment and the firms produce social planner's
+ level of output.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part F.
+\end_layout
+
+\begin_layout Standard
+Let's do simple comparative statics with respect to 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ How do 
+\begin_inset Formula $C$
+\end_inset
+
+, 
+\begin_inset Formula $\nicefrac{P(i)}{P}$
+\end_inset
+
+, and 
+\begin_inset Formula $\nicefrac{W}{P}$
+\end_inset
+
+ change when 
+\begin_inset Formula $N$
+\end_inset
+
+ gets larger? Give intuition for each of those.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Solution
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $C$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+C & = & HN^{\frac{1}{\epsilon-1}}\\
+\log C & = & \log H+\left(\frac{1}{\epsilon-1}\right)\log N\\
+\left(\frac{1}{C}\right)\frac{\partial C}{\partial N} & = & \left(\frac{1}{\epsilon-1}\right)\frac{1}{N}\\
+\frac{\partial C}{\partial N} & = & \left(\frac{1}{\epsilon-1}\right)\frac{C}{N}>0
+\end{eqnarray*}
+
+\end_inset
+
+For 
+\begin_inset Formula $\nicefrac{P(i)}{P}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{P(i)}{P} & = & N^{\frac{1}{\epsilon-1}}\\
+\log\left(\frac{P(i)}{P}\right) & = & \left(\frac{1}{\epsilon-1}\right)\log N\\
+\left(\frac{P}{P(i)}\right)\frac{\partial\left[\nicefrac{P(i)}{P}\right]}{\partial N} & = & \left(\frac{1}{\epsilon-1}\right)\frac{1}{N}\\
+\frac{\partial\left[\nicefrac{P(i)}{P}\right]}{\partial N} & = & \left(\frac{P(i)}{P}\right)\left(\frac{1}{\epsilon-1}\right)\frac{1}{N}>0
+\end{eqnarray*}
+
+\end_inset
+
+For 
+\begin_inset Formula $\nicefrac{W}{P}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{W}{P} & = & \left(\frac{\epsilon-1}{\epsilon}\right)N^{\frac{1}{\epsilon-1}}\\
+\log\left(\frac{W}{P}\right) & = & \log\left(\frac{\epsilon-1}{\epsilon}\right)+\left(\frac{1}{\epsilon-1}\right)\log N\\
+\left(\frac{P}{W}\right)\frac{\partial\left[\nicefrac{W}{P}\right]}{\partial N} & = & \left(\frac{1}{\epsilon-1}\right)\frac{1}{N}\\
+\frac{\partial\left[\nicefrac{W}{P}\right]}{\partial N} & = & \frac{W}{P}\left(\frac{1}{\epsilon-1}\right)\frac{1}{N}>0
+\end{eqnarray*}
+
+\end_inset
+
+Note, an increase in 
+\begin_inset Formula $N$
+\end_inset
+
+ represents a rise in the number of firms in the economy.
+ So, as 
+\begin_inset Formula $N$
+\end_inset
+
+ increases, so too does labor demand and real wage, 
+\begin_inset Formula $\nicefrac{W}{P}$
+\end_inset
+
+.
+ Also, as 
+\begin_inset Formula $N$
+\end_inset
+
+ increases, the amount of different types of goods increase.
+ Thus, the consumption and output for an individual good 
+\begin_inset Formula $i$
+\end_inset
+
+ decreases, which causes the marginal utility of good 
+\begin_inset Formula $i$
+\end_inset
+
+ to increase.
+ This, in turn, leads to an increase in total utility, and the real price
+ of good 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $\nicefrac{P(i)}{P}$
+\end_inset
+
+, must increase.
+\end_layout
+
+\end_body
+\end_document

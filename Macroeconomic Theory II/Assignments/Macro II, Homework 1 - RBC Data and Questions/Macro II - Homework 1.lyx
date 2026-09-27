@@ -1,0 +1,664 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Macroeconomic Theory II: Homework 1
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Problem*
+Consider the following social planner's problem.
+ She maximizes the expected utility
+\begin_inset Formula 
+\[
+E_{0}\left[{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}u(C_{t},N_{t})\right]
+\]
+
+\end_inset
+
+by choosing a sequence of 
+\begin_inset Formula $C_{t},\ N_{c,t},\ N_{i,t},\ I_{c,t},\ \mbox{and}\ I_{i,t}$
+\end_inset
+
+, subject to 
+\begin_inset Formula 
+\begin{eqnarray}
+N_{t} & = & N_{c,t}+N_{i,t}\\
+C_{t} & = & A_{c,t}K_{c,t}^{\alpha}N_{c,t}^{1-\alpha}\\
+I_{t} & = & I_{c,t}+I_{i,t}=A_{i,t}K_{i,t}^{\alpha}N_{i,t}^{1-\alpha}\\
+K_{c,t+1} & = & (1-\delta)K_{c,t}+I_{c,t}\\
+K_{i,t+1} & = & (1-\delta)K_{i,t}+I_{i,t}
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset Formula $K_{c,0}$
+\end_inset
+
+ and 
+\begin_inset Formula $K_{i,0}$
+\end_inset
+
+ are given.
+ 
+\begin_inset Formula $A_{c,t}$
+\end_inset
+
+ and 
+\begin_inset Formula $A_{i,t}$
+\end_inset
+
+ are exogenous productivity shocks.
+ This is a two sector economy.
+ There is a consumption goods sector and an investment goods sector, each
+ of which has its own production function.
+ Answer the following quesitons.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Derive the first-order conditions.
+\end_layout
+
+\begin_layout Enumerate
+Assume that the momentary utility function 
+\begin_inset Formula $u$
+\end_inset
+
+ is given by 
+\begin_inset Formula $u(C_{t},N_{t})=\log C_{t}-\frac{\eta}{1+\eta}N_{t}^{\frac{\eta+1}{\eta}}$
+\end_inset
+
+, where 
+\begin_inset Formula $\eta>0$
+\end_inset
+
+.
+ Notice that this is a particular form of the so-called King-Plosser-Rebelo
+ utility.
+ Rewrite the first order conditions using this specific utility funciton.
+\end_layout
+
+\begin_layout Enumerate
+Derive the optimality condition that equates the marginal rate of substitution
+ to the marginal product of labor, i.e.,
+\begin_inset Formula 
+\[
+-\frac{\left(\frac{\partial u}{\partial N_{c,t}}\right)}{\left(\frac{\partial u}{\partial C_{t}}\right)}=\left(\frac{\partial C_{t}}{\partial N_{c,t}}\right)
+\]
+
+\end_inset
+
+Prove that 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ cancels out from the condition.
+\end_layout
+
+\begin_layout Enumerate
+Prove that in this model economy, 
+\begin_inset Formula $N_{c,t}$
+\end_inset
+
+ and 
+\begin_inset Formula $N_{i,t}$
+\end_inset
+
+ cannot move in the same direction, i.e., 
+\begin_inset Formula $\Delta N_{c,t}\equiv N_{c,t}-N_{c,t-1}>0$
+\end_inset
+
+ is always accompanied by 
+\begin_inset Formula $\Delta N_{i,t}\equiv N_{i,t}-N_{i,t-1}<0$
+\end_inset
+
+ and vice versa.
+\end_layout
+
+\begin_layout Enumerate
+Since employment figures in different sectors largely comove in the real
+ world, this model prediciton is clearly counterfactual.
+ However, we may be able to fix this problem by adopting a different utility
+ function.
+ Remember that the general form of the King-Plosser-Rebelo utility function
+ is given by
+\begin_inset Formula 
+\[
+u(C_{t},N_{t})=\frac{\left[C_{t}v(1-N_{t})\right]^{1-\sigma}-1}{1-\sigma}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\sigma>0$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $v$
+\end_inset
+
+ is a positive, concave function: i.e., 
+\begin_inset Formula $v(\cdot)>0$
+\end_inset
+
+, 
+\begin_inset Formula $v^{\prime}(\cdot)>0$
+\end_inset
+
+, 
+\begin_inset Formula $v^{\prime\prime}(\cdot)<0$
+\end_inset
+
+.
+ Do you think 
+\begin_inset Formula $N_{c,t}$
+\end_inset
+
+ and 
+\begin_inset Formula $N_{i,t}$
+\end_inset
+
+ can move in the same direction if we choose an appropriate form of KPR
+ utility? If your answer is yes, explain what form will help comovement,
+ and under what circumstance 
+\begin_inset Formula $N_{c,t}$
+\end_inset
+
+ and 
+\begin_inset Formula $N_{i,t}$
+\end_inset
+
+ can move in the same direction.
+ If your answer is no, give supporting argument why you reach such a conclusion.
+ (HINT: Derive the first order conditions using the general form of KPR
+ utility.
+ Observe similarities and differences.) 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+First, let us set up the Lagrangian to the constrained maximization problem
+ above:
+\begin_inset Formula 
+\begin{eqnarray*}
+L & = & E_{0}[{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\{u(C_{t},N_{c,t}+N_{i,t})+\lambda_{t}(A_{c,t}K_{c,t}^{\alpha}N_{c,t}^{1-\alpha}-C_{t})\\
+ &  & +\mu_{t}(A_{i,t}K_{i,t}^{\alpha}N_{i,t}^{1-\alpha}-K_{c,t+1}+(1-\delta)K_{c,t}-K_{i,t+1}+(1-\delta)K_{i,t})\}]
+\end{eqnarray*}
+
+\end_inset
+
+After taking the partial derivative of 
+\begin_inset Formula $L$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+, we then obtain the first order condition:
+\begin_inset Formula 
+\begin{eqnarray}
+\{C_{t}\}:\ u_{c}(t)-\lambda_{t} & = & 0\nonumber \\
+u_{c}(t) & = & \lambda_{t}
+\end{eqnarray}
+
+\end_inset
+
+After taking the partial derivative of 
+\begin_inset Formula $L$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $N_{c,t}$
+\end_inset
+
+, we then obtain the first order condition:
+\begin_inset Formula 
+\begin{eqnarray}
+\{N_{c,t}\}:\ u_{N_{c}}(t)+\lambda_{t}(1-\alpha)\frac{C_{t}}{N_{c,t}} & = & 0\nonumber \\
+-\frac{u_{N_{c}}(t)}{u_{c}(t)} & = & (1-\alpha)\frac{C_{t}}{N_{c,t}}
+\end{eqnarray}
+
+\end_inset
+
+After taking the partial derivative of 
+\begin_inset Formula $L$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $N_{i,t}$
+\end_inset
+
+, we then obtain the first order condition:
+\begin_inset Formula 
+\begin{eqnarray}
+\{N_{i,t}\}:\ u_{N_{i}}(t)+\mu_{t}(1-\alpha)\frac{I_{c,t}+I_{i,t}}{N_{i,t}} & = & 0\nonumber \\
+-u_{N_{i}}(t) & = & \mu_{t}(1-\alpha)\frac{I_{c,t}+I_{i,t}}{N_{i,t}}
+\end{eqnarray}
+
+\end_inset
+
+After taking the partial derivative of 
+\begin_inset Formula $L$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $K_{c,t+1}$
+\end_inset
+
+, we then obtain the first order condition:
+\begin_inset Formula 
+\begin{eqnarray}
+\{K_{c,t+1}\}:\ -\mu_{t}+E_{t}\left[\beta\lambda_{t+1}\alpha\frac{C_{t+1}}{K_{c,t+1}}+\beta\mu_{t+1}(1-\delta)\right] & = & 0\nonumber \\
+E_{t}\left[\beta\lambda_{t+1}\alpha\frac{C_{t+1}}{K_{c,t+1}}+\beta\mu_{t+1}(1-\delta)\right] & = & \mu_{t}
+\end{eqnarray}
+
+\end_inset
+
+After taking the partial derivative of 
+\begin_inset Formula $L$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $K_{i,t+1}$
+\end_inset
+
+, we then obtain the first order condition:
+\begin_inset Formula 
+\begin{eqnarray}
+\{K_{i,t+1}\}:\ -\mu_{t}+E_{t}\left[\beta\mu_{t+1}\left(\alpha\frac{I_{c,t+1}+I_{i,t+1}}{K_{i,t+1}}+(1-\delta)\right)\right] & = & 0\nonumber \\
+E_{t}\left[\beta\frac{\mu_{t+1}}{\mu_{t}}\left(\alpha\frac{I_{c,t+1}+I_{i,t+1}}{K_{i,t+1}}+(1-\delta)\right)\right] & = & 1
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After taking the partial derivative of 
+\begin_inset Formula $L$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\lambda_{t}$
+\end_inset
+
+, we then obtain the first order condition:
+\begin_inset Formula 
+\begin{eqnarray*}
+\{\lambda_{t}\}:\ A_{c,t}K_{c,t}^{\alpha}N_{c,t}^{1-\alpha}-C_{t} & = & 0\\
+A_{c,t}K_{c,t}^{\alpha}N_{c,t}^{1-\alpha} & = & C_{t}
+\end{eqnarray*}
+
+\end_inset
+
+After taking the partial derivative of 
+\begin_inset Formula $L$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\mu_{t}$
+\end_inset
+
+, we then obtain the first order condition:
+\begin_inset Formula 
+\begin{eqnarray*}
+\{\mu_{t}\}:\ A_{i,t}K_{i,t}^{\alpha}N_{i,t}^{1-\alpha}-K_{c,t+1}+(1-\delta)K_{c,t}-K_{i,t+1}+(1-\delta)K_{i,t}) & = & 0\\
+K_{c,t+1}-(1-\delta)K_{c,t}+K_{i,t+1}-(1-\delta)K_{i,t}) & = & A_{i,t}K_{i,t}^{\alpha}N_{i,t}^{1-\alpha}\\
+I_{c,t}+I_{i,t} & = & A_{i,t}K_{i,t}^{\alpha}N_{i,t}^{1-\alpha}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+Plugging the constraint 
+\begin_inset Formula $N_{t}=N_{c,t}+N_{i,t}$
+\end_inset
+
+ into the given King-Plosser Rebelo utility function, we get:
+\begin_inset Formula 
+\[
+u(C_{t},N_{t})=u(C_{t},N_{c,t}+N_{i,t})=\log C_{t}-\frac{\eta}{1+\eta}(N_{c,t}+N_{i,t})^{\frac{\eta+1}{\eta}}
+\]
+
+\end_inset
+
+Now, we obtain the necessary partial derivatives:
+\begin_inset Formula 
+\begin{eqnarray}
+u_{c}(t) & = & \frac{1}{C_{t}}\\
+u_{N_{c}}(t) & = & -(N_{c,t}+N_{i,t})^{\frac{1}{\eta}}\\
+u_{N_{i}}(t) & = & -(N_{c,t}+N_{i,t})^{\frac{1}{\eta}}
+\end{eqnarray}
+
+\end_inset
+
+Finally, we rewrite the first order conditions using the partial derivatives
+ above:
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{C_{t}} & = & \lambda_{t}\\
+(N_{c,t}+N_{i,t})^{\frac{1}{\eta}} & = & (1-\alpha)\frac{1}{N_{c,t}}\\
+(N_{c,t}+N_{i,t})^{\frac{1}{\eta}} & = & \mu_{t}(1-\alpha)\frac{I_{c,t}+I_{i,t}}{N_{i,t}}\\
+E_{t}\left[\beta\alpha\frac{1}{K_{c,t+1}}+\beta\mu_{t+1}(1-\delta)\right] & = & \mu_{t}\\
+E_{t}\left[\beta\frac{\mu_{t+1}}{\mu_{t}}\left(\alpha\frac{I_{c,t+1}+I_{i,t+1}}{K_{i,t+1}}+(1-\delta)\right)\right] & = & 1\\
+A_{c,t}K_{c,t}^{\alpha}N_{c,t}^{1-\alpha} & = & C_{t}\\
+I_{c,t}+I_{i,t} & = & A_{i,t}K_{i,t}^{\alpha}N_{i,t}^{1-\alpha}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+The first order condition of the maximization problem with respect to 
+\begin_inset Formula $N_{c,t}$
+\end_inset
+
+ is given by:
+\begin_inset Formula 
+\[
+u_{N_{c}}(t)+\lambda_{t}(1-\alpha)A_{c,t}K_{c,t}^{\alpha}N_{c,t}^{-\alpha}=0
+\]
+
+\end_inset
+
+By (6) and (2), we have that
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{N_{c}}(t)+u_{c}(t)(1-\alpha)\frac{C_{t}}{N_{c,t}} & = & 0\\
+-\frac{u_{N_{c}}(t)}{u_{c}(t)} & = & (1-\alpha)\frac{C_{t}}{N_{c,t}}\\
+-\frac{\left(\frac{\partial u}{\partial N_{c,t}}\right)}{\left(\frac{\partial u}{\partial C_{t}}\right)} & = & \left(\frac{\partial C_{t}}{\partial N_{c,t}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Note, 
+\begin_inset Formula $\frac{\partial C_{t}}{\partial N_{c,t}}=(1-\alpha)A_{c,t}K_{c,t}^{\alpha}N_{c,t}^{-\alpha}=(1-\alpha)\frac{C_{t}}{N_{c,t}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now, by (11) and (12), we have that
+\begin_inset Formula 
+\begin{eqnarray}
+-\frac{\left[-(N_{c,t}+N_{i,t})^{\frac{1}{\eta}}\right]}{\left[\frac{1}{C_{t}}\right]} & = & (1-\alpha)\frac{C_{t}}{N_{c,t}}\nonumber \\
+(N_{c,t}+N_{i,t})^{\frac{1}{\eta}} & = & (1-\alpha)\frac{1}{N_{c,t}}
+\end{eqnarray}
+
+\end_inset
+
+So, 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ cancels out from the condition.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part d.
+\end_layout
+
+\begin_layout Standard
+From equation (14), we have
+\begin_inset Formula 
+\[
+N_{c,t}(N_{c,t}+N_{i,t})^{\frac{1}{\eta}}=(1-\alpha)
+\]
+
+\end_inset
+
+It is obvious from this optimal condition that 
+\begin_inset Formula $N_{c,t}$
+\end_inset
+
+ and 
+\begin_inset Formula $N_{i,t}$
+\end_inset
+
+ move in opposite directions.
+ Since the right hand side of the condition is a constant, then 
+\begin_inset Formula $\Delta N_{i,t}<0$
+\end_inset
+
+ when 
+\begin_inset Formula $\Delta N_{c,t}>0$
+\end_inset
+
+.
+ If this were not the case, then the left hand side would vary over time,
+ so the optimality condition would be violated.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part e.
+\end_layout
+
+\begin_layout Standard
+Plugging the constraint 
+\begin_inset Formula $N_{t}=N_{c,t}+N_{i,t}$
+\end_inset
+
+ into the general King-Plosser Rebelo utility function, we get:
+\series bold
+
+\begin_inset Formula 
+\[
+u(C_{t},N_{t})=u(C_{t},N_{c,t}+N_{i,t})=\frac{\left[C_{t}v(1-N_{c,t}-N_{i,t})\right]^{1-\sigma}-1}{1-\sigma}
+\]
+
+\end_inset
+
+
+\series default
+First, we obtain the necessary partial derivatives:
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{c}(t) & = & [C_{t}v(1-N_{c,t}-N_{i,t})]^{-\sigma}v(1-N_{c,t}-N_{i,t})\\
+u_{N_{c}}(t) & = & -[C_{t}v(1-N_{c,t}-N_{i,t})]^{-\sigma}C_{t}v^{\prime}(1-N_{c,t}-N_{i,t})\\
+u_{N_{i}}(t) & = & -[C_{t}v(1-N_{c,t}-N_{i,t})]^{-\sigma}C_{t}v^{\prime}(1-N_{c,t}-N_{i,t})
+\end{eqnarray*}
+
+\end_inset
+
+Substituting the necessary partial dervivaties into (7) we get:
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{C_{t}v^{\prime}(1-N_{c,t}-N_{i,t})}{v(1-N_{c,t}-N_{i,t})} & = & (1-\alpha)\frac{C_{t}}{N_{c,t}}\nonumber \\
+\frac{v^{\prime}(1-N_{c,t}-N_{i,t})}{v(1-N_{c,t}-N_{i,t})} & = & \frac{(1-\alpha)}{N_{c,t}}\nonumber \\
+v^{\prime}(1-N_{c,t}-N_{i,t}) & = & \frac{(1-\alpha)}{N_{c,t}}v(1-N_{c,t}-N_{i,t})
+\end{eqnarray}
+
+\end_inset
+
+After taking the derivative of expression (15) with respect to time, we
+ obtain:
+\begin_inset Formula 
+\begin{gather*}
+v^{\prime\prime}(1-N_{t})\left(-\frac{dN_{c,t}}{dt}-\frac{dN_{i,t}}{dt}\right)=\frac{(1-\alpha)v^{\prime}(1-N_{t})}{N_{c,t}}\left(-\frac{dN_{c,t}}{dt}-\frac{dN_{i,t}}{dt}\right)-\frac{(1-\alpha)v(1-N_{t})}{N_{c,t}^{2}}\frac{dN_{c,t}}{dt}\\
+v^{\prime\prime}(1-N_{t})(-\dot{N}_{c,t}-\dot{N}_{it})=\frac{(1-\alpha)v^{\prime}(1-N_{t})}{N_{c,t}}(-\dot{N}_{c,t}-\dot{N}_{it})-\frac{(1-\alpha)v(1-N_{t})}{N_{c,t}^{2}}\dot{N}_{c,t}\\
+\left[v^{\prime\prime}(1-N_{t})+\frac{(1-\alpha)v^{\prime}(1-N_{t})}{N_{c,t}}+\frac{(1-\alpha)v(1-N_{t})}{N_{c,t}^{2}}\right]\dot{N}_{c,t}=\left[v^{\prime\prime}(1-N_{t})-\frac{(1-\alpha)v^{\prime}(1-N_{t})}{N_{c,t}}\right]\dot{N}_{it}\\
+\frac{dN_{i,t}}{dt}=\frac{\left[v^{\prime\prime}(1-N_{t})+\frac{(1-\alpha)v^{\prime}(1-N_{t})}{N_{c,t}}+\frac{(1-\alpha)v(1-N_{t})}{N_{c,t}^{2}}\right]}{\left[v^{\prime\prime}(1-N_{t})-\frac{(1-\alpha)v^{\prime}(1-N_{t})}{N_{c,t}}\right]}\frac{dN_{c,t}}{dt}
+\end{gather*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $v(\cdot)>0,v^{\prime}(\cdot)>0,v^{\prime\prime}(\cdot)<0$
+\end_inset
+
+, then 
+\begin_inset Formula $\left[v^{\prime\prime}(1-N_{t})+\frac{(1-\alpha)v^{\prime}(1-N_{t})}{N_{c,t}}+\frac{(1-\alpha)v(1-N_{t})}{N_{c,t}^{2}}\right]>0$
+\end_inset
+
+ and 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[v^{\prime\prime}(1-N_{t})-\frac{(1-\alpha)v^{\prime}(1-N_{t})}{N_{c,t}}\right]<0$
+\end_inset
+
+.
+ So, when
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $\Delta N_{c,t}\approx\frac{dN_{c,t}}{dt}>0$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta N_{i,t}\approx\frac{dN_{i,t}}{dt}<0$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $N_{c,t}$
+\end_inset
+
+ and 
+\begin_inset Formula $N_{i,t}$
+\end_inset
+
+ move in opposite direction using the general form of the KPR utility, then
+ we will be unable to find an appropriate form of KPR utility in which they
+ move in the same direction.
+\end_layout
+
+\end_body
+\end_document

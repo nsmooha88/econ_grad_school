@@ -1,0 +1,1036 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Macroeconomic Theory II: Homework 6
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Problem
+
+\emph on
+Planner's Problem
+\emph default
+: Consider the following problem
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{\{C_{t}(i),N_{t}(i)\}_{i\in[0,1],t=0,1,\ldots}}} & E_{0}\left\{ {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\left(\frac{C_{t}^{1-\sigma}}{1-\sigma}-\frac{N_{t}^{1+\varphi}}{1+\varphi}\right)\right\} 
+\end{eqnarray*}
+
+\end_inset
+
+subject to
+\begin_inset Formula 
+\begin{gather*}
+C_{t}=\left[{\displaystyle \intop_{0}^{1}}C_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+N_{t}={\displaystyle \intop_{0}^{1}}N_{t}(i)di\\
+C_{t}(i)=A_{t}N_{t}(i)
+\end{gather*}
+
+\end_inset
+
+Notice that the allocation in this economy must be the first best, because
+ the agent operates all the technologies by himself and maximizes the utility.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Solve this problem, and find optimal 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compare what you find in (a) with the natural level of output we found in
+ the lecture.
+ Which is larger? What causes the difference?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To find the optimal 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+, we first maximize the consumption index with respect to 
+\begin_inset Formula $C_{t}(i)$
+\end_inset
+
+ subject to the second constraint.
+\begin_inset Formula 
+\begin{eqnarray*}
+\max_{C_{t}(i)} & \left[{\displaystyle \intop_{0}^{1}}C_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+\mbox{s.t.} & C_{t}(i)=A_{t}N_{t}(i)
+\end{eqnarray*}
+
+\end_inset
+
+The Lagrangian is given by
+\begin_inset Formula 
+\[
+L=\left[{\displaystyle \intop_{0}^{1}}C_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}+\lambda_{t}\left[A_{t}N_{t}(i)-C_{t}(i)\right]
+\]
+
+\end_inset
+
+and the first-order condition is
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{t}(i)^{-\frac{1}{\epsilon}} & = & \lambda_{t}\\
+\left(\frac{C_{t}(i)}{C_{t}(j)}\right)^{-\frac{1}{\epsilon}} & = & 1\\
+C_{t}(i) & = & C_{t}(j)
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $C_{t}(i)$
+\end_inset
+
+ is constant 
+\begin_inset Formula $\forall\ i\in[0,1]$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $C_{t}(i)=A_{t}N_{t}(i)$
+\end_inset
+
+, then 
+\begin_inset Formula $N_{t}(i)$
+\end_inset
+
+ is also constant 
+\begin_inset Formula $\forall\ i\in[0,1]$
+\end_inset
+
+.
+ This implies that 
+\begin_inset Formula $N_{t}=N_{t}(i)$
+\end_inset
+
+, and hence, we have 
+\begin_inset Formula $C_{t}(i)=A_{t}N_{t}$
+\end_inset
+
+.
+ Substituting 
+\begin_inset Formula $A_{t}N_{t}$
+\end_inset
+
+ for 
+\begin_inset Formula $C_{t}(i)$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\[
+C_{t}=A_{t}N_{t}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+We now use this equation for 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ as a constraint in the social planner's problem, which then becomes
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{\left\{ C_{t},N_{t}\right\} _{t=0}^{\infty}}} & E_{0}\left\{ {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\left(\frac{C_{t}^{1-\sigma}}{1-\sigma}-\frac{N_{t}^{1+\varphi}}{1+\varphi}\right)\right\} \\
+\mbox{s.t.} & C_{t}=A_{t}N_{t}
+\end{eqnarray*}
+
+\end_inset
+
+After taking the derivative with respect to 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+, we obtain the following first-order condition
+\begin_inset Formula 
+\[
+C_{t}^{-\sigma}A_{t}=\frac{N_{t}^{\varphi}}{1+\varphi}
+\]
+
+\end_inset
+
+Plugging 
+\begin_inset Formula $N_{t}=\nicefrac{C_{t}}{A_{t}}$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{t}^{-\sigma}A_{t} & = & C_{t}^{\varphi}A_{t}^{-\varphi}\\
+C_{t}^{\varphi+\sigma} & = & A_{t}^{1+\varphi}\\
+C_{t}^{*} & = & A_{t}^{\frac{1+\varphi}{\varphi+\sigma}}
+\end{eqnarray*}
+
+\end_inset
+
+which is the optimal level of 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The natural level of output found in the lecture was
+\begin_inset Formula 
+\[
+C_{t}^{n}=Y_{t}^{n}=\left[\frac{1}{\mu}A_{t}^{1+\varphi}\right]^{\frac{1}{\varphi+\sigma}}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\frac{1}{\mu}\equiv\frac{\epsilon-1}{\epsilon}<1$
+\end_inset
+
+.
+ Thus, the natural level of output is less than the optimal level of output
+ found in part A.
+ This difference is obviously caused by the fictionless gross markup, 
+\begin_inset Formula $\mu$
+\end_inset
+
+.
+ Each firm produces a differentiated good, so they wield monopoly power.
+ As a result, they set a price higher than marginal cost, and produce less
+ the socially optimal output to maximize profit.
+ In contrast, the level of output found in part A is socially efficient
+ because it solves the social planner's problem, which only maximizes total
+ utility.
+ Thus, due to markup power, 
+\begin_inset Formula $Y_{t}^{n}$
+\end_inset
+
+ is less than the socially efficient level of output.
+\end_layout
+
+\begin_layout Problem
+
+\emph on
+Employment Subsidy
+\emph default
+.
+ Now consider the following decentralized economy.
+ Households solve the same problem as in the lecture:
+\begin_inset Formula 
+\[
+\max E_{0}\left\{ {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\left(\frac{C_{t}^{1-\sigma}}{1-\sigma}-\frac{N_{t}^{1-\varphi}}{1+\varphi}\right)\right\} 
+\]
+
+\end_inset
+
+subject to
+\begin_inset Formula 
+\begin{gather*}
+{\displaystyle \intop_{0}^{1}}P_{t}(i)C_{t}(i)di+Q_{t}B_{t}=B_{t-1}+W_{t}N_{t}+T_{t}\\
+C_{t}=\left[{\displaystyle \intop_{0}^{1}}C_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}
+\end{gather*}
+
+\end_inset
+
+Prices are flexible.
+ But now, firms receive employment subsidy:
+\begin_inset Formula 
+\[
+{\displaystyle \max_{P_{t}(i)}}\left[P_{t}(i)\left(\frac{P_{t}(i)}{P_{t}}\right)^{-\epsilon}C_{t}-\frac{(1-\tau)W_{t}}{A_{t}}\left(\frac{P_{t}(i)}{P_{t}}\right)^{-\epsilon}C_{t}\right]
+\]
+
+\end_inset
+
+i.e., a fraction 
+\begin_inset Formula $\tau$
+\end_inset
+
+ of wage is subsidized by the government.
+ The outlays associated with this subsidy are financed by lump-sum taxes
+ (that is, they are already included in 
+\begin_inset Formula $T_{t}$
+\end_inset
+
+).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find equilibrium aggregate consumption/production level 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compare the production level in (a) with the production level you found
+ in the planner's problem.
+ Which is larger if 
+\begin_inset Formula $\tau=0$
+\end_inset
+
+? Is there any subsidy level at which the production level of this economy
+ coincides with the one in the planner's economy?
+\end_layout
+
+\begin_layout Enumerate
+Explain intuitions behind your answers in (b).
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+First, we wish to maximize the consumption index 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ for any given level of expenditures 
+\begin_inset Formula $\int_{0}^{1}P_{t}(i)C_{t}(i)$
+\end_inset
+
+.
+ The objective funciton of this maximization problem is known as the constant
+ elasticity of substitution (CES) aggregator function.
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{\{C_{t}(i)\}_{i\in[0,1]}}} & \left[{\displaystyle \int_{0}^{1}}C_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+\mbox{s.t.} & {\displaystyle \int_{0}^{1}}P_{t}(i)C_{t}(i)di=Z_{t}
+\end{eqnarray*}
+
+\end_inset
+
+Lets setup the Lagrangian
+\begin_inset Formula 
+\[
+L=\left[{\displaystyle \int_{0}^{1}}C_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}+\lambda\left[Z_{t}-{\displaystyle \int_{0}^{1}}P_{t}(i)C_{t}(i)di\right]
+\]
+
+\end_inset
+
+Important to note, in this construction, 
+\begin_inset Formula $i$
+\end_inset
+
+ is just an index characterizing all the goods.
+ Our goal is to optimize 
+\begin_inset Formula $L$
+\end_inset
+
+ with respect to a specific good (i.e., good 
+\begin_inset Formula $j$
+\end_inset
+
+).
+ Thus, the first-order condition of 
+\begin_inset Formula $L$
+\end_inset
+
+ with respect to good 
+\begin_inset Formula $j$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{gather}
+\frac{\partial L}{\partial C_{t}(j)}=0\nonumber \\
+\frac{\epsilon}{\epsilon-1}\left[{\displaystyle \int_{0}^{1}}C_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{1}{\epsilon-1}}\frac{\epsilon-1}{\epsilon}C_{t}(i)^{-\frac{1}{\epsilon}}-\lambda P_{t}(i)=0\nonumber \\
+\left[{\displaystyle \int_{0}^{1}}C_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{1}{\epsilon-1}}\left[C_{t}(j)\right]^{-\frac{1}{\epsilon}}=\lambda P_{t}(j);\ \forall\ j\in[0,1]\nonumber \\
+\left(\frac{C_{t}(j)}{C_{t}(k)}\right)^{-\frac{1}{\epsilon}}=\left(\frac{P_{t}(j)}{P_{t}(k)}\right);\ \forall\ k,j\in[0,1]
+\end{gather}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+From equation (1), we have
+\begin_inset Formula 
+\begin{equation}
+C_{t}(j)=C_{t}(k)\left(\frac{P_{t}(j)}{P_{t}(k)}\right)^{-\epsilon};\ \forall\ j,k\in[0,1]
+\end{equation}
+
+\end_inset
+
+Let us substitute equation (3) into the constraint.
+ 
+\begin_inset Formula 
+\begin{eqnarray}
+{\displaystyle \int_{0}^{1}}P_{t}(j)C_{t}(j)dj & = & Z_{t}\nonumber \\
+{\displaystyle \int_{0}^{1}}P_{t}(j)\left(\frac{P_{t}(j)}{P_{t}(k)}\right)^{-\epsilon}C_{t}(k)dj & = & Z_{t}\nonumber \\
+C_{t}(k)\left[P_{t}(k)\right]^{\epsilon}{\displaystyle \int_{0}^{1}}\left[P_{t}(j)\right]^{1-\epsilon}d_{j} & = & Z_{t}
+\end{eqnarray}
+
+\end_inset
+
+Now, we define the Dixit-Stiglitx aggregate price index 
+\begin_inset Formula $P_{t}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+P_{t}\equiv\left[{\displaystyle \int_{0}^{1}}P_{t}(j)^{1-\epsilon}d_{j}\right]^{\frac{1}{1-\epsilon}}
+\end{equation}
+
+\end_inset
+
+Since 
+\begin_inset Formula $P_{t}^{1-\epsilon}\equiv{\displaystyle \int_{0}^{1}}P_{t}(j)^{1-\epsilon}d_{j}$
+\end_inset
+
+, then equation (4) becomes
+\begin_inset Formula 
+\begin{eqnarray}
+C_{t}(k)\left[P_{t}(k)\right]^{\epsilon}P_{t}^{1-\epsilon} & = & Z_{t}\nonumber \\
+C_{t}(k) & = & \left(\frac{P_{t}(k)}{P_{t}}\right)^{-\epsilon}\frac{Z_{t}}{P_{t}}
+\end{eqnarray}
+
+\end_inset
+
+which is a necessary condition for maximizing the consumption index.
+ Next, we substitute equation (6) into the consumption idex.
+\begin_inset Formula 
+\begin{eqnarray}
+\left[{\displaystyle \int_{0}^{1}}C_{t}(k)^{1-\frac{1}{\epsilon}}dk\right]^{\frac{\epsilon}{\epsilon-1}} & = & \left\{ {\displaystyle \int_{0}^{1}}\left[\left(\frac{P_{t}(k)}{P_{t}}\right)^{-\epsilon}\left(\frac{Z_{t}}{P_{t}}\right)\right]^{1-\frac{1}{\epsilon}}dk\right\} ^{\frac{\epsilon}{\epsilon-1}}\nonumber \\
+ & = & \left\{ \left[\left(\frac{1}{P_{t}}\right)^{-\epsilon}\left(\frac{Z_{t}}{P_{t}}\right)\right]^{\frac{\epsilon-1}{\epsilon}}{\displaystyle \int_{0}^{1}}\left(P_{t}(k)^{-\epsilon}\right)^{\frac{\epsilon-1}{\epsilon}}dk\right\} ^{\frac{\epsilon}{\epsilon-1}}\nonumber \\
+ & = & \left(\frac{1}{P_{t}}\right)^{-\epsilon}\left(\frac{Z_{t}}{P_{t}}\right)\left[{\displaystyle \int_{0}^{1}}P_{t}(k)^{1-\epsilon}dk\right]^{\frac{\epsilon}{\epsilon-1}}
+\end{eqnarray}
+
+\end_inset
+
+Finally, from the aggregate price index, equation (7) yields
+\begin_inset Formula 
+\begin{gather}
+\left(\frac{1}{P_{t}}\right)^{-\epsilon}\left(\frac{Z_{t}}{P_{t}}\right)P_{t}^{-\epsilon}=\frac{Z_{t}}{P_{t}}
+\end{gather}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Thus, we have found the set of demand equations for each individual good,
+ the maximized consumption index, and total consumption expenditure.
+ With this information, the household no longer has to worry about choosing
+ its consumption for each individual good.
+ Instead, it chooses its consumption basket as a whole.
+ Thus, its constrained maximization problem becomes
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{\{C_{t},B_{t},N_{t}\}}\ } & E_{0}\left\{ \sum_{t=0}^{\infty}\beta^{t}U(C_{t},N_{t})\right\} \\
+\mbox{s.t.} & P_{t}C_{t}+Q_{t}B_{t}=B_{t-1}+W_{t}N_{t}+T_{t}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+After setting up the Lagrangian
+\begin_inset Formula 
+\[
+L=E_{0}\left\{ {\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\left[U(C_{t},N_{t})+\lambda_{t}\left(-P_{t}C_{t}-Q_{t}B_{t}+B_{t-1}+W_{t}N_{t}+T_{t}\right)\right]\right\} 
+\]
+
+\end_inset
+
+we obtain the following first-order conditions
+\begin_inset Formula 
+\begin{eqnarray}
+U_{c,t}-\lambda_{t}P_{t} & = & 0\\
+U_{n,t}+\lambda_{t}W_{t} & = & 0\\
+\lambda_{t}(-Q_{t})+E_{t}\left\{ \beta\lambda_{t+1}\right\}  & = & 0
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Equations (8) and (9) imply
+\begin_inset Formula 
+\begin{equation}
+-U_{n,t}=\left(\frac{W_{t}}{P_{t}}\right)U_{c,t}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Equations (8) and (10) imply
+\begin_inset Formula 
+\begin{eqnarray}
+Q_{t} & = & E_{t}\left\{ \beta\frac{U_{c,t+1}}{U_{c,t}}\frac{P_{t}}{P_{t+1}}\right\} \nonumber \\
+\frac{Q_{t}}{P_{t}}U_{c,t} & = & E_{t}\left\{ \beta\frac{U_{c,t+1}}{P_{t+1}}\right\} 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Under the assumption of a period utility given by
+\begin_inset Formula 
+\begin{equation}
+U(C_{t},N_{t})=\frac{C_{t}^{1-\sigma}}{1-\sigma}-\frac{N_{t}^{1+\varphi}}{1+\varphi}
+\end{equation}
+
+\end_inset
+
+the first-order conditions become
+\begin_inset Formula 
+\begin{eqnarray}
+N_{t}^{\varphi} & = & \left(\frac{W_{t}}{P_{t}}\right)C_{t}^{-\sigma}\\
+Q_{t} & = & E_{t}\left\{ \beta\left(\frac{C_{t+1}}{C_{t}}\right)^{-\sigma}\frac{P_{t}}{P_{t+1}}\right\} 
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Now, we move onto the firm's problem.
+ Firm 
+\begin_inset Formula $i$
+\end_inset
+
+ reoptimizing in period 
+\begin_inset Formula $t$
+\end_inset
+
+ will choose its price 
+\begin_inset Formula $P_{t}^{*}$
+\end_inset
+
+ that maximizes the current market value of its profits generated while
+ that price remains effective.
+ Formally, it solves the problem
+\begin_inset Formula 
+\[
+{\displaystyle \max_{P_{t}(i)}}\left[P_{t}(i)\left(\frac{P_{t}(i)}{P_{t}}\right)^{-\epsilon}C_{t}-\frac{(1-\tau)W_{t}}{A_{t}}\left(\frac{P_{t}(i)}{P_{t}}\right)^{-\epsilon}C_{t}\right]
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The first-order condition associated with the problem above takes the form
+\begin_inset Formula 
+\begin{eqnarray*}
+(1-\epsilon)P_{t}(i)^{-\epsilon}P_{t}^{\epsilon}C_{t}+\epsilon\frac{(1-\tau)W_{t}}{A_{t}}P_{t}(i)^{-\epsilon-1}P_{t}^{\epsilon}C_{t} & = & 0\\
+\epsilon\frac{(1-\tau)W_{t}}{A_{t}}P_{t}(i)^{-\epsilon-1} & = & (\epsilon-1)P_{t}(i)^{-\epsilon}\\
+P_{t}(i) & = & \frac{\epsilon}{\epsilon-1}\frac{(1-\tau)W_{t}}{A_{t}}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mu\equiv\frac{\epsilon}{\epsilon-1}>1$
+\end_inset
+
+.
+ Thus, the aggregate price index becomes
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{t} & = & \left[{\displaystyle \int_{0}^{1}}P_{t}(i)^{1-\epsilon}d_{j}\right]^{\frac{1}{1-\epsilon}}\\
+ & = & \mu\frac{(1-\tau)W_{t}}{A_{t}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In equilibrium, there are two market clearing conditions:
+\end_layout
+
+\begin_layout Enumerate
+Market clearing in the goods market requires
+\begin_inset Formula 
+\[
+Y_{t}(i)=C_{t}(i)
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $i\in[0,1]$
+\end_inset
+
+ and all 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Letting aggregate output be defined as 
+\begin_inset Formula $Y_{t}\equiv\left[\int_{0}^{1}Y_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}$
+\end_inset
+
+ it follows that
+\begin_inset Formula 
+\[
+Y_{t}=C_{t}
+\]
+
+\end_inset
+
+must hold for all 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Market clearing in the labor market requires
+\begin_inset Formula 
+\[
+N_{t}={\displaystyle \int_{0}^{1}}N_{t}(i)di
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Since all the firms are symmetric and 
+\begin_inset Formula $Y_{t}(i)=C_{t}(i)$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray*}
+Y_{t} & = & \left[\int_{0}^{1}Y_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+ & = & \left[{\displaystyle \int_{0}^{1}}\left(A_{t}N_{t}(i)\right)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+ & = & \left[{\displaystyle \int_{0}^{1}}\left(A_{t}N_{t}\right)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+Y_{t} & = & A_{t}N_{t}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence , the economy can be summarized by the following equations
+\begin_inset Formula 
+\begin{gather}
+N_{t}^{\varphi}=\left(\frac{W_{t}}{P_{t}}\right)C_{t}^{-\sigma}\\
+Q_{t}=E_{t}\left\{ \beta\left(\frac{C_{t+1}}{C_{t}}\right)^{-\sigma}\frac{P_{t}}{P_{t+1}}\right\} \\
+P_{t}=\mu\frac{(1-\tau)W_{t}}{A_{t}}\\
+Y_{t}=C_{t}\\
+Y_{t}=A_{t}N_{t}\\
+N_{t}={\displaystyle \int_{0}^{1}}N_{t}(i)di
+\end{gather}
+
+\end_inset
+
+Solving for 
+\begin_inset Formula $W_{t}$
+\end_inset
+
+ in equation (16) and plugging it into equation (18) yields
+\begin_inset Formula 
+\[
+1=\mu\frac{(1-\tau)}{A_{t}}N_{t}^{\varphi}C_{t}^{\sigma}
+\]
+
+\end_inset
+
+Then, using equations (19) and (20), we obtain
+\begin_inset Formula 
+\begin{eqnarray*}
+1 & = & \mu\frac{(1-\tau)}{A_{t}}\left(\frac{Y_{t}}{A_{t}}\right)^{\varphi}Y_{t}^{\sigma}\\
+Y_{t} & = & \left[\frac{1}{\mu}\frac{1}{(1-\tau)}A_{t}^{1+\varphi}\right]^{\frac{1}{\sigma+\varphi}}
+\end{eqnarray*}
+
+\end_inset
+
+This is the equilibrium aggregate consumption/production level.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the social planner's problem, we found
+\begin_inset Formula 
+\[
+C_{t}^{*}=C_{t}^{P}=A_{t}^{\frac{1+\varphi}{\varphi+\sigma}}
+\]
+
+\end_inset
+
+and in the employment subsidy problem,
+\begin_inset Formula 
+\[
+C_{t}^{*}=C_{t}^{S}=\left[\frac{1}{\mu}\frac{1}{(1-\tau)}A_{t}^{1+\varphi}\right]^{\frac{1}{\sigma+\varphi}}
+\]
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $C_{t}^{S}>C_{t}^{P}$
+\end_inset
+
+ when
+\begin_inset Formula 
+\[
+\left[\frac{1}{\mu}\frac{1}{(1-\tau)}\right]^{\frac{1}{\varphi+\sigma}}>1\implies\mu(1-\tau)<1
+\]
+
+\end_inset
+
+
+\begin_inset Formula $C_{t}^{P}>C_{t}^{S}$
+\end_inset
+
+ when
+\begin_inset Formula 
+\[
+\mu(1-\tau)>1
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $C_{t}^{S}=C_{t}^{P}$
+\end_inset
+
+ when
+\begin_inset Formula 
+\[
+\mu(1-\tau)=1
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+When 
+\begin_inset Formula $\tau=0$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+C_{t}^{S}=\left[\frac{1}{\mu}A_{t}^{1+\varphi}\right]^{\frac{1}{\sigma+\varphi}}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\mu\equiv\frac{\epsilon}{\epsilon-1}>1$
+\end_inset
+
+, then 
+\begin_inset Formula $C_{t}^{P}>C_{t}^{S}$
+\end_inset
+
+.
+ Thus, the subsidized level of output is lower than the social planner's
+ level of output when 
+\begin_inset Formula $\tau=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As mentioned earlier, if 
+\begin_inset Formula $\mu(1-\tau)=1$
+\end_inset
+
+, then 
+\begin_inset Formula $C_{t}^{S}=C_{t}^{P}$
+\end_inset
+
+, i.e.,
+\begin_inset Formula 
+\[
+\tau=\frac{\mu-1}{\mu}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When 
+\begin_inset Formula $\tau=0$
+\end_inset
+
+, then wage is no longer subsidized by the government.
+ In this case, output level is the same as the natural level of output when
+ firms sell differentiated goods and prices are flexible.
+ As 
+\begin_inset Formula $\tau$
+\end_inset
+
+ increases, the firms are willing to hire more workers since the government
+ is subsidizing wages.
+ This, in turn, leads to an increase in output.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, consider the case when 
+\begin_inset Formula $\tau=\frac{\mu-1}{\mu}$
+\end_inset
+
+, so 
+\begin_inset Formula $(1-\tau)=\frac{1}{\mu}$
+\end_inset
+
+.
+ Using the employment subsidy condition, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{t}(i) & = & \mu\frac{(1-\tau)}{A_{t}}W_{t}\\
+ & = & \frac{W_{t}}{A_{t}}\\
+P_{t} & = & \left[{\displaystyle \int_{0}^{1}}P_{t}(i)^{1-\epsilon}d_{j}\right]^{\frac{1}{1-\epsilon}}\\
+ & = & \frac{W_{t}}{A_{t}}
+\end{eqnarray*}
+
+\end_inset
+
+The cost of one unit of 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ is 
+\begin_inset Formula $W_{t}$
+\end_inset
+
+ and each unit of 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ can produce 
+\begin_inset Formula $A_{t}$
+\end_inset
+
+ unites of 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\nicefrac{W_{t}}{A_{t}}$
+\end_inset
+
+ is simply the marginal cost of 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+.
+ This implies that for 
+\begin_inset Formula $\tau=\frac{\mu-1}{\mu}$
+\end_inset
+
+, aggregate price 
+\begin_inset Formula $P_{t}$
+\end_inset
+
+ equals the marginal cost to produce 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+.
+ Thus, we have a competitive equilibrium.
+ Since the utility function is locally non-satiated, then the ouput level
+ 
+\begin_inset Formula $C_{t}^{S}$
+\end_inset
+
+ is efficient by the First Fundamental Welfare Theorem of Economics.
+ Hence, 
+\begin_inset Formula $C_{t}^{S}=C_{t}^{P}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,303 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Macroeconomic Theory II: Homework 3
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Problem
+
+\emph on
+No capital model
+\end_layout
+
+\begin_layout Problem
+No capital version of the RBC model is
+\begin_inset Formula 
+\[
+{\displaystyle \max_{\{C_{t},N_{t}\}_{t=0}^{\infty}}E_{0}\left[{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\left(\log C_{t}+\theta\log(1-N_{t})\right)\right]}
+\]
+
+\end_inset
+
+subject to
+\begin_inset Formula 
+\[
+C_{t}=A_{t}N_{t}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $A_{t}$
+\end_inset
+
+ is a stationary random variable, representing a technology shock.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Derive the first-order conditions
+\end_layout
+
+\begin_layout Enumerate
+How does 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ respond to a change in 
+\begin_inset Formula $A_{t}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Explain your answer in (b).
+ (HINT: Notice that the utility function is a King-Plosser-Rebelo type.)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+We set up the Lagrangian
+\begin_inset Formula 
+\[
+L=E_{0}\left[{\displaystyle \sum_{t=0}^{\infty}}\beta^{t}\left(\log C_{t}+\theta\log(1-N_{t})+\lambda_{t}(A_{t}N_{t}-C_{t})\right)\right]
+\]
+
+\end_inset
+
+to derive the first-order conditions
+\begin_inset Formula 
+\begin{gather*}
+\frac{\partial L}{\partial C_{t}}:\ \frac{1}{C_{t}}-\lambda_{t}=0\iff\frac{1}{C_{t}}=\lambda_{t}\\
+\frac{\partial L}{\partial N_{t}}:\ -\frac{\theta}{1-N_{t}}+\lambda_{t}A_{t}=0\iff\frac{\theta}{1-N_{t}}=\lambda_{t}A_{t}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+Using the first-order conditions and the constraint, we can obtain an expression
+ for 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{gather*}
+\frac{\theta}{1-N_{t}}=\frac{A_{t}}{C_{t}}\\
+\theta=\frac{1}{N_{t}}-1\\
+N_{t}=\frac{1}{1+\theta}
+\end{gather*}
+
+\end_inset
+
+Therefore, we have
+\begin_inset Formula 
+\[
+C_{t}=\frac{A_{t}}{1+\theta}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $A_{t}$
+\end_inset
+
+ does not appear in the equation for 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+, then 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ is independent of changes to 
+\begin_inset Formula $A_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+Recall the general form of the King-Plosser-Rebelo utility function
+\begin_inset Formula 
+\[
+u(C,L)=\frac{1}{1-\sigma}\left\{ \left[C\nu(L)\right]^{1-\sigma}-1\right\} 
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\frac{1}{\sigma}$
+\end_inset
+
+ denotes the intertemporal elasticity of substitution.
+ So, the utility function in the problem description is obtain by taking
+ the limit as 
+\begin_inset Formula $\sigma\rightarrow1$
+\end_inset
+
+.
+ This means that intertemporal consumption is unit elastic.
+ Also, the KPR utility function implies exactly offsetting income and substituti
+on effects of wage changes on labor.
+ The marginal rate of substitution of leisure for consumption
+\begin_inset Formula 
+\[
+\frac{u_{L}(t)}{u_{C}(t)}
+\]
+
+\end_inset
+
+must grow at a constant rate and at the same rate as labor productivity
+\begin_inset Formula 
+\[
+\frac{\partial C_{t}}{\partial N_{t}}
+\]
+
+\end_inset
+
+Thus, we have 
+\begin_inset Formula 
+\[
+\frac{\theta}{1-N_{t}}=A_{t}
+\]
+
+\end_inset
+
+Note, 
+\begin_inset Formula $A_{t}$
+\end_inset
+
+ is a random variable and represents techonology shock, so it does not grow.
+ As a result, marginal product of labor does not experience constant grow,
+ so neither should the MRS of leisure for consumption.
+ Therefore, 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ should not depend on 
+\begin_inset Formula $A_{t}$
+\end_inset
+
+, which coincides with our findings in part (b).
+\end_layout
+
+\end_body
+\end_document

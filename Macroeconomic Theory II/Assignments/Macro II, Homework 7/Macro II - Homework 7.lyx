@@ -1,0 +1,1086 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Macroeconomic Theory II: Homework 7
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Assume a continuum of firms indexed by 
+\begin_inset Formula $i\in[0,1]$
+\end_inset
+
+.
+ Each firm produces a differentiated good, with a technology
+\begin_inset Formula 
+\[
+Y_{t}(i)=A_{t}N_{t}(i)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $A_{t}$
+\end_inset
+
+ represents the level of technology, and 
+\begin_inset Formula $a_{t}=\log A_{t}$
+\end_inset
+
+ evolves exogenously according to some stationary stochastic process.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+During each period, half of the firms reset their prices, which then remains
+ effective for 2 periods.
+ Hence, a firm 
+\begin_inset Formula $i$
+\end_inset
+
+ setting a new price 
+\begin_inset Formula $P_{t}^{*}$
+\end_inset
+
+ in period 
+\begin_inset Formula $t$
+\end_inset
+
+ will seek to maximize
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{k=0}^{1}}E_{t}\left\{ Q_{t,t+k}\left(P_{t}^{*}Y_{t+k|t}-W_{t+k}\frac{Y_{t+k|t}}{A_{t+k}}\right)\right\} 
+\]
+
+\end_inset
+
+subject to
+\begin_inset Formula 
+\[
+Y_{t+k|t}=\left(\frac{P_{t}^{*}}{P_{t+k}}\right)^{-\epsilon}C_{t+k}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $Q_{t,t+k}\equiv\beta^{k}\left(\frac{C_{t+k}}{C_{t}}\right)^{-\sigma}\left(\frac{P_{t}}{P_{t+k}}\right)$
+\end_inset
+
+ is the usual stochastic discount factor for nominal payoffs.
+\end_layout
+
+\begin_layout Problem
+Show that 
+\begin_inset Formula $P_{t}^{*}$
+\end_inset
+
+ must satisfy the first-order condition
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{k=0}^{1}}E_{t}\left\{ Q_{t,t+k}Y_{t+k|t}\left(P_{t}^{*}-\frac{\epsilon}{\epsilon-1}\frac{W_{t+k}}{A_{t+k}}\right)\right\} =0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Substituting the constraint into the maximization problem yields
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{k=0}^{1}}E_{t}\left\{ Q_{t,t+k}\left[P_{t}^{*}\left(\frac{P_{t}^{*}}{P_{t+k}}\right)^{-\epsilon}C_{t+k}-\frac{W_{t+k}}{A_{t+k}}\left(\frac{P_{t}^{*}}{P_{t+k}}\right)^{-\epsilon}C_{t+k}\right]\right\} 
+\]
+
+\end_inset
+
+The first-order condition with respect to 
+\begin_inset Formula $P_{t}^{*}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \sum_{k=0}^{1}}E_{t}\left\{ Q_{t,t+k}\left[(1-\epsilon)\left(\frac{P_{t}^{*}}{P_{t+k}}\right)^{-\epsilon}C_{t+k}+\epsilon\frac{W_{t+k}}{A_{t+k}}\left(\frac{P_{t}^{*}}{P_{t+k}}\right)^{-\epsilon}C_{t+k}\frac{1}{P_{t}^{*}}\right]\right\}  & = & 0\\
+{\displaystyle \sum_{k=0}^{1}}E_{t}\left\{ Q_{t,t+k}Y_{t+k|t}\left[1-\epsilon+\epsilon\frac{W_{t+k}}{A_{t+k}}\frac{1}{P_{t}^{*}}\right]\right\}  & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+Multiplying both sides by 
+\begin_inset Formula $P_{t}^{*}\frac{1}{1-\epsilon}$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{k=0}^{1}}E_{t}\left\{ Q_{t,t+k}Y_{t+k|t}\left[P_{t}^{*}-\frac{\epsilon}{\epsilon-1}\frac{W_{t+k}}{A_{t+K}}\right]\right\} =0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Derive the following log-linearized optimal price setting rule
+\begin_inset Formula 
+\[
+p_{t}^{*}=\log\frac{\epsilon}{\epsilon-1}+{\displaystyle \sum_{k=0}^{1}}\frac{\beta^{k}}{1+\beta}E_{t}\left[w_{t+k}-a_{t+k}\right]
+\]
+
+\end_inset
+
+where variables in small letters are log of corresponding variables, e.g.,
+ 
+\begin_inset Formula $p_{t}^{*}\equiv\log P_{t}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We log-linearize the optimal price-setting condition around a zero inflation
+ steady state.
+ First off,
+\begin_inset Formula 
+\[
+Q_{t,t+k}Y_{t+k|t}=\beta^{k}\left(\frac{C_{t+k}}{C_{t}}\right)^{-\sigma}\left(\frac{P_{t}}{P_{t+k}}\right)\left(\frac{P_{t}^{*}}{P_{t+k}}\right)^{-\epsilon}C_{t+k}
+\]
+
+\end_inset
+
+In the steady state, constancy of the price level implies that 
+\begin_inset Formula $P_{t}^{*}=P_{t+k}$
+\end_inset
+
+, from which it follows that 
+\begin_inset Formula $Y_{t+k|t}=C_{t+k}=Y$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p_{t}^{*}\equiv\log P_{t}^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $w_{t+k}\equiv\log W_{t+k}$
+\end_inset
+
+, and 
+\begin_inset Formula $a_{t+k}\equiv\log A_{t+k}$
+\end_inset
+
+.
+ Moreover, from equation (1), we can see that at the steady state,
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{k=0}^{1}}\beta^{k}Y\left(P^{*}-\frac{\epsilon}{\epsilon-1}\frac{W}{A}\right)=0
+\]
+
+\end_inset
+
+which implies that
+\begin_inset Formula 
+\begin{eqnarray*}
+P^{*}-\frac{\epsilon}{\epsilon-1}\frac{W}{A} & = & 0\\
+e^{p^{*}} & = & \frac{\epsilon}{\epsilon-1}e^{w-a}\\
+p^{*}-w+a & = & \log\left(\frac{\epsilon}{\epsilon-1}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Now, let us focus on the expression within the expectation.
+ We apply a first-order Taylor approximation of the optimal price-setting
+ condition around the zero inflation steady state.
+\begin_inset Formula 
+\begin{eqnarray*}
+Q_{t,t+k}Y_{t+k|t}\left[P_{t}^{*}-\frac{\epsilon}{\epsilon-1}\frac{W_{t+k}}{A_{t+K}}\right] & = & Q_{t,t+k}Y_{t+k|t}\left[e^{p_{t}^{*}}-\frac{\epsilon}{\epsilon-1}e^{w_{t+k}-a_{t+k}}\right]\\
+ & \approx & \beta^{k}Ye^{p^{*}}(p_{t}^{*}-p^{*})-\beta^{k}Y\frac{\epsilon}{\epsilon-1}e^{w-a}(w_{t+k}-w)\\
+ &  & +\beta^{k}Y\frac{\epsilon}{\epsilon-1}e^{w-a}(a_{t+k}-a)\\
+ & = & \beta^{k}Y\frac{\epsilon}{\epsilon-1}e^{w-a}\left[p_{t}^{*}-w_{t+k}+a_{t+k}-p^{*}+w-a\right]\\
+ & = & \beta^{k}Y\frac{\epsilon}{\epsilon-1}e^{w-a}\left[p_{t}^{*}-w_{t+k}+a_{t+k}-\log\left(\frac{\epsilon}{\epsilon-1}\right)\right]
+\end{eqnarray*}
+
+\end_inset
+
+Thus, we can rewrite the optimal price-setting condition as follows
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \sum_{k=0}^{1}}E_{t}\left\{ Q_{t,t+k}Y_{t+k|t}\left[P_{t}^{*}-\frac{\epsilon}{\epsilon-1}\frac{W_{t+k}}{A_{t+K}}\right]\right\}  & = & 0\\
+{\displaystyle \sum_{k=0}^{1}}E_{t}\left\{ \beta^{k}Y\frac{\epsilon}{\epsilon-1}e^{w-a}\left[p_{t}^{*}-w_{t+k}+a_{t+k}-\log\left(\frac{\epsilon}{\epsilon-1}\right)\right]\right\}  & = & 0\\
+{\displaystyle \sum_{k=0}^{1}}\beta^{k}p_{t}^{*}-{\displaystyle \sum_{k=0}^{1}}\beta^{k}\log\left(\frac{\epsilon}{\epsilon-1}\right)+{\displaystyle \sum_{k=0}^{1}}\beta^{k}E_{t}\left\{ \left[a_{t+k}-w_{t+k}\right]\right\}  & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\sum_{k=0}^{1}\beta^{k}=(1+\beta)$
+\end_inset
+
+, then we have
+\begin_inset Formula 
+\begin{eqnarray}
+(1+\beta)p_{t}^{*} & = & (1+\beta)\log\left(\frac{\epsilon}{\epsilon-1}\right)+{\displaystyle \sum_{k=0}^{1}}\beta^{k}E_{t}\left\{ w_{t+k}-a_{t+k}\right\} \nonumber \\
+p_{t}^{*} & = & \log\left(\frac{\epsilon}{\epsilon-1}\right)+{\displaystyle \sum_{k=0}^{1}}\frac{\beta^{k}}{1+\beta}E_{t}\left\{ w_{t+k}-a_{t+k}\right\} 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Assume the following: (i) 
+\begin_inset Formula $\beta=1$
+\end_inset
+
+, (ii) the consumer's marginal rate of substitution betwen labor and consumption
+ is given by 
+\begin_inset Formula $\sigma c_{t}+\varphi n_{t}$
+\end_inset
+
+, and (iii) all output is consumed.
+ Show that in this case
+\begin_inset Formula 
+\[
+p_{t}^{*}=\log\frac{\epsilon}{\epsilon-1}+\frac{1}{2}\left(p_{t}+\sigma y_{t}+\varphi n_{t}-a_{t}+E_{t}\left[p_{t+1}+\sigma y_{t+1}+\varphi n_{t+1}-a_{t+1}\right]\right)
+\]
+
+\end_inset
+
+(HINT: Think about the consumer's optimization condition: the marginal rate
+ of substitution is equal to what?)
+\end_layout
+
+\begin_layout Proof
+If the consumer is maximizing his utility, then his labor and consumption
+ choice must satisfy the optimization condition.
+ This condition requires that the consumer's marginal rate of substituion
+ between labor and consumption must equal the ratio of the wage rate and
+ the price of the consumption good.
+ So, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\sigma c_{t}+\varphi n_{t} & = & w_{t}-p_{t}\\
+w_{t} & = & \sigma c_{t}+\varphi n_{t}+p_{t}
+\end{eqnarray*}
+
+\end_inset
+
+Substituting this expression for 
+\begin_inset Formula $w_{t}$
+\end_inset
+
+ into the optimal price-setting equation found in Problem 2 yields
+\begin_inset Formula 
+\begin{eqnarray}
+p_{t}^{*} & = & \log\left(\frac{\epsilon}{\epsilon-1}\right)+{\displaystyle \sum_{k=0}^{1}}\frac{\beta^{k}}{1+\beta}E_{t}\left\{ \sigma c_{t+k}+\varphi n_{t+k}+p_{t+k}-a_{t+k}\right\} \nonumber \\
+p_{t}^{*} & = & \log\left(\frac{\epsilon}{\epsilon-1}\right)+\frac{1}{1+\beta}\left(\sigma c_{t}+\varphi n_{+}+p_{t}-a_{t}\right)+\frac{\beta}{1+\beta}E_{t}\left\{ \sigma c_{t+1}+\varphi n_{t+1}+p_{t+1}-a_{t+1}\right\} \nonumber \\
+p_{t}^{*} & = & \log\left(\frac{\epsilon}{\epsilon-1}\right)+\frac{1}{2}\left(\sigma c_{t}+\varphi n_{+}+p_{t}-a_{t}\right)+\frac{1}{2}E_{t}\left\{ \sigma c_{t+1}+\varphi n_{t+1}+p_{t+1}-a_{t+1}\right\} \nonumber \\
+p_{t}^{*} & = & \log\frac{\epsilon}{\epsilon-1}+\frac{1}{2}\left(p_{t}+\sigma y_{t}+\varphi n_{t}-a_{t}+E_{t}\left\{ p_{t+1}+\sigma y_{t+1}+\varphi n_{t+1}-a_{t+1}\right\} \right)
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Recalling the expression for the aggregate price index
+\begin_inset Formula 
+\[
+P_{t}\equiv\left[{\displaystyle \int_{0}^{1}}P_{t}(i)^{1-\epsilon}\right]^{\frac{1}{1-\epsilon}}
+\]
+
+\end_inset
+
+show that around a zero inflation steady state
+\begin_inset Formula 
+\[
+p_{t}=\frac{1}{2}\left(p_{t-1}^{*}+p_{t}^{*}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Since only half the firms reoptimize in period 
+\begin_inset Formula $t$
+\end_inset
+
+, while the other half must retain their price from the previous period,
+ then we can derive an equation that describes the aggregate price dynamics
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray}
+P_{t} & \equiv & \left[{\displaystyle \int_{0}^{1}}P_{t}(i)^{1-\epsilon}\right]^{\frac{1}{1-\epsilon}}\nonumber \\
+P_{t} & = & \left[\frac{1}{2}\left(P_{t}^{*}\right)^{1-\epsilon}+\frac{1}{2}\left(P_{t-1}^{*}\right)^{1-\epsilon}\right]^{\frac{1}{1-\epsilon}}\nonumber \\
+P_{t}^{1-\epsilon} & = & \frac{1}{2}\left(P_{t}^{*}\right)^{1-\epsilon}+\frac{1}{2}\left(P_{t-1}^{*}\right)^{1-\epsilon}\nonumber \\
+(1-\epsilon)p_{t} & = & (1-\epsilon)\frac{1}{2}\left(p_{t}^{*}+p_{t-1}^{*}\right)\nonumber \\
+p_{t} & = & \frac{1}{2}\left(p_{t-1}^{*}+p_{t}^{*}\right)
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Show that
+\begin_inset Formula 
+\[
+p_{t}^{*}=2\log\frac{\epsilon}{\epsilon-1}+\frac{1}{2}p_{t-1}^{*}+\frac{1}{2}E_{t}\left\{ p_{t+1}^{*}\right\} +\left(\sigma y_{t}+\varphi n_{t}-a_{t}+E_{t}\left\{ \sigma y_{t+1}+\varphi n_{t+1}-a_{t+1}\right\} \right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Substituting equation (4) into equation (3) yields
+\begin_inset Formula 
+\begin{eqnarray}
+p_{t}^{*} & = & \log\frac{\epsilon}{\epsilon-1}\nonumber \\
+ &  & +\frac{1}{2}\left(\frac{1}{2}p_{t-1}^{*}+\frac{1}{2}p_{t}^{*}+\sigma y_{t}+\varphi n_{t}-a_{t}+E_{t}\left\{ \frac{1}{2}p_{t}^{*}+\frac{1}{2}p_{t+1}^{*}+\sigma y_{t+1}+\varphi n_{t+1}-a_{t+1}\right\} \right)\nonumber \\
+p_{t}^{*} & = & \log\frac{\epsilon}{\epsilon-1}\nonumber \\
+ &  & +\frac{1}{2}\left(\frac{1}{2}p_{t-1}^{*}+p_{t}^{*}+\sigma y_{t}+\varphi n_{t}-a_{t}+\frac{1}{2}E_{t}\left\{ p_{t+1}^{*}\right\} +E_{t}\left\{ \sigma y_{t+1}+\varphi n_{t+1}-a_{t+1}\right\} \right)\nonumber \\
+2p_{t}^{*} & = & p_{t}^{*}+2\log\frac{\epsilon}{\epsilon-1}+\frac{1}{2}p_{t-1}^{*}+\frac{1}{2}E_{t}\left\{ p_{t+1}^{*}\right\} +\sigma y_{t}+\varphi n_{t}-a_{t}+E_{t}\left\{ \sigma y_{t+1}+\varphi n_{t+1}-a_{t+1}\right\} \nonumber \\
+p_{t}^{*} & = & 2\log\frac{\epsilon}{\epsilon-1}+\frac{1}{2}p_{t-1}^{*}+\frac{1}{2}E_{t}\left\{ p_{t+1}^{*}\right\} +\left(\sigma y_{t}+\varphi n_{t}-a_{t}+E_{t}\left\{ \sigma y_{t+1}+\varphi n_{t+1}-a_{t+1}\right\} \right)
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Show that the natural level of output, 
+\begin_inset Formula $Y_{t}^{n}$
+\end_inset
+
+, satisfies
+\begin_inset Formula 
+\[
+0=\log\frac{\epsilon}{\epsilon-1}+\sigma y_{t}^{n}+\varphi(y_{t}^{n}-a_{t})-a_{t}
+\]
+
+\end_inset
+
+(HINT: Recall that the optimal pricing rule for a monopolist in the flexible
+ price economy is markup times the marginal cost.)
+\end_layout
+
+\begin_layout Proof
+When prices are fully flexible, then the firm's optimal price-setting condition
+ becomes
+\begin_inset Formula 
+\begin{eqnarray*}
+Y\left[P_{t}^{*}-\frac{\epsilon}{\epsilon-1}\frac{W_{t}}{A_{t}}\right] & = & 0\\
+\left[e^{p_{t}^{*}}-\frac{\epsilon}{\epsilon-1}\epsilon^{w_{t}-a_{t}}\right] & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+Using the consumer's optimization condition
+\begin_inset Formula 
+\[
+w_{t}=\sigma c_{t}+\varphi n_{t}+p_{t}
+\]
+
+\end_inset
+
+and the fact that 
+\begin_inset Formula $y_{t}=c_{t}$
+\end_inset
+
+ inequilibrium, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[e^{p_{t}^{*}}-\frac{\epsilon}{\epsilon-1}\epsilon^{\sigma y_{t}+\varphi n_{t}+p_{t}-a_{t}}\right] & = & 0\\
+p_{t}^{*} & = & \log\frac{\epsilon}{\epsilon-1}+\sigma y_{t}+\varphi n_{t}+p_{t}-a_{t}\\
+p_{t}^{*} & = & \log\frac{\epsilon}{\epsilon-1}+\sigma y_{t}+\varphi n_{t}+p_{t}-a_{t}
+\end{eqnarray*}
+
+\end_inset
+
+Important to note, when prices are flexible, then 
+\begin_inset Formula $p_{t}^{*}=p_{t}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ So, the equation above becomes 
+\begin_inset Formula 
+\[
+0=\log\frac{\epsilon}{\epsilon-1}+\sigma y_{t}+\varphi n_{t}-a_{t}
+\]
+
+\end_inset
+
+Finally, let aggregate output be defined as
+\begin_inset Formula 
+\[
+Y_{t}\equiv\left[\int_{0}^{1}Y_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}
+\]
+
+\end_inset
+
+Since all firms are symmetric, then we have
+\begin_inset Formula 
+\begin{eqnarray*}
+Y_{t} & = & \left[{\displaystyle \int_{0}^{1}}Y_{t}(i)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+ & = & \left[{\displaystyle \int_{0}^{1}}\left(A_{t}N_{t}(i)\right)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+ & = & \left[{\displaystyle \int_{0}^{1}}\left(A_{t}N_{t}\right)^{1-\frac{1}{\epsilon}}di\right]^{\frac{\epsilon}{\epsilon-1}}\\
+Y_{t} & = & A_{t}N_{t}\\
+n_{t} & = & y_{t}-a_{t}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the natural level of output, 
+\begin_inset Formula $Y_{t}^{n}$
+\end_inset
+
+, satisfies
+\begin_inset Formula 
+\begin{equation}
+0=\log\frac{\epsilon}{\epsilon-1}+\sigma y_{t}^{n}+\varphi(y_{t}^{n}-a_{t})-a_{t}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Show that
+\begin_inset Formula 
+\[
+p_{t}^{*}=\frac{1}{2}p_{t-1}^{*}+\frac{1}{2}E_{t}\left\{ p_{t+1}^{*}\right\} +\left(\sigma+\varphi\right)\left(\tilde{y}_{t}+E_{t}\left\{ \tilde{y}_{t+1}\right\} \right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Recall from Problem 5 the firm's optimal price-setting condition,
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{t}^{*} & = & 2\log\frac{\epsilon}{\epsilon-1}+\frac{1}{2}p_{t-1}^{*}+\frac{1}{2}E_{t}\left\{ p_{t+1}^{*}\right\} \\
+ &  & +\left(\sigma y_{t}+\varphi(y_{t}-a_{t})-a_{t}+E_{t}\left\{ \sigma y_{t+1}+\varphi(y_{t+1}-a_{t+1})-a_{t+1}\right\} \right)
+\end{eqnarray*}
+
+\end_inset
+
+From Problem 6, we found that the natural level of output satisfies
+\begin_inset Formula 
+\begin{eqnarray*}
+0 & = & \log\frac{\epsilon}{\epsilon-1}+\sigma y_{t}^{n}+\varphi(y_{t}^{n}-a_{t})-a_{t}\\
+a_{t}+\varphi a_{t} & = & (\sigma+\varphi)y_{t}^{n}+\log\frac{\epsilon}{\epsilon-1}
+\end{eqnarray*}
+
+\end_inset
+
+Plugging the above expression into equation (5) yields
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{t}^{*} & = & 2\log\frac{\epsilon}{\epsilon-1}+\frac{1}{2}p_{t-1}^{*}+\frac{1}{2}E_{t}\left\{ p_{t+1}^{*}\right\} \\
+ &  & +\left[(\sigma+\varphi)y_{t}-\varphi a_{t}-a_{t}+E_{t}\left\{ (\sigma+\varphi)y_{t+1}-\varphi a_{t+1}-a_{t+1}\right\} \right]\\
+p_{t}^{*} & = & 2\log\frac{\epsilon}{\epsilon-1}+\frac{1}{2}p_{t-1}^{*}+\frac{1}{2}E_{t}\left\{ p_{t+1}^{*}\right\} \\
+ &  & +\left[(\sigma+\varphi)y_{t}-(\sigma+\varphi)y_{t}^{n}-\log\frac{\epsilon}{\epsilon-1}+E_{t}\left\{ (\sigma+\varphi)y_{t+1}-(\sigma+\varphi)y_{t+1}^{n}-\log\frac{\epsilon}{\epsilon-1}\right\} \right]\\
+p_{t}^{*} & = & \frac{1}{2}p_{t-1}^{*}+\frac{1}{2}E_{t}\left\{ p_{t+1}^{*}\right\} +\left[\left(\sigma+\varphi\right)\left(y_{t}-y_{t}^{n}\right)+E_{t}\left\{ \left(\sigma+\varphi\right)\left(y_{t+1}-y_{t+1}^{n}\right)\right\} \right]
+\end{eqnarray*}
+
+\end_inset
+
+If we define 
+\begin_inset Formula $\tilde{y}_{t}\equiv y_{t}-y_{t}^{n}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{equation}
+p_{t}^{*}=\frac{1}{2}p_{t-1}^{*}+\frac{1}{2}E_{t}\left\{ p_{t+1}^{*}\right\} +\left(\sigma+\varphi\right)\left(\tilde{y}_{t}+E_{t}\left\{ \tilde{y}_{t+1}\right\} \right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Assume that 
+\begin_inset Formula $a_{t}$
+\end_inset
+
+ is constant at
+\begin_inset Formula 
+\[
+a_{t}=\frac{1}{1+\varphi}\log\frac{\epsilon}{\epsilon-1}
+\]
+
+\end_inset
+
+so that 
+\begin_inset Formula $y_{t}^{n}=0$
+\end_inset
+
+ for any 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Assume also that money demand takes the simple form
+\begin_inset Formula 
+\[
+m_{t}-p_{t}=y_{t}
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $m_{t}$
+\end_inset
+
+ follows a random walk with innovation 
+\begin_inset Formula $\epsilon_{t}^{m}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+m_{t}=m_{t-1}+\epsilon_{t}^{m}
+\]
+
+\end_inset
+
+ Derive the closed form expression for 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{t}^{*}$
+\end_inset
+
+, and 
+\begin_inset Formula $p_{t}$
+\end_inset
+
+ as a function of the exogenous shocks.
+\end_layout
+
+\begin_layout Problem
+(HINT: 
+\begin_inset Formula $p_{t}^{*}$
+\end_inset
+
+ takes the solution form 
+\begin_inset Formula $p_{t}^{*}=\lambda p_{t-1}^{*}+(1-\lambda)m_{t}$
+\end_inset
+
+, where 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is an unknown coefficient that you must find.)
+\end_layout
+
+\begin_layout Proof
+If we assume that 
+\begin_inset Formula $a_{t}$
+\end_inset
+
+ is constant at
+\begin_inset Formula 
+\[
+a_{t}=\frac{1}{1+\varphi}\log\frac{\epsilon}{\epsilon-1}
+\]
+
+\end_inset
+
+then equation (6) becomes
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{1+\varphi}\log\frac{\epsilon}{\epsilon-1}+\frac{\varphi}{1+\varphi}\log\frac{\epsilon}{\epsilon-1} & = & (\sigma+\varphi)y_{t}^{n}+\log\frac{\epsilon}{\epsilon-1}\\
+\left(\frac{1+\varphi}{1+\varphi}\right)\log\frac{\epsilon}{\epsilon-1} & = & (\sigma+\varphi)y_{t}^{n}+\log\frac{\epsilon}{\epsilon-1}\\
+(\sigma+\varphi)y_{t}^{n} & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\left(\sigma+\varphi\right)\neq0$
+\end_inset
+
+, then we must have 
+\begin_inset Formula $y_{t}^{n}=0$
+\end_inset
+
+.
+ As a result, we can rewrite equation 7 as
+\begin_inset Formula 
+\[
+p_{t}^{*}=\frac{1}{2}p_{t-1}^{*}+\frac{1}{2}E_{t}\left\{ p_{t+1}^{*}\right\} +\left(\sigma+\varphi\right)\left(y_{t}+E_{t}\left\{ y_{t+1}\right\} \right)
+\]
+
+\end_inset
+
+Also, assume that money demand takes the simple form
+\begin_inset Formula 
+\begin{equation}
+m_{t}-p_{t}=y_{t}
+\end{equation}
+
+\end_inset
+
+and that 
+\begin_inset Formula $m_{t}$
+\end_inset
+
+ follows a random walk with innovation 
+\begin_inset Formula $\epsilon_{t}^{m}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+m_{t}=m_{t-1}+\epsilon_{t}^{m}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $E_{t-1}\left\{ \epsilon_{t}^{m}\right\} =0$
+\end_inset
+
+.
+ Now, we derive the closed form expression for 
+\begin_inset Formula $p_{t}^{*}$
+\end_inset
+
+ as a function of the exogenous shocks.
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{t}^{*} & = & \frac{1}{2}p_{t-1}^{*}+\frac{1}{2}E_{t}\left\{ p_{t+1}^{*}\right\} +\left(\sigma+\varphi\right)\left(y_{t}+E_{t}\left\{ y_{t+1}\right\} \right)\\
+p_{t}^{*} & = & \frac{1}{2}p_{t-1}^{*}+\frac{1}{2}E_{t}\left\{ p_{t+1}^{*}\right\} +\left(\sigma+\varphi\right)\left(m_{t}-p_{t}+E_{t}\left\{ m_{t+1}-p_{t+1}\right\} \right)\\
+p_{t}^{*} & = & \frac{1}{2}p_{t-1}^{*}+\frac{1}{2}E_{t}\left\{ p_{t+1}^{*}\right\} \\
+ &  & +\left(\sigma+\varphi\right)\left(2m_{t}-p_{t}^{*}-\frac{1}{2}p_{t-1}^{*}-\frac{1}{2}E_{t}\left\{ p_{t+1}^{*}\right\} \right)\\
+(1+\sigma+\varphi)p_{t}^{*} & = & \frac{1}{2}(1-\sigma-\varphi)p_{t-1}^{*}+\frac{1}{2}(1-\sigma-\varphi)E_{t}\left\{ p_{t+1}^{*}\right\} +2\left(\sigma+\varphi\right)m_{t}\\
+p_{t}^{*}-\frac{1}{2}\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)E_{t}\left\{ p_{t+1}^{*}\right\}  & = & \frac{1}{2}\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)p_{t-1}^{*}+\frac{2\left(\sigma+\varphi\right)}{1+\sigma+\varphi}m_{t}
+\end{eqnarray*}
+
+\end_inset
+
+We propose that 
+\begin_inset Formula 
+\begin{equation}
+p_{t}^{*}=\lambda p_{t-1}^{*}+(1-\lambda)m_{t}
+\end{equation}
+
+\end_inset
+
+With this solution form, 
+\begin_inset Formula $E_{t}\left\{ p_{t+1}^{*}\right\} =E\left\{ \lambda p_{t}^{*}+(1-\lambda)(m_{t}+\epsilon_{t+1}^{m})\right\} =\lambda p_{t}^{*}+(1-\lambda)m_{t}$
+\end_inset
+
+ sicne 
+\begin_inset Formula $E_{t}\left\{ \epsilon_{t+1}^{m}\right\} =0$
+\end_inset
+
+.
+ So the equation above can be rewritten as
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{2}\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)p_{t-1}^{*}+\frac{2\left(\sigma+\varphi\right)}{1+\sigma+\varphi}m_{t} & = & \lambda p_{t-1}^{*}+(1-\lambda)m_{t}\\
+ &  & -\frac{1}{2}\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)\left[\lambda p_{t}^{*}+(1-\lambda)m_{t}\right]\\
+\frac{1}{2}\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)p_{t-1}^{*}+\frac{2\left(\sigma+\varphi\right)}{1+\sigma+\varphi}m_{t} & = & \lambda p_{t-1}^{*}+(1-\lambda)m_{t}-\frac{1}{2}\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)(1-\lambda)m_{t}\\
+ &  & -\frac{1}{2}\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)\lambda\left[\lambda p_{t-1}^{*}+(1-\lambda)m_{t}\right]\\
+\frac{1}{2}\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)p_{t-1}^{*}+\frac{2\left(\sigma+\varphi\right)}{1+\sigma+\varphi}m_{t} & = & \left[\lambda-\frac{1}{2}\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)\lambda^{2}\right]p_{t-1}^{*}\\
+ &  & +\left[1-\frac{1}{2}\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)-\lambda\right](1-\lambda)m_{t}
+\end{eqnarray*}
+
+\end_inset
+
+By equating coefficients on both sides, we can derive an expression for
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+\lambda-\frac{1}{2}\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)\lambda^{2} & = & \frac{1}{2}\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)\\
+\frac{1}{2}\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)\lambda^{2}-\lambda+\frac{1}{2}\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right) & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+We solve 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ by using the quadratic formula.
+\begin_inset Formula 
+\begin{eqnarray*}
+\lambda & = & \frac{1\pm\sqrt{(-1)^{2}-4\frac{1}{2}\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)\frac{1}{2}\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)}}{2\frac{1}{2}\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)}\\
+ & = & \frac{1\pm\sqrt{1-\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)^{2}}}{\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)}\\
+ & = & \frac{1\pm\sqrt{\frac{1+2\sigma+2\varphi+\sigma^{2}+2\sigma\varphi+\varphi^{2}-1+2\sigma+2\varphi-\sigma^{2}-2\sigma\varphi-\varphi^{2}}{(1+\sigma+\varphi)^{2}}}}{\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)}\\
+ & = & \frac{1\pm\sqrt{\frac{4\sigma+4\varphi}{(1+\sigma+\varphi)^{2}}}}{\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)}\\
+ & = & \frac{1\pm2\frac{\sqrt{(\sigma+\varphi)}}{(1+\sigma+\varphi)}}{\left(\frac{1-\sigma-\varphi}{1+\sigma+\varphi}\right)}\\
+ & = & \frac{(1+\sigma+\varphi)\pm2\sqrt{(\sigma+\varphi)}}{(1-\sigma-\varphi)}\\
+ & = & \frac{1\pm2\sqrt{(\sigma+\varphi)}+\left(\sqrt{(\sigma+\varphi}\right)^{2}}{1-\left(\sqrt{(\sigma+\varphi)}\right)^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $0<\lambda<1$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray}
+\lambda & = & \frac{\left(1-\sqrt{(\sigma+\varphi})\right)^{2}}{\left(1-\sqrt{(\sigma+\varphi)}\right)\left(1+\sqrt{(\sigma+\varphi}\right)}\nonumber \\
+\lambda & = & \frac{1-\sqrt{\sigma+\varphi}}{1+\sqrt{\sigma+\varphi}}
+\end{eqnarray}
+
+\end_inset
+
+Next, we derive the closed form expression for 
+\begin_inset Formula $p_{t}$
+\end_inset
+
+ as a function of the exogenous shocks.
+\begin_inset Formula 
+\begin{eqnarray}
+p_{t} & = & \frac{1}{2}\left[p_{t}^{*}+p_{t-1}^{*}\right]\nonumber \\
+ & = & \frac{1}{2}\left[\left(\lambda p_{t-1}^{*}+(1-\lambda)m_{t}\right)+p_{t-1}^{*}\right]\nonumber \\
+p_{t} & = & \frac{1}{2}(1+\lambda)p_{t-1}^{*}+\frac{1}{2}(1-\lambda)m_{t}
+\end{eqnarray}
+
+\end_inset
+
+Finally, we derive the closed form expression for 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ as a function of the exogenous shocks.
+\begin_inset Formula 
+\begin{eqnarray}
+y_{t} & = & m_{t}-p_{t}\nonumber \\
+ & = & m_{t}-\left[\frac{1}{2}(1+\lambda)p_{t-1}^{*}+\frac{1}{2}(1-\lambda)m_{t}\right]\nonumber \\
+ & = & m_{t}-\frac{1}{2}(1+\lambda)p_{t-1}^{*}-\frac{1}{2}(1-\lambda)m_{t}\nonumber \\
+ & = & \left[1-\frac{1}{2}(1-\lambda)\right]m_{t}-\frac{1}{2}(1+\lambda)p_{t-1}^{*}\nonumber \\
+ & = & \frac{1}{2}\left(1+\lambda\right)m_{t}-\frac{1}{2}(1+\lambda)p_{t-1}^{*}\nonumber \\
+y_{t} & = & \frac{1}{2}(1+\lambda)\left[m_{t}-p_{t-1}^{*}\right]
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Does a monetary disturbance 
+\begin_inset Formula $\epsilon_{t}^{m}$
+\end_inset
+
+ have real effects? (Is the impulse response function 
+\begin_inset Formula $\nicefrac{\partial y_{t}}{\partial\epsilon_{t}^{m}}$
+\end_inset
+
+ zero or not?)
+\end_layout
+
+\begin_layout Proof
+To see if a monetary distrubance 
+\begin_inset Formula $\epsilon_{t}^{m}$
+\end_inset
+
+ have real effects, we analyze the impulse response function.
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial y_{t}}{\partial\epsilon_{t}^{m}} & = & \frac{\partial}{\partial\epsilon_{t}^{m}}\left\{ \frac{1}{2}(1+\lambda)\left[\lambda m_{t-1}+\epsilon_{t}^{m}-\lambda p_{t-2}^{*}\right]\right\} \\
+ & = & \frac{1}{2}(1+\lambda)\neq0
+\end{eqnarray*}
+
+\end_inset
+
+Since the impulse response function is nonzero, then a money disturbance
+ does have real effects.
+\end_layout
+
+\begin_layout Problem
+Give some intuition to your answer in Problem 9.
+\end_layout
+
+\begin_layout Proof
+In problem 9, it was shown that 
+\begin_inset Formula $\nicefrac{\partial y_{t}}{\partial\epsilon_{t}^{m}}>0$
+\end_inset
+
+.
+ This implies that for a positive monetary disturbance, output increase.
+ From the money demand equation, 
+\begin_inset Formula $m_{t}=y_{t}+p_{t}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $m_{t}$
+\end_inset
+
+ has a sudden positive shock in period 
+\begin_inset Formula $t$
+\end_inset
+
+, then 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ must increase because 
+\begin_inset Formula $p_{t}$
+\end_inset
+
+ cannot be fully adjusted in the same period because only half the firms
+ are allowed to change their prices.
+ So, for any change in 
+\begin_inset Formula $m_{t}$
+\end_inset
+
+, the change in 
+\begin_inset Formula $p_{t}$
+\end_inset
+
+ will be lower than that of 
+\begin_inset Formula $m_{t}$
+\end_inset
+
+.
+ Also, the effect of 
+\begin_inset Formula $\epsilon_{t}^{m}$
+\end_inset
+
+ on 
+\begin_inset Formula $p_{t}^{*}$
+\end_inset
+
+ is twice more than that on 
+\begin_inset Formula $p_{t}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ increases in response to a positive monetary disturbance.
+\end_layout
+
+\begin_layout Problem
+Do the real effects die out by the time all prices have been adjusted at
+ least once following the shock? (Is the impulse response function 
+\begin_inset Formula $\nicefrac{\partial y_{t+k}}{\partial\epsilon_{t}^{m}}$
+\end_inset
+
+ for 
+\begin_inset Formula $k\geq1$
+\end_inset
+
+ zero or not?)
+\end_layout
+
+\begin_layout Proof
+To see if the real effects die out by the time all prices have been adjusted
+ at least once following the shock, we analyze the impulse response function.
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial y_{t+k}}{\partial\epsilon_{t}^{m}} & = & \frac{\partial}{\partial\epsilon_{t}^{m}}\left\{ \frac{1}{2}(1+\lambda)\left[m_{t+k}+p_{t+k-1}^{*}\right]\right\} \\
+ & = & \frac{\partial}{\partial\epsilon_{t}^{m}}\left\{ \frac{1}{2}(1+\lambda)\left[\lambda m_{t+k-1}+\epsilon_{t+k}^{m}-\lambda p_{t+k-2}^{*}\right]\right\} \\
+ & = & \frac{\partial}{\partial\epsilon_{t}^{m}}\left\{ \frac{1}{2}(1+\lambda)\left[\lambda^{2}m_{t+k-2}+\lambda\epsilon_{t+k-1}^{m}+\epsilon_{t+k}^{m}-\lambda^{2}p_{t+k-3}^{*}\right]\right\} \\
+ & \vdots\\
+\frac{\partial y_{t+k}}{\partial\epsilon_{t}^{m}} & = & \frac{\partial}{\partial\epsilon_{t}^{m}}\left\{ \frac{1}{2}(1+\lambda)\left[\lambda^{k+1}m_{t-1}-\lambda^{k+1}p_{t-2}^{*}+{\displaystyle \sum_{j=0}^{k}}\lambda^{j}\epsilon_{t+k-j}^{m}\right]\right\} \\
+ & = & \frac{1}{2}(1+\lambda)\lambda^{k}
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\lambda\neq0$
+\end_inset
+
+, then the impulse response function is nonzero.
+ As a result, the real effects do not die out by the time all prices have
+ been adjusted at least once following the shock.
+ 
+\end_layout
+
+\begin_layout Problem
+Give some intuition to your answer in Problem 11.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $\nicefrac{\partial y_{t+k}}{\partial\epsilon_{t}^{m}}\neq0$
+\end_inset
+
+, then real effects do not completely die out by the time all prices have
+ been adjusted at least once following the shock.
+ From the closed form, we have 
+\begin_inset Formula $p_{t}^{*}=\lambda p_{t-1}^{*}+(1-\lambda)m_{t}$
+\end_inset
+
+, which says that at each time period 
+\begin_inset Formula $t$
+\end_inset
+
+, the optimal price level gives 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ weight to the last period's optimal price level.
+ In this manner, a shock in period 
+\begin_inset Formula $t$
+\end_inset
+
+ is carried into future periods.
+ So, a shock that occurs in period 
+\begin_inset Formula $t$
+\end_inset
+
+ still has some lingering effects in period 
+\begin_inset Formula $t+k$
+\end_inset
+
+.
+ However, the effects of 
+\begin_inset Formula $\epsilon_{t}^{m}$
+\end_inset
+
+ are slowly dampened with time because 
+\begin_inset Formula $\lambda\in(0,1)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\nicefrac{\partial y_{t+k}}{\partial\epsilon_{m}^{t}}\rightarrow0$
+\end_inset
+
+ as 
+\begin_inset Formula $k\rightarrow\infty$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
