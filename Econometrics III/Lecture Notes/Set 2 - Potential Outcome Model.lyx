@@ -1,0 +1,1466 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Potential Outcomes Model (POM)
+\end_layout
+
+\begin_layout Section*
+Relationship Between Counterfactual States and Causality
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset space \quad{}
+\end_inset
+
+Empirical Strategies in Labor Economics, Angrist and Krueger (1999):
+\series default
+ The most challenging empirical questions in economics involve 
+\begin_inset Quotes eld
+\end_inset
+
+what if
+\begin_inset Quotes erd
+\end_inset
+
+ statements about counterfactual outcomes.
+ Interest in these questions is motivated by immediate policy concerns,
+ theoretical considerations, and problems facing individual decision makers.
+ The causal relationships at the heart of many economic quesitons involve
+ comparisons of counterfactual states of the world.
+ Someone would like to know what outcomes would have been observed if a
+ variable were manipulated or changed in some way.
+ Differences in the observed outcomes for a state that occured and the unobserve
+d potential outcomes for a possible state that did not occur, which is known
+ as the 
+\begin_inset Quotes eld
+\end_inset
+
+counterfactual,
+\begin_inset Quotes erd
+\end_inset
+
+ define the the causual effects of interest.
+\end_layout
+
+\begin_layout Section*
+Fundamental Problem of Causal Inference
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider a binary treatment for observation 
+\begin_inset Formula $i$
+\end_inset
+
+, denoted 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+.
+ The potential outcomes for each 
+\begin_inset Formula $i$
+\end_inset
+
+ are:
+\begin_inset Formula 
+\[
+y_{i}\equiv\begin{cases}
+y_{0i} & \mbox{if}\ T_{i}=0\\
+y_{1i} & \mbox{if}\ T_{i}=1
+\end{cases}
+\]
+
+\end_inset
+
+We just assume that the treatment of 
+\begin_inset Formula $i$
+\end_inset
+
+ only affects outcomes of 
+\begin_inset Formula $i$
+\end_inset
+
+; this is known as the stable unit treatment value assumption (SUTVA).
+ We want to observe 
+\begin_inset Formula $y_{0i}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ The treatment effect for 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+y_{1i}-y_{0i}
+\]
+
+\end_inset
+
+With an i.i.d.
+ sample from the population, this is a random variable with a specific distribut
+ion.
+ We might be interested in several features of this distribution.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The 
+\series bold
+\emph on
+average treatment effect (ATE)
+\series default
+\emph default
+ is the expected treatment effect for a randomly drawn person from the distribut
+ion, i.e.,
+\begin_inset Formula 
+\[
+ATE=E[y_{1i}-y_{0i}]
+\]
+
+\end_inset
+
+The ATE is useful for treatment with broad applicability (e.g., nutrition,
+ taxes, etc.), but it is not always relevant.
+ This is because a large segment of the population may not be eligible for
+ treatment.
+ For example, the average effect of job training is not very interesting
+ when the population includes millionaires.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What is the 
+\series bold
+\emph on
+average treatment effect on the treated (ATET)
+\series default
+\emph default
+? For those who received treatment, how did it affect their outcomes?
+\begin_inset Formula 
+\[
+ATET=E[y_{1i}-y_{0i}|T_{i}=1]
+\]
+
+\end_inset
+
+For what fraction of the population is the treatment effect greater than
+ 0? Remember, individual treatment effects are not observable.
+ Only one outcome out of 
+\begin_inset Formula $y_{0i}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+ is actually observed.
+ We call the unobserved potential outcome the 
+\begin_inset Quotes eld
+\end_inset
+
+counterfactual.
+\begin_inset Quotes erd
+\end_inset
+
+ We can see that
+\begin_inset Formula 
+\[
+y_{i}=y_{1i}T_{i}+y_{0i}(1-T_{i})
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\[
+y_{i}=y_{0i}+(y_{1i}-y_{0i})T_{i}
+\]
+
+\end_inset
+
+Our hope is that averages (and other statistics) can inform us about the
+ distribution of treatment effects despite these issues.
+\end_layout
+
+\begin_layout Example*
+Suppose we wish to examine the effect of a college education on the present-day
+ value of lifetime earnings.
+ Let 
+\begin_inset Formula $T\equiv\mbox{college education}$
+\end_inset
+
+ and 
+\begin_inset Formula $y\equiv\mbox{PDV of lifetime earnings}$
+\end_inset
+
+.
+ Assume that individuals know their potential outcomes and the cost of 
+\begin_inset Formula $T$
+\end_inset
+
+ is $260,000.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y_{0i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y_{1i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+College
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Treatment Effect
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Observed Outcome
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Low Ability
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.7 (Observed)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.9 (Not observed)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+High Ability
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.8 (Not observed)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.6 (Observed)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+The observed difference across 
+\begin_inset Formula $T=0,1$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+3.6-1.7=1.9
+\]
+
+\end_inset
+
+ We can also calculate the average treatment effect and the average treatment
+ effect on the treated:
+\begin_inset Formula 
+\[
+ATE=\nicefrac{(.2+.8)}{2}=.5
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+ATET=.8
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Selection Bias in POM
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let us consider the following 
+\begin_inset Quotes eld
+\end_inset
+
+switching model,
+\begin_inset Quotes erd
+\end_inset
+
+ in which different groups have different expectation functions.
+\begin_inset Formula 
+\[
+y_{i}=\begin{cases}
+E[y_{0i}]+v_{0i}=\mu_{0}+v_{0i} & \mbox{if}\ T_{i}=0\\
+E[y_{1i}]+v_{1i}=\mu_{1}+v_{1i} & \mbox{if}\ T_{i}=1
+\end{cases}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $E[v_{0i}]=0$
+\end_inset
+
+ and 
+\begin_inset Formula $E[v_{1i}]=0$
+\end_inset
+
+, i.e., some benefit more than average and others less.
+ However, it is important to note that 
+\begin_inset Formula $E[v_{0i}|T_{i}]$
+\end_inset
+
+ and 
+\begin_inset Formula $E[v_{1i}|T_{i}]$
+\end_inset
+
+ may not equal zero.
+ So, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{i} & = & T_{i}(\mu_{1}+v_{i1})+(1-T_{i})(\mu_{0}+v_{0i})\\
+ & = & \mu_{0}+T_{i}(\mu_{1}-\mu_{0}+v_{1i}-v_{0i})+v_{0i}
+\end{eqnarray*}
+
+\end_inset
+
+where the second term is the effect of treatment on observation 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ We can clearly see that
+\begin_inset Formula 
+\begin{eqnarray*}
+ATE & = & E[y_{1i}-y_{0i}]\\
+ & = & \mu_{1}-\mu_{0}
+\end{eqnarray*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{eqnarray*}
+ATET & = & E[y_{1i}-y_{0i}|T_{i}=1]\\
+ & = & \mu_{1}-\mu_{0}+E[v_{1i}-v_{0i}|T_{i}]
+\end{eqnarray*}
+
+\end_inset
+
+Think about 
+\begin_inset Formula $v_{1i}-v_{0i}$
+\end_inset
+
+ as individual specific gains from treatment.
+ What do we do when comparing expected outcomes of treated and controls?
+\begin_inset Formula 
+\begin{eqnarray*}
+E[y_{i}|T_{i}=1]-E[y_{i}|T_{i}=0] & = & E[\mu_{0}+\mu_{1}-\mu_{0}+v_{1i}-v_{0i}+v_{0i}|T_{i}=1]-E[\mu_{0}+v_{i0}|T_{i}=0]\\
+ & = & E[\mu_{1}+v_{1i}|T_{i}=1]-E[\mu_{0}+v_{0i}|T_{i}=0]\\
+ & = & \mu_{1}-\mu_{0}+E[v_{1i}|T_{i}=1]-E[v_{0i}|T_{i}=0]\\
+ & = & ATE+\mbox{selection bias}
+\end{eqnarray*}
+
+\end_inset
+
+The same thing arises with conditional expectations:
+\begin_inset Formula 
+\[
+E[y_{1i}|x]=\mu_{1}(x)
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+E[y_{0i}|x]=\mu_{0}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Under What Conditions Can We Identify Meaningful Parameters?
+\end_layout
+
+\begin_layout Subsection*
+Pure Random Assignment
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+With pure random assignment, we have
+\begin_inset Formula 
+\[
+y_{0i},y_{1i}\perp T_{i}
+\]
+
+\end_inset
+
+which implies that the distribution of potential outcomes is independent
+ of treatment status.
+ Let 
+\begin_inset Formula $F(\cdot)$
+\end_inset
+
+ denote the CDF, then
+\begin_inset Formula 
+\[
+F(y_{0i}|T_{i}=0)=F(y_{0i}|T_{i}=1)=F(y_{0i})
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+F(y_{1i}|T_{i}=0)=F(y_{1i}|T_{i}=1)=F(y_{1i})
+\]
+
+\end_inset
+
+So, knowing the treatment status does not provide any information about
+ potential outcomes.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In addition, there are implications for all moments of the distribution,
+ i.e.,
+\begin_inset Formula 
+\[
+E[y_{0i}|T_{i}=0]=E[y_{0i}|T_{i}=1]=E[y_{0i}]
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+E[y_{1i}|T_{i}=0]=E[y_{1i}|T_{i}=1]=E[y_{1i}]
+\]
+
+\end_inset
+
+This allows for the consideration of counterfactuals in the aggregate.
+ Ideally, we would like to consider
+\begin_inset Formula 
+\[
+\widehat{ATE}=\frac{1}{N}\sum(y_{1i}-y_{0i})
+\]
+
+\end_inset
+
+Instead, we can estimate
+\begin_inset Formula 
+\[
+\frac{1}{N_{T=1}}\sum y_{1i}-\frac{1}{N_{T=0}}\sum y_{0i}
+\]
+
+\end_inset
+
+which converges in probability to
+\begin_inset Formula 
+\begin{eqnarray*}
+E[y_{1i}|T_{i}=1]-E[y_{0i}|T_{i}=0] & = & E[y_{1i}|T_{i}=1]-E[y_{0i}|T_{i}=1]\ \mbox{\ (by the assumption of random assignment)}\\
+ & = & E[y_{1i}-y_{0i}|T_{i}=1]\ \ \mbox{(ATET)}\\
+ & = & E[y_{1i}]-E[y_{0i}]\\
+ & = & E[y_{1i}-y_{0i}]\ \ \mbox{(ATE)}
+\end{eqnarray*}
+
+\end_inset
+
+Therefore, with pure random assignment, the difference in means identify
+ the average treatment effect (ATE) and the average treatment effect on
+ the treated (ATET).
+\end_layout
+
+\begin_layout Subsection*
+Random Assignment Conditional on Observables
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The other names for this condition are: ignorability of treatment, unconfoundedn
+ess, and selection on observables.
+ Also, how often this condition is likely to hold depends on the context.
+ Now, with random assignment conditional on observables, we have
+\begin_inset Formula 
+\[
+(y_{1i},y_{0i}\perp T_{i})|x_{i}
+\]
+
+\end_inset
+
+So, the distribution of potential outcomes will be independent of the treatment
+ conditional on 
+\begin_inset Formula $x$
+\end_inset
+
+, which means that
+\begin_inset Formula 
+\[
+F(y_{0i}|x_{i},T_{i}=0)=F(y_{0i}|x_{i},T_{i}=1)=F(y_{0i}|x_{i})
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+F(y_{1i}|x_{i},T_{i}=0)=F(y_{1i}|x_{i},T_{i}=1)=F(y_{1i}|x_{i})
+\]
+
+\end_inset
+
+By implication, the same result holds true for expectations, i.e,
+\begin_inset Formula 
+\begin{eqnarray*}
+E[y_{1i}|x_{i},T_{i}=1]-E[y_{0i}|x_{i},T_{i}=0] & = & E[y_{1i}|x]-E[y_{0i}|x]\\
+ & = & E[y_{1i}-y_{0i}|x]\\
+ & = & ATE(x)
+\end{eqnarray*}
+
+\end_inset
+
+Taking expecation over 
+\begin_inset Formula $x$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\begin{eqnarray*}
+E[ATE(x)] & = & {\displaystyle \sum_{x}}\ \delta_{x}\cdot P(x_{i}=x)\\
+ & = & ATE
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\delta_{x}=ATE(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If we assume overlap, then we can estimate these terms.
+\end_layout
+
+\begin_layout Assumption*
+
+\series bold
+(The Overlap Assumption):
+\begin_inset Formula 
+\[
+\forall\ x:0<P(T_{i}=1|x)<1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Incomplete overlap implies that 
+\begin_inset Formula $\delta_{x}$
+\end_inset
+
+ is undefined.
+ The given assumption suggests an obvious approach to estimation:
+\end_layout
+
+\begin_layout Enumerate
+For all 
+\begin_inset Formula $x$
+\end_inset
+
+, compare average outcomes across treatment and controls, i.e., 
+\begin_inset Formula $\bar{y}_{T=1,x}-\bar{y}_{T=0,x}$
+\end_inset
+
+, to obtain 
+\begin_inset Formula $\hat{\delta}_{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Weight differences by a fraction of the population for each 
+\begin_inset Formula $x$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\widehat{P(x_{i}=x)}$
+\end_inset
+
+ or 
+\begin_inset Formula $\frac{N_{x_{i}=x}}{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+It is important to note that this exact matching approach is non-parametric
+ since we have not imposed any structure on the functional form of the condition
+al expectation function.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Step 1 of the procedure above is equivalent to estimating a 
+\begin_inset Quotes eld
+\end_inset
+
+fully saturated regression model,
+\begin_inset Quotes erd
+\end_inset
+
+ one that allows expectations to differ across all 
+\begin_inset Formula $T$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+ combinations.
+\begin_inset Formula 
+\begin{eqnarray*}
+E[y_{i}|x_{i},T_{i}] & = & \beta_{1}x_{1i}+\gamma_{1}x_{1i}T_{i}+\beta_{2}x_{2i}+\gamma_{2}x_{2i}T_{i}+\cdots\\
+ & = & {\displaystyle \sum_{x}}\beta_{x}1(x_{i}=x)+{\displaystyle \sum_{x}\gamma_{x}1(x_{i}=x)T_{i}}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{1},\ldots,x_{K}$
+\end_inset
+
+ are indicators reflecting all possible combinations of 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ However, unlike a model that is just saturated-in-
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ , step 2 has us weight differences by a fraction of the population for
+ each 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Note*
+\begin_inset Formula $x$
+\end_inset
+
+ can represent a group of observations.
+\end_layout
+
+\begin_layout Example*
+Suppose 
+\begin_inset Formula $x$
+\end_inset
+
+ represents years of schooling, then
+\begin_inset Formula 
+\begin{gather*}
+x_{0}=1(\mbox{Years}=0)\\
+x_{1}=1(\mbox{Years}=1)\\
+x_{2}=1(\mbox{Years}=2)\\
+\vdots
+\end{gather*}
+
+\end_inset
+
+Now, suppose 
+\begin_inset Formula $x$
+\end_inset
+
+ signifies gender and whether person 
+\begin_inset Formula $i$
+\end_inset
+
+ was a high school graduate.
+\begin_inset Formula 
+\begin{gather*}
+x_{1}=1(\mbox{Male}=1)1(\mbox{HSgrad}=1)\\
+x_{2}=1(\mbox{Male}=1)1(\mbox{HSgrad}=0)\\
+x_{3}=1(\mbox{Male}=0)1(\mbox{HSgrad}=1)\\
+x_{4}=1(\mbox{Male}=0)1(\mbox{HSgrad}=0)
+\end{gather*}
+
+\end_inset
+
+Finally, suppose 
+\begin_inset Formula $x$
+\end_inset
+
+ is only associated with gender.
+\begin_inset Formula 
+\begin{eqnarray*}
+E[y_{i1}|x,T_{i}] & = & \gamma_{1}1(\mbox{Male}=1)+\gamma_{2}(\mbox{Male}=1)T_{i}+\gamma_{3}(\mbox{Male}=0)+\gamma_{4}(\mbox{Male}=0)T_{i}\\
+ & = & \theta_{1}+\theta_{2}\mbox{Male}_{i}+\theta_{3}T_{i}+\theta_{4}\mbox{Male}_{i}T_{i}
+\end{eqnarray*}
+
+\end_inset
+
+Therefore, different parameterizaitons can estimate the same fully saturated
+ model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Clearly, this exact matching approach 
+\begin_inset Quotes eld
+\end_inset
+
+controls for 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+ What about an OLS procedure that only controls fully for 
+\begin_inset Formula $x$
+\end_inset
+
+? This type of model is said to be saturated-in-
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ since it includes a parameter for every value of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, i.e.,
+\begin_inset Formula 
+\[
+y_{i}={\displaystyle \sum_{x}}\beta_{x}1(x_{i}=x)+\delta_{R}T_{i}
+\]
+
+\end_inset
+
+This model is not fully saturated, however, because there is a single additive
+ effect for 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+ with no 
+\begin_inset Formula $T_{i}x_{i}$
+\end_inset
+
+ interactions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+While the OLS regression and exact matching estimates are inherently different,
+ they are still somewhat similar because regression, too, can be seen as
+ a sort of matching estimator.
+ The regression estimand differs from the matching estimands only in the
+ weights used to combine the covariate-specific effects, 
+\begin_inset Formula $\delta_{x}$
+\end_inset
+
+, into a single average effect.
+ In particular, while matching uses the distribution of covariates among
+ the treated to weight covariate-specific estimates into an estimate of
+ the effect of treatment on the treated (or the average treatment effect),
+ regression produces a variance-weighted average of these effects.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Important to note, the treatment-on-the-treated estimand puts the most weight
+ on covariate cells containing those who are most likely to be treated.
+ In contrast, OLS regression is efficient for the homoskedastic, constant
+ effects linear model.
+ This implies that regression puts the most weight on covarite cells where
+ the conditional variance of treatment status is large.
+ As a rule, treatment variance is maximized when 
+\begin_inset Formula $P(T_{i}=1|x_{i}=x)=0.5$
+\end_inset
+
+, in other words, for cells where there are equal numbers of treated and
+ control observations, not the 
+\begin_inset Formula $x$
+\end_inset
+
+ where most of the population lies.
+ Consequently, OLS may not give us what we want if heterogeneity is present
+ in treatment effects and probability of treatment.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What if 
+\begin_inset Formula $x$
+\end_inset
+
+ includes many variables, including ones that are continuous? Then, we have
+ to make assumptions about the conditional expectation function.
+ The linear regression model is one choice, i.e.,
+\begin_inset Formula 
+\[
+E[y_{i}|x_{i},T_{i}]=x_{i}^{\prime}\beta+\psi T_{i}
+\]
+
+\end_inset
+
+Keep in mind that this is a very restrictive model.
+ We have a linear conditional expectation if observation 
+\begin_inset Formula $i$
+\end_inset
+
+ does not receive treatment
+\begin_inset Formula 
+\[
+\mu_{0}(X_{i})=x_{i}^{\prime}\beta
+\]
+
+\end_inset
+
+and a linear conditional expectation if observation 
+\begin_inset Formula $i$
+\end_inset
+
+ does receive treatment
+\begin_inset Formula 
+\[
+\mu_{1}(X_{i})=x_{i}^{\prime}\beta+\psi
+\]
+
+\end_inset
+
+This represents a homogeneous and additive treatment effect.
+ Though, instead of a linear regression model, the true functional form
+ may involve:
+\end_layout
+
+\begin_layout Itemize
+non-linearities in 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+interactions between 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+heterogeneous treatment effects
+\end_layout
+
+\begin_layout Itemize
+selection on observables
+\end_layout
+
+\begin_layout Standard
+Non-parametric estimation can be straight forward: ignore 
+\begin_inset Formula $x$
+\end_inset
+
+ without treated observation.
+ It is tricky if 
+\begin_inset Formula $x$
+\end_inset
+
+ is continuous or has many variables/values (even more so because we don't
+ know what range of 
+\begin_inset Formula $x$
+\end_inset
+
+ should be considered).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What about just obtaining an average treatment effect on the treated (ATET)?
+ Well, we can relax to the complete overlap assumption to:
+\begin_inset Formula 
+\[
+\forall\ x:P(T=1|x)<1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Takeaways
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Though weaker than RA, the ignorability assumption is itself quite strong
+ in most circumstances.
+ Even if the assumption holds conditional on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, it may not hold conditional on 
+\begin_inset Formula $x_{i}^{\prime}\beta$
+\end_inset
+
+.
+ That being said, the assumption seems to have a better chance of holding
+ when we have access to a richer set of observables, but 
+\begin_inset Formula $x$
+\end_inset
+
+ can still be too rich.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Yet, everyone acknowledges the challenge of identifying meaningful parameters.
+ There are two approaches we can employ, which are not mutually exclusive:
+\end_layout
+
+\begin_layout Itemize
+Look for data where 
+\begin_inset Formula $x$
+\end_inset
+
+ is very rich
+\end_layout
+
+\begin_layout Itemize
+Look for, or create, circumstances and associated data where treatment is
+ plausibly random, or random conditional on 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Review
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let us recall what we need to get the average treatment effect:
+\end_layout
+
+\begin_layout Itemize
+Observe all variation related to treatment, 
+\begin_inset Formula $T$
+\end_inset
+
+, and potential outcomes.
+\end_layout
+
+\begin_layout Itemize
+For all 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $P(T=1|x)$
+\end_inset
+
+ is not equal to 0 or 1.
+\end_layout
+
+\begin_layout Itemize
+We must know about the process of how observable variables influence outcomes,
+ which is relevant for obtaining the correct function.
+\end_layout
+
+\begin_layout Itemize
+We must know how treatment influences outcomes, which is also relevant for
+ obtaining the correct functional form.
+\end_layout
+
+\begin_layout Section*
+Examples
+\end_layout
+
+\begin_layout Subsection*
+DiNardo and Pischke (1997)
+\end_layout
+
+\begin_layout Itemize
+This paper was a response to Krueger (1993), who used rich observational
+ data to argue that computers increased wages.
+\end_layout
+
+\begin_layout Itemize
+There was a concern with the original study.
+ Computer users are fundamentally different from non-computer users (i.e.,
+ white collar vs.
+ blue collar) even after controlling for observable characteristics
+\end_layout
+
+\begin_layout Itemize
+The falsification tests asked: 
+\begin_inset Quotes eld
+\end_inset
+
+does the identication strategy yield correct estimates when the truth is
+ known?
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Are there 
+\begin_inset Quotes eld
+\end_inset
+
+effects
+\begin_inset Quotes erd
+\end_inset
+
+ of variables that should not have effects?
+\end_layout
+
+\begin_layout Itemize
+Are there 
+\begin_inset Quotes eld
+\end_inset
+
+effects
+\begin_inset Quotes erd
+\end_inset
+
+ on outcomes, or characteristics, that should not be affected?
+\end_layout
+
+\begin_layout Itemize
+Are there 
+\begin_inset Quotes eld
+\end_inset
+
+effects
+\begin_inset Quotes erd
+\end_inset
+
+ on groups that are not treated?
+\end_layout
+
+\begin_layout Itemize
+Are there 
+\begin_inset Quotes eld
+\end_inset
+
+effects
+\begin_inset Quotes erd
+\end_inset
+
+ on time periods that are not treated?
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The authors used data from Germany because it was comparable to data from
+ the US, and it offered information on other tools that the US data did
+ not.
+\end_layout
+
+\begin_layout Itemize
+The identification strategy was not convincing.
+ Even with a rich set of observable characteristics, it was still difficult
+ to obtain unbiased estimates with observational data.
+\end_layout
+
+\begin_layout Subsection*
+Freedman (1991)
+\end_layout
+
+\begin_layout Itemize
+Snow's research on Cholera as a shining example of research using observational
+ data.
+\end_layout
+
+\begin_layout Itemize
+Snow's research is question driven.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Is Cholera transmitted from person to person, and in particular, through
+ contact with human waste?
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

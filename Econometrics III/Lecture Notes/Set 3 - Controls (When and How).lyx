@@ -1,0 +1,682 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Set 3 - Controls: When and How
+\end_layout
+
+\begin_layout Section*
+Controls
+\end_layout
+
+\begin_layout Subsection*
+Selection
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There is a case to be made for control variables
+\end_layout
+
+\begin_layout Itemize
+Selection on observables: regressions that control for these variables have
+ the potential to yield unbiased estiamtes.
+\end_layout
+
+\begin_layout Itemize
+Selection on unobservables that are correlated with observables: Bias is
+ reduced by controlling for these variables.
+\end_layout
+
+\begin_layout Standard
+But, what are the approaches to controlling? First off, we need to make
+ parametric assumptions.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Approaches to Controlling
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Exact matching is the ideal approach because it produces an unbiased estimate
+ of the ATE.
+ However, exact matching is not possible with a continuous, or high-dimension
+ vector, 
+\begin_inset Formula $x$
+\end_inset
+
+ of characteristics.
+ Since we are unable to perform exact matching, there are accomodations,
+ or technical 
+\begin_inset Quotes eld
+\end_inset
+
+fixes,
+\begin_inset Quotes erd
+\end_inset
+
+ that we can consider, such as: inexact matching; nearest neighbor matching;
+ propensity score matching.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Regrettably, these 
+\begin_inset Quotes eld
+\end_inset
+
+fixes
+\begin_inset Quotes erd
+\end_inset
+
+ are not very popular.
+ There is a case to be made against complex approaches to controlling for
+ selection bias when the selection process is very complicated.
+ If we think the selection process involves many characteristics 
+\begin_inset Formula $x$
+\end_inset
+
+, then how likely is it that we observe all important variables in our data?
+ It is not very likely.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is easier to deal with circumstances in which the selection process is
+ more simple.
+ So, it is more convincing to focus on special circumstances where most
+ 
+\begin_inset Quotes eld
+\end_inset
+
+usual sources of bias
+\begin_inset Quotes erd
+\end_inset
+
+ are not present.
+ Though, we may still have concerns about some sources of bias.
+ We want to make sure that our estimates do not change when we control for
+ these sources of bias.
+\end_layout
+
+\begin_layout Example*
+Suppose selection into treatment depends on 
+\begin_inset Formula $x_{1},x_{2},x_{3},x_{4},x_{5}$
+\end_inset
+
+, i.e., the probability of treatment depends on these five variables.
+ If we were to use a random sample of data, then we would have to control
+ for these five variables, which could be very tricky.
+ Moreover, 
+\begin_inset Formula $x_{6}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{7}$
+\end_inset
+
+ may also be relevant to the probability of treatment, but we do not observe
+ them.
+\end_layout
+
+\begin_layout Section*
+Overcontrolling
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Overcontrolling occurs by including variables in 
+\begin_inset Formula $x$
+\end_inset
+
+ that are affected by treatment.
+ To illustrate, let us consider the following example where 
+\begin_inset Formula $y=\mbox{earnings}$
+\end_inset
+
+, 
+\begin_inset Formula $T=\mbox{job training}$
+\end_inset
+
+, 
+\begin_inset Formula $x=\mbox{employed}$
+\end_inset
+
+.
+ Assuming ignorability implies that we could hold employment status fixed
+ when considering the effect of treatment.
+ Intuitively, this is nonsensical.
+ Instead, we estimate the effect (with pure random assignment) conditional
+ on employment.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose we have a regression controlling for 
+\begin_inset Formula $x$
+\end_inset
+
+, or we just restrict the sample to 
+\begin_inset Formula $x=1$
+\end_inset
+
+ or 
+\begin_inset Formula $x=0$
+\end_inset
+
+.
+ Right now, we are focusing on 
+\begin_inset Formula $x=1$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+E[y_{i}|T_{i}=1,x_{i}=1]-E[y_{i}|T_{i}=0,x_{i}=1] & = & E[y_{1i}|T_{i}=1,x_{1i}=1]-E[y_{0i}|T_{i}=0,x_{0i}=1]\\
+ & = & E[y_{1i}|x_{1i}=1]-E[y_{0i}|x_{0i}=1]\ \ \mbox{(by RA)}\\
+ & = & E[y_{1i}|x_{1i}=1]-E[y_{0i}|x_{0i}=1]+\left(E[y_{0i}|x_{1i}=1]-E[y_{0i}|x_{1i}=1]\right)\\
+ & = & E[y_{1i}-y_{0i}|x_{1i}=1]+E[y_{0i}|x_{1i}=1]-E[y_{0i}|x_{0i}=1]
+\end{eqnarray*}
+
+\end_inset
+
+This gives us the causal effect of training on those who will find employment
+ after training, plus some junk.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The junk on the right represents a selection effect: the difference in expected
+ non-treated earnings between those who would be employed with training
+ and those who would be employed without training.
+ So, even if there is no causal effect of training, the estimate will not
+ tell us this.
+\end_layout
+
+\begin_layout Remark*
+There is no causal interpretation to estimates that condition on intermediate
+ factors that link treatment to outcomes.
+\end_layout
+
+\begin_layout Subsection*
+Example
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This example shows why overcontrolling does not give us what we want.
+ Suppose that draft eligibility for the military is randomly assigned, but
+ individuals can avoid military service by being in school.
+ Thus, eligibility, which is randomly assigned, affects military service
+ and education.
+ Clearly, we can identify unbiased estimates of the effect of eligibility
+ on anything (say earnings).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+But, suppose we are interested in the effect of military service on earnings.
+ The temptation is to estimate:
+\begin_inset Formula 
+\[
+\mbox{Earn}_{i}=\alpha_{0}+\alpha_{1}\mbox{Eligible}_{i}+\alpha_{2}\mbox{Educ}_{i}+\epsilon_{i}
+\]
+
+\end_inset
+
+and say 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ gives us the effect of eligibility holding education constant, i.e., the
+ effect of military service.
+ However, education is endogenous, so the estimate of 
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+ is likely to be biased because we haven't appropriately controlled for
+ the effect of education on earnings.
+ Does this mean that we have no hope of isolating the effect of military
+ service with this variation? 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can estimate the effect of eligibility on education, i.e., regress education
+ on eligibility.
+ If the estimator is neither economically or statistically significant,
+ then we can still obtain an unbiased estimator of 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+.
+ If we know the effect of education on earnings (from other studies), then
+ we can combine this with the estimated effect of eligibility on education
+ to recover the effect of eligibility on earnings that comes that comes
+ from this channel.
+ We attribute the remainder to military service.
+ This approach is equivalent to using a known 
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+.
+ Another approach would be to consider the range of reasonable 
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+\mbox{Educ}_{i} & = & \gamma_{0}+\gamma_{1}\mbox{Elig}_{i}+e_{i}\\
+\mbox{Earn}_{i} & = & \theta_{0}+\theta_{1}\mbox{Elig}_{i}+u_{i}
+\end{eqnarray*}
+
+\end_inset
+
+The effect of eligibility on earnings through education is equal to 
+\begin_inset Formula $\hat{\gamma}_{1}\cdot\hat{\alpha}_{2}$
+\end_inset
+
+, where 
+\begin_inset Formula $\hat{\alpha}_{2}$
+\end_inset
+
+ is found from another study.
+ So, the effect of military service on earnings could be estimated as
+\begin_inset Formula 
+\[
+\frac{\hat{\theta}_{1}-\hat{\gamma}_{1}\cdot\hat{\alpha}_{2}}{\circ}
+\]
+
+\end_inset
+
+where the denominator is the effect of eligibility on military service.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can also solve the endogeneity problem in terms of instrumental variables:
+\begin_inset Formula 
+\[
+\mbox{Earn}_{i}=\zeta_{0}+\zeta_{1}\mbox{MilitaryService}_{i}+\zeta_{2}\mbox{Educ}_{i}+v_{i}
+\]
+
+\end_inset
+
+Here, we have two endogenous variables but only one instrument, i.e., eligibility.
+\end_layout
+
+\begin_layout Subsection*
+Good Controls
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Good controls are fixed characteristics and variables measured before treatment
+ is assigned.
+ In the example above, controlling for the variable 
+\begin_inset Formula $x$
+\end_inset
+
+ that is affected by treatment does not give us the effect of training that
+ 
+\begin_inset Quotes eld
+\end_inset
+
+is not explained by 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Proxy Variables
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A proxy variable is related to, but not identical to, the variable of interest.
+ Even if if they are affected by treatment, they are not necessarily bad
+ controls.
+ In fact, contolling for a proxy variable influenced by treatment may increase
+ or decrease the bias depending on
+\end_layout
+
+\begin_layout Itemize
+The degree to which there is omitted variable bias otherwise
+\end_layout
+
+\begin_layout Itemize
+The degree to which the proxy is correlated with the omitted variable
+\end_layout
+
+\begin_layout Itemize
+The degree to which the proxy is affected by treatment
+\end_layout
+
+\begin_layout Subsection*
+Example
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose we want to identify the effect of education on earnings.
+ The problem is that those with great innate ability obtain more educaiton
+ because it is easier.
+ Thus, we need to condition on ability to get estimate right.
+ Consider the true model
+\begin_inset Formula 
+\[
+\mbox{Earn}_{i}=\alpha+\rho S_{i}+\gamma a_{i}+\epsilon_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ represent years of schooling and ability for person 
+\begin_inset Formula $i$
+\end_inset
+
+, respectively.
+ However, we lack any variable that measures ability.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Instead, we omit 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ from the regression and estimate
+\begin_inset Formula 
+\[
+\mbox{Earn}_{i}=\psi_{1}+\psi_{2}S_{i}+u_{i}
+\]
+
+\end_inset
+
+Then, we obtain
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\psi}_{2} & = & \frac{\mbox{Cov}(S_{i},\mbox{Earn}_{i})}{\mbox{Var}(S_{i})}\\
+ & = & \frac{\mbox{Cov}(S_{i},\alpha+\rho S_{i}+\gamma a_{i}+\epsilon_{i})}{\mbox{Var}(S_{i})}\\
+ & = & 0+\rho+\gamma\frac{\mbox{Cov}(S_{i},a_{i})}{\mbox{Var}(S_{i})}+0
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Now, suppose we observe test scores at age 18.
+ This variable could be used as a proxy for 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+, but it may be affected by 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+t_{i}=\pi_{0}+\pi_{1}S_{i}+\pi_{2}a_{i}+u_{i}
+\]
+
+\end_inset
+
+So, we estimate
+\begin_inset Formula 
+\[
+\mbox{Earn}_{i}=\theta_{1}+\theta_{2}S_{i}+\theta_{3}t_{i}+e_{i}
+\]
+
+\end_inset
+
+One should recognize that the true model can be reformulated by simply rearrangi
+ng terms, i.e., 
+\begin_inset Formula 
+\[
+a_{i}=\frac{t_{i}-\pi_{0}-\pi_{1}S_{i}}{\pi_{2}}
+\]
+
+\end_inset
+
+This implies that
+\begin_inset Formula 
+\[
+\mbox{Earn}_{i}=\alpha+\rho S_{i}+\gamma\frac{t_{i}-\pi_{0}-\pi_{1}S_{i}}{\pi_{2}}+\epsilon_{i}
+\]
+
+\end_inset
+
+After collecting terms, we have
+\begin_inset Formula 
+\[
+\mbox{Earn}_{i}=\left(\alpha-\gamma\frac{\pi_{0}}{\pi_{2}}\right)+\left(\rho-\gamma\frac{\pi_{1}}{\pi_{2}}\right)S_{i}+\frac{\gamma}{\pi_{2}}t_{i}+\epsilon_{i}
+\]
+
+\end_inset
+
+Clearly, the estimates will be biased because
+\begin_inset Formula 
+\begin{eqnarray*}
+\theta_{2} & = & \rho-\gamma\frac{\pi_{1}}{\pi_{2}}\\
+\hat{\theta}_{2} & \rightarrow & \rho-\gamma\frac{\pi_{1}}{\pi_{2}}
+\end{eqnarray*}
+
+\end_inset
+
+The magnitude of the bias depends on the strength of the link between: ability
+ and schooling; the proxy and the omitted variabled; the proxy variable
+ and schooling.
+\end_layout
+
+\begin_layout Subsection*
+Dealing With Bias
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What do we do if bias is present? Well, is there anything to learn despite
+ these biases? In some situations, biased estimators can provide useful
+ information.
+ Here, priors suggest:
+\end_layout
+
+\begin_layout Itemize
+Estimate without controlling for ability.
+ Then, we have bias upwards.
+\end_layout
+
+\begin_layout Itemize
+Estimate using the proxy.
+ Then, we have bias downwards because all of 
+\begin_inset Formula $\gamma,\pi_{1},\pi_{2}$
+\end_inset
+
+ are greater than 0.
+\end_layout
+
+\begin_layout Standard
+So, the true estimate would lie somewhere in between.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As a rule, biased estimates are generally disliked.
+ Though, under certain circumstances, researchers are somtimes tolerable
+ of bias if it leads to conservative estimates.
+ There are two types of empirical papers:
+\end_layout
+
+\begin_layout Enumerate
+Those that care about the signs of the estimates, or if the magnitudes are
+ greater than or less than a particular benchmark 
+\begin_inset Formula $m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Those that care about the magnitudes of the estimates.
+ 
+\end_layout
+
+\begin_layout Standard
+The type of paper you are writing depends on the research question:
+\end_layout
+
+\begin_layout Itemize
+If you are testing a theory, then we only need to have predictions for signs.
+\end_layout
+
+\begin_layout Itemize
+For policy evaluations, want to know if benefits are greater than the costs.
+ If conservative estimates show that benefits exceed costs, then we know
+ that, in reality, benefits would definitely exceed costs.
+\end_layout
+
+\end_body
+\end_document

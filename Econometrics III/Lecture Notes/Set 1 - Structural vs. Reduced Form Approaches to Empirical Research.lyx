@@ -1,0 +1,583 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Structural vs.
+ Reduced Form Approaches to Empirical Research
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Subsection*
+Internal Validity 
+\end_layout
+
+\begin_layout Standard
+The degree to which the research design yields estimates that reflect the
+ true casual effect for the population, time, and/or location under investigatio
+n.
+\end_layout
+
+\begin_layout Subsubsection*
+Threats
+\end_layout
+
+\begin_layout Itemize
+Functional form (linearity, interactions, etc.)
+\end_layout
+
+\begin_layout Itemize
+Omitted variable bias, endogeneity, selection bias
+\end_layout
+
+\begin_layout Itemize
+Measurement error in regressors
+\end_layout
+
+\begin_layout Subsection*
+External Validity
+\end_layout
+
+\begin_layout Standard
+The degree to which the research design yields estimates that reflect the
+ true casual effect for other population, times, and/or locations of interest
+ that lie outside of the population, times, and/or locations that were studied.
+\end_layout
+
+\begin_layout Standard
+Consider the model for individual 
+\begin_inset Formula $i$
+\end_inset
+
+ from group 
+\begin_inset Formula $p$
+\end_inset
+
+, location 
+\begin_inset Formula $l$
+\end_inset
+
+, and time 
+\begin_inset Formula $t$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+y_{iplt}=\alpha+\left(\beta_{0}+\beta_{1}x_{iplt}\right)T_{iplt}+\omega_{iplt}\theta+\epsilon_{iplt}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{iplt}$
+\end_inset
+
+ are characteristics that relate to the treatment effect (
+\series bold
+\emph on
+interactive confounders
+\series default
+\emph default
+), and 
+\begin_inset Formula $\omega_{iplt}$
+\end_inset
+
+ are characteristics that affect the outcome directly (
+\series bold
+\emph on
+additive confounders
+\series default
+\emph default
+).
+\end_layout
+
+\begin_layout Subsubsection*
+Threats
+\end_layout
+
+\begin_layout Itemize
+Lack of internal validity
+\end_layout
+
+\begin_layout Itemize
+Interaction of setting and treatment
+\end_layout
+
+\begin_layout Example*
+Consider an experiment in which 
+\begin_inset Formula $T_{iplt}$
+\end_inset
+
+ is randomly assigned (RA), then our estimate will be internally valid.
+ The estimate will reflect the average treatment effect for the distribution
+ of 
+\begin_inset Formula $x$
+\end_inset
+
+ that is involved in the experiment.
+ Whether the estimates are externally valid depends on:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+the extent to which the population of interest is reflected in the study.
+\end_layout
+
+\begin_layout Itemize
+the degree to which treatment effects are heterogeneous across 
+\begin_inset Formula $p$
+\end_inset
+
+, 
+\begin_inset Formula $l$
+\end_inset
+
+, and 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+internal validity.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Structural Form vs Reduced Form
+\end_layout
+
+\begin_layout Standard
+The battleground:
+\end_layout
+
+\begin_layout Itemize
+The credibility of theoretical vs statistical assumptions.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Structural econometricians tend to make more theoretical assumptions, while
+ reduced from econometricians tend to make more statistical assumptions.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Achieving external validity.
+\end_layout
+
+\begin_layout Itemize
+The types of questions that can and should be asked.
+\end_layout
+
+\begin_layout Subsection*
+Structural Approach
+\end_layout
+
+\begin_layout Itemize
+It was developed to bridge the gap between theory and empirics.
+\end_layout
+
+\begin_layout Itemize
+Theory is often used as a starting point, which allows for interdependencies
+ among outcomes.
+\end_layout
+
+\begin_layout Itemize
+Specifies cause and relationships 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Some variables are endogenous, which are determined within the model, while
+ others are exogenous
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Equations are generated that correspond to individual choices and/or aggregates.
+\end_layout
+
+\begin_layout Itemize
+The data is used to estimate parameters.
+\end_layout
+
+\begin_layout Itemize
+Maximum likelihood estimation of non-linear simultaneous equations is quite
+ common.
+\end_layout
+
+\begin_layout Itemize
+The parameters present in the model are 
+\begin_inset Quotes eld
+\end_inset
+
+fundamental
+\begin_inset Quotes erd
+\end_inset
+
+ in that they are arguably not context dependent (e.g.
+ risk aversion, preferences, technology).
+\end_layout
+
+\begin_layout Itemize
+These primitives allow for generalizability, i.e., out of sample prediction.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We can simulate behavior responses to policies that haven't happened.
+ 
+\end_layout
+
+\begin_layout Itemize
+We can conduct welfare calculations
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Weaknesses
+\end_layout
+
+\begin_layout Itemize
+Identification: there is usually weak support for the exogeneity assumptions
+ and/or instruments.
+\end_layout
+
+\begin_layout Itemize
+The theoretical assumptions may be overly restrictive, but this is hard
+ to assess.
+\end_layout
+
+\begin_layout Itemize
+Due to convergence at local extrema, estimates can be highly sensitive to
+ starting values (Knittel & Meta, RESTAT).
+\end_layout
+
+\begin_layout Subsection*
+Reduced Form Approach
+\end_layout
+
+\begin_layout Itemize
+This method is also known as the 
+\begin_inset Quotes eld
+\end_inset
+
+design-based
+\begin_inset Quotes erd
+\end_inset
+
+ or the 
+\begin_inset Quotes eld
+\end_inset
+
+quasi-experimental
+\begin_inset Quotes erd
+\end_inset
+
+ approach.
+\end_layout
+
+\begin_layout Itemize
+It doesn't try to uncover the 
+\begin_inset Quotes eld
+\end_inset
+
+true model
+\begin_inset Quotes erd
+\end_inset
+
+ that is generating the data.
+\end_layout
+
+\begin_layout Itemize
+Its primary focus is on research design.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The main objective is to obtain credible causal estimates of the parameters
+ of interest.
+ Note that these are not necessarily going to be 
+\begin_inset Quotes eld
+\end_inset
+
+fundamental
+\begin_inset Quotes erd
+\end_inset
+
+ parameters.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Reduced form econometricians see actual experiments as the gold standard
+ since they are intuitive and straight forward.
+\end_layout
+
+\begin_layout Itemize
+The conceptual framework highlights the source of variation.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If experiments are not possible, then we must search for circumstances where
+ it is reasonable to assume that unobservable variables are unrelated to
+ the variable of interest.
+ These circumstances may be driven by chance, forces of nature, or institutions.
+ 
+\end_layout
+
+\begin_layout Itemize
+Since the variation is clearly articulated, then we know what threats need
+ to be examined, i.e., we can make a data driven case that we have exogeneity.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Weaknesses, Criticisms, Responses
+\end_layout
+
+\begin_layout Itemize
+External validity: if there is substantial heterogeneity, then this is a
+ very serious issue.
+\end_layout
+
+\begin_layout Itemize
+The reduced form approach is divorced from theory.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+It can't speak for mechanisms, which are often examined empirically for
+ plausability.
+\end_layout
+
+\begin_layout Itemize
+Economic theory guides interpretation of the evidence and the questions
+ that are asked.
+\end_layout
+
+\begin_layout Itemize
+Studies often try to test competing theoretical models which offer different
+ predictions.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+In a design based framework, economic theory helps us understand the picture
+ that emerges from a constellation of empirical findings, but does not help
+ us paint the picture.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Major data requirements: if the data does not exist, then we cannot procede.
+\end_layout
+
+\begin_layout Itemize
+Difficult to say anything conclusive about welfare, efficiency, or behavioral
+ responses to policies that haven't occured.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+It does, however, tell us which policy levers we can pull to get the types
+ of results that we want to see.
+ 
+\end_layout
+
+\begin_layout Itemize
+We still have to worry about unintended consequences with respect to outcomes
+ that haven't been thoroughly investigated.
+\end_layout
+
+\begin_layout Itemize
+Similar issues are arise for variables that are 
+\begin_inset Quotes eld
+\end_inset
+
+outside the model
+\begin_inset Quotes erd
+\end_inset
+
+ of structural work.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Clarification
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Structural approaches involve modeling the system in which a collection
+ of endogenous variables are simultaneously determined by one another, by
+ exogenous variables, and of course, by agents maximizing utility and/or
+ profits.
+ The researcher makes several choices here.
+ What to specify as endogenously determined vs exogenously determined? What
+ functional forms to use? The internal validity of the estimates depend
+ on these theoretical assumptions.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Reduced form approaches don't involve such choices.
+ They "bypass estimation of the underlying economic model" and instead focus
+ on the "reduced form" effects of variables of interest that are arguably
+ exogenous in the circumstances under consideration.
+ The internal validity of the estimates depends on whether a variable of
+ interest is truly uncorrelated with other variables that affect outcomes
+ in this set of circumstances.
+\end_layout
+
+\begin_layout Example*
+Suppose we wish to examine the effect of class size on test scores.
+ The two approaches provide different outlooks on how to proceed.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Reduced form: 
+\series default
+With this approach, we must document the effect of class size reduction.
+ The reduced form method starts with the parameter of interest and usually
+ employs a linear function.
+\begin_inset Formula 
+\[
+y=\alpha+\beta\ \mbox{class size}+\epsilon.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Structural:
+\series default
+ With this approach, we create a model with several equations and variables,
+ and we specify the interactions between them.
+ In this example, there is a relationship between class size and the following
+ variables: teacher quality, teacher effort, parental effort, and student
+ effort.
+ The structural approach models all of these interactions, and the listed
+ variables all affect test scores.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

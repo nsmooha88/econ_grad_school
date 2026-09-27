@@ -1,0 +1,1091 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Set 7 - Regression Discontinuity
+\end_layout
+
+\begin_layout Part*
+A Formal Discussion of RDD
+\end_layout
+
+\begin_layout Section*
+Regression Discontinuity Designs (RDD)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+RDD relies on treatment being a discontinuous function of some continuous
+ observable, 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ In a sharp RD, individuals on one side of a threshold, 
+\begin_inset Formula $c$
+\end_inset
+
+, are treated while those on the other are controlled.
+\begin_inset Formula 
+\[
+T_{i}=1(r>c)
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\[
+T_{i}=1(r<c)
+\]
+
+\end_inset
+
+We do no think that the average among controls provides a good counterfactual
+ for the treated because of many underlying differences.
+ Yet, as we approach the threshold, we think these differences shrink to
+ zero.
+ If this is true, then the difference in expected outcomes across the threshold
+ will provide a valid estimate of the local average treatment effect (LATE),
+ which is an average treatment effect for those individuals around the threshold.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Identifying Assumption:
+\series default
+\emph default
+ As long as characteristics (observable and unobservable) are smooth and
+ continuous across the cutoff, then we can get an unbiased estimate of the
+ treatment by comparing expected outcomes across the threshold.
+\end_layout
+
+\begin_layout Subsection*
+Examples
+\end_layout
+
+\begin_layout Itemize
+Academic probation
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $r:\mbox{GPA}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T:1(\mbox{GPA}<1.5)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y:\mbox{Drop Out}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Unionization
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $r:\mbox{Vote shares}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T:1(r>0.5)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y:\mbox{Firm performance}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Class size (Angrist and Lavy)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $r:\mbox{School enrollment}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Postive Attributes of RD
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+According to Lee and Lemieux (2010, JEL), RD is the 
+\begin_inset Quotes eld
+\end_inset
+
+second best
+\begin_inset Quotes erd
+\end_inset
+
+ research design after experiments.
+ For example, suppose 
+\begin_inset Formula $r$
+\end_inset
+
+ has a random component, and the assignment rule is known to the researcher.
+ If 
+\begin_inset Formula $r$
+\end_inset
+
+ were completely random, then this would be an experiment.
+ We usually think that agents can influence and/or manipulate 
+\begin_inset Formula $r$
+\end_inset
+
+, but it is not precise because there is error.
+ As such, the probability of being just above versus being just below the
+ threshold are equal.
+ Thus, in the neighborhood around the threshold, variation in treatment
+ is as good as randomly assigned.
+ Plus, RD estimates can be interpreted as a weighted ATE where weights are
+ the ex-ante probability that an individual's 
+\begin_inset Formula $r$
+\end_inset
+
+ will be in the neighborhood of 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Hence, RD is certainly the next best alternative when welfare considerations
+ make randomized control trials infeasible.
+ To illustrate, suppose policy makers wants to enact an intervention in
+ which they believe some people will benefit more than others.
+ Yet, those in charge do not feel comfortable excluding people from the
+ intervention who they think will benefit the most.
+ Consequently, they will probably not agree to participate in a randomized
+ control trial.
+ Instead, we can construct a RD design if we can get those in charge to
+ order individuals in regards to 
+\begin_inset Quotes eld
+\end_inset
+
+expected benefit,
+\begin_inset Quotes erd
+\end_inset
+
+ and have them tell us where they draw the cutoff line.
+\end_layout
+
+\begin_layout Subsubsection*
+Within-Study Comparison Studies
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Moreover, within-study comparison studies are favorable (see Thomas Cook's
+ work).
+ These studies originated with LaLonde (1986).
+ In the setup, we have an experimentally assigned treatment group and control
+ group.
+ So, we can obtain an unbiased estimate of the ATE.
+ Though, how well do we perform when we use a non-experimental comparison
+ group with various methods?
+\end_layout
+
+\begin_layout Section*
+RD Estimation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+With RD, we are trying to estimate the change in the conditional expectation
+ as we crosse the treatment threshold, i.e.,
+\begin_inset Formula 
+\[
+\theta_{RD}={\displaystyle \lim_{r\rightarrow c}}E[y_{i}|r_{i}=r]-{\displaystyle \lim_{c\leftarrow r}}E[y_{i}|r_{i}=r]
+\]
+
+\end_inset
+
+Standard non-parametric approaches do not perform well in this setup because
+ we are interested in the conditional expectation function at a specific
+ point and this point is at a boundary.
+\end_layout
+
+\begin_layout Subsection*
+Choices To Make
+\end_layout
+
+\begin_layout Itemize
+Functional form: constant function; linear function; quadratic function;
+ different slopes across and/or curvature across treatment threshold.
+\end_layout
+
+\begin_layout Itemize
+Bandwidth 
+\begin_inset Formula $(h)$
+\end_inset
+
+: how far away from the threshold should we use data?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Global is equivalent to using all data
+\end_layout
+
+\begin_layout Itemize
+Local is equivalent to using data 
+\begin_inset Quotes eld
+\end_inset
+
+near
+\begin_inset Quotes erd
+\end_inset
+
+ the threshold, 
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Weight: Rectangular; Triangular; Epanechnikov
+\end_layout
+
+\begin_layout Subsubsection*
+The Choices Are Not Independent
+\end_layout
+
+\begin_layout Itemize
+For smaller a 
+\begin_inset Formula $h$
+\end_inset
+
+, higher order polynomicals are less important.
+\end_layout
+
+\begin_layout Itemize
+Shrinking the bandwidth serves a similar purpose to giving more weight to
+ observations near the threshold.
+\end_layout
+
+\begin_layout Itemize
+The choices involve tradeoff between bias and efficiency.
+\end_layout
+
+\begin_layout Itemize
+Shrinking the bandwidth: The chosen functional form is more likely to provide
+ a good approximation of the truth.
+ However, we compromise our ability to estimate this function with precision
+ because we are using less data.
+\end_layout
+
+\begin_layout Itemize
+Higher order polynomials: They are likely to fit the data better, but we
+ may still lose precision because we are estimating more parameters.
+ Moreover, we may make the fit worse at the threshold, which would increase
+ bias.
+\end_layout
+
+\begin_layout Itemize
+How wide should the bins for the data be? If the bins are too small, then
+ the data becomes susceptible to noise.
+ If the bins are too large, then there may be a problem with over-smoothing.
+\end_layout
+
+\begin_layout Subsection*
+Standard Practice
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+According to Imbens and Lemieux (2008, Journal of Econometrics), the standard
+ practice for RD is to perform a local linear regression with rectangular
+ kernel weights.
+\begin_inset Formula 
+\[
+E[y|r]=\alpha+\theta1(r>c)+\beta r+\gamma r1(r>c)
+\]
+
+\end_inset
+
+for 
+\begin_inset Formula $r<c+h$
+\end_inset
+
+ and 
+\begin_inset Formula $r>c-h$
+\end_inset
+
+.
+ With this setup, we are allowing for different slopes across the threshold.
+ The control side is
+\begin_inset Formula 
+\[
+\alpha+\beta r
+\]
+
+\end_inset
+
+while the treated side is
+\begin_inset Formula 
+\[
+\alpha+\theta+(\beta+\gamma)r
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, we often normalize the running variable, such that 
+\begin_inset Formula $\tilde{r}=r-c$
+\end_inset
+
+.
+ Then, we have
+\begin_inset Formula 
+\[
+E[y|\tilde{r}]=\alpha+\theta1(\tilde{r}>0)+\beta\tilde{r}+\gamma\tilde{r}1(\tilde{r}>0)
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\hat{\alpha}$
+\end_inset
+
+ gives the estimated mean at 
+\begin_inset Formula $c$
+\end_inset
+
+ (on the control side), which helps put the magnitude of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ in context.
+\end_layout
+
+\begin_layout Subsection*
+Bandwidth Selection
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Important to note, there is no agreed upon approach to choosing the bandwidth,
+ 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ Here are some suggestions provided by Imbens and Kalyanamaran (2012, RESTUD):
+\end_layout
+
+\begin_layout Itemize
+Use intuition: We want to use a much data as possible (i.e., a large 
+\begin_inset Formula $h$
+\end_inset
+
+) to gain efficiency, but it should not be so large that the model becomes
+ misspecified.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This provides a good reference, but it is not the truth.
+ Remember, estimates can be sensitive to the starting values of 
+\begin_inset Formula $h$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The optimal bandwidth theory is based on having continuous data.
+\end_layout
+
+\begin_layout Itemize
+When showing RD results, we need to provide bandwidth sensitivity analysis.
+\end_layout
+
+\begin_layout Subsection*
+Inference
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Lee and Card (2008) suggest that we cluster the standard errors on 
+\begin_inset Formula $r$
+\end_inset
+
+ when it is discrete.
+ However, there is some controversy associated with this approach.
+ Are we trying to estimate the true conditional expectation function, or
+ the best linear approximation to it? If it is the latter, then clustering
+ the standard errors on 
+\begin_inset Formula $r$
+\end_inset
+
+ when it is discrete should be fine.
+ In fact, we are probably better off just clustering the standard errors
+ on the running variable, which is more conservative.
+\end_layout
+
+\begin_layout Section*
+Potential Threats to RD
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Below are three common threats to RD.
+\end_layout
+
+\begin_layout Itemize
+A misspecified functional form, particularly for large 
+\begin_inset Formula $h$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Precise manipulation of the running variable 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ We are worried about this because it may lead to discontinuities in characteris
+tics that are related to the outcome, 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+E.g., student athletes and academic probation.
+ There might be a discontinuity in Pr(athlete) across the threshold.
+\end_layout
+
+\begin_layout Itemize
+We prefer that the threshold is unknown when 
+\begin_inset Formula $r$
+\end_inset
+
+ is determined.
+ Even if the threshold was unknown, we should still investigate empirically.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Non-Random Heaping (Barreca, Lindo, and Wadall)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Basically, any discontinuity in the conditional expectation function within
+ 
+\begin_inset Formula $h$
+\end_inset
+
+ will lead to bias.
+ This can be especially problematic with non-random heaping.
+ If variables related to outcomes predict heaping in 
+\begin_inset Formula $r,$
+\end_inset
+
+ then estimates will usually be biased.
+\end_layout
+
+\begin_layout Itemize
+To test for non-random heaping, look for heaps in disaggregated histograms.
+ If there are heaps present, then they could be correlated with observables
+ and/or unobservables.
+ If we are concerned about this, then we can get unbiased estimates by separatel
+y considering each 
+\begin_inset Quotes eld
+\end_inset
+
+type.
+\begin_inset Quotes erd
+\end_inset
+
+ Remember to consider all aspects relevant to experiments, such as attrition,
+ non-compliance, etc.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Two Approaches
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There are two approaches to deal with the potential threats present in a
+ RDD.
+\end_layout
+
+\begin_layout Itemize
+Perform a RD on observable covariates, and then show the observations.
+\end_layout
+
+\begin_layout Itemize
+According to McCrary (2008), we can also perform a RD on the distribution
+ and then show the observations.
+ This is a less straightforward than the other approach because it requires
+ us to put the data into bins before estimation.
+ Also, if we do this, then we should perform several estimations that each
+ use different bin sizes.
+\end_layout
+
+\begin_layout Section*
+Fuzzy RD
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A fuzzy RD occurs when the cutoff does not produce a change in the variable
+ of interest that is equal to 1.
+ If this occurs, then our RD in outcomes is an intent to treat (ITT) effect.
+\end_layout
+
+\begin_layout Example*
+The cutoff determines eligibility, but there are other criteria used in
+ assignment.
+ Or, the cutoff could trigger treatment, but compliance is not perfect.
+\end_layout
+
+\begin_layout Standard
+Then, we can recover a local average treatment effect (LATE), just as with
+ IV.
+\end_layout
+
+\begin_layout Itemize
+Recovering a LATE with IV
+\begin_inset Formula 
+\[
+\frac{\mbox{reduced form}}{\mbox{1st stage}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Recoving a LATE with fuzzy RD
+\begin_inset Formula 
+\[
+\frac{\mbox{discontinuity in outcomes}}{\mbox{discontinuity in treatment}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The fuzzy RD approach addresses the possibility that compliance is correlated
+ with potential outcomes.
+\end_layout
+
+\begin_layout Example*
+Suppose rich individuals receive treatment no matter what, but poorer individual
+s only receive treatment when 
+\begin_inset Formula $r>c$
+\end_inset
+
+.
+ This is not a problem because we just consider rich individuals to be always
+ takers, while poorer individuals are compliers.
+ The fuzzy RD gives the ATE for poorer individuals with 
+\begin_inset Formula $r$
+\end_inset
+
+ close to 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ In terms of estimation, the excluded instrument is the variable for being
+ above the cutoff 
+\begin_inset Formula $1(r>c)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Extensions of RD
+\end_layout
+
+\begin_layout Itemize
+We could vary the cutoffs across groups.
+ To do this, we can either:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Estimate effects separately.
+ If the effects are the same, then this supports generalizability.
+\end_layout
+
+\begin_layout Itemize
+Normalize 
+\begin_inset Formula $r$
+\end_inset
+
+ and pool the data, which is more efficient
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Suppose there are multiple cutoffs faced by the same individuals.
+ If other cutoffs have effects, then including then in 
+\begin_inset Formula $h$
+\end_inset
+
+ will bias estimates (misspecifications)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Implications for max allowable bandwidth
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Card et al.
+ (2012) presented a regression kink design
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Instead of a discontinuity in 
+\begin_inset Formula $x$
+\end_inset
+
+, there is a change in the slope of 
+\begin_inset Formula $x$
+\end_inset
+
+ at 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Then, we can consider if there is a corresponding slope change in outcomes.
+\end_layout
+
+\begin_layout Example*
+After tax income as a function of taxable income.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Multivariate RD design
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Multiple assignment variables with cutoffs used for treatment assignment.
+\end_layout
+
+\begin_layout Itemize
+A pooling approach provides a 
+\begin_inset Quotes eld
+\end_inset
+
+frontier average treatment effect,
+\begin_inset Quotes erd
+\end_inset
+
+ which is a weighted average of frontier specific effects.
+\end_layout
+
+\begin_layout Itemize
+However, the average effect depends on a scale dependent weighting scheme,
+ which is not good.
+\end_layout
+
+\begin_layout Example*
+Math and English tests for ES Exit (Papay 2011)
+\end_layout
+
+\end_deeper
+\begin_layout Part*
+A Brief Outline of RDD
+\end_layout
+
+\begin_layout Section*
+Basic Idea
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Treatment is determined at least in part by the value of a covariate, specifical
+ly, whether it lies on one side of a fixed threshold or the other.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Identifying Assumption:
+\series default
+\emph default
+ All other determinants of the outcome vary smoothly across the threshold.
+\end_layout
+
+\begin_layout Standard
+For the identifying assumption to hold, individuals cannot be able to manipulate
+ where they are relative to the cutoff (it helps if they don't even know
+ where the cutoff is).
+ Also, when nothing else besides the treatment changes at the cutoff.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+RD can be invalid if individuals can precisely manipulate the 
+\begin_inset Quotes eld
+\end_inset
+
+assignment variable.
+\begin_inset Quotes erd
+\end_inset
+
+ If individuals are unable to precisely manipulate the assignment variable,
+ a consequence of this is that the variation in treatment near the threshold
+ is 
+\begin_inset Quotes eld
+\end_inset
+
+randomized,
+\begin_inset Quotes erd
+\end_inset
+
+ as if from a randomized experiment.
+ Intuitively, when individuals have imprecise control over the assignment
+ variable, even if some are especially likely to have values of 
+\begin_inset Formula $x$
+\end_inset
+
+ near the cutoff, every individual will have approximately the same probability
+ of having 
+\begin_inset Formula $x$
+\end_inset
+
+ just above or just below the cutoff.
+ 
+\end_layout
+
+\begin_layout Itemize
+Sharp RD: obtain average treatment effect for individuals near the cutoff.
+\end_layout
+
+\begin_layout Itemize
+Fuzzy RD: Obtain a local average treatment effect, interpreted as the average
+ effect on compliers near the cutoff.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Fuzzy RD is valid under the assumption that there are no defiers, which
+ is what we always assume.
+ Then, the LATE captures the treatment effect for compliers.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+RDD has significant upsides.
+ Under the identifying assumption, RD offers a clean and transparent way
+ of obtaining a causal effect.
+ Plus, the identifying assumption is somewhat testable.
+ RD can be analyzed, and tested, like randomized experiments.
+ However, RDD still has some downsides as well.
+ Obtaining precise estimates can be difficult, and estimates are only relevant
+ for the population near the cutoff.
+ Additionally, in a fuzzy RD, the estimates are only relevant for compliers
+ near the cutoff.
+\end_layout
+
+\begin_layout Subsection*
+Difference Between RD and IV
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For IV, we must assume the instrument is exogenously generated as if by
+ a coin flip.
+ Such an assumption is often difficult to justify.
+ By contrast, the variation that the RD design isolates is randomized as
+ a consequence of the assumption that individuals have imprecise control
+ over the assignment variable.
+\end_layout
+
+\begin_layout Itemize
+RD can be invalid if individuals can precisely manipulate the 
+\begin_inset Quotes eld
+\end_inset
+
+assignment variable.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+If individuals are unable to precisely manipulate the assignment variable,
+ a consequene of this is that the variation in treatment near the threshold
+ is randomized as though from a randomized 
+\end_layout
+
+\begin_layout Note*
+Including fixed effects is unnecessary for identification in a RDD.
+ This sharply contrasts with a more traditional panel data setting.
+ The only rationale to include fixed effects is to reduce sample variance.
+\end_layout
+
+\begin_layout Section*
+Test RDD Identifying Assumption
+\end_layout
+
+\begin_layout Enumerate
+Look for discontinuities in pre-determined or exogenous characteristics
+\end_layout
+
+\begin_layout Enumerate
+Show RD estimates with and without controls
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Good outcome: Estimate is the same.
+ Treatment is orthogonal to controls, at least once you control for the
+ running variable.
+\end_layout
+
+\begin_layout Itemize
+Bad outcome: Estimate changes in a significant way.
+ There is manipulation around the cutoff, as controls are systematically
+ correlated with being above the cutoff, conditional on the running variable.
+\end_layout
+
+\begin_layout Itemize
+Concern: If treatment and control vary on things we can observe, what about
+ things we can't observe?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Look for 
+\begin_inset Quotes eld
+\end_inset
+
+lumpiness
+\begin_inset Quotes erd
+\end_inset
+
+ in the density function
+\end_layout
+
+\begin_layout Enumerate
+Look for discontinuities in the outcome at fake cutoffs
+\end_layout
+
+\begin_layout Subsection*
+RDD Robustness Tests:
+\end_layout
+
+\begin_layout Enumerate
+What is the right functional form?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Look at the data and see how well you are fitting it.
+\end_layout
+
+\begin_layout Itemize
+Show results from multiple functional forms
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+What is the appropriate bandwidth?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Tradeoff: Bigger bandwidths lead to more precise estimates that are less
+ susceptible to noise.
+ Though, with bigger bandwidths, observations far from the cutoff can influence
+ the RD estimate.
+\end_layout
+
+\begin_layout Itemize
+Solution: Show data with large bandwidth and present estimates with narrower
+ bandwidths.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+What the running variable is discrete, you need to cluster the standard
+ errors at the level of the clusters in the running variable.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1297 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Set 6 - Inference: Bootstrap, Clustering, Multi-Way Clustering
+\end_layout
+
+\begin_layout Part*
+Inference in Panel Data Models
+\end_layout
+
+\begin_layout Section*
+Clustering
+\end_layout
+
+\begin_layout Subsection*
+General Notes
+\end_layout
+
+\begin_layout Itemize
+Conditional on unbiasedness, we want the most efficient estimator, i.e., the
+ estimator with the smallest standard errors.
+ This has to do with choosing a specific estimation approach, such as: POLS;
+ IV; FE; Controls vs No Controls.
+\end_layout
+
+\begin_layout Itemize
+Conditional on choosing an estimator for the treatment effect, we want standard
+ error estimates that are correct (not just small).
+ So, we want standard error estimates that have us rejecting tests of inference
+ null hypotheses an appropriate amount of time.
+\end_layout
+
+\begin_layout Subsection*
+Bertrand, Duflo, Mullainathan (2004, QJE)
+\end_layout
+
+\begin_layout Itemize
+This paper was a game changer.
+\end_layout
+
+\begin_layout Itemize
+The authors considered CPS data on female wages collapsed to state and year
+ levels.
+\end_layout
+
+\begin_layout Itemize
+They randomly chose a year between 1979 and 1999, then randomly assigned
+ a 
+\begin_inset Quotes eld
+\end_inset
+
+placebo law
+\begin_inset Quotes erd
+\end_inset
+
+ to 25 states for this chosen year.
+\end_layout
+
+\begin_layout Itemize
+The differences-in-differences estimates a 
+\begin_inset Quotes eld
+\end_inset
+
+significant effect
+\begin_inset Quotes erd
+\end_inset
+
+ 45% of the time (at the 5% level).
+ So, the standard errors estimates are clearly too small.
+\end_layout
+
+\begin_layout Itemize
+Clustering the standard errors on the state led to the appropriate rejection
+ rates.
+\end_layout
+
+\begin_layout Itemize
+However, there was still overrejection for a few states (11% with 6 states,
+ 8% with 10 states)
+\end_layout
+
+\begin_layout Subsection*
+Issue: Correlated Errors (Across Time)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There are two approaches to 
+\begin_inset Quotes eld
+\end_inset
+
+correct
+\begin_inset Quotes erd
+\end_inset
+
+ the problem of correlated errors across time
+\end_layout
+
+\begin_layout Itemize
+Modeling (random effects, AR(1), etc.)
+\end_layout
+
+\begin_layout Itemize
+Perform OLS, then obtain the 
+\begin_inset Quotes eld
+\end_inset
+
+right
+\begin_inset Quotes erd
+\end_inset
+
+ standard errors
+\end_layout
+
+\begin_layout Standard
+The first approach is more efficient, but it imposes additional assumptions
+ regarding the standard errors that may not hold.
+ The second approach is far more common, and it is the approach most empiricists
+ take.
+\end_layout
+
+\begin_layout Subsection*
+Estimating Standard Errors
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+How do we estimate standard errors when we allow the errors to be correlated
+ within groups? Suppose we have a balanced panel data with 
+\begin_inset Formula $i=1,\ldots,N$
+\end_inset
+
+ and 
+\begin_inset Formula $T=1,\ldots,T$
+\end_inset
+
+.
+ Now, consider the 
+\begin_inset Quotes eld
+\end_inset
+
+demeaned
+\begin_inset Quotes erd
+\end_inset
+
+ FE model
+\begin_inset Formula 
+\[
+\tilde{y}_{it}=\tilde{x}_{it}^{\prime}\beta+\tilde{u}_{it}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\tilde{x}_{it}$
+\end_inset
+
+ is 
+\begin_inset Formula $K\times1$
+\end_inset
+
+.
+ Note that
+\begin_inset Formula 
+\begin{eqnarray*}
+\tilde{y}_{it} & = & (y_{it}-\bar{y}_{i})\\
+\tilde{x}_{it} & = & (x_{it}-\bar{x}_{i})\\
+\tilde{u}_{it} & = & (u_{it}-\bar{u}_{i})
+\end{eqnarray*}
+
+\end_inset
+
+Also, the fixed effects parameter has been removed as a result of the 
+\begin_inset Quotes eld
+\end_inset
+
+demeaning
+\begin_inset Quotes erd
+\end_inset
+
+ approach.
+ Next, stacking over the 
+\begin_inset Formula $T$
+\end_inset
+
+ equations for each observation 
+\begin_inset Formula $i$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+\tilde{y}_{i}=\tilde{x}_{i}\beta+\tilde{u}_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\tilde{y}_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{u}_{i}$
+\end_inset
+
+ are 
+\begin_inset Formula $T\times1$
+\end_inset
+
+, and 
+\begin_inset Formula $\tilde{x}_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $T\times K$
+\end_inset
+
+.
+ Finally, stacking over 
+\begin_inset Formula $N$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+\tilde{y}=\tilde{X}\beta+\tilde{u}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\tilde{y}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{u}$
+\end_inset
+
+ are 
+\begin_inset Formula $NT\times1$
+\end_inset
+
+, and 
+\begin_inset Formula $\tilde{X}$
+\end_inset
+
+ is 
+\begin_inset Formula $NT\times K$
+\end_inset
+
+.
+ After performing an OLS regression on this equation, we obtain the FE estimator
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\theta} & = & \left(\tilde{X}^{\prime}\tilde{X}\right)^{-1}\tilde{X}^{\prime}\tilde{y}\\
+ & = & \left[{\displaystyle \sum_{i=1}^{N}}\tilde{x}_{i}^{\prime}\tilde{x}_{i}\right]^{-1}{\displaystyle \sum_{i=1}^{N}}\tilde{x}_{i}^{\prime}\tilde{y}_{i}\\
+ & = & \left[{\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\tilde{x}_{it}\tilde{x}_{it}^{\prime}\right]^{-1}{\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{t=1}^{T}}\tilde{x}_{it}\tilde{y}_{it}\\
+\hat{\theta} & = & \theta+\left[{\displaystyle \sum_{i=1}^{N}}\tilde{x}_{i}^{\prime}\tilde{x}_{i}\right]^{-1}{\displaystyle \sum_{i=1}^{N}}\tilde{x}_{i}^{\prime}\tilde{u}_{i}
+\end{eqnarray*}
+
+\end_inset
+
+Now, assuming independence over 
+\begin_inset Formula $i$
+\end_inset
+
+, we obtain the variance-covariance matrix of the estimator
+\begin_inset Formula 
+\[
+V\left[\hat{\beta}\right]=\left[{\displaystyle \sum_{i=1}^{N}}\tilde{x}_{i}^{\prime}\tilde{x}_{i}\right]^{-1}\left({\displaystyle \sum_{i=1}^{N}}E\left[\tilde{x}_{i}^{\prime}\tilde{u}_{i}\tilde{u}_{i}^{\prime}\tilde{x}_{i}\right]\right)\left[{\displaystyle \sum_{i=1}^{N}}\tilde{x}_{i}^{\prime}\tilde{x}_{i}\right]^{-1}
+\]
+
+\end_inset
+
+We can write the estimator of the variance-covariance matrix as
+\begin_inset Formula 
+\[
+\widehat{V[\hat{\beta}]}=\left[{\displaystyle \sum_{i=1}^{N}}\tilde{x}_{i}^{\prime}\tilde{x}_{i}\right]^{-1}\left({\displaystyle \sum_{i=1}^{N}}\tilde{x}_{i}^{\prime}\hat{\tilde{u}}_{i}\hat{\tilde{u}}_{i}^{\prime}\tilde{x}_{i}\right)\left[{\displaystyle \sum_{i=1}^{N}}\tilde{x}_{i}^{\prime}\tilde{x}_{i}\right]^{-1}
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+\hat{\tilde{u}}_{i}=\tilde{y}_{i}-\tilde{x}_{i}\hat{\beta}
+\]
+
+\end_inset
+
+This estimator is consistent if
+\begin_inset Formula 
+\[
+N^{-1}{\displaystyle \sum_{i=1}^{N}}\tilde{x}_{i}^{\prime}\hat{\tilde{u}}_{i}\hat{\tilde{u}}_{i}^{\prime}\tilde{x}_{i}\begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array}N^{-1}{\displaystyle \sum_{i=1}^{N}}E\left[\tilde{x}_{i}^{\prime}\tilde{u}_{i}\tilde{u}_{i}^{\prime}\tilde{x}_{i}\right]
+\]
+
+\end_inset
+
+Important to note, the finite sample modifications are necessary if we want
+ to avoid standard errors that are too small.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Allowing errors to be correlated within groups is analagous to the cross-section
+al problem involving heteroskedasticity, except 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is a vector, as opposed to a scalar.
+ We are relaxing the assumption that the off-diagonal terms are zero.
+ Instead of a diagonal variance-covariance matrix, we now have a block diagonal
+ matrix.
+\end_layout
+
+\begin_layout Itemize
+Clustering
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+\left[\begin{array}{cccc}
+\sigma_{11,11} & \sigma_{11,12} & \cdots & \sigma_{11,1T}\\
+\sigma_{12,11} & \sigma_{12,12} & \cdots & \sigma_{12,1T}\\
+\vdots & \vdots & \ddots & \vdots\\
+\sigma_{1T,11} & \sigma_{1T,12} & \cdots & \sigma_{1T,1T}
+\end{array}\right] &  &  & 0\\
+ & \left[\begin{array}{cccc}
+\sigma_{21,21} & \sigma_{21,22} & \cdots & \sigma_{21,2T}\\
+\sigma_{22,21} & \sigma_{22,22} & \cdots & \sigma_{22,2T}\\
+\vdots & \vdots & \ddots & \vdots\\
+\sigma_{2T,21} & \sigma_{2T,22} & \cdots & \sigma_{2T,2T}
+\end{array}\right]\\
+ &  & \ddots\\
+0 &  &  & \left[\begin{array}{cccc}
+\sigma_{N1,N1} & \sigma_{N1,N2} & \cdots & \sigma_{N1,NT}\\
+\sigma_{N2,N1} & \sigma_{N2,N2} & \cdots & \sigma_{N2,NT}\\
+\vdots & \vdots & \ddots & \vdots\\
+\sigma_{NT,N1} & \sigma_{NT,N2} & \cdots & \sigma_{NT,NT}
+\end{array}\right]
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The usual white-heteroskedastic robust approach imposes the stronger assumption
+ that all of the off-diagonal terms are zero
+\emph on
+ 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccccccc}
+\sigma_{11} &  &  &  &  &  &  & 0\\
+ & \sigma_{12}\\
+ &  & \ddots\\
+ &  &  & \sigma_{1T}\\
+ &  &  &  & \sigma_{21}\\
+ &  &  &  &  & \sigma_{22}\\
+ &  &  &  &  &  & \ddots\\
+0 &  &  &  &  &  &  & \sigma_{N,T}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Assuming homoskedasticity goes even further because it requires that all
+ of the diagonal terms are the same.
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+\sigma^{2} &  &  & 0\\
+ & \sigma^{2}\\
+ &  & \ddots\\
+0 &  &  & \sigma^{2}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Stata
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When performing analysis in Stata, use 
+\begin_inset Formula $\sqrt{c}\hat{\tilde{u}}$
+\end_inset
+
+ instead of 
+\begin_inset Formula $\hat{\tilde{u}}$
+\end_inset
+
+ where
+\begin_inset Formula 
+\[
+C=\frac{N}{N-1}\cdot\frac{NT-1}{NT-K}\approx\frac{N}{N-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Note*
+Stata gets the standard errors wrong with the least squares dummy variable
+ estimator (the standard errors are too big because it uses the wrong 
+\begin_inset Formula $k$
+\end_inset
+
+).
+ Though, it does get the standard errors right if you use the mean difference
+ estimator.
+\end_layout
+
+\begin_layout Subsection*
+Important Notes
+\end_layout
+
+\begin_layout Itemize
+We are especially concerned about correlated errors within groups in FE
+ models using panel data, but it is often relevant in other contexts
+\end_layout
+
+\begin_layout Itemize
+If we are concerned about correlated errors and groups that are nested,
+ then cluster on the more aggregate group.
+\end_layout
+
+\begin_deeper
+\begin_layout Example*
+Suppose we have multiple observations per state year 
+\begin_inset Formula $(y_{ist},x_{ist})$
+\end_inset
+
+.
+ Then, we should cluster on the state.
+ By doing this, we are allowing the errors to be correlated from one year
+ to the next within a state.
+ Do not cluster on state-year.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+What if we are concerned about autocorrelation within groups and correlated
+ errors across groups in each period? Then, we should use non-nested clustering.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\emph on
+Ask:
+\series default
+\emph default
+ Do our control variables fully capture the sort of clustering that we are
+ worrying about?
+\end_layout
+
+\begin_layout Example*
+Suppose we have a state-year panel
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We ususally think of errors that will be correlated within states over time
+ because of state fixed effects and persistent shocks that are not common
+ to all years.
+\end_layout
+
+\begin_layout Itemize
+Including state fixed effects does not remove the correlation in errors.
+ We still need to cluster at the state level.
+\end_layout
+
+\begin_layout Itemize
+We may think that year specific shocks are correlated across states.
+ After including year fixed effects, we can ignore this issue if these shocks
+ are the same across all states.
+ If the shocks are not the same across all states, then we need to do multiway
+ clustering (Cameron, Gelbach, and Miller, 2011).
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section*
+
+\emph on
+Multiway Clustering
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Rewrite the middle portion of the variance-covariance estiamtor as
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{N}}{\displaystyle \sum_{j=1}^{N}}x_{i}^{\prime}\hat{\tilde{u}}_{i}\hat{\tilde{u}}_{j}^{\prime}x_{j}1(i,j\ \mbox{in same cluster})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With multiway clustering, the 
+\begin_inset Formula $1()$
+\end_inset
+
+ takes a value of one if 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+ share any cluster.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To implement multiway clustering, obtain an estimate of 
+\begin_inset Formula $\widehat{V(\hat{\beta})}$
+\end_inset
+
+, clustering on the first dimension, the second dimension, and their interaction.
+ Then, add the first two estimates, and subtract the third to account for
+ double counting, i.e.,
+\begin_inset Formula 
+\[
+\widehat{V_{2W}(\hat{\beta})}=\widehat{V_{1}(\hat{\beta})}+\widehat{V_{2}(\hat{\beta})}-\widehat{V_{int}(\hat{\beta})}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+For example, 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ is the estimate after clustering on states, 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+ is the estimate after clustering on years, and 
+\begin_inset Formula $V_{int}$
+\end_inset
+
+ is the estimate after clustering on the instersection of state and year
+ (i.e., errors can only be correlated within state-years)
+\emph on
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Asymptotics are based on the number of clusters of the dimension that is
+ the fewest in number.
+ Also, note that multiway clustering may be inappropriate for small 
+\begin_inset Formula $N$
+\end_inset
+
+ and/or 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Small Number of Individuals/Groups/Clusters
+\end_layout
+
+\begin_layout Itemize
+We need to adjust the standard error estimates because they are too small.
+ So, we use modified residuals.
+\end_layout
+
+\begin_layout Itemize
+The test statistics are not standard normally distributed
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If we perform inference using standard critical values, then we overreject.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Two possible solutions:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Use a t-distribution.
+ It is not clear what t-distribution should be used.
+ 
+\begin_inset Formula $T_{N-1}$
+\end_inset
+
+? Some argue that more adjustment is needed.
+\end_layout
+
+\begin_layout Itemize
+Bootstrapping with asymptotic refinement
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Bootstrapping
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The problem with inference is that we do not know what the distribution
+ of sample statistics looks like because we only observe one sample statistic.
+ The bootstrap solution is to learn about this distribution by taking samples
+ of our sample, and then consider what the distribution of sample statistics
+ looks like based on these 
+\begin_inset Quotes eld
+\end_inset
+
+pseudosamples.
+\begin_inset Quotes erd
+\end_inset
+
+ We can use these 
+\begin_inset Quotes eld
+\end_inset
+
+pseudosamples
+\begin_inset Quotes erd
+\end_inset
+
+ to obtain the distribution of the coefficient, t-statistics, standard errors,
+ or a combined coefficient.
+ Though, this is usually not needed because we have theoretical information.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The two main uses of bootstrapping are:
+\end_layout
+
+\begin_layout Itemize
+Estimating standard errors when analytic formulas are complex, or the formula
+ cannot be calculated, e.g., the Hausman test.
+\end_layout
+
+\begin_layout Itemize
+Asymptotic refinement
+\end_layout
+
+\begin_layout Subsection*
+Lindo (2009)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The author considered the following model
+\begin_inset Formula 
+\[
+\mbox{Birth}_{it}=\alpha_{i}+\alpha_{t}+\theta_{0}1(\mbox{YearHusbandDisplaced)}+\theta_{1}1(\mbox{YearHusbandDisplaced}+1)+\cdots+\theta_{6}(\mbox{YearHusbandDisplaced}+6)+\epsilon_{it}
+\]
+
+\end_inset
+
+He wanted to know the average cumulative effect, but he was not able to
+ just sum 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ because the panel was not balanced.
+\end_layout
+
+\begin_layout Itemize
+Estimate the model
+\end_layout
+
+\begin_layout Itemize
+Obtain predicted probabilities for all post periods (for treated women)
+ and sum
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This gives the 
+\begin_inset Quotes eld
+\end_inset
+
+true predicted number of kids in the post periods
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Turn off treatment indicators and repeat the previous procedure
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This gives the 
+\begin_inset Quotes eld
+\end_inset
+
+counterfactual predicted number of kids in the post periods
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The average difference provides ATET of impact on completed fertility
+\end_layout
+
+\begin_layout Subsection*
+Basic Bootstrapping
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose we have a sample size of 
+\begin_inset Formula $N$
+\end_inset
+
+, and we are interested in statistic 
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Form a pseudosample of size 
+\begin_inset Formula $N$
+\end_inset
+
+ by drawing from the original sample with replacement
+\end_layout
+
+\begin_layout Itemize
+Produce pseudosample statistic, 
+\begin_inset Formula $\hat{\beta}_{1}^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Repeat this procedure 
+\begin_inset Formula $B$
+\end_inset
+
+ times, in order to obtain 
+\begin_inset Formula $\hat{\beta}_{1}^{*},\ldots,\hat{\beta}_{B}^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+These pseudosample statistics will be centered around 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+, which was produced by the full sample.
+\end_layout
+
+\begin_layout Itemize
+The stardard deviation of this set of pseudosample statistics is our bootstrap
+ estimate of the standard error of 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For inference, we can construct test statistics using this standard error
+ and critical values from the standard normal or 
+\begin_inset Formula $t$
+\end_inset
+
+ distributions.
+\end_layout
+
+\begin_layout Standard
+This approach does not improve finite sample performance.
+ It relies on asymptotic theory for inference.
+\end_layout
+
+\begin_layout Note*
+There are many different 
+\begin_inset Quotes eld
+\end_inset
+
+types
+\begin_inset Quotes erd
+\end_inset
+
+ of bootstraps.
+ The one covered above is a non-parametric bootstrap, also known as a 
+\begin_inset Quotes eld
+\end_inset
+
+paired bootsrap
+\begin_inset Quotes erd
+\end_inset
+
+ because it resamples 
+\begin_inset Formula $(y,x)$
+\end_inset
+
+ pairs.
+\end_layout
+
+\begin_layout Subsection*
+Bootstrapping With Asymptotic Refinement
+\end_layout
+
+\begin_layout Itemize
+Use the bootstrap approach to estimate the distribution of the t-statistic
+\end_layout
+
+\begin_layout Itemize
+For each iteration 
+\begin_inset Formula $b$
+\end_inset
+
+, calculate the test statistic
+\begin_inset Formula 
+\[
+t_{b}=\frac{\hat{\beta}_{b}-\hat{\beta}}{SE_{\hat{\beta}_{b}^{*}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The empirical distribution of 
+\begin_inset Formula $t_{1}^{*},\ldots,\ t_{B}^{*}$
+\end_inset
+
+ estimates the distribution of 
+\begin_inset Formula $t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Reject 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ at level 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $t<t_{\nicefrac{\alpha}{2}}^{*}$
+\end_inset
+
+ or 
+\begin_inset Formula $t>t_{1-\nicefrac{\alpha}{2}}^{*}$
+\end_inset
+
+ where 
+\begin_inset Formula $t_{q}^{*}$
+\end_inset
+
+ is the qth quantile of 
+\begin_inset Formula $t_{1}^{*},\ldots,\ t_{B}^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+This gives us critical values to compare our test statistics too, or we
+ can use our t-statistic with this distribution to compute our p-value.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This approach provides asyptotic refinement because it has us compare our
+ test statistic with the 
+\begin_inset Quotes eld
+\end_inset
+
+right
+\begin_inset Quotes erd
+\end_inset
+
+ distribution.
+ This works with 
+\begin_inset Quotes eld
+\end_inset
+
+asymptotically pivotal
+\begin_inset Quotes erd
+\end_inset
+
+ statistics, those whose limit distribution does not depend on unknown parameter
+s.
+ This is not the case for most estimators, but will be with asympotically
+ normal or 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ test statistics and the confidence intervals they imply.
+\end_layout
+
+\begin_layout Subsection*
+Cluster Bootstrap
+\end_layout
+
+\begin_layout Itemize
+Recall that asymptotics are based on the number of clusters approaching
+ infinity
+\end_layout
+
+\begin_layout Itemize
+Draw clusters with replacement, with the number of draws equal to the number
+ of clusters
+\end_layout
+
+\begin_layout Itemize
+Few clusters and regressors that take few values
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+E.g.
+ treatment indicator 
+\end_layout
+
+\begin_layout Itemize
+Reference: Comeron et al.
+ (2008 REStat)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Pairs cluster bootstrap-t overrejects
+\end_layout
+
+\begin_layout Itemize
+In contrast, wild cluster bootstrap-t works well.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection*
+Wild Cluster Bootstrap-t
+\end_layout
+
+\begin_layout Subsubsection*
+Short Version
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Instead of drawing observations 
+\begin_inset Formula $(y,x)$
+\end_inset
+
+, we draw 
+\begin_inset Formula $x$
+\end_inset
+
+ and estimated errors, generate predicted 
+\begin_inset Formula $y$
+\end_inset
+
+ using these errors and our estimated 
+\begin_inset Formula $\beta$
+\end_inset
+
+, and then regress these predicted 
+\begin_inset Formula $y$
+\end_inset
+
+'s on the actual 
+\begin_inset Formula $x$
+\end_inset
+
+'s.
+ What does this accomplish? It preserves the within-group correlation in
+ errors observed in the full sample when generating new estimates.
+\end_layout
+
+\begin_layout Subsubsection*
+Recipe
+\end_layout
+
+\begin_layout Itemize
+Obtain 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ and residuals 
+\begin_inset Formula $\hat{u}_{g}$
+\end_inset
+
+ (imposing 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Itemize
+Then, for each bootstrap iteration 
+\begin_inset Formula $b$
+\end_inset
+
+ (with a total of 
+\begin_inset Formula $B$
+\end_inset
+
+ iterations):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Draw 
+\begin_inset Formula $G$
+\end_inset
+
+ 
+\begin_inset Formula $(x_{g},\hat{u}_{g})$
+\end_inset
+
+ with replacement
+\end_layout
+
+\begin_layout Itemize
+Form 
+\begin_inset Formula $\hat{u}_{g}^{*}=\hat{u}_{g}$
+\end_inset
+
+ or 
+\begin_inset Formula $\hat{u}_{g}^{*}=\hat{u}_{g}$
+\end_inset
+
+ with probability 0.5
+\end_layout
+
+\begin_layout Itemize
+Then, form 
+\begin_inset Formula $\hat{y}_{g}^{*}=x_{g}^{\prime}\hat{\beta}+\hat{u}_{g}^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+We then have a cluster bootstrap resample: 
+\begin_inset Formula $\{(\hat{y}_{1}^{*},x_{1}),\ldots,(\hat{y}_{G}^{*},x_{G})\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Use the resample to estimate 
+\begin_inset Formula $\hat{\beta}_{b}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{SE}_{\hat{\beta}_{b}^{*}}$
+\end_inset
+
+.
+ Then, construct the t-statistic
+\end_layout
+
+\begin_layout Itemize
+Use this distribution of the test statistic for inference with asymptotic
+ refinement
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+What if we're doing weighted least squares?
+\end_layout
+
+\begin_layout Itemize
+Very common to use population weights with aggregated data
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+There could be heterogenous treatment effects
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ex:
+\series default
+ States with large populations will estimate the mean more precisely.
+ States with a smaller population will provide mean estimates that are more
+ susceptible to error.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+WLS may reduce the 
+\begin_inset Quotes eld
+\end_inset
+
+effective number of clusters
+\begin_inset Quotes erd
+\end_inset
+
+ well below the actual number.
+\end_layout
+
+\begin_layout Itemize
+With highly skewed weights, can have a 
+\begin_inset Quotes eld
+\end_inset
+
+few clusters problem.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Inference is tricky
+\end_layout
+
+\begin_layout Itemize
+Cheng and Hoekstra working on this (stay tuned)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Regular
+\begin_inset Quotes erd
+\end_inset
+
+ clustered standard error's are too small
+\end_layout
+
+\begin_layout Itemize
+Pairs cluster bootstrap-t works well (best)
+\end_layout
+
+\end_body
+\end_document

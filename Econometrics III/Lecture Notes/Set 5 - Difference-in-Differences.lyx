@@ -1,0 +1,2598 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Set 5 - Differences-in-Differences and Panel Data Models
+\end_layout
+
+\begin_layout Part*
+A Formal Discussion of Diff-in-Diff
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Differences-in-differences is usually motivated by using time series variation
+ in which we observe individuals/groups pre and post treatment.
+ We could estimate
+\begin_inset Formula 
+\[
+y_{it}=\alpha+\beta\mbox{Treated}_{t}+\epsilon_{it}\equiv\alpha+\beta\mbox{Post}_{t}+\epsilon_{it}
+\]
+
+\end_inset
+
+Yet, do we believe 
+\begin_inset Formula $\mbox{Cov}(\mbox{Treated}_{t},\epsilon_{it})=0$
+\end_inset
+
+? Usually not because other determinants of 
+\begin_inset Formula $y_{it}$
+\end_inset
+
+ are likely changing as well.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What does 
+\begin_inset Formula $E[y_{it}]$
+\end_inset
+
+ look like historically?
+\end_layout
+
+\begin_layout Itemize
+Is it flat? This assumption is more credible.
+\end_layout
+
+\begin_layout Itemize
+Is there smooth trending? A model controlling for trend might also be credible.
+ 
+\end_layout
+
+\begin_layout Standard
+Yet, using time series variation implies that treatment is the only reason
+ outcomes differ systematically from pre to post.
+ Making this case would be a tough sell.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is easier to use time series variation with high-frequency data.
+ Then, we can compare outcomes 
+\begin_inset Quotes eld
+\end_inset
+
+seconds
+\begin_inset Quotes erd
+\end_inset
+
+ before and after treatment, such that other determinants are unlikely to
+ have changed.
+ This amounts to a regression discontinuity (RD) design with time as a running
+ variable, but we'll come back to this later.
+ However, this type of analysis is not useful if treatment is not expected
+ to have an immediate effect.
+\end_layout
+
+\begin_layout Section*
+Differences-in-Differences
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Difference-in-differences (diff-in-diff) brings an untreated comparison
+ group to tell us how 
+\begin_inset Formula $y$
+\end_inset
+
+ would have envolved in the absence of treatment.
+ With diff-in-diff, we compare changes in outcomes among a treated group
+ to changes among an untreated (control) group.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Identifying Assumption:
+\series default
+\emph default
+ changes for the control group provide a good counterfactural for changes
+ that would have been observed for the treated group in the absence of treatment
+, i.e.,
+\begin_inset Formula 
+\[
+E[\Delta y_{i}^{0}|\mbox{G}_{i}=0]=E[\Delta y_{i}^{1}|\mbox{G}_{i}=0]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+So, we have
+\begin_inset Formula 
+\[
+E[\Delta y_{i}^{1}|\mbox{G}_{i}=1]-E[\Delta y_{i}^{0}|\mbox{G}_{i}=0]=E[\Delta y_{i}^{1}|\mbox{G}_{i}=1]-E[\Delta y_{i}^{1}|\mbox{G}_{i}=0]=\mbox{ATET}
+\]
+
+\end_inset
+
+Note that we have just redefined the outcome and assumed
+\begin_inset Formula 
+\[
+\Delta y^{0}\perp\mbox{G}
+\]
+
+\end_inset
+
+If we went further and assumed that
+\begin_inset Formula 
+\[
+\Delta y^{1},\Delta y^{0}\perp\mbox{G}
+\]
+
+\end_inset
+
+then we would have obtain the ATE.
+ Then, the sample analogue of the diff-in-diff estimator is
+\begin_inset Formula 
+\[
+\hat{\theta}_{DD}=\left(\bar{y}_{t=1}^{\mbox{G}=1}-\bar{y}_{t=0}^{\mbox{G}=1}\right)-\left(\bar{y}_{t=1}^{\mbox{G}=0}-\bar{y}_{t=0}^{\mbox{G}=0}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Regression Analogue
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The regression analogue of diff-in-diff is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{it}=\alpha+\beta\mbox{Post}_{t}+\gamma\mbox{TreatmentGroup}_{i}+\theta\mbox{Post}_{t}\times\mbox{TreatmentGroup}_{i}+\epsilon_{it}
+\]
+
+\end_inset
+
+or written more compactly
+\begin_inset Formula 
+\[
+y_{it}=\alpha+\beta\mbox{P}_{t}+\gamma\mbox{TG}_{i}+\theta(\mbox{P}_{t}\times\mbox{TG}_{i})+\epsilon_{it}
+\]
+
+\end_inset
+
+Here are the descriptions of each coefficient:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\beta$
+\end_inset
+
+ is the change in the control group from the pre-period to the post-period
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is the change from the control group to the treatment group in the pre-period.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\theta$
+\end_inset
+
+ is going to give us the diff-in-diff estimate.
+\end_layout
+
+\begin_layout Standard
+Remember, according to the identifying assumption, the differences between
+ the treatment and the control group in the pre-period would have remained
+ the same in the post-period in the absence of treatment.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+First, consider the expected outcomes for 
+\begin_inset Formula $\mbox{TG}_{i}=1$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{it}^{1}=\alpha+\gamma+(\beta+\theta)\mbox{P}_{t}+\epsilon_{it}^{1}
+\]
+
+\end_inset
+
+In the pre-period, 
+\begin_inset Formula $\mbox{P}_{t}=0$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{i0}^{1}=\alpha+\gamma+\epsilon_{i0}^{1}
+\]
+
+\end_inset
+
+In the post-period, 
+\begin_inset Formula $\mbox{P}_{t}=0$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{i1}^{1}=\alpha+\gamma+(\beta+\theta)+\epsilon_{i1}^{1}
+\]
+
+\end_inset
+
+The difference
+\begin_inset Formula 
+\[
+\beta+\theta+\epsilon_{i1}^{1}-\epsilon_{i0}^{1}
+\]
+
+\end_inset
+
+captures the effect of treatment 
+\begin_inset Formula $(\theta)$
+\end_inset
+
+ along with other differences between the pre and post periods 
+\begin_inset Formula $(\beta+\epsilon_{i1}^{1}-\epsilon_{i0}^{1})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Next, consider the expected outcomes for 
+\begin_inset Formula $\mbox{TG}_{i}=0$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{it}^{0}=\alpha+\beta\mbox{P}_{t}+\epsilon_{it}
+\]
+
+\end_inset
+
+In the pre-period, 
+\begin_inset Formula $\mbox{P}_{t}=0$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{i0}^{0}=\alpha+\epsilon_{i0}^{0}
+\]
+
+\end_inset
+
+In the post-period, 
+\begin_inset Formula $\mbox{P}_{t}=1$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{i1}^{0}=\alpha+\beta+\epsilon_{i1}^{0}
+\]
+
+\end_inset
+
+The difference
+\begin_inset Formula 
+\[
+\beta+\epsilon_{i1}^{0}-\epsilon_{i0}^{0}
+\]
+
+\end_inset
+
+captures the difference between the pre and post periods.
+\end_layout
+
+\begin_layout Subsubsection*
+The Differences-in-Differences Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As before, the diff-in-diff estimator is
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\theta}_{DD} & = & \left(\bar{y}_{1}^{1}-\bar{y}_{0}^{1}\right)-\left(\bar{y}_{1}^{0}-\bar{y}_{0}^{0}\right)\\
+\hat{\theta}_{DD} & \begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array} & \theta+E\left[\left(\epsilon_{i1}^{1}-\epsilon_{i0}^{1}\right)-\left(\epsilon_{i1}^{0}-\epsilon_{i0}^{0}\right)\right]
+\end{eqnarray*}
+
+\end_inset
+
+From the identifying assumption, the expected change over time for the untreated
+ group
+\begin_inset Formula 
+\[
+E[\beta+\epsilon_{i1}^{0}-\epsilon_{i0}^{0}]
+\]
+
+\end_inset
+
+provides a good counterfactual for the expected change for the treated group
+\begin_inset Formula 
+\[
+E[\beta+\theta+\epsilon_{i1}^{1}-\epsilon_{i0}^{1}]
+\]
+
+\end_inset
+
+in the absence of treatment.
+ This imples that
+\begin_inset Formula 
+\[
+E\left[\epsilon_{i1}^{1}-\epsilon_{i0}^{1}\right]=E\left[\epsilon_{i1}^{0}-\epsilon_{i0}^{0}\right]
+\]
+
+\end_inset
+
+which is often referred to as the 
+\series bold
+\emph on
+common trends assumption
+\series default
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection*
+What Does Diff-in-Diff Provide?
+\end_layout
+
+\begin_layout Itemize
+Unlike differences across time, it is permissible if other (observed or
+ unobserved) factors lead to changes in outcomes, so long as they similarly
+ affect both the treated and the untreated groups.
+\end_layout
+
+\begin_layout Itemize
+Unlike differences across groups, it is permissible if there are (observed
+ or unobserved) differences between groups related to outcomes, so long
+ as they affect outcomes similarly in the pre and post periods.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is evident from the regression equation
+\begin_inset Formula 
+\[
+y_{it}=\alpha+\beta\mbox{P}_{t}+\gamma\mbox{TG}_{i}+\theta(\mbox{P}_{t}\times\mbox{TG}_{i})+\epsilon_{it}
+\]
+
+\end_inset
+
+that we are:
+\end_layout
+
+\begin_layout Itemize
+controlling for systemic differences between the pre and post period that
+ are common to both groups, i.e., 
+\begin_inset Formula $\beta\mbox{P}_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+controlling for systematic differences between the treatment and control
+ groups that are constant over time, i.e., 
+\begin_inset Formula $\gamma\mbox{G}_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Benefits of the Regression Version
+\end_layout
+
+\begin_layout Itemize
+It is convenient, especially for standard errors
+\end_layout
+
+\begin_layout Itemize
+We can control for time varying covariates
+\end_layout
+
+\begin_layout Itemize
+It easily extends to considering multiple treatment and control groups over
+ multiple periods.
+\end_layout
+
+\begin_layout Itemize
+We can consider treatment that happens at different times.
+\end_layout
+
+\begin_layout Itemize
+We can go beyond treatment to consider treatment intensity.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y_{igt}=\alpha_{g}+\alpha_{t}+\theta\mbox{Treated}_{igt}+\epsilon_{igt}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We can control for systematic differences across periods with time-period
+ fixed effects.
+ 
+\end_layout
+
+\begin_layout Itemize
+We can control for systematic differences across groups with group fixed
+ effects.
+ 
+\end_layout
+
+\begin_layout Itemize
+As usual, the estimated effect is on the 
+\begin_inset Quotes eld
+\end_inset
+
+treated
+\begin_inset Quotes erd
+\end_inset
+
+ (i.e., the treatment group following treatment)
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Diff-in-Diff With Multiple Groups
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Do we care how many groups we have or do we simply care about the total
+ number of individuals? Well, it depends on the strcutrue of the error terms.
+ To follow up, if we think that errors are correlated within groups, then
+ it becomes critical that we cluster our stadard errors so that we have
+ a large number of clusters.
+ If the errors are i.i.d., then all observations provide equal information
+ regardless of which cluster they come from.
+ Thus, it does not matter how many clusters we have.
+ A discussion concerning the importance of clustered standard errors is
+ still to come.
+\end_layout
+
+\begin_layout Subsection*
+Finding Applications for Diff-in-Diff
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+After learning about some policy change and/or intervention, we usually
+ employ a diff-in-diff strategy to analyze the resulting effects.
+ The difficult procedure is to find a 
+\bar under
+valid
+\bar default
+ untreated comparison group.
+ In fact, can we even demonstrate that the common trends assumption is reasonabl
+e? In order to do so, we need to present a rhetorical and data driven case.
+ Usually, we don't just do a data search for groups with common trends.
+ Yet, within the appropriate context, selecting on common trends seems reasonabl
+e, i.e., a synthetic control design.
+\end_layout
+
+\begin_layout Section*
+Diff-in-Diff Examples
+\end_layout
+
+\begin_layout Subsection*
+Card (1990)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Question:
+\series default
+ How does immigration affect labor market outcomes for low-skilled natives?
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Source of variation:
+\series default
+ April 1980, Castro allowed Cubans to go to the US via the Port of Maricl.
+ 125,000 immigrants arrived in Miami, and 50% stayed.
+ This represented a 7% increase in the labor force.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Approach:
+\series default
+ Compare changes in Miami to changes in four comparison cities (Atlanta,
+ LA, Houston, Tampa)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Black Unemployment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Comparison Group
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Miami (Treatment Group)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1979 (pre-period)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1981 (post-period)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9.6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Diff
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+2.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+1.3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Diff-in-Diff Estimate: 1.3 - 2.3 = -1.0
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Card and Grueger (1994)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Question:
+\series default
+ How does minimum wages affect employment?
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Source of variation: 
+\series default
+In April 1992, New Jersey increase its minimum wage from $4.25 to $5.05
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Approach:
+\series default
+ Use eastern Pennsylvania as the untreated comparison group
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Employment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PA (Control Group)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NJ (Treatment Group)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pre-period
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+23.33
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20.44
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Post-period
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21.17
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21.03
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Diff
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+-2.16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+.59
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Diff-in-Diff Estimate: .59 - (-2.16) = 2.75
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Remember, diff-in-diff implies an additive structure for potential outcomes,
+ i.e., outcomes are determined by time-invariant state effects and year effects
+ common to all states, plus treatment.
+ So, we can write the model as
+\begin_inset Formula 
+\[
+y_{st}=\beta_{NJ}+\beta_{PA}+\gamma_{Pre}+\gamma_{Post}+\theta\mbox{Treat}_{st}+\epsilon_{st}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The difference between NJ and PA in the pre-period: 
+\begin_inset Formula $\beta_{NJ}-\beta_{PA}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The difference overtime for PA estiamtes: 
+\begin_inset Formula $\gamma_{Post}-\gamma_{Pre}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The difference overtime for NJ estimates: 
+\begin_inset Formula $\theta+(\gamma_{Post}-\gamma_{Pre})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The diff-in-diff estimate: 
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+On the other hand, a fully saturated model only has four parameters.
+ We estimate
+\begin_inset Formula 
+\[
+y_{st}=\alpha+\beta NJ_{s}+\gamma Post_{t}+\theta(NJ_{s}\times Post_{t})+\epsilon_{st}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Expected 
+\begin_inset Formula $y$
+\end_inset
+
+ for PA in the pre-period: 
+\begin_inset Formula $\alpha=\beta_{PA}+\gamma_{Pre}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Expected difference over time for PA: 
+\begin_inset Formula $\gamma=\gamma_{Post}-\gamma_{Pre}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Expected difference between NJ and PA in the pre-period: 
+\begin_inset Formula $\beta=\beta_{NJ}-\beta_{PA}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Expected difference over time for NJ relative to PA: 
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Earned Income Tax Credit
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Question:
+\series default
+ How does generosity affect labor supply?
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Source of variation:
+\series default
+ 1993 ORA increase benefits for single mothers?
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Treated group:
+\series default
+ Single mothers with 2 or more children (big change)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Control group:
+\series default
+ Single mothers with only 1 child (small change)
+\end_layout
+
+\begin_layout Subsection*
+Currie and Walker (2001)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Question:
+\series default
+ How does pollution affect infant health?
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Source of variation: 
+\series default
+Introduction of electronic toll books in NJ and PA
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Treated group:
+\series default
+ Children born to mother's living within 2 kilometers of toll plaza
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Control group:
+\series default
+ Children born to mother's living within 2 to 10 kilometers of toll plaza
+\end_layout
+
+\begin_layout Subsection*
+Cheng and Hoekstra (forthcoming)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Question:
+\series default
+ How do 
+\begin_inset Quotes eld
+\end_inset
+
+stand your ground laws
+\begin_inset Quotes erd
+\end_inset
+
+ affect violence?
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Source of variation:
+\series default
+ 20 states passed some type of 
+\begin_inset Quotes eld
+\end_inset
+
+stand your ground law
+\begin_inset Quotes erd
+\end_inset
+
+ between 2000 and 2010
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Model: 
+\series default
+
+\begin_inset Formula $y_{st}=\beta_{s}+\gamma_{t}+\theta\mbox{LawPassed}_{st}+\epsilon_{st}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Baker and Milligan (forthcoming)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Treatment group:
+\series default
+ Quebec
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Control group:
+\series default
+ The rest of Canada (ROC)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Source of variation: 
+\series default
+There are unique policies in Quebec compared to the ROC.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Approah: 
+\series default
+Extend the analysis to a triple differences (DDD)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Changes among the affected groups in Quebec relative to the same groups
+ in the ROC.
+\end_layout
+
+\begin_layout Itemize
+Changes among the unaffected groups in Quebec relative to the same groups
+ in the ROC.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Common Threats to Diff-in-Diff
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Different Trends
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If the treatment group has a steeper positive trend than the control group,
+ then the estimated effects are positively biased.
+\end_layout
+
+\begin_layout Itemize
+If the treatment group has a flatter positive trend than the control group,
+ then the estimated effects are negatively biased.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Asherfelter's Dip
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+A situation in which selection into treatment is induced by a 
+\begin_inset Quotes eld
+\end_inset
+
+bad shock
+\begin_inset Quotes erd
+\end_inset
+
+ to the outcome.
+ This leads the estimated treatment effect to reflect both the treatment
+ effect and 
+\begin_inset Quotes eld
+\end_inset
+
+getting back to normal
+\begin_inset Quotes erd
+\end_inset
+
+ shocks.
+ Thus, the estimated treatment effect is positively biased.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Idiosyncratic Shocks
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Are any other 
+\begin_inset Quotes eld
+\end_inset
+
+treatments
+\begin_inset Quotes erd
+\end_inset
+
+ specific to the treatment or the control group?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Compositional changes caused by treatment
+\end_layout
+
+\begin_deeper
+\begin_layout Example*
+People move into the treatment group because it is desirable.
+ Then, the change over time for the treatment group reflects the effect
+ of treatment, the effect of the composition change, and the effect of common
+ shocks.
+ The change over time for the control group reflects the effect of common
+ shocks plus the effect of the composition change due to out migration (i.e.,
+ people moving from the control group to the treatment group).
+ Subtracting off the change of the control group from the change of the
+ treatment group does not get rid of the composition effect, it potentially
+ makes it worse.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+One Solution: 
+\series default
+Use individual level data to estimate an 
+\begin_inset Quotes eld
+\end_inset
+
+intent-to-treat
+\begin_inset Quotes erd
+\end_inset
+
+ effect, i.e., estimate effects based on group status when treatment was assigned
+ or occurred.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Extensions of Diff-in-Diff
+\end_layout
+
+\begin_layout Subsection*
+Diff-in-Diff With Dynamic Treatment Effects
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Instead of having a 
+\begin_inset Formula $\mbox{Post}\times\mbox{Treatment}$
+\end_inset
+
+ dummy, we have a set of dummies indicating years leading/lagging treatment.
+\end_layout
+
+\begin_layout Example*
+2 years pre-treatment, 1 year pre-treatment, ..., 4 years post-treatment, 5
+ or more years post-treatment, etc.
+\end_layout
+
+\begin_layout Standard
+The coefficient estimates on the dummies indicating pre-treatment years
+ should be zero, which is a robustness check.
+ The coefficient estimates on the dummies indicating post-treatment years
+ will tell us how the treatment effect varies over time.
+ With an event study, it is better to utilize a diff-in-diff model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is important to note that the set of treatment indicators give us the
+ difference in outcomes relative to omitted leads/lags (controlling for
+ expected changes due to the passage of time, i.e., year effects).
+\end_layout
+
+\begin_layout Example*
+Relative to 3 years or more pre-treatment, if the last indicator was 
+\begin_inset Quotes eld
+\end_inset
+
+5 years post-treatment
+\begin_inset Quotes erd
+\end_inset
+
+ instead of 
+\begin_inset Quotes eld
+\end_inset
+
+5 or more years post-treatment,
+\begin_inset Quotes erd
+\end_inset
+
+ then the difference would be relative to 3 or more years pre-treatment
+ and 6 or more years post-treatment.
+ This is not appropriate if we think 6 or more years are treated.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When utilizing dynamic treatment effects, additional care is needed when:
+\end_layout
+
+\begin_layout Itemize
+Treatment happens at different times
+\end_layout
+
+\begin_layout Itemize
+The panel is not balanced
+\end_layout
+
+\begin_layout Standard
+If either of these situations arise, then all treated individual/states/etc.
+ may not contribute to estimating all lags.
+ Consequently, what seems to be dynamic treatment effects may actually reflect
+ heterogenous treatment effects.
+\end_layout
+
+\begin_layout Example*
+Texas was treated 2 years prior to the end of the panel, while other states
+ are treated earlier.
+ Then,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Texas only contributes to estimates of short-run effects (1 and 2 years
+ post-treatment).
+\end_layout
+
+\begin_layout Itemize
+If the effect for Texas is different from other states, then the estimate
+ will change as we move from 2 to 3 years post-treatment, even if the true
+ treatment effect is time-invariant.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+To overcome these problems, it is common to restrict the sample, or the
+ analysis, so that the same groups contribute to all estimates.
+\end_layout
+
+\begin_layout Subsection*
+Allowing for Differential Trends
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This method allows the treatment and the control groups to have different
+ trends.
+ Thus, we are relaxing the common trends assumption.
+ Instead, we are assuming that common shocks affect the trends of both groups
+ in a similar manner.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For example,
+\begin_inset Formula 
+\[
+y_{st}=\beta_{s}+\psi_{s}t+\gamma_{t}+\theta\mbox{Treated}_{st}+\epsilon_{st}
+\]
+
+\end_inset
+
+The identification of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is based on comparing how outcomes diverge from trend for the treatment
+ group following treatment, relative to how outcomes diverge from trend
+ for the control group.
+ This method requires three or more years of data, but this is not a serious
+ restriction.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Assuming constant treatment effects may lead to especially severe problems
+ here if the assumption is false.
+ According to Wolfers (2006, AER), if the treatment effect is not constant
+ (e.g., it is short lived, it takes time, it changes slope, etc.), then the
+ model is misspecified.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Here are a few additional notes:
+\end_layout
+
+\begin_layout Itemize
+We can think about the model as overcontrolling since the trends may be
+ affected by treatment.
+\end_layout
+
+\begin_layout Itemize
+The estimated trend will be a weighted average of the trend observed in
+ the pre and post periods.
+\end_layout
+
+\begin_layout Itemize
+So, there is no problem if we only have one post-period.
+ 
+\end_layout
+
+\begin_layout Itemize
+Analagously, there is no problem if we estimate the effect for each post-period
+ in a model that allows for dynamic treatment effects.
+\end_layout
+
+\begin_layout Part*
+Panel Data Models
+\end_layout
+
+\begin_layout Section*
+Fixed Effects Models
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We estimate fixed effects (FE) models to control for unobserved fixed omitted
+ variables.
+ The 
+\series bold
+\emph on
+model
+\series default
+\emph default
+ is given by
+\begin_inset Formula 
+\[
+E[y_{it}]=\alpha_{i}+\theta T_{it}+x_{it}^{\prime}\delta+A_{i}^{\prime}\gamma=\alpha_{i}+\theta T_{it}+x_{it}^{\prime}\delta
+\]
+
+\end_inset
+
+The main 
+\series bold
+\emph on
+assumption
+\series default
+\emph default
+ is that selection is based only on observable, time-variant characteristics,
+ i.e., 
+\begin_inset Formula $x_{it}^{\prime}\delta$
+\end_inset
+
+, and time-invariant unobservables, i.e., 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+.
+ Characteristics with time-invariant effects (notice how 
+\begin_inset Formula $A_{i}^{\prime}\gamma$
+\end_inset
+
+ has no 
+\begin_inset Formula $t$
+\end_inset
+
+ subscript) can be estimated, but it would be equivalent to estimating deviation
+s from means.
+ The individual fixed effects capture all time-invariant characteristics
+ with time-invariant effects on outcomes, regardless of whether said characteris
+tics are observable or unobservable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In order to estiamte the FE model, we use a 
+\begin_inset Quotes eld
+\end_inset
+
+demeaning approach.
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{it} & = & \alpha_{i}+\theta T_{it}+x_{it}^{\prime}\delta+\epsilon_{it}\\
+\bar{y}_{i} & = & \alpha_{i}+\theta\bar{T}_{i}+\bar{x}_{i}^{\prime}\delta+\bar{\epsilon}_{i}\\
+(y_{it}-\bar{y}_{i}) & = & (T_{it}-\bar{T}_{i})\theta+(x_{it}-\bar{x}_{i})^{\prime}\delta+(\epsilon_{it}-\bar{\epsilon}_{i})
+\end{eqnarray*}
+
+\end_inset
+
+The estimator obtained from an OLS regression of the third equation is called
+ the 
+\begin_inset Quotes eld
+\end_inset
+
+within estimator,
+\begin_inset Quotes erd
+\end_inset
+
+ or the 
+\begin_inset Quotes eld
+\end_inset
+
+fixed effects estimator.
+\begin_inset Quotes erd
+\end_inset
+
+ In contrast, a 
+\begin_inset Quotes eld
+\end_inset
+
+between estimate
+\begin_inset Quotes erd
+\end_inset
+
+ is obtained from a regression of 
+\begin_inset Formula $\bar{y}_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $\bar{T}_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{x}_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Intuitively, we say that the individual fixed effects, i.e., 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+, are 
+\begin_inset Quotes eld
+\end_inset
+
+absorbed,
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+removed,
+\begin_inset Quotes erd
+\end_inset
+
+ as opposed to being estimated.
+ This way of writing the estimator highlights that individuals serve as
+ their own control, i.e., they provide their own counterfactuals.
+ It also shows that the FE model exploits the fact that we can obtain a
+ consistent estimate of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ without being able to consistently estimate of 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+.
+ Although, it is important to note that this implies we cannot consistently
+ estimate the conditional expectation function.
+\end_layout
+
+\begin_layout Subsection*
+Simple Example
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose we are interested in the effect of sunshine on happiness,
+\begin_inset Formula 
+\[
+H_{i}=\alpha+S_{i}\beta+\epsilon_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\beta$
+\end_inset
+
+ tells us whether those who experience more sunshine are happier.
+ Yet, suppose we are concerned that types of people who live in sunny areas
+ are systemically different in ways that relate to happiness.
+ So instead, we wish to estimate
+\begin_inset Formula 
+\[
+H_{it}=\alpha_{i}+S_{it}\beta+\epsilon_{it}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\beta$
+\end_inset
+
+ tells us whether 
+\begin_inset Quotes eld
+\end_inset
+
+those who experience more sunshine are happier after adjusting for fixed,
+ unobservable characteristics with time-invariant effects.
+\begin_inset Quotes erd
+\end_inset
+
+ To estimate the model, we use a 
+\begin_inset Quotes eld
+\end_inset
+
+demeaning approach,
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{it}-\bar{H}_{i}=(S_{it}-\bar{S}_{i})\beta+(\epsilon_{it}-\bar{\epsilon}_{i})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\beta$
+\end_inset
+
+ tells us whether 
+\begin_inset Quotes eld
+\end_inset
+
+individuals are happier than usual when they experience more sunshine than
+ usual.
+\begin_inset Quotes erd
+\end_inset
+
+ Important to note, selection on time-varying unobservables is a threat!
+ In this example, those unobservables would consist of weekends, holidays,
+ health, etc.
+\end_layout
+
+\begin_layout Subsubsection*
+Real Example: A Family Fixed Effects Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Ashenfelter and Krueger (1994) considered earnings and education among identical
+ twins.
+ Their study was meant to address ability bias, so they assumed that ability,
+ along with other characteristics related to outcomes, are constant among
+ twins.
+ The model they considered was
+\begin_inset Formula 
+\[
+y_{if}=\alpha_{f}+T_{if}\theta+\epsilon_{if}
+\]
+
+\end_inset
+
+So, within families, how is 
+\begin_inset Formula $T$
+\end_inset
+
+ associated with outcomes? 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+However, the study was not convincing.
+ Some twins get more education than their sibling because of different unobserva
+ble characteristics.
+ It would have been more convincing if 
+\begin_inset Quotes eld
+\end_inset
+
+treatment
+\begin_inset Quotes erd
+\end_inset
+
+ would have been outside of the control of the individual.
+\end_layout
+
+\begin_layout Itemize
+Carrel and Hoekstra (2011): Treatment is 
+\begin_inset Quotes eld
+\end_inset
+
+number of classmates from homes with domestic violence.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Lindo (2011): Treatment is 
+\begin_inset Quotes eld
+\end_inset
+
+born after a father's job displacement.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Non-linear Models Are Tricky
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+With non-linear models, the 
+\begin_inset Quotes eld
+\end_inset
+
+demeaning approach
+\begin_inset Quotes erd
+\end_inset
+
+ does not work.
+ We can use an unconditional maximum likelihood (ML) model, in which we
+ include a dummy for each group.
+ Though, this method is usually inconsistent because of an incidental parameters
+ problem (i.e., 
+\begin_inset Formula $T$
+\end_inset
+
+ is fixed, while 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Logit, on the other hand, is an exception because, like in a linear model,
+ the fixed effects can be conditioned.
+ Yet, estimating marginal effects requires estimation of all the parameters,
+ including fixed effects.
+\emph on
+
+\begin_inset Formula 
+\[
+ME_{x_{1i}}=\alpha_{1}F^{\prime}(\alpha_{0}+\alpha_{1}x_{1i}+\alpha_{2}x_{2i})
+\]
+
+\end_inset
+
+
+\emph default
+where 
+\begin_inset Formula $F$
+\end_inset
+
+ is the specified CDF.
+ Thus, FE logit cannot give us the exact 
+\begin_inset Formula $ME_{x_{1i}}$
+\end_inset
+
+, but we get an odds ratio instead.
+\end_layout
+
+\begin_layout Subsection*
+Measurement Error Bias
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The bias of measurement error tends to be worse for FE models because the
+ fixed effects increase the variance of noise relative to the variance of
+ signal.
+ To elaborate, averages contain relatively lots of signal and little noise
+ since the errors cancel out in the average.
+ Yet, by removing the average, the noise to signal ratio increases, which
+ leads to greater bias.
+ This fact is true for different models as well.
+\end_layout
+
+\begin_layout Subsection*
+First-Differencing
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The first-differencing (FD) approach also eliminates fixed effects, and
+ the FD estimator is identical to the FE estimator when 
+\begin_inset Formula $T=2$
+\end_inset
+
+.
+ Though, FD is not as efficient as FE.
+ Intuitively, if there is a policy change, this approach identifies using
+ two observations.
+ Still, one may prefer its identifying assumption:
+\begin_inset Formula 
+\[
+E[\epsilon_{it}-\epsilon_{i,t-1}|x_{it}-x_{i,t-1}]=0
+\]
+
+\end_inset
+
+Even so, FD is not very common.
+\end_layout
+
+\begin_layout Section*
+Random Effect Models
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the model
+\begin_inset Formula 
+\[
+y_{it}=\alpha_{i}+x_{it}^{\prime}\beta+\epsilon_{it}
+\]
+
+\end_inset
+
+The FE model treats 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+ as parameters to be estimated or removed because of its possible correlation
+ with the regressors that would otherwise introduce bias.
+ The random effects (RE) model, on the other hand, treats 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+ as an i.i.d.
+ random variable with mean 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and variance 
+\begin_inset Formula $\sigma_{\alpha}^{2}$
+\end_inset
+
+ that is part of a composite error term.
+ This means that 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+ is assumed to be uncorrelated with the regressors.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+So, RE has nothing to do with addressing bias.
+ Above all, it is about modeling the error term (GLS), which exhibits serial
+ correlation due to the individual component.
+ Also, even though both estimators are consistent, the RE estimator is more
+ efficient than FE if the exogeneity assumption holds.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Formally,
+\begin_inset Formula 
+\[
+y_{it}=c_{i}+x_{it}^{\prime}\beta+\epsilon_{i}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+E[y_{it}|c_{i},x_{it}]=c_{i}+x_{it}^{\prime}\beta
+\]
+
+\end_inset
+
+which assumed by both the RE and FE models.
+ Continuing on,
+\begin_inset Formula 
+\[
+E[y_{it}|x_{it}]=E[c_{i}|x_{it}]+x_{it}^{\prime}\beta
+\]
+
+\end_inset
+
+It is important to note that the RE model assumes that
+\begin_inset Formula 
+\[
+E[c_{i}|x_{it}]=\alpha
+\]
+
+\end_inset
+
+but the FE model does not.
+\end_layout
+
+\begin_layout Section*
+Tests of Internal Validity (Diff-in-Diff and FE)
+\end_layout
+
+\begin_layout Itemize
+Most tests rely on having data long before intervention
+\end_layout
+
+\begin_layout Itemize
+Compare trends in outcome.
+ Sometimes we see a formal test in papers, which is weak.
+\end_layout
+
+\begin_layout Itemize
+Compare trends in observables
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Any deviations coinciding with treatment is a threat
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Look for 
+\begin_inset Quotes eld
+\end_inset
+
+effects
+\begin_inset Quotes erd
+\end_inset
+
+ of programs before they're introduced.
+ This indicates selection into treatment or dissimilar trends, which could
+ be a problem.
+\end_layout
+
+\begin_layout Itemize
+Consider treatment effect dynamics.
+ Do they make sense?
+\end_layout
+
+\begin_layout Itemize
+Look for effects on outcomes in populations where they should not be present.
+ This 
+\begin_inset Quotes eld
+\end_inset
+
+falsification exercise
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+placebo test
+\begin_inset Quotes erd
+\end_inset
+
+ applies to all research designs.
+\end_layout
+
+\begin_layout Subsection*
+Treatment effect heterogeneity
+\end_layout
+
+\begin_layout Enumerate
+Interact the treatment variable with the variable of interest instead, e.g.,
+ 
+\begin_inset Formula $\mbox{Treat}\times\mbox{Male}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Restrict the sample to the group of interest.
+ With this approach, the parameters can vary, and it is the preferred approach.
+ It is known as 
+\begin_inset Quotes eld
+\end_inset
+
+stratfication.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Part*
+A Brief Outline of Diff-in-Diff
+\end_layout
+
+\begin_layout Section*
+Basic Idea
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose we randomly assign treatment to some units (or nature assigns treatment
+ 
+\begin_inset Quotes eld
+\end_inset
+
+as if
+\begin_inset Quotes erd
+\end_inset
+
+ by random assignment).
+ To estimate the treatment effect, we could just compare the treated units
+ before and after treatment.
+ However, we might pick up the effects of other factors that changed around
+ the time of treatment.
+ Therefore, we use a control group to 
+\begin_inset Quotes eld
+\end_inset
+
+difference out
+\begin_inset Quotes erd
+\end_inset
+
+ these confounding factors and isolate the treatment effect.
+ Diff-in-diff brings in an untreated comparison group to tell us how outcomes
+ would have evolved in the absence of treatment.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Motivation: 
+\series default
+\emph default
+To estimate unbiased causal treatment effects under identifying assumptions
+ believed and shown to be reasonable.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Identification Assumption:
+\series default
+\emph default
+ Absent the treatment, the difference between the treatment and control
+ groups would have remained the same in the post-period as in the pre-period.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The change for the control group provides a good counterfactual for the
+ change that would have been observed for the treated group in the absence
+ of treatment.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Unlike differences across time, it is permissible if other (observable or
+ unobservable) factors lead to changes in outcomes, so long as they similarly
+ affect both the treatment and control groups.
+ Unlike differences across groups, it is permissible if there are different
+ factors between groups related to outocmes similarly pre and post.
+\end_layout
+
+\begin_layout Subsection*
+Diff-in-Diff: Without Regression
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+One approach is to simply take the mean value of each group's outcome before
+ and after treatment, and then calculate the 
+\begin_inset Quotes eld
+\end_inset
+
+differences-in-differences
+\begin_inset Quotes erd
+\end_inset
+
+ of the means.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Control
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Treatment
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Before
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C_{B}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{B}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+After
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C_{A}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{A}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mbox{Treatment Effect}=(T_{A}-T_{B})-(C_{A}-C_{B})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Diff-in-Diff: With Regression
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the following model
+\begin_inset Formula 
+\[
+y_{it}=\beta_{0}+\beta_{1}\mbox{Treat}_{i}+\beta_{2}\mbox{After}_{t}+\beta_{3}\mbox{Treat}_{i}\times\mbox{After}_{t}+\epsilon_{it}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mbox{Treat}_{i}=1$
+\end_inset
+
+ if person 
+\begin_inset Formula $i$
+\end_inset
+
+ is in the treatment group and 
+\begin_inset Formula $\mbox{After}_{t}=1$
+\end_inset
+
+ if time 
+\begin_inset Formula $t$
+\end_inset
+
+ is after treatment has occurred.
+ 
+\begin_inset Formula $\beta_{3}$
+\end_inset
+
+ gives us the Diff-in-Diff estimate of the treatment effect.
+\end_layout
+
+\begin_layout Section*
+Tests of Identification
+\end_layout
+
+\begin_layout Enumerate
+Graph the outcomes for treatment and control groups before and after treatment.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Do they appear to be following the same trajectory pre-treatment?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Show how time-varying controls that are exogenous to the treatment vary
+ before and after treatment.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Intuition: If exogenous controls diverge significantly after treatment,
+ it makes one worry that the control group was not really a good counterfactual
+ for the treatment group.
+ Important to note, we are especially worried about diverging changes, not
+ different levels
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Examine whether the diff-in-diff estimator changes when you include time-varying
+ controls that are exogenous to the treatment.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Intuition: If including exogenous time-varying controls causes the estimate
+ to decrease, then we worry that treatment and control groups have diverged
+ anyway.
+ Above all, if including observables changes the estimate, how can we be
+ sure that including unobservables would not change the estimate.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Estimate leading dummy indicators as a placebo test.
+ Do the treatment and control groups diverge pre-treatment?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $y_{it}=\beta_{0}+\beta_{1}\mbox{Year}_{t}+\beta_{2}\mbox{State}_{i}+\beta_{3}(\mbox{Post}\cdot\mbox{Treat})_{it}+\beta_{4}(\mbox{Year Prior to Treat}\cdot\mbox{Treat})_{it}+\epsilon_{it}$
+\end_inset
+
+.
+ Hopefully, 
+\begin_inset Formula $\beta_{4}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Drop all post treatment data, assume treatment occurred one year earlier,
+ two years earlier, etc, and then use the same diff-in-diff research design.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Falsification Test: Use the same research design to show that treatment
+ does not affect outcomes it should not affect.
+\end_layout
+
+\begin_layout Enumerate
+Triple-Difference: Add a third difference
+\end_layout
+
+\begin_layout Enumerate
+Show the effects are larger for subgroups whom you would expect to be more
+ affected, ex-ante.
+\end_layout
+
+\begin_layout Enumerate
+Include state-specific linear time trends: Ask whether deviations from trend
+ in the post-period relative to the pre-period are different for the treatment
+ and control groups.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Going in this direction implies making the case that treatment is the only
+ reason outcomes differ systematically from pre to post.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Common Threats to Diff-in-Diff
+\end_layout
+
+\begin_layout Enumerate
+Different trends
+\end_layout
+
+\begin_layout Enumerate
+Selection into treatment induced by a 
+\begin_inset Quotes eld
+\end_inset
+
+bad shock
+\begin_inset Quotes erd
+\end_inset
+
+ to the outcome
+\end_layout
+
+\begin_layout Enumerate
+Idiosyncratic shocks
+\end_layout
+
+\begin_layout Enumerate
+Compositional changes caused by treatment.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+EX:
+\series default
+ People move into the treatment group because it is desirable
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Additional care is needed when:
+\end_layout
+
+\begin_layout Enumerate
+Treatment happens at different times
+\end_layout
+
+\begin_layout Enumerate
+The panel is not balanced
+\end_layout
+
+\end_body
+\end_document

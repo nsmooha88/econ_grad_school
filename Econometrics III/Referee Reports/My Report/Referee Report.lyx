@@ -1,0 +1,378 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\series bold
+Nathan Smooha
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Referee Report, November 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Within economics, there is a growing area of research that studies the role
+ significant life experiences have in determining life outcomes.
+ While early childhood years have been an important focus, there has been
+ very little study in the existing economic literature concerning how intense
+ psychological experiences in young adulthood affect future outcomes.
+ Military service is an example of a noteworthy event undertaken by a large
+ fraction of young males across the globe.
+ This paper specifically analyzes the effect military training has on the
+ propensity of former military personnel to engage in violent crime.
+ Previous studies, such as Rohlfs (2010) and Lindo & Stoeker (forthcoming),
+ have attempted to measure the effect of military training on violence,
+ but it has been argued that combat is the mechanism driving many of those
+ results.
+ While Galiani et al.
+ (2011) is one previous paper that studied the effects of non-deployed military
+ service on overall crime, the estimates for violent crime were not statisticall
+y significant.
+ Thus, the authors of this paper add to the existing literature because
+ a formal link between army training and violence has not yet been established.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As stated before, the primary aim of the paper was to estimate the effect
+ of army training (not deployment, or combat) on various measures of individual
+ crime perpetration, especially violent crime (Siminski et al., this paper,
+ p.
+ 17).
+ Even though the analysis focused on years when conscription lotteries were
+ implemented, the authors still faced a potential endogeneity problem because
+ army service was not randomly assigned.
+ Many conscripts were screened-out after a medical examination, while a
+ number of service men joined the army voluntarily.
+ Consequently, some unobservable determinants of crime perpetration may
+ have been correlated with army training, so a standard OLS regression would
+ have yielded biased estimates.
+ Instead, the authors employed an instrumental variables approach to estimate
+ the true effect by exploiting the randomness of conscription lotteries.
+ Between 1965 and 1972, 15 biannual birth cohorts were subjected to conscription
+ lotteries, conducted by date of birth, and no one from the last three cohorts
+ was deployed (Siminski et al., this paper, p.
+ 6).
+ So, the authors took advantage of the exogenous variation in the probability
+ of military service resulting from the binary conscription lottery ballot
+ outcome.
+ Also, the effect of the ballot outcome was allowed to vary between cohorts,
+ which lead to an over-identified 2SLS model.
+ The primary identification assumptions of the paper were the following:
+ the ballot outcome was correlated with army training (relevance condition);
+ the only effect the ballot outcome had on crime perpetration was through
+ its effect on army training (exclusion restriction).
+ The outcome data were drawn from criminal cases with male defendants documented
+ in New South Wales, Victoria, and Queensland from 1994 to 2010.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The authors constructed three distinct specifications in order to conduct
+ their analysis.
+ In the preferred analysis, the sample was restricted to the three youngest
+ cohorts because they were not deployed to any combat area.
+ The second specification repeats the previous procedure, but the sample
+ is extended to the full set of 15 birth cohorts.
+ The estimates from this specification are treated as upper bounds on the
+ effect of army training because the authors assume deployment to Vietnam
+ did not reduce subsequent crime perpetration, on average.
+ Finally, the authors obtain estimates from a third specification, using
+ all 15 cohorts, in which they separately identify the effect of army training
+ and the effect of deployment to Vietnam.
+ This strategy relied on the fact that the probability of deployment varied
+ considerably between cohorts of conscripts.
+ Tables 3, 4, and 5 report the results for each specification just describted,
+ respectively.
+ For all three specifications, the authors find little empirical evidence
+ that military training increases the rate of civilian violence.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Main Concerns and Comments
+\end_layout
+
+\begin_layout Itemize
+Administrative data was drawn from criminal court cases heard during 1994-2010
+ in New South Wales, Victoria, and Queensland.
+ The three identified states contain over 77% of the Australian population,
+ but the remaining 23% of the population was not represented in the data.
+ In fact, the authors did not even explain why the remaining Australian
+ states were excluded.
+ It seems as though the sample of cohorts being evaluated originate from
+ all over the country, but these individuals could have committed crimes
+ in any of the excluded states.
+ Because the outcome data is restricted to a specific portion of the population,
+ this could present some selection issues.
+\end_layout
+
+\begin_layout Itemize
+In Section 2, the authors stated that permanent personality shifts due to
+ military training shifts was questionable.
+ However, they failed to consider the effect time has on changes in personality.
+ It is plausible that the effects of military training are more prominent
+ during the earlier years of adulthood, and then they decrease over time.
+ Visual presentations of the reduced-form results show an increasing trend
+ from left to right in the ratio of crimes to population, by birth cohort
+ and ballot outcome.
+ The authors claimed that this trend arose because the data availability
+ window covers a different age range for each cohort.
+ Though, why would differences in age cause this difference? As the results
+ from Lindo & Stoecker (forthcoming) suggest, there is a diminishing marginal
+ effect of military service on violent crime.
+ So, this paper may be disregarding heterogenous time effects because they
+ do not allow the effect of military training to change over time.
+\end_layout
+
+\begin_layout Itemize
+What is the explanation for not including state and/or region fixed effects?
+ If the United States is any indication, then the various states and/or
+ regions in Australia probably have different criminal laws, court procedures,
+ crime rates, conviction rates, philosophies, political biases, etc.
+\end_layout
+
+\begin_layout Itemize
+The authors show the first-stage regression results in Table 2 in order
+ to demonstrate that their instrument is relevant and not subject to the
+ problems associated with weak instruments.
+ However, the authors do not perform any empirical tests to convince the
+ reader that their instrument satisfies the exclusion restriction.
+ While it is reasonable to believe that the binary conscription lottery
+ ballot outcomes were randomly assigned, it still would be beneficial to
+ see tests that verify this conjecture.
+ Note that the random assignment of ballot outcomes implies that, in the
+ population, the distribution of observable characteristics is identical
+ for cohorts who were conscripted and those who were not.
+ The identifying assumption and the entire analysis of the paper hinges
+ on the fact that ballot outcomes were randomly assigned.
+ As a result, the authors should include descriptive statistics of the included
+ observable characteristics.
+ Most importantly, a comparison of means test should be included as a way
+ to test for random assignment.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Minor Concerns and Comments
+\end_layout
+
+\begin_layout Itemize
+The authors presented an overly drawn out explanation of the potential connectio
+ns between military training and violent crime.
+ In addition, they provided a thorough description of National Service in
+ Australia.
+ For over 10 pages, the authors explained the possible reasons why exposure
+ to military training, specifically, could lead a former soldier to perpetuate
+ violent crime.
+ Sections 2 and 3 could easily be reduced without hindering the overall
+ message conveyed by the authors.
+ Instead, I would suggest extending Sections 4 and 5, which outline methods
+ and data, respectively.
+\end_layout
+
+\begin_layout Itemize
+Did the authors control for any individual-level determinants of crime perpetrat
+ion on the right-hand side of the linear function? If not, what is their
+ reasoning for omitting these control variables?
+\end_layout
+
+\begin_layout Itemize
+The authors did not present estimates of the treatment effect from a simple
+ OLS regression.
+ They described two scenarios that could cause the OLS estimation to yield
+ biased and inconsistent estimates of the treatment effect.
+ However, the actual OLS results would have confirmed their reasoning, and
+ the OLS results could have been compared with the results from the three
+ 2SLS specifications.
+\end_layout
+
+\begin_layout Itemize
+Visual presentations of the reduced-form results are discussed in Section
+ 6.2, but this graphical summary is insufficient.
+ It is often common practice to include the actual results from the reduced-form
+ estimation in order to compare them with the 2SLS estimates.
+ In fact, there are distinct advantages to the reduced-form approach, such
+ as obtaining unbiased OLS estimates, even in finite samples.
+\end_layout
+
+\begin_layout Itemize
+In the second-stage, recent migrants were unable to be excluded from the
+ crime database.
+ To alleviate this problem, the first-stage data included synthesized records
+ for migrants who arrived in Australia after the age of 20.
+ How were these synthesized records constructed? Siminski and Ville (2012),
+ which used the same approach, was cited by the authors, but a brief discussion
+ on the synthesized records would be helpful.
+\end_layout
+
+\begin_layout Itemize
+Individual-level data was unavailable in the second-stage regression.
+ Instead, the authors utilized a group-means approach to obtain point estimates
+ identical to that of individual data, as well as consistently estimated
+ standard errors.
+ Further explanation of the specific GLS procedure would be helpful, such
+ as the estimation of the standard errors, and the exact calculation of
+ the GLS weights.
+ Moreover, the subscripts in equations (2) and (4) on the treatment variable
+ do not match.
+\end_layout
+
+\begin_layout Itemize
+As a robustness test, the authors showed alternate 2SLS estimates in Tables
+ 6 and 7 that were generated using just-identified models, which were identical
+ to the models used for Tables 3 and 4, respectively.
+ The estimates were similar to the main results, but less precise.
+ For other robustness tests, the authors can conduct a test of over-identifying
+ moment restrictions.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+Lindo, Jason M and Stoecker, Charles (forthcoming), 'Drawn into Violence:
+ Evidence on 'What Makes a Criminal' from the Vietnam Draft Lotteries',
+ Economic Inquiry.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+Siminski, Peter (forthcoming), 'Employment Effects of Army Service and Veterans’
+ Compensation: Evidence from the Australian Vietnam-Era Conscription Lotteries',
+ Review of Economics and Statistics.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+Siminski, Peter and Ville, Simon (2011), 'Long-Run Mortality Effects of
+ Vietnam-Era Army Service: Evidence from Australia’s Conscription Lotteries',
+ American Economic Review: Papers & Proceedings, 101 (3), 345–49.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+Siminski, Peter and Ville, Simon (2012), 'I Was Only Nineteen, 45 Years
+ Ago: What Can we Learn from Australia’s Conscription Lotteries?', Economic
+ Record, 88 (282), 351-71.
+\end_layout
+
+\end_body
+\end_document

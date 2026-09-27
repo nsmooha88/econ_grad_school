@@ -1,0 +1,3520 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Set 4 - Instrumental Variables
+\end_layout
+
+\begin_layout Part*
+A Formal Discussion of IV
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose we have an outcome equation (i.e., second stage):
+\begin_inset Formula 
+\[
+y_{i}=\alpha+\theta T_{i}+x_{i}^{\prime}\beta+\epsilon_{i}
+\]
+
+\end_inset
+
+and a participation equation (i.e., first stage):
+\begin_inset Formula 
+\[
+T_{i}=\gamma+x_{i}^{\prime}\pi_{0}+v_{i}
+\]
+
+\end_inset
+
+We are concerned that 
+\begin_inset Formula $E[\epsilon_{i}v_{i}|x_{i}]\ne0$
+\end_inset
+
+.
+ The path diagram version of the endogeneity problem: Treatment 
+\begin_inset Formula $(T)$
+\end_inset
+
+ affects outcomes 
+\begin_inset Formula $(y)$
+\end_inset
+
+, but the error term 
+\begin_inset Formula $(\epsilon)$
+\end_inset
+
+ in the outcome equation influences both 
+\begin_inset Formula $T$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ The motivation behind the instrumental variables method is to isolate the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+as-good-as-random
+\begin_inset Quotes erd
+\end_inset
+
+ variation in a treatment variable.
+ The method is used to address the problem of selection on unobservables.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The IV solution is to find another variable (or set of variables) that belongs
+ in the participation equation, but not the outcome equation.
+ Let us denote this set of variables as 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+.
+ Then, we use the variation that these variables produce.
+ Rewriting the participation equation, we have
+\begin_inset Formula 
+\[
+T_{i}=\gamma+x_{i}^{\prime}\pi_{0}+z_{i}^{\prime}\pi_{1}+v_{i}
+\]
+
+\end_inset
+
+where:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x_{i}:$
+\end_inset
+
+ observables that belong in the outcome equation, i.e., exogeneous covariates.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $z_{i}:$
+\end_inset
+
+ observables that belong in the participation equation, but not the outcome
+ equation.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{i}:$
+\end_inset
+
+ unobservables of the participation equation, some of which may also belong
+ in the outcome equation.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T_{i}:$
+\end_inset
+
+ endogenous variable, which is determined within the system
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For IV estimation to work, we need
+\end_layout
+
+\begin_layout Enumerate
+A valid, or nontrivial, first stage: 
+\begin_inset Formula $\pi_{1}\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+A valid exclusion restriction: 
+\begin_inset Formula $E[z_{i}\cdot\epsilon_{i}|x_{i}]=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+The Ideal Instrument
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An ideal instrument is as good as randomlly assigned.
+ Also, the instrument should have no effect on outcomes other than through
+ the first-stage.
+ Where can we find an instrumental variable? Good instruments usually come
+ from institutional knowledge and the mechanisms about the processes that
+ determine the variable of interest.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Identifying Assumption: 
+\series default
+\emph default
+An IV 
+\begin_inset Formula $z$
+\end_inset
+
+ is not related to any other variable that may affect 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ 
+\begin_inset Formula $z$
+\end_inset
+
+ is only related to 
+\begin_inset Formula $y$
+\end_inset
+
+ through its affect on 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Intuition Behind IV Estimation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose the instrument increases the endogenous variable (ex: schooling)
+ by 0.2 and the outcome variable (ex: earnings) by 400.
+ If the instrument is valid, then it is correct to say that an increase
+ in earnings is a consequence of the increase in education.
+ To elaborate, an increase in eduction causes an increase in earnings, i.e.,
+ a one unit increase in education causes a 2000 unit increase in earnings.
+\begin_inset Formula 
+\[
+\mbox{Earn}_{i}=\alpha+\beta\cdot\mbox{Educ}_{i}+\epsilon_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In practice, the IV method is about estimating:
+\end_layout
+
+\begin_layout Enumerate
+The effect of the instrument on the outcome (reduced-form)
+\end_layout
+
+\begin_layout Enumerate
+The effect of the instrument on the endogenous variable (first-stage)
+\end_layout
+
+\begin_layout Subsection*
+Intuitive Derivation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the following equation:
+\begin_inset Formula 
+\[
+y_{i}=T_{i}\beta+\epsilon_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+ is endogenous.
+ Let 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ be a valid instrument for 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+.
+ We can formulate the reduced-form and first-stage equations, respectively:
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{i} & = & z_{i}\pi_{1}+u_{i}\\
+T_{i} & = & z_{i}\pi_{2}+e_{i}
+\end{eqnarray*}
+
+\end_inset
+
+Then, we obtain an estimate for 
+\begin_inset Formula $\beta$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\beta=\frac{\pi_{1}}{\pi_{2}}=\frac{\nicefrac{\mbox{Cov}(y_{i},z_{i})}{\mbox{Var}(z_{i})}}{\nicefrac{\mbox{Cov}(T_{i},z_{i})}{\mbox{Var}(z_{i})}}=\frac{\mbox{Cov}(y_{i},z_{i})}{\mbox{Cov}(T_{i},z_{i})}
+\]
+
+\end_inset
+
+which is just the reduced-form estimate divided by the first-stage estimate.
+ Note that the IV estimand is predicated on the notion that the first-stage
+ is not zero.
+ 
+\end_layout
+
+\begin_layout Note*
+If the first stage is only marginally significantlly different from zero,
+ the resulting IV estimates are unlikely to be informative.
+\end_layout
+
+\begin_layout Standard
+We can also formulate a more direct derivation of 
+\begin_inset Formula $\beta$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\mbox{Cov}(y_{i},z_{i}) & = & \mbox{Cov}(T_{i}\beta+\epsilon_{i},z_{i})\\
+ & = & \mbox{Cov}(T_{i}\beta+\epsilon_{i},z_{i})+Cov(\epsilon_{i},z_{i})\\
+ & = & \beta\mbox{Cov}(T_{i},z_{i})+0\ \mbox{(by excludability assumption)}\\
+\beta & = & \frac{\mbox{Cov}(y_{i},z_{i})}{\mbox{Cov}(T_{i},z_{i})}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+When Variables Are Correlated With the Instrument and Outcome
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If the variable that is correlated with the instrument is unobservable,
+ then the exclusion restriction does not hold.
+ If the variable that is correlated with the instrument is observed 
+\begin_inset Formula $(x)$
+\end_inset
+
+, then we need to make sure the estimated effects of 
+\begin_inset Formula $z$
+\end_inset
+
+ aren't confounded by 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ We want to use the part of 
+\begin_inset Formula $z$
+\end_inset
+
+ that is independent of 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ So, we use 
+\begin_inset Formula $\tilde{z}_{i}$
+\end_inset
+
+, where 
+\begin_inset Formula $\tilde{z}_{i}$
+\end_inset
+
+ is the residual from a regression of 
+\begin_inset Formula $z$
+\end_inset
+
+ on 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\[
+\beta_{IV}=\frac{\mbox{Cov}(y_{i},\tilde{z}_{i})}{\mbox{Cov}(T_{i},\tilde{z}_{i})}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+As a matter of practice, when we believe exogenous covariates belong in
+ the outcome equation, we include them in the first-stage regression.
+ By construction, this ensures that we only use the variation in 
+\begin_inset Formula $z$
+\end_inset
+
+ that is orthogonal to 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ This is a two-stage least squares (2SLS) estimate.
+ 
+\end_layout
+
+\begin_layout Note*
+The standard errors from the second-stage are incorrect (too small), so
+ we will over reject the true estimate.
+\end_layout
+
+\begin_layout Section*
+Alternative Derivation of 
+\begin_inset Formula $\beta_{IV}$
+\end_inset
+
+ (using matrix notation)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the following equation
+\begin_inset Formula 
+\[
+y=X\beta+\epsilon
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $y$
+\end_inset
+
+ is 
+\begin_inset Formula $n\times1$
+\end_inset
+
+, 
+\begin_inset Formula $X$
+\end_inset
+
+ is 
+\begin_inset Formula $n\times k$
+\end_inset
+
+, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is 
+\begin_inset Formula $k\times1$
+\end_inset
+
+, and 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ is 
+\begin_inset Formula $n\times1$
+\end_inset
+
+.
+ Suppose one variable in 
+\begin_inset Formula $X$
+\end_inset
+
+ is endogenous.
+ Define 
+\begin_inset Formula $Z$
+\end_inset
+
+ as the exogenous components and the instrument.
+ So, 
+\begin_inset Formula $Z$
+\end_inset
+
+ is also 
+\begin_inset Formula $n\times k$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\begin{eqnarray*}
+Z^{\prime}y & = & Z^{\prime}X\beta+Z^{\prime}\epsilon\\
+\beta & = & \left(Z^{\prime}X\right)^{-1}Z^{\prime}y+\left(Z^{\prime}X\right)^{-1}Z^{\prime}\epsilon\\
+\hat{\beta}_{IV} & = & \left(Z^{\prime}X\right)^{-1}Z^{\prime}y
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Note that the estimator is biased,
+\begin_inset Formula 
+\begin{eqnarray*}
+E[\hat{\beta}_{IV}] & = & E\left[\left(Z^{\prime}X\right)^{-1}Z^{\prime}y\right]\\
+ & = & E\left[\left(Z^{\prime}X\right)^{-1}Z^{\prime}X\beta+\left(Z^{\prime}X\right)^{-1}Z^{\prime}\epsilon\right]\\
+ & = & \beta+E\left[(Z^{\prime}X)^{-1}Z^{\prime}\epsilon\right]
+\end{eqnarray*}
+
+\end_inset
+
+According to Cameron and Trivedi (page 108), there is no simple way to obtain
+ 
+\begin_inset Formula $E[\hat{\beta}_{IV}]$
+\end_inset
+
+.
+ The expectation operator does not pass through the non-linear function.
+ However, the estimator is still consistent, and consistency is easily demonstra
+ted
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta}_{IV} & = & \beta+(Z^{\prime}X)^{-1}Z^{\prime}\epsilon\\
+\mbox{p\lim}\ \hat{\beta}_{IV} & = & \beta+\mbox{p\lim}\ \left(N^{-1}Z^{\prime}X\right)^{-1}\cdot\mbox{p\lim}\ N^{-1}Z^{\prime}\epsilon\\
+ & = & \beta+\left[E(Z^{\prime}X)\right]^{-1}\cdot E(Z^{\prime}\epsilon)\\
+ & = & \beta\ \ (\mbox{since}\ E(Z^{\prime}\epsilon)=0)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+The 2SLS Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, let us consider the more general setting.
+ Let 
+\begin_inset Formula $\mbox{dim}(Z)=r$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{dim}(X)=k$
+\end_inset
+
+.
+ The model is just-identified if 
+\begin_inset Formula $r=k$
+\end_inset
+
+, it is over-identified if 
+\begin_inset Formula $r>k$
+\end_inset
+
+, and it is under-identified if 
+\begin_inset Formula $r<k$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $X$
+\end_inset
+
+ is 
+\begin_inset Formula $n\times k$
+\end_inset
+
+ and 
+\begin_inset Formula $Z$
+\end_inset
+
+ is 
+\begin_inset Formula $n\times r$
+\end_inset
+
+, where 
+\begin_inset Formula $r\geq k$
+\end_inset
+
+.
+ The general estimator we obatain is the 2SLS estimator:
+\begin_inset Formula 
+\[
+\hat{\beta}_{2SLS}=(\hat{X}^{\prime}\hat{X})^{-1}\hat{X}^{\prime}y
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{X}=Z\hat{\Pi}$
+\end_inset
+
+, and 
+\begin_inset Formula $\hat{\Pi}$
+\end_inset
+
+ is estimated from
+\begin_inset Formula 
+\[
+X=Z\Pi+v
+\]
+
+\end_inset
+
+Hence,
+\begin_inset Formula 
+\[
+\hat{X}=Z(Z^{\prime}Z)^{-1}Z^{\prime}X=P_{Z}X
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $P_{Z}$
+\end_inset
+
+ is symmetric and idempotent.
+ Thus, the 2SLS estimator can be rewritten as:
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta}_{2SLS} & = & (\hat{X}^{\prime}\hat{X})^{-1}\hat{X}^{\prime}y\\
+ & = & \left[(P_{Z}X)^{\prime}(P_{Z}X)\right]^{-1}(P_{Z}X)^{\prime}y\\
+ & = & \left(X^{\prime}P_{Z}^{\prime}P_{Z}X\right)^{-1}X^{\prime}P_{Z}^{\prime}y\\
+ & = & \left(X^{\prime}P_{z}X\right)^{-1}X^{\prime}P_{z}y\\
+ & = & \left[X^{\prime}Z(Z^{\prime}Z)^{-1}Z^{\prime}X\right]^{-1}X^{\prime}Z(Z^{\prime}Z)^{-1}Z^{\prime}y
+\end{eqnarray*}
+
+\end_inset
+
+The bonus of this general approach is that we can use variation from multiple
+ instruments, which improves efficiency.
+ We could perform the estimation in two steps, but the standard errors are
+ too small.
+\end_layout
+
+\begin_layout Subsection*
+Asymptotic Distribution of the 2SLS Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can rewrite the 2SLS estimator as
+\begin_inset Formula 
+\[
+\hat{\beta}_{2SLS}=\beta+\left[X^{\prime}Z(Z^{\prime}Z)^{-1}Z^{\prime}X\right]^{-1}\left[X^{\prime}Z(Z^{\prime}Z)^{-1}Z^{\prime}\epsilon\right]
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+By the CLT, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\sqrt{N}\left(\hat{\beta}-\beta\right) & \begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array} & \left[E(X^{\prime}Z)\left[E(Z^{\prime}Z)\right]^{-1}E(Z^{\prime}X)\right]^{-1}\left[E(X^{\prime}Z)\left[E(Z^{\prime}Z)\right]^{-1}\right]\cdot N\left(0,E\left(Z^{\prime}\epsilon\epsilon^{\prime}Z\right)\right)\\
+ & = & N\left(0,V_{R}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that 
+\begin_inset Formula $A\cdot N(0,B)=N(0,ABA^{\prime})$
+\end_inset
+
+.
+ 
+\begin_inset Formula $V_{R}$
+\end_inset
+
+ is the robust variance matrix 
+\begin_inset Formula 
+\[
+V_{R}=\left(X^{\prime}P_{Z}X\right)^{-1}X^{\prime}Z(Z^{\prime}Z)^{-1}S(Z^{\prime}Z)^{-1}Z^{\prime}X\left(X^{\prime}P_{Z}X\right)^{-1}
+\]
+
+\end_inset
+
+and it is estimated by 
+\begin_inset Formula $\hat{V}_{R}$
+\end_inset
+
+, where the expectations in 
+\begin_inset Formula $V_{R}$
+\end_inset
+
+ are replaced by sample averages.
+\begin_inset Formula 
+\[
+\hat{V}(\hat{\beta}_{2SLS})=\left(X^{\prime}P_{Z}X\right)^{-1}X^{\prime}Z(Z^{\prime}Z)^{-1}S(Z^{\prime}Z)^{-1}Z^{\prime}X\left(X^{\prime}P_{Z}X\right)^{-1}
+\]
+
+\end_inset
+
+With heteroskedasticity, 
+\begin_inset Formula 
+\[
+\hat{S}=\left(N^{-1}{\displaystyle \sum_{i=1}^{N}}\hat{\epsilon}_{i}^{2}z_{i}z_{i}^{\prime}\right)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{\epsilon}_{i}=y_{i}-x_{i}^{\prime}\hat{\beta}_{2SLS}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Angrist and Krueger (1992)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the following thought experiment: the combination of school entry
+ cutoffs and compulsory schooling laws leads to variation in education predicted
+ by quarter of birth (QOB).
+ For example, a child must be six by January 1st to begin school, and the
+ law requires attendance until 16.
+ So, if a child was born between September to December, then he could start
+ school at age 5; he would be in the 11th grade at age 16.
+ If a child was born between January to March, then he would have to wait
+ an extra year before attending school; he would be in the 10th grade at
+ age 16.
+ As a result, otherwise identical children get different education becase
+ of these institutions.
+ Thus, the authors use QOB as an instrument, which is available in the census
+ data.
+\end_layout
+
+\begin_layout Subsection*
+2SLS Estimation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The authors could have simply used 
+\begin_inset Quotes eld
+\end_inset
+
+born in quarter 1
+\begin_inset Quotes erd
+\end_inset
+
+ as instrument.
+ Alternatively, they could use QOB, or QOB interacted with cohort, where
+ a cohort is associated with birth year.
+ This method seems desirable for efficiency, and it is the approach employed
+ by the authors.
+ So, the preferred set of instruments is 
+\begin_inset Formula $QOB\times YOB$
+\end_inset
+
+.
+ Now, we have the participation equation
+\begin_inset Formula 
+\[
+E_{ijc}=X_{ijc}\Pi+\alpha_{c}+\alpha_{jc}+\epsilon_{ijc}
+\]
+
+\end_inset
+
+and the outcome equation
+\begin_inset Formula 
+\[
+\log W_{ijc}=X_{ijc}\beta+\lambda_{c}+\rho E_{ijc}+u_{ijc}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $E_{ijc}$
+\end_inset
+
+ and 
+\begin_inset Formula $W_{ijc}$
+\end_inset
+
+ are the education and wage levels, respectively, for person 
+\begin_inset Formula $i$
+\end_inset
+
+, born in quarter 
+\begin_inset Formula $j$
+\end_inset
+
+, and part of cohort 
+\begin_inset Formula $c$
+\end_inset
+
+, 
+\begin_inset Formula $X_{ijc}$
+\end_inset
+
+ contains individual characteristics, 
+\begin_inset Formula $\alpha_{c}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{c}$
+\end_inset
+
+ are cohort fixed effects, 
+\begin_inset Formula $\alpha_{jc}$
+\end_inset
+
+ is QOB and cohort fixed effects, and 
+\begin_inset Formula $\epsilon_{ijc}$
+\end_inset
+
+ is the error term.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Why did the authors include 
+\begin_inset Formula $\alpha_{c}$
+\end_inset
+
+? Well, earlier cohorts will tend to have less education, but they may have
+ higher earnings because they are older, which could lead to bias.
+ With cohort fixed effects, we are using the variation in QOB within cohorts,
+ which fits the thought experiment.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Identifying assumption without cohort fixed effects:
+\series default
+ The year and QOB interaction relates to earnings only through completed
+ education.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Identifying assumption with cohort fixed effects:
+\series default
+ Conditional on being born in a given year, the year and QOB interaction
+ is only related to earnings through completed education.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The authors could have also controlled for QOB, then the identifying variation
+ changes would be based on the change in the relationship between QOB and
+ education across cohorts.
+ This would address the possibility that there may be systematic differences
+ across those born in different quarters if these differences are constant
+ over time.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Above all, the authors were trying to utilize as much variation as possible.
+ So, they use the interaction between state and QOB as additional instruments.
+ They use the fact that the link between QOB and education is stronger in
+ some states than others after controlling for state fixed effects.
+\end_layout
+
+\begin_layout Subsection*
+Impacts
+\end_layout
+
+\begin_layout Itemize
+Contributed to the literature concerning weak instruments: 2SLS biased towards
+ OLS with weak instruments, even with a large sample size.
+\end_layout
+
+\begin_layout Itemize
+The authors used the variation predicted by the timing of births, but QOB
+ is not random.
+ There is seasonality in births, and it varies across socio-economic status.
+ Yet, the exact DOB is arguably random.
+\end_layout
+
+\begin_layout Itemize
+What about estimating the effect of school starting ages on outcomes in
+ school, such as first grade test scores?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A child who starts early will necessarily be younger when they take the
+ test.
+ So, we cannot separate the two.
+ This is a fundamentally unidentified question.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+How about using school starting ages to get at the effects of attainment?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The exclusion restriction is not valid because school starting ages affects
+ quality of education, such as peer group dynamics (which could have a direct
+ effect on educational outcomes), as well as quantity.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Additional Thoughts
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There is another way to think about this paper.
+ The effects of 
+\begin_inset Formula $QOB\times YOB$
+\end_inset
+
+, which is the preferred set of instruments, on education will reflect differenc
+es in:
+\end_layout
+
+\begin_layout Enumerate
+Education across QOB
+\end_layout
+
+\begin_layout Enumerate
+Education across YOB
+\end_layout
+
+\begin_layout Enumerate
+The link between education and QOB across YOB.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Angrist and Krueger don't argue that YOB doesn't belong in the outcome equation,
+ nor could they.
+ So, it's critical that they control for YOB when they use the 
+\begin_inset Formula $QOB\times YOB$
+\end_inset
+
+ instrument.
+ Though, given that they have made the case that QOB does not belong in
+ the outcome equation, one can see why they would not control for QOB even
+ though they could.
+ Moreover, recall that the whole reason they use the broader set of instruments
+ was to try to improve efficiency, i.e., to use 
+\series bold
+more
+\series default
+ variation than they get with QOB alone (quarters 1 and 3, instead of just
+ quarter 1).
+ Controlling for QOB would throw out the variation, which would be bad for
+ efficiency.
+ However, if you believe QOB belongs in the outcome equation, then it would
+ be the right thing to do.
+ Of course, all of this discussion abstracts away from the weak instruments
+ problem.
+\end_layout
+
+\begin_layout Section*
+Wald Estimator
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The Wald Estimator is a special case of IV.
+ It can be obtained when we have a just identified model with no covariates,
+ and the instrument 
+\begin_inset Formula $z$
+\end_inset
+
+ is a binary variable.
+ So, we can get the IV estimate by comparing group means:
+\begin_inset Formula 
+\[
+\hat{\beta}_{Wald}=\frac{\bar{y}_{z=1}-\bar{y}_{z=0}}{\bar{T}_{z=1}-\bar{T}_{z=0}}=\frac{\nicefrac{dy}{dz}}{\nicefrac{dT}{dz}}
+\]
+
+\end_inset
+
+The denominator 
+\begin_inset Quotes eld
+\end_inset
+
+scales up
+\begin_inset Quotes erd
+\end_inset
+
+ the mean difference in outcomes to account for the fact that the instrument
+ has an effect on treatment, i.e., 
+\begin_inset Formula $T>1$
+\end_inset
+
+ or 
+\begin_inset Formula $T<1$
+\end_inset
+
+.
+ Also, note that 
+\begin_inset Formula $z$
+\end_inset
+
+ signifies the offer of treatment, not if treatment is actually received.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The Wald Estimator is useful for field experiments:
+\end_layout
+
+\begin_layout Itemize
+There is random assignment, so no covariates are needed.
+\end_layout
+
+\begin_layout Itemize
+The compliance rate does not equal 100%, and often the controls 
+\begin_inset Quotes eld
+\end_inset
+
+can get treatment
+\begin_inset Quotes erd
+\end_inset
+
+ serves as an instrument for treatment.
+ The effect of the offer on outcomes, i.e.,
+\begin_inset Formula 
+\[
+\bar{y}_{z=1}-\bar{y}_{z=0}
+\]
+
+\end_inset
+
+is known as the 
+\series bold
+\emph on
+intent-to-treat effect (ITT)
+\series default
+\emph default
+.
+ The effect of the offer on treatment, i.e., 
+\begin_inset Formula 
+\[
+\bar{T}_{z=1}-\bar{T}_{z=0}
+\]
+
+\end_inset
+
+is known as the 
+\series bold
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+take up rate
+\series default
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ when we can exclude the control group from the treatment group.
+ Note that 
+\begin_inset Formula $\bar{T}_{z=1}$
+\end_inset
+
+ is known as the 
+\series bold
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+complicance rate,
+\begin_inset Quotes erd
+\end_inset
+
+
+\series default
+\emph default
+ i.e., people who were offered treatment and chose to accept it.
+ 
+\begin_inset Formula $\bar{T}_{z=0}$
+\end_inset
+
+ represents the fraction of people who were not offered treatment, but still
+ obtained treatment.
+\end_layout
+
+\begin_layout Itemize
+The effect of treatment can be obtained as follows:
+\begin_inset Formula 
+\[
+\frac{\mbox{ITT}}{\mbox{Take Up Rate}}
+\]
+
+\end_inset
+
+Note that the ITT may be the estimate that is policy relevant.
+\end_layout
+
+\begin_layout Section*
+Two Sample IV/2SLS
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Here, we use different samples to estimate the reduced-form and/or 1st-stage
+ regressions.
+ The outcome is in one data set, the endogenous variable is in another,
+ and the instrument is in both.
+ Though, if a variable belongs in the outcome equation, then both equations
+ need it.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For example, suppose we have the outcome and the instrument in data set
+ 1 and the endogenous variable and the instrument in data set 2.
+ We wish to estimate
+\begin_inset Formula 
+\[
+y=\alpha+\beta X_{1}+\epsilon
+\]
+
+\end_inset
+
+Even though we only have 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ (the endogenous variable in data set 2), we obtain a predicted value for
+ 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ from the first-stage regression
+\begin_inset Formula 
+\[
+X_{2}=Z_{2}\Pi+v
+\]
+
+\end_inset
+
+Then, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\theta}_{IV}=\left(\nicefrac{Z_{2}^{\prime}X}{n_{2}}\right)^{-1}\left(\nicefrac{Z_{1}^{\prime}y}{n_{1}}\right)
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\hat{\theta}_{2SLS}=\left(\hat{X}_{1}^{\prime}\hat{X}_{1}\right)^{-1}\left(\hat{X}_{1}y\right)
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+\hat{X}_{1}=Z_{1}\left(Z_{2}^{\prime}Z_{2}\right)^{-1}Z_{2}^{\prime}X_{2}
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $\hat{\theta}_{2SLS}$
+\end_inset
+
+ corrects for differences in the distribution of 
+\begin_inset Formula $Z$
+\end_inset
+
+ across the data sets.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Examples:
+\end_layout
+
+\begin_layout Itemize
+Angrist and Krueger (JASA, 1992): 1960 census to estimate effect of QOB
+ on school entry.
+ 1980 census to estimate the effect of QOB on completed education.
+ Combining gives us effect of age at entry on attainment.
+\end_layout
+
+\begin_layout Itemize
+Dee and Evans (JOLE, 2003): Shows that lowering minimum legal drinking age
+ increases teen drinking.
+ Shows that there is no effect of lowering minimum legal drinking age on
+ educational attainment in another.
+\end_layout
+
+\begin_layout Itemize
+Lindo and Stoecker (forthcoming): Exact date of birth affects draft eligibility
+ for Vietnam chorts.
+ 2000 Census: estimate the effect of draft eligibility on military service.
+ Using inmate data and birth data to estimate effect of eligibility on incarcera
+tion rates.
+\end_layout
+
+\begin_layout Section*
+Measurement Error (Classical)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If we have classical measurement error (ME) in the outcome (i.e., on the LHS),
+ then the estimates are still unbiased, but they are less precise.
+ The estimator we obtain is inefficient because the standard errors are
+ too big.
+ However, classical ME in the regressor (i.e., on the RHS) causes the estimates
+ to be biased towards zero, which is known as 
+\series bold
+\emph on
+attenuation bias
+\series default
+\emph default
+.
+ IV is a solution to measurement error on the RHS.
+\end_layout
+
+\begin_layout Subsection*
+Intuition
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the true model
+\begin_inset Formula 
+\[
+y=\alpha+\beta x^{*}+\epsilon
+\]
+
+\end_inset
+
+Instead, we estimate
+\begin_inset Formula 
+\[
+y=\alpha+\beta x+\epsilon
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x=x^{*}+u$
+\end_inset
+
+ and 
+\begin_inset Formula $u$
+\end_inset
+
+ is a random error term.
+ So, what we are actually estimating is
+\begin_inset Formula 
+\[
+y=\alpha+\beta(x^{*}+u)+\epsilon
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Now, 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is a/an (variance) average of the effect of 
+\begin_inset Formula $x^{*}+u$
+\end_inset
+
+.
+ Since the effect of 
+\begin_inset Formula $u$
+\end_inset
+
+ is zero, then 
+\begin_inset Formula $|\hat{\beta}|<\beta$
+\end_inset
+
+.
+ Alternatively, we can think of estimating the regression equation such
+ that we have restricted the effect of 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ to be the same as 
+\begin_inset Formula $u$
+\end_inset
+
+, i.e.,
+\begin_inset Formula 
+\[
+y=\alpha+\beta x^{*}+\beta u+\epsilon
+\]
+
+\end_inset
+
+But, in reality,
+\begin_inset Formula 
+\[
+y=\alpha+\beta x^{*}+\gamma u+\epsilon
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\gamma=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Magnitude of Bias
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The magnitude of bias depends on the extent to which the variation in 
+\begin_inset Formula $x$
+\end_inset
+
+ reflects the variaiton in 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+versus 
+\begin_inset Formula $u$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+\mbox{p}\lim\ \hat{\beta} & = & \frac{\sigma_{x^{*}}^{2}}{\sigma_{x^{*}}^{2}+\sigma_{u}^{2}}\beta\\
+ & = & v\beta
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $v$
+\end_inset
+
+ is known as the reliability ratio, or the signal-to-total variance ratio.
+\end_layout
+
+\begin_layout Subsection*
+Contamination Bias
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the following equation:
+\begin_inset Formula 
+\[
+y=\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+\epsilon
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ is measured with error.
+ So, 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ is attenuated (i.e., biased toward zero).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Note that 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+ is the effect of 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ on 
+\begin_inset Formula $y$
+\end_inset
+
+, holding constant the effect of 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ (i.e., 
+\begin_inset Formula $\beta_{1}x_{1}$
+\end_inset
+
+).
+ If 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ are correlated, then our ability to obtain an unbiased estiamte of 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+ hinges on our ability to obtain an unbiased estimate of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+.
+ Consequently, 
+\begin_inset Formula $\hat{\beta}_{2}$
+\end_inset
+
+ could be biased upwards or downwards.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The solution to this problem is to find an IV for 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and proceed as you would for any other IV application.
+ The intuition is that the IV isolates the correctly-measured variation
+ in 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Two Solutions to Measurement Error Bias
+\end_layout
+
+\begin_layout Subsubsection*
+Method 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Find an instrument correlated with the variable measured with error that
+ is otherwise uncorrelated with 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Any instrument that generates good variation will be useful here, i.e., a
+ variable that does not affect measurement error or any other variable related
+ to 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+Suppose we wish to estimate
+\begin_inset Formula 
+\[
+y=\alpha+\beta x^{*}+\epsilon
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x=x^{*}+u$
+\end_inset
+
+.
+ Classcical measurement error occurs when 
+\begin_inset Formula $u\sim N(0,1)$
+\end_inset
+
+.
+ We need to find an instrument 
+\begin_inset Formula $z$
+\end_inset
+
+ that is correlated with 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, but not with 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ Policies that affect 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, but not 
+\begin_inset Formula $u$
+\end_inset
+
+, are good choices.
+ Then,
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta}_{IV} & = & \frac{\mbox{Cov}(y,z)}{\mbox{Cov}(x,z)}\\
+ & = & \frac{\mbox{Cov}(\alpha+\beta x^{*}+\epsilon,z)}{\mbox{Cov}(x^{*}+u,z)}\\
+ & = & \beta\frac{\mbox{Cov}(x^{*},z)}{\mbox{Cov}(x^{*},z)}\\
+ & \begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array} & \beta
+\end{eqnarray*}
+
+\end_inset
+
+The instrument 
+\begin_inset Formula $z$
+\end_inset
+
+ is correlated with 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, but it is independent of 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Another common approach is to use some other noisy measure of the variable
+ of interest.
+ Suppose we have
+\begin_inset Formula 
+\[
+y=\alpha+\beta+x^{*}+\epsilon
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x=x^{*}+u$
+\end_inset
+
+, and an instrument 
+\begin_inset Formula $z=x^{*}+v$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ are independent, then
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\beta}_{IV} & = & \frac{\mbox{Cov}(y,z)}{\mbox{Cov}(x,z)}\\
+ & = & \frac{\mbox{Cov}(\alpha+\beta x^{*}+\epsilon,x^{*}+v)}{\mbox{Cov}(x^{*}+u,x^{*}+v)}\\
+ & \begin{array}[b]{c}
+_{p}\\
+\rightarrow
+\end{array} & \beta
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Here is another way to think about the 
+\begin_inset Quotes eld
+\end_inset
+
+IV fix
+\begin_inset Quotes erd
+\end_inset
+
+ to measurement error.
+ The idea is that the predicted 
+\begin_inset Formula $x$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\hat{x},$
+\end_inset
+
+ from a regression of 
+\begin_inset Formula $x$
+\end_inset
+
+ on 
+\begin_inset Formula $z$
+\end_inset
+
+ is driven by the variation in 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+.
+ Thus, regressing 
+\begin_inset Formula $y$
+\end_inset
+
+ on 
+\begin_inset Formula $\hat{x}$
+\end_inset
+
+ will reflect the variation in 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Method 2
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Use estimates of the reliability ratio (or, equivalently, know 
+\begin_inset Formula $\mbox{Var}(x^{*})$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{Var}(u)$
+\end_inset
+
+) to inflate the estimate appropriately.
+ This method is touched upon in the following papers: Ashenfe'ter and Krueger
+ (1994); Card (1996); Krashinsky (2004).
+\begin_inset Formula 
+\[
+\hat{\beta}_{IV}=[X^{\prime}X-N\Sigma_{uu}]^{-1}X^{\prime}y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\Sigma_{uu}$
+\end_inset
+
+ is the variance-covariance matrix for the measurement error in 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\begin{eqnarray*}
+\mbox{p}\lim\ \hat{\beta}_{IV} & = & \mbox{p}\lim\ [N^{-1}X^{\prime}X-\Sigma_{uu}]^{-1}\cdot\mbox{p}\lim\ N^{-1}X^{\prime}y\\
+ & = & \mbox{p}\lim\ [N^{-1}(X^{*}+u)^{\prime}(X^{*}+u)-\Sigma_{uu}]^{-1}N^{-1}(X^{*}+u)^{\prime}\left[\left(X^{*}+u\right)\beta+\epsilon\right]\\
+ & = & \left[\Sigma_{X^{*}X^{*}}+\Sigma_{uu}-\Sigma_{uu}\right]\Sigma_{X^{*}X^{*}}\beta\\
+ & = & \beta
+\end{eqnarray*}
+
+\end_inset
+
+because 
+\begin_inset Formula $X^{*}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+, and 
+\begin_inset Formula $u$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Part*
+Possible Problems With IV
+\end_layout
+
+\begin_layout Section*
+I) Finite Sample Bias
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Recall that the IV and 2SLS estimators are consistent, but they are not
+ unbiased.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E\left[\hat{\beta}_{IV}\right]=\beta+E\left[(Z^{\prime}X)^{-1}Z^{\prime}\epsilon\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E\left[\hat{\beta}_{2SLS}\right]=\beta+E\left[(\hat{X}^{\prime}\hat{X})^{-1}\hat{X}^{\prime}\epsilon\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bias term only goes to zero as 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We will never be able to obtain an infinite sample, so how big is the bias?
+ Clearly, it depends on 
+\begin_inset Formula $\hat{X}^{\prime}\hat{X}$
+\end_inset
+
+, or 
+\begin_inset Formula $\mbox{Var}(\hat{X})$
+\end_inset
+
+.
+ If the instrument generates a large amount of variation in 
+\begin_inset Formula $\hat{X}$
+\end_inset
+
+, then 
+\begin_inset Formula $\mbox{Var}(\hat{X})$
+\end_inset
+
+ is large, and the bias is small.
+ If the instrument generates almost no variation in 
+\begin_inset Formula $\hat{X}$
+\end_inset
+
+ (i.e., 
+\begin_inset Formula $\hat{\Pi}=0$
+\end_inset
+
+), then 
+\begin_inset Formula $\mbox{Var}(\hat{X})=0$
+\end_inset
+
+, and the estimator does not exist.
+ Even if 
+\begin_inset Formula $\Pi=0$
+\end_inset
+
+, it is unlikely that we will find 
+\begin_inset Formula $\hat{\Pi}=0$
+\end_inset
+
+.
+ The estimates derived from this 
+\begin_inset Formula $\hat{\Pi}$
+\end_inset
+
+ are not to be trusted because the first-stage is spurious.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The bias tends to be exacerbated as (weak) instruments are added.
+ Consider the extreme case where the number of instruments equals the number
+ of observations.
+ Then, we fit the data perfectly such that 
+\begin_inset Formula $\hat{X}^{\prime}\hat{X}=X^{\prime}X$
+\end_inset
+
+.
+ This happens because we are getting 
+\begin_inset Formula $\hat{\Pi}$
+\end_inset
+
+, not 
+\begin_inset Formula $\Pi$
+\end_inset
+
+.
+ So, the bias is the same as OLS.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The overall punchline: a strong first-stage is necessary to obtain approximately
+ unbiased estimates.
+ We only want to add instruments that really give us additional variation.
+ Do not use weak instruments.
+\end_layout
+
+\begin_layout Subsection*
+Formal Derivation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the following equation:
+\begin_inset Formula 
+\[
+y=X\beta+\epsilon
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $Z$
+\end_inset
+
+ is our instrument.
+ The first-stage regression is given by
+\begin_inset Formula 
+\[
+X=Z\Pi+v
+\]
+
+\end_inset
+
+Remember, the expected bias is
+\begin_inset Formula 
+\begin{eqnarray*}
+E[\mbox{bias}] & = & E\left[(X^{\prime}P_{Z}X)^{-1}X^{\prime}P_{Z}\epsilon\right]\\
+ & = & E\left[(X^{\prime}P_{Z}X)^{-1}(Z\Pi+v)^{\prime}P_{Z}\epsilon\right]\\
+ & = & E\left[(X^{\prime}P_{Z}X)^{-1}\Pi^{\prime}Z^{\prime}\epsilon+(X^{\prime}P_{Z}X)^{-1}v^{\prime}P_{Z}\epsilon\right]
+\end{eqnarray*}
+
+\end_inset
+
+The expecation of these ratios is approximately equal to the ratio of expectatio
+ns.
+ For further information, read about group asymptotics.
+\begin_inset Formula 
+\[
+E[\mbox{bias}]\approx(E[X^{\prime}P_{Z}X])^{-1}E[\Pi^{\prime}Z^{\prime}\epsilon]+(E[X^{\prime}P_{Z}X])^{-1}E[v^{\prime}P_{z}\epsilon]
+\]
+
+\end_inset
+
+The first term drops out since 
+\begin_inset Formula $E[\Pi^{\prime}Z^{\prime}\epsilon]=0$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\begin{eqnarray*}
+E[\mbox{bias}] & \approx & (E[X^{\prime}P_{Z}X])^{-1}E[v^{\prime}P_{Z}\epsilon]\\
+ & \approx & (E[(Z\Pi+v)^{\prime}P_{Z}(Z\Pi+v)])^{-1}E[v^{\prime}P_{Z}\epsilon]\\
+ & \approx & (E[(\Pi^{\prime}Z^{\prime}+v^{\prime})P_{z}(Z\Pi+v)])^{-1}E[v^{\prime}P_{z}\epsilon]
+\end{eqnarray*}
+
+\end_inset
+
+We can ignore the cross products since 
+\begin_inset Formula $E\left[\Pi^{\prime}Z^{\prime}v\right]=0$
+\end_inset
+
+.
+ Hence,
+\begin_inset Formula 
+\begin{eqnarray*}
+E[\mbox{bias}] & \approx & (E[(\Pi^{\prime}Z^{\prime}P_{Z}Z\Pi+v^{\prime}P_{Z}v)])^{-1}E[v^{\prime}P_{Z}\epsilon]\\
+ & \approx & (E[\Pi^{\prime}Z^{\prime}Z\Pi]+E[v^{\prime}P_{Z}v])^{-1}E[v^{\prime}P_{Z}\epsilon]
+\end{eqnarray*}
+
+\end_inset
+
+Note that
+\begin_inset Formula 
+\[
+E[v^{\prime}P_{Z}v]\rightarrow\sigma_{v}^{2}Q
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+E[v^{\prime}P_{z}\epsilon]\rightarrow\sigma_{v\epsilon}Q
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $Q=\mbox{rank}(Z)$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\[
+E[\mbox{bias}]\approx\frac{\sigma_{v\epsilon}}{\sigma_{v}^{2}}\left[\frac{\nicefrac{E[\Pi^{\prime}Z^{\prime}Z\Pi]}{Q}}{\sigma_{v}^{2}}+1\right]^{-1}
+\]
+
+\end_inset
+
+The population F-stat for join significance on the first-stage is
+\begin_inset Formula 
+\[
+F=\frac{\nicefrac{E[\Pi^{\prime}Z^{\prime}Z\Pi]}{Q}}{\sigma_{v}^{2}}
+\]
+
+\end_inset
+
+Therefore,
+\begin_inset Formula 
+\[
+E[\mbox{bias}]\approx\frac{\sigma_{v\epsilon}}{\sigma_{v}^{2}}\frac{1}{F+1}
+\]
+
+\end_inset
+
+where we note that
+\begin_inset Formula 
+\[
+\frac{\sigma_{v\epsilon}}{\sigma_{v}^{2}}
+\]
+
+\end_inset
+
+is the approximate bias of OLS.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, we can see the problem caused by adding weak instruments.
+ 
+\begin_inset Formula $E[\Pi^{\prime}Z^{\prime}Z\Pi]$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{v}^{2}$
+\end_inset
+
+ stay the same, but 
+\begin_inset Formula $Q$
+\end_inset
+
+ increases.
+ Consequently, the F-statistic becomes smaller.
+ Thus,
+\begin_inset Formula 
+\[
+E[\mbox{bias}]\rightarrow\frac{\sigma_{v\epsilon}}{\sigma_{v}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bound, Jaeger, and Baker (1995) brought the problem of weak instruments
+ to the attention of researchers.
+ Surprisingly, they found that finite sample bias was present even with
+ a huge census sample because of the use of weak instruments.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+So, how strong does the first-stage need to be? According to Staiger and
+ Stock (1997), an F-stat testing the joint significance of the instruments
+ that is greater than 10 should be good if you are willing to accept bias
+ that is no more than 10% of bias from OLS.
+ If you are willing to accept bias that is no more than 20% of bias from
+ OLS, then the F-state should be greater than 6.5.
+ The first-stage regression must include all of the covariates that belong
+ in the outcome equation in addition to the instruments because this is
+ the regression that provides the appropriate 
+\begin_inset Formula $\hat{X}$
+\end_inset
+
+ that produces the 2SLS estimator.
+ Yet, the F-test we are interested in is 
+\series bold
+\emph on
+not 
+\series default
+\emph default
+the F-test for the joint significance of all of the variables in the first-stage
+ (instruments and covariates).
+ It is the F-test for the joint significance of the instruments in the first-sta
+ge.
+\end_layout
+
+\begin_layout Subsection*
+Limited Information Maximum Likelihood
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This estimation method has better small sample properties than 2SLS when
+ there is a weak first-stage.
+ It is the joint estimation of 
+\begin_inset Formula 
+\[
+y=X\beta+\epsilon
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+X=Z\Pi+v
+\]
+
+\end_inset
+
+in which we assume homoskedastic, normal errors.
+\end_layout
+
+\begin_layout Section*
+II) Invalid Exclusion Restriction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+One can never be certain that the exclusion restriction holds.
+ Instead, you must make the case that it is likely to hold.
+ There are two issues to consider:
+\end_layout
+
+\begin_layout Enumerate
+Are you sure the instrument does not affect outcomes through any other channel?
+\end_layout
+
+\begin_layout Enumerate
+What factors affect the instrument? Are you sure they are not also related
+ to the outcome?
+\end_layout
+
+\begin_layout Standard
+Institutional knowledge plays a huge role here.
+ To be credible, you must demonstrate that you have looked as hard as possible.
+ Is there evidence that the exclusion restriction does not hold? There are
+ two approaches to help address this concern.
+\end_layout
+
+\begin_layout Subsection*
+Is the Instrument Related to Observables?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can test whether or not the instrument is related to observables we know
+ to be related to outcomes.
+ If the answer is 
+\begin_inset Quotes eld
+\end_inset
+
+yes,
+\begin_inset Quotes erd
+\end_inset
+
+ then there is concern that the instrument may also be related to unobservables
+ that are related to outcomes, which would violate the exclusion restriction.
+\end_layout
+
+\begin_layout Subsection*
+Test of Overidentifying Restrictions
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To explain these tests, it helps to understand 2SLS as a form of GMM.
+ With methods of moments (MM), we take moment conditions, sub-sample analogues,
+ and the solve.
+ For example, using the OLS moment conditions,
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left[x_{i}u_{i}\right] & = & 0\\
+E\left[x_{i}(y_{i}-x_{i}^{\prime}\beta)\right] & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+we can obtain the OLS estimator from the corresponding sub-sample analogues
+\begin_inset Formula 
+\begin{gather*}
+\frac{1}{N}{\displaystyle \sum_{i=1}^{n}}x_{i}(y_{i}-x_{i}^{\prime}\beta)=0\\
+\implies\hat{\beta}_{MM}=\left({\displaystyle \sum_{i=1}^{n}}x_{i}x_{i}^{\prime}\right)^{-1}{\displaystyle \sum_{i=1}^{n}}x_{i}y_{i}
+\end{gather*}
+
+\end_inset
+
+We can use the same approach to obtain the IV estimator,
+\begin_inset Formula 
+\begin{gather*}
+E[z_{i}u_{i}]=0\\
+\implies\hat{\beta}_{MM}=\left({\displaystyle \sum_{i=1}^{n}}z_{i}x_{i}^{\prime}\right)^{-1}{\displaystyle \sum_{i=1}^{n}}z_{i}y_{i}
+\end{gather*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+If there are more moments then paraments, then there is no unique solution.
+ Instead, we use GMM estimation, which sets the sample moments as close
+ to zero as possible using quadratic loss.
+\begin_inset Formula 
+\begin{gather*}
+E[Z^{\prime}u]=0\\
+\mbox{min}\ Q(\beta)=\left[Z^{\prime}(y-X\beta)\right]^{\prime}W\left[Z^{\prime}(y-X\beta)\right]\\
+\implies\hat{\beta}_{GMM}=\left(X^{\prime}ZWZ^{\prime}X\right)^{-1}X^{\prime}ZWZ^{\prime}y
+\end{gather*}
+
+\end_inset
+
+Thus, the 2SLS estimator is a GMM estimator with 
+\begin_inset Formula $W=(Z^{\prime}Z)^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+2SLS versus Efficient GMM
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Researches tend to strongly favor 2SLS as opposed to a 
+\begin_inset Quotes eld
+\end_inset
+
+two-step GMM
+\begin_inset Quotes erd
+\end_inset
+
+ approach where the optimal weighting matrix is estimated.
+ Cameron and Trivedi (pg.
+ 177) explains that it all comes down to finite sample bias.
+ Asymptotically, we prefer GMM.
+ In finite samples, not so much.
+\end_layout
+
+\begin_layout Subsubsection*
+Test of Overidentifying Restrictions
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The GMM estimator is based on the population specified moment conditions.
+ Are they all valid? Is it possible that some of them are invalid? Can we
+ test their validity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We cannot test the validity of all moments because we need at least the
+ minimum nmber of just-identifying moment conditions for identifiability
+ of parameters.
+ When there are more moment conditions than needed to determine parameters,
+ we can test whether extra moment conditions are valid.
+ The null and alternative hypotheses are
+\begin_inset Formula 
+\begin{gather*}
+H_{0}:E[Z^{\prime}u]=0\\
+H_{a}:H_{0}\ \mbox{is false}
+\end{gather*}
+
+\end_inset
+
+The null hypothesis of the test says that all the moment conditions are
+ valid.
+ The alternative hypothesis says that at least one of the extra moment condition
+s is false, though it does not specify which ones are taken as just-identifying
+ conditions.
+ We simply conclude that the data does not support the statement that all
+ moment conditions are correct.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+So, we are testing to see if if 
+\begin_inset Formula $Z^{\prime}u\approx0$
+\end_inset
+
+.
+ This corresponds to testing whether the minimand, 
+\begin_inset Formula $Q(\hat{\beta}_{GMM})$
+\end_inset
+
+, is close to zero or not.
+ This is equivalent to regressing the 2SLS residuals on the instruments,
+ and then testing whether 
+\begin_inset Formula $R^{2}=0$
+\end_inset
+
+.
+ The test statistic is distributed as 
+\begin_inset Formula $\chi^{2}(\mbox{number of over-identifying restrictions})$
+\end_inset
+
+ under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It should be noted that this test is severly limited due to the following
+ reasons:
+\end_layout
+
+\begin_layout Itemize
+The null hypothesis has us assume that the instruments are valid in just-identif
+ied models.
+\end_layout
+
+\begin_layout Itemize
+It amounts to testing whether different instruments yield different estimates.
+\end_layout
+
+\begin_layout Itemize
+Do this if the number of instruments is unwieldy (more informative).
+\end_layout
+
+\begin_layout Itemize
+What if we don't reject the null hypothesis? Well, this could reflect a
+ lack of precision, or that the set of instruments could lead to similarly
+ biased estimates.
+ 
+\end_layout
+
+\begin_layout Itemize
+What if we do reject the null hypothesis? Then, this might simply reflect
+ heterogenous treatment effects.
+\end_layout
+
+\begin_layout Subsection*
+Violations of the Exclusion Restriction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Violations of the exclusion restriction are especially problematic with
+ a weak first-stage.
+ Consider the following outcome equation
+\begin_inset Formula 
+\[
+y_{i}=\alpha+\rho T_{i}+\gamma z_{i}+\epsilon
+\]
+
+\end_inset
+
+and participating equation
+\begin_inset Formula 
+\[
+T_{i}=\pi_{0}+\pi_{1}z_{i}+u_{i}
+\]
+
+\end_inset
+
+What if 
+\begin_inset Formula $\gamma\neq0$
+\end_inset
+
+? Then,
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{\rho}_{IV} & = & \frac{\mbox{Cov}(\alpha+\rho T_{i}+\gamma z_{i}+\epsilon_{i},z_{i})}{\mbox{Cov}(T_{i},z_{i})}\\
+ & = & \frac{\rho\mbox{Cov}(T_{i},z_{i})+\gamma\mbox{Cov}(z_{i},z_{i})}{\mbox{Cov}(T_{i},z_{i})}\\
+ & = & \rho+\gamma\frac{\mbox{Var}(z_{i})}{\mbox{Cov}(T_{i},z_{i})}\\
+ & = & \rho+\frac{\gamma}{\pi_{1}}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, there is a larger bias when the first-stage is small.
+\end_layout
+
+\begin_layout Subsection*
+Hausman Test or Durbin-Wu-Hausman Test
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This is a test for whether 2 different estimators have the same probability
+ limit.
+ We are often interested in comparing 
+\begin_inset Formula $\hat{\beta}_{OLS}$
+\end_inset
+
+ versus 
+\begin_inset Formula $\hat{\beta}_{2SLS}$
+\end_inset
+
+.
+ The null and alternative hypotheses are
+\begin_inset Formula 
+\begin{gather*}
+H_{0}:\mbox{p\lim}\ (\hat{\beta}-\tilde{\beta}=0)\\
+H_{a}:\mbox{p\lim}\ (\hat{\beta}-\tilde{\beta}\neq0)
+\end{gather*}
+
+\end_inset
+
+Under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+-consistency,
+\begin_inset Formula 
+\[
+\sqrt{N}\left(\hat{\beta}-\tilde{\beta}\right)\begin{array}[b]{c}
+_{d}\\
+\rightarrow
+\end{array}N(0,V_{H})
+\]
+
+\end_inset
+
+The test is difficult to assess because we do not know 
+\begin_inset Formula $V_{H}$
+\end_inset
+
+.
+ Yet, we do know
+\begin_inset Formula 
+\[
+N^{-1}V_{H}=V\left[\hat{\beta}-\tilde{\beta}\right]=V\left[\hat{\beta}\right]+V\left[\tilde{\beta}\right]-2\mbox{Cov}\left[\hat{\beta},\tilde{\beta}\right]
+\]
+
+\end_inset
+
+Additional assumptions are required, or we can bootstrap.
+\end_layout
+
+\begin_layout Subsection*
+Forbidden Regression
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose we are interested in
+\begin_inset Formula 
+\[
+y_{i}=\alpha x_{i}+\rho T_{i}+\epsilon_{i}
+\]
+
+\end_inset
+
+We estimate by plugging in 
+\begin_inset Formula $\hat{T}_{i}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{i}=\alpha x_{i}+\rho\hat{T}_{i}+\left[\epsilon_{i}+\rho(T_{i}-\hat{T}_{i})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By construction, the error term
+\begin_inset Formula 
+\[
+\left[\epsilon_{i}+\rho(T_{i}-\hat{T}_{i})\right]
+\]
+
+\end_inset
+
+is uncorrelated with the regressor, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\hat{T}_{i}$
+\end_inset
+
+,
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ if the regressor is based on a linear model.
+ Therefore, do not estimate the first-stage regression with a non-linear
+ model.
+ 
+\end_layout
+
+\begin_layout Section*
+III) Heterogeneous Treatment Effects
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Given the usual IV assumption and monotonicity (i.e., everyone affected by
+ the instrument is affected in the same direction), IV estimates a local
+ average treatment effect (LATE).
+ In regards to monotonicity, always takes, never takers, compliers are fine,
+ but defiers are not.
+ The monotonicity assumption means that people are not any less likely to
+ accept treatment if they have been assigned it.
+ To understand why we need the monotonicity assumption, note that the reduced-fo
+rm effect of the instrument on outcomes may be zero because the effects
+ on defiers cancels out the effects on compliers, even if the treatment
+ effect is positive for all.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The local average treatment effect (LATE) is the average causual effect
+ for the group that is affected by the instrument (i.e., the compliers).
+ its usefulness depends on the nature of the study.
+ In some sense, all estimates are 
+\begin_inset Quotes eld
+\end_inset
+
+local
+\begin_inset Quotes erd
+\end_inset
+
+ because they are driven by where the variation lies, but that may not always
+ be where we want it to lie.
+\end_layout
+
+\begin_layout Section*
+IV) IV/2SLS Estimates Can Be Imprecise
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Sometimes, IV and 2SLS estimates can be imprecise.
+ What if the instrument is random, or condionally random? This does not
+ mean the instrument is valid because it might affect outcomes through multiple
+ channels.
+ Though, we can obtain valid estimates of the reduced-from effect of the
+ instrument.
+\end_layout
+
+\begin_layout Note*
+If 
+\begin_inset Formula $x$
+\end_inset
+
+ is exogenous, it is better to not use an instrument because 
+\begin_inset Formula $\hat{x}$
+\end_inset
+
+ explains less variation than 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Part*
+What To Include in an IV Paper
+\end_layout
+
+\begin_layout Section*
+Practical Matters
+\end_layout
+
+\begin_layout Enumerate
+Show the first-stage regression results with F-statistics.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sometimes, you will even see partial 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ or 
+\begin_inset Formula $R_{p}^{2}$
+\end_inset
+
+, which is a different way of approaching the same fundamental issue.
+\end_layout
+
+\begin_layout Itemize
+Define 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ as the endogenous variable, 
+\begin_inset Formula $z$
+\end_inset
+
+ as the instrument, and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ as a vector of exogenous covariates.
+ Purge 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ of the effects of 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ by obtaining the residuals from a regression of 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ (for 
+\begin_inset Formula $\tilde{x}_{1}$
+\end_inset
+
+) and 
+\begin_inset Formula $z$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ (for 
+\begin_inset Formula $\tilde{z}$
+\end_inset
+
+).
+ 
+\begin_inset Formula $R_{p}^{2}$
+\end_inset
+
+ is just the 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ from a regression of 
+\begin_inset Formula $\tilde{x}_{1}$
+\end_inset
+
+ on 
+\begin_inset Formula $\tilde{z}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R_{p}^{2}$
+\end_inset
+
+ tells us the share of the variation in 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ that is captured by 
+\begin_inset Formula $z$
+\end_inset
+
+ after controlling for covariates.
+ Obviously, a larger 
+\begin_inset Formula $R_{p}^{2}$
+\end_inset
+
+ is better than a smaller one.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Make the case for the exclusion restriction rhetorically.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Recall the example from Assignment 4:
+\begin_inset Formula 
+\[
+\mbox{TestScores\_G2}=\alpha+\beta\mbox{SmallClass\_G2}+\gamma_{s}+\epsilon
+\]
+
+\end_inset
+
+A possible IV is an indicator for whether or not students were initially
+ assigned to a small class.
+ If the determinants of the IV have any effect on test scores, then the
+ exclusion restriction fails.
+ In the field experiment, initial class was randomly assigned conditional
+ on school of attendance, so we do not have to worry about this problem.
+ However, if the IV affects test scores through any channels other than
+ class assignment in the current grade, then the exclusion will still fail.
+ Obviously, initial class assignment influences what type of class a student
+ is assigned to prior to grade 2.
+ In turn, these earlier class assignments will have an effect on test scores
+ in grade 2.
+ Thus, the exclusion restriction fails in this setup.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Test that the instrument is not related to observables we know to be related
+ to outcomes.
+\end_layout
+
+\begin_layout Enumerate
+Show reduced-form effects of the instrument on the outcome variable.
+\end_layout
+
+\begin_layout Enumerate
+Verify the 2SLS are what we expect from (a) and (d).
+\end_layout
+
+\begin_layout Section*
+A Variable that is RA or Conditionally RA
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What if we have a variable that is RA or conditionally RA?
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Question 1:
+\series default
+ Do we really believe only one mechanism is relevant, and this mechanism
+ is of interest? If 
+\begin_inset Quotes eld
+\end_inset
+
+yes,
+\begin_inset Quotes erd
+\end_inset
+
+ then proceed with IV estimation.
+ If no, then:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Question 2: 
+\series default
+Will igoring other channels lead to estimates that are biased in a convenient
+ way? If 
+\begin_inset Quotes eld
+\end_inset
+
+yes,
+\begin_inset Quotes erd
+\end_inset
+
+ then proceed with IV estimation.
+\end_layout
+
+\begin_deeper
+\begin_layout Example*
+We wish to determine the effects of military service on crime.
+ Draft eligibility is used as an instrument for military service, but eligibilit
+y may affect crime through education.
+ Thus, using draft eligibility as an instrument for service will understate
+ the effects of military service on crime, assuming that education reduces
+ crime.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Question 3:
+\series default
+ Do we really have a variable that captures this mechanism? If 
+\begin_inset Quotes eld
+\end_inset
+
+yes,
+\begin_inset Quotes erd
+\end_inset
+
+ then proceed with IV estimation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If the answer to either of the last two questions is 
+\begin_inset Quotes eld
+\end_inset
+
+no,
+\begin_inset Quotes erd
+\end_inset
+
+ then is just the reduced-form effect itself of any interest? If the answer
+ to this question is 
+\begin_inset Quotes eld
+\end_inset
+
+no,
+\begin_inset Quotes erd
+\end_inset
+
+ then you should find a new project because there is no useful analysis
+ to be done.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+On the other hand, if the answer is 
+\begin_inset Quotes eld
+\end_inset
+
+yes,
+\begin_inset Quotes erd
+\end_inset
+
+ then we can estimate the reduced-form (RF) effect.
+ You do so by acknowledging that the effects might be driven by other channels,
+ such as 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+, etc.
+ Then, explore the mechanisms by estimating the effecs on as many of these
+ as you can.
+ If you can explore the most relevant channels, and only one seems to matter,
+ then you can provide an implied IV estimate with the appropriate caveats.
+ The more credible the exclusion restriction, based on priors and what you
+ observe, the more this IV estimate should be emphasized.
+\end_layout
+
+\begin_layout Example*
+Reed Walker used the Clean Air Act (CAA) to measure the effect of pollution
+ in early life on adult earnings.
+ As stated, the quasi-experiment is provided by the CAA.
+ The reduced-form effect is clearly of interest.
+ The IV (i.e., the introduction of the CAA) is also of interest, but can we
+ be sure that pollution is the only relevant channel? What about effects
+ on local labor market conditions, or other early life circumstances? If
+ the paper focuses on the reduced-form effect, then there is less to criticize.
+ You can usually provide both IV and reduced-form estimates, but you must
+ be careful on what you are emphasizing.
+ So, Walker still provides IV estimates because the assumption is not too
+ far-fetched.
+\end_layout
+
+\begin_layout Section*
+Practical Matters For All Research Designs
+\end_layout
+
+\begin_layout Itemize
+Start with a parsimonious model.
+\end_layout
+
+\begin_layout Itemize
+Sometimes it is even useful to analyze a 
+\begin_inset Quotes eld
+\end_inset
+
+wrong model,
+\begin_inset Quotes erd
+\end_inset
+
+ which is believed to produce biased results, as a point of comparison,
+ and then follow this with a Hausman test.
+\end_layout
+
+\begin_layout Itemize
+One must show the most parsimonious model that is consistent with the thought
+ experiment, e.g., Wald estimates for IV
+\end_layout
+
+\begin_layout Itemize
+If estimates are sensitive to the inclusion of additional controls, then
+ this casts doubt on the validity of research design.
+\end_layout
+
+\begin_layout Itemize
+Your 
+\begin_inset Quotes eld
+\end_inset
+
+preferred model
+\begin_inset Quotes erd
+\end_inset
+
+ might include controls to get more precise estimates.
+\end_layout
+
+\begin_layout Note*
+If you argue 
+\begin_inset Formula $x$
+\end_inset
+
+ is random, then the baseline specificaiton should not include controls.
+ Also, if you argue that 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ is random, conditional on 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, then that should be the baseline specification.
+ Moreover, estimated effects should not change with the inclusion of additional
+ controls.
+\end_layout
+
+\begin_layout Part*
+A Brief Outline of IV
+\end_layout
+
+\begin_layout Section*
+Basic Idea
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose we want to estimate a treatment effect using observational data.
+ The OLS estiamtor is biased and inconsistent due to correlation between
+ the regressor and the error term.
+ If a direct solution is not available, instrumental variables regression
+ offers an alternative way to obtain a consistent estimator.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As stated previously, IV estimation is used when the model has endogenous
+ regressors.
+ So, IV can be used to address the following important threats to internal
+ validity:
+\end_layout
+
+\begin_layout Itemize
+Omitted variable bias from a variable that is correlated with 
+\begin_inset Formula $x$
+\end_inset
+
+ but is not observed, so it cannot be included in the regression.
+\end_layout
+
+\begin_layout Itemize
+Simultaneous causality bias (endogenous explanatory variables; 
+\begin_inset Formula $x$
+\end_inset
+
+ causes 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+ causes 
+\begin_inset Formula $x$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+Measurement error of the regressors
+\end_layout
+
+\begin_layout Standard
+Instrumental variables regression can eliminate bias from these three sources.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the following equation
+\begin_inset Formula 
+\[
+y_{i}=\beta_{0}+\beta_{1}x_{i}+\epsilon_{i}
+\]
+
+\end_inset
+
+Variation in the endogenous regressor, 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, has two parts:
+\end_layout
+
+\begin_layout Enumerate
+The part that is uncorrelated with the error term (i.e., the 
+\begin_inset Quotes eld
+\end_inset
+
+good
+\begin_inset Quotes erd
+\end_inset
+
+ variation)
+\end_layout
+
+\begin_layout Enumerate
+The part that is correlated with the error term (i.e., the 
+\begin_inset Quotes eld
+\end_inset
+
+bad
+\begin_inset Quotes erd
+\end_inset
+
+ variation)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The basic idea behind instrumental variables regression is to isolate the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+good
+\begin_inset Quotes erd
+\end_inset
+
+ variation and disregard the 
+\begin_inset Quotes eld
+\end_inset
+
+bad
+\begin_inset Quotes erd
+\end_inset
+
+ variation.
+ The necessary conditions for a valid IV, 
+\begin_inset Formula $z$
+\end_inset
+
+, are:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Relevance:
+\series default
+ 
+\begin_inset Formula $\mbox{Corr}(z_{i},x_{i})\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Exogeneity:
+\series default
+ 
+\begin_inset Formula $\mbox{Corr}(z_{i},\epsilon_{i})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It can be difficult to find an instrument that is both relevant and exogenous.
+ Assessment of instrument exogeneity can be highly subjective when the model
+ is just-identified.
+\end_layout
+
+\begin_layout Subsection*
+Possible IVs
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The progress of finding potential IVs comes form detailed institutional
+ knowledge and the careful investigation and quantification of the forces
+ at work in a particular setting.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Outcome
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Endogenous Variable
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IV
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Labor Supply
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Disability insurance replacement rates
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Region and time variation in benefit rules
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Earnings
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Years of schooling
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Proximity to college
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Test Scores
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Class size
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Maximum class size rules
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Test Scores
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hours of study
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Random mailing of test preparation materials
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Health
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Heart attack surgery
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Proximity to cardiac care centers
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wages
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Unemployment tax rate
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+State laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Testing Instrument Relevance
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The first-stage F-statistic testing the hypothesis that the coefficients
+ on the instruments are jointly zero should be at least 10.
+ A small F-statistic means the instruments are 
+\begin_inset Quotes eld
+\end_inset
+
+weak
+\begin_inset Quotes erd
+\end_inset
+
+ and the estimator is biased.
+ If you have the same number of instruments and endogenous regressors, it
+ is impossible to test for whether the instruments are exogenous.
+\end_layout
+
+\begin_layout Subsection*
+Overidentifying Restrictions
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If the model is over-identified, then we can perform a test of overidentifying
+ restrictions.
+ Regress the residuals from the 2SLS regression on the instruments and test
+ whether the coefficients on the instruments are all zero.
+\end_layout
+
+\begin_layout Section*
+Potential Pitfalls With IV
+\end_layout
+
+\begin_layout Itemize
+A bad instrument is one that is correlated with the omitted variables.
+ Consequently, the bias of IV estimates is greater than OLS estimates.
+\end_layout
+
+\begin_deeper
+\begin_layout Example*
+The weather in Brazil probably shifts the supply curve for coffee, providing
+ a plausible instrument to estimate the effect of price on quantity demanded.
+ Though, weather in Brazil might also shift the demand for coffee if sophisticat
+ed commercial buyers at the NYC Coffee, Sugar, & Cocoa Exchange, where coffee
+ futures are traded, use weather data to adjust holdings in anticipation
+ of a price increase that may not in fact materialize.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The bias of instrumental variable estimates from very weak instruments tend
+ to be centered on the corresponding OLS bias.
+\end_layout
+
+\begin_layout Itemize
+A nonlinear first-stage does not generate consistent estimates unless the
+ nonlinear model happens to be exactly right.
+ 
+\end_layout
+
+\begin_layout Itemize
+Nonlinear second stage estimates with continuous or multivariated regressors
+ are similarly tricky, requiring a correctly specified functional form in
+ order to interpret the estimates easily.
+ Even if the underlying second-stage relationship is nonlinear, linear IV
+ estimates such as 2SLS typically capture an average effect of economic
+ interest analogous to the LATE parameter for dummy endogenous regressors.
+ 2SLS is a robust estimation method that provides a natural starting point
+ for IV applications.
+\end_layout
+
+\end_body
+\end_document

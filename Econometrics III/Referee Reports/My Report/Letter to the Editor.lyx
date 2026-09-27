@@ -1,0 +1,207 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+November 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To Whom It May Concern,
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I have completed my report of 
+\begin_inset Quotes eld
+\end_inset
+
+Does the Military Train Men to be Violent Criminals? New Evidence from Australia
+' Conscription Lotteries.
+\begin_inset Quotes erd
+\end_inset
+
+ While the topic is of interest, it has already been addressed by past research
+ endeavors in which more convincing results were obtained.
+ Using three distinct 2SLS specifications, the authors found no evidence
+ that military training causes violent crime.
+ Note that the point estimates were always negative, which contradicts some
+ of the pertinent arguments expressed in Sections 2 and 3.
+\end_layout
+
+\begin_layout Standard
+I have several major criticisms concerning this paper.
+ First, it failed to consider the heterogenous time effects of military
+ training.
+ It is not unreasonable to believe that the effects of military training
+ may be more prominent during the earlier years of adulthood.
+ Next, there is a potential selection issue because the outcome data only
+ accounts for 77% of the Australian population.
+ The remaining 23% of the population excluded from the data could the results.
+ Moving on, the authors did not include state and/or region fixed in their
+ specifications even though various states could have different criminal
+ laws, political biases, court procedures, etc.
+ Finally, no tests were conducted in order to verify that the binary conscriptio
+n lottery ballot outcomes were randomly assigned.
+ The identifying assumption (i.e., the exclusion restriction) and the entire
+ analysis of the paper hinges on this fact.
+\end_layout
+
+\begin_layout Standard
+Furthermore, there are several minor concerns and comments that I have specified
+ in my report.
+ The authors can provide the treatment effect estimates from the basic OLS
+ regression, and they can show the actual reduced-form estimation results,
+ instead of just the visual presentations.
+ Above all, I would suggest expanding Sections 4 and 5 in order to provide
+ a more thorough explanation of the utilized GLS method, as well as the
+ construction of synthetic records for the first-stage data.
+\end_layout
+
+\begin_layout Standard
+In my opinion, this paper does not add any pertinent revelations to the
+ existing literature.
+ As has been noted, the authors were unable to conclude that military training
+ has a long-term effect on violent crime.
+ Previous papers, on the other hand, have provided a more convincing analysis
+ of this topic.
+ My report also addresses the other issues present within the paper.
+ Yet, the major criticisms just briefly discussed are the primary reasons
+ I have for recommending rejection.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sincerely,
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nathan Smooha
+\end_layout
+
+\begin_layout Standard
+Graduate Student
+\end_layout
+
+\begin_layout Standard
+Department of Economics
+\end_layout
+
+\begin_layout Standard
+Texas A&M University
+\end_layout
+
+\end_body
+\end_document
