@@ -1,0 +1,345 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Adaptation and Vertical Control in the Airline Industry
+\end_layout
+
+\begin_layout Abstract
+Silke Forbes and Mara Lederman: American Economic Review (2009).
+ Give a brief history of U.S.
+ airline industry.
+ How did we get to hub and spoke?
+\end_layout
+
+\begin_layout Section*
+Simplified 
+\begin_inset Quotes eld
+\end_inset
+
+Holdup Problem
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this model, we have an upstream firm and a downstream firm, which we
+ call 
+\begin_inset Quotes eld
+\end_inset
+
+seller
+\begin_inset Quotes erd
+\end_inset
+
+ S and 
+\begin_inset Quotes eld
+\end_inset
+
+buyer
+\begin_inset Quotes erd
+\end_inset
+
+ B, respectively.
+ For example, the upstream firm is a coal mine, while the downstream firm
+ is a power plant.
+ 
+\end_layout
+
+\begin_layout Standard
+Now, B and S have a relationshp-specific investment, and the investment
+ is not contractible.
+\end_layout
+
+\begin_layout Standard
+The timing of the game is as follows:
+\end_layout
+
+\begin_layout Standard
+In the first stage of the game, B and S meet.
+ Then, in the second stage, the seller invests e, and the buyer invests
+ i.
+ At the final stage, 
+\begin_inset Formula $q=\{0,1\}$
+\end_inset
+
+ (trade or no trade), and 
+\begin_inset Formula $t=\mbox{transfer from B to S}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Payoffs
+\end_layout
+
+\begin_layout Standard
+For the buyer:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $q\cdot R(i)-t-i$
+\end_inset
+
+ where 
+\begin_inset Formula $i$
+\end_inset
+
+ is the cost of investment and 
+\begin_inset Formula $R(i)$
+\end_inset
+
+ is the rate of tunring 
+\begin_inset Formula $q$
+\end_inset
+
+ to money.
+ We assume that 
+\begin_inset Formula $R^{\prime}>0$
+\end_inset
+
+ and 
+\begin_inset Formula $R^{\prime\prime}<0$
+\end_inset
+
+, so there is a decreasing marginal return of investment
+\end_layout
+
+\begin_layout Standard
+For the seller:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $-q\cdot C(e)+t-e$
+\end_inset
+
+ where 
+\begin_inset Formula $e$
+\end_inset
+
+ is the cost of investment and 
+\begin_inset Formula $C(e)$
+\end_inset
+
+ denotes the production costs.
+ We assume that 
+\begin_inset Formula $C^{\prime}<0$
+\end_inset
+
+ and 
+\begin_inset Formula $C^{\prime\prime}>0$
+\end_inset
+
+.
+ So, there is diminishing returns to cost reduction
+\end_layout
+
+\begin_layout Subsection*
+Case 1: First Best
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \max_{i,e}}\ q\cdot R(i)-t-i-q\cdot C(e)+t-e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $q[R(i)-C(e)]-i-e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+F.O.C.: 
+\begin_inset Formula $R^{\prime}(i)=1$
+\end_inset
+
+ and 
+\begin_inset Formula $C^{\prime}(e)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Case 2: No ex-ante contracting
+\end_layout
+
+\begin_layout Standard
+After investment, can observe 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $e$
+\end_inset
+
+ and contract on it.
+\end_layout
+
+\begin_layout Standard
+After investment, contract and neogtiate on surplus.
+ (This comes right after the second stage of the extensive form game described
+ above).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mbox{Equal split of surplus}=\frac{1}{2}\cdot q\cdot\left[R(i)-C(e)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+B and S invest
+\end_layout
+
+\begin_layout Standard
+For the buyer:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \max_{i}}\ \frac{1}{2}\left[R(i)-C(e)\right]-i$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+F.O.C.: 
+\begin_inset Formula $R^{\prime}(i)=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For the seller:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \max_{e}}\ \frac{1}{2}\left[R(i)-C(e)\right]-e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+F.O.C.: 
+\begin_inset Formula $C^{\prime}(e)=-2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Both the buyer and seller are under-investing.
+ Because the buyer and seller are splitting the surplus, they are not obtaining
+ the full marginal return of their investment.
+ This is known as the 
+\begin_inset Quotes eld
+\end_inset
+
+hold up problem,
+\begin_inset Quotes erd
+\end_inset
+
+ which is the primary reason why there is vertical integration between the
+ buyer and seller.
+\end_layout
+
+\end_body
+\end_document

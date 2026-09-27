@@ -1,0 +1,180 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Converting Hospitals From Not-For-Profit to For-Profit Status
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+February 18, 2014
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A majority of American hospitals are organized as charitable, not-for-profit
+ entities.
+ Their main objective is not to maximize profit, but instead, increase community
+ health care and charitable goals.
+ Since these hospitals are non-profit organizations, many laws and provisions
+ make them tax exempt.
+ However, there are now many hospitals that are now converting to for-profit
+ corporations.
+ Obviously, the conversion of hospitals from non-profit to for-profit organizati
+ons, can have major policy implications, especially in regards to health
+ outcomes and expenditures.
+ There is also the possibility of conducting pertinent IO research in regards
+ to the changes in pricing, expenditures of hospitals, and overall provision
+ of services.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+However, there only a few papers offering some details concerning hospital
+ conversion.
+ Gray (1997) provides a healthy policy framework for assessing conversions
+ of hospitals and HMOs.
+ The paper discusses the policy implications of the process, and it addresses
+ the differences in structure, organization, and the social benefits of
+ non-profit versus for-profit hospitals.
+ Cutler and Horwitz (2000) provide a preliminary discussion of the cause
+ and effects of conversion by examining two specific case studies.
+ After searching online, I did not find any extensive empirical research
+ on the reasons for and the effects of hospital conversions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+My paper will primarily focus on the effect conversion has on the expenditures
+ of hospitals and the prices they charge for high demand medical procedures.
+ So, I will need to collect data on the pricing and expenditures of individual
+ hospitals.
+ In order to obtain some of this pertinent data, I propose accessing the
+ 
+\bar under
+Texas Census Research Data Center (TCRDC)
+\bar default
+.
+ The data center contains major health datasets, including the Agency for
+ Healthcare Research and Quality (AHRQ), the Medical Expenditure Panel Survey
+ (MEPS), and more.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The empirical strategy I propose is a differences-in-differences design.
+ In order for this design to succeed, I propose finding hospitals that are
+ fairly close together: either they are located in the same general region
+ or they can serve a majority of the same population.
+ Thus, the treatment group consists of hospitals that have converted from
+ non-profit to for-profit corporations, while the control group are hospitals
+ in the same area that remain non-profit organizations.
+ The key identifying assumption is that absent the treatment, the changes
+ in hospital pricing and expenditures would have been the same over time
+ for the treatment and control groups.
+ In the estimating equation, I will control for population demographics,
+ time fixed effects, region fixed effects, and variables associated with
+ hospital characteristics.
+\end_layout
+
+\end_body
+\end_document

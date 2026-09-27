@@ -1,0 +1,184 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+The Effect of Budgets on Innovation: A Look At The Video Game Indusy
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+March 4, 2014
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The video game industry corresponds to the economic sector involved with
+ the development, marketing, and sales of video games.
+ Over the years, the video game industry has grow to be one of the largest
+ entertainment sectors in the world.
+ In fact, the global video game market was valued at $65 billion in June
+ 2011.
+ The United States has the largest market in terms of revenue and employees,
+ with the industry as a whole being worth $10.3 billion.
+ As a result, the video game industry has a major impact on the economy
+ through the sales of games and major systems.
+ However, despite increasing valuation of the market, the video game industry
+ faces many internal problems.
+ These problems are are so significant that the entire video game industry
+ is tinkering on the verge of collapse.
+ Once of the main problems faced by the video game industry today is the
+ rapid escalation of video game budgets.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, in the late 1980s and early 1990s, the development costs of making
+ a game were minimal.
+ a company only needed a small team of programmers to create a game, which
+ would only take a few months to create.
+ As a result, companies could release several games a year, and large profits
+ could be made on a single game.
+ However, as computing and graphics power has increased, the size of development
+ teams have grown to address the many graphical and programming complexities.
+ Unlike other entertainment industries, such as music, modern video games
+ require a large amount of labor and capital.
+ Consequently, budgets to develop a single video game have risen to the
+ millions of dollars due to high labor costs.
+ Also, most games require two to three years of development, which puts
+ additional strain on budgets.
+ In the early 1990s, the average game could be made for $800,000.
+ Today, the average games costs 30 times as much, with the number swelling
+ to about $28 million.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Moreover, since a video game can be considered a durable good, studios must
+ compete with an active second-hand market.
+ What the studios sell today will become substitutes to their own products
+ in the future.
+ In addition, there is a large indie video game market on the internet,
+ which enables consumers to purchase games for under $10.
+ For video game studios to overcome the problems caused by the second-hand
+ and indie markets, they must be willing to innovate.
+ Studios should develop new games with updated gameplay, quality graphics,
+ and unique storylines.
+ Yet, the budgetary conerns previously addressed hinders studios from doing
+ this.
+ If the studios tried to innovate, then they could serious monetary troubles,
+ or even bankrupcy, if the game happened to fail.
+ Consequently, many studios choose to release sequels to popular titles
+ instead of trying to create a truly unique game.
+ This is why the market is saturated with first-person shooters, popular
+ sports titles, and rehashings of previously original titles.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Thus, my proposal is to measure the effect rising video game budgets have
+ had on the market shares for sequels.
+ Given the explanation above, I can expect that rising budgets have increased
+ the market shares for sequels
+\end_layout
+
+\end_body
+\end_document

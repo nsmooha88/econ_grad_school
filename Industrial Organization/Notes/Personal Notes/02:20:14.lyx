@@ -1,0 +1,945 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Class Notes: 02/20/14
+\end_layout
+
+\begin_layout Part*
+Estimating Demand for Differentiated Products
+\end_layout
+
+\begin_layout Section*
+Problems to Overcome
+\end_layout
+
+\begin_layout Subsection*
+1.
+ Dimensionality
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $q=Ap$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $p$
+\end_inset
+
+ is 
+\begin_inset Formula $J\times1$
+\end_inset
+
+ and 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\begin_inset Formula $J\times J$
+\end_inset
+
+.
+ So, the number of parameters is equal to 
+\begin_inset Formula $O(J^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+2.
+ Functional Form
+\end_layout
+
+\begin_layout Standard
+We want plausible substitution patterns.
+\end_layout
+
+\begin_layout Subsection*
+Goal
+\end_layout
+
+\begin_layout Standard
+We want the model to be flexible but pasimonious
+\end_layout
+
+\begin_layout Section*
+Approach
+\end_layout
+
+\begin_layout Standard
+We are going to define preferences on the characteristics of the products,
+ not on the individual products themselves.
+ So, we are going to parametrize the substitution patterns to product characteri
+stics.
+\end_layout
+
+\begin_layout Subsection*
+Setup
+\end_layout
+
+\begin_layout Standard
+A product is going to be viewed as a bundle of characteristics, and preferences
+ are going to be defined on these characteristics.
+ People are going to choose a product that maximizes their utility.
+\end_layout
+
+\begin_layout Subsection*
+Estimation
+\end_layout
+
+\begin_layout Standard
+Aggregate over individual demand and to estimate market shares.
+\end_layout
+
+\begin_layout Subsection*
+Data
+\end_layout
+
+\begin_layout Standard
+For goods 
+\begin_inset Formula $j=1,\ldots,J$
+\end_inset
+
+, we see there share of each product 
+\begin_inset Formula $s_{j}$
+\end_inset
+
+, the price of each product 
+\begin_inset Formula $p_{j}$
+\end_inset
+
+, and the observable characteristics (that we the analyst see) of each product
+ 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+.
+ In some cases, but not in all, we have data across different markets 
+\begin_inset Formula $t=1,\ldots,T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+(Simple) Logit Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{ij}=\delta_{j}(x_{j},p_{j},\xi_{j};\theta)+\epsilon_{ij}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\delta_{j}$
+\end_inset
+
+ is a function of the mean utility, 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{j}$
+\end_inset
+
+ are observable characteristics to the analyst, 
+\begin_inset Formula $\xi_{j}$
+\end_inset
+
+ are observed characteristics to the consumer and firm but not to the analyst,
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+ are parameters we wish to estimate, and 
+\begin_inset Formula $\epsilon_{ij}$
+\end_inset
+
+ are individual idiosyncratic shocks.
+\end_layout
+
+\begin_layout Subsection*
+Linear 
+\begin_inset Formula $\delta_{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In most settings, 
+\begin_inset Formula $\delta_{j}=x_{j}\beta-p_{j}\alpha+\xi_{j}$
+\end_inset
+
+.
+ This implies that 
+\begin_inset Formula $u_{ij}=x_{j}\beta-p_{j}\alpha+\xi_{j}+\epsilon_{ij}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $s_{j}=Pr\left(i\ \mbox{chooses}\ j|\underline{x},\underline{p}\right)$
+\end_inset
+
+ where 
+\begin_inset Formula $\underline{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\underline{p}$
+\end_inset
+
+ are vectors of characteristics and prices, respectively.
+\end_layout
+
+\begin_layout Standard
+Then,
+\begin_inset Formula 
+\begin{gather*}
+=Pr(u_{ij}\geq u_{ik}\ \forall\ k\neq j|\underline{x},\underline{p})\\
+=Pr(\epsilon_{ik}-\epsilon_{ij}\leq(x_{j}-x_{k})\beta-(p_{j}-p_{k})\alpha+\xi_{j}-\xi_{k}\ \forall\ k\neq j)
+\end{gather*}
+
+\end_inset
+
+We assume 
+\begin_inset Formula $\epsilon_{ij}\sim i.i.d.\ \mbox{Type I E.V.}$
+\end_inset
+
+ Thus, 
+\begin_inset Formula $F(z)=\exp\left\{ -e^{-z}\right\} $
+\end_inset
+
+.
+ Given this distribution, we get a closed form solution to the integral.
+ However, the problematic assumption is that 
+\begin_inset Formula $\epsilon_{ij}$
+\end_inset
+
+ are i.i.d.
+ because it gives substitution patterns that are not reasonable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $s_{j}=Pr(\mbox{choose j})=\frac{\exp\left\{ x_{j}\beta-p_{j}\alpha+\xi_{j}\right\} }{1+{\displaystyle \sum_{k=1}^{J}}\exp\left\{ x_{k}\beta-p_{k}\alpha+\xi_{k}\right\} }\implies u_{ij}=x_{j}\beta-p_{j}\alpha+\xi_{j}+\epsilon_{ij}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Problems With Simple Logit
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\eta_{jk}\equiv\frac{\partial s_{j}}{\partial p_{k}}\cdot\frac{p_{k}}{s_{j}}=\begin{cases}
+-\alpha p_{j}(1-s_{j}) & \mbox{if\ j=k}\\
+\alpha p_{k}\cdot s_{k} & \mbox{if}\ j\neq k
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that 
+\begin_inset Formula $\eta_{jk}$
+\end_inset
+
+ denotes own-price and cross-price elasticities.
+\end_layout
+
+\begin_layout Enumerate
+The own-price elasticity is proportional to the price.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In pricing models, there is a high markup on high priced goods.
+ But this simple logit model contradicts this fact.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Cross-price elasticity
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Not a function of good 
+\begin_inset Formula $j$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Proportional to shares
+\end_layout
+
+\end_deeper
+\begin_layout Example*
+\begin_inset Formula $k=\mbox{BMW}$
+\end_inset
+
+, 
+\begin_inset Formula $j_{1}=\mbox{Mercedes}$
+\end_inset
+
+, 
+\begin_inset Formula $j_{2}=\mbox{KIA}$
+\end_inset
+
+.
+ Suppose that Mercedes and KIA have equal to shares.
+ Suppose the price of the BMW increases, then the model predicts that of
+ the people who shift away from BMW's, half purchase Mercedes and half will
+ purchase KIA.
+ But this is not reasonable a restriction.
+ Because of the i.i.d.
+ assumption, we are assuming all taste shocks are independent.
+ We need taste shocks to be correlated in some way across brands.
+\end_layout
+
+\begin_layout Standard
+We are going to generalize the logit the model in such a way that we will
+ allow for the taste shocks to be correlated across brands.
+\end_layout
+
+\begin_layout Section*
+Generalized Logit Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+u_{ij}=x_{j}\beta_{i}-p_{j}\alpha_{i}+\xi_{j}+\epsilon_{ij}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We are now allowing the parameters to vary across individuals, i.e., we allowing
+ for heterogenous preferences).
+ 
+\begin_inset Formula $\beta_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+ known as random coefficients, and they represent heterogenous preferences.
+ Note that 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ is usually 
+\begin_inset Formula $K\times1$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{c}
+\alpha_{i}\\
+\beta_{i}
+\end{array}\right)=\left(\begin{array}{c}
+\alpha\\
+\beta
+\end{array}\right)+\Pi D_{i}+\Sigma v_{i}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\left(\begin{array}{c}
+\alpha\\
+\beta
+\end{array}\right)$
+\end_inset
+
+ is the effect on mean utility, 
+\begin_inset Formula $D_{i}$
+\end_inset
+
+ are observed consumer demographics, and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ are unobserved consumer demographics.
+ Note that 
+\begin_inset Formula $D_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ are random vectors, and 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ and 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ are matrices.
+ So, we assume that 
+\begin_inset Formula $D_{i}\sim P_{D}^{*}(D)$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}\sim P_{v}^{*}(v)$
+\end_inset
+
+.
+ When we plug equation (2) into equation (1), we obtain
+\begin_inset Formula 
+\begin{equation}
+u_{ij}=x_{j}\beta-p_{j}\alpha+\left[\begin{array}{cc}
+x_{j} & p_{j}\end{array}\right]\left[\Pi D_{i}+\Sigma v_{i}\right]+\epsilon_{ij}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\delta_{j}\equiv x_{j}\beta-p_{j}\alpha$
+\end_inset
+
+ is the mean utility to all consumers, and 
+\begin_inset Formula $\mu_{ij}\equiv\left[\begin{array}{cc}
+x_{j} & p_{j}\end{array}\right]\left[\Pi D_{i}+\Sigma v_{i}\right]$
+\end_inset
+
+ is the mean zero heteroskedastic deviation of mean utility.
+ The model allows for 
+\begin_inset Formula $\mu_{ij}\neq0$
+\end_inset
+
+, which allows for correlation across brands.
+ In the simple logit, 
+\begin_inset Formula $\mu_{ij}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let us define the set of attributes leading person 
+\begin_inset Formula $i$
+\end_inset
+
+ to buy good 
+\begin_inset Formula $j$
+\end_inset
+
+: 
+\begin_inset Formula $A_{j}\left(\underline{x},\underline{p},\underline{\xi_{j},}\Pi,\Sigma,\alpha,\beta\right)=\left\{ \left(D_{i},v_{i},\epsilon_{i1},\ldots,\epsilon_{iJ}\right)|u_{ij}\geq u_{ik}\ \forall\ k\neq j\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, define 
+\begin_inset Formula $P^{*}\equiv\mbox{population distribution function}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Pr(\mbox{choose}\ j)=s_{j}=\int_{A_{j}}dP^{*}(D,V,\epsilon)=\int_{A_{j}}dP^{*}(\epsilon|D,v)\cdot dP^{*}(v|D)\cdot dP_{D}^{*}(D)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that we just applied Bayes rule in the third equality.
+ We are going to assume that 
+\begin_inset Formula $v_{i}\bot D_{i}\bot\epsilon_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\int_{A_{j}}dP_{\epsilon}^{*}(\epsilon)\cdot dP_{v}^{*}(v)\cdot dP_{D}^{*}(D)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that the error term is still a Type I Extreme Value (EV).
+ We are going to assume 
+\begin_inset Formula $v$
+\end_inset
+
+ follows some multivariate distribution, and we are grabbing the distribution
+ of 
+\begin_inset Formula $D$
+\end_inset
+
+ from survey data.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies s_{j}={\displaystyle \int}\frac{\exp\{\delta_{j}+\mu_{ij}\}}{1+{\displaystyle \sum_{k=1}^{J}}\exp\{\delta_{k}+\mu_{ik}\}}dP_{v}^{*}(v)\cdot d\hat{P}_{D}(D)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Did This Give Us Better Substitution Patterns?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\eta_{jk}=\begin{cases}
+-\frac{p_{j}}{s_{j}}\int a_{i}s_{ij}(1-s_{ij})dP_{D}^{*}(D)dP_{v}^{*}(v) & \mbox{if}\ j=k\\
+\frac{p_{k}}{s_{j}}\int a_{i}s_{ij}s_{ik}dP_{D}^{*}(D)dP_{v}^{*}(v) & \mbox{if}\ j\neq k
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $s_{ij}=\frac{\exp\{\delta_{j}+\mu_{ij}\}}{1+{\displaystyle \sum_{k=1}^{j}}\exp\{\delta_{k}+\mu_{ik}\}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Data
+\end_layout
+
+\begin_layout Itemize
+Market level share data
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $s_{j}=\frac{q_{j}}{M}$
+\end_inset
+
+, where 
+\begin_inset Formula $M$
+\end_inset
+
+ is the market size
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $s_{o}=1-{\displaystyle \sum_{j=1}^{J}}s_{j}$
+\end_inset
+
+ (Outside good)
+\end_layout
+
+\begin_layout Subsection*
+Identification
+\end_layout
+
+\begin_layout Standard
+Prices set by profit 
+\begin_inset Formula $(\Pi)$
+\end_inset
+
+ firms
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{ij}=x_{j}\beta-p_{j}\alpha+\xi_{j}+\epsilon_{ij}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\xi_{j}$
+\end_inset
+
+ includes brand loyalty
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ln s_{j}-\ln s_{0}=x_{j}\beta-p_{j}\alpha+v_{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We are concerned that 
+\begin_inset Formula $v_{j}=\xi_{j}+\epsilon_{ij}$
+\end_inset
+
+ is correlated with 
+\begin_inset Formula $p_{j}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+So, we need an IV for price
+\end_layout
+
+\begin_layout Subsection*
+Summary of Steps
+\end_layout
+
+\begin_layout Enumerate
+Estimate 
+\begin_inset Formula $\hat{s}_{j}$
+\end_inset
+
+ (parameters)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Integrating over drwas of 
+\begin_inset Formula $P_{D}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{V}^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Intuitvely, 
+\begin_inset Formula ${\displaystyle \min_{\theta}}\left\Vert s(\theta)-s^{\mbox{obs}}\right\Vert $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Where 
+\begin_inset Formula $s(\theta)$
+\end_inset
+
+ are the theoretical shares, and 
+\begin_inset Formula $s^{\mbox{obs}}$
+\end_inset
+
+ are the observable shares
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\theta\equiv\left[\begin{array}{cccc}
+\alpha & \beta & \Pi & \Sigma\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Formulate as GMM Problem.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $E[\mbox{error}\cdot IV]=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In the error, we have 
+\begin_inset Formula $\xi_{j}(\theta)$
+\end_inset
+
+.
+ The OLS analog, 
+\begin_inset Formula $\epsilon=y-x\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon(\beta)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $s_{j}(\theta,\xi_{j}x,p)$
+\end_inset
+
+, but we want to invert this to obtain 
+\begin_inset Formula $\xi_{j}(\theta\ldots)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Do GMM: 
+\begin_inset Formula $E[Z^{\prime}w(\theta)]=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Step 1
+\end_layout
+
+\begin_layout Standard
+Integrating numberically over draws of 
+\begin_inset Formula $D$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+, and analytically over 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $s_{j}=\frac{1}{ns}{\displaystyle \sum_{i=1}^{ns}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Nevo's equation 11, page 321)
+\end_layout
+
+\begin_layout Subsubsection*
+Step 2
+\end_layout
+
+\begin_layout Standard
+Invert 
+\begin_inset Formula $s_{j}(\cdot)$
+\end_inset
+
+ to 
+\begin_inset Formula $\xi_{j}(\theta\ldots)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $J$
+\end_inset
+
+ share equations and 
+\begin_inset Formula $J$
+\end_inset
+
+ unknowns
+\end_layout
+
+\begin_layout Standard
+In the simple logit,
+\begin_inset Formula 
+\begin{gather*}
+\delta_{j}=\ln s_{j}-\ln s_{o}\\
+\implies x_{j}\beta-p_{j}\alpha+\xi_{j}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the full model, (Equation 12)
+\begin_inset Formula 
+\[
+\delta^{h+1}=\delta^{h}+\ln s^{\mbox{obs}}-\ln s(p,x;\delta^{h},\theta_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\theta_{1}=\begin{array}{cc}
+\alpha & \beta\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\theta_{2}=\begin{array}{cc}
+\Pi & \Sigma\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Error term,
+\begin_inset Formula 
+\begin{gather*}
+\delta_{j}(s,\theta_{2})-(x_{j}\beta-p_{j}\alpha)\equiv\xi_{j}\\
+\xi_{j}(\mbox{parameters)}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+IVs for price
+\end_layout
+
+\begin_layout Itemize
+Cost shocks (this is ideal, but they are difficult to obtain and not often
+ used)
+\end_layout
+
+\begin_layout Itemize
+IV for 
+\begin_inset Formula $p_{j}\implies$
+\end_inset
+
+ product characteristics of goods 
+\begin_inset Formula $-j$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

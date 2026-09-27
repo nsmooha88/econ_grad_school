@@ -1,0 +1,324 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Class Notes: 01/16/14
+\end_layout
+
+\begin_layout Part*
+Nevo Paper
+\end_layout
+
+\begin_layout Section*
+Structural Approach
+\end_layout
+
+\begin_layout Standard
+When constructing a model of a market, we need to know both the demand and
+ supply side.
+\end_layout
+
+\begin_layout Subsection*
+Demand Side
+\end_layout
+
+\begin_layout Standard
+Suppose you've estimated own and cross-price elasticities, and 
+\begin_inset Formula $J=2$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+\frac{\partial q_{1}}{\partial p_{1}} & \frac{\partial q_{2}}{\partial p_{2}}\\
+\frac{\partial q_{1}}{\partial p_{2}} & \frac{\partial q_{2}}{\partial p_{1}}
+\end{array}\right]\longrightarrow\mbox{Matrix of}\ \frac{\partial s_{j}}{\partial p_{k}}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $s_{j}$
+\end_inset
+
+ denotes market share of brand 
+\begin_inset Formula $j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Supply Side
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F$
+\end_inset
+
+ firms
+\end_layout
+
+\begin_layout Standard
+Each produce a subset 
+\begin_inset Formula $F_{f}$
+\end_inset
+
+ of 
+\begin_inset Formula $J$
+\end_inset
+
+ brands/goods.
+\begin_inset Formula 
+\[
+\Pi_{f}={\displaystyle \sum_{j\in F_{f}}}\left(p_{j}-mc_{j}\right)M\cdot s_{j}(p)-C_{f}
+\]
+
+\end_inset
+
+We assume Nash-Bertrand competition, so the first order condition with respect
+ to 
+\begin_inset Formula $p_{j}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(p_{j}-mc_{j}\right)\frac{\partial s_{j}}{\partial p_{j}}+s_{j}(p)+{\displaystyle \sum_{r\neq j\in F_{f}}}\left(p_{r}-mc_{r}\right)\frac{\partial s_{r}}{\partial p_{j}} & = & 0\\
+s_{j}(p)+{\displaystyle \sum_{r\in F_{f}}}\left(p_{r}-mc_{r}\right)\frac{\partial s_{r}}{\partial p_{j}} & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+If firms own more than 1 brand, then
+\begin_inset Formula 
+\[
+\Omega_{jr}^{pre}(p)\equiv\begin{cases}
+-\frac{\partial s_{j}}{\partial p_{r}} & \mbox{if}\ \exists\ f:\{r,j\}\subseteq F_{f}\\
+0 & \mbox{otherwise}
+\end{cases}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\Omega_{r}^{pre}(P)$
+\end_inset
+
+ is a 
+\begin_inset Formula $J\times J$
+\end_inset
+
+ matrix.
+ So, we have
+\begin_inset Formula 
+\[
+s(P)-\Omega_{jr}^{pre}(P)\left(P-MC\right)=0
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $s(P)$
+\end_inset
+
+ and 
+\begin_inset Formula $(P-MC)$
+\end_inset
+
+ are 
+\begin_inset Formula $J\times1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+Suppose 
+\begin_inset Formula $F=2$
+\end_inset
+
+, where we have Kellogs and Post.
+ We also suppose 
+\begin_inset Formula $J=3$
+\end_inset
+
+, where Kellogs has Corn Flakes and Frosted Flakes and Post has Grape Nuts.
+ So
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+s_{1}\\
+s_{2}\\
+s_{3}
+\end{array}\right)+\left(\begin{array}{ccc}
+\frac{\partial s_{1}}{\partial p_{1}} & \frac{\partial s_{2}}{\partial p_{1}} & 0\\
+\frac{\partial s_{1}}{p_{2}} & \frac{\partial s_{2}}{\partial p_{2}} & 0\\
+0 & 0 & \frac{\partial s_{3}}{\partial p_{3}}
+\end{array}\right)\left(\begin{array}{c}
+P_{1}-MC_{1}\\
+P_{2}-MC_{2}\\
+P_{3}-MC_{3}
+\end{array}\right)=\left(\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right)
+\]
+
+\end_inset
+
+This is a model of pricing.
+ If a firm owns multiple brands, it must take into account how changing
+ the price of one of its brand affects the demand of the other brands it
+ owns.
+\end_layout
+
+\begin_layout Section*
+Estimating Prices After Merger
+\end_layout
+
+\begin_layout Enumerate
+Estiamte 
+\begin_inset Formula $\widehat{\frac{\partial s_{j}}{\partial p_{k}}}\implies\hat{\Omega}^{pre}(P)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\widehat{MC}=P+\left(\hat{\Omega}^{pre}(P)\right)^{-1}\cdot s(P)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Assume
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The merger does not change MC
+\end_layout
+
+\begin_layout Enumerate
+The merger does not change substitution patterns (i.e., does not change the
+ demand side)
+\end_layout
+
+\begin_layout Enumerate
+The merger does not change the pricing strategy.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Predicted Post-Merger Prices
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P^{post}=\widehat{MC}+\left(\Omega^{post}\right)^{-1}\cdot s(P)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $s(p)$
+\end_inset
+
+ corresponds to the last pre-period
+\end_layout
+
+\end_body
+\end_document
