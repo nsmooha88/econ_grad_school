@@ -1,0 +1,200 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Do Voter ID Laws Reduce Voter Turnout for Democrats?
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+September 5, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Ever since the 2008 presidential election, voter ID laws have become a hot
+ button political issue, especially due to tight races in many swing states.
+ While the debate has cooled since the last election, one can certainly
+ expect that it will once again gain momentum as the struggle between Democrats
+ and Republicans intensifies and the mid-term elections grow closer.
+ As many as thirty-three states have proposed or already adopted laws requiring
+ residents to show a government-issued photo ID in order to vote.
+ Supporters say the laws are needed to combat voter fraud, while critics
+ see them as a tactic to disenfrachise voters.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+State law makers have claimed that new voter ID laws are meant to crack
+ down on the problem of voter fraud.
+ However, over a five year period, the Justice Department has only filed
+ 120 cases of voter fraud, most of them arising due to a misunderstanding,
+ which have resulted in just 86 convictions.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+In 5-Year Effort, Scant Evidence of Voter Fraud.
+\begin_inset Quotes erd
+\end_inset
+
+ New York Times, 2007
+\end_layout
+
+\end_inset
+
+ In addition, prior to the 2006 election, no state ever required a voter
+ to produce a government-issued photo ID as a condition to voting.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+According to a study from NYU's Brennan Center,
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+The Challenge of Obtaining Voter Identification.
+\begin_inset Quotes erd
+\end_inset
+
+ Brennan Center for Justice, 2012
+\end_layout
+
+\end_inset
+
+ it was estimated that about 11%, or about 20 million people, do not have
+ government-issued voter IDs.
+ Important to note, these figures only represent the population of people
+ who are eligible to vote.
+ The most likely people to lack valid photo ID are 18-20 year olds, those
+ without college educations, minorities, and the poor.
+ Recent studies have suggested that these demographics tend to vote for
+ Democrats.
+ So, while the amount of disenfrachised voters might not seem very high,
+ it could make a difference in a close election.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Thus, I would like to determine if strict voter ID laws actually reduce
+ the percentage of votes Democrats receive during an election.
+ Obviously, the state and federal governments keeps up-to-date voting records,
+ so the data is readily available.
+ I will analyze data obtained both before and after voter ID laws were enacted
+ in respective states, and the observations will correspond to the fifty
+ states.
+ In addition, I will control for both state party majority, as well as state
+ population demographics.
+ The dependent variable will be continuous representing the percentage of
+ votes to Democrats, while the independent variable of interest will be
+ a discrete variable indicating whether a state has recently passed a voter
+ ID law.
+\end_layout
+
+\end_body
+\end_document

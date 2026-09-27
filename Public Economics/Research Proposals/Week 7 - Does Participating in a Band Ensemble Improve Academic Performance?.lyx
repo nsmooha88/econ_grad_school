@@ -1,0 +1,255 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Does Participating in a Band Ensemble Improve Academic Performance?
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+October 10, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Since the most recent recession, there have been decreases to public funding
+ across the board.
+ Even though education is the last budget areas to be cut, many universities
+ are dealing with declines in both state and federal funding, as well as
+ rising costs.
+ Despite the recession ending in 2009, many districts will be unable to
+ regain their pre-2008 funding until several years from now.
+ Consequently, many universities are forced to make difficult decisions
+ in order to balance their budgets while still meeting the needs of students.
+ Since extracurricular activities, such as music performance ensembles,
+ are considered 
+\begin_inset Quotes eld
+\end_inset
+
+non-essential,
+\begin_inset Quotes erd
+\end_inset
+
+ they have faced some of the deepest budgetary cuts and restrictions.
+ However, many opponents of these cuts claim that reducing or eliminating
+ these particular activities does more harm to the students than school
+ administrators anticipate.
+ In fact, there is a strong correlation between involvement in a band ensemble
+ and positive performance in school.
+ Yet, as we know, correlation does not imply causation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+With my project, I intend to measure the effect participating in a band
+ ensemble, most notably marching band, has on academic performance.
+ Marching band is a unique treatment to analyze because it requires physical
+ exertion, as well as musical aptitude.
+ In regards to academic performance, I can measure the effect on both GPA
+ and retention rate, which are two important outcomes to university leaders.
+ The notable problem facing this examination is the fact that the treatment
+ variable is endogenous.
+ We cannot rule out the fact that participating in marching band may be
+ correlated with some omitted variable, such as innate ability, which also
+ affects outcomes.
+ To solve this problem, I plan to employ a random discontinuity approach.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To explain, close to 600 students try out for the marching band at The Florida
+ State University.
+ Students are graded on both their marching and playing ability, and they
+ are given scores in both categories.
+ After a week long audition process, final scores are tabulated and the
+ directors set a cutoff.
+ Typically, anyone above the cutoff makes the band, and anyone below does
+ not.
+ I know that the necessary identifying assumption for a regression discontinuity
+, i.e., all other determinants of the outcome vary smoothly across the threshold,
+ is likely to hold.
+ Individuals cannot manipulate where they are relative to the cutoff because
+ known of them know what the cutoff is.
+ In fact, the band directors do not set the cutoff until they observe the
+ entire distribution of scores for a particular section.
+ In addition, it is difficult to imagine anything else besides treatment
+ changing at the cutoff.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, depending on the focus of my treatment variable, this can either be
+ a fuzzy or a sharp RD.
+ To elaborate, suppose I consider the cutoff to be the primary determinant
+ of whether or not a student is in a band ensemble in general.
+ Yet, the students who fail to make the marching band still have the opportunity
+ to join other band ensembles on campus, as well as those who make the band.
+ So, I have a situation in which there are 
+\begin_inset Quotes eld
+\end_inset
+
+always-takers
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+never-takers.
+\begin_inset Quotes erd
+\end_inset
+
+ As such, I would only obtain a local average treatment effect for compliers
+ at the end of my analysis.
+ However, if I just consider the effect of marching band on outcomes, then
+ I believe I will have a sharp RD because the number of students above the
+ cutoff who elect not to join the band is very small.
+ Plus, my estimate will be an average treatment effect.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If I decide to go with the former route, then I may run into problems with
+ my exclusion restriction.
+ I cannot say with certainty that the only effect being above or below the
+ cutoff has on outcomes is through participation in marching band because
+ as I stated earlier, those who fail to make the marching band are more
+ likely to join another band ensemble on campus.
+ However, I can attempt to estimate the effect joining another band ensemble
+ may have on outcomes.
+ Music majors who are participants in the marching band are also required
+ by their degree program to be members of other band ensembles.
+ If being in another band ensemble has a positive effect on outcomes, then
+ this probably holds true for all members of the marching band.
+ As a result, I can choose to ignore the effect being in other ensembles
+ altogether, which causes my estimates to be biased downwards.
+ In turn, this will give me a conservative lower bound estimate on the effect
+ of band participation on outcomes.
+ Lastly, the reduced form equation, i.e., the effect of marching band on outcomes,
+ is still a topic of interest.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In regards to the data, I will try to obtain outcome data from the university's
+ registrars office.
+ If I am unable to collect exact data on grades, then my outcome variable
+ of interest will be the retention rate of students from freshman to sophmore
+ year.
+ This outcome is still an area of concern for univsersities because the
+ attrition rate of students between freshman and sophmore year is highest
+ compared to the additional years spend in college.
+ In the long run, it is important for universities to retain as many students
+ as possible from year to year.
+ Plus, I am fairly certain I will be able to gather information on whether
+ on not freshman students who tried out for the marching band elected to
+ leave the university following their first year in school.
+ Finally, total audition and cutoff scores are collected every year during
+ the audition process, so I know this data is available.
+\end_layout
+
+\end_body
+\end_document

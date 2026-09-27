@@ -1,0 +1,180 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Does Participation in Extracurricular Activities Improve Performance in
+ School?
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+September 26, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Since the most recent recession, there have been decreases to public funding
+ across the board.
+ Even though education is the last budget areas to be cut, many districts
+ are dealing with declines in both state and local funding, as well as rising
+ costs.
+ Despite the recession ending in 2009, many districts will be unable to
+ regain their pre-2008 fudning until several years from now.
+ Consequently, school districts are forced to make difficult decisions in
+ order to balance their budgets while still meeting the needs of students.
+ Since extracurricular activities are considered 
+\begin_inset Quotes eld
+\end_inset
+
+non-essential,
+\begin_inset Quotes erd
+\end_inset
+
+ they have faced some of the deepest budgetary cuts and restrictions.
+ However, many opponents of these cuts claim that reducing or eliminating
+ extracurrilar activities does more harm to the students than school administrat
+ors anticipate.
+ In fact, there is a strong correlation between involvement in extracurricular
+ activities and positive performance in school.
+ Yet, as we know, correlation does not imply causation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+With my project, I intend to measure the effect participating in extracurricular
+ activities has on student grades.
+ The notable problem facing this examination is the fact that the treatment
+ variable is endogenous.
+ We cannot rule out the fact that participating in extracurricular activities
+ may be correlated with some omitted variable, such as innate ability, which
+ also affects grades.
+ To solve this problem, I will employ an instrumental variable to isolate
+ 
+\begin_inset Quotes eld
+\end_inset
+
+as-good-as-random
+\begin_inset Quotes erd
+\end_inset
+
+ variation in the treatment variable.
+ The instrumental variable I propose is whether or not a student's parents
+ were also involved in extracurricular activities while they were in school.
+ This instrumental variable is correlated with the endogenous variable because
+ a student is more likely to join a particular extracurricular activity
+ if a parent was also involved in said activity.
+ Yet, the instrument is uncorrelated with the outcome because parents' participa
+tion in an extracurricular activity while they were in school has absolutely
+ no affect on their child's current performance in school.
+ The only way this instrument can have an effect on the outcome is through
+ the treatment variable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This will be a panel data analysis where each cross-section observation
+ represents a student.
+ I will measure the effect participating in an extracurricular activity
+ has on a student's grades over time.
+ I should be able to obtain data directly from schools as long as the students
+ are kept anonymous, so as not to violate FERPA.
+\end_layout
+
+\end_body
+\end_document

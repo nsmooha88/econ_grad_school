@@ -1,0 +1,178 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Does the NYPD's Stop, Question and Frisk Program Deter Crime?
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+September 26, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The New York City stop, question and frisk program is a practice of the
+ New York City Police Department by which police officers are able to stop
+ and question pedestrians, as well as frisk them for weapons and other contraban
+d.
+ Proponents of the measure claim that it is aimed at reducing crime by stopping,
+ questioning and searching individuals suspectd of wrongdoing.
+ The police Commissioner has claimed that stop-and-frisk has saved lived
+ and driven down crime.
+ However, many minority advocacy groups oppose the law because they believe
+ it is a form of racial profiling.
+ In fact, several officers have alleged in testimony that many of their
+ colleagues target young black men and other minorities.
+ Also, in 2012, almost 90 percent of stop-and-frisk incidents citywide yielded
+ no drugs, guns, open containers, or anything else illegal.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In order to answer this question, I intend to employ a difference-in-difference
+ strategy.
+ Since New York City is the only treatment group, and to my knowledge, there
+ is no comparable control group, then in order to obtain reasonable estimates
+ and perform inference, I will apply the Sythetic Control Approach.
+ I will construct a 
+\begin_inset Quotes eld
+\end_inset
+
+sythetic New York City
+\begin_inset Quotes erd
+\end_inset
+
+ as a control by using a weighted average of other cities in the region;
+ I will endogenously select the weights so that the synthetic control matches
+ up well with New York City in the pre-treatment period.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This method overcomes the identification problem because there are no systematic
+ differences between the treatment and control groups.
+ Also, no other time-varying factor should affect my estimates because I
+ will not be identifying off of time-series variation.
+ Most importantly, my identifying assumption is that absent the treatment,
+ the change in the outcome for the treatment and control groups would have
+ been the same over time.
+ I expect this assumption to hold because I will construct my control group
+ in such a way that it matches with the treatment group in the pre-treatment
+ period.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Finally, this project is feasible because the data is readily available.
+ Every time a police officer stops a person in NYC, the officer is supposed
+ to fill out a form to record the details of the stop.
+ So, both the New York Police Department and the New York Civil Liberties
+ Union provide annual and quarterly data on the stop-and-frisk program.
+ The electroic database includes nearly all of the data recorded by the
+ police officer after a stop.
+ In addition, I would be able to obtain annual and quarterly crime data
+ from the NYPD.
+\end_layout
+
+\end_body
+\end_document

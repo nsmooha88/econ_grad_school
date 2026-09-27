@@ -1,0 +1,214 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Does Playing Football Affect Future Outcomes?
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+November 7, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Over the last three decades, the popularity of football, especially pro
+ football, has gradually increased.
+ A little more then one-third of U.S.
+ adults who say they follow at least one sport identify football as their
+ favorite.
+ As one can imagine, this rise in popularity has transformed the NFL into
+ an approximately billion dollar industry.
+ To elaborate, the operating income of the league's 32 squared was $984.5
+ million in 2005, and the average NFL team is worth $898 million.
+ However, the football's large following has only strengthened the scrunity
+ it endures concerning player safety.
+ In recent years, reports about the NFL's abysmal concussion policy have
+ began to permeate through the national discussion.
+ In fact, many ex-players have sued the NFL over their lax rules and policies
+ on concussions and player safety.
+ Moreover, researcers are just now discovering the significant negative
+ correlaton between head trauma (i.e., concussions) and brain health.
+ Each concussion is a serious brain injury that could have lasting negative
+ effects.
+ Doctors believe that even several mild concussions that happen within a
+ short time of one another can cause long-term disabilities.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+One of the more pressing arguments lobbied against football is the potential
+ negative effects it can have on the long-term development and health of
+ younger players.
+ The effects of head trauma in youth sports is an area of research that
+ has been largely overlooked.
+ Yet, current studies have produced some truly startling results.
+ According to a recent article published in the New York Times, 
+\begin_inset Quotes eld
+\end_inset
+
+High school football players are nearly twice as likely to get concussions
+ as college football players and high school atheles in other sports, and
+ as many as 20 percent of athlets who get a concussion have symptoms that
+ linger more than two weeks, according to the Institute of Medicine
+\begin_inset Quotes erd
+\end_inset
+
+ (Belson, 2013, para.
+ 1).
+ Within economics, there is a growing area of research that studies the
+ role early life experiences have in determining future life outcomes.
+ Based on the previously mentioned findings, one can infer that participation
+ in youth football programs could signficantly impact human captial accumulation
+ during the formative years of development, growth, and maturity.
+ Tackling this issue provides an excellent setup to perform truly noteworthy
+ research.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+So, I wish to answer the following question: does participating in youth
+ football programs affect future outcomes? To answer this question, I propose
+ a differences-in-differences method with no time element, similar to the
+ one presented by Nunn and Puga (2010).
+ In my setup, the treatment variable will not be binary, but it can instead
+ realize integer values.
+ The treatment group consists of individuals who played organized football
+ anytime prior to college.
+ Note that we will only focus on subjects who elected not to play organized
+ football beyond high school because it can be argued that individuals who
+ play football in college and beyond are afforded more opportunities for
+ succes than those who did not.
+ The control group are individuals who did not play any kind of organized
+ football while growing up.
+ During my estimation, I would control for region fixed effects, socio-economic
+ background, race, education, parent's eductation, and physical characteristics.
+ Thus, after controlling for all of these pertinent factors, my identifying
+ assumption would be that absent treatment, the future outcomes of individuals
+ in the treatment group would have closely followed the same general pattern
+ of future outcomes as those in the control group.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+Belson, Ken.
+ (2013, October 30).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Younger Players Face Bigger Concussion Risk, Report Says.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+The New York Times
+\emph default
+, pp.
+ B14
+\end_layout
+
+\end_body
+\end_document

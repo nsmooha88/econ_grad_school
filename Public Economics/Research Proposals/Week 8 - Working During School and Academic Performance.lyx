@@ -1,0 +1,231 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Working During School and Academic Performance
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+October 15, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Previous research has attempted to measure the effect working during school
+ has on academic performance.
+ However, results have been mixed due to the biases that are potentially
+ present.
+ The number of hours that are worked is endogenously chosen by the individual;
+ highly motivated people with strong ability tend to work more and perform
+ better in school.
+ In order to overcome the possible endogeneity problem, Stinebrickner and
+ Stinebrickner (2003) used instrumental variable estimators to measure the
+ true effect that youth employment has on educational outcomes.
+ The authors data collected from Berea College where there is a mondatory
+ work-study program.
+ The IV estimator they obtained indicated that working additional hours
+ has a harmful effect on academic performance.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The IV approach the authors utilize was incredibly clean and well-executed,
+ so there is every reason to believe that their results are internally valid.
+ However, Beraea College is a unique institution, so the authors do not
+ conclude that negative effects of the same magnitutde would necessarily
+ exist in other youth employment contexts.
+ Consequently, it is doubtful that the IV estimates that they provide have
+ a high level of external validity.
+ To combat this issue, I propose a regression discontinuity design that
+ may have more far reaching implications than those presented in Stinebrickner
+ and Stinebrickner (2003).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To receive federal student aid for college, students are required to fill
+ out the free application for Federal Student Aid (FAFSA).
+ It is required for a student to provide personal financial information,
+ and if a student is classified as a 
+\begin_inset Quotes eld
+\end_inset
+
+dependent,
+\begin_inset Quotes erd
+\end_inset
+
+ then the financial information of his/her parents must also be provided.
+ The application is then processed and passed along to the university of
+ the student.
+ On many occassions, universities request additional paperwork from students,
+ such as tax returns from the students and/or parents, W-2 forms, etc., in
+ order to verify that all the information provided on the submitted applications
+ is valid.
+ Finally, the universities allocate the available federal student aid based
+ on criteria that corresponds with 
+\begin_inset Quotes eld
+\end_inset
+
+need.
+\begin_inset Quotes erd
+\end_inset
+
+ Students who indicate interest in the federal work-study program may be
+ assigned a job on the university campus to cover the additional costs of
+ attendance that were unable to be covered by other forms of financial aid.
+ Assignment into the federal work-study program is based on the financial
+ needs of the student and his/her family.
+ Those with a large amount of costs still needing to be covered will be
+ granted the ability to enter into the work-study program.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+So, the situation just described offers me the opportunity to employ a regressio
+n discontinuity approach to measure the effect working during school has
+ on academic performance.
+ To elaborate, those students with low remaining costs will not be assigned
+ to the federal work-study program, while students with a high level of
+ remaining costs will be.
+ Most of these decisions are formulated using a certain pre-set threshold.
+ Now, the necessary identifying assumption for a regression is that there
+ is no manipulation around the cutoff.
+ This means that all other determinants of the outcome vary smoothly across
+ the threshold.
+ While there may be some concerns about students and their families reporting
+ true financial information, I do not believe this will not be a serious
+ problem for my project.
+ First off, individuals who fill out a FAFSA are generally unaware of the
+ specific characteristics necessary to be eligible for financial aid, including
+ being assigned to a work-study program.
+ Next, universities have several thorough measures to determine whether
+ the information they receive on an application is valid.
+ Finally, misreporting financial data is a federal offense, so I am assuming
+ that the possibility of getting caught, along with the threat of punishment,
+ would deter a large amount of people from doing this.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Moving on, just because a student is assigned to the federal work-study
+ program does not mean he/she is required to accept.
+ There are many students who may decline the offer to join the federal work-stud
+y program.
+ As a result, my setup will be a fuzzy RD, so the estimates I obtain will
+ be a local average treatment effect that only will only apply to compliers.
+ Nevertheless, the project can still provide notable insight since the data
+ will be collected from a wide range of universities across the country,
+ which will be chosen randomly.
+ As long as identities are kept anonymous, then I am fairly certain I can
+ obtain the necessary data regarding federal work-study decisions, as well
+ as educational outcomes.
+ Since this a regression discontinuity setup, I will not require any information
+ that actually identifies a particular student because the cross-section
+ approach is irrelevant.
+ The only feature that needs to be ascertained is whether or not a student
+ was assigned to the federal work-study program and if he/she chose to accpet.
+\end_layout
+
+\end_body
+\end_document

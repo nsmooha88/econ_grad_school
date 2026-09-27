@@ -1,0 +1,277 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Is Emotional Intelligence a Good Predictor of Academic Success?
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+10/24/13
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Emotional intelligence is the ability to identify, assess, and control ones
+ emotions.
+ In the book 
+\begin_inset Quotes eld
+\end_inset
+
+Emotional Intelligence: Why It Can Matter More Than IQ,
+\begin_inset Quotes erd
+\end_inset
+
+ Daniel Goleman claims that IQ is not an accurate predictor of success.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+IQ offers little to explain the different destinies of people with roughly
+ equal promises, schooling, and opportunity
+\begin_inset Quotes erd
+\end_inset
+
+ (Goleman, 1995, p.
+ 34).
+ To elaborate, there are many instances in which people with high IQ struggle,
+ while individuals with modest IQ do surprisingly well.
+ Instead, Goleman claims that individuals with high degrees of self-awareness,
+ self-discipline, and empathy, factors all associated with 
+\begin_inset Quotes eld
+\end_inset
+
+emotional intelligence (EI),
+\begin_inset Quotes erd
+\end_inset
+
+ will actually fair much better.
+ People with well-developed emotional skills are also more likely to be
+ content and effective in their lives.
+ Social intelligence is both distinct from academic abilitities and a key
+ part of what makes people do well in the practicalities of life.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+However, EI still faces criticism of its own.
+ In fact, some researchers refuse to consider EI as a separate form of intellige
+nce.
+ In their opinion, EI is just another factor they associate with general
+ intelligence.
+ The few incremental validity studies conducted on EI have shown that adds
+ little or nothing to the explanation or prediction of common outcomes,
+ such as academic success.
+ Also, research of EI and job performance show mixed results.
+ In essence, critics assert that the claims of EI's predictive power are
+ too extreme.
+ Finally, many individuals affirm that the tests created to measure EI actually
+ measure traits associated with personality and general intelligence
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Despite the misgivings attributed to EI, many individuals believe that EI
+ education can provide beneficial skills and tools.
+ Childhood is a critical time for the development of EI.
+ Yet, some schools across the country have been apprehensive in applying
+ new theories and methods to improve the quality of education.
+ Schools have become too conerned with academic intelligence, which primarily
+ includes reading and math skills, and ranking students based on arbitrary
+ standardized tests.
+ As a result, teachers, administrators, school boards, etc., have faced harsh
+ criticism.
+ Many experts believe that school's are doing a poor job of actually fostering
+ a child's interests and cultivating his innate natural gifts.
+ Schools are failing to educate students in important life skills, and they
+ are oblivious to the many different abilities that will help a child succeed.
+ Moreover, schools fail to account for the different kinds of intelligences
+ that are crucial for life success.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+However, there are still many districts, and even entire states, in the
+ United States that are trying to establish social and emotional learning
+ (SEL) programs.
+ They are even trying to make SEL a curriculum requirement, mandating that
+ students should master these essential skills for living.
+ For instance, in Illinois, specific learning standards in SEL abilities
+ have been established for every grade from kindergarten through the last
+ year of high school.
+ Preliminary evidence suggests that these programs not only improve behavior,
+ but they also improve measurable academic achievement.
+ Though, the researchers obtained the data for these studies using massive
+ surveys, so the serious problems of endogeneity and measurment error are
+ ever present.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+So, is emotional intelligence actually a good predictor of academic success?
+ My field experiment would be implemented in order to test the effect EI
+ education has on overall academic performance.
+ The experiment would mirror the one implemented by Project STAR, which
+ was a large-scale randomized experiment designed to measure the effect
+ of class size on academic performance.
+ Krueger (1999) provides an econometric analysis of the data.
+ Thus, for my research design, kindergarten students will be randomly assigned
+ to one of two groups: students who participate in SEL programs and students
+ who do not participate in SEL programs.
+ Students who enter into the experiment in later grades will also be randomly
+ assigned.
+ After the initial assignment, student's will remain in their group for
+ four years.
+ At the end of each school year, students will be given a set of standardized
+ tests; the results of these tests, along with final grade point averages,
+ will be analyzed.
+ The ultimate goal of random assignment is to have any and all unobserved
+ characteristics be orthogonal to treatment.
+ This affords me the opportunity to obtain unbiased estimates on the effect
+ SEL programs have on academic success.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+Goleman, Daniel.
+ (1995).
+ 
+\emph on
+Emotional Intelligence: Why It Can Matter More Than IQ
+\emph default
+.
+ New York: Bantam Books.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+Krueger, Alan B.
+ (1999).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Experimental Estimates of Education Production Functions.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+The Quarterly Jounral of Economics
+\emph default
+.
+ 114(2): 497-532.
+\end_layout
+
+\end_body
+\end_document

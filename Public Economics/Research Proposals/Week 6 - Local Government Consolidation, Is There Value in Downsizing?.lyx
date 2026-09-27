@@ -1,0 +1,183 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Local Government Consolidation: Is There Value in Downsizing?
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+October 2, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Since the most recent recession, many local governments across the country
+ have been struggling to eliminate debt or prevent bankrupcy.
+ Residents complain that taxes are too high but then wince at cuts to services.
+ Today, all sorts of reforms to local government are being proposed.
+ As municipalities emerge from the recession, consolidation and streamlining
+ continue to be a discussion as cities begin their budget season.
+ Yet, consolidating local government departments is one of the trickiest
+ subjects facing local leaders.
+ Government fragmentation has long been torn between two competing interests.
+ On one hand, many officials argue consolidation boosts efficiency and makes
+ coordination easier.
+ Citizens, though, remain attached to their local governments and often
+ resent representation by a perceived group of outsiders.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+With my research project, I hope to determine if consolidating local government
+ departments is an effective way of cutting costs.
+ To do this, I intend to employ a difference-in-difference strategy.
+ My analysis will focus on the cities nationwide that have consolidated
+ local government departments with those overseen by the respective county.
+ In fact, I hope to conduct two separate difference-in-difference examinations
+ at both the city and county level with this setup.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The treatment group in the first configuration will be any municipality
+ that has consolidated its government service with its county's, while the
+ control group has elected against the measure.
+ My identifying assumption is that absent the treatment, the change in costs
+ to the treatment and control cities would have been the same over time.
+ I can expect this assumption to hold because within a county, I do not
+ expect there to be drastic systematic differences between cities.
+ Also, no other time-varying factor should affect my estimates.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+With the next arrangement, I propose to investigate county differences in
+ costs.
+ Like before, the treatment group will consist of any county that agreed
+ to consolidate its services with any of the cities located in its borders.
+ On the other hand, the control group will contain directly adjacent counties
+ that have chosen not to consolidate their services.
+ My identifying assumption is that absent the treatment, the change in costs
+ to the treatment and control counties would have been the same over time.
+ In order for the identifying assumption to hold, I will disregard counties
+ that contain excessively large municipalities, i.e., Los Angeles County or
+ Miami Dade County.
+ Instead, I will limit my attention to counties with much smaller local
+ governments, such as Brazos County.
+ Thus, I do not expect there to be any major systematic differences between
+ the small, adjacent counties of the treatment and control groups when using
+ this setup.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For this project, I intend to use Census of Governments data and figures
+ over the last several periods.
+ The Census Bureau conducts the Census of Governments every five years,
+ assessing organizational types, employment and finances for all state and
+ local governments.
+\end_layout
+
+\end_body
+\end_document

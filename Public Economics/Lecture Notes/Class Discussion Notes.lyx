@@ -1,0 +1,780 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Public Economics I: Class Discussion Notes
+\end_layout
+
+\begin_layout Section*
+Does Aid Matter? Measuring the Effect of Student Aid on College Attendance
+ and Completion
+\end_layout
+
+\begin_layout Itemize
+The author is interested in the effect of aid on a person's educational
+ attainment.
+ This relationship can be expressed with the following reduced-form equation:
+\begin_inset Formula 
+\begin{equation}
+S_{i}=\alpha+\beta AID_{i}+\chi X_{i}+\epsilon_{i}
+\end{equation}
+
+\end_inset
+
+Here, 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+ is some measure of an individual's schooling, such as college attendance
+ or completed schooling, 
+\begin_inset Formula $AID_{i}$
+\end_inset
+
+ is the amount of student aid for which subject 
+\begin_inset Formula $i$
+\end_inset
+
+ is eligible, and 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ is a vector of individual covariates.
+\end_layout
+
+\begin_layout Itemize
+In order to obtain an unbiased estimate of the causal effect of aid, the
+ analyst must include in the regression all of the elements of 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ that affect both schooling and aid eligibility.
+ Unfortunately, many of these covariates are typically unavailable to the
+ econometrician.
+ A discrete shift in the rules governing aid can induce variation that is
+ uncorrelated with these unobserved determinants of schooling.
+\end_layout
+
+\begin_layout Itemize
+The author uses a difference-in-difference methodolgy to examine the effect
+ of eligibility for Social Security student benefits on college attendance
+ and completed schooling.
+\end_layout
+
+\begin_layout Itemize
+The key estimating equation is the following:
+\begin_inset Formula 
+\begin{equation}
+y_{i}=\alpha+\beta(\mbox{Father Deceased}_{i}\times\mbox{Before}_{i})+\delta\mbox{Father Deceased}_{i}+\theta\mbox{Before}_{i}+v_{i}
+\end{equation}
+
+\end_inset
+
+where the dependent variable is a measure of college attendance or completion
+ and 
+\begin_inset Formula $\mbox{Before}_{i}$
+\end_inset
+
+ is a binary variable that is set to one if a youth is a memeber of a cohort
+ that graduated from high school before student benefits were eliminated.
+ 
+\begin_inset Formula $\mbox{Father Deceased}_{i}$
+\end_inset
+
+ is a binary variable set to one for those who, due to the death of their
+ father, were potentially eligible for child survivor benefits.
+\end_layout
+
+\begin_layout Itemize
+The reduced-form effect of Social Security student benefits is captured
+ by 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ The specification controls for changes over time in average college attendance
+ rates and average differences in the college attendance of those with a
+ deceased father and those with a living father.
+\end_layout
+
+\begin_layout Itemize
+The key identifying assumption is that any relative shift in the attendance
+ of the children of deceased fathers is attributable to the withdrawal of
+ student benefits.
+ To say the assumption in a different way, the change in enrollment rate
+ in the treatment group would have been the same as the change in the control
+ group in the absence of treatment.
+\end_layout
+
+\begin_layout Itemize
+Note that 
+\begin_inset Formula $\beta$
+\end_inset
+
+ captures the effect on schooling decisions of aid 
+\emph on
+eligibility
+\emph default
+ rather than aid 
+\emph on
+receipt
+\emph default
+.
+ In the language of experimentalist literature, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ captures the effect of the 
+\emph on
+intention to treat
+\emph default
+.
+ Since policy makers control the offer of aid, but not its take-up, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is the parameter of interest if we wish to predict the effect of altering
+ aid policy.
+\end_layout
+
+\begin_layout Itemize
+During the period under analysis, there is no statistically significant
+ change in the differences in background characteristics between children
+ with living and dead fathers.
+ Table 1 therefore provides suggestive evidence that the additivity assumption
+ of difference-in-differences holds for this analysis.
+\end_layout
+
+\begin_layout Itemize
+The author uses OLS to estimate equation (2).
+ Standard errors in the tables are corrected for within-household correlation
+ in error terms due to the presence of siblings in the data, as well as
+ for heteroskedasticity due to the dichotomous dependent variable.
+\end_layout
+
+\begin_layout Section*
+Does drinking impair college performance? Evidence from a regression discontinui
+ty approach.
+\end_layout
+
+\begin_layout Itemize
+The authors are estimating the effect drinking alcohol has on academic performan
+ce.
+\end_layout
+
+\begin_layout Itemize
+The naive approach entails a simple cross-sectional analysis.
+ A variable corresponding to academic performance is placed on the left-hand
+ side, a variable measuring an amount a person drinks is on the right-hand
+ side, and then a standard OLS regression is conducted.
+\end_layout
+
+\begin_layout Itemize
+There are many problems with the cross-sectional method.
+ A reverse causation story, i.e., poor academic performance causes people
+ to drink more, is entirely plausible, and it is reasonable to assume that
+ people who drink alcohol are less likely to study.
+ Both of these stories would overstate the negative effect drinking has
+ on academic performance.
+ On the other hand, it is also possible to tell a story which leads to an
+ understatement of the negative effect.
+ For example, students who do well in school celebrate during their free
+ time by drinking alcohol.
+\end_layout
+
+\begin_layout Itemize
+Why is determining the causal relationship between drinking alcohol and
+ academic performance important? A labor economist would argue that college
+ is an important experience in which young adults attain valuable human
+ capital for their future employment.
+\end_layout
+
+\begin_layout Itemize
+In order to obtain proper estimates, the others need to overcome the endogeneity
+ issues.
+ They do this by utilizing a regression discontinuity desig in which the
+ running variable is date of birth.
+ The authors compare students who turn 21 after final exams (the treatment
+ group) with students who turn 21 before the final exams (control group).
+\end_layout
+
+\begin_layout Itemize
+The identifying assumption is the following: all other determinants of outcome
+ are smooth across the cutoff.
+ Why does this assumption hold? There is no manipulation of the running
+ variable across the cutoff ex-ante because students are unable to manipulate
+ their official age (i.e., date of birth).
+ Also, no other determinants are changing across the age cutoff, i.e., there
+ are no other discontinuities.
+\end_layout
+
+\begin_layout Itemize
+Table 4 is comparing means.
+ Note that the smaller the bandwidth, the more susceptible the slope of
+ the line of best fit is to the noise of the data.
+\end_layout
+
+\begin_layout Section*
+Working During School and Academic Performance
+\end_layout
+
+\begin_layout Itemize
+Important Rule: Always show the reduced-form regression.
+\end_layout
+
+\begin_layout Itemize
+Table 1 shows the results of the OLS regression from a naive cross-sectional
+ design.
+ Note that the estimates are biased.
+\end_layout
+
+\begin_layout Itemize
+Even though the paper uses an IV estimation methods, the authors could have
+ also applied a differences-in-differences approach:
+\begin_inset Formula 
+\[
+y_{it}=\alpha X_{i}+\beta P_{t}+\gamma_{i}+\theta H_{it}+\epsilon_{it}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Table 2 provides descriptive statistics by job assignment.
+ The authors use initial job assignment as an IV for hours worked.
+ They need to show that initial job assignment was as-good-as random.
+\end_layout
+
+\begin_layout Itemize
+Table 3 gives the OLS regressions for first-semester hours and first-semester
+ grades.
+ The first column shows that first-semester hours are uncorrelated with
+ other observable characteristics of individuals.
+ The second column is the first-stage regression of the 2SLS estimation
+ procedure.
+ The third column is the reduced-form regression, i.e., first-semester GPA
+ is regressed on dummy variables indicating initial job placement and other
+ individual covariates.
+ It is important to compare the results of columns 2 and 3.
+\end_layout
+
+\begin_layout Itemize
+Table 4 gives the instrumental variables estimates for first-semester GPA.
+ This table provides evidence that the variation in first-semester GPA can
+ be attributed to initial job assignment.
+\end_layout
+
+\begin_layout Section*
+Does Strenghtening Self-Defense Law Deter Crime or Escalate Violence? Evidence
+ from Expansions to Castle Doctrine
+\end_layout
+
+\begin_layout Itemize
+The authors perform a weighted OLS regression to account for the differences
+ in population, as well as underlying state characteristics
+\end_layout
+
+\begin_layout Itemize
+Figure 1 shows the raw data.
+ The authors are showing that the treatment and control groups track each
+ other closely in the pre-period.
+\end_layout
+
+\begin_layout Itemize
+Figure 2 provides the differences-in-differences estimates for different
+ time periods.
+ The authors compare the differences in the years specified by the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis relative to the difference 5 or more years before adoption.
+ The divergence in the estimates should be relatively close to zero in the
+ pre-period, while a signficant divergence occurs in the post-period following
+ treatment.
+\end_layout
+
+\begin_layout Itemize
+Figure 3 is a permutation based inference method, and it is one type of
+ robustness test.
+ The authors create data sets that are the same size as the true sample
+ by randomly selecting 11 years from the pre-period.
+ Then, they randomly assign 20 states into the treatment group and 13 states
+ into the control group.
+ Finally, arbitrary differences-in-differences estimates are obtained using
+ these empirically constructed data sets.
+ The vertical lines represent the actual estimates from the true sample,
+ which can be found in Table 5.
+ The acutal estimates should be as far to the right of the distribution
+ as possible.
+\end_layout
+
+\begin_layout Itemize
+Table 3 is an example of a falsification test.
+ The castle doctrine law should have only affected serious crimes, such
+ as violent crimes, homicides, robbery, etc.
+ Yet, it should not have had any effect on non-violent or petty crimes,
+ such as larceny and motor vehicle theft.
+ Across the columns, the coefficients should relatively remain the same.
+ Yet, column 7 of panel B has relatively large effects, which could be a
+ problem.
+ This is the ex-post motivation for why the authors control for region-by-year
+ effects, as opposed to just-year effects.
+ In this setup, the authors are assuming that time effects are the same
+ within a given region.
+ 
+\end_layout
+
+\begin_layout Itemize
+Table 4 gives the deterrence effects of castle doctrine laws on burglary,
+ robbery, and aggravated assault.
+ If the castle doctrine is satisfying its original intent, then it should
+ help deter the three crimes being evaluated.
+ Thus, there should be negative coefficients for the treatment variable.
+ Ideally, the authors are hoping for coefficients that are close to zero
+ and insignificant for at least panel B.
+\end_layout
+
+\begin_layout Itemize
+Table 5 gives the effect castle doctrine laws have on homicides.
+ The authors do not want their estimates to change significantly as they
+ control for additional fixed effects.
+ It is important to note that the cluster robust variance-covariance estimates
+ have poor finite sample properties because the standard errors are too
+ small.
+ Consequently, the standard errors may be too small for weighted least squares
+ because it is limiting the effective finite sample, which causes the estimates
+ in panel A to become statistically significant.
+\end_layout
+
+\begin_layout Itemize
+Why does Table 5 show that there is an increase in homicides due to the
+ castle doctrine laws? What kind of homicides are occuring? Is there an
+ increase in the number of homicides in which innocent peole are being killed?
+ Table 6 gives the effect of castle doctrine laws on murder, felony-type
+ homicide, proportion of robberies committed using a gun, and justifiable
+ homicide by private citizens.
+ Panels B and C provide decent evidence that there was not a significant
+ increase in homocides against innocent people.
+\end_layout
+
+\begin_layout Itemize
+Note: Standard errors can go up when we control for additional fixed effects
+ because there is less variation.
+\end_layout
+
+\begin_layout Section*
+Does the Media Matter? A Field Experiment Measuring the Effect of News on
+ Voting Behavior and Political Opinions
+\end_layout
+
+\begin_layout Itemize
+The study had some important limitations, most important of which was the
+ relatively small sample size.
+ Consequently, the standard errors of the estimated treatment effects were
+ often large.
+ The standard errors were such that the authors failed to reject (two-sided,
+ at the five percent level) the null hypothesis of no effect if we they
+ obtained a treatment effect estimate of less than a 3.6 percentage point
+ change in voter turnout, a 7 percentage point increase in likelihood of
+ voting for the Democratic candidate, or less than an 8.6 percentage point
+ differential between the 
+\emph on
+Post
+\emph default
+ and 
+\emph on
+Times
+\emph default
+ groups in likelihood of voting for the democratic candidate.
+\end_layout
+
+\begin_layout Itemize
+Table 1A gives the summary statistics from the baseline survey of all respondent
+s.
+ If treatment was randomly assigned, then there should not be a significant
+ difference in the means of the variables listed in the table.
+ So, the authors check to see if the means of the two treatment groups and
+ one control group are equal to each other.
+ Column 5 reports the p-values for chi-squared tests of independence between
+ treatmens for each variable, and these p-values should be large.
+\end_layout
+
+\begin_layout Itemize
+Table 1B gives the summary statistics from the baseline survey of only those
+ individuals who completed the follow-up survey.
+ Important to note, information from the first survey is obtained after
+ treatment is randomly assigned.
+ Yet, attrition could be a problem because people may not respond to the
+ follow-up survey.
+ Even though there are incomplete response rates on the second survey, it
+ essentially looks like the variation in treatment is random based on the
+ dimensions we can observe.
+ On a different note, the subjects should be unaware that the authors sent
+ the papers in order to obtain honest responses when conducting the surverys.
+\end_layout
+
+\begin_layout Itemize
+Table 1C gives the summary statistics for the outcome measures using the
+ raw data.
+ Important to note, if there is attrition based on unobserved variables
+ that are correlated with the outcome measures but not predicted by the
+ observable, the results may be biased.
+\end_layout
+
+\begin_layout Itemize
+One limitation of the study is that while the authors know which households
+ received newspapers, they cannot be sure that the newspapers were read.
+ Ideally, all the people who received the 
+\emph on
+Post
+\emph default
+ or the 
+\emph on
+Times
+\emph default
+ also read the newspapers.
+ Table 2 shows the relationship between treatment assignment and five distributi
+on and readership outcomes.
+ Now, in column 2 for the 
+\emph on
+Post
+\emph default
+ treatment and column 3 for the 
+\emph on
+Times
+\emph default
+ treatment, why are the estimates not 1? The authors people were misresponding
+ to the survey question.
+ Yet, a potential problem could be that the actual differences in treatment
+ are very small, i.e., a weak instrumental variable.
+\end_layout
+
+\begin_layout Itemize
+Table 3 gives the effect of treatment on political knowledge and attitude.
+ Table 4 gives the effect of treatment on voting behavior in Virginia governors
+ race.
+ From these two tables, one can determine that there is no statistically
+ significant difference in the outcome variables between the two treatment
+ groups and the control group.
+ How percise are all of the presented estimates? It depends because there
+ may be evidence of a weak first stage, and the variation in actual treatment
+ may be very small.
+\end_layout
+
+\begin_layout Section*
+Ruggedness: The Blessing of Bad Geography in Africa
+\end_layout
+
+\begin_layout Itemize
+There is a positive correlation between ruggedness and income for many African
+ countries, as opposed to a negative correlation for the rest of the countries
+ of the world.
+\end_layout
+
+\begin_layout Itemize
+Is the impact of rugged terrain different in Africa than everywhere else?
+ The authors claim that the rugged terrain was good for Africa because it
+ reduced the slave trade in many areas.
+ 
+\end_layout
+
+\begin_layout Itemize
+In order to answer the question above, the authors utilize a difference-in-diffe
+rences approach, but with no time element.
+ The treatment variable is a continuous measure for terrain ruggedness;
+ it is not a binary variable as it is for a majority of difference-in-difference
+s papers.
+ 
+\end_layout
+
+\begin_layout Itemize
+The treatment group is African countries, and the control group is the rest
+ of the countries of the world.
+ The paper analyzes the effect of going from rugged terrain to 
+\begin_inset Quotes eld
+\end_inset
+
+not so rugged
+\begin_inset Quotes erd
+\end_inset
+
+ terrain.
+\end_layout
+
+\begin_layout Itemize
+If the slave trade trade had never happened, then the relationship between
+ ruggedness and income for African countries should be the same as the rest
+ of the world.
+ 
+\series bold
+\emph on
+The identifying assumption is
+\end_layout
+
+\begin_layout Itemize
+The identification strategy employed in the paper can also be considered
+ and IV approach where the outcome variable is income per capita for a particula
+r country, the endogenous variable is a binary variable indicating the presence
+ of the slave trade, and the instrument is a continuous variable that measures
+ the level of ruggedness in a region.
+ 
+\series bold
+\emph on
+However, the authors do not take an explicit stance with this setup because
+\end_layout
+
+\begin_layout Subsection*
+Table 1
+\end_layout
+
+\begin_layout Itemize
+The authors are worried about that the correlation between ruggedness and
+ other characteristics is different in Africa than other parts of the world.
+ Also, the authors do not want rugged areas in Africa to be better in some
+ observable dimensions than the rest of the world.
+\end_layout
+
+\begin_layout Itemize
+Columns 2 to 6 control for potentially confounding factors, which may have
+ differential effects on outcome within and outside of Africa.
+\end_layout
+
+\begin_layout Subsection*
+Table 2
+\end_layout
+
+\begin_layout Itemize
+The authors do not possess a proper measure of ruggedness.
+ Depending on how you manipulate the data, it can be skewed in different
+ ways.
+ 
+\end_layout
+
+\begin_layout Itemize
+The authors perform a zero-skewness Box-Cox power transformation on the
+ ruggedness variable to obtain a measure with zero skewness.
+ 
+\end_layout
+
+\begin_layout Itemize
+With Table 2, the authors are essentially showing that different measures
+ of ruggedness do not affect the estimates.
+\end_layout
+
+\begin_layout Subsection*
+Table 3
+\end_layout
+
+\begin_layout Itemize
+A final source of possible concern is that the differential effect of ruggedness
+ for Africa is not really an African effect.
+\end_layout
+
+\begin_layout Itemize
+Perhaps the differential effect arises because the effect of ruggedness
+ on income differs in areas with some geographic characteristic that happens
+ to be particularly relevant in Africa.
+\end_layout
+
+\begin_layout Itemize
+The authors consider the possibility that the indicator variable for Africa
+ may be picking up the prevalence of colonial rule.
+ In areas that were colonized, rugged terrain may have provided a way to
+ defend against colonial rule.
+\end_layout
+
+\begin_layout Subsection*
+Table 4
+\end_layout
+
+\begin_layout Itemize
+The slave trade was the most prominent in West Africa.
+ The fact that there is a large, positive, and statistially significant
+ effect for this region is good evidence of the identifying assumption.
+ 
+\end_layout
+
+\begin_layout Itemize
+Moreover, the slave was not very prevalent in North Africa.
+ In the fourth column, we can see that there is a large, negative, and statistic
+ally significant effect for this region, which follows the same pattern
+ as the rest of the world.
+\end_layout
+
+\begin_layout Section*
+Do Better Schools Matter? Parental valuation of Elementary Education
+\end_layout
+
+\begin_layout Itemize
+The author utilizes an identification strategy that is intuitively similar
+ to the current regression discontinuity design, but the execution is somewhat
+ different.
+ The author essentially performs a cross-sectional analysis using very good
+ controls.
+\end_layout
+
+\begin_layout Itemize
+If a river, highway, railroad, etc.
+ is a boundary, then the houses close to these boundaries are removed from
+ the observations.
+ The reasons for this is that there may be a discontinuous and unobservable
+ change in neighborhood quality at these natural boundaries.
+\end_layout
+
+\begin_layout Itemize
+Boundary fixed effects is a good measure of neighborhood quality.
+\end_layout
+
+\begin_layout Itemize
+Columns 1 and 5 of Table 2 show that the estimates do not change simply
+ because of a change in sample size.
+\end_layout
+
+\begin_layout Itemize
+Table 3 shows the differences in treatment.
+ On either side of a boundary, there is a significant difference in test
+ scores and housing prices.
+ Yet, there should be no distinct differences in any other observable characteri
+stics.
+\end_layout
+
+\begin_layout Itemize
+Table 5 shows the results of a robustness test.
+ The test would be more meaningful if the 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ of column 4 increased by more.
+ Based on the story told by the author, there should be bigger effects for
+ larger houses.
+\end_layout
+
+\begin_layout Section*
+Labor Supply of Politicians
+\end_layout
+
+\begin_layout Itemize
+The outcome variables were variables corresponding to the extensive and
+ intensive margin of labor supply, as well as quality.
+\end_layout
+
+\begin_layout Itemize
+The authors utilize a difference-in-differences research design.
+ Instead of a binary treatment variable, the treatment variable is continuous.
+ The paper compares the politicians who received big increase in salary
+ (treatment group) with the politicians who received a small, or even a
+ negative, change in salary (control group) as a result of the new measure.
+\end_layout
+
+\begin_layout Itemize
+The identifying assumption is the following: in absence of treatment, the
+ change in outcomes between the treatment and the control groups would have
+ been the same.
+\end_layout
+
+\begin_layout Itemize
+If the identifying assumption is correct, then the estimate of 
+\begin_inset Formula $\beta_{3}$
+\end_inset
+
+, seen in columns 2 to 4 of Table 3, should not change significantly as
+ more controls are added to the regression equation.
+\end_layout
+
+\begin_layout Itemize
+This paper clusters standard errors on country because treatment occurs
+ at the country level.
+ There aren't very many clusters, so the authors may have to bootstrap to
+ alleviate the problem.
+\end_layout
+
+\end_body
+\end_document

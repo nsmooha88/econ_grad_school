@@ -1,0 +1,1429 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Public Economics I: Class Presentation 1
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+October 24, 2013
+\end_layout
+
+\begin_layout Abstract
+Stinebrickner, Todd R.
+ and Ralph Stinebrickner (2008) 
+\begin_inset Quotes eld
+\end_inset
+
+The Causal Effect of Studying on Academic Performance,
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+The B.E.
+ Journal of Economic Analysis & Policy
+\emph default
+: Vol.
+ 8: Iss.
+ 1 (Frontiers), Article 14.
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Itemize
+Little is known about the causual impact of a student's study effort on
+ educational outcomes for two reasons:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Data sources have not traditionally collected information about how much
+ time students spend studying
+\end_layout
+
+\begin_layout Enumerate
+The amount of time a person studies is endogenously determined, a sample
+ correlation between study quantity and grade performance may not represent
+ a useful estimator of the causual effect of stuyding.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Authors take advantage of a useful institutional detail at Berea College
+ and unique new data from the Berea Panel Study (BPS) that they collected
+ specifically for the purposes of this paper.
+\end_layout
+
+\begin_layout Itemize
+The identification strategy relies heavily on the fact that Berea assigns
+ first-year roommates using a mechanism that is unconditionally random,
+ so that the academic ability, motivation, and all other characteristics
+ of a student at the time of assignmnet are uncorrelated with the characteristic
+s of his/her roommate.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The authors are able to partition students into groups that are identical
+ in all respects at the time of college entrance except that the students
+ in the different groups are assgined roommates of different observable
+ type.
+\end_layout
+
+\begin_layout Itemize
+Thus, if one could observe the grade inputs of students that are determined
+ after the time of college entrance and are influenced by the obervable
+ type of a student's roommate, then one could estimate the causal effect
+ of these inputs on academic performance.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Two potential difficulties that would typically render the identification
+ strategy infeasible:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+It is not trivial to find observable characteristics of roommates that can
+ be used to generate student groups which differ in terms of college grades.
+ Past research has found little evidence that a student's grade performance
+ is related to observable academic characteristics of his roommate.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Solution: 
+\series default
+In the short-run, a student's ability is to a large extent, fixed, but that
+ the student's decisions about time-use may be influenced by peers.
+ The BPS was used to collect information about a student's roommate that
+ could possibly influence the student's time-use.
+ For example, of central importance to the paper, the BPS reveals whether
+ a student's first year roommate brought a video game with him/her to school
+ at the beginning of the academic year.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Standard data sources typically do not provide information about the amount
+ that student studies or the other grade inputs that are potentially determined
+ after the time of college entrance and, therefore, are potentially influenced
+ by roommates.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Solution: 
+\series default
+The authors included in the BPS multiple 24-hour time diaries and additional
+ survey questions that allowed them to characterize study quantity and other
+ college choices and behaviors that could influence grade performance.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+In Section 3, the author's estimate the reduced-form equation.
+ They determine whether a student's roommate brings a video game to school
+ has a strong causal effect on the student's grade performance.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Important inputs in the grade production function can be influenced after
+ college.
+ Consequently, grade perofrmance is far from predetermined at the time of
+ college entrance.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Section 4 examines what inputs are responsible for difference in average
+ grade performance between students whose roommates bring video games and
+ students whose roommates do not bring video games.
+ The authors group the set of inputs that could be influenced by the presence
+ of the roommate video game into three broad categories: class attendance,
+ study quantity, and study efficiency.
+ 
+\series bold
+\emph on
+(What about forming study groups, seeking tutoring help, visiting professors
+ during office hours, etc.?)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Class attendance not influenced by the presence of a roommate video game
+\end_layout
+
+\begin_layout Itemize
+Authors find evidence of substantial differences in study quantity between
+ the groups, but no evidence of any differences in study efficiency.
+ 
+\series bold
+\emph on
+(I find this result hard to believe because it is impossible to measure
+ every possible measure of 
+\begin_inset Quotes eld
+\end_inset
+
+study efficiency.
+\begin_inset Quotes erd
+\end_inset
+
+ Specific study habits and techniques have a direct influence on study efficienc
+y, and I do not believe that the authors have accounted for this.)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The authors formally quantify the causal effect of study quantity on academic
+ performance with an IV strategy.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The presence of a roommate video game serves as an instrument for a student's
+ study quantity.
+ 
+\end_layout
+
+\begin_layout Itemize
+The primary identification assumption is that only effect the IV has on
+ academic performance is through its effect on study quantity, i.e., the presence
+ of a roommate video game is uncorrelated with the error term in the properly
+ specified equation.
+ Also, we must believe that the difference in study efficiency is trivial
+ between students whose roommates bring video games and students whose roommates
+ do not bring video games.
+\end_layout
+
+\begin_layout Itemize
+The difference in average grades between the group of students whose rommates
+ bring video games and the group of students whose rommates do not bring
+ games is attributed to the difference in average study quantity between
+ the two groups.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+IV estimates are much larger than the OLS estimates.
+ If the identifying assumption is true, then this suggests that the OLS
+ estimates are biased downwards.
+ Note that the unobservable in the grade equation caputres both permanent
+ attributes of individuals and semester specific influences on grade performance.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Endogeneity problems could arise either because students who spend more
+ time studying have different permanent, unobserved attributes such as ability
+ or because of a 
+\begin_inset Quotes eld
+\end_inset
+
+dynamic selection
+\begin_inset Quotes erd
+\end_inset
+
+ effect in which students who receive bad grade shocks or have difficult
+ classes during a particular semester react by chaning their effort during
+ that semester.
+ 
+\series bold
+\emph on
+Are there any other relevant stories to suggest that this may be the case?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+With respect to the former possibility, the authors find no evidence that
+ study quantiy varies with observable permanent meausre of ability.
+ 
+\end_layout
+
+\begin_layout Itemize
+Yet, they do find evidence that the difference between the IV and OLS estimates
+ can be explained by the dynamic selection effect.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+However, one can construct a story to suggest that the IV estimates could
+ be positively biased.
+ 
+\series bold
+\emph on
+For example, students with roommates who have a video game could have their
+ unobserved study habits, sleep schedules, etc.
+ negatively affected by the presence of this additional distraction.
+ Also, I believe some of the unobserved effects of study efficiency have
+ still not been considered.
+ To elaborate, if one is going to just focus on study quantity, then I expect
+ study quantity to have a quadratic influence on academic performance.
+ It has a positive effect on academic performance only up to a certain point,
+ and then the effect becomes negative.
+ Are there any other relevant stories to suggest that the IV estimates may
+ be biased?
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Section 2: A General Overview of the BPS and the Sample
+\end_layout
+
+\begin_layout Itemize
+The identification strategy takes advantage of the fact that students at
+ Berea who do not request roommates are unconditionally randomly assigned
+ roommates.
+\end_layout
+
+\begin_layout Itemize
+The sample used only contains 210 participants from a 2001 cohort who live
+ on campus, did not request a roommate, and are not mssing imporant administrati
+ve data needed for this paper.
+ 
+\series bold
+\emph on
+This is a small and incredibly limited sample, especially when we consider
+ the fact that slightly more than one-third of students at Berea either
+ live off campus or request a roommate
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+The authors claim the identification strategy is feasible because their
+ data contain unique information about a student's roommate that could possibly
+ influence the student's time-use
+\end_layout
+
+\begin_layout Itemize
+Descriptive statistics are shown in the first panel of Table 1.
+ Information about a student's roommate is shown in the third panel of Table
+ 1.
+\end_layout
+
+\begin_layout Itemize
+The defining indicator variable 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ is equal to one if student 
+\begin_inset Formula $i$
+\end_inset
+
+'s roommate brought either a 
+\begin_inset Quotes eld
+\end_inset
+
+video game
+\begin_inset Quotes erd
+\end_inset
+
+ or a 
+\begin_inset Quotes eld
+\end_inset
+
+computer game.
+\begin_inset Quotes erd
+\end_inset
+
+ They also show results when the variable is disaggregated into its two
+ separate categories.
+\end_layout
+
+\begin_layout Itemize
+The authors assert a second reason for the feasibility of the identifcation
+ strategy.
+ The BPS contains mutiple 24-hour time diaries and additional survery questions
+ that allow them to characterize the amount that students study and a long
+ list of other college choices and behaviors that we could imagine influencing
+ grade performance.
+ 
+\series bold
+\emph on
+The information they obtain from their survery could possibily be plagued
+ by measurement error or false information.
+ They even admit that different wording would have allowed them to more
+ clearly distinguish between prevailing categories of video games.
+\end_layout
+
+\begin_layout Section*
+Section 3: Differences In Grade Performance By RGAME And Other Variables
+ (Instruments)
+\end_layout
+
+\begin_layout Itemize
+The random assignment of roommates implies that, in the population, the
+ distribution of characteristics other than sex is identical for students
+ with 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ equal to one and students with 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ equal to zero.
+ Thus, conditional on sex, any differences in grade performance between
+ the two 
+\begin_inset Formula $\mbox{RGAME}$
+\end_inset
+
+ groups in the population can be attributed to differences in inputs that
+ are influenced after the time of college entrance.
+ 
+\series bold
+\emph on
+Why do we condition on sex? Because students are assigned to a roommate
+ of the same sex
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+Due to the small sample size, they must pool male and female observations
+ and condition on sex.
+ In addition, they condition on other observable characteristics.
+ 
+\series bold
+\emph on
+With random assignment, we expect no differences to exist between 
+\begin_inset Formula $\mbox{RGAME}$
+\end_inset
+
+ groups in the population.
+ So, why do the authors condition on the other observable characteristics?
+ Differences may exist in other observables between 
+\begin_inset Formula $\mbox{RGAME}$
+\end_inset
+
+ groups in the sample because of sampling variation.
+\end_layout
+
+\begin_layout Itemize
+Table 2 shows the estimates of the reduced-form IV equation, in which we
+ replace the endogenous variable with the instrument.
+ So, the table shows the direct effect of 
+\begin_inset Formula $\mbox{RGAME}$
+\end_inset
+
+ and other roommate variables (instruments) on GPA.
+ The estimate is a large magnitude and it is signficant at levels greater
+ than .008.
+ Also, this is good evidence that the instrument satisfies the relevance
+ condition, i.e., we do not have a weak instrument.
+\end_layout
+
+\begin_layout Itemize
+The authors also examine whether the effect of having a roommate who brings
+ a video game depends on whether or not the student himself brought a game.
+ Table 3 provides the descriptive statistics that are relevant for examining
+ whether important interaction effects might be present in our context.
+ The findings are formalized further in column 5 of Table 2.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The interaction effect does not appear to have a significant effect, so
+ the authors conclude that 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ does a reasonable job summarizing the useful information for identifying
+ the direct effect of video games on 
+\begin_inset Formula $\mbox{GPA}_{i}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+As a result, the when examining inputs that are responsible for differences
+ in grade performance, the authors focus the discussion exclusively on differenc
+es in grade performance generated by the binary roommate variable 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Section 4: What Inputs Are Responsible for Differences in Grades Between
+ 
+\begin_inset Formula $\mbox{RGAME}$
+\end_inset
+
+ Groups?
+\end_layout
+
+\begin_layout Itemize
+The difference in 
+\begin_inset Formula $\mbox{GPA}_{i}$
+\end_inset
+
+ between 
+\begin_inset Formula $\mbox{RGAME}$
+\end_inset
+
+ groups implies that the presence of the roommate video game affects grade
+ inputs that are determined, at least partially, after the time of college
+ entrance.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The identifying assumption relies on the notion that 
+\begin_inset Formula $\mbox{RGAME}$
+\end_inset
+
+ does not affect 
+\begin_inset Formula $\mbox{GPA}_{i}$
+\end_inset
+
+ through any other input except study quantity.
+\end_layout
+
+\begin_layout Itemize
+The presence of a roommate video game could affect a student's grades either
+ because the physical game itself influences the student's inputs or because
+ roommates who bring games are systematically different in ways that influence
+ the student's inputs.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+There is some evidence that the former possibility is important.
+ There is a significant difference in the time spend playing video games
+ between students who have 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ equal to one and students who have 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ equal to zero.
+\end_layout
+
+\begin_layout Itemize
+With respect to the latter possibility, at least in terms of observable
+ characteristics, the authors find no evidence that students who bring video
+ games are different than those who do not bring video games.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+The authors identify three broad input categories that affect a student's
+ GPA: study quantity, class attendance, and study efficiency.
+ In Section 4, the authors examine whether the data provide evidence of
+ differences in these three categories by 
+\begin_inset Formula $\mbox{RGAME}$
+\end_inset
+
+ group.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If 
+\begin_inset Formula $\mbox{RGAME}$
+\end_inset
+
+ does not have a statistially significant effect on class attendance and
+ the variables used to measure study efficiency, then this provides some
+ noteworthy evidence that the identifying assumption holds.
+ 
+\end_layout
+
+\begin_layout Itemize
+However, in order to obtain promising estimates, we should still see a significa
+nt difference in study quantity between the students who have 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ equal to one and students who have 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ equal to zero.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Section 4.A: Class Attendance
+\end_layout
+
+\begin_layout Itemize
+Class attendance is to a large degree mandatory at Berea with many faculty
+ members imposing strict attendance policies and faculty typically either
+ formally or informally keeping track of the attendance of individual students.
+\end_layout
+
+\begin_layout Itemize
+The purpose of Table 4A is to show that 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ does not have a significant affect on class attendance.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Column 1 uses information obtained from the time surverys 
+\begin_inset Formula $(\mbox{PATTEND}_{i})$
+\end_inset
+
+, and column 2 uses information from the time diaries 
+\begin_inset Formula $\mbox{(CLASSHOURS}_{i})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+There is no difference in class attendance between students who bring video
+ games themselves and those who do not bring video games themselves.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The authors find no evidence that class attendance varies between 
+\begin_inset Formula $\mbox{RGAME}$
+\end_inset
+
+ groups.
+ They conclude that studying, defined generally to include both study quantity
+ and study efficiency, plays a very important causal role in determining
+ grade performance.
+ 
+\series bold
+\emph on
+However, the validity of the identifying assumption would have been improved
+ if the authors would have combined these two inputs together into one variable,
+ as opposed to separating out the effects.
+\end_layout
+
+\begin_layout Subsection*
+Section 4.B: Study Quantity
+\end_layout
+
+\begin_layout Itemize
+Pooling the male and female observations, and conditioning on observable
+ characteristics, the authors regress study quantity (the endogenous variable)
+ on 
+\begin_inset Formula $\mbox{RGAME}$
+\end_inset
+
+ (the instrument), which is equivalent to the first stage regression of
+ the 2SLS estimation procedure.
+ This is the empirical test to directly verify the relevance condition.
+ The results are shown in the first column of Table 5A.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+With respect to the effect of primary interest, an estimate and std.
+ error of -.668 and .252, respectively, so that a test of the null hypothesis
+ that 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ has no effect on study-effort is rejected at all levels of significance
+ greater than .01
+\end_layout
+
+\begin_layout Itemize
+Given that students in the sample study 3.43 hours per day on average, the
+ estiamted reduction of approximately two-thirds of an hour per day is quantitat
+ively very substantial.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+The authors do no provide F-statistics for the full regressions.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Section 4.C: Study Efficiency
+\end_layout
+
+\begin_layout Subsubsection*
+Differences in rest/altertness across 
+\begin_inset Formula $\mbox{RGAME}$
+\end_inset
+
+ groups
+\end_layout
+
+\begin_layout Itemize
+The efficiency of a student's study effort depends, in part, on whether
+ the student is rested/alert when studying (or in class).
+\end_layout
+
+\begin_layout Itemize
+Using the time diaries, the authors construct a variable 
+\begin_inset Formula $\mbox{SLEEP}_{i}$
+\end_inset
+
+, which measures the number of hours that a student sleeps per night.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The third column of Table 4A shows the results from a regression of 
+\begin_inset Formula $\mbox{SLEEP}_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{MALE}_{i}$
+\end_inset
+
+.
+ The estimated effect is very small and not statistically significant.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The authors also use the time diaries to construct a variable 
+\begin_inset Formula $\mbox{BEDTIME}_{i}$
+\end_inset
+
+ that indicates the time at which a student goes to bed.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Column 4 of Table 4A shows a regression of 
+\begin_inset Formula $\mbox{BEDTIME}_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{MALE}_{i}$
+\end_inset
+
+.
+ There is no evidence that the presence of the roommate video game influences
+ a student's bedtime
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Alcohol use may represent another reason that students are not rested/alert
+ when studying or in class.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A story could be told that a student who brings a video game to school is
+ more likely to drink alcohol and/or party, which, in turn, could affect
+ his/her roommate's study quantity.
+ 
+\end_layout
+
+\begin_layout Itemize
+Column 4B show a regresson of the number of hours spent partying on 
+\begin_inset Formula $\mbox{MALE}_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+.
+ There is no evidence of a relationship between the number of hours spent
+ partying and 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Also, there is no strong reason to believe, a priori, that students who
+ bring video games to school are more likely to drink.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Another possibility is that paid employment may cause students to not be
+ rested/alert for their studies.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Institutional details of the school imply that there cannot be substantial
+ differences in paid employment by 
+\begin_inset Formula $\mbox{RGAME}$
+\end_inset
+
+ group.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Differences in the quality of the physical study location across 
+\begin_inset Formula $\mbox{RGAME}$
+\end_inset
+
+ groups
+\end_layout
+
+\begin_layout Itemize
+The efficiency of a student's study effort may also depend on the quality
+ of the physical location where the student studies.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Once concern could be that the presence of a video game in the dorm room
+ implies that the student may not be able to study in the room when he wants
+ to because, for example, the room has become a place where others congregate.
+\end_layout
+
+\begin_layout Itemize
+A related way that studying might be less efficient for students who have
+ 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ equal to one would be if the video game or the television that may accompany
+ the video game serves as a distraction while the student is studying.
+\end_layout
+
+\begin_layout Itemize
+The presence of the roommate video game could potentially imporve the physical
+ environment of a room in some cases.
+ For example, treated students may be more likely to have a computer in
+ their room and this could represent an academic advantage for treated students.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+In Column 1 of Table 4B, the percentage of study time that takes place in
+ the dorm room is regressed on 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{MALE}_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The estimated effect of 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ is not statistically significant.
+\end_layout
+
+\begin_layout Itemize
+There is no difference in study locations for those who have 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ equal to one and those who have 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ equal to zero.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Column 2 of Table 4B shows no effect of 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ in a regression with the percentage of time spent studying with the television
+ on as the dependent variable and 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{MALE}_{i}$
+\end_inset
+
+ as independent variables.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\emph on
+The authors admit it is hard to know for sure whether a person would answer
+ that he was studying witht the television on if his roommate was playing
+ a video game on the television.
+ However, the authors think this is not a serious problem since a small
+ fraction of a student's study time would, on average, take place with the
+ video game on.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+In Column 3 of Table 4B, the authors regress the number of hours per week
+ that a student uses a computer for academic reasons on 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{MALE}_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The estimated effect of 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ is not statistically significant.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Differences in academic assistance from peers across 
+\begin_inset Formula $\mbox{RGAME}$
+\end_inset
+
+ groups
+\end_layout
+
+\begin_layout Itemize
+The possibility that students whose roommates bring video games are studying
+ less efficiently could also be of relevance if these students have roommates
+ who are less able or less willing to help them directly with their coursework.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In an earlier paper the authors had written, they concluded that, in the
+ short-run, peer effects are much more likely to be transmitted by good
+ role models influencing the time-use decisions of their roommates than
+ by high ability students helping their roommates understand their coursework.
+\end_layout
+
+\begin_layout Itemize
+In the data, there is no relationship between the 
+\begin_inset Formula $\mbox{RGAME}$
+\end_inset
+
+ variable and the amount of time a student spends interacting with his roommate
+ on academic matters.
+ Also, there is no evidence that students with 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ equal to one have roommates who would be lessa ble to provide academic
+ assistance than students with 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ equal to zero.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Section 4.D: Summary
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Characterizing differences in study quantity and class attendance is straightfor
+ward given the time diaries and BPS.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Yet, it is important to note that even the authors admit to the difficulty
+ of fully characterizing the possible differences in study efficiency.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\emph on
+Using real-world data, it would be possible to rule out with certainty that
+ there are differences in study efficiency between 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ groups.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Since study efficiency does influence 
+\begin_inset Formula $\mbox{GPA}_{i}$
+\end_inset
+
+, then this is not a promising development for their research design.
+ The identifying assumption may not hold because of some unobserved factors
+ of study efficiency may be affected by the presence of the roommate video
+ game.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\emph on
+The authors claim that their unique data allows them to rule out a seemingly
+ close-to-exhaustive set of of reasons that study efficiency may be different
+ between the two groups.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\emph on
+Are there reasonable stories that we could tell that could refute this claim?
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\emph on
+Through their findings, the authors suggest that study effort, as measured
+ by the quantity that student studies, plays a central role in determining
+ grade performance.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\emph on
+This implies that simply increasing effort, event without refining study
+ techniques, could make a substantial differnce in academic outcomes.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+I find the above implication incredibly difficult to believe.
+ There are students who can study for 10 hours a day, but they are unable
+ to substantially improve their grade because they simply do not practice
+ proper study habits.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Section 5: Quantifying The Causal Effect of Studying
+\end_layout
+
+\begin_layout Subsection*
+Section 5A: Ordinary Least Squares Estimator
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mbox{STUDY}_{i}^{*}$
+\end_inset
+
+ is the average number of hours that a person studies per day over all of
+ the days in the first semester.
+ However, this variable cannot be fully observed.
+ Instead, it is replaced by the observed variable 
+\begin_inset Formula $\mbox{STUDY}_{i}$
+\end_inset
+
+ which is the average number of hours that a person studied on the days
+ that he completed time diaries.
+\end_layout
+
+\begin_layout Itemize
+Column 1 of Table 6 shows the results of estimating by OLS.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The estimated effect of study quantity is small and it is not statistically
+ significant at standard levels.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+The authors also provide OLS estimates using fixed effects
+\emph default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Section 5B: Instrumental variables estimators
+\end_layout
+
+\begin_layout Itemize
+There are three potential biases present in the OLS estimator
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\mbox{STUDY}_{i}^{*}$
+\end_inset
+
+ could be correlated with the error term because students who spend more
+ time studying may be different in permanent, unobserved ways than students
+ who spend less time studying.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mbox{STUDY}_{i}^{*}$
+\end_inset
+
+ could be correlated with the error term because students may react to semester-
+specific factors in the error term by chaning how much they study.
+\end_layout
+
+\begin_layout Itemize
+An errors-in-variables problem is created when 
+\begin_inset Formula $\mbox{STUDY}_{i}^{*}$
+\end_inset
+
+ is replaced by its observable but noisy proxy 
+\begin_inset Formula $\mbox{STUDY}_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+IV estimation represents a theoretically appealing way to deal with the
+ potential problems listed above.
+ What is needed is a variable that has a direct effect on the amount that
+ a person studies (i.e., satisfies a relevance condition), but is uncorrelated
+ witht he unobservable determinants of grade performance as captured by
+ the error term (i.e., satisfies an exogeneity condition).
+\end_layout
+
+\begin_layout Itemize
+The random assignment of roommates guarantees that 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ is unrelated to all elements of the error term, such as unobserved ability,
+ that are predetermined at the time of college entrance.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The three avenues identified by the authros through which 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ could potentially influence grade performance are study quantity, class
+ attendance, and study efficiency.
+\end_layout
+
+\begin_layout Itemize
+For the IV to be valid, 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ must influence study quantity (relevance), but it does not affect either
+ class attendance or study efficiency (exogeneity).
+ Evidence that these two conditions are safistied was provided in Section
+ 4.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Due to random assignment, we are confident that this instrument is exogenous
+ to the error term.
+ So, why might the identifying assumption fail? The instrument could indirectly
+ affect outcomes through its influence on other unobserved inputs.
+ It seems somewhat implausible that 
+\begin_inset Formula $\mbox{RGAME}_{i}$
+\end_inset
+
+ does not affect study efficiency.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+With a binary instrument, we can emply a straightforward Wald estimator
+ which attributes the difference in 
+\begin_inset Formula $\mbox{GPA}_{i}$
+\end_inset
+
+ between the two 
+\begin_inset Formula $\mbox{RGAME}$
+\end_inset
+
+ groups to the difference in average study quantity between the two groups.
+\end_layout
+
+\begin_layout Itemize
+Table 7A provides formal IV estimates, with each column representing the
+ utilization of a different IV.
+ Table 7B provides formal IV estiamtes using non-game instruments.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\emph on
+Estimates and standard errors change considerably when different IVs are
+ implemented.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+The authors do not include a typical robustness check found in most IV papers:
+ testing to see if there is selection on observables.
+ The authors only provide estimates when all the controls are included in
+ the regression; they do not provide estimates for the simple IV case, which
+ is bad form.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\emph on
+Do the estimates change signficantly when we add control variables to the
+ baseline model? If there is a signficant change, then this provides evidence
+ that there is selection on unobservables, so the identifying assumption
+ is probably invalid.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+To provide additional support that the results were not being drive by differenc
+es (between the treated and untreated groups) in behaviors other than study
+ effort, the authors also estimated a specification which added as regressors
+ all of the variables in Table 4A and Table 4B.
+ They found that the results changed very little, even when adding the explanato
+ry variable 
+\begin_inset Formula $\mbox{OGAME}_{i}$
+\end_inset
+
+, which indicates whehter the student himself brought a video game.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+This paper provides a reasonable example of following the necessary 
+\begin_inset Quotes eld
+\end_inset
+
+how-to
+\begin_inset Quotes erd
+\end_inset
+
+ steps associated with IV estimation:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Estimate treatment effect using OLS, noting endogeneity
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Use theory, intuition, and empirical tests (if possible) to convince the
+ reader that your instrument is valid
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Show the first stage, demonstrating that your instrument is relevant and
+ not subject to the problems of weak instruments
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Show results the reduced-form IV estimation (i.e., in the outcome equation/2nd
+ stage, replace the endogenous variable with the instrument)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Show results from 2SLS (optional depending on the context)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Explain why IV estimates differ from OLS estimates
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+However, it is a stretch to believe that their identifying assumption acutally
+ holds which is the primary reason this paper was not published in a more
+ reputable journal.
+\end_layout
+
+\end_body
+\end_document

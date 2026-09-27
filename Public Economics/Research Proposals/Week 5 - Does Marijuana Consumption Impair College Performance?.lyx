@@ -1,0 +1,179 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Does Marijuana Consumption Impair College Performance?
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+October 3, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Marijuana is the most commonly used illicit drug in the US.
+ The legalization of marijuana has become a topic of fierce debate in recent
+ months due to Colorado and Washington amending their constitutions to allow
+ its recreational use.
+ In these states, consumption of cannabis is permitted in a manner similar
+ to alcohol, and is legal to sell cannabis provided the store has obtained
+ a permit to do so.
+ Advocates of the measure claim that legalizing marijuana would end the
+ black market, generate huge tax revenues, and reduce law enforcement costs.
+ However, those who oppose legalization vehmently claim that the costs to
+ society marijuana would enduce are much greater than the revenue it will
+ generate.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+With my project, I intend to measure the effect marijuana consumption has
+ on collegiate performance.
+ I wish to focus on the population of college students because surveys consisten
+tly show that marijuana use and abuse among college students is higher than
+ estimates from the general population.
+ The notable problem facing this examination is the fact that the treatment
+ variable is endogenous.
+ We cannot rule out the fact that consuming marijuana may be correlated
+ with some omitted variable, which also has an affect on grades.
+ To solve this problem, I will employ an instrumental variable to isolate
+ the 
+\begin_inset Quotes eld
+\end_inset
+
+as-good-as-random
+\begin_inset Quotes erd
+\end_inset
+
+ variation in the treatment variable.
+ The instrumental variable I propose is the price of marijuana around the
+ college campuses of interest.
+ This instrumental variable is correlated with the endogenous variable because
+ the price of marijuana affects consumption.
+ Yet, I cannot formulate a relevant story in which the price of marijuana
+ affects has an effect on the grades of students.
+ So, the only way this instrument can have an effect on the outcome is through
+ the treatment variable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The legalizaiton of marijuana in Colorado and Washington will take effect
+ on January 1, 2014.
+ Consequently, I am unable to conduct my analysis until enough time has
+ been given for the law to influence behavior, so data can become readily
+ available.
+ This includes commericial stores electing to sell marijuana in the region
+ of college campuses.
+ I will also need to focus on colleges that also change their drug policies
+ in accordance with the new laws.
+ In order to obtain the necessary data, I will conduct a survey of randomly
+ selected college students.
+ This will be a panel data setup in which I control for individual and school
+ fixed effects.
+ Important to note, the primary treatment of interest must focus on consumption
+ of marijuana while in college.
+ While it is important to determine if a student consistently consumers
+ marijuana, the research does not attempt to answer if the exact frequency
+ of marijuana consumption affects school performance.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,395 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Public Economics I: Field Exam Review
+\end_layout
+
+\begin_layout Section*
+Question
+\end_layout
+
+\begin_layout Standard
+Suppose that you want to estimate the causal effect of receiving a special
+ distinction on one's degree.
+ To determine what distinction one gets, students take a single exame up
+ to two times.
+ There is a different cutoff for every level of distinction.
+ (i.e., five stars, four stars, three stars, etc.) The cutoffs are not known
+ until after everyone takes the test the first time.
+ Outcome data are the log of earnings 10 years later.
+\end_layout
+
+\begin_layout Subsection*
+Part A
+\end_layout
+
+\begin_layout Standard
+You want to estimate the effect of receiving five stars versus four stars.
+ Which exam score do you use and why? Your choices are the score from the
+ 1st attempt, the score from the 2nd attempt, the average score, the maximum
+ score, etc.
+\end_layout
+
+\begin_layout Subsubsection*
+Solution
+\end_layout
+
+\begin_layout Standard
+I would employ a regression discontinuity approach in order to estimate
+ the causal effect of receiving a special distinction on one's degree.
+ As a result, I would use the score from the first exam because the cutoff
+ is not known.
+ Though, it is important to note that some people being aware of the cutoff
+ does not necessarily mean there is a problem, especially if they are unable
+ to manipulate or predict their scores.
+\end_layout
+
+\begin_layout Subsection*
+Part B
+\end_layout
+
+\begin_layout Standard
+What equation would you estimate for part A to estimate the reduced RDD
+ impact on earnings?
+\end_layout
+
+\begin_layout Subsubsection*
+Solution
+\end_layout
+
+\begin_layout Itemize
+In order to estimate the reduced-form regression discontunity design (RDD)
+ impact on earnings, I would estimate the following equation:
+\begin_inset Formula 
+\[
+\log(\mbox{earnings}_{i})=\beta_{0}+\beta_{1}1(\mbox{Cutoff\_4 to 5}_{i})+f(\mbox{score}_{i})+\epsilon_{i}
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+f(\mbox{score}_{i})=\mbox{score}_{i}+1(\mbox{Cutoff\_4 to 5}_{i})\times\mbox{score}_{i}
+\]
+
+\end_inset
+
+The functional form 
+\begin_inset Formula $f$
+\end_inset
+
+ will be driven by smoothly controlling for the running variable and trying
+ to fit the data well.
+ 
+\end_layout
+
+\begin_layout Itemize
+Since I am only analyzing the scores of the first exam, then I most likely
+ have a fuzzy RD.
+ With a fuzzy RD, I can also use a 2SLS estimation procedure.
+ The first-stage regression is given by
+\begin_inset Formula 
+\[
+\mbox{Prob(5 stars)}_{i}=\gamma_{0}+\gamma_{1}1(\mbox{Cutoff\_4 to 5}_{i})+\theta f(\mbox{score}_{i})+\epsilon_{i}
+\]
+
+\end_inset
+
+and the second-stage follows suit
+\begin_inset Formula 
+\[
+\log(\mbox{earnings}_{i})=\beta_{0}+\beta_{1}\widehat{(\mbox{5 stars}_{i})}+f(\mbox{score}_{i})+\epsilon
+\]
+
+\end_inset
+
+In the 2SLS setup, 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ is the coefficient of interest; it is the local average treatment effect
+ (LATE) for compliers.
+\end_layout
+
+\begin_layout Subsection*
+Part C
+\end_layout
+
+\begin_layout Standard
+What is your coefficient of interest from your equation in part B? If that
+ coefficient is 0.02, how do you interpret it? Explain it in layperson-friendly
+ terms.
+\end_layout
+
+\begin_layout Subsubsection*
+Solution
+\end_layout
+
+\begin_layout Itemize
+The coefficient of interest from my equation in part B is 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+.
+ Remember, since I am only analyzing the scores of the first exam, then
+ I most likely have a fuzzy RD.
+ This means that at the cutoff, the discontinuity in the probability of
+ treatment is less than one.
+ So, having a coefficient of 0.02 means that students just above the cutoff
+ will earn 2% more than students just below the cutoff after the first exam.
+ 
+\end_layout
+
+\begin_layout Itemize
+Suppose the first-stage discontinuity, i.e., the probability of going from
+ 4 to 5 stars, is 0.5.
+ Now, the interpretation of the coefficient in the second-stage regression
+ is as follows: if there is a 50% increase in the probability of getting
+ 5 stars for person 
+\begin_inset Formula $i$
+\end_inset
+
+, then his earnings will increase by 2%.
+ 
+\end_layout
+
+\begin_layout Itemize
+In order to obtain the local average treatment effect for compliers, I must
+ take the 
+\begin_inset Quotes eld
+\end_inset
+
+intent to treat
+\begin_inset Quotes erd
+\end_inset
+
+ estimate, which is 0.02, and divide it by the discontinuity in treatment
+ at the cutoff, i.e., the probability of treatment (0.5 in the example above).
+ By doing this, I get an estimate of 4% for the local average treatment
+ effect.
+ Thus, compliers who obtain 5 stars instead of 4 stars will earn 4% more
+ in 10 years.
+\end_layout
+
+\begin_layout Subsection*
+Part D
+\end_layout
+
+\begin_layout Standard
+You do not observe earnings for everyone who tests.
+ How can you test whether or not this is going to bias your estimate from
+ equation B? Be specific and complete.
+\end_layout
+
+\begin_layout Subsubsection*
+Solution
+\end_layout
+
+\begin_layout Standard
+Important to note, I can obtain biased estimates in either direction, even
+ with random assignment, due to attrition.
+ 
+\end_layout
+
+\begin_layout Itemize
+To see if attrition will cause a problem, I can create an indicator that
+ signifies whether an individual left the sample after testing, and I put
+ this variable on the left hand side of the reduced- form RD equation.
+ If there is a discontinuity in the probability of being observed at the
+ cutoff, then attrition is a problem.
+ 
+\end_layout
+
+\begin_layout Itemize
+Another solution is to show that attrition is random.
+ To do this, I compare the means of observable variables between the people
+ who stayed in the sample with those who did not on either side of the cutoff.
+ If the differences are significant, then attrition is a problem.
+ 
+\end_layout
+
+\begin_layout Standard
+There are other RD robustness tests that I can perform:
+\end_layout
+
+\begin_layout Itemize
+For the people who remained in the sample and for those who left early,
+ I can show that none of the observable variables possess a discontinuity
+ at the cutoff.
+ 
+\end_layout
+
+\begin_layout Itemize
+Show the density is smooth across the cutoff.
+ 
+\end_layout
+
+\begin_layout Itemize
+Show the other covariates are smooth across the cutoff.
+\end_layout
+
+\begin_layout Itemize
+Show estimates with and without controls.
+ If the estimate drastically changes, then there is a problem.
+\end_layout
+
+\begin_layout Subsection*
+Part E
+\end_layout
+
+\begin_layout Standard
+Now suppose that your estimates from attempting to do exercises similar
+ to part B are too imprecise - that is, you can't precisely estimate the
+ impact of 5 versus 4 stars, 4 versus 3, etc.
+ So, you instead hope to estimate the impact of having one additional star
+ more generally.
+ How do you do it? What equation do you estimate? Also, assume that this
+ is a fuzzy RD - that some people who are below the cutoff based on their
+ score do in earn the higher distinction.
+ Carefully define/describe every variable that is in your equation(s).
+\end_layout
+
+\begin_layout Subsubsection*
+Solution
+\end_layout
+
+\begin_layout Standard
+If we have a sharp RD, then I can have earings on the left side, and the
+ number of stars on the right side.
+ Conditional on test scores, the number of stars should be independent with
+ other characteristics that could influence earnings.
+ This is an example of conditional independence.
+ However, because students are able to take the exam twice, I have a fuzzy
+ RD.
+ So, the number of stars on the right side is still endogenous, even if
+ I condition on test score.
+ Here are two solutions to the endogeneity problem:
+\end_layout
+
+\begin_layout Itemize
+I utilize a stacked regression discontuity approach.
+ In order to do this, I renorm the cutoff to zero, and I assign every individual
+ to his/her closest cutoff.
+ Then, the running variable is how far an individual is from the cutoff.
+ Finally, I proceed as I normally would when employing a regression discontinuit
+y design.
+\end_layout
+
+\begin_layout Itemize
+I can also utilize a standard IV approach.
+ The IV would be the predicted number of stars an individual receives based
+ on his/her score on the first exam.
+ The reduced-form IV equation would have earnings on the left side and the
+ predicted number of stars on the right side.
+ The coefficient on the predicted number of stars would be the estimate
+ of the 
+\begin_inset Quotes eld
+\end_inset
+
+intent to treat
+\begin_inset Quotes erd
+\end_inset
+
+ effect.
+ I can also obtain the 2SLS estimate, which is just the reweighted 
+\begin_inset Quotes eld
+\end_inset
+
+intent to treat
+\begin_inset Quotes erd
+\end_inset
+
+ effect.
+\end_layout
+
+\end_body
+\end_document

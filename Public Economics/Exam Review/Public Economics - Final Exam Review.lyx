@@ -1,0 +1,575 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Public Economics I: Final Exam Review
+\end_layout
+
+\begin_layout Section*
+Spring 2012
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Question 1
+\end_layout
+
+\begin_layout Standard
+The effect of sentence length on recidivism rates
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Part A
+\end_layout
+
+\begin_layout Standard
+There is a discontinuity in expected sentence length depending on the age
+ of the perpetrator.
+ Criminals under the age of 18 face more lenient penalties than the criminals
+ who are over the age of 18.
+ However, this would be a fuzzy RD because there are minors who can be tried
+ as adults.
+\end_layout
+
+\begin_layout Standard
+So, we have the following setup:
+\end_layout
+
+\begin_layout Itemize
+Running Variable: Age
+\end_layout
+
+\begin_layout Itemize
+Cutoff: 18 years
+\end_layout
+
+\begin_layout Itemize
+Treatment group: Individuals older than 18
+\end_layout
+
+\begin_layout Itemize
+Control group: Individuals younger than 18
+\end_layout
+
+\begin_layout Itemize
+Source of variation: Individuals under the age of 18 receive shorter sentences
+ than adults
+\end_layout
+
+\begin_layout Itemize
+Outcome: Recidivism (binary variable)
+\end_layout
+
+\begin_layout Itemize
+Covariates: Individual sentence length, type of crime, date of birth of
+ the criminal
+\end_layout
+
+\begin_layout Itemize
+First-stage: The effect of age on expected sentence length
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Part B
+\end_layout
+
+\begin_layout Standard
+All other determinants that could affect the outcome are smooth across the
+ cutoff; there is no manipulation around the cutoff.
+ The behavior that would violate the assumpions in part A if people under
+ 18 are more inclined to commit crimes because of the more lenient penalties
+ they face.
+ To test the identifying assumption, we test to see if there are any discontinui
+ties in the other observable determinants that could affect recidivism.
+ We do this by showing the distribution of these determinants and the estimates
+ of the reduced-form regressions in which the determinant is placed on the
+ left hand side of the equation.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Part C
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $T_{i}=1(\mbox{age}_{i}\geq18)$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}=\mbox{age}_{i}-18$
+\end_inset
+
+, 
+\begin_inset Formula $y_{i}=\mbox{recidivism}_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{i}=\beta_{0}+\beta_{1}x_{i}+\beta_{2}x_{i}^{2}+\beta_{3}T_{i}+\beta_{4}T_{i}\cdot x_{i}+\beta_{5}T_{i}\cdot x_{i}^{2}+\epsilon_{i}
+\]
+
+\end_inset
+
+The variable of interest is 
+\begin_inset Formula $\beta_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Part D
+\end_layout
+
+\begin_layout Standard
+If we are able to discern all of the noncompliers, then it would be better
+ to drop them from the data set.
+ However, we are unable to completely discern all of the noncompliers in
+ this example, so it would not be wise to drop the observable noncompliers.
+ Yes, we can identify the 
+\begin_inset Quotes eld
+\end_inset
+
+always takers
+\begin_inset Quotes erd
+\end_inset
+
+ on the left hand side of the cutoff: children under the age of 18 who are
+ still tried as an adult.
+ Yet, we are unable to identify the 
+\begin_inset Quotes eld
+\end_inset
+
+always takers
+\begin_inset Quotes erd
+\end_inset
+
+ on the right side of the cutoff: individuals who are over 18 charged as
+ an adult who would have still been charged as an adult even if they were
+ under the age of 18.
+ If we drop the observed noncompliers, then we no longer have random assignment,
+ which will cause problems with our estimates.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Question 2
+\end_layout
+
+\begin_layout Standard
+The effect of prison sentence length on recidivism rates
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Part A
+\end_layout
+
+\begin_layout Standard
+Reduced-form IV equation:
+\begin_inset Formula 
+\[
+\mbox{Recidivism}_{i}=\beta_{0}+\beta_{1}1(\mbox{Initial Assignment to Judge B}_{i})+\beta_{2}X_{i}+\epsilon_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ are other observable characteristics.
+ It is not random whether you actually got Judge A or B, but initial assignment
+ was random.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Part B
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Relevance
+\end_layout
+
+\begin_layout Standard
+Regress length of sentence on initial assignment and the other observable
+ characteristics
+\begin_inset Formula 
+\[
+LS_{i}=\beta_{0}+\beta_{1}1(\mbox{Initial Assignment to Judge B}_{i})+\beta_{2}X_{i}+\epsilon_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $H_{0}:\beta_{1}=0$
+\end_inset
+
+, 
+\begin_inset Formula $H_{a}:\beta_{1}\neq0$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $F>10$
+\end_inset
+
+, then it is a relevant instrument
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Exogeneity
+\end_layout
+
+\begin_layout Standard
+Comparison of means test.
+ Comparing the group of people who were initially assigned to judge A to
+ people who were initially assigned to judge B.
+ 
+\end_layout
+
+\begin_layout Standard
+You can also place the indicator of the initial judge assignment on the
+ left hand side, and all of the observable characteristics on the right
+ hand side.
+ Run a regression, then conduct an F test to see whether or not all of the
+ coefficients are equal to zero 
+\begin_inset Formula $(H_{0}:\beta_{0}=\beta_{1}=\cdots=\beta_{K}=0)$
+\end_inset
+
+.
+ We hope to fail to reject the null hypothesis.
+\end_layout
+
+\begin_layout Standard
+We can also test whether the instrument is related to observables we know
+ to be related to outcomes.
+ If it is, then we are concerned that it might be related to unobservables.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Part C
+\end_layout
+
+\begin_layout Standard
+You would use the complete sample because that is where your randomization
+ is.
+ If you throw out the people who were assigned to judge C, then you no longer
+ have random assignment.
+ Reduced-form IV equation:
+\begin_inset Formula 
+\[
+\mbox{Recidivism}_{i}=\beta_{0}+\beta_{1}1(\mbox{Initial Assignment to Judge B}_{i})+\beta_{2}X_{i}+\epsilon_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Part D
+\end_layout
+
+\begin_layout Standard
+First-stage:
+\begin_inset Formula 
+\[
+\mbox{Sentence Length}_{i}=\beta_{0}+\beta_{1}1(\mbox{Initial Assignment to Judge B}_{i})+\beta_{2}X_{i}+\epsilon_{i}
+\]
+
+\end_inset
+
+Second-stage:
+\begin_inset Formula 
+\[
+\mbox{Recidivism}_{i}=\beta_{0}+\beta_{1}\widehat{\mbox{Sentence Length}_{i}}+\beta_{2}X_{i}+\epsilon_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Part E
+\end_layout
+
+\begin_layout Standard
+If we assume that harsher penalties are given to the worse criminals who
+ are more likely to recidivate, then the naive OLS estimate will be biased
+ upwards on the number line, i.e.,
+\begin_inset Formula 
+\[
+\hat{\beta}_{OLS}>\hat{\beta}_{2SLS}
+\]
+
+\end_inset
+
+Once we separate the part of sentence length that is uncorrelated with the
+ error term (
+\begin_inset Quotes eld
+\end_inset
+
+good
+\begin_inset Quotes erd
+\end_inset
+
+ variation) from the part that is correlated with the error term (
+\begin_inset Quotes eld
+\end_inset
+
+bad
+\begin_inset Quotes erd
+\end_inset
+
+ variation), we isolate the 
+\begin_inset Quotes eld
+\end_inset
+
+good
+\begin_inset Quotes erd
+\end_inset
+
+ variation and disregard the 
+\begin_inset Quotes eld
+\end_inset
+
+bad
+\begin_inset Quotes erd
+\end_inset
+
+ variation.
+ We are able to take away the effect of being assigned to a harsher judge.
+\end_layout
+
+\begin_layout Section*
+Fall 2012
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Part A
+\end_layout
+
+\begin_layout Standard
+In order to perform the estimation, we must have students who go from no
+ bilingual education to bilingual and vice versa (treatment group) and students
+ who do not change at all (control group).
+ The panel data version of a difference-in-difference framework is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mbox{Score}_{it}=\beta_{0}+\beta_{1}\mbox{Year}_{t}+\beta_{2}\mbox{Student}_{i}+\beta_{3}\mbox{Treatment}_{it}+u_{it}
+\]
+
+\end_inset
+
+where we control for year and student fixed effects.
+ 
+\begin_inset Formula $\mbox{Treatment}_{it}=1$
+\end_inset
+
+ if 
+\begin_inset Formula $i$
+\end_inset
+
+ receives treatment in Year 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ To make sure inference is performed correctly, I would cluster the standard
+ errors at the individual level.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Part B
+\end_layout
+
+\begin_layout Standard
+Students with lower ability could be assigned to bilingual classes, which
+ would understate the positive effect that bilingual education has on Hispanic
+ students.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Part C
+\end_layout
+
+\begin_layout Standard
+We want to compare the schools who changed bilingual education status (treatment
+ group) with schools that did not change (either always offered bilingual
+ education or never offered it).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Part D
+\end_layout
+
+\begin_layout Standard
+The schools can hold back or accelerate students in order to manipulate
+ the number of limited English proficient students in a particular grade/year
+ so as to avoid offering bilingual education.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Part E
+\end_layout
+
+\begin_layout Standard
+I can redefine whether a cohort receives treatment based on the number of
+ limited English proficient students in 2003.
+ I would then be measuring an intent to treat (ITT) effect.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Part F
+\end_layout
+
+\begin_layout Standard
+I can utilize a regression discontinuity design in which the cutoff is 20
+ students.
+ The running variable would be the predicted number of enrolled limited
+ English proficient students after the law takes affect based on figures
+ from 2003 (the year before the law took affect).
+ This method only works if the schools are unaware of the 20 student cutoff
+ before the law is implemented.
+\end_layout
+
+\end_body
+\end_document
