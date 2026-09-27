@@ -1,0 +1,2575 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Microeconomic Theory I: Homework 8
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 6.2.1, Problem 1
+\end_layout
+
+\begin_layout Subsection*
+
+\bar under
+Prove Lemma 4
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma 4.
+ 
+\series default
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ that satisfies A1 and A3.
+ Then, for each 
+\begin_inset Formula $\left\{ \pi,\pi^{\prime},\pi^{\prime\prime}\right\} \subseteq\Delta(Z)$
+\end_inset
+
+ and each 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $\pi\succ\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $\pi\sim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime}\sim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Given:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ satisfies: 
+\end_layout
+
+\begin_layout Itemize
+A1 (order): 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive
+\end_layout
+
+\begin_layout Itemize
+A3 (independence): 
+\begin_inset Formula $\forall\ \left\{ \pi,\pi^{\prime},\pi^{\prime\prime}\right\} \subseteq\Delta(Z)\ \wedge\ \forall\ \alpha\in(0,1)$
+\end_inset
+
+, 
+\begin_inset Formula $\pi\succsim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\pi\succ\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\pi\sim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime}\sim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\left\{ \pi,\pi^{\prime},\pi^{\prime\prime}\right\} \subseteq\Delta(Z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1a.
+ 
+\series default
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $\pi\succ\pi^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\pi\succsim\pi^{\prime}\ \wedge\ \neg(\pi^{\prime}\succsim\pi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A3, then 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\pi\succsim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, 
+\begin_inset Formula $\neg(\pi^{\prime}\succsim\pi)\iff\neg(\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime\prime})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\ \wedge\ \neg(\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime\prime})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1b.
+ 
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\ \wedge\ \neg(\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime\prime})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A3, then 
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\iff\pi\succsim\pi^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, 
+\begin_inset Formula $\neg(\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime\prime})\iff\neg(\pi^{\prime}\succsim\pi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $\pi\succsim\pi^{\prime}\ \wedge\ \neg(\pi^{\prime}\succsim\pi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\pi\succ\pi^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\pi\succ\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+2a.
+ 
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $\pi\sim\pi^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\pi\succsim\pi^{\prime}\ \wedge\ \pi^{\prime}\succsim\pi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A3,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi\succsim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi^{\prime}\succsim\pi\iff\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\ \wedge\ \alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\mbox{\alpha\pi+(1-\alpha)\pi^{\prime}\sim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+2b.
+ 
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime}\sim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\mbox{\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\ \wedge\ \alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime\prime}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satsfies A3,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\iff\pi\succsim\pi^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime\prime}\iff\pi^{\prime}\succsim\pi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $\pi\succsim\pi^{\prime}\ \wedge\ \mbox{\pi^{\prime}\succsim\pi}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\pi\sim\pi^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\pi\sim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime}\sim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Subsection*
+
+\bar under
+Prove Lemma 5
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma 5.
+ 
+\series default
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ that satisfies A1 and A3.
+ Then, for each 
+\begin_inset Formula $\left\{ \pi,\pi^{\prime},\pi^{\prime\prime},\pi^{\prime\prime\prime}\right\} \subseteq\Delta(Z)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\pi\succ\pi^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi^{\prime\prime}\succ\pi^{\prime\prime\prime}$
+\end_inset
+
+, and each 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+ , we have that 
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Given:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ satisfies: 
+\end_layout
+
+\begin_layout Itemize
+A1 (order): 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive
+\end_layout
+
+\begin_layout Itemize
+A3 (independence): 
+\begin_inset Formula $\forall\ \left\{ \pi,\pi^{\prime},\pi^{\prime\prime}\right\} \subseteq\Delta(Z)\ \wedge\ \forall\ \alpha\in(0,1)$
+\end_inset
+
+, 
+\begin_inset Formula $\pi\succsim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For each 
+\begin_inset Formula $\left\{ \pi,\pi^{\prime},\pi^{\prime\prime},\pi^{\prime\prime\prime}\right\} \subseteq\Delta(Z)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\pi\succ\pi^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi^{\prime\prime}\succ\pi^{\prime\prime\prime}$
+\end_inset
+
+, and each 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+ , we have that 
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\left\{ \pi,\pi^{\prime},\pi^{\prime\prime},\pi^{\prime\prime\prime}\right\} \subseteq\Delta(Z)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\pi\succ\pi^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi^{\prime\prime}\succ\pi^{\prime\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show
+\series default
+\emph default
+:
+\series bold
+\emph on
+ 
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A1 and A3, then the results of Lemma 4 hold.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi\succ\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi^{\prime\prime}\succ\pi^{\prime\prime\prime}\iff\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mbox{\implies}\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, for each 
+\begin_inset Formula $\left\{ \pi,\pi^{\prime},\pi^{\prime\prime},\pi^{\prime\prime\prime}\right\} \subseteq\Delta(Z)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\pi\succ\pi^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi^{\prime\prime}\succ\pi^{\prime\prime\prime}$
+\end_inset
+
+, and each 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+we have that 
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 6.2.1, Problem 2
+\end_layout
+
+\begin_layout Standard
+Show that the summation of the distances to the sides form each point in
+ an equilateral triangle is a constant.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 6.2.1, Problem 3
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $Z\equiv\left\{ z_{1},z_{2},z_{3}\right\} $
+\end_inset
+
+.
+ Consider the preference represented by the Expected Utility (EU) associated
+ with index 
+\begin_inset Formula $u$
+\end_inset
+
+ defined as follows: 
+\begin_inset Formula $u(z_{1})=1$
+\end_inset
+
+, 
+\begin_inset Formula $u(z_{2})=3$
+\end_inset
+
+, 
+\begin_inset Formula $u(z_{3})=100$
+\end_inset
+
+.
+ Does the EU associated with 
+\begin_inset Formula $100u$
+\end_inset
+
+ respresent the same prefrence.
+ Does the EU associated with 
+\begin_inset Formula $u^{2}$
+\end_inset
+
+ represented the same preference? For each preference, draw indifference
+ sets in the triangle that represents 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ and illustrate your conclusion.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 6.2.1, Problem 4
+\end_layout
+
+\begin_layout Standard
+Prove that if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is an Expected Utility Maximizer, then 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A1 and A3 (state and prove that each axiom is satisfied).
+ Provide an intuition why A2 is also satisfied.
+\end_layout
+
+\begin_layout Standard
+(Note: this is the 
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ implication and conclusion for 
+\series bold
+Theorem 21.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Given:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There is an index 
+\begin_inset Formula $u:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the function 
+\begin_inset Formula $U:\Delta(Z)\rightarrow\mathbb{R}$
+\end_inset
+
+ defined by: 
+\begin_inset Formula $\forall\ \pi\in\Delta(Z)$
+\end_inset
+
+, 
+\begin_inset Formula $U(\pi)\equiv E_{\pi}u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A1, i.e., 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A3, i.e., 
+\begin_inset Formula $\forall\ \left\{ \pi,\pi^{\prime},\pi^{\prime\prime}\right\} \subseteq\Delta(Z)\ \wedge\ \forall\ \alpha\in(0,1)$
+\end_inset
+
+, 
+\begin_inset Formula $\pi\succsim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\left\{ \pi,\pi^{\prime},\pi^{\prime\prime}\right\} \subseteq\Delta(Z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1a.
+ Completeness
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show: 
+\begin_inset Formula $\pi\succsim\pi^{\prime}\ \vee\ \pi^{\prime}\succsim\pi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $a=U(\pi)$
+\end_inset
+
+ and 
+\begin_inset Formula $b=U(\pi^{\prime})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\left\{ a,b\right\} \subseteq\mathbb{R}$
+\end_inset
+
+, then either 
+\begin_inset Formula $a\geq b$
+\end_inset
+
+ or 
+\begin_inset Formula $b\geq a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $U(\pi)\geq U(\pi^{\prime})$
+\end_inset
+
+ or 
+\begin_inset Formula $U(\pi^{\prime})\geq U(\pi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $U$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then 
+\begin_inset Formula $\pi\succsim\pi^{\prime}\ \vee\ \pi^{\prime}\succsim\pi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\forall\ \left\{ \pi,\pi^{\prime}\right\} \subseteq\Delta(Z):\pi\succsim\pi^{\prime}\ \vee\ \pi^{\prime}\succsim\pi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1b.
+ Transitivity
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $\pi\succsim\pi^{\prime}\ \wedge\ \pi^{\prime}\succsim\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show: 
+\begin_inset Formula $\pi\succsim\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $U$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then 
+\begin_inset Formula $\pi\succsim\pi^{\prime}\ \wedge\ \pi^{\prime}\succsim\pi^{\prime\prime}\iff U(\pi)\ge U(\pi^{\prime})\ \wedge\ U(\pi^{\prime})\geq U(\pi^{\prime\prime})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $U(\pi)\ge U(\pi^{\prime})\ \wedge\ U(\pi^{\prime})\geq U(\pi^{\prime\prime})\implies U(\pi)\ge U(\pi^{\prime\prime})$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $\geq$
+\end_inset
+
+ is transitive on the real numbers.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $U$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $U(\pi)\ge U(\pi^{\prime\prime})\iff\pi\succsim\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\forall\ \left\{ \pi,\pi^{\prime},\pi^{\prime\prime}\right\} \subseteq\Delta(Z):\pi\succsim\pi^{\prime}\ \wedge\ \pi^{\prime}\succsim\pi^{\prime\prime}\implies\pi\succsim\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is transitive
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+2.
+ Independence
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi\succsim\pi^{\prime}\iff U(\pi)\ge U(\pi^{\prime})$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $U$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff{\displaystyle \sum_{z\in Z}}u(z)\pi(z)\geq{\displaystyle \sum_{z\in Z}}u(z)\pi^{\prime}(z)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $U(\pi)\equiv E_{\pi}u\equiv{\displaystyle \sum_{z\in Z}}u(z)\pi(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\alpha{\displaystyle \sum_{z\in Z}}u(z)\pi(z)\geq\alpha{\displaystyle \sum_{z\in Z}}u(z)\pi^{\prime}(z)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff{\displaystyle \alpha\sum_{z\in Z}}u(z)\pi(z)+(1-\alpha){\displaystyle \sum_{z\in Z}}u(z)\pi^{\prime\prime}(z)\geq\alpha{\displaystyle \sum_{z\in Z}}u(z)\pi^{\prime}(z)+(1-\alpha){\displaystyle \sum_{z\in Z}}u(z)\pi^{\prime\prime}(z)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $\left[(1-\alpha){\displaystyle \sum_{z\in Z}}u(z)\pi^{\prime\prime}(z)\right]\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\alpha U(\pi)+(1-\alpha)U(\pi^{\prime\prime})\geq\alpha U(\pi^{\prime})+(1-\alpha)U(\pi^{\prime\prime})$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $U(\pi)\equiv E_{\pi}u\equiv{\displaystyle \sum_{z\in Z}}u(z)\pi(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $U$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\forall\ \left\{ \pi,\pi^{\prime},\pi^{\prime\prime}\right\} \subseteq\Delta(Z)\ \wedge\ \forall\ \alpha\in(0,1),\pi\succsim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies the Independence Axiom
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+3.
+ Continuity
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\{\pi,\pi^{\prime},\pi^{\prime\prime}\}\in\Delta(Z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $A\equiv\left\{ \alpha\in[0,1]:\alpha\pi+(1-\alpha)\pi^{\prime}\succsim\pi^{\prime\prime}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $(\alpha_{n})_{n\in\mathbb{N}}\subseteq A:{\displaystyle \lim_{n\rightarrow\infty}}\alpha_{n}=\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show
+\emph default
+: 
+\begin_inset Formula $\alpha\in A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(\alpha_{n})_{n\in\mathbb{N}}\subseteq A$
+\end_inset
+
+, we have that
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula $\forall\ n\in\mathbb{N},\alpha_{n}\pi+(1-\alpha_{n})\pi^{\prime}\succsim\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\forall\ n\in\mathbb{N},\alpha_{n}E_{\pi}u+(1-\alpha_{n})E_{\pi^{\prime}}u\geq E_{\pi^{\prime\prime}}u$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $U$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies{\displaystyle \lim_{n\rightarrow\infty}}\left[\alpha_{n}E_{\pi}u+(1-\alpha_{n})E_{\pi^{\prime}}u\right]\geq E_{\pi^{\prime\prime}}u$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since limits preserve weak inequalities
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\alpha E_{\pi}u+(1-\alpha)E_{\pi^{\prime}}u\geq E_{\pi^{\prime\prime}}u$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula ${\displaystyle \lim_{n\rightarrow\infty}}\alpha_{n}=\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\alpha\pi+(1-\alpha)\pi^{\prime}\succsim\pi^{\prime\prime}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $U$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\alpha\in A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 6.2.1, Problem 6
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $Z$
+\end_inset
+
+ be a finite set of prizes and 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ a preference on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+, i.e., the set of lotteries on 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ The generic lottery is denoted 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a) Formally define the Independence axiom (IA), completeness, and transitivity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Completeness: The binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ is complete if and only if 
+\begin_inset Formula $\forall\ \left\{ \pi,\pi^{\prime}\right\} \subseteq\Delta(Z):\pi\succsim\pi^{\prime}\ \vee\ \pi^{\prime}\succsim\pi$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Transitivity: The binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ is transitive if and only if 
+\begin_inset Formula $\forall\ \left\{ \pi,\pi^{\prime},\pi^{\prime\prime}\right\} \subseteq\Delta(Z):\pi\succsim\pi^{\prime}\ \wedge\ \pi^{\prime}\succsim\pi^{\prime\prime}\implies\pi\succsim\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Independence: The binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ satisfies the Independence Axiom if and only if
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall\ \left\{ \pi,\pi^{\prime},\pi^{\prime\prime}\right\} \subseteq\Delta(Z)\ \wedge\ \forall\ \alpha\in(0,1),\pi\succsim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(b) Prove Proposition 58.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proposition 58.
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Assume that 
+\begin_inset Formula $Z$
+\end_inset
+
+ is a finite set.
+ Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ satisfying A1 and A3.
+ Then, there are best and worst lotteries, i.e., 
+\begin_inset Formula $\left\{ \overline{\pi},\underline{\pi}\right\} \subseteq\Delta(Z)$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+, 
+\begin_inset Formula $\overline{\pi}\succsim\pi\succsim\underline{\pi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Do it following these steps: for each 
+\begin_inset Formula $z\in Z$
+\end_inset
+
+, let 
+\begin_inset Formula $\delta_{z}$
+\end_inset
+
+ be the probability measure on 
+\begin_inset Formula $Z$
+\end_inset
+
+ that places probability one in outcome 
+\begin_inset Formula $z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+i.
+ Let 
+\begin_inset Formula $\{z,z^{\prime}\}\subseteq Z$
+\end_inset
+
+ be such that 
+\begin_inset Formula $\delta_{z}\succsim\delta_{z^{\prime}}$
+\end_inset
+
+.
+ Prove that for each 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+, 
+\begin_inset Formula $\delta_{z}\succsim\alpha\delta_{z}+(1-\alpha)\delta_{z^{\prime}}\succsim\delta_{z^{\prime}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A3, we obtain the following results:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\delta_{z}\succsim\delta_{z^{\prime}}\iff\alpha\delta_{z}+(1-\alpha)\delta_{z}\succsim\alpha\delta_{z}+(1-\alpha)\delta_{z^{\prime}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\delta_{z}\succsim\delta_{z^{\prime}}\iff\alpha\delta_{z}+(1-\alpha)\delta_{z^{\prime}}\succsim\alpha\delta_{z^{\prime}}+(1-\alpha)\delta_{z^{\prime}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\alpha\delta_{z}+(1-\alpha)\delta_{z}\succsim\alpha\delta_{z}+(1-\alpha)\delta_{z^{\prime}}\succsim\alpha\delta_{z^{\prime}}+(1-\alpha)\delta_{z^{\prime}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, 
+\begin_inset Formula $\delta_{z}\equiv\alpha\delta_{z}+(1-\alpha)\delta_{z}$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta_{z^{\prime}}\equiv\alpha\delta_{z^{\prime}}+(1-\alpha)\delta_{z^{\prime}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\delta_{z}\succsim\alpha\delta_{z}+(1-\alpha)\delta_{z^{\prime}}\succsim\delta_{z^{\prime}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ii.
+ Prove that it is always possible to enumerate the elements of 
+\begin_inset Formula $Z$
+\end_inset
+
+, say 
+\begin_inset Formula $\left\{ z_{1},\ldots,z_{n}\right\} $
+\end_inset
+
+, in such a way that 
+\begin_inset Formula $\delta_{z_{1}}\succsim\ldots\succsim\delta_{z_{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $Z$
+\end_inset
+
+ is finite, then 
+\begin_inset Formula $Z\equiv\{z_{1},\ldots,z_{n}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete, then 
+\begin_inset Formula $\forall\ \left\{ \delta z_{i},\delta z_{j}\right\} \subseteq\Delta(Z)$
+\end_inset
+
+, 
+\begin_inset Formula $\delta_{z_{i}}\succsim\delta_{z_{j}}$
+\end_inset
+
+ or 
+\begin_inset Formula $\delta_{z_{j}}\succsim\delta_{z_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\delta_{z_{i}}\succsim\delta_{z_{j}}$
+\end_inset
+
+, then list 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ before 
+\begin_inset Formula $z_{j}$
+\end_inset
+
+ in the enumeration of 
+\begin_inset Formula $Z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $Z=\{z_{1},\ldots,z_{n}\}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\delta_{z_{1}}\succsim\ldots\succsim\delta_{z_{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Prove, by induction over 
+\begin_inset Formula $n$
+\end_inset
+
+, that for each 
+\begin_inset Formula $\left(\alpha_{i}\right)_{i=1}^{n}\in\mathbb{R}_{+}^{n}$
+\end_inset
+
+ such that 
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{n}}\alpha_{i}=1$
+\end_inset
+
+, 
+\begin_inset Formula $\delta_{z_{1}}\succsim\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{n}\delta_{z_{n}}\right]\succsim\delta_{z_{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+1.
+ Base case: 
+\begin_inset Formula $n=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Z=\left\{ z_{1},z_{2}\right\} $
+\end_inset
+
+ such that 
+\begin_inset Formula $\delta_{z_{1}}\succsim\delta_{z_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From part i,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\delta_{z_{1}}\succsim\delta_{z_{2}}\implies\delta_{z_{1}}\succsim\alpha\delta_{z_{1}}+(1-\alpha)\delta_{z_{2}}\succsim\delta_{z_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ When 
+\begin_inset Formula $n=k$
+\end_inset
+
+, assume 
+\begin_inset Formula $\forall\ \left(\alpha_{i}\right)_{i=1}^{k}\in\mathbb{R}_{+}^{n}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ such that 
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{k}}\alpha_{i}=1$
+\end_inset
+
+, 
+\begin_inset Formula $\delta_{z_{1}}\succsim\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{k}\delta_{z_{k}}\succsim\delta_{z_{k}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show
+\series default
+\emph default
+: When 
+\begin_inset Formula $n=k+1$
+\end_inset
+
+, 
+\begin_inset Formula $\forall\ (\beta)_{i=1}^{k+1}\in\mathbb{R}_{+}^{k+1}$
+\end_inset
+
+ such that 
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{k+1}}\beta_{i}=1$
+\end_inset
+
+, 
+\begin_inset Formula $\delta_{z_{1}}\succsim\beta_{1}\delta_{z_{1}}+\ldots+\beta_{k}\delta_{z_{k+1}}\succsim\delta_{z_{k+1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, it has been shown 
+\begin_inset Formula $Z=\{z_{1},\ldots,z_{k+1}\}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\delta_{z_{1}}\succsim\ldots\succsim\delta_{z_{k+1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $\delta_{z_{1}}\succsim\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{k}\delta_{z_{k}}\right]\succsim\delta_{z_{k}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta_{z_{k}}\succsim\delta_{z_{k+1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\delta_{z_{1}}\succsim\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{k}\delta_{z_{k}}\right]\succsim\delta_{z_{k+1}}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+by transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+From part i, 
+\begin_inset Formula $\forall\ \gamma\in[0,1]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{k}\delta_{z_{k}}\right]\succsim\delta_{z_{k}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{k}\delta_{z_{k}}\right]\succsim\gamma\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{k}\delta_{z_{k}}\right]+\left(1-\gamma\right)\delta_{k+1}\succsim\delta_{k+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Define 
+\begin_inset Formula $\left(\beta_{i}\right)_{i=1}^{k}\equiv\gamma\cdot\alpha_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{k+1}\equiv\left(1-\gamma\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{k}\delta_{z_{k}}\right]\succsim\left[\beta_{1}\delta_{z_{1}}+\ldots+\beta_{k+1}\delta_{k+1}\right]\succsim\delta_{k+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{k+1}\beta_{i}=\gamma{\displaystyle \sum_{i=1}^{k}\alpha_{i}+\left(1-\gamma\right)=\gamma+\left(1-\gamma\right)=1}}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{k}}\alpha_{i}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\delta_{z_{1}}\succsim\left[\beta_{1}\delta_{z_{1}}+\ldots+\beta_{k+1}\delta_{k+1}\right]\succsim\delta_{k+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+iii.
+ Conclude that there are best and worst lotteries, i.e., 
+\begin_inset Formula $\overline{\pi}$
+\end_inset
+
+ and 
+\begin_inset Formula $\underline{\pi}$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+ , 
+\begin_inset Formula $\overline{\pi}\succsim\pi\succsim\underline{\pi}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $Z=\{z_{1},\ldots,z_{n}\}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\delta_{z_{1}}\succsim\ldots\succsim\delta_{n}$
+\end_inset
+
+, let 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\overline{\pi}\equiv\delta_{z_{1}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\underline{\pi}\equiv\delta_{z_{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, from part ii, 
+\begin_inset Formula $\forall\ \left(\alpha_{i}\right)_{i=1}^{k}\in\mathbb{R}_{+}^{n}$
+\end_inset
+
+ such that 
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{k}}\alpha_{i}=1,\delta_{z_{1}}\succsim\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{k}\delta_{z_{k}}\right]\succsim\delta_{z_{k}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, 
+\begin_inset Formula $\forall\ \left(\alpha_{i}\right)_{i=1}^{k}\in\mathbb{R}_{+}^{n},\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{k}\delta_{z_{k}}\right]\in\Delta(Z)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\delta_{z_{i}}\equiv(e_{i})$
+\end_inset
+
+, then 
+\begin_inset Formula $\{\delta_{z_{1}},\ldots,\delta_{z_{n}}\}$
+\end_inset
+
+ forms a basis for 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, any element in 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ can be represented by a linear combination of these vectors
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\forall\ \pi\in\Delta(Z),\exists\left(\alpha_{i}\right)_{i=1}^{k}\in\mathbb{R}_{+}^{n}:\pi=\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{k}\delta_{z_{k}}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\forall\ \pi\in\Delta(Z),\overline{\pi}\succsim\pi\succsim\underline{\pi}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_body
+\end_document

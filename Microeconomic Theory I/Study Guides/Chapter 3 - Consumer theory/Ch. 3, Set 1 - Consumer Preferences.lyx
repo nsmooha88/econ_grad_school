@@ -1,0 +1,5037 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 3: Consumer Theory
+\end_layout
+
+\begin_layout Section*
+3.2
+\begin_inset space \quad{}
+\end_inset
+
+Consumer Theory I: Preferences
+\end_layout
+
+\begin_layout Subsection*
+3.2.1
+\begin_inset space \quad{}
+\end_inset
+
+Alternatives space
+\end_layout
+
+\begin_layout Itemize
+We study the behavior of a single agent when alternatives are consumption
+ bundles of 
+\begin_inset Formula $L\in\mathbb{N}$
+\end_inset
+
+ commodities.
+\end_layout
+
+\begin_layout Itemize
+The set of alternatives, or 
+\emph on
+consumption set
+\emph default
+, is 
+\begin_inset Formula $X\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+, whose elements are the consumption bundles that the individual can conceivably
+ consume given the physical constraints imposed by his environment.
+\end_layout
+
+\begin_layout Itemize
+The generic consumption bundle is a vector 
+\begin_inset Formula $x\equiv(x_{1},\ldots,x_{L})\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+; for each 
+\begin_inset Formula $l=1,\ldots,L$
+\end_inset
+
+, 
+\begin_inset Formula $x_{l}$
+\end_inset
+
+ is the amount of commodity 
+\begin_inset Formula $l$
+\end_inset
+
+ consumed at 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Sometimes it will be useful to write a consumption vector 
+\begin_inset Formula $x$
+\end_inset
+
+ in matrix notation as 
+\begin_inset Formula $x\equiv(x_{1},\ldots,x_{L})^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+For simplicity, we will usually assume that 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ One special feature of the set 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+ is that it is 
+\emph on
+convex
+\emph default
+.
+ That is, if two consumption bundles 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ are both elements of 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+, then the bundle 
+\begin_inset Formula $x^{\prime\prime}=\alpha x+(1-\alpha)x^{\prime}$
+\end_inset
+
+ is also an element of 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+ for any 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We will study: (1) consumer preferences; (2) utility representation of consumer
+ preferences; (3) consumer choice; and (4) revealed preference theory in
+ the consumer's world.
+\end_layout
+
+\begin_layout Subsection*
+3.2.2
+\begin_inset space \quad{}
+\end_inset
+
+Consumer preferences
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+First, we study the representation of a consumer by a preference relation
+ 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(41).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $X\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+ The 
+\series bold
+upper contour set of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ at 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\series default
+is 
+\begin_inset Formula $U(\succsim,x)\equiv\{y\in X:y\succsim x)$
+\end_inset
+
+.
+ The 
+\series bold
+indifference set of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ at x
+\series default
+ is 
+\begin_inset Formula $I(\succsim,x)\equiv\{y\in X:y\sim x\}$
+\end_inset
+
+.
+ The 
+\series bold
+lower contour set of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ at 
+\begin_inset Formula $x$
+\end_inset
+
+
+\series default
+ is 
+\begin_inset Formula $L(\succsim,x)\equiv\{y\in X:x\succsim y\}$
+\end_inset
+
+.
+ The 
+\series bold
+strict upper and lower contour sets of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ at 
+\begin_inset Formula $x$
+\end_inset
+
+
+\series default
+ are 
+\begin_inset Formula $U(\succ,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succ,x)$
+\end_inset
+
+, respectively.
+\end_layout
+
+\begin_layout Subsubsection*
+Desirability assumptions
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is often reasonable to assume that larger amounts of commodities are
+ preferred to smaller ones.
+ This feautre of preferences is caputred in the assumption of monotonicity.
+ For Definition 43, we assume that the consumption of larger amounts of
+ goods is always feasible in principle; that is, if 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ and 
+\begin_inset Formula $y\geq x$
+\end_inset
+
+, then 
+\begin_inset Formula $y\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(42).
+
+\series default
+ 
+\emph on
+We use
+\emph default
+ 
+\emph on
+the following notation for vector inequalities: for each 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $x\geq y$
+\end_inset
+
+ if for each 
+\begin_inset Formula $i=1,\ldots,L$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}\geq y_{i}$
+\end_inset
+
+; 
+\begin_inset Formula $x\gneq y$
+\end_inset
+
+ if 
+\begin_inset Formula $x\geq y$
+\end_inset
+
+ and 
+\begin_inset Formula $x\neq y$
+\end_inset
+
+; 
+\begin_inset Formula $x\gg y$
+\end_inset
+
+ if for each 
+\begin_inset Formula $i=1,\ldots,L$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}>y_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The following are further restrictions that are usually assumed on consumer
+ preferences.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(43).
+ 
+\series default
+\emph on
+A binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $X\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ is:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\emph on
+Strictly Monotone 
+\series default
+iff 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq\mathbb{R}_{+}^{L}:x\gneq y\implies x\succ y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Monotone 
+\series default
+iff 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq\mathbb{R}_{+}^{L}:x\gg y\implies x\succ y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Weakly Monotone 
+\series default
+iff 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq\mathbb{R}_{+}^{L}:x\geq y\implies x\succsim y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Locally Non-Satiated 
+\series default
+iff 
+\begin_inset Formula $\forall\ x\in X,\ \forall\ \epsilon\in\mathbb{R}_{++},\ \exists\ y\in B_{\epsilon}^{X}(x):y\succ x$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Remark*
+Monotonicity alone does not imply weak monotonicity, and weak monotonicity
+ does not imply local non-satiation.
+ For instance, let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a preference on 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+ defined by: 
+\begin_inset Formula $\forall\ \{x,y\}\subset X:x\sim y$
+\end_inset
+
+.
+ Clearly, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is weakly monotone, but it is not locally non-satiated.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The assumption that preferences are monotone is satisfies as long as commodities
+ are 
+\begin_inset Quotes eld
+\end_inset
+
+good
+\begin_inset Quotes erd
+\end_inset
+
+ rather than 
+\begin_inset Quotes eld
+\end_inset
+
+bads.
+\begin_inset Quotes erd
+\end_inset
+
+ Even if some commodity is a bad, however, we may still be able to view
+ preferences as monotone because it is often possible to redefine a consumption
+ activity in a way that satisfies the assumption.
+ For example, if one commdotiy is garbage, we can instead define the individual'
+s consumption over the 
+\begin_inset Quotes eld
+\end_inset
+
+absence of garbage.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Note that if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is monotone, we may have indfference with respect to an increase in the
+ amount of some but not all commodities.
+ In contrast, strong monotonicity says that if 
+\begin_inset Formula $y$
+\end_inset
+
+ is larger than 
+\begin_inset Formula $x$
+\end_inset
+
+ for 
+\emph on
+some
+\emph default
+ commodity and is no less for any other, then 
+\begin_inset Formula $y$
+\end_inset
+
+ is strictly prefered to 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Local nonsatiation is a weaker desirability assumption than monotonicity.
+ When 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+, local nonsatiation rules out the extreme situation in which all commodities
+ are bads, since in that case no consumption at all (the point 
+\begin_inset Formula $x=0$
+\end_inset
+
+) would be a satiation point.
+ One implicaiton of local nonsatiation (and, hence, of monotonicity) is
+ that it rules out 
+\begin_inset Quotes eld
+\end_inset
+
+thick
+\begin_inset Quotes erd
+\end_inset
+
+ indifference sets.
+\end_layout
+
+\begin_layout Proposition*
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $X\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is transitive, weakly monotone, and locally non-satiated, then 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is monotone.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ be such that 
+\begin_inset Formula $y\gg x$
+\end_inset
+
+.
+ We prove that 
+\begin_inset Formula $y\succ x$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Suppose by means of contradiction that 
+\begin_inset Formula $\neg(y\succ x)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $y\gg x$
+\end_inset
+
+ and 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is weakly monotone, then 
+\begin_inset Formula $y\succsim x$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\neg(y\succ x)$
+\end_inset
+
+, then 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $x\sim y$
+\end_inset
+
+.
+ We claim that for each 
+\begin_inset Formula $z\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x\leq z\leq y$
+\end_inset
+
+, 
+\begin_inset Formula $z\sim x$
+\end_inset
+
+.
+ To prove this, observe that since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is weakly monotone, then 
+\begin_inset Formula $y\succsim z\succsim x$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+, then by transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $x\sim z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $z^{*}\equiv\frac{x+y}{2}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $y\gg x$
+\end_inset
+
+, then 
+\begin_inset Formula $y\gg z^{*}\gg x$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\epsilon\equiv\min_{i=1,\ldots,L}\frac{\left|y_{i}-x_{i}\right|}{2}$
+\end_inset
+
+.
+ We claim that 
+\begin_inset Formula $B_{\epsilon}^{X}(z^{*})\subseteq\left\{ z\in\mathbb{R}_{+}^{L}:x\leq z\leq y\right\} $
+\end_inset
+
+.
+ To prove this, let 
+\begin_inset Formula $z\in B_{\epsilon}^{X}(z^{*})$
+\end_inset
+
+.
+ We claim that 
+\begin_inset Formula $x\leq z$
+\end_inset
+
+.
+ Suppose by means of contradiction that 
+\begin_inset Formula $x\nleq z$
+\end_inset
+
+.
+ Thus, there is 
+\begin_inset Formula $k\in\left\{ 1,\ldots,L\right\} $
+\end_inset
+
+ such that 
+\begin_inset Formula $z_{k}<x_{k}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $z_{k}^{*}>x_{k}$
+\end_inset
+
+, then 
+\begin_inset Formula $\left|z_{k}^{*}-z_{k}\right|\geq\left|z_{k}^{*}-x_{k}\right|\geq\epsilon$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $\left\Vert z^{*}-z\right\Vert =\left(\sum_{l=1}^{L}(z_{l}^{*}-z_{l})^{2}\right)^{\frac{1}{2}}\geq\left|z_{k}^{*}-z_{k}\right|$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\left\Vert z^{*}-z\right\Vert \geq\epsilon$
+\end_inset
+
+ and 
+\begin_inset Formula $z\notin B_{\epsilon}^{X}(z^{*})$
+\end_inset
+
+.
+ However, this is a contradiction.
+ Thus, 
+\begin_inset Formula $x\leq z$
+\end_inset
+
+.
+ A symmetric argument shows that 
+\begin_inset Formula $z\leq y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+We conclude that there is 
+\begin_inset Formula $z^{*}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon\in\mathbb{R}_{++}$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $z\in B_{\epsilon}^{X}(z^{*})$
+\end_inset
+
+, 
+\begin_inset Formula $x\leq z\leq y$
+\end_inset
+
+ and consequently, 
+\begin_inset Formula $z\sim x\sim z^{*}$
+\end_inset
+
+.
+ Thus, there is no 
+\begin_inset Formula $z\in B_{\epsilon}^{X}(z^{*})$
+\end_inset
+
+ such that 
+\begin_inset Formula $z\succ z^{*}$
+\end_inset
+
+.
+ However, this contradicts local non-satiation of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Convexity Assumptions
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A second significant assumption, that of convexity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, concerns the trade-offs that the consumer is willing to make among different
+ goods.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(44).
+ 
+\series default
+\emph on
+A set 
+\begin_inset Formula $Y\subseteq\mathbb{R}^{L}$
+\end_inset
+
+ is 
+\series bold
+convex
+\series default
+ iff 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq Y,\ \forall\ \alpha\in[0,1]:\alpha x+(1-\alpha)y\in Y$
+\end_inset
+
+.
+ Here 
+\begin_inset Formula $\alpha x$
+\end_inset
+
+ is the vector 
+\begin_inset Formula $(\alpha x_{1},\ldots,\alpha x_{L})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Assume that 
+\begin_inset Formula $X$
+\end_inset
+
+ is a convex set.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(45).
+
+\series default
+ 
+\emph on
+A binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+ is 
+\series bold
+convex
+\series default
+ iff 
+\begin_inset Formula $\forall\ x\in X:U(\succsim,x)\ \mbox{is convex}$
+\end_inset
+
+; that is, 
+\begin_inset Formula $\forall\ \{y,z\}\subseteq U(\succsim,x),\ \forall\ \alpha\in[0,1]:\alpha y+(1-\alpha)z\in U(\succsim,x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset space \quad{}
+\end_inset
+
+
+\series default
+Convexity is a strong but central hypothesis in economics.
+ It can be interpreted in terms of 
+\emph on
+diminishing marginal rates of substitution
+\emph default
+: That is, with convex preferences, from any initial consumption situation
+ 
+\begin_inset Formula $x$
+\end_inset
+
+, and for any tow commodities, it takes increasily larger amounts of one
+ commodity to compensate for successive unit losses of the other.
+ More generally, convexity is equivalent to a diminishing marginal rate
+ of substitution between any two goods, provided that we allow for 
+\begin_inset Quotes eld
+\end_inset
+
+composite commodities
+\begin_inset Quotes erd
+\end_inset
+
+ formed from linear combinations of the 
+\begin_inset Formula $L$
+\end_inset
+
+ basic commodities.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Convexity can also be viewed as the formal expression of a basic inclination
+ of economic agents for diversification.
+ A taste of diversificaiton is a realistic trait of economic life.
+ Economic theory would be in serious difficulty if this postulated propensity
+ for diversificaiton did not have significant descriptive content.
+ But there is no doubt that one can easily think of choice situations where
+ it is violated.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We also make use at times of a strengthening of the convexity assumption.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(46).
+
+\series default
+ 
+\emph on
+A binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+ is 
+\series bold
+strictly convex
+\series default
+ iff 
+\begin_inset Formula $\forall\ x\in X,\ \forall\ \{y,z\}\subseteq U(\succsim,x),\ \forall\ \alpha\in(0,1):y\neq z\implies\alpha y+(1-\alpha)z\succ x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Continuity Assumptions
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset space \quad{}
+\end_inset
+
+
+\series default
+In the next section, it will be shown that continuous preferences is the
+ assumption needed to ensure the existence of a utility function.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(47).
+
+\series default
+ 
+\emph on
+A binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+ is 
+\series bold
+continuous
+\series default
+ iff it is a closed subset of 
+\begin_inset Formula $X\times X$
+\end_inset
+
+, i.e., 
+\emph default
+
+\begin_inset Formula $\forall\; x^{t}\underset{t\to\infty}{\longrightarrow}x,\ \forall\ y^{t}\underset{t\to\infty}{\longrightarrow}y:(\forall\ t\in\mathbb{N}:x^{t}\succsim y^{t})\implies x\succsim y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Continuity says that the consumer's preferences are preserved under limits,
+ i.e., it cannot exhibit 
+\begin_inset Quotes eld
+\end_inset
+
+jumps.
+\begin_inset Quotes erd
+\end_inset
+
+ For example, it prevents the consumer preferring each element in sequence
+ 
+\begin_inset Formula $\{x^{t}\}$
+\end_inset
+
+ to the corresponding element in sequence 
+\begin_inset Formula $\{y^{t}\}$
+\end_inset
+
+ but suddenly reversing her preference at the limiting ponts of these sequences
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(48).
+
+\series default
+ 
+\emph on
+A binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is 
+\series bold
+continuous*
+\series default
+ iff 
+\begin_inset Formula $\forall\ x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succsim,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succsim,x)$
+\end_inset
+
+ are closed in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Continuity* says that for all 
+\begin_inset Formula $x$
+\end_inset
+
+, the upper and lower contour sets include their boundaries.
+ If the binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is a preference, then continuity* is an equivalent way to state the notion
+ of continuity.
+\end_layout
+
+\begin_layout Note*
+In general, continuity implies continuity*, but the reverse implication
+ may not hold.
+ However, from Theorem 7, if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive, then continuity is equivalent to continuity*.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\emph on
+(7).
+ 
+\series default
+\emph default
+A preference relation is continuous if and only if it is continuous*.
+\end_layout
+
+\begin_layout Proof
+We prove both directions independently.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous.
+ We want to show that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous*, i.e., 
+\begin_inset Formula $\forall\ x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succsim,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succsim,x)$
+\end_inset
+
+ are closed in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\{(y^{t})\}_{t=1}^{\infty}\subseteq U(\succsim,x)$
+\end_inset
+
+ such that 
+\begin_inset Formula $y^{t}\rightarrow y$
+\end_inset
+
+ as 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\forall\ t\in\mathbb{N}:y^{t}\succsim x$
+\end_inset
+
+.
+ Also, note that 
+\begin_inset Formula $x\rightarrow x$
+\end_inset
+
+ as 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous, then 
+\begin_inset Formula $y\succsim x$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $y\in U(\succsim,x)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $U(\succsim,x)$
+\end_inset
+
+ is a closed set in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ By the same arguement, 
+\begin_inset Formula $L(\succsim,x)$
+\end_inset
+
+ is also a closed set in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous*.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous*.
+ We prove that it is continuous, i.e., for any two convergent sequences 
+\begin_inset Formula $x^{t}\rightarrow x$
+\end_inset
+
+ and 
+\begin_inset Formula $y^{t}\rightarrow y$
+\end_inset
+
+ as 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ t\in\mathbb{N}:x^{t}\succsim y^{t}$
+\end_inset
+
+, we have that 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+.
+ Suppose by means of contradiction that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is not continuous, i.e., 
+\begin_inset Formula $\exists\; x^{t}\underset{t\to\infty}{\longrightarrow}x,\ \exists\ y^{t}\underset{t\to\infty}{\longrightarrow}y:(\forall\ t\in\mathbb{N}:x^{t}\succsim y^{t})\ \wedge\ y\succ x$
+\end_inset
+
+ Then, we claim that there is an open set containing 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $V(y)$
+\end_inset
+
+, and an open set containing 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $V(x)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ y^{\prime}\in V(y),\forall\ x^{\prime}\in V(x):y^{\prime}\succ x^{\prime}$
+\end_inset
+
+.
+ There are two cases.
+\end_layout
+
+\begin_deeper
+\begin_layout Case
+\begin_inset Formula $\exists\ z\in X$
+\end_inset
+
+ such that 
+\begin_inset Formula $y\succ z\succ x$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $V(y)\equiv U(\succ,z)$
+\end_inset
+
+ and 
+\begin_inset Formula $V(x)\equiv L(\succ,z)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $y\succ z\implies y\in V(y)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $z\succ x\implies x\in V(x)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous*, 
+\begin_inset Formula $L(\succsim,z)$
+\end_inset
+
+ and 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $U(\succsim,z)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ are closed 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $V(y)$
+\end_inset
+
+ and 
+\begin_inset Formula $V(x)$
+\end_inset
+
+ are open.
+ Take 
+\begin_inset Formula $y^{\prime}\in V(y)$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $y^{\prime}\succ z$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $x^{\prime}\in V(x)$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $z\succ x^{\prime}$
+\end_inset
+
+.
+ By transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $y^{\prime}\succ x^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $\nexists\ z\in X$
+\end_inset
+
+ such that 
+\begin_inset Formula $y\succ z\succ x$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $V(y)\equiv\{y^{\prime}\in X:y^{\prime}\succ x\}=U(\succ,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $V(x)\equiv\{x^{\prime}\in X:y\succ x^{\prime}\}=L(\succ,y)$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $y\succ x$
+\end_inset
+
+ 
+\begin_inset Formula $\implies$
+\end_inset
+
+ 
+\begin_inset Formula $y\in V(y)$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in V(x)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous*, 
+\begin_inset Formula $L(\succsim,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $U(\succsim,y)$
+\end_inset
+
+ are closed 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $V(y)$
+\end_inset
+
+ and 
+\begin_inset Formula $V(x)$
+\end_inset
+
+ are open.
+ Take 
+\begin_inset Formula $y^{\prime}\in V(y)$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $y^{\prime}\succ x$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $x^{\prime}\in V(x)$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $y\succ x^{\prime}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\nexists\ z\in X$
+\end_inset
+
+ such that 
+\begin_inset Formula $y\succ z\succ x$
+\end_inset
+
+ and 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete, then 
+\begin_inset Formula $y^{\prime}\succsim y\succ x\ \wedge\ y\succ x\succsim x^{\prime}\implies y^{\prime}\succ x^{\prime}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Now, 
+\begin_inset Formula $x^{t}\underset{t\to\infty}{\longrightarrow}x\implies\left[\exists\ \bar{t}\in\mathbb{N},\forall\ t\geq\bar{t}:x^{t}\in V(x)\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $y^{t}\underset{t\to\infty}{\longrightarrow}y\implies\left[\exists\ \hat{t}\in\mathbb{N},\forall\ t\geq\hat{t}:y^{t}\in V(y)\right]$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $t^{*}=\max\{\hat{t},\bar{t}\}$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $t\geq t^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $x^{t}\in V(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $y^{t}\in V(y)$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\left[\forall\ x^{\prime}\in V(x),\forall\ y^{\prime}\in V(y):y^{\prime}\succ x^{\prime}\right]\implies y^{t}\succ x^{t}$
+\end_inset
+
+.
+ However, this contradicts 
+\begin_inset Formula $\forall\ t\in\mathbb{N}:x^{t}\succsim y^{t}$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous.
+\end_layout
+
+\begin_layout Remark*
+If a binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous, then it is continuous*.
+ However, in general, a binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ that is continuous* may not be continuous.
+ From Theorem 7, if a binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive, then 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous if and only if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous*.
+\end_layout
+
+\begin_layout Corollary*
+
+\series bold
+\emph on
+(1).
+ 
+\series default
+\emph default
+A preference relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+ is continuous if and only if for each 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succ,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succ,x)$
+\end_inset
+
+ are open in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+From Theorem 1, a preference relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous if and only if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous*.
+ So, for each 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succsim,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succsim,x)$
+\end_inset
+
+ are closed.
+ Note, a set 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ is closed in 
+\begin_inset Formula $X$
+\end_inset
+
+ if and only if its complement in 
+\begin_inset Formula $X$
+\end_inset
+
+ is open.
+ Also, 
+\begin_inset Formula $U(\succsim,x)=L(\succ,x)^{c}$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succsim,x)=U(\succ,x)^{c}$
+\end_inset
+
+.
+ Therefore, for each 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succ,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succ,x)$
+\end_inset
+
+ are open.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\emph on
+(7).
+ 
+\series default
+\emph default
+If 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by a continuous utility function, then 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by a continuous utility funciton.
+ We want to show that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous, i.e., for any two convergent sequences 
+\begin_inset Formula $x^{t}\underset{t\to\infty}{\longrightarrow}x$
+\end_inset
+
+ and 
+\begin_inset Formula $y^{t}\underset{t\to\infty}{\longrightarrow}y$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $t\in\mathbb{N},x^{t}\succsim y^{t}$
+\end_inset
+
+, we have that 
+\begin_inset Formula $x\succsim y.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Take two convergent sequences 
+\begin_inset Formula $x^{t}\underset{t\to\infty}{\longrightarrow}x$
+\end_inset
+
+ and 
+\begin_inset Formula $y^{t}\underset{t\to\infty}{\longrightarrow}y$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ t\in\mathbb{N},\ x^{t}\succsim y^{t}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+, then 
+\begin_inset Formula $\forall\ t\in\mathbb{N}:u(x^{t})\ge u(y^{t})$
+\end_inset
+
+.
+ Since limits preserve weak inequalities, then 
+\begin_inset Formula $\underset{t\to\infty}{\lim}\ u(x^{t})\geq\underset{t\to\infty}{\lim}\ u(y^{t})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u$
+\end_inset
+
+ is a continuous function, then 
+\begin_inset Formula $u(x^{t})\underset{t\to\infty}{\longrightarrow}u(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $u(y^{t})\underset{t\to\infty}{\longrightarrow}u(y)$
+\end_inset
+
+.
+ Hence, we have that 
+\begin_inset Formula $u(x)\geq u(y)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then 
+\begin_inset Formula $u(x)\geq u(y)\iff x\succsim y$
+\end_inset
+
+ .
+ Thus, 
+\begin_inset Formula $\forall\; x^{t}\underset{t\to\infty}{\longrightarrow}x,\ \forall\ y^{t}\underset{t\to\infty}{\longrightarrow}y:(\forall t\in\mathbb{N}:x^{t}\succsim y^{t})\implies x\succsim y$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous.
+\end_layout
+
+\begin_layout Subsubsection*
+Parametric and simplicity assumptions
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In applied work, it is useful to restric attention to families of preferences
+ that can be generated by one of its indifference sets.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Homothetic
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(49).
+
+\series default
+ 
+\emph on
+A preference relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is homothetic iff its indifference sets are related by proportional expansion
+ along rays, i.e., 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X,\ \forall\ \alpha\in\mathbb{R}_{+}:x\sim y\implies\alpha x\sim\alpha y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Quasilinear
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(50).
+
+\series default
+ 
+\emph on
+The preference relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $X\equiv\mathbb{R}\times\mathbb{R}_{+}^{L-1}$
+\end_inset
+
+ is 
+\series bold
+quasilinear with respect to commodity 1
+\series default
+ iff:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X,\ \forall\ \alpha\in\mathbb{R}:(x_{1},\ldots,x_{L})\sim(y_{1},\ldots,y_{L})\implies(x_{1}+\alpha,\ldots,x_{L})\sim(y_{1}+\alpha,\ldots,y_{L})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall\ (x_{1},\ldots,x_{L})\in X,\ \forall\ \alpha\in\mathbb{R}_{++}:(x_{1}+\alpha,\ldots,x_{L})\succ(x_{1},\ldots,x_{L})$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Definition*
+
+\emph on
+A preference relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $X\equiv\mathbb{R}\times\mathbb{R}_{+}^{L-1}$
+\end_inset
+
+ is 
+\series bold
+quasilinear with respect to commodity 
+\begin_inset Formula $l$
+\end_inset
+
+
+\series default
+ iff the above conditions hold with respect to commodity 
+\begin_inset Formula $l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Cobb-Douglas
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(51).
+
+\series default
+ 
+\emph on
+A preference relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $X\subseteq\mathbb{R}_{+}^{2}$
+\end_inset
+
+ is a 
+\series bold
+Cobb-Douglas
+\series default
+ preference iff it is represented by a utility funciton 
+\begin_inset Formula $u$
+\end_inset
+
+ of the form, 
+\begin_inset Formula $x\equiv(x_{1},x_{2})\in X\mapsto u(x)\equiv x_{1}^{\alpha}x_{2}^{1-\alpha}$
+\end_inset
+
+ for some 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+CES
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(52).
+
+\series default
+ 
+\emph on
+A preference relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $X\subseteq\mathbb{R}_{+}^{2}$
+\end_inset
+
+ is a 
+\series bold
+CES
+\series default
+ (Constant Elasticity of Substitution) preference iff it is represented
+ by a utility funciton 
+\begin_inset Formula $u$
+\end_inset
+
+ of the form 
+\begin_inset Formula $x\equiv(x_{1},x_{2})\in X\mapsto u(x)\equiv(\alpha_{1}x_{1}^{\rho}+\alpha_{2}x_{2}^{\rho})^{\frac{1}{\rho}}$
+\end_inset
+
+ for some 
+\begin_inset Formula $\left\{ \alpha_{1},\alpha_{2}\right\} \in\mathbb{R}_{++}$
+\end_inset
+
+ and 
+\begin_inset Formula $\rho\in\mathbb{R}\backslash\{0\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Linear
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(53).
+
+\series default
+ 
+\emph on
+A preference relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $X\subseteq\mathbb{R}^{L}$
+\end_inset
+
+ is 
+\series bold
+linear
+\series default
+ iff it is represented by a utility function 
+\begin_inset Formula $u$
+\end_inset
+
+ of the form 
+\begin_inset Formula $x\in\mathbb{R}^{L}\mapsto u(x)\equiv q\cdot x$
+\end_inset
+
+ for some 
+\begin_inset Formula $q\in\mathbb{R}^{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Symmetric Leontief
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(54).
+
+\series default
+ 
+\emph on
+A preference relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $X\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ is the 
+\series bold
+symmetric Leontief 
+\series default
+preference iff it is represented by the utility function 
+\begin_inset Formula $u$
+\end_inset
+
+ defined by 
+\begin_inset Formula $x\equiv(x_{l})_{l=1}^{L}\in\mathbb{R}_{+}^{L}\mapsto u(x)\equiv\min_{l=1,\ldots,L}x_{l}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Generalized Leontief
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(55).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $f\equiv(f_{l})_{l=1}^{L}$
+\end_inset
+
+ be a list of strictly increasing functions 
+\begin_inset Formula $f_{l}:\mathbb{R}_{+}\rightarrow\mathbb{R}$
+\end_inset
+
+.
+ A preference relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $X\subseteq\mathbb{R}^{L}$
+\end_inset
+
+ is the 
+\series bold
+generalized Leontief preference associated with 
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\series default
+iff it is represented by the utility function 
+\begin_inset Formula $u$
+\end_inset
+
+ defined by 
+\begin_inset Formula $x\in X\subseteq\mathbb{R}^{L}\mapsto u(x)\equiv\min_{l=1,\ldots,L}f_{l}(x_{l})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+3.2.3
+\begin_inset space \quad{}
+\end_inset
+
+Problems
+\end_layout
+
+\begin_layout Problem
+Assume 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Prove that: (a) Strict monotonicity implies monotonicity; (b) Monotonicity
+ implies local non-satiation; (c) The converse statements are not true.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\emph on
+
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+(a) Strict monotonicity implies monotonicity.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let the binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be strictly monotone.
+ Take 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x\gg y$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $x\gg y\implies x\gneq y$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is strictly monotone, then 
+\begin_inset Formula $x\gneq y\implies x\succ y$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x\gg y$
+\end_inset
+
+, we have that 
+\begin_inset Formula $x\succ y$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is monotone.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+(b) Monotonicity implies local non-satiation.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let the binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be monotone.
+ Take 
+\begin_inset Formula $x\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and take 
+\begin_inset Formula $\epsilon\in\mathbb{R}_{++}$
+\end_inset
+
+.
+ Now, define 
+\begin_inset Formula $y\equiv\left(y_{i}=x_{i}+\frac{\epsilon}{2}\right),\ i=i,\ldots,L$
+\end_inset
+
+.
+ Note, 
+\begin_inset Formula $y\in B_{\epsilon}^{X}(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $y\gg x$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is monotone, then 
+\begin_inset Formula $y\succ x$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\forall\ x\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $\forall\ \epsilon\in\mathbb{R}_{++}$
+\end_inset
+
+, 
+\begin_inset Formula $\exists\ y\in B_{\epsilon}^{X}(x):y\succ x$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is locally non-satiated.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+(c) The converse statements are not true.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Leontief preferences are monotone, but they are not strictly monotone.
+ Now, consider the preference where points with smaller Euclidean distance
+ from zero are preferred to points with larger Euclidan distance from zero,
+ but zero is the least preferred point in 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ This preference is locally non-satiated, but it is not monotone.
+\end_layout
+
+\begin_layout Problem
+Recall that a preference 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+ is convex if for each 
+\begin_inset Formula $x\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succsim,x)$
+\end_inset
+
+ is convex.
+ Assume that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is rational.
+ Prove that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is convex if and only if for each pair 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+ and each 
+\begin_inset Formula $\alpha\in[0,1],\alpha x+(1-\alpha)y\succsim y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Assume that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is rational.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is convex.
+ We want to show that 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq\mathbb{R}_{+}^{L},\forall\ \alpha\in[0,1]:x\succsim y\implies\alpha x+(1-\alpha)y\succsim y$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $x\in U(\succsim,y)$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete, 
+\begin_inset Formula $y\succsim y$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $y\in U(\succsim,y)$
+\end_inset
+
+.
+ By definition of convexity, 
+\begin_inset Formula $U(\succsim,y)$
+\end_inset
+
+ is convex.
+ So, 
+\begin_inset Formula $\{x,y\}\subseteq U(\succsim,y)\ \wedge\ \alpha\in[0,1]\implies\alpha x+(1-\alpha)y\in U(\succsim,y)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\alpha x+(1-\alpha)y\succsim y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume that 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq\mathbb{R}_{+}^{L},\ \forall\ \alpha\in[0,1]:x\succsim y\implies\alpha x+(1-\alpha)y\succsim y$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is convex, i.e., 
+\begin_inset Formula $\forall\ y\in X$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succsim,y)$
+\end_inset
+
+ is convex.
+ Take 
+\begin_inset Formula $y\in X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $U(\succsim,y)$
+\end_inset
+
+ is convex if and only if 
+\begin_inset Formula $\forall\ \{x,z\}\subseteq U(\succsim,y),\forall\ \alpha\in[0,1]:\alpha x+(1-\alpha)z\in U(\succsim,y)$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\{x,z\}\subseteq U(\succsim,y)$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+ and 
+\begin_inset Formula $z\succsim y$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete, then either 
+\begin_inset Formula $x\succsim z$
+\end_inset
+
+ or 
+\begin_inset Formula $z\succsim x$
+\end_inset
+
+.
+ Without loss of generality, let 
+\begin_inset Formula $x\succsim z$
+\end_inset
+
+.
+ By the assumption, 
+\begin_inset Formula $\alpha x+(1-\alpha)z\succsim z$
+\end_inset
+
+.
+ By transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $ $
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\alpha x+(1-\alpha)z\succsim z\ \wedge\ z\succsim y\implies\alpha x+(1-\alpha)z\succsim y$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\alpha x+(1-\alpha)z\in U(\succsim,y)$
+\end_inset
+
+, so 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is convex.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is convex if and only if for each pair 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+ and each 
+\begin_inset Formula $\alpha\in[0,1],\alpha x+(1-\alpha)y\succsim y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Prove Theorem 7 in the notes
+\end_layout
+
+\begin_layout Proof
+The proof can be found in Section 3.2.2.
+\end_layout
+
+\begin_layout Problem
+Prove that continuity and continuity* are not necessarily equivlatent for
+ binary relations that are complete but not, transitive, that is construct
+ a complete and continuous* binary relation that is not continuous.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $X\equiv\left[0,1\right]$
+\end_inset
+
+.
+ We will now define a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+ that is complete, intransitive, continuous*, but not continuous.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\succsim\equiv\left\{ (x,y)\in X^{2}:x_{1}\geq x_{2}\right\} \cup\left\{ (x,y)\in X^{2}:y=1-x,\ x>\frac{1}{4}\right\} $
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\forall\ \left\{ x,y\right\} \subseteq X$
+\end_inset
+
+, 
+\begin_inset Formula $x\succsim y\iff[x\geq y]\ \vee\ \left[(y=1-x)\ \wedge\ \left(x>\frac{1}{4}\right)\right]$
+\end_inset
+
+.
+ The upper and lower contour sets are defined as follows:
+\begin_inset Formula 
+\[
+\forall\ x\in[0,1],\ L\left(\succsim,x\right)\equiv\left\{ \begin{array}{cc}
+[0,x] & \mbox{if}\ x\leq\frac{1}{4}\\
+{}[0,x]\cup\{1-x\} & \mbox{if}\ x>\frac{1}{4}
+\end{array}\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\forall\ y\in[0,1],\ U(\succsim,y)\equiv\left\{ \begin{array}{cc}
+[y,1] & \mbox{if}\ y\geq\frac{3}{4}\\
+{}[y,1]\cup\{1-y\} & \mbox{if}\ y<\frac{3}{4}
+\end{array}\right\} 
+\]
+
+\end_inset
+
+Important to note, 
+\begin_inset Formula $a\in U(\succsim,b)\iff a\succsim b\iff(a,b)\in X$
+\end_inset
+
+, where 
+\begin_inset Formula $b$
+\end_inset
+
+ is fixed.
+ So, upper contour sets are represented by horizontoal lines in 
+\begin_inset Formula $X^{2}$
+\end_inset
+
+.
+ Also, 
+\begin_inset Formula $a\in L(\succsim,b)\iff b\succsim a\iff(b,a)\in X$
+\end_inset
+
+, where 
+\begin_inset Formula $b$
+\end_inset
+
+ is fixed.
+ So, lower contour sets are represented by vertical lines in 
+\begin_inset Formula $X^{2}$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $\forall\ x\in[0,1],\ U(\succsim,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succsim,x)$
+\end_inset
+
+ are closed sets.
+ Thus, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous*.
+ Now, 
+\begin_inset Formula $\forall\ t\in\mathbb{N}$
+\end_inset
+
+, let 
+\begin_inset Formula $\left(x^{t},y^{t}\right)=\left(\frac{1}{4},\frac{3}{4}\right)+\left(\frac{1}{2t},-\frac{1}{2t}\right)=\left(\frac{1}{4}+\frac{1}{2t},\frac{3}{4}-\frac{1}{2t}\right)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x^{t}>\frac{1}{4}$
+\end_inset
+
+ and 
+\begin_inset Formula $y^{t}=1-x^{t}$
+\end_inset
+
+, then 
+\begin_inset Formula $\forall\ t\in\mathbb{N},\ x^{t}\succsim y^{t}$
+\end_inset
+
+.
+ However, 
+\begin_inset Formula $\left(x^{t},y^{t}\right)\rightarrow\left(\frac{1}{4},\frac{3}{4}\right)=(x,y)$
+\end_inset
+
+ as 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+, and 
+\begin_inset Formula $\left(\frac{1}{4},\frac{3}{4}\right)\notin\ \succsim$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is not continuous.
+\end_layout
+
+\begin_layout Problem
+Prove Proposition 7 in the notes.
+\end_layout
+
+\begin_layout Proof
+The proof can be found in Section 3.2.2.
+\end_layout
+
+\begin_layout Problem
+Construct a quasilinear preference that is not continuous.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $X\equiv\mathbb{R}\times\mathbb{R}_{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Define 
+\begin_inset Formula $\succsim_{lex}$
+\end_inset
+
+ as follows: for each 
+\begin_inset Formula $x\equiv(x_{1},x_{2})\in\mathbb{R}\times\mathbb{R}_{+}$
+\end_inset
+
+ and each 
+\begin_inset Formula $y\equiv(y_{1},y_{2})\in\mathbb{R}\times\mathbb{R}_{+},\ x\succsim_{lex}y\iff\left[\left(x_{1}>y_{1}\right)\ \vee\ \left(x_{1}=y_{1}\ \wedge\ x_{2}\geq y_{2}\right)\right]$
+\end_inset
+
+.
+ Important to note, with this preference relation, indifference sets are
+ just singletons.
+ So, 
+\begin_inset Formula $\forall\ x\in\mathbb{R}\times\mathbb{R}_{+}:I(\succsim,x)\equiv\{y\in X:y\sim x\}=\{x\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Now, we will show that 
+\begin_inset Formula $\succsim_{lex}$
+\end_inset
+
+ on 
+\begin_inset Formula $X\equiv\mathbb{R}\times\mathbb{R}_{+}$
+\end_inset
+
+ is quasilinear with respect to commodity 1.
+ Take 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}\times\mathbb{R}_{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $x\sim y$
+\end_inset
+
+.
+ From the discussion in the previous paragraph, 
+\begin_inset Formula $x=y$
+\end_inset
+
+ must hold.
+ Thus, 
+\begin_inset Formula $(x_{1}+\alpha,x_{2})\sim(y_{1}+\alpha,y_{2})$
+\end_inset
+
+.
+ Next, take 
+\begin_inset Formula $x\in\mathbb{R}\times\mathbb{R}_{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\in\mathbb{R}_{++}$
+\end_inset
+
+.
+ By the definition of 
+\begin_inset Formula $\succsim_{lex}$
+\end_inset
+
+, 
+\begin_inset Formula $(x_{1}+\alpha,x_{2})\succ(x_{1},x_{2})$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim_{lex}$
+\end_inset
+
+ is quasilinear with respect to commodity 1.
+ However, by Problem 1, Section 3.3.3, 
+\begin_inset Formula $\succsim_{lex}$
+\end_inset
+
+ is not a continuous preference.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+We can also construct a binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ by representing it with a utility function.
+ By Proposition 1 in the class notes, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ will be complete and transitive.
+ Define the utility function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ as follows:
+\begin_inset Formula 
+\begin{eqnarray*}
+u(x_{1},x_{2}) & = & x_{1}+g(x_{2})\\
+g(x_{2}) & = & \begin{cases}
+x_{2} & \mbox{if}\ x_{2}<\frac{1}{4}\\
+10+x_{2} & \mbox{if}\ \frac{1}{4}\leq x_{2}<\frac{1}{2}\\
+11-x_{2} & \mbox{if}\ \frac{1}{2}\leq x_{2}<\frac{3}{4}\\
+1-x_{2} & \mbox{if}\ \frac{3}{4}\leq x_{2}<1
+\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+The preference represented by this utility function is quasilinear with
+ respect to commodity 1, but it is not continuous.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $i\in N$
+\end_inset
+
+ and 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ be a preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{2}$
+\end_inset
+
+.
+ Define the sacrifice of agent 
+\begin_inset Formula $i$
+\end_inset
+
+ at a bundle 
+\begin_inset Formula $z\in\mbox{rec}\{0,\Omega\}$
+\end_inset
+
+, denoted 
+\begin_inset Formula $S(\succsim_{i},z)$
+\end_inset
+
+, as the size of the set of bundles that the agent weakly prefers to 
+\begin_inset Formula $z$
+\end_inset
+
+ and could receive at some feasible allocaion, i.e.,
+\emph on
+
+\begin_inset Formula 
+\[
+S(\succsim_{i},z)\equiv\mbox{size}\left(\left\{ x\in\mathbb{R}_{+}^{2}:x\leq\Omega,x\succsim_{i}z\right\} \right)
+\]
+
+\end_inset
+
+
+\emph default
+Formally, the size of a set here is the Lebesgue measure of the set.
+ You should know for instance that if 
+\emph on
+
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+
+\emph default
+, 
+\begin_inset Formula $C\subseteq B$
+\end_inset
+
+, 
+\begin_inset Formula $A\cap C=\emptyset$
+\end_inset
+
+, and 
+\begin_inset Formula $\mbox{size}(C)>0$
+\end_inset
+
+, then 
+\emph on
+
+\begin_inset Formula $\mbox{size}(B)>\mbox{size}(A)$
+\end_inset
+
+
+\emph default
+.
+\end_layout
+
+\begin_layout Problem
+Consider the following function:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+u_{i}: & \mathbb{R}_{+}^{2} & \rightarrow & \mathbb{R}\\
+ & x\equiv(x_{1},x_{2}) & \mapsto & u_{i}(x)\equiv-S(\succsim_{i},x)
+\end{array}
+\]
+
+\end_inset
+
+Prove that if 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is rational, monotone, and continuous, then 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mbox{rec}\{0,\Omega\}$
+\end_inset
+
+.
+ That is, for each pair 
+\begin_inset Formula $\{x,y\}\subseteq\mbox{rec}\{0,\Omega\}$
+\end_inset
+
+, 
+\begin_inset Formula $x\succsim_{i}y$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $u_{i}(x)\ge u_{i}(y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $i\in N$
+\end_inset
+
+ and 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ be a preference relation on 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{2}$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is monotone and continuous.
+ We want to show that for each pair 
+\begin_inset Formula $\{x,y\}\subseteq\mbox{rec}\{0,\Omega\}$
+\end_inset
+
+, 
+\begin_inset Formula $x\succsim_{i}y$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $u_{i}(x)\ge u_{i}(y)$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\{x,y\}\subseteq\mbox{rec}\{0,\Omega\}$
+\end_inset
+
+.
+ Note, 
+\begin_inset Formula $S(\succsim_{i},z)=\mbox{size}\left(U(\succsim_{i},z)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $x\succsim_{i}y$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $U(\succsim_{i},x)\subseteq U(\succsim_{i},y)$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $S(\succsim_{i},x)\leq S(\succsim_{i},y)$
+\end_inset
+
+.
+ Equivalently, 
+\begin_inset Formula $-S(\succsim_{i},x)\geq-S(\succsim_{i},y)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $u_{i}(x)\geq u_{i}(y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $u_{i}(x)\ge u_{i}(y)$
+\end_inset
+
+.
+ Suppose for contradiction 
+\begin_inset Formula $y\succ_{i}x$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $y\in U(\succ_{i},x)$
+\end_inset
+
+, 
+\begin_inset Formula $x\in L(\succ_{i},y)$
+\end_inset
+
+, and 
+\begin_inset Formula $U(\succsim_{i},y)\subseteq U(\succsim_{i},x)$
+\end_inset
+
+.
+ In addition, since 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is monotone and continuous, then 
+\begin_inset Formula $y\succ_{i}x\implies y\neq0$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $A\equiv L(\succ_{i},y)\cap U(\succ_{i},x)$
+\end_inset
+
+.
+ By Corollary 1, since 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is continuous, 
+\begin_inset Formula $U(\succ_{i},x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succ_{i},y)$
+\end_inset
+
+ are open sets in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ is open as well since the finite intersection of open sets is open.
+ By the definition of open sets, 
+\begin_inset Formula $\exists\ \varepsilon>0:B_{\varepsilon}(x)\subseteq L(\succ_{i},y)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\tau\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ l=1,\ldots,L,\ \tau_{l}=1$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $\hat{x}\equiv x+\frac{\varepsilon}{2}\tau$
+\end_inset
+
+.
+ Note, 
+\begin_inset Formula $\hat{x}\in B_{\epsilon}(x)\subseteq L(\succ_{i},y)\implies\hat{x}\in L(\succ_{i},y)$
+\end_inset
+
+.
+ By monotonicity of 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{x}\gg x\implies\hat{x}\succ_{i}x$
+\end_inset
+
+, so 
+\begin_inset Formula $\hat{x}\in U(\succ_{i},x)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\hat{x}\in L(\succ_{i},y)$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{x}\in U(\succ_{i},x)$
+\end_inset
+
+, then 
+\begin_inset Formula $\hat{x}\in A$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $A$
+\end_inset
+
+ is open, then 
+\begin_inset Formula $\exists\ \alpha>0:B_{\alpha}(\hat{x})\subseteq A$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $A\subseteq U(\succ_{i},x)\subseteq U(\succsim_{i},x)$
+\end_inset
+
+, then 
+\begin_inset Formula $B_{\alpha}(\hat{x})\subseteq U(\succsim_{i},x).$
+\end_inset
+
+ Moreover, since 
+\begin_inset Formula $A\subseteq L(\succ_{i},y)\subseteq L(\succsim_{i},y)$
+\end_inset
+
+, then 
+\begin_inset Formula $B_{\alpha}(\hat{x})\cap U(\succsim_{i},y)=\emptyset$
+\end_inset
+
+.
+ Now, we have that 
+\begin_inset Formula $U(\succsim_{i},y)\subseteq U(\succsim_{i},x)$
+\end_inset
+
+, 
+\begin_inset Formula $\mbox{size}\left(B_{\alpha}(\hat{x})\right)>0$
+\end_inset
+
+, 
+\begin_inset Formula $B_{\alpha}(\hat{x})\subseteq U(\succsim_{i},x)$
+\end_inset
+
+, and 
+\begin_inset Formula $B_{\alpha}(\hat{x})\cap U(\succsim_{i},y)=\emptyset$
+\end_inset
+
+.
+ Thus, by the condition above, 
+\begin_inset Formula $S(\succsim_{i},x)>S(\succsim_{i},y)$
+\end_inset
+
+, which is equivalent to 
+\begin_inset Formula $-S(\succsim_{i},x)<-S(\succsim_{i},y)$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $u_{i}(y)>u_{i}(x)$
+\end_inset
+
+, but this contradicts 
+\begin_inset Formula $u_{i}(x)\ge u_{i}(y)$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $x\succsim_{i}y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Consider the preferences on 
+\begin_inset Formula $[1,2]\subseteq\mathbb{R}$
+\end_inset
+
+ that are represented by the functions in Figure 3.5 from the class notes.
+\end_layout
+
+\begin_layout Problem
+(a) Is the preference in Figure 3.5 (a) continuous? Formally support your
+ answer
+\series bold
+\emph on
+.
+\end_layout
+
+\begin_layout Problem
+(b) Is the preference in Figure 3.5(b) continuous? Formally support your
+ answer.
+\end_layout
+
+\begin_layout Proof
+Since we have two preferences, then by Theorem 7 in the class notes, continuity*
+ is equivalent to continuity.
+ So, to see if the preferences are continuous, we will check to see if the
+ preferences are continuous*, i.e., if 
+\begin_inset Formula $\forall\ x\in[1,2],\ U(\succsim,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succsim,x)$
+\end_inset
+
+ are closed in 
+\begin_inset Formula $[1,2]$
+\end_inset
+
+.
+ After analyzing the graphs for each preference, the two discontinuities
+ for both graphs occur at 
+\begin_inset Formula $\frac{5}{4}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{7}{4}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+(a) We will now turn our attention to the preference represented by the
+ funciton in Figure 3.5 (a).
+ Note, all of the following sets listed are closed.
+\begin_inset Formula 
+\[
+L\left(\succsim,\frac{5}{4}\right)\equiv\left\{ x\in[1,2]:\frac{5}{4}\succsim x\right\} =\left[1,\frac{5}{4}\right]\cup\left[\frac{7}{4},2\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+U\left(\succsim,\frac{5}{4}\right)\equiv\left\{ x\in[1,2]:x\succsim\frac{5}{4}\right\} =\left[\frac{5}{4},\frac{7}{4}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+L\left(\succsim,\frac{7}{4}\right)\equiv\left\{ x\in[1,2]:\frac{7}{4}\succsim x\right\} =\left[1,\frac{5}{4}\right]\cup\left[\frac{7}{4},2\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+U\left(\succeq,\frac{7}{4}\right)\equiv\left\{ x\in[1,2]:x\succsim\frac{5}{4}\right\} =\left[\frac{5}{4},\frac{7}{4}\right]
+\]
+
+\end_inset
+
+So, 
+\begin_inset Formula $\forall\ x\in[1,2],\ U(\succsim,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succsim,x)$
+\end_inset
+
+ are closed in 
+\begin_inset Formula $[1,2]$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous* if and only if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous.
+ Also, note that we can take an increasing function 
+\begin_inset Formula $f:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+, and transform the utility.
+ By Proposition 2, 
+\begin_inset Formula $f\circ u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ Also, 
+\begin_inset Formula $f\circ u$
+\end_inset
+
+ is a continuous function, so by Proposition 7, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+(b) However, the preference represented in Figure 3.5 (b), is not continuous
+ because not all of the upper and lower contour sets are closed.
+ For example,
+\begin_inset Formula 
+\[
+U\left(\succsim,\frac{5}{4}\right)\equiv\left\{ x\in[1,2]:x\succsim\frac{5}{4}\right\} =\left[\frac{5}{4},\frac{7}{4}\right)
+\]
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is not continuous*, which is equivalent to 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ not being continuous.
+\end_layout
+
+\begin_layout Problem
+Suppose that the set of alternatives is 
+\begin_inset Formula $\mathbb{R}_{+}$
+\end_inset
+
+.
+ A preference 
+\begin_inset Formula $R$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathbb{R}_{+}$
+\end_inset
+
+ is 
+\series bold
+single peaked
+\series default
+ if there is 
+\begin_inset Formula $x^{*}\in\mathbb{R}_{+}$
+\end_inset
+
+ such that:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+For each pair 
+\begin_inset Formula $\left\{ x,y\right\} \subseteq\mathbb{R}_{+}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x<y\leq x^{*},\ y\ P\ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For each pair 
+\begin_inset Formula $\left\{ x,y\right\} \subseteq\mathbb{R}_{+}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x^{*}\leq y<x,\ y\ P\ x$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Problem
+(a) Show that if 
+\begin_inset Formula $R$
+\end_inset
+
+ is continuous, then it can be represented by a function 
+\begin_inset Formula $u$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $x\leq x^{*},\ u(x)=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+(b) Show that if 
+\begin_inset Formula $R$
+\end_inset
+
+ is not continuous, then it may not be represented by a function 
+\begin_inset Formula $u$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $x\leq x^{*},\ u(x)=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+(c) Describe a situation in which it is reasonable to assume that the set
+ of alternatives is 
+\begin_inset Formula $\mathbb{R}_{+}$
+\end_inset
+
+ and preferences are single peaked.
+\end_layout
+
+\begin_layout Proof
+Suppose that the set of alternatives is 
+\begin_inset Formula $\mathbb{R}_{+}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $R$
+\end_inset
+
+ be a preference on 
+\begin_inset Formula $\mathbb{R}_{+}$
+\end_inset
+
+ that is single peaked.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+(a) Show that if 
+\begin_inset Formula $R$
+\end_inset
+
+ is continuous, then it can be represented by a function 
+\begin_inset Formula $u$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $x\leq x^{*},\ u(x)=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Assume 
+\begin_inset Formula $R$
+\end_inset
+
+ is continuous.
+ Then, by Theorem 9 (Debreu's Representation Theorem), 
+\begin_inset Formula $R$
+\end_inset
+
+ has a continuous utility representation 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ Now, since 
+\begin_inset Formula $R$
+\end_inset
+
+ is single peaked at 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, then 
+\begin_inset Formula $\forall\ \left\{ x,y\right\} \subseteq\left[0,x^{*}\right]$
+\end_inset
+
+ such that 
+\begin_inset Formula $x<y\leq x^{*}$
+\end_inset
+
+, we have 
+\begin_inset Formula $y\ P\ x$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $v$
+\end_inset
+
+ represents 
+\begin_inset Formula $R$
+\end_inset
+
+, then 
+\begin_inset Formula $y\ P\ x\iff v(y)>v(x)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $ $
+\end_inset
+
+ Hence, 
+\begin_inset Formula $v(\cdot)$
+\end_inset
+
+ is monotonically equivalent to 
+\begin_inset Formula $x$
+\end_inset
+
+ on 
+\begin_inset Formula $\left[0,x^{*}\right]$
+\end_inset
+
+.
+ So, there is a monotone function 
+\begin_inset Formula $\varphi:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ x\in\left[0,x^{*}\right]:\varphi(v(x))=x$
+\end_inset
+
+.
+ Define the function 
+\begin_inset Formula $u$
+\end_inset
+
+ as follows: 
+\begin_inset Formula $\forall\ x\in\mathbb{R}_{+}:u(x)=\varphi(v(x))$
+\end_inset
+
+.
+ Thus, since 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is monotone, then by Proposition 2, 
+\begin_inset Formula $\forall\ x\in\left[0,x^{*}\right]:u(x)=\varphi(v(x))=x$
+\end_inset
+
+ represents 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+(b) Show that if 
+\begin_inset Formula $R$
+\end_inset
+
+ is not continuous, then it may not be represented by a function 
+\begin_inset Formula $u$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $x\leq x^{*},\ u(x)=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Assume 
+\begin_inset Formula $R$
+\end_inset
+
+ is not continuous.
+ Let 
+\begin_inset Formula $\succsim^{d}$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathbb{R}_{+}$
+\end_inset
+
+ be represented by the utility function:
+\begin_inset Formula 
+\[
+f(x)=\left\{ \begin{array}{cc}
+x & \mbox{if}\ x<1\\
+x+1 & \mbox{if}\ 1\leq x\leq2\\
+3-x & \mbox{if}\ 2\leq x<3\\
+2-x & \mbox{if}\ 3\leq x
+\end{array}\right.
+\]
+
+\end_inset
+
+Important to note, since 
+\begin_inset Formula $U(\succsim^{d},1)$
+\end_inset
+
+ is not closed, then 
+\begin_inset Formula $\succsim^{d}$
+\end_inset
+
+ is discontinuous.
+ Suppose for contradiction 
+\begin_inset Formula $\succsim^{d}$
+\end_inset
+
+ has a utility representation 
+\begin_inset Formula $u$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ x\in\left[0,x^{*}\right]:u(x)=x$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim^{d}$
+\end_inset
+
+, then it must be monotonically equivalent to 
+\begin_inset Formula $f$
+\end_inset
+
+ on 
+\begin_inset Formula $\left[0,x^{*}\right]$
+\end_inset
+
+.
+ So, there is a monotone function 
+\begin_inset Formula $\varphi:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ x\in\left[0,x^{*}\right]:\varphi(f(x))=u(x)$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $\forall\ z\in[0,1),\ \varphi(z)=z$
+\end_inset
+
+ and 
+\begin_inset Formula $\forall\ z\in[2,3],\ \varphi(z)=z-1$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\forall\ x\leq2:u(x)=\varphi(f(x))=x$
+\end_inset
+
+ and 
+\begin_inset Formula $\forall\ x\geq2,\ u(x)=\varphi(f(x))=4-x$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $u(x)$
+\end_inset
+
+ is continuous on 
+\begin_inset Formula $\mathbb{R}_{+}$
+\end_inset
+
+.
+ However, this contradicts the discontinuity of 
+\begin_inset Formula $\succsim^{d}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim^{d}$
+\end_inset
+
+ must not have any utility representation 
+\begin_inset Formula $u$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ x\in\left[0,x^{*}\right]:u(x)=x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+(c) Describe a situation in which it is reasonable to assume that the set
+ of alternatives is 
+\begin_inset Formula $\mathbb{R}_{+}$
+\end_inset
+
+ and preferences are single peaked.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+When comparing candidates for political office, it is reasonable to assume
+ the set of alternatives is 
+\begin_inset Formula $\mathbb{R}_{+}$
+\end_inset
+
+ and preferences are single peaked.
+ Many voters prefer a candidate that is more moderate to candidates that
+ reside on either extremes.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Also, eating is another situation in which it is reasonable to assume the
+ set of alternatives is 
+\begin_inset Formula $\mathbb{R}_{+}$
+\end_inset
+
+ and preferences are single peaked.
+ People prefer more food to less food up until the point where they have
+ completely satiated themselves.
+ After this point, more food is no longer ideal.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a continuous preference on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+.
+ Show that if 
+\begin_inset Formula $p\cdot y\geq p\cdot x$
+\end_inset
+
+, 
+\begin_inset Formula $x\succ y$
+\end_inset
+
+, and 
+\begin_inset Formula $y\succsim0$
+\end_inset
+
+, then there is 
+\begin_inset Formula $x^{\prime}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $p\cdot x^{\prime}<p\cdot y$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{\prime}\succ y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a continuous preference on 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\{x,y\}\subseteq X$
+\end_inset
+
+ and 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $p\cdot y\geq p\cdot x$
+\end_inset
+
+, 
+\begin_inset Formula $x\succ y$
+\end_inset
+
+, and 
+\begin_inset Formula $y\succsim0$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\exists\ x^{\prime}\in\mathbb{R}_{+}^{L}:p\cdot x^{\prime}<p\cdot y\ \wedge\ x^{\prime}\succ y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+By transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $x\succ y\succsim0\implies x\succ0$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $x\neq0$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $x\neq0$
+\end_inset
+
+, then 
+\begin_inset Formula $p\cdot x>0$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\exists\ x^{\prime}\in\mathbb{R}_{+}^{L}:p\cdot x^{\prime}<p\cdot y\ \wedge\ x^{\prime}\succ y$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x\succ y\implies x\in U(\succ,y)$
+\end_inset
+
+.
+ Now, by Corollary 1, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\forall\ y\in X$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succ,y)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succ,y)$
+\end_inset
+
+ are open in 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $U(\succ,y)$
+\end_inset
+
+ is open, then 
+\begin_inset Formula $\exists\ \alpha\in(0,1):\alpha x\in U(\succ,y)$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $x^{\prime}\equiv\alpha x$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x^{\prime}\in U(\succ,y)\implies x^{\prime}\succ y$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+, then 
+\begin_inset Formula $x^{\prime}\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $x\gneq x^{\prime}$
+\end_inset
+
+.
+ So, for 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+, 
+\begin_inset Formula $p\cdot x>p\cdot x^{\prime}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $p\cdot y\geq p\cdot x>p\cdot x^{\prime}$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $p\cdot y>p\cdot x^{\prime}$
+\end_inset
+
+.
+ Therefore, if 
+\begin_inset Formula $p\cdot y\geq p\cdot x$
+\end_inset
+
+, 
+\begin_inset Formula $x\succ y$
+\end_inset
+
+, and 
+\begin_inset Formula $y\succsim0$
+\end_inset
+
+, then there is 
+\begin_inset Formula $x^{\prime}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $p\cdot x^{\prime}<p\cdot y$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{\prime}\succ y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous rational preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Suppose that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is such that there is at least one strict preference statement, formally,
+ that there are 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x\succ y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+(a) Is there a discontinuous utility representation of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+? Justify your answer.
+\end_layout
+
+\begin_layout Problem
+(b) Would your answer change if we do not assume that there is at least
+ one strict preference statement? Justify your answer.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous rational preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is such that there is at least one strict preference statement, i.e., 
+\begin_inset Formula $\exists\ \{x,y\}\subseteq\mathbb{R}_{+}^{L}:x\succ y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+(a) Yes, a discontinuous utility function can represent a continuous preference.
+ For example, since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous and monotone, then by Theorem 8, there exists a continuous
+ function 
+\begin_inset Formula $v:X\rightarrow\mathbb{R}$
+\end_inset
+
+ that represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ By assumption, 
+\begin_inset Formula $\exists\ \{x,y\}\subseteq\mathbb{R}_{+}^{L}:x\succ y$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x^{*}\equiv x$
+\end_inset
+
+.
+ Now, define the function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ as follows:
+\begin_inset Formula 
+\[
+u(x)\equiv\begin{cases}
+v(x) & \mbox{if}\ v(x)<v(x^{*})\\
+v(x)+10 & \mbox{if}\ v(x)\geq v(x^{*})
+\end{cases}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $v$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then it can be shown that 
+\begin_inset Formula $u$
+\end_inset
+
+ does as well, but 
+\begin_inset Formula $u$
+\end_inset
+
+ has a jump discontinuity.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+(b) Yes, my answer would change if we didn't have at least one strict preference
+ statement.
+ For example, if 
+\begin_inset Formula $\forall\ \{x,x^{\prime}\}\subseteq X:x\sim x^{\prime}$
+\end_inset
+
+, then the function that represents this preference must be constant, and
+ a discontinuity cannot exist.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}.$
+\end_inset
+
+ Prove that if 
+\begin_inset Formula $x\ge y$
+\end_inset
+
+, then 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference relation on 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $x\geq y$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Suppose for contradiction 
+\begin_inset Formula $y\succ x$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $x\in L(\succ,y)$
+\end_inset
+
+.
+ By monotonicity and continuity, 
+\begin_inset Formula $y\succ x\implies y\neq0$
+\end_inset
+
+.
+ Now, by Corollary 1, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous if and only if 
+\begin_inset Formula $\forall\ y\in X$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succ,y)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succ,y)$
+\end_inset
+
+ are open in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ By the definition of open sets, 
+\begin_inset Formula $\exists\ \varepsilon>0:B_{\varepsilon}^{X}(x)\subseteq L(\succ,y)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\tau\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ l=1,\ldots,L,\ \tau_{l}=1$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $\hat{x}\equiv x+\frac{\epsilon}{2}\tau$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $\hat{x}\in B_{\epsilon}^{X}(x)\subseteq L(\succ,y)\implies x\in L(\succ,y)$
+\end_inset
+
+.
+ So, we have 
+\begin_inset Formula $y\succ\hat{x}$
+\end_inset
+
+.
+ In addition, 
+\begin_inset Formula $\hat{x}\gg x\geq y\implies\hat{x}\gg y$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is monotone, then 
+\begin_inset Formula $\hat{x}\gg y\implies\hat{x}\succ y$
+\end_inset
+
+.
+ But, 
+\begin_inset Formula $ $
+\end_inset
+
+this contradicts the fact that 
+\begin_inset Formula $y\succ\hat{x}$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a continuous preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\{x,y,z\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ be such that 
+\begin_inset Formula $x\succsim y\succ z$
+\end_inset
+
+.
+ Prove that there is 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+ such that 
+\begin_inset Formula $\alpha x+(1-\alpha)z\sim y$
+\end_inset
+
+.
+ Prove that under further conditions that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is strictly convex and 
+\begin_inset Formula $x\succ y\succ z$
+\end_inset
+
+, then 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is unique.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a continuous preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\{x,y,z\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ be such that 
+\begin_inset Formula $x\succsim y\succ z$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+We want to show that 
+\begin_inset Formula $\exists\ \alpha\in(0,1):\alpha x+(1-\alpha)z\sim y$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous, then there is a continuous function 
+\begin_inset Formula $u:\mathbb{R}_{+}^{L}\rightarrow\mathbb{R}$
+\end_inset
+
+ representing 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $x\succsim y\succ z\iff u(x)\geq u(y)>u(z)$
+\end_inset
+
+.
+ Define the function 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ as follows:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+\varphi: & [0,1] & \rightarrow & \mathbb{R}\\
+ & \alpha & \rightarrow & \varphi(\alpha)\equiv u(\alpha x+(1-\alpha)z)-u(y)
+\end{array}
+\]
+
+\end_inset
+
+Note, since 
+\begin_inset Formula $u$
+\end_inset
+
+ is continuous, then 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is continuous.
+ Also, 
+\begin_inset Formula $\varphi(0)=u(z)-u(y)<0$
+\end_inset
+
+ and 
+\begin_inset Formula $\varphi(1)=u(x)-u(y)\geq0$
+\end_inset
+
+.
+ So, by the Intermediate Value Theorem (IVT), 
+\begin_inset Formula $\exists\ \alpha^{*}\in(0,1):\varphi(\alpha^{*})=0$
+\end_inset
+
+, .i.e., 
+\begin_inset Formula $u(\alpha^{*}x+(1-\alpha^{*})z)=u(y)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\exists\ \alpha\in(0,1):\alpha x+(1-\alpha)z\sim y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Moving on, assume further that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is strictly covex and 
+\begin_inset Formula $x\succ y\succ z$
+\end_inset
+
+.
+ We want to show that the 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ we found is unique.
+ Suppose for contradiction 
+\begin_inset Formula $\exists\ \{\alpha,\alpha^{\prime}\}\subseteq(0,1):\alpha\neq\alpha^{\prime}$
+\end_inset
+
+.
+ We now have that 
+\begin_inset Formula $\alpha x+(1-\alpha)z\sim y\sim\alpha^{\prime}x+(1-\alpha^{\prime})z$
+\end_inset
+
+.
+ Without loss of generality, let 
+\begin_inset Formula $\alpha>\alpha^{\prime}$
+\end_inset
+
+.
+ To simplify the expressions, let 
+\begin_inset Formula $t=\alpha x+(1-\alpha)z$
+\end_inset
+
+ and 
+\begin_inset Formula $t^{\prime}=\alpha^{\prime}x+(1-\alpha^{\prime})z$
+\end_inset
+
+, and note that 
+\begin_inset Formula $t\sim t^{\prime}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\{x,t^{\prime}\}\subseteq U(\succsim,t)$
+\end_inset
+
+, then by the strict convexity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $\forall\ \gamma\in(0,1):\gamma x+(1-\gamma)t^{\prime}\succ t$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\gamma x+(1-\gamma)[\alpha^{\prime}x+(1-\alpha^{\prime})z]\succ t$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\hat{t}=[\gamma+\alpha^{\prime}(1-\gamma)]x+(1-\gamma)(1-\alpha^{\prime})z$
+\end_inset
+
+, and note that 
+\begin_inset Formula $\forall\ \gamma\in(0,1):\hat{t}\succ t$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\tilde{\gamma}=\frac{\alpha-\alpha^{\prime}}{1-\alpha^{\prime}}$
+\end_inset
+
+, and note that 
+\begin_inset Formula $1>\alpha>\alpha^{\prime}>0\iff0<\gamma<1$
+\end_inset
+
+.
+ Plugging 
+\begin_inset Formula $\tilde{\gamma}$
+\end_inset
+
+ into 
+\begin_inset Formula $\hat{t}$
+\end_inset
+
+ we get 
+\begin_inset Formula $\hat{t}=t$
+\end_inset
+
+, but this contradicts 
+\begin_inset Formula $\hat{t}\succ t\ (\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ must be unique.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+, and 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ be such that 
+\begin_inset Formula $0<p\cdot x\leq p\cdot y$
+\end_inset
+
+ and 
+\begin_inset Formula $x\succ y$
+\end_inset
+
+.
+ Prove that there is 
+\begin_inset Formula $x^{\prime}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $p\cdot x^{\prime}<p\cdot x$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{\prime}\succ y$
+\end_inset
+
+.
+ (The monotonicity assumption is not necessary to complete this proof, so
+ we will not use it.)
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a continuous preference relation on 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+, and 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ be such that 
+\begin_inset Formula $0<p\cdot x\leq p\cdot y$
+\end_inset
+
+ and 
+\begin_inset Formula $x\succ y$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\exists\ x^{\prime}\in\mathbb{R}_{+}^{L}:p\cdot x^{\prime}<p\cdot x\ \wedge\ x^{\prime}\succ y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Since 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $p\cdot x>0$
+\end_inset
+
+, then 
+\begin_inset Formula $x\neq0$
+\end_inset
+
+.
+ Also, since 
+\begin_inset Formula $x\succ y$
+\end_inset
+
+, then 
+\begin_inset Formula $x\in U(\succ,y)$
+\end_inset
+
+.
+ Now, by Corollary 1, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous if and only if 
+\begin_inset Formula $\forall\ y\in X$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succ,y)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succ,y)$
+\end_inset
+
+ are open in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $U(\succ,y)$
+\end_inset
+
+ is open, then 
+\begin_inset Formula $\exists\ \alpha\in(0,1):\alpha x\in U(\succ,y)$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $x^{\prime}\equiv\alpha x$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x^{\prime}\in U(\succ,y)\implies x^{\prime}\succ y$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+, then 
+\begin_inset Formula $x^{\prime}\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $x\gneq x^{\prime}$
+\end_inset
+
+.
+ So, for 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $p\cdot x>p\cdot x^{\prime}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ Therefore, there is 
+\begin_inset Formula $x^{\prime}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $p\cdot x^{\prime}<p\cdot x$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{\prime}\succ y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+, and 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ be such that 
+\begin_inset Formula $p\cdot x<p\cdot y$
+\end_inset
+
+ and 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+.
+ Prove that there is 
+\begin_inset Formula $x^{\prime}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $p\cdot x^{\prime}<p\cdot y$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{\prime}\succ y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+, and 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ be such that 
+\begin_inset Formula $p\cdot x<p\cdot y$
+\end_inset
+
+ and 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\exists\ x^{\prime}\in\mathbb{R}_{+}^{L}:p\cdot x^{\prime}<p\cdot y\ \wedge\ x^{\prime}\succ y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Since 
+\begin_inset Formula $p\cdot x<p\cdot y$
+\end_inset
+
+ and 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+, then 
+\begin_inset Formula $0<p\cdot y$
+\end_inset
+
+.
+ Important to note, 
+\begin_inset Formula $\{(p\cdot x),(p\cdot y)\}\subseteq\mathbb{R}_{+}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\tau\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ l=1,\ldots L:\tau_{l}=1$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\alpha\approx0$
+\end_inset
+
+.
+ Now, since the set of real numbers is complete, then 
+\begin_inset Formula $p\cdot x<p\cdot y\implies p\cdot x<p\cdot(x+\alpha\tau)<p\cdot y$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $x^{\prime}\equiv x+\alpha\tau$
+\end_inset
+
+.
+ By monotonicty of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $x^{\prime}\gg x\implies x^{\prime}\succ x$
+\end_inset
+
+.
+ By transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $x^{\prime}\succ x\succsim y\implies x^{\prime}\succ y$
+\end_inset
+
+.
+ Thus, there is 
+\begin_inset Formula $x^{\prime}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $p\cdot x^{\prime}<p\cdot y$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{\prime}\succ y$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

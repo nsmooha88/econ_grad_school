@@ -1,0 +1,1930 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 3: Consumer Theory
+\end_layout
+
+\begin_layout Standard
+Need to complete: Corollary 8, Proposition 34, Proposition 36
+\end_layout
+
+\begin_layout Section*
+3.6
+\begin_inset space \quad{}
+\end_inset
+
+Welfare evaluation of price changes
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Up to this point, we have studied the preference-based theory of consumer
+ demand from a positive (behavioral) perspective.
+ In this section, we present the normative side of consumer theory, called
+ 
+\emph on
+welfare analysis
+\emph default
+.
+ Welfare analysis concerns itself with the evaluaiton of the effects of
+ changes in the consumer's environment on her well-being.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We investigate the ranking of price-wealth combinations by an agent who
+ is a preference maximizer.
+ We assume that we only know the agent's choices in the form of a demand
+ function.
+ In principle, we could reconstruct a utility function that generates the
+ agent's demand (this is implicit in the proof of the Integrability Theorem).
+ We follow an alternative approach that turns out to be simpler.
+ We concentrate on the ranking of the particular situations of interest,
+ i.e., the ranking of the agent's choices at two price-wealth combinations,
+ say 
+\begin_inset Formula $(p,w)$
+\end_inset
+
+ and 
+\begin_inset Formula $(p^{\prime},w^{\prime})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For the sake of simplicity in the presentation, we focus on the welfare
+ effect of a price change, so we analyze the ranking of price-wealth combination
+s that differ only in their price vector.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+We do not consider changes that affect wealth here.
+ However, the analysis readily extends to that case.
+\end_layout
+
+\end_inset
+
+ We assume that the consumer has a fixed wealth level 
+\begin_inset Formula $w>0$
+\end_inset
+
+ and the price vector is initially 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ We wish to evaluate the impact on the consumer's welfare of a change from
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ to a new price vector 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Although any indirect utility function derived from preferences suffices
+ for making comparisons between 
+\begin_inset Formula $(p,w)$
+\end_inset
+
+ and 
+\begin_inset Formula $(p^{\prime},w)$
+\end_inset
+
+, one class of indirect utility functions deserves special mention because
+ it leads to measurement of the welfare change expressed in dollar units.
+ These are called 
+\emph on
+money metric
+\emph default
+ indirect utility functions and are constructed by means of the expenditure
+ function.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(85).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated continuous preference.
+ Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+.
+ The 
+\series bold
+money metric representation of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $p$
+\end_inset
+
+
+\series default
+ is the function, denoted 
+\begin_inset Formula $m_{p}$
+\end_inset
+
+, defined by:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+m_{p}: & \mathbb{R}_{+}^{L} & \rightarrow & \mathbb{R}\\
+ & x & \mapsto & m_{p}(x)\equiv{\displaystyle \min_{y\geq0,y\succsim x}}\ p\cdot y
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\emph on
+(30).
+
+\series default
+ 
+\emph default
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference relation.
+ Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+.
+ Then, the money metric representation of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $p$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+The proof of this proposition is given by Problem 11, Section 3.3.3 and Problem
+ 2, Section 3.5.9.
+\end_layout
+
+\begin_layout Remark*
+Here, and in the rest of this section, it would suffice to assume that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is locally non-satiated, continuous, and such that for each 
+\begin_inset Formula $x\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $x\succsim0$
+\end_inset
+
+.
+ We also assume, whenever convenient, that the consumer's expenditure and
+ indirect utility functions are differentiable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A money metric indirect utility function can be constructed in the manner
+ presented by Definition 85 for any price vector 
+\begin_inset Formula $\bar{p}\gg0$
+\end_inset
+
+.
+ Two particularly natural choices for the price vector 
+\begin_inset Formula $\bar{p}$
+\end_inset
+
+ are the initial price vector 
+\begin_inset Formula $p$
+\end_inset
+
+ and the new price vector 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+.
+ These choices lead to two well-known measures of welfare change, the 
+\emph on
+equivalent variation
+\emph default
+ 
+\begin_inset Formula $(EV)$
+\end_inset
+
+ and the 
+\emph on
+compensating variation 
+\emph default
+
+\begin_inset Formula $(CV)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(86).
+
+\series default
+ 
+\emph on
+The 
+\series bold
+equivalent variation of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ from 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ to 
+\begin_inset Formula $p^{\prime}\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ at wealth level 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+
+\series default
+ is:
+\begin_inset Formula 
+\begin{eqnarray*}
+EV^{\succsim}(p,p^{\prime},w) & \equiv & m_{p}(x(p^{\prime},w))-m_{p}(x(p,w))\\
+ & = & e(p,x(p^{\prime},w))-e(p,x(p,w))\\
+ & = & e(p,x(p^{\prime},w))-w
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The equivalent variation uses 
+\begin_inset Formula $p$
+\end_inset
+
+ as the reference point for the money metric representation.
+ The 
+\begin_inset Formula $EV$
+\end_inset
+
+ can be thought of as the dollar amount that the consumer would be indifferent
+ about accepting in lieu of the price change; that is, it is the change
+ in her wealth that would be 
+\emph on
+equivalent
+\emph default
+ to the price change in terms of its welfare impact (so it is negative if
+ the price change would make the consumer worse off).
+ In particular, note that 
+\begin_inset Formula $e(p,x(p^{\prime},w))$
+\end_inset
+
+ is the wealth level at which the consumer achieves indifference to 
+\begin_inset Formula $x(p^{\prime},w)$
+\end_inset
+
+, the level generated by the price change, at prices 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $e(p,x(p^{\prime},w))-w$
+\end_inset
+
+ is the net change in wealth that causes the consumer to be indifferent
+ to 
+\begin_inset Formula $x(p^{\prime},w)$
+\end_inset
+
+ at prices 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ We can also express the equivalent variation using the indirect utility
+ funciton in the following way: 
+\begin_inset Formula $V^{u}(p,w+EV)=u(x(p^{\prime},w))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(87).
+
+\series default
+\emph on
+ The 
+\series bold
+compensating variation of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ from 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ to 
+\begin_inset Formula $p^{\prime}\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ at wealth level 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+
+\series default
+ is:
+\begin_inset Formula 
+\begin{eqnarray*}
+CV^{\succsim}(p,p^{\prime},w) & \equiv & m_{p^{\prime}}(x(p^{\prime},w))-m_{p^{\prime}}(x(p,w))\\
+ & = & e(p^{\prime},x(p^{\prime},w))-e(p^{\prime},x(p,w))\\
+ & = & w-e(p^{\prime},x(p,w))
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The compensating variation uses 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+ as the reference point for the money metric representation.
+ The 
+\begin_inset Formula $CV$
+\end_inset
+
+ measures the net revenue of a planner who must 
+\emph on
+compensate
+\emph default
+ the consumer for the price change after it occurs, making her indifferent
+ to her original bundle 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+.
+ (Hence, the compensating variation is negative if the planner would have
+ to pay the consumer a positive level of compensation because the price
+ change makers her worse off.) It can be thought of as the negative of the
+ amount that the consumer would be just willing to accept from the planner
+ to allow the price change to happen.
+ The compensating variation can be expressed in the following way: 
+\begin_inset Formula $V^{u}(p^{\prime},w-CV)=u(x(p,w))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(31).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference whose associated demand correspondence
+ is single-valued.
+ Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be the associated demand function.
+ Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Then, for each 
+\begin_inset Formula $p^{\prime}\gg0$
+\end_inset
+
+, the following three statements are equivalent:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $x(p^{\prime},w)\succsim x(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $EV^{\succsim}(p,p^{\prime},w)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $CV^{\succsim}(p,p^{\prime},w)\geq0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+The proof of this proposition is given by Problem 3, Section 3.5.9.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Because both the 
+\begin_inset Formula $EV$
+\end_inset
+
+ and the 
+\begin_inset Formula $CV$
+\end_inset
+
+ correspond to measurements of the changes in a money metric indirect utility
+ function, both provide a correct welfare ranking of the alternatives 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+; that is, the consumer is better off under 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+ if and only if these measures are positive.
+ In general however, the specific dollar amounts calculated using the EV
+ and CV measures will differ because of the differing price vectors at which
+ compensation is assumed to occur in these two measures of welfare change.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The equivalent and compensating variations have interesting representations
+ in terms of the Hicksian demand curve.
+ Suppose, for simplicity, that only the price of good 
+\begin_inset Formula $l$
+\end_inset
+
+ changes, so that 
+\begin_inset Formula $p_{l}\neq p_{l}^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{-l}=p_{-l}^{\prime}=\bar{p}_{-l}$
+\end_inset
+
+.
+ For each 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $t\in\mathbb{R}_{+}$
+\end_inset
+
+, let 
+\begin_inset Formula $(p_{-l},t)$
+\end_inset
+
+ be the vector obtained by replacing 
+\begin_inset Formula $p_{l}$
+\end_inset
+
+ in 
+\begin_inset Formula $p$
+\end_inset
+
+ by 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(32).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference whose associated choice correspondence
+ is single-valued.
+ Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Then, for each 
+\begin_inset Formula $t\in\mathbb{R}_{++}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+EV^{\succsim}(p,(p_{-l},t),w)=\mbox{sign}(p_{l}-t){\displaystyle \int_{\min\{t,p_{l}\}}^{\max\{t,p_{l}\}}}h_{l}((p_{-l},\tau),x((p_{-l},t),w))\ d\tau
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\shape up
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference whose associated choice correspondence
+ is single-valued.
+ Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $t\in\mathbb{R}_{++}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+EV^{\succsim}(p,(p_{-l},t),w) & = & m_{p}(x((p_{-l},t),w))-m_{p}(x(p,w))\\
+ & = & m_{p}(x((p_{-l},t),w))-w\\
+ & = & e(p,x((p_{-l},t),w))-e((p_{-l},t),x((p_{-l},t),w))\\
+ & = & e((p_{-l},p_{l}),x((p_{-l},t),w))-e((p_{-l},t),x((p_{-l},t),w))
+\end{eqnarray*}
+
+\end_inset
+
+Let 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ be the function defined by:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+\varphi: & \mathbb{R}_{+} & \rightarrow & \mathbb{R}\\
+ & \tau & \mapsto & \varphi(\tau)\equiv e((p_{-l},\tau),x((p_{-l},t),w))
+\end{array}
+\]
+
+\end_inset
+
+By the Fundamental Theorem of Calculus,
+\begin_inset Formula 
+\[
+\varphi(p_{l})-\varphi(t)=\mbox{sign}(p_{l}-t){\displaystyle \int_{\min\{t,p_{l}\}}^{\max\{t,p_{l}\}}}\frac{d\varphi(\tau)}{d\tau}\ d\tau
+\]
+
+\end_inset
+
+Since for each 
+\begin_inset Formula $\tau\in\mathbb{R}_{++}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\frac{d\varphi(\tau)}{d\tau}=\frac{\partial e((p_{-l},\tau),x((p_{-l},t),w))}{\partial p_{l}}=h_{l}((p_{-l},\tau),x((p_{-l},t),w))
+\]
+
+\end_inset
+
+then
+\begin_inset Formula 
+\[
+EV^{\succsim}(p,(p_{-l},t),w)=\mbox{sign}(p_{l}-t){\displaystyle \int_{\min\{t,p_{l}\}}^{\max\{t,p_{l}\}}}h_{l}((p_{-l},\tau),x((p_{-l},t),w))\ d\tau
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, the change in consumer welfare as measured by the equivalent variation
+ can be represented by the area lying between 
+\begin_inset Formula $p_{l}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{l}^{\prime}$
+\end_inset
+
+ and to the left of the Hicksian demand curve for good 
+\begin_inset Formula $l$
+\end_inset
+
+ associated with the utility level of 
+\begin_inset Formula $x(p^{\prime},w)$
+\end_inset
+
+ (it is equal to this area if 
+\begin_inset Formula $p_{l}^{\prime}<p_{l}$
+\end_inset
+
+ and is equal to its negative if 
+\begin_inset Formula $p_{l}^{\prime}>p_{l}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Corollary*
+
+\series bold
+\shape up
+(8).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference whose associated choice correspondence
+ is single-valued.
+ Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Then, for each 
+\begin_inset Formula $p^{\prime}\gg0$
+\end_inset
+
+, 
+\begin_inset Formula $EV^{\succsim}(p,p^{\prime},w)$
+\end_inset
+
+ is equal to
+\begin_inset Formula 
+\[
+EV^{\succsim}(p,p^{\prime},w)={\displaystyle \sum_{l=1}^{L}}\mbox{sign}(p_{l}-p_{l}^{\prime})\Phi(l)
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+\Phi(l)\equiv{\displaystyle \intop_{\min\{p_{l},p_{l}^{\prime}\}}^{\max\{p_{l},p_{l}^{\prime}\}}}h_{l}\left((p_{-\{1,\ldots,l\}},p_{\{1,\ldots,l-1\}}^{\prime},\tau),x((p_{-\{1,\ldots,l\},}p_{\{1,\ldots,l\}}^{\prime}),w)\right)\ d\tau
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Will prove.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Similarly, the compensating variation can be written in a similar manner.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(33).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference whose associated choice correspondence
+ is single-valued.
+ Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Then, for each 
+\begin_inset Formula $t\in\mathbb{R}_{++}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+CV^{\succsim}(p,(p_{-l},t),w)={\displaystyle \int_{t}^{p_{l}}}h_{l}((p_{-l},\tau),x(p,w))\ d\tau
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\shape up
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference whose associated choice correspondence
+ is single-valued.
+ Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $t\in\mathbb{R}_{++}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+CV^{\succsim}(p,(p_{-l},t),w) & = & m_{(p_{-l},t)}(x((p_{-l},t),w))-m_{(p_{-l},t)}(x(p,w))\\
+ & = & w-m_{(p_{-l},t)}(x(p,w))\\
+ & = & e(p,x(p,w))-e((p_{-l},t),x(p,w))\\
+ & = & e((p_{-l},p_{l}),x(p,w))-e((p_{-l},t),x(p,w))
+\end{eqnarray*}
+
+\end_inset
+
+Let 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ be the function defined by:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+\varphi: & \mathbb{R}_{+} & \rightarrow & \mathbb{R}\\
+ & \tau & \mapsto & \varphi(\tau)\equiv e((p_{-l},\tau),x(p,w))
+\end{array}
+\]
+
+\end_inset
+
+By the Fundamental Theorem of Calculus,
+\begin_inset Formula 
+\[
+\varphi(p_{l})-\varphi(t)={\displaystyle \int_{t}^{p_{l}}}\frac{d\varphi(\tau)}{d\tau}\ d\tau
+\]
+
+\end_inset
+
+Since for each 
+\begin_inset Formula $\tau\in\mathbb{R}_{++}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\frac{d\varphi(\tau)}{d\tau}=\frac{\partial e((p_{-l},\tau),x(p,w))}{\partial p_{l}}=h_{l}((p_{-l},\tau),x(p,w))
+\]
+
+\end_inset
+
+then
+\begin_inset Formula 
+\[
+CV^{\succsim}(p,(p_{-l},t),w)={\displaystyle \int_{t}^{p_{l}}}h_{l}((p_{-l},\tau),x(p,w))\ d\tau
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that we now use the initial utility level of 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When good 
+\begin_inset Formula $l$
+\end_inset
+
+ is a normal good, we have 
+\begin_inset Formula $EV(p,p^{\prime},w)>CV(p,p^{\prime},w)$
+\end_inset
+
+.
+ This relation between the 
+\begin_inset Formula $EV$
+\end_inset
+
+and that 
+\begin_inset Formula $CV$
+\end_inset
+
+ reverses when good 
+\begin_inset Formula $l$
+\end_inset
+
+ is inferior.
+ However, if there is no wealth effect for good 
+\begin_inset Formula $l$
+\end_inset
+
+ (e.g., if the underlying preferences are quasilinear with respect to some
+ good 
+\begin_inset Formula $k\neq l$
+\end_inset
+
+), the 
+\begin_inset Formula $CV$
+\end_inset
+
+and 
+\begin_inset Formula $EV$
+\end_inset
+
+ measures are the 
+\emph on
+same
+\emph default
+ because then we have
+\begin_inset Formula 
+\[
+h_{l}(p_{l},\bar{p}_{-l},x(p,w))=x_{l}(p_{l},\bar{p}_{-l},w)=h_{l}(p_{l},\bar{p}_{-l},x(p^{\prime},w))
+\]
+
+\end_inset
+
+In this case of no wealth effects, we call the common value of 
+\begin_inset Formula $CV$
+\end_inset
+
+ and 
+\begin_inset Formula $EV$
+\end_inset
+
+, which is also the value of the area lying between 
+\begin_inset Formula $p_{l}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{l}^{\prime}$
+\end_inset
+
+ and to the left of the market (i.e., Walrasian) demand curve for good 
+\begin_inset Formula $l$
+\end_inset
+
+, the change in 
+\emph on
+Marshallian consumer surplus
+\emph default
+.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(34).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference on 
+\begin_inset Formula $\mathbb{R}\times\mathbb{R}_{+}^{L-1}$
+\end_inset
+
+ that is quasi-linear with respect to commodtiy 
+\begin_inset Formula $k$
+\end_inset
+
+ and whose associated demand correspondence is single-valued.
+ Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be the associated demand function.
+ 
+\begin_inset Formula $Let$
+\end_inset
+
+ 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Then, for each 
+\begin_inset Formula $t\in\mathbb{R}_{++}$
+\end_inset
+
+ and each 
+\begin_inset Formula $l\neq k$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+EV^{\succsim}(p,(p_{-l},t),w)=CV^{\succsim}(p,(p_{-l},t),w)={\displaystyle \int_{t}^{p_{l}}}x_{l}((p_{-l},\tau),w)\ d\tau
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+See Problem 7, Section 3.5.7.
+ Will prove.
+\end_layout
+
+\begin_layout Subsection*
+3.6.1
+\begin_inset space \quad{}
+\end_inset
+
+Welfare evaluation of price-wealth changes in a partial equilibrium environment
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference on 
+\begin_inset Formula $\mathbb{R}\times\mathbb{R}_{+}^{L-1}$
+\end_inset
+
+ that is quasi-linear with respect to commodity 
+\begin_inset Formula $k$
+\end_inset
+
+ and whose associated demand correspondence is single-valued.
+ Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be the associated demand function.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(88).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $l\neq k$
+\end_inset
+
+.
+ The 
+\series bold
+Marshallian demand for good 
+\begin_inset Formula $l$
+\end_inset
+
+
+\series default
+ is the function, denoted 
+\begin_inset Formula $x_{l}^{M}$
+\end_inset
+
+, defined by:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+x_{l}^{M}: & \mathbb{R}_{++}^{L} & \rightarrow & \mathbb{R}_{+}^{L}\\
+ & p & \mapsto & x_{l}^{M}(p)\equiv x_{l}(p,w)\ \mbox{for some}\ w\in\mathbb{R}_{++}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(35).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $l\neq k$
+\end_inset
+
+.
+ Then the Marshallian demand for good 
+\begin_inset Formula $l$
+\end_inset
+
+ is well defined, i.e., 
+\begin_inset Formula $\forall\ p\gg0,\ \forall\ \{w,w^{\prime}\}\subseteq\mathbb{R}_{++}:x_{l}(p,w)=x_{l}(p,w^{\prime})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+The proof of this proposition is given by Problem 7, Section 3.5.7.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(89).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ For each 
+\begin_inset Formula $l\neq k$
+\end_inset
+
+ the 
+\series bold
+Marshallian consumer surplus
+\series default
+ induced by a change in price of commodity 
+\begin_inset Formula $l$
+\end_inset
+
+ from 
+\begin_inset Formula $p_{l}$
+\end_inset
+
+ to 
+\begin_inset Formula $p_{l}^{\prime}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+MCS_{l}^{\succsim}(p,p_{l}^{\prime})\equiv{\displaystyle \int_{p_{l}^{\prime}}^{p_{l}}}x_{l}^{M}(p_{-l},\tau)\ d\tau
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(36).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $l\neq k$
+\end_inset
+
+.
+ Then, for each 
+\begin_inset Formula $p_{l}^{\prime}\in\mathbb{R}_{++}$
+\end_inset
+
+ and each 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+x(p,w)\succsim x((p_{-l},p_{l}^{\prime}),w)\iff MCS_{l}^{\succsim}(p,p_{-l})\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Will prove.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In summary, if we know the consumer's expenditure function, we can precisely
+ measure the welfare impact of a price change; moreover, we can do it in
+ a convenient way (in dollars).
+\end_layout
+
+\begin_layout Section*
+3.7
+\begin_inset space \quad{}
+\end_inset
+
+Problems
+\end_layout
+
+\begin_layout Problem
+Prove Corollary 8.
+\end_layout
+
+\begin_layout Proof
+The proof can be found in Section 3.6.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference whose associated choice correspondence
+ is single-valued.
+ Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Prove that for each 
+\begin_inset Formula $p^{\prime}\gg0$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+EV^{\succsim}(p,p^{\prime},w)={\displaystyle \sum_{l=1}^{L}}(p_{l}-p_{l}^{\prime}){\displaystyle \intop_{0}^{1}}\ h_{l}\left(\alpha p+(1-\alpha)p^{\prime},x(p^{\prime},w)\right)\ d\alpha
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference whose associated choice correspondence
+ is single-valued.
+ Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $p^{\prime}\gg0$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+EV^{\succsim}(p,p^{\prime},w) & = & m_{p}(x(p^{\prime},w))-m_{p}(x(p,w))\\
+ & = & m_{p}(x(p^{\prime},w))-w\\
+ & = & e(p,x(p^{\prime},w))-e(p^{\prime},x(p^{\prime},w))
+\end{eqnarray*}
+
+\end_inset
+
+
+\shape up
+Let 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ be the function defined by:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+\varphi: & [0,1] & \rightarrow & \mathbb{R}\\
+ & \alpha & \mapsto & \varphi(\alpha)\equiv e(\alpha p+(1-\alpha)p^{\prime},x(p^{\prime},w))
+\end{array}
+\]
+
+\end_inset
+
+By the Fundamental Theorem of Calculus,
+\begin_inset Formula 
+\[
+\varphi(1)-\varphi(0)={\displaystyle \intop_{0}^{1}}\ D_{\alpha}\varphi(\alpha)\ d\alpha
+\]
+
+\end_inset
+
+Since for each 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+, then by the Chain Rule
+\begin_inset Formula 
+\begin{eqnarray*}
+D_{\alpha}\varphi(\alpha) & = & D_{p}e(\alpha p+(1-\alpha)p^{\prime},x(p^{\prime},w))\frac{\partial p(\alpha)}{\partial\alpha}\\
+ & = & h(\alpha p+(1-\alpha)p^{\prime},x(p^{\prime},w))^{T}(p-p^{\prime})\\
+ & = & {\displaystyle \sum_{l=1}^{L}}h_{l}(\alpha p+(1-\alpha)p^{\prime},x(p^{\prime},w))(p_{l}-p_{l}^{\prime})
+\end{eqnarray*}
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\begin{eqnarray*}
+EV^{\succsim}(p,p^{\prime},w) & = & \intop_{0}^{1}{\displaystyle \sum_{l=1}^{L}}h_{l}(\alpha p+(1-\alpha)p^{\prime},x(p^{\prime},w))(p_{l}-p_{l}^{\prime})\ d\alpha\\
+ & = & {\displaystyle \sum_{l=1}^{L}}(p_{l}-p_{l}^{\prime}){\displaystyle \intop_{0}^{1}}\ h_{l}\left(\alpha p+(1-\alpha)p^{\prime},x(p^{\prime},w)\right)\ d\alpha
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Consider the Cobb-Douglas preference 
+\begin_inset Formula $U(x_{1},x_{2})=x_{1}^{\alpha}x_{2}^{1-\alpha}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calculate the demand function associated with this preference (
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+ that maximizes preferences in budget set 
+\begin_inset Formula $B(p,w)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+Calculate the Hicksian demand function associated with this preference (
+\begin_inset Formula $h(p,\tilde{x})$
+\end_inset
+
+ that minimizes expenditure at prices 
+\begin_inset Formula $p$
+\end_inset
+
+ among all bundles that are at least good as 
+\begin_inset Formula $\tilde{x}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+Recall that the equivalent variation from 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{2}$
+\end_inset
+
+ to 
+\begin_inset Formula $p^{\prime}\in\mathbb{R}_{++}^{2}$
+\end_inset
+
+ for 
+\begin_inset Formula $U$
+\end_inset
+
+ at wealth level 
+\begin_inset Formula $w$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+EV(p,p^{\prime},w)=e(p,x(p^{\prime},w))-e(p,x(p,w))
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $e$
+\end_inset
+
+ is the expenditure function for preference 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ Prove that for 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\tilde{p}_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+EV^{\succsim}((p_{1},p_{2}),(\tilde{p}_{1},p_{2}),w)=(p_{1}-\tilde{p}_{1}){\displaystyle \intop_{0}^{1}}\ h_{1}\left((\theta p_{1}+(1-\theta)\tilde{p}_{1},p_{2}),x(\tilde{p}_{1},p_{2},w)\right)\ d\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Verify that (c) holds for a Cobb-Douglas preference.
+ (Here, you have to calculate 
+\begin_inset Formula $EV$
+\end_inset
+
+ from its definition and verify that it is equal to the right side of (c).)
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Consider the Cobb-Douglas preference 
+\begin_inset Formula $U(x_{1},x_{2})=x_{1}^{\alpha}x_{2}^{1-\alpha}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part A
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Since preferences are Cobb-Douglas, then they are monotone.
+ Hence, preferences are locally non-satiated, so Walras' law is holds, i.e.,
+\begin_inset Formula 
+\[
+p_{1}x_{1}+p_{2}x_{2}=w
+\]
+
+\end_inset
+
+We wish to find the demand function associated with this preference, i.e.,
+\begin_inset Formula 
+\[
+x(p,w)\equiv\arg{\displaystyle \max_{x\in B(p,w)}}\ x_{1}^{\alpha}x_{2}^{1-\alpha}
+\]
+
+\end_inset
+
+The Lagrangian of the utility maximization problem is
+\begin_inset Formula 
+\[
+L=x_{1}^{\alpha}x_{2}^{1-\alpha}+\lambda(w-p_{1}x_{1}-p_{2}x_{2})
+\]
+
+\end_inset
+
+and the first-order conditions are
+\begin_inset Formula 
+\begin{gather*}
+\frac{\partial L}{\partial x_{1}}=0\iff\alpha x_{1}^{\alpha-1}x_{2}^{1-\alpha}=\lambda p_{1}\\
+\frac{\partial L}{\partial x_{2}}=0\iff(1-\alpha)x_{1}^{\alpha}x_{2}^{-\alpha}=\lambda p_{2}
+\end{gather*}
+
+\end_inset
+
+Equating the two equations we have
+\begin_inset Formula 
+\[
+\lambda=\frac{\alpha x_{1}^{\alpha-1}x_{2}^{1-\alpha}}{p_{1}}=\frac{(1-\alpha)x_{1}^{\alpha}x_{2}^{-\alpha}}{p_{2}}
+\]
+
+\end_inset
+
+and solving for 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\[
+x_{2}=\frac{p_{1}}{p_{2}}\frac{(1-\alpha)}{\alpha}x_{1}
+\]
+
+\end_inset
+
+We plug this expression for 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ into the budget constraint
+\begin_inset Formula 
+\[
+w-p_{1}x_{1}-p_{2}\left(\frac{p_{2}}{p_{1}}\frac{(1-\alpha)}{\alpha}x_{1}\right)=0
+\]
+
+\end_inset
+
+and solve for 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x_{1}=\frac{\alpha}{p_{1}}w
+\]
+
+\end_inset
+
+Finally, we obtain a function for 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x_{2}=\frac{(1-\alpha)}{p_{2}}w
+\]
+
+\end_inset
+
+Thus, the Walrasian demand function associated with Cobb-Douglas preference
+ is
+\begin_inset Formula 
+\[
+x(p,w)=\left[\begin{array}{c}
+\frac{\alpha}{p_{1}}w\\
+\frac{(1-\alpha)}{p_{2}}w
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part B
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+The Hicksian demand function associated with this preference is defined
+ by
+\begin_inset Formula 
+\[
+h(p,x^{*})\equiv\arg{\displaystyle \min_{x\geq0,\ x_{1}^{\alpha}x_{2}^{1-\alpha}\geq\tilde{x}_{1}^{\alpha}\tilde{x}_{2}^{1-\alpha}}}\ p_{1}x_{1}+p_{2}x_{2}
+\]
+
+\end_inset
+
+The Lagrangian of the expenditure minimization problem is
+\begin_inset Formula 
+\[
+L=-p_{1}x_{1}-p_{2}x_{2}+\lambda(-\tilde{x}_{1}^{\alpha}\tilde{x}_{2}^{1-\alpha}+x_{1}^{\alpha}x_{2}^{1-\alpha})
+\]
+
+\end_inset
+
+and the first-order conditions are
+\begin_inset Formula 
+\begin{gather*}
+\frac{\partial L}{\partial x_{1}}=-p_{1}+\lambda\alpha x_{1}^{\alpha-1}x_{2}^{1-\alpha}=0\iff\lambda=\frac{p_{1}}{\alpha x_{1}^{\alpha-1}x_{2}^{1-\alpha}}\\
+\frac{\partial L}{\partial x_{2}}=-p_{2}+\lambda(1-\alpha)x_{1}^{\alpha}x_{2}^{-\alpha}=0\iff\lambda=\frac{p_{2}}{(1-\alpha)x_{1}^{\alpha}x_{2}^{-\alpha}}
+\end{gather*}
+
+\end_inset
+
+Equating the two equations we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{p_{1}}{\alpha x_{1}^{\alpha-1}x_{2}^{1-\alpha}} & = & \frac{p_{2}}{(1-\alpha)x_{1}^{\alpha}x_{2}^{-\alpha}}\\
+p_{2}\alpha x_{1}^{\alpha}x_{2}^{1+\alpha} & = & p_{1}(1-\alpha)x_{1}^{1+\alpha}x_{2}^{\alpha}\\
+p_{2}\alpha x_{2} & = & p_{1}(1-\alpha)x_{1}\\
+x_{2} & = & \frac{p_{1}(1-\alpha)}{p_{2}\alpha}x_{1}
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+-\tilde{x}_{1}^{\alpha}\tilde{x}_{2}^{1-\alpha}+x_{1}^{\alpha}x_{2}^{1-\alpha}=0\iff\tilde{x}_{1}^{\alpha}\tilde{x}_{2}^{1-\alpha}=x_{1}^{\alpha}x_{2}^{1-\alpha}
+\]
+
+\end_inset
+
+We plug this expression for 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ into the constrain above to obtain
+\begin_inset Formula 
+\begin{eqnarray*}
+\tilde{x}_{1}^{\alpha}\tilde{x}_{2}^{1-\alpha} & = & x_{1}\left(\frac{p_{1}(1-\alpha)}{p_{2}\alpha}\right)^{1-\alpha}\\
+x_{1} & = & \tilde{x}_{1}^{\alpha}\tilde{x}_{2}^{1-\alpha}\left(\frac{p_{1}(1-\alpha)}{p_{2}\alpha}\right)^{\alpha-1}\\
+x_{2} & = & \tilde{x}_{1}^{\alpha}\tilde{x}_{2}^{1-\alpha}\left(\frac{p_{1}(1-\alpha)}{p_{2}\alpha}\right)^{\alpha}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the Hicksian demand function associated with the Cobb-Douglas preference
+ is
+\begin_inset Formula 
+\[
+h(p,\tilde{x})=\left[\begin{array}{c}
+\tilde{x}_{1}^{\alpha}\tilde{x}_{2}^{1-\alpha}\left(\frac{p_{1}(1-\alpha)}{p_{2}\alpha}\right)^{\alpha-1}\\
+\tilde{x}_{1}^{\alpha}\tilde{x}_{2}^{1-\alpha}\left(\frac{p_{1}(1-\alpha)}{p_{2}\alpha}\right)^{\alpha}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\bar under
+Part C
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Take 
+\begin_inset Formula $\{p,\tilde{p}\}\subseteq\mathbb{R}_{++}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $p_{1}\neq\tilde{p}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{2}=\tilde{p}_{2}$
+\end_inset
+
+, and take 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+EV(p,p^{\prime},w) & = & e(p,x(\tilde{p},w))-e(p,x(p,w))\\
+ & = & e(p,x(\tilde{p},w))-w\\
+ & = & e\left((p_{1},p_{2}),x(\tilde{p}_{1},p_{2},w)\right)-e\left((\tilde{p}_{1},p_{2}),x(\tilde{p}_{1},p_{2},w)\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\shape up
+Let 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ be the function defined by:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+\varphi: & [0,1] & \rightarrow & \mathbb{R}\\
+ & \theta & \mapsto & \varphi(\theta)\equiv e\left((\theta p_{1}+(1-\theta)\tilde{p}_{1},p_{2}),x(\tilde{p}_{1},p_{2},w)\right)
+\end{array}
+\]
+
+\end_inset
+
+By the Fundamental Theorem of Calculus,
+\begin_inset Formula 
+\[
+\varphi(1)-\varphi(0)={\displaystyle \intop_{0}^{1}}\ \frac{\partial\varphi(\theta)}{\partial\theta}\ d\theta
+\]
+
+\end_inset
+
+Since for each 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+, then by the Chain Rule
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\varphi(\theta)}{\partial\theta} & = & \frac{\partial e}{\partial p_{1}}\left((\theta p_{1}+(1-\theta)\tilde{p}_{1},p_{2}),x(\tilde{p}_{1},p_{2},w)\right)\frac{\partial p_{1}(\theta)}{\partial\theta}\\
+ & = & h_{1}\left((\theta p_{1}+(1-\theta)\tilde{p}_{1},p_{2}),x(\tilde{p}_{1},p_{2},w)\right)(p_{1}-\tilde{p}_{1})
+\end{eqnarray*}
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\[
+EV^{\succsim}((p_{1},p_{2}),(\tilde{p}_{1},p_{2}),w)=(p_{1}-\tilde{p}_{1}){\displaystyle \intop_{0}^{1}}\ h_{1}\left((\theta p_{1}+(1-\theta)\tilde{p}_{1},p_{2}),x(\tilde{p}_{1},p_{2},w)\right)\ d\theta
+\]
+
+\end_inset
+
+
+\shape default
+\bar under
+Part D
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Take 
+\begin_inset Formula $\{p,\tilde{p}\}\subseteq\mathbb{R}_{++}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $p_{1}\neq\tilde{p}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{2}=\tilde{p}_{2}$
+\end_inset
+
+, and take 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ We wish to verify that (c) holds for a Cobb-Douglas prefernce.
+ To do this, we calculate EV from its definition and verify that it is equal
+ to the right side of (c).
+ Since 
+\begin_inset Formula $e(p,x(p,w))=p\cdot h(p,x(p,w))$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray*}
+EV(p,p^{\prime},w) & = & e(p,x(\tilde{p},w))-e(p,x(p,w))\\
+ & = & e(p,x(\tilde{p},w))-w\\
+ & = & e(p,x(\tilde{p},w))-e(\tilde{p},x(\tilde{p},w))\\
+ & = & p\cdot h\left((p_{1},p_{2}),x(\tilde{p}_{1},p_{2},w)\right)-\tilde{p}\cdot h\left((\tilde{p}_{1},p_{2}),x(\tilde{p}_{1},p_{2},w)\right)
+\end{eqnarray*}
+
+\end_inset
+
+Expanding the expression on the right yields
+\begin_inset Formula 
+\begin{gather*}
+p_{1}\left[\left(\frac{\alpha}{\tilde{p}_{1}}w\right)^{\alpha}\left(\frac{(1-\alpha)}{p_{2}}w\right)^{1-\alpha}\left(\frac{p_{1}(1-\alpha)}{p_{2}\alpha}\right)^{\alpha-1}\right]+p_{2}\left[\left(\frac{\alpha}{\tilde{p}_{1}}w\right)^{\alpha}\left(\frac{(1-\alpha)}{p_{2}}w\right)^{1-\alpha}\left(\frac{p_{1}(1-\alpha)}{p_{2}\alpha}\right)^{\alpha}\right]\\
+-\tilde{p}_{1}\left[\left(\frac{\alpha}{\tilde{p}_{1}}w\right)^{\alpha}\left(\frac{(1-\alpha)}{p_{2}}w\right)^{1-\alpha}\left(\frac{\tilde{p}_{1}(1-\alpha)}{p_{2}\alpha}\right)^{\alpha-1}\right]-p_{2}\left[\left(\frac{\alpha}{\tilde{p}_{1}}w\right)^{\alpha}\left(\frac{(1-\alpha)}{p_{2}}w\right)^{1-\alpha}\left(\frac{\tilde{p}_{1}(1-\alpha)}{p_{2}\alpha}\right)^{\alpha}\right]
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

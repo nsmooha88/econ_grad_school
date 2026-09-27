@@ -1,0 +1,3687 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 2: Abstract choice and preference theory
+\end_layout
+
+\begin_layout Section*
+2.3
+\begin_inset space \quad{}
+\end_inset
+
+Choice theory
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this section, we introduce choice and revealed preference theory.
+ In the 
+\series bold
+choice
+\series default
+ 
+\series bold
+model
+\series default
+ an agent is represented by his/her choices in the possible choice problems
+ that he/she may face.
+ Our primitive in the choice model is also a set of alternatives 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+2.3.1
+\begin_inset space \quad{}
+\end_inset
+
+Mathematical aside: power set and correspondences
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(21).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be a set.
+ The 
+\series bold
+power set of A
+\series default
+, denoted 
+\begin_inset Formula $2^{A}$
+\end_inset
+
+, is the set of all subsets of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ For each element 
+\begin_inset Formula $B\in2^{A}$
+\end_inset
+
+, 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+.
+ Using this notation, the set of non-empty sets of 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\begin_inset Formula $2^{A}\backslash\{\emptyset\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Technically, a correspondence 
+\begin_inset Formula $C:A\rightrightarrows B$
+\end_inset
+
+ is a function 
+\begin_inset Formula $C:A\rightarrow2^{B}$
+\end_inset
+
+.
+ An alternative notation for 
+\begin_inset Formula $C:A\rightrightarrows B$
+\end_inset
+
+ is 
+\begin_inset Formula $C:A\rightsquigarrow B$
+\end_inset
+
+.
+ The definition of a correspondence should specifiy its name, domain, co-domain,
+ and the image of each element in its domain.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(22).
+
+\series default
+ 
+\emph on
+A 
+\series bold
+correspondence
+\series default
+, 
+\begin_inset Formula $C$
+\end_inset
+
+, from a set 
+\begin_inset Formula $A$
+\end_inset
+
+ to a set 
+\begin_inset Formula $B$
+\end_inset
+
+ is a mathematical object that associates with each 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ a subset 
+\begin_inset Formula $B$
+\end_inset
+
+, denoted 
+\begin_inset Formula $C(a)\subseteq B$
+\end_inset
+
+.
+ The generic correspondence from 
+\begin_inset Formula $A$
+\end_inset
+
+ to 
+\begin_inset Formula $B$
+\end_inset
+
+ is denoted 
+\begin_inset Formula $C:A\rightrightarrows B$
+\end_inset
+
+.
+ Correspondence 
+\begin_inset Formula $C$
+\end_inset
+
+ is 
+\series bold
+non-empty valued
+\series default
+ if for each 
+\begin_inset Formula $a\in A$
+\end_inset
+
+, 
+\begin_inset Formula $C(a)\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+2.3.2
+\begin_inset space \quad{}
+\end_inset
+
+Choice structure
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(23).
+ 
+\series default
+\emph on
+A 
+\series bold
+choice structure
+\series default
+ is a pair 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ where 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is a non-empty family of non-empty subsets of 
+\begin_inset Formula $X$
+\end_inset
+
+ (i.e., 
+\begin_inset Formula $\mathcal{B}\subseteq2^{X}\backslash\{\emptyset\},\ B\in\mathcal{B}\implies B\subseteq X$
+\end_inset
+
+) and 
+\begin_inset Formula $C:\mathcal{B}\rightrightarrows X$
+\end_inset
+
+ is a non-empty valued correspondence such that for each 
+\begin_inset Formula $B\in\mathcal{B}$
+\end_inset
+
+, 
+\begin_inset Formula $C(B)\subseteq B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We interpret 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ as a family of possible choice problems that the agent may face.
+ For each choice problem 
+\begin_inset Formula $B\in\mathcal{B}$
+\end_inset
+
+, the agent selects 
+\begin_inset Formula $C(B)$
+\end_inset
+
+ as his/her best choices.
+ When 
+\begin_inset Formula $C(B)$
+\end_inset
+
+ contains a single element, that element is the individual's choice form
+ among the alternatives in 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ The set 
+\begin_inset Formula $C(B)$
+\end_inset
+
+ may, however, contain more than one element.
+ When it does, the elements of 
+\begin_inset Formula $C(B)$
+\end_inset
+
+ are the alternatives in 
+\begin_inset Formula $B$
+\end_inset
+
+ that the decision maker 
+\emph on
+might
+\emph default
+ choose; that is, they are her 
+\emph on
+acceptable alternatives
+\emph default
+ in 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ In this case, the set 
+\begin_inset Formula $C(B)$
+\end_inset
+
+ can be thought of as containing those alternatives that we would actually
+ see chosen if the decision maker were repeatedly to face the problem of
+ choosing an alternative from set 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the same spirit of rationality of preferences, one may be interested
+ in studying choice structures that satisfy certain consistency properties.
+ We may want to impose some 
+\begin_inset Quotes eld
+\end_inset
+
+reasonable
+\begin_inset Quotes erd
+\end_inset
+
+ restrictions regarding an individual's choice behavior.
+ The following property has played a central role in the literature.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\series bold
+Intuition:
+\series default
+ Let 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ be a choice structure, 
+\begin_inset Formula $A\in\mathcal{B}$
+\end_inset
+
+ a choice problem, and 
+\begin_inset Formula $x\in A$
+\end_inset
+
+.
+ Suppose that 
+\begin_inset Formula $x\in C(A)$
+\end_inset
+
+.
+ This 
+\bar under
+reveals
+\bar default
+ that the agent favors the choice of 
+\begin_inset Formula $x$
+\end_inset
+
+ over all the other elements of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $y\in A$
+\end_inset
+
+ and suppose that in another choice problem, say 
+\begin_inset Formula $B$
+\end_inset
+
+, both 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are available and 
+\begin_inset Formula $y$
+\end_inset
+
+ is chosen at 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ It is 
+\begin_inset Quotes eld
+\end_inset
+
+reasonable
+\begin_inset Quotes erd
+\end_inset
+
+ to think that the agent will also choose 
+\begin_inset Formula $x$
+\end_inset
+
+ at 
+\begin_inset Formula $B$
+\end_inset
+
+ since at choice problem 
+\begin_inset Formula $A$
+\end_inset
+
+ the agent revealed being in favor of 
+\begin_inset Formula $x$
+\end_inset
+
+ over 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $y$
+\end_inset
+
+ makes it to the top, so does 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(24).
+ 
+\series default
+\emph on
+A choice structure 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfies the 
+\series bold
+Weak Axiom of Revealed Preference (WARP) 
+\series default
+iff 
+\begin_inset Formula $\forall\ \{A,B\}\subseteq\mathcal{B},\ \forall\ \{x,y\}\subseteq A\cap B:\left[x\in C(A)\ \wedge\ y\in C(B)\right]\implies x\in C(B)$
+\end_inset
+
+
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When the family of choice problems 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is rich enough, WARP may be divided into two independent properties.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The first property is interpreted as: 
+\begin_inset Quotes eld
+\end_inset
+
+The champion of the world is the champion of his/her own country.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(25).
+ 
+\series default
+\emph on
+A choice structure 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfies 
+\series bold
+Sen's property 
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\series default
+\emph default
+ 
+\emph on
+iff
+\emph default
+ 
+\begin_inset Formula $\forall\ \{A,B\}\subseteq\mathcal{B},\ \forall\ x\in C(B)\cap A:A\subseteq B\implies x\in C(A)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The second property is interpreted as: 
+\begin_inset Quotes eld
+\end_inset
+
+If the champion of a country is the champion of the world, then all champions
+ of that country are champions of the world.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(26).
+ 
+\series default
+\emph on
+A choice structure 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfies 
+\series bold
+Sen's property 
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\series default
+ iff 
+\begin_inset Formula $\forall\ \{A,B\}\subseteq\mathcal{B},\ \forall\ \{x,y\}\subseteq C(A):\left[A\subseteq B\ \wedge\ x\in C(B)\right]\implies y\in C(B)$
+\end_inset
+
+
+\emph default
+.
+\end_layout
+
+\begin_layout Note*
+WARP implies Sen's property 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and Sen's property 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Though, in general, Sen's property 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and Sen's property 
+\begin_inset Formula $\beta$
+\end_inset
+
+ do not imply WARP.
+ If 
+\begin_inset Formula $\forall\ B\in\mathcal{B},\ \forall\ \emptyset\neq B^{\prime}\subseteq B,\ B^{\prime}\in\mathcal{B}$
+\end_inset
+
+, then WARP is equivalent to Sen's property 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and Sen's property 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\emph on
+(3).
+ 
+\series default
+\emph default
+Let 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ be a choice structure such that for each 
+\begin_inset Formula $B\in\mathcal{B}$
+\end_inset
+
+ and each 
+\begin_inset Formula $\emptyset\neq B^{\prime}\subseteq B,B^{\prime}\in\mathcal{B}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfies WARP if and only if it satisfies both Sen's properties 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ be a choice structure such that for each 
+\begin_inset Formula $B\in\mathcal{B}$
+\end_inset
+
+ and each 
+\begin_inset Formula $\emptyset\neq B^{\prime}\subseteq B,B^{\prime}\in\mathcal{B}$
+\end_inset
+
+.
+ We want to prove that 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfies WARP if and only if it satisfies both Sen's properties 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume that 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfies WARP.
+ We prove that it satisfies Sen's 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Property 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ Suppose that 
+\begin_inset Formula $A\subseteq B\subseteq X$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in C(B)\cap A$
+\end_inset
+
+.
+ We want to prove 
+\begin_inset Formula $x\in C(A)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $C$
+\end_inset
+
+ is non-empty valued, then 
+\begin_inset Formula $C(A)\neq\emptyset$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $y\in C(A)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+, then 
+\begin_inset Formula $y\in B$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfies WARP, then 
+\begin_inset Formula $\{x,y\}\subseteq A\cap B,x\in C(B),y\in C(A)\implies x\in C(A)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Property 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Suppose that 
+\begin_inset Formula $A\subseteq B\subseteq X,\ \{x,y\}\subseteq C(A),\ x\in C(B)$
+\end_inset
+
+.
+ We want to prove that 
+\begin_inset Formula $y\in C(B)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $C(A)\subseteq A\subseteq B$
+\end_inset
+
+, then 
+\begin_inset Formula $\{x,y\}\subseteq A\cap B$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfies WARP, then 
+\begin_inset Formula $\{x,y\}\subseteq A\cap B,x\in C(B),y\in C(A)\implies y\in C(B)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Suppose that 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfies Sen's 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ We prove that it satisfies WARP.
+ Let 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ be two non-empty subsets of 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $\{x,y\}\subseteq A\cap B$
+\end_inset
+
+ be such that 
+\begin_inset Formula $x\in C(A)$
+\end_inset
+
+ and 
+\begin_inset Formula $y\in C(B)$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $x\in C(B).$
+\end_inset
+
+ Let 
+\begin_inset Formula $D\equiv A\cap B$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\{x,y\}\subseteq A\cap B$
+\end_inset
+
+, then 
+\begin_inset Formula $D\neq\emptyset$
+\end_inset
+
+.
+ By hypothesis, 
+\begin_inset Formula $D\in\mathcal{B}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\emptyset\neq C(D)\subseteq D$
+\end_inset
+
+.
+ Now, since 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfies Sen's 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, then 
+\begin_inset Formula $y\in C(B)\cap D$
+\end_inset
+
+ and 
+\begin_inset Formula $D\subseteq B$
+\end_inset
+
+ imply that 
+\begin_inset Formula $y\in C(D)$
+\end_inset
+
+.
+ By the same argument, 
+\begin_inset Formula $x\in C(A)\cap D$
+\end_inset
+
+ and 
+\begin_inset Formula $D\subseteq A$
+\end_inset
+
+ imply that 
+\begin_inset Formula $x\in C(D)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfies Sen's 
+\begin_inset Formula $\beta$
+\end_inset
+
+, then 
+\begin_inset Formula $\{x,y\}\subseteq C(D)$
+\end_inset
+
+, 
+\begin_inset Formula $D\subseteq B$
+\end_inset
+
+, and 
+\begin_inset Formula $y\in C(B)$
+\end_inset
+
+ imply that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x\in C(B)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ .
+\end_layout
+
+\begin_layout Subsection*
+2.3.3
+\begin_inset space \quad{}
+\end_inset
+
+Revealed preference theory
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Is there a connection between the preference model and the choice model?
+ We now address two fundamental questions regarding the relationship between
+ the two approaches discussed so far:
+\end_layout
+
+\begin_layout Enumerate
+If a decision maker has a rational preference ordering 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, do her decisions when facing choices from sets in 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ necessaritly generate a choice structure that satisfies the weak axiom?
+\end_layout
+
+\begin_layout Enumerate
+If an individual's choice behavior for a family of choice problems 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is captured by a choice structure 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfying the weak axiom, is there necessarily a rational preference relation
+ that is consistent with these choices?
+\end_layout
+
+\begin_layout Standard
+Revealed preference theory answers these questions.
+ As we shall see, the answers to these two questions are, respectively,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+yes
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+maybe.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+First, let us consider the choices made by an agent represented by a binary
+ relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ (observe that we do not require the agent to be 
+\begin_inset Quotes eld
+\end_inset
+
+rational.
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(27).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ For each non-empty set 
+\begin_inset Formula $B\subseteq X$
+\end_inset
+
+, let 
+\begin_inset Formula $C^{\succsim}(B)$
+\end_inset
+
+ be the set
+\begin_inset Formula 
+\[
+C^{\succsim}(B)\equiv\left\{ x\in B:\forall\ y\in B,\ x\succsim y\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\mathcal{B}\subseteq2^{X}\backslash\{\emptyset\}$
+\end_inset
+
+.
+ The following proposition states that when 
+\begin_inset Formula $X$
+\end_inset
+
+ is finite and 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is a preference relation, 
+\begin_inset Formula $(\mathcal{B},C^{\succsim})$
+\end_inset
+
+ is a choice structure.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\emph on
+(4).
+ 
+\series default
+\emph default
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a preference relation on a finite set 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Then for each non-empty 
+\begin_inset Formula $B\subseteq X,C^{\succsim}(B)\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Problems 2-5, Section 2.3.4.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There are conditions, besides finiteness of choice problems, that guarantee
+ the choice correspondence 
+\begin_inset Formula $C^{\succsim}$
+\end_inset
+
+ associated with a preference relation is non-empty valued.
+ We will assume in what follows that those conditions are met.
+ Thus, for each family of non-empty sets of 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+, and each preference relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, we refer to 
+\begin_inset Formula $(\mathcal{B},C^{\succsim})$
+\end_inset
+
+ as a choice structure.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Our main result here is that the choices of an agent represented by a preference
+ relation satisfy WARP.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\emph on
+(5).
+ 
+\series default
+\emph default
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a preference relation on 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ be a family of non-empty sets of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $(\mathcal{B},C^{\succsim})$
+\end_inset
+
+ satisfies WARP.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a preference relation on 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ be a family of non-empty sets of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ We prove that 
+\begin_inset Formula $(\mathcal{B},C^{\succsim})$
+\end_inset
+
+ satisfies WARP.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ be two non-empty subsets of 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $\{x,y\}\subseteq A\cap B$
+\end_inset
+
+ be such that 
+\begin_inset Formula $x\in C^{\succsim}(A)$
+\end_inset
+
+ and 
+\begin_inset Formula $y\in C^{\succsim}(B)$
+\end_inset
+
+.
+ We show that 
+\begin_inset Formula $x\in C^{\succsim}(B)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x\in C^{\succsim}(A)$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+x\in\{z\in A:\forall\ w\in A,z\succsim w\}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $y\in A$
+\end_inset
+
+, then 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+.
+ Now, since 
+\begin_inset Formula $y\in C^{\succsim}(B)$
+\end_inset
+
+, then 
+\begin_inset Formula $y\in\{z\in B:\forall\ w\in B,z\succsim w\}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $w\in B$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+ and 
+\begin_inset Formula $y\succsim w$
+\end_inset
+
+, then by transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $x\succsim w$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $w$
+\end_inset
+
+ is an arbitrary element of 
+\begin_inset Formula $B$
+\end_inset
+
+, then 
+\begin_inset Formula $x\in\{z\in B:\forall\ w\in B,z\succsim w\}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $x\in C^{\succsim}(B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Proposition 5 consitutes the 
+\begin_inset Quotes eld
+\end_inset
+
+yes
+\begin_inset Quotes erd
+\end_inset
+
+ to the first question.
+ That is, if behavior is generated by rational preferences, then it satisfies
+ the consistency requirements embodied in the weak axiom.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the other direction (from choices to preferences), the relationship is
+ more subtle.
+ Given a choice structure that satisfies WARP, is there a preference that
+ induces these choices? To answer this question, it is usefule to begin
+ with a definition.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(28).
+ 
+\series default
+\emph on
+A preference relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ 
+\series bold
+rationalizes
+\series default
+ a choice structure 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ iff 
+\begin_inset Formula $\forall\ B\in\mathcal{B}:C(B)=C^{\succsim}(B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In words, the rational preference relation on 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ rationalizes choice rule 
+\begin_inset Formula $C(\cdot)$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ if the optimal choices generated by 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ (captured by 
+\begin_inset Formula $C^{\succsim}(B)$
+\end_inset
+
+) coincide with 
+\begin_inset Formula $C(\cdot)$
+\end_inset
+
+ for all sets in 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+ In a sense, preferences explain behavior; we can interpret the decision
+ maker's choices as if she were a preference maximizer.
+ Note that, in general, there may be more than one rationalizing preference
+ relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ for a given choice structure 
+\emph on
+
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+.
+
+\emph default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Proposition 5 implies that the weak axiom must be satisfied if there is
+ to be a rationalizing preference relation.
+ In particular, since 
+\begin_inset Formula $C^{\succsim}(B)$
+\end_inset
+
+ satisfies the weak axiom for any 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, only a choice rule that satisfies the weak axiom can be rationalized.
+ It turns out, however, that the weak axiom is not sufficient to ensure
+ the existence of a rationalizing preference relation.
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+(9).
+
+\series default
+ 
+\begin_inset Formula $X\equiv\{x,y,z\}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{B}\equiv\{\{x,y\},\{x,z\},\{y,z\}\}$
+\end_inset
+
+, 
+\begin_inset Formula $C(\{x,y\})=\{x\}$
+\end_inset
+
+, 
+\begin_inset Formula $C(\{y,z\})=\{y\}$
+\end_inset
+
+, 
+\begin_inset Formula $C(\{x,z\})=\{z\}$
+\end_inset
+
+.
+ To prove that 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfies WARP observe that for any two elements of 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+, say 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, if 
+\begin_inset Formula $A\neq B$
+\end_inset
+
+ then there is no pair 
+\begin_inset Formula $a\in C(A)$
+\end_inset
+
+ and 
+\begin_inset Formula $b\in C(B)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\{a,b\}\subseteq A\cap B$
+\end_inset
+
+.
+ So, WARP is trivially satisfied.
+ However, the choice structure cannot be rationalized by a complete and
+ transitive binary relation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To understand Example 9, note that the more choice problems there are in
+ 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+, the more the weak axiom restricts choice behavior; there are simply more
+ opportunities for the decision maker's choices to contradict one another.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now develop conditions that guarantee the existence of a preference relation
+ that represents a given choice structure.
+ Let us first consider the following question: given a choice structure
+ 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+, what is the preference relation that rationalizes 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+, if any?
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(29).
+
+\series default
+ 
+\emph on
+The 
+\series bold
+revealed binary relation
+\series default
+ associated with a choice structure 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\succsim(\mathcal{B},C)$
+\end_inset
+
+, is defined by: 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:x\succsim(\mathcal{B},C)y\iff x=y\ \vee\ \left[\exists\ B\in\mathcal{B}:\{x,y\}\subseteq B\ \wedge\ x\in C(B)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As we now show, if the family of choice problems 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ includes enough subsets of 
+\begin_inset Formula $X$
+\end_inset
+
+, and if 
+\emph on
+
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+
+\emph default
+ satisfies the weak axiom, then there exists a rational preference relation
+ that rationalizes 
+\begin_inset Formula $C(\cdot)$
+\end_inset
+
+ relative to 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(30).
+
+\series default
+ 
+\emph on
+A family of non-empty sets of 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+, satisfies the 
+\series bold
+pair-and-triple condition
+\series default
+ if it contains, at least, all subsets of two and three elements of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Note*
+If 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfies WARP and 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ satisfies the pair-and-triple condition, then 
+\begin_inset Formula $\succsim(\mathcal{B},C)$
+\end_inset
+
+ is a preference relation and it rationalizes 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+.
+ With the pair-and triple condition, 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ that satisfies WARP implies that there exists a unique preference relation
+ that induces these choices.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\emph on
+(6).
+ 
+\series default
+\emph default
+If 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfies WARP and 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ satisfies the pair-and-triple condition, then 
+\begin_inset Formula $\succsim(\mathcal{B},C)$
+\end_inset
+
+ is a preference relation.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfies WARP and 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ satisfies the pair-and-triple condition.
+ We prove that 
+\begin_inset Formula $\succsim(\mathcal{B},C)$
+\end_inset
+
+ is complete and transitive.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+First, we prove that 
+\begin_inset Formula $\succsim(\mathcal{B},C)$
+\end_inset
+
+ is complete.
+ Let 
+\begin_inset Formula $\{x,y\}\subseteq X$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ satisfies the pair-and-triple condition, then 
+\begin_inset Formula $B\equiv\{x,y\}\in\mathcal{B}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $x=y$
+\end_inset
+
+, then 
+\begin_inset Formula $x\succsim(\mathcal{B},C)y$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $x\neq y$
+\end_inset
+
+, then since 
+\begin_inset Formula $B\equiv\{x,y\}\in\mathcal{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $C$
+\end_inset
+
+ is non-empty valued, then either 
+\begin_inset Formula $x\in C(B)$
+\end_inset
+
+ or 
+\begin_inset Formula $y\in C(B)$
+\end_inset
+
+.
+ Thus, either 
+\begin_inset Formula $x\succsim(\mathcal{B},C)y$
+\end_inset
+
+ or 
+\begin_inset Formula $y\succsim(\mathcal{B},C)x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Second, we prove that 
+\begin_inset Formula $\succsim(\mathcal{B},C)$
+\end_inset
+
+ is transitive.
+ Let 
+\begin_inset Formula $\{x,y,z\}\subseteq X$
+\end_inset
+
+ be such that 
+\begin_inset Formula $x\succsim(\mathcal{B},C)y$
+\end_inset
+
+ and 
+\begin_inset Formula $y\succsim(\mathcal{B},C)z$
+\end_inset
+
+.
+ We show that 
+\begin_inset Formula $x\succsim(\mathcal{B},C)z$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $B\equiv\{x,y,z\}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ satisfies the pair-and-triple condition, then 
+\begin_inset Formula $B\in\mathcal{B}$
+\end_inset
+
+.
+ We claim that 
+\begin_inset Formula $x\in C(B)$
+\end_inset
+
+.
+ Consider the following two cases.
+\end_layout
+
+\begin_deeper
+\begin_layout Case
+\begin_inset Formula $y\in C(B)$
+\end_inset
+
+: Since 
+\begin_inset Formula $x\succsim(\mathbb{\mathcal{B}},C)y$
+\end_inset
+
+, then there is 
+\begin_inset Formula $A\in\mathcal{B}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\{x,y\}\subseteq A$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in C(A)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\{x,y\}\subseteq A\cap B,y\in C(B),x\in C(A)$
+\end_inset
+
+, then by WARP, 
+\begin_inset Formula $x\in C(B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $z\in C(B)$
+\end_inset
+
+: Since 
+\begin_inset Formula $y\succsim(\mathbb{\mathcal{B}},C)z$
+\end_inset
+
+, then there is 
+\begin_inset Formula $A\in\mathcal{B}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\{y,z\}\subseteq A$
+\end_inset
+
+ and 
+\begin_inset Formula $y\in C(A)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\{y,z\}\subseteq A\cap B,z\in C(B),y\in C(A)$
+\end_inset
+
+, then by WARP, 
+\begin_inset Formula $y\in C(B)$
+\end_inset
+
+.
+ By Case 1, 
+\begin_inset Formula $x\in C(B)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Since 
+\begin_inset Formula $C$
+\end_inset
+
+ is non-empty valued, then either 
+\begin_inset Formula $x\in C(B)$
+\end_inset
+
+ or at least one of the two cases above holds.
+ Thus, 
+\begin_inset Formula $x\in C(B)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\{x,z\}\subseteq B$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in C(B)$
+\end_inset
+
+, then 
+\begin_inset Formula $x\succsim(\mathbb{\mathcal{B}},C)z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If a choice structure satisfies WARP and the pair-and-triple condition,
+ then we can refer to its revealed binary relation as its 
+\series bold
+revealed preference relation
+\series default
+.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\emph on
+(5).
+ 
+\series default
+\emph default
+If 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfies WARP and 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ satisfies the pair-and-triple condition, then 
+\begin_inset Formula $\succsim(\mathcal{B},C)$
+\end_inset
+
+ rationalizes 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+.
+ Moreover, if 
+\begin_inset Formula $\succsim^{\prime}$
+\end_inset
+
+ is a preference relation that rationalizes 
+\begin_inset Formula $(\mathbb{\mathcal{B}},C)$
+\end_inset
+
+, then 
+\begin_inset Formula $\succsim^{\prime}$
+\end_inset
+
+ is equal to 
+\begin_inset Formula $\succsim(\mathbb{\mathcal{B}},C)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Suppose that 
+\begin_inset Formula $(\mathbb{\mathcal{B}},C)$
+\end_inset
+
+ satisfies WARP and 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ satisfies the pair-and-triple condition.
+ By Proposition 4, 
+\begin_inset Formula $\succsim(\mathbb{\mathcal{B}},C)$
+\end_inset
+
+ is a preference relation.
+ We want to prove that 
+\begin_inset Formula $\forall\ B\in\mathcal{B}:C(B)=C^{\succsim(\mathbb{\mathcal{B}},C)}(B)$
+\end_inset
+
+.
+ For simplicity, we denote 
+\begin_inset Formula $D\equiv C^{\succsim(\mathbb{\mathcal{B}},C)}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $B\in\mathcal{B}$
+\end_inset
+
+.
+ We show that 
+\begin_inset Formula $C(B)=D(B)$
+\end_inset
+
+, and we do this in two parts.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+First, let 
+\begin_inset Formula $x\in C(B)$
+\end_inset
+
+.
+ We prove that 
+\begin_inset Formula $x\in D(B)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $y\in B$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x\in C(B)$
+\end_inset
+
+, then 
+\begin_inset Formula $x\in B$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\{x,y\}\subseteq B$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in C(B)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $x\succsim(\mathbb{\mathcal{B}},C)y$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $y$
+\end_inset
+
+ is an arbitrary element of 
+\begin_inset Formula $B$
+\end_inset
+
+, then 
+\begin_inset Formula $x\in D(B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Second, let 
+\begin_inset Formula $x\in D(B)$
+\end_inset
+
+.
+ We prove that 
+\begin_inset Formula $x\in C(B)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $y\in C(B)$
+\end_inset
+
+.
+ Suppose without loss of generality that 
+\begin_inset Formula $y\neq x$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x\in D(B)$
+\end_inset
+
+, then 
+\begin_inset Formula $x\succsim(\mathbb{\mathcal{B}},C)y$
+\end_inset
+
+.
+ So, there is 
+\begin_inset Formula $A\in\mathcal{B}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\{x,y\}\subseteq A$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in C(A)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\{A,B\}\subseteq\mathcal{B},\{x,y\}\subseteq A\cap B,x\in C(A),y\in C(B)\implies x\in C(B)$
+\end_inset
+
+ by WARP.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Since 
+\begin_inset Formula $C(B)\subseteq D(B)$
+\end_inset
+
+ and 
+\begin_inset Formula $D(B)\subseteq C(B)$
+\end_inset
+
+, then 
+\begin_inset Formula $C(B)=D(B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+It is left to prove that if 
+\begin_inset Formula $\succsim^{\prime}$
+\end_inset
+
+ is a preference relation that rationalizes 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+, then 
+\begin_inset Formula $\succsim^{\prime}=\succsim(\mathbb{\mathcal{B}},C)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\{x,y\}\subseteq X.$
+\end_inset
+
+ If 
+\begin_inset Formula $x\succsim^{\prime}y$
+\end_inset
+
+, then 
+\begin_inset Formula $x\in C(\{x,y\})$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $x\succsim(\mathbb{\mathcal{B}},C)y$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $x\succsim(\mathbb{\mathcal{B}},C)y$
+\end_inset
+
+, then there is 
+\begin_inset Formula $B\in\mathcal{B}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\{x,y\}\subseteq B$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in C(B)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim^{\prime}$
+\end_inset
+
+ rationalizes 
+\begin_inset Formula $(\mathbb{\mathcal{B}},C)$
+\end_inset
+
+, then 
+\begin_inset Formula $C(B)=C^{\succsim^{\prime}}(B)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $x\in\{z\in B:\forall\ w\in B,z\succsim^{\prime}w\}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $x\succsim^{\prime}y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+2.3.4
+\begin_inset space \quad{}
+\end_inset
+
+Problems
+\end_layout
+
+\begin_layout Problem
+Prove Proposition 3 in the notes.
+\end_layout
+
+\begin_layout Proof
+The proof can be found in Section 2.3.2.
+\end_layout
+
+\begin_layout Problem
+Assume that 
+\begin_inset Formula $X$
+\end_inset
+
+ is finite and let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ For each 
+\begin_inset Formula $B\subseteq X$
+\end_inset
+
+, let 
+\begin_inset Formula $C^{\succ}(B)$
+\end_inset
+
+ be the set
+\begin_inset Formula 
+\[
+C^{\succ}(B)\equiv\{x\in B:\nexists\ \ensuremath{y\in B}\ \ensuremath{\mbox{s.t.}}\ \ensuremath{y\succ x\}}
+\]
+
+\end_inset
+
+Prove that for each binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ and each family of non-empty subsets of 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+, 
+\begin_inset Formula $(\mathcal{B},C^{\succ})$
+\end_inset
+
+ satisfies Sen's property 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $X$
+\end_inset
+
+ is finite.
+ We want to prove that 
+\begin_inset Formula $\forall\ \succsim,\forall\ \mathcal{B}\subseteq2^{X}\backslash\{\emptyset\}:(\mathcal{B},C^{\succ})$
+\end_inset
+
+ satisfies Sen's property 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Take a binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on the set 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Take a family of non-empty subsets of 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{B}\subseteq2^{X}\backslash\{\emptyset\}$
+\end_inset
+
+.
+ We wish to show that 
+\begin_inset Formula $\forall\ \{A,B\}\subseteq\mathcal{B},\forall\ x\in C^{\succ}(B)\cap A:A\subseteq B\implies x\in C^{\succ}(A)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Take 
+\begin_inset Formula $\{A,B\}\subseteq\mathcal{B}$
+\end_inset
+
+ such that 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $x\in C^{\succ}(B)\cap A$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $x\in C^{\succ}(B)$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in A$
+\end_inset
+
+.
+ By the definition of 
+\begin_inset Formula $C^{\succ}(B)$
+\end_inset
+
+, 
+\begin_inset Formula $\nexists\ y\in B:y\succ x$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+, then 
+\begin_inset Formula $\nexists\ y\in A:y\succ x$
+\end_inset
+
+.
+ Thus, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x\in C^{\succ}(A)$
+\end_inset
+
+.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ Therefore, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(\mathcal{B},C^{\succ})$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ satisfies Sen's property 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on a set 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Prove that if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive, then for each 
+\begin_inset Formula $B\subseteq X$
+\end_inset
+
+, 
+\begin_inset Formula $B\neq\emptyset$
+\end_inset
+
+, 
+\begin_inset Formula $C^{\succsim}(B)=C^{\succ}(B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on a set 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive.
+ We want to prove that 
+\begin_inset Formula $\forall\ \emptyset\neq B\subseteq X:C^{\succsim}(B)=C^{\succ}(B)$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $B\subseteq X$
+\end_inset
+
+ such that 
+\begin_inset Formula $B\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\subseteq)$
+\end_inset
+
+ 
+\series default
+Take 
+\begin_inset Formula $x\in C^{\succsim}(B)$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\forall\ y\in B:x\succsim y$
+\end_inset
+
+.
+ We wish to show that 
+\begin_inset Formula $\nexists\ y\in B:y\succ x$
+\end_inset
+
+.
+ Suppose for contradiction 
+\begin_inset Formula $\exists\ y\in B:y\succ x$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\exists\ y\in B:(y\succsim x)\ \wedge\ \neg(x\succsim y)$
+\end_inset
+
+.
+ However, this contradicts 
+\begin_inset Formula $\forall\ y\in B:x\succsim y\ (\rightarrow\leftarrow)$
+\end_inset
+
+ .
+ So, 
+\begin_inset Formula $\nexists\ y\in B:y\succ x$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $x\in C^{\succ}(B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\supseteq)$
+\end_inset
+
+ 
+\series default
+Take 
+\begin_inset Formula $x\in C^{\succ}(B)$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\nexists\ y\in B:y\succ x$
+\end_inset
+
+.
+ From the definition of 
+\begin_inset Formula $\succ$
+\end_inset
+
+, 
+\begin_inset Formula $\nexists\ y\in B:(y\succsim x)\ \wedge\ \neg(x\succsim y)$
+\end_inset
+
+.
+ Equivalently, 
+\begin_inset Formula $\forall\ y\in B:\neg(y\succsim x)\ \vee\ (x\succsim y)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete, then 
+\begin_inset Formula $\neg(y\succsim x)\implies(x\succsim y)$
+\end_inset
+
+.
+ Also, 
+\begin_inset Formula $P\ \vee\ P\equiv P$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\forall\ y\in B:(x\succsim y)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $x\in C^{\succsim}(B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Therefore, 
+\begin_inset Formula $C^{\succsim}(B)=C^{\succ}(B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+A binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- acyclic}$
+\end_inset
+
+ if there is no 
+\begin_inset Formula $\{x_{1},\ldots,x_{n}\}\subseteq X$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $i=1,\ldots,n-1$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}\succ x_{i+1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{1}=x_{n}$
+\end_inset
+
+.
+ Prove that if 
+\begin_inset Formula $X$
+\end_inset
+
+ is finite, then 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- acyclic}$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+ if and only if for each 
+\begin_inset Formula $B\subseteq X$
+\end_inset
+
+, 
+\begin_inset Formula $B\neq\emptyset$
+\end_inset
+
+, 
+\begin_inset Formula $C^{\succ}(B)\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on a set 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Assume the set 
+\begin_inset Formula $X$
+\end_inset
+
+ is finite.
+ We want to prove 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- acyclic}$
+\end_inset
+
+ if and only if 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\forall\ \emptyset\ne B\subseteq X:C^{\succ}(B)\neq\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ 
+\series default
+For this direction, we will be proving the contrapositive, i.e.
+ 
+\begin_inset Formula $P\implies Q\ \equiv\ \neg Q\implies\neg P$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $\exists\ \emptyset\ne B\subseteq X:C^{\succ}(B)=\emptyset$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $X$
+\end_inset
+
+ is finite, then 
+\begin_inset Formula $B$
+\end_inset
+
+ is also finite.
+ 
+\begin_inset Formula $C^{\succ}(B)=\emptyset\implies\forall\ x\in B,\ \exists\ y\in B:y\succ x$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- cyclic}$
+\end_inset
+
+.
+ We will prove this by induction.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $|B|=1\implies B=\{x\}\ (\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Instead, the base case is when 
+\begin_inset Formula $|B|=2$
+\end_inset
+
+.
+ Then, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $B=\{x_{1},x_{2}\}$
+\end_inset
+
+.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ Since 
+\begin_inset Formula $C^{\succ}(B)=\emptyset$
+\end_inset
+
+, then 
+\begin_inset Formula $(x_{1}\succ x_{2})\ \wedge\ (x_{2}\succ x_{1})$
+\end_inset
+
+.
+ Thus, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\succ\mbox{- cyclic}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose if 
+\begin_inset Formula $|B|=k$
+\end_inset
+
+, then 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- cyclic}$
+\end_inset
+
+.
+ We will prove that if 
+\begin_inset Formula $|B|=k+1$
+\end_inset
+
+, then 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- cyclic}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $|B|=k+1$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $C^{\succ}(B)=\emptyset$
+\end_inset
+
+, then 
+\begin_inset Formula $\forall\ x_{i}\in B,\ \exists\ x_{j}:x_{j}\succ x_{i}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $B$
+\end_inset
+
+ is finite, then we can enumerate its elements as follows: 
+\begin_inset Formula $x_{i}\in B,\ i=1,\ldots,k+1:x_{1}\succ x_{2}\succ\ldots\succ x_{k+1}$
+\end_inset
+
+.
+ However, from our inductive assumption, this enumeration must continue.
+ Since 
+\begin_inset Formula $B$
+\end_inset
+
+ is finite, then there must be 
+\begin_inset Formula $x_{m}=x_{n}$
+\end_inset
+
+ with 
+\begin_inset Formula $m>n$
+\end_inset
+
+.
+ Now, we have a subsequence where 
+\begin_inset Formula $x_{l}\succ\ldots\succ x_{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{l}=x_{m}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\exists\ \{x_{1},\ldots,x_{n}\}\subseteq X$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}\succ x_{i+1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{1}=x_{n}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- cyclic}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ For this direction, we will be proving the contrapositive, i.e.
+ 
+\begin_inset Formula $Q\implies P\ \equiv\ \neg P\implies\neg Q$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- cyclic}$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ We want to show 
+\begin_inset Formula $\exists\ \emptyset\ne B\subseteq X:C^{\succ}(B)=\emptyset$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ Because 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- cyclic}$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+, then there is 
+\begin_inset Formula $\{x_{1},\ldots,x_{n}\}\subseteq X$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $i=1,\ldots,n-1$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}\succ x_{i+1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{1}=x_{n}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $B=\{x_{1},\ldots,x_{n}\}$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $\forall\ x_{i}\in B,\ \exists\ x_{j}\in B:x_{j}\succ x_{i}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $C^{\succ}(B)=\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- acyclic}$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\forall\ \emptyset\ne B\subseteq X:C^{\succ}(B)\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on a set 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Prove that if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive and 
+\begin_inset Formula $B\neq\emptyset$
+\end_inset
+
+ is finite, then 
+\begin_inset Formula $C^{\succsim}(B)$
+\end_inset
+
+ is non-empty.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on a set 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive, and 
+\begin_inset Formula $\emptyset\neq B\subseteq X$
+\end_inset
+
+ is finite.
+ We want to prove that 
+\begin_inset Formula $C^{\succsim}(B)\ne\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\bar under
+Claim:
+\bar default
+ 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive 
+\begin_inset Formula $\implies\succsim\mbox{is}\succ\mbox{- acyclic}$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+
+\emph on
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+(P\ \wedge\ Q)\implies R & \equiv & \neg\left[(P\ \wedge\ Q)\ \wedge\ \neg R\right]\\
+ & \equiv & \left[\neg(P\ \wedge\ Q)\ \vee\ R\right]\\
+ & \equiv & \left[\neg P\ \vee\ \neg Q\ \vee\ R\right]\\
+ & \equiv & \left[\neg(P\ \wedge\ \neg R)\ \vee\ \neg Q\right]\\
+ & \equiv & \neg\left[(P\ \wedge\ \neg R)\ \wedge\ Q\right]\\
+ & \equiv & \left(P\ \wedge\ \neg R\right)\implies\neg Q
+\end{eqnarray*}
+
+\end_inset
+
+
+\emph default
+Also,
+\begin_inset Formula 
+\[
+\left[\succsim\mbox{is transitive}\implies\succ\mbox{is transitive}\right]\equiv\left[\succ\mbox{is not transitive}\implies\succsim\mbox{is not transitive}\right]
+\]
+
+\end_inset
+
+Now, assume 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and 
+\begin_inset Formula $\succ\mbox{- cyclic}$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\succ$
+\end_inset
+
+ is not transitive.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- cyclic}$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+then 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+there is 
+\begin_inset Formula $\{x_{1},\ldots,x_{n}\}\subseteq X$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $i=1,\ldots,n-1$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}\succ x_{i+1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{1}=x_{n}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ So, 
+\begin_inset Formula $x_{1}\succ\ldots\succ x_{n-1}\succ x_{n}=x_{1}\succ\ldots\succ x_{n-1}$
+\end_inset
+
+.
+ Consequently, 
+\begin_inset Formula $\succ$
+\end_inset
+
+ is not transitive, which also means that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is not transitive.
+ Thus, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ complete and 
+\begin_inset Formula $\succ\mbox{- cyclic}$
+\end_inset
+
+ imply that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is not transitive.
+ Equivalently, by the logical statements listed above, if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive, then 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- acyclic}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+By problem 4, since 
+\begin_inset Formula $B$
+\end_inset
+
+ is finite, then 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- acyclic}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $C^{\succ}(B)\neq\emptyset$
+\end_inset
+
+.
+ Also, by problem 3, since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is a rational preference relation, then 
+\begin_inset Formula $C^{\succsim}(B)=C^{\succ}(B)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $C^{\succsim}(B)\ne\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Give an example of a finite set 
+\begin_inset Formula $X$
+\end_inset
+
+ and a choice correspondence 
+\begin_inset Formula $C$
+\end_inset
+
+ on the set of non-empty sets of 
+\begin_inset Formula $X$
+\end_inset
+
+ such that the choice structure 
+\begin_inset Formula $(2^{X}\setminus\{\emptyset\},C)$
+\end_inset
+
+ satisfies Sen's property 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ but cannot be rationalized by a preference relation.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $X\equiv\{x,y,z\}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{B}\equiv\{\{x,y\},\{x,z\},\{y,z\}\}$
+\end_inset
+
+, 
+\begin_inset Formula $C(\{x,y\})=\{x\}$
+\end_inset
+
+, 
+\begin_inset Formula $C(\{y,z\})=\{y\}$
+\end_inset
+
+, 
+\begin_inset Formula $C(\{x,z\})=\{z\}$
+\end_inset
+
+.
+ To prove that 
+\begin_inset Formula $(\mathcal{B},C)$
+\end_inset
+
+ satisfies WARP observe that for any two elements of 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+, say 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, if 
+\begin_inset Formula $A\neq B$
+\end_inset
+
+ then there is no pair 
+\begin_inset Formula $a\in C(A)$
+\end_inset
+
+ and 
+\begin_inset Formula $b\in C(B)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\{a,b\}\subseteq A\cap B$
+\end_inset
+
+ .
+ So it is trivially satisfied.
+ However, the choice structure cannot be rationalized by a complete and
+ transitive binary relation.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $L\in\mathbb{N}$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ The competitive (Walrasian) budget set at prices 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and wealth 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+ is the set 
+\begin_inset Formula $B(p,w)\equiv\{x\in X:p\cdot x\le w\}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\mathcal{B}^{W}\equiv\{B(p,w):p\in\mathbb{R}_{+}^{L},w\in\mathbb{R}_{+}\}$
+\end_inset
+
+ be the faimly of competitive budget sets 
+\begin_inset Formula $(\mathcal{B}^{W}$
+\end_inset
+
+is the family of menus that an agent may face in a competitive environment
+\begin_inset Formula $)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $C:\mathcal{B}^{W}\rightrightarrows X$
+\end_inset
+
+ be a correspondence such that for each 
+\begin_inset Formula $B\in\mathcal{B}^{W}$
+\end_inset
+
+, 
+\begin_inset Formula $\emptyset\ne C(B)\subseteq B$
+\end_inset
+
+.
+ Correspondence 
+\begin_inset Formula $C$
+\end_inset
+
+ collects all the information of an agents' market behavior.
+ Does the family of sets 
+\begin_inset Formula $\mathcal{B}^{W}$
+\end_inset
+
+ satisfy the pair-and-triple condition?
+\end_layout
+
+\begin_layout Proof
+A family of non-empty sets of 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+, satisfies the pair-and-triple condition if it contains, at least, all
+ subsets of two and three elements of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\bar under
+Claim:
+\bar default
+ 
+\begin_inset Formula $\mathcal{B}^{W}$
+\end_inset
+
+ does not satisfy the pair-and-triple condition.
+ Suppose for contradiction that 
+\begin_inset Formula $\mathcal{B}^{W}$
+\end_inset
+
+ satisfies the pair-and-triple condition.
+ Then, 
+\begin_inset Formula $\forall\ \{x_{1},x_{2}\}\subseteq X\ \wedge\ \forall\ \{x_{1},x_{2},x_{3}\}\subseteq X:\left\{ \{x_{1},x_{2}\},\{x_{1},x_{2},x_{3}\}\right\} \subseteq\mathcal{B}^{W}\equiv\{B(p,w):p\in\mathbb{R}_{+}^{L},w\in\mathbb{R}_{+}\}$
+\end_inset
+
+.
+ Without loss of generality, take 
+\begin_inset Formula $\{x_{1},x_{2}\}\in\mathcal{B}^{W}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $B(p,w)=\{x_{1},x_{2}\}$
+\end_inset
+
+ for some 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Note, 
+\begin_inset Formula $B(p,w)\equiv\{x\in X:p\cdot x\le w\}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $p\cdot x_{1}\leq w$
+\end_inset
+
+ and 
+\begin_inset Formula $p\cdot x_{2}\leq w$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $z=\frac{1}{2}(x_{1}+x_{2})\in X$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $p\cdot x_{1}\leq w$
+\end_inset
+
+ and 
+\begin_inset Formula $p\cdot x_{2}\leq w$
+\end_inset
+
+, then 
+\begin_inset Formula $p\cdot z\leq w$
+\end_inset
+
+.
+ Thus, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $z\in B(p,w)$
+\end_inset
+
+.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ But this contradicts 
+\begin_inset Formula $B(p,w)=\{x_{1},x_{2}\}$
+\end_inset
+
+ for some 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\mathcal{B}^{W}$
+\end_inset
+
+ does not satisfy the pair-and-triple condition.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

@@ -1,0 +1,1400 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Microeconomic Theory I: Homework 7
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 3.8.4, Problem 1
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proposition 37.
+
+\series default
+ The aggregate demand function is well defined whenever:
+\end_layout
+
+\begin_layout Enumerate
+Preferences are quasi-linear.
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $i\in N$
+\end_inset
+
+, 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+ is homothetic, and for each pair 
+\begin_inset Formula $\left\{ i,j\}\subseteq N\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $\succsim^{i}=\succsim^{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Assume:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall\ i\in N,\ \succsim^{i}$
+\end_inset
+
+ is rational, locally non-satiated, and continuous.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The aggregate demand function is well defined whenever:
+\end_layout
+
+\begin_layout Enumerate
+Preferences are quasi-linear.
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $i\in N$
+\end_inset
+
+, 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+ is homothetic, and for each pair 
+\begin_inset Formula $\left\{ i,j\}\subseteq N\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $\succsim^{i}=\succsim^{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take two profiles of wealth 
+\begin_inset Formula $w\equiv\left(w^{i}\right)_{i\in N}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{w}\equiv\left(\bar{w}^{i}\right)_{i\in N}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ i\in N$
+\end_inset
+
+, 
+\begin_inset Formula $\left\{ w^{i},\bar{w}^{i}\right\} \subseteq\mathbb{R}_{++}$
+\end_inset
+
+, and 
+\begin_inset Formula $\sum_{i\in N}w^{i}=\sum_{i\in N}\bar{w}^{i}=\mu$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\forall\ i\in N$
+\end_inset
+
+, 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+ is locally non-satiated, then the profile of demand functions, 
+\begin_inset Formula $\left(x^{i}\right)_{i\in N}$
+\end_inset
+
+, satisfies Walras' Law.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show: 
+\begin_inset Formula $SD\left(p,w\right)=SD\left(p,\bar{w}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.
+ Preferences are quasi-linear.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall\ i\in N,$
+\end_inset
+
+ let 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+ be quasi-linear with respect to commodity 
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $l\neq k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Agent 
+\begin_inset Formula $i$
+\end_inset
+
+'s Marshallian demand for good 
+\begin_inset Formula $l$
+\end_inset
+
+ is the function, denoted 
+\begin_inset Formula $x_{l}^{M^{i}}$
+\end_inset
+
+, defined by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{cccc}
+x_{l}^{M^{i}}: & \mathbb{R}_{++}^{L} & \longrightarrow & \mathbb{R}_{+}\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $\begin{array}{cccc}
+ & p & \longmapsto & x_{l}^{M^{i}}(p)\equiv x_{l}^{i}(p,w^{i})\ \mbox{for some}\ w^{i}\in\mathbb{R}_{++}\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From homework 5, since preferences are continuous and locally non-satiated,
+ then agent 
+\begin_inset Formula $i$
+\end_inset
+
+'s Marshallian demand for good 
+\begin_inset Formula $l$
+\end_inset
+
+ is well defined, i.e., 
+\begin_inset Formula $\forall\ p\gg0$
+\end_inset
+
+ and each 
+\begin_inset Formula $\left\{ w^{i},\bar{w}^{i}\right\} \subseteq\mathbb{R}_{++}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{l}^{i}\left(p,w^{i}\right)=x_{l}^{i}\left(p,\bar{w}^{i}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As a result, for 
+\begin_inset Formula $l\neq k$
+\end_inset
+
+, 
+\begin_inset Formula $\sum_{i\in N}x_{l}^{i}(p,w^{i})=\sum_{i\in N}x_{l}^{i}(p,\bar{w}^{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, 
+\begin_inset Formula $\sum_{l\ne k}x_{l}^{i}\left(p,w^{i}\right)=\sum_{l\ne k}x_{l}^{i}\left(p,\bar{w}^{i}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\sum_{l\ne k}p_{l}\cdot x_{l}^{i}\left(p,w^{i}\right)=\sum_{l\ne k}p_{l}\cdot x_{l}^{i}\left(p,\bar{w}^{i}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since Walras' Law holds, we can find an equation for the demand of commodity
+ 
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{k}^{i}(p,w^{i})=\frac{w^{i}}{p_{k}}-\frac{\sum_{l\ne k}p_{l}\cdot x_{l}^{i}\left(p,w^{i}\right)}{p_{k}}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{k}^{i}\left(p,\bar{w}^{i}\right)=\frac{\bar{w}^{i}}{p_{k}}-\frac{\sum_{l\ne k}p_{l}\cdot x_{l}^{i}\left(p,\bar{w}^{i}\right)}{p_{k}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $\sum_{i\in N}x_{k}^{i}(p,w^{i})-\sum_{i\in N}x_{k}^{i}\left(p,\bar{w}^{i}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\sum_{i\in N}\frac{w^{i}}{p_{k}}-\sum_{i\in N}\frac{\bar{w}^{i}}{p_{k}}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $\sum_{l\ne k}p_{l}\cdot x_{l}^{i}\left(p,w^{i}\right)=\sum_{l\ne k}p_{l}\cdot x_{l}^{i}\left(p,\bar{w}^{i}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\frac{\mu}{p_{k}}-\frac{\mu}{p_{k}}=0$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $\sum_{i\in N}w^{i}=\sum_{i\in N}\bar{w}^{i}=\mu$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence, 
+\begin_inset Formula $\sum_{i\in N}x_{k}^{i}(p,w^{i})=\sum_{i\in N}x_{k}^{i}(p,\bar{w}^{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $SD(p,w)=SD(p,\bar{w})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $AD(p,\mu)$
+\end_inset
+
+ is well defined
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+2.
+ For each 
+\begin_inset Formula $i\in N$
+\end_inset
+
+, 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+ is homothetic, and for each pair 
+\begin_inset Formula $\{i,j\}\subseteq N$
+\end_inset
+
+, 
+\begin_inset Formula $\succsim^{i}=\succsim^{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+By Theore 10, a continuous preference 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+ is homothetic if and only if it admits a continuous representation 
+\begin_inset Formula $u^{i}:X\rightarrow\mathbb{R}$
+\end_inset
+
+ that is homogeneous of degree one, i.e., such that 
+\begin_inset Formula $\forall\ \alpha\in\mathbb{R}_{+}$
+\end_inset
+
+, 
+\begin_inset Formula $u^{i}(\alpha x)=\alpha u^{i}(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\forall\{i,j\}\subseteq N,\succsim^{i}=\succsim^{j}$
+\end_inset
+
+, then 
+\begin_inset Formula $u^{i}(x)=u(x)\ \forall\ i\in N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies x^{i}(p,w^{i})=x(p,w^{i})\ \forall\ i\in N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $i\in N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, let 
+\begin_inset Formula $y\in B(p,w^{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\left(\frac{1}{w^{i}}\right)y\in B(p,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies x(p,1)\succsim\left(\frac{1}{w^{i}}\right)y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff u\left(x(p,1)\right)\geq u\left(\left(\frac{1}{w^{i}}\right)y\right)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $u^{i}$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff w^{i}u\left(x(p,1)\right)\geq w^{i}u\left(\left(\frac{1}{w^{i}}\right)y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff u\left(w^{i}x^{i}(p,1)\right)\geq u\left(y\right)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $u^{i}$
+\end_inset
+
+ is homogeneous of degree zero
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff w^{i}\cdot x(p,1)\geq y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies x(p,w^{i})=w^{i}\cdot x(p,1)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $x$
+\end_inset
+
+ is a demand function, so it is unique.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $i$
+\end_inset
+
+ was an arbitrary agent from the set 
+\begin_inset Formula $N$
+\end_inset
+
+, then this result holds 
+\begin_inset Formula $\forall\ i\in N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $SD(p,w)\equiv\sum_{i\in N}x^{i}(p,w^{i})=\sum_{i\in N}x(p,w^{i})=\sum_{i\in N}w^{i}\cdot x(p,1)=\mu\cdot x(p,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, 
+\begin_inset Formula $SD(p,\bar{w})\equiv\sum_{i\in N}x^{i}(p,\bar{w}^{i})=\sum_{i\in N}x(p,\bar{w}^{i})=\sum_{i\in N}\bar{w}^{i}\cdot x(p,1)=\mu\cdot x(p,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $SD(p,w)=SD(p,\bar{w})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $AD(p,\mu)$
+\end_inset
+
+ is well defined
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 3.8.4, Problem 6
+\end_layout
+
+\begin_layout Standard
+Assume that 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is a Leontief preference relation.
+ Provide a direct calculation that shows the associated demand function
+ satisfies the uncompensated law of demand.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since preferences are Leontief, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $ $
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $u(x_{1},x_{2})\equiv\mbox{min}\{x_{1},x_{2}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, preferences are monotone and stricly convex, so the demand correspondence
+ is single-valued, and the demand function satifies Walras' Law.
+\end_layout
+
+\begin_layout Standard
+The associated demand function is given by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x^{\succsim}(p,w)\equiv\left(\frac{w}{p_{1}+p_{2}},\frac{w}{p_{1}+p_{2}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\{p,p^{\prime}\}\subseteq\mathbb{R}_{++}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, consider 
+\begin_inset Formula $(p^{\prime}-p)\cdot\left[x^{\succsim}(p^{\prime},w)-x^{\succsim}(p,w)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=(p_{1}^{\prime}-p_{1})\left[\frac{w}{p_{1}^{\prime}+p_{2}^{\prime}}-\frac{w}{p_{1}+p_{2}}\right]+(p_{2}^{\prime}-p_{2})\left[\frac{w}{p_{1}^{\prime}+p_{2}^{\prime}}-\frac{w}{p_{1}+p_{2}}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\left[\frac{w}{p_{1}^{\prime}+p_{2}^{\prime}}-\frac{w}{p_{1}+p_{2}}\right](p_{1}^{\prime}-p_{1}+p_{2}^{\prime}-p_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=w\left[\frac{p_{1}+p_{2}-p_{1}^{\prime}-p_{2}^{\prime}}{(p_{1}^{\prime}+p_{2}^{\prime})(p_{1}+p_{2})}\right](p_{1}^{\prime}-p_{1}+p_{2}^{\prime}-p_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=-w\left[\frac{p_{1}+p_{2}-p_{1}^{\prime}-p_{2}^{\prime}}{(p_{1}^{\prime}+p_{2}^{\prime})(p_{1}+p_{2})}\right]^{2}\leq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, the associated demand function satisfies the uncompensated law of
+ demand.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 3.8.4, Problem 8
+\end_layout
+
+\begin_layout Standard
+This problem is intended to explore how 
+\begin_inset Quotes eld
+\end_inset
+
+fragile
+\begin_inset Quotes erd
+\end_inset
+
+ the Uncompensated Law of Demand is.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be the preference on 
+\begin_inset Formula $\mathbb{R}_{+}^{2}$
+\end_inset
+
+ represented by the utility function
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $u(x_{1},x_{2})\equiv\mbox{min}\{x_{1},x_{2}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $x^{\succsim}$
+\end_inset
+
+ be the demand function associated with 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a) State the Uncompensated Law of Demand
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A demand function 
+\begin_inset Formula $x^{\succsim}$
+\end_inset
+
+ satisfies the 
+\series bold
+uncompensated law of demand
+\series default
+ if for each pair 
+\begin_inset Formula $\{p,p^{\prime}\}\subseteq\mathbb{R}_{++}^{L}$
+\end_inset
+
+ and each 
+\begin_inset Formula $\mu\in\mathbb{R}_{+},$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $(p^{\prime}-p)\cdot\left[x^{\succsim}(p^{\prime},\mu)-x^{\succsim}(p,\mu)\right]\leq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+with strict inequality when 
+\begin_inset Formula $x^{\succsim}(p^{\prime},\mu)=x^{\succsim}(p,\mu)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(b) Prove that 
+\begin_inset Formula $x^{\succsim}$
+\end_inset
+
+ satisfies the uncompensated law of demand.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since preferences are Leontif, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $ $
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $u(x_{1},x_{2})\equiv\mbox{min}\{x_{1},x_{2}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, preferences are monotone and stricly convex, so the associated demand
+ correspondence is single-valued and the demand function satifies Walras'
+ Law.
+\end_layout
+
+\begin_layout Standard
+The associated demand function is given by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x^{\succsim}(p,w)\equiv\left(\frac{w}{p_{1}+p_{2}},\frac{w}{p_{1}+p_{2}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\{p,p^{\prime}\}\subseteq\mathbb{R}_{++}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, consider 
+\begin_inset Formula $(p^{\prime}-p)\cdot\left[x^{\succsim}(p^{\prime},w)-x^{\succsim}(p,w)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=(p_{1}^{\prime}-p_{1})\left[\frac{w}{p_{1}^{\prime}+p_{2}^{\prime}}-\frac{w}{p_{1}+p_{2}}\right]+(p_{2}^{\prime}-p_{2})\left[\frac{w}{p_{1}^{\prime}+p_{2}^{\prime}}-\frac{w}{p_{1}+p_{2}}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\left[\frac{w}{p_{1}^{\prime}+p_{2}^{\prime}}-\frac{w}{p_{1}+p_{2}}\right](p_{1}^{\prime}-p_{1}+p_{2}^{\prime}-p_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=w\left[\frac{p_{1}+p_{2}-p_{1}^{\prime}-p_{2}^{\prime}}{(p_{1}^{\prime}+p_{2}^{\prime})(p_{1}+p_{2})}\right](p_{1}^{\prime}-p_{1}+p_{2}^{\prime}-p_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=-w\left[\frac{p_{1}+p_{2}-p_{1}^{\prime}-p_{2}^{\prime}}{(p_{1}^{\prime}+p_{2}^{\prime})(p_{1}+p_{2})}\right]^{2}\leq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, the associated demand function satisfies the uncompensated law of
+ demand.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(c) Now consider the preference on 
+\begin_inset Formula $\mathbb{R}_{+}^{2}$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\succsim^{m}$
+\end_inset
+
+, represented by the utility function
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $u^{m}(x_{1},x_{2})\equiv\begin{cases}
+\mbox{min}\{x_{1},x_{2}\} & \mbox{if}\ \mbox{min}\{x_{1},x_{2}\}\leq1\\
+\mbox{min}\left\{ x_{1},\frac{1}{m}x_{2}+\frac{m-1}{m}\right\}  & \mbox{if}\ \mbox{min}\{x_{1},x_{2}\}>1
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+where 
+\begin_inset Formula $m\in(0,+\infty)$
+\end_inset
+
+.
+ Prove that for each 
+\begin_inset Formula $m\neq1$
+\end_inset
+
+, the demand function associated with 
+\begin_inset Formula $\succsim^{m}$
+\end_inset
+
+ violates the Uncompensated Law of Demand.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The demand function associated with 
+\begin_inset Formula $\succsim^{m}$
+\end_inset
+
+ is given by:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $x^{\succsim^{m}}(p,w)\equiv\begin{cases}
+\left(\frac{w}{p_{1}+p_{2}},\frac{w}{p_{1}+p_{2}}\right) & \mbox{if}\ \mbox{min}\ \{x_{1},x_{2}\}\leq1\\
+\left(\frac{1}{m}\left[\frac{w-p_{1}\frac{m-1}{m}}{\frac{p_{1}}{m}+p_{2}}\right]+\frac{m-1}{m},\frac{w-p_{1}\frac{m-1}{m}}{\frac{p_{1}}{m}+p_{2}}\right) & \mbox{if}\ \mbox{min}\ \{x_{1},x_{2}\}>1
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\{p,p^{\prime}\}\subseteq\mathbb{R}_{++}^{2}$
+\end_inset
+
+ such that 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x^{\succsim^{m}}(p,w)=\left(\frac{w}{p_{1}+p_{2}},\frac{w}{p_{1}+p_{2}}\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x^{\succsim^{m}}(p^{\prime},w)=\left(\frac{1}{m}\left[\frac{w-p_{1}^{\prime}\frac{m-1}{m}}{\frac{p_{1}^{\prime}}{m}+p_{2}^{\prime}}\right]+\frac{m-1}{m},\frac{w-p_{1}^{\prime}\frac{m-1}{m}}{\frac{p_{1}^{\prime}}{m}+p_{2}^{\prime}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $x_{1}^{\succsim^{m}}(p,w)=x_{2}^{\succsim^{m}}(p,w)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies w=p_{1}+p_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, suppose 
+\begin_inset Formula $x_{1}^{\succsim^{m}}(p^{\prime},w)>x_{1}^{\succsim^{m}}(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, consider 
+\begin_inset Formula $(p^{\prime}-p)\cdot\left[x^{\succsim^{m}}(p^{\prime},w)-x^{\succsim^{m}}(p,w)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=(p_{1}^{\prime}-p_{1})\left[x_{1}^{\succsim^{m}}(p^{\prime},w)-x_{1}^{\succsim^{m}}(p,w)\right]+(p_{2}^{\prime}-p_{2})\left[x_{2}^{\succsim^{m}}(p^{\prime},w)-x_{2}^{\succsim^{m}}(p,w)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=(p_{1}^{\prime}-p_{1})\left(\frac{1}{m}\left[\frac{w-p_{1}^{\prime}\frac{m-1}{m}}{\frac{p_{1}^{\prime}}{m}+p_{2}^{\prime}}\right]+\frac{m-1}{m}-1\right)+(p_{2}^{\prime}-p_{2})\left(\frac{w-p_{1}^{\prime}\frac{m-1}{m}}{\frac{p_{1}^{\prime}}{m}+p_{2}^{\prime}}-1\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=(p_{1}^{\prime}-p_{1})\left(\frac{1}{m}\left[\frac{w-p_{1}^{\prime}\frac{m-1}{m}}{\frac{p_{1}^{\prime}}{m}+p_{2}^{\prime}}\right]-\frac{1}{m}\right)+(p_{2}^{\prime}-p_{2})\left(\frac{w-p_{1}^{\prime}\frac{m-1}{m}}{\frac{p_{1}^{\prime}}{m}+p_{2}^{\prime}}-1\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=(p_{1}^{\prime}-p_{1})\left(\frac{1}{m}\left[\frac{w-p_{1}^{\prime}\frac{m-1}{m}}{\frac{p_{1}^{\prime}}{m}+p_{2}^{\prime}}\right]-\frac{1}{m}\right)+(p_{2}^{\prime}-p_{2})m\left(\frac{1}{m}\left[\frac{w-p_{1}^{\prime}\frac{m-1}{m}}{\frac{p_{1}^{\prime}}{m}+p_{2}^{\prime}}\right]-\frac{1}{m}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\left[(p_{1}^{\prime}-p_{1})+m(p_{2}^{\prime}-p_{2})\right]\left(\frac{1}{m}\left[\frac{w-p_{1}^{\prime}\frac{m-1}{m}}{\frac{p_{1}^{\prime}}{m}+p_{2}^{\prime}}\right]-\frac{1}{m}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, 
+\begin_inset Formula $x_{1}^{\succsim^{m}}(p^{\prime},w)-x_{1}^{\succsim^{m}}(p,w)=\left(\frac{1}{m}\left[\frac{w-p_{1}^{\prime}\frac{m-1}{m}}{\frac{p_{1}^{\prime}}{m}+p_{2}^{\prime}}\right]-\frac{1}{m}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $x_{1}^{\succsim^{m}}(p^{\prime},w)>x_{1}^{\succsim^{m}}(p,w)$
+\end_inset
+
+, then 
+\begin_inset Formula $\left(\frac{1}{m}\left[\frac{w-p_{1}^{\prime}\frac{m-1}{m}}{\frac{p_{1}^{\prime}}{m}+p_{2}^{\prime}}\right]-\frac{1}{m}\right)>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(\frac{1}{m}\left[\frac{w-p_{1}^{\prime}\frac{m-1}{m}}{\frac{p_{1}^{\prime}}{m}+p_{2}^{\prime}}\right]-\frac{1}{m}\right)>0\iff\frac{w-p_{1}^{\prime}\frac{m-1}{m}}{\frac{p_{1}^{\prime}}{m}+p_{2}^{\prime}}>1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff w-p_{1}^{\prime}(1-\frac{1}{m})>\frac{p_{1}^{\prime}}{m}+p_{2}^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff(p_{1}+p_{2})-p_{1}^{\prime}(1-\frac{1}{m})>\frac{p_{1}^{\prime}}{m}+p_{2}^{\prime}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $w=p_{1}+p_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff(p_{1}^{\prime}-p_{1})+(p_{2}^{\prime}-p_{2})<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, for 
+\begin_inset Formula $x^{\succsim^{m}}(p,w)$
+\end_inset
+
+ to violate the Uncompensated Law of Demand, i.e., 
+\begin_inset Formula $(p^{\prime}-p)\cdot\left[x^{\succsim^{m}}(p^{\prime},w)-x^{\succsim^{m}}(p,w)\right]>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+we need to find 
+\begin_inset Formula $p,p^{\prime},m$
+\end_inset
+
+ such that 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\left[(p_{1}^{\prime}-p_{1})+m(p_{2}^{\prime}-p_{2})\right]>0$
+\end_inset
+
+ and 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $(p_{1}^{\prime}-p_{1})+(p_{2}^{\prime}-p_{2})<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_body
+\end_document

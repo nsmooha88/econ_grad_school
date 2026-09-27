@@ -1,0 +1,4981 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{titling}
+\setlength{\droptitle}{-6em}
+\posttitle{\par\end{center}\vspace{-8em}}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\usepackage{amsthm} 
+\usepackage{thmtools}
+\declaretheorem{theorem} 
+\declaretheoremstyle[%
+  spaceabove=-6pt,%
+  spacebelow=6pt,%
+  headfont=\normalfont\itshape,%
+  postheadspace=1em,%
+  qed=\qedsymbol%
+]{mystyle} 
+\declaretheorem[name={Proof},style=mystyle,unnumbered,
+]{prf}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\noindent
+Microeconomic Theory I: Homework 1
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 2.2.3, Problem 1
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $A\equiv]1,2]\cup[3,4]$
+\end_inset
+
+ and 
+\begin_inset Formula $B\equiv]1,2]\cup[3,4]$
+\end_inset
+
+.
+ Draw 
+\begin_inset Formula $A\times B$
+\end_inset
+
+ as a subset of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\succeq\equiv A\times B$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ Is 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ symmetric, i.e., for each 
+\begin_inset Formula $\{x,y\}\subseteq X,\ x\succeq y\implies y\succeq x$
+\end_inset
+
+? Is it transitive?
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Is 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ symmetric?
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $\{x,y\}\subseteq X\equiv\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Assume 
+\begin_inset Formula $x\succeq y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies(x,y)\in\ \succeq\equiv A\times B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies x\in A,\ y\in B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\iff y\in A,\ x\in B$
+\end_inset
+
+ since 
+\begin_inset Formula $A=B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies(y,x)\in\ \succeq\equiv A\times B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies y\succeq x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is symmetric
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Is 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ transitive?
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $\{x,y,z\}\subseteq X\equiv\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Assume 
+\begin_inset Formula $x\succeq y$
+\end_inset
+
+ and 
+\begin_inset Formula $y\succeq z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies(x,y)\in\ \succeq\equiv A\times B$
+\end_inset
+
+ and 
+\begin_inset Formula $(y,z)\in\ \succeq\equiv A\times B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies x\in A=B,\ y\in B=A$
+\end_inset
+
+ and 
+\begin_inset Formula $y\in A=B,\ z\in B=A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies x\in A,\ z\in B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies(x,z)\in\ \succeq\equiv A\times B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies x\succeq z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is transitive
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 2.2.3, Problem 3
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a weak preference relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $\succ\;=\left\{ \;(a,b)\in X^{2}\;:\; a\succsim b\;\land\; b\nsucceq a\;\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $\sim\;=\left\{ \;(a,b)\in X^{2}\;:\; a\succsim b\;\land\; b\succsim a\;\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+(a)
+\series default
+ 
+\series bold
+Prove that 
+\begin_inset Formula $\succ$
+\end_inset
+
+ is irreflexive, asymmetric, and negatively transitive.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\succ$
+\end_inset
+
+ is irreflexive 
+\begin_inset Formula $\iff\forall\ x\in X:\neg(x\succ x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Suppose for contradiction 
+\begin_inset Formula $x\succ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Then, 
+\begin_inset Formula $x\succeq x\wedge\neg(x\succeq x)$
+\end_inset
+
+ by the definition of 
+\begin_inset Formula $\succ$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+But a statement and its negation cannot both be true.
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+So, it must be the case that 
+\begin_inset Formula $\neg(x\succ x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Thus, 
+\begin_inset Formula $\forall\ x\in X:\neg(x\succ x)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, 
+\begin_inset Formula $\succ$
+\end_inset
+
+ is reflexive.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\succ$
+\end_inset
+
+ is asymetric 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:x\succ y\implies\neg(y\succ x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $\{x,y\}\subseteq X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Assume 
+\begin_inset Formula $x\succ y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Then, 
+\begin_inset Formula $x\succeq y\wedge\neg(y\succeq x)$
+\end_inset
+
+ by the definition of 
+\begin_inset Formula $\succ$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Suppose for contradiction that 
+\begin_inset Formula $y\succ x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Then, 
+\begin_inset Formula $y\succsim x\land\neg(x\succ y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+But we cannot have both 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+ and 
+\begin_inset Formula $\neg(x\succ y)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Since 
+\begin_inset Formula $y\succ x$
+\end_inset
+
+ leads to a contradition, we conclude that 
+\begin_inset Formula $\neg(y\succ x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+Thus, 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:x\succ y\implies\neg(y\succ x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, 
+\begin_inset Formula $\succ$
+\end_inset
+
+ is assymetric
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\succ$
+\end_inset
+
+ is negatively transitive 
+\begin_inset Formula $\iff\forall\ \{x,y\}\subseteq X:\neg(x\succ y)\ \mbox{and}\ \neg(y\succ z)\implies\neg(x\succ z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $\{x,y,z\}\subseteq X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Assume 
+\begin_inset Formula $\neg(x\succ y)$
+\end_inset
+
+ and 
+\begin_inset Formula $\neg(y\succ z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Then, 
+\begin_inset Formula $\neg[(x\succeq y)\wedge\neg(y\succeq x)]$
+\end_inset
+
+ and 
+\begin_inset Formula $\neg[(y\succeq z)\wedge\neg(z\succeq y)]$
+\end_inset
+
+ by the definition of 
+\begin_inset Formula $\succ$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies[\neg(x\succeq y)\vee(y\succeq x)]$
+\end_inset
+
+ and 
+\begin_inset Formula $[\neg(y\succeq z)\vee(z\succeq y)]$
+\end_inset
+
+ by DeMorgan's Law
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies[(y\succeq x)\vee(y\succeq x)]$
+\end_inset
+
+ and 
+\begin_inset Formula $[(z\succeq y)\vee(z\succeq y)]$
+\end_inset
+
+ since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies z\succeq y$
+\end_inset
+
+ and 
+\begin_inset Formula $y\succeq x$
+\end_inset
+
+ since 
+\begin_inset Formula $P\vee P\equiv P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies z\succeq x$
+\end_inset
+
+ since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is transitive
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies\neg(x\succ z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Thus, 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:\neg(x\succ y)\ \mbox{and}\ \neg(y\succ z)\implies\neg(x\succ z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, 
+\begin_inset Formula $\succ$
+\end_inset
+
+ is negatively transitive
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+(b) Prove that 
+\begin_inset Formula $\sim$
+\end_inset
+
+ is reflexive, symmetric, and transitive.
+ Is 
+\begin_inset Formula $\sim$
+\end_inset
+
+ negatively transitive?
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim$
+\end_inset
+
+ is reflexive 
+\begin_inset Formula $\iff\forall\ x\in X:x\sim x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $x\in X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete, 
+\begin_inset Formula $x\succeq x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Then, 
+\begin_inset Formula $x\succeq x$
+\end_inset
+
+ and 
+\begin_inset Formula $x\succeq x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies x\sim x$
+\end_inset
+
+ by the definition of 
+\begin_inset Formula $\sim$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Thus, 
+\begin_inset Formula $\forall\ x\in X:x\sim x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, 
+\begin_inset Formula $\sim$
+\end_inset
+
+ is reflexive.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim$
+\end_inset
+
+ is symmetric 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:x\sim y\Rightarrow y\sim x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $\{x,y\}\subseteq X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Assume 
+\begin_inset Formula $x\sim y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Then, 
+\begin_inset Formula $x\succeq y\wedge y\succeq x$
+\end_inset
+
+ by the definition of 
+\begin_inset Formula $\sim$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\iff y\succeq x\wedge x\succeq y$
+\end_inset
+
+ since 
+\begin_inset Formula $A\wedge B\equiv B\wedge A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies y\sim x$
+\end_inset
+
+ by the defintion of 
+\begin_inset Formula $\sim$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Thus, 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:x\sim y\Rightarrow y\sim x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, 
+\begin_inset Formula $\sim$
+\end_inset
+
+ is symmetric
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim$
+\end_inset
+
+ is transitive 
+\begin_inset Formula $\iff\forall\ \{x,y,z\}\subseteq X:x\sim y\wedge y\sim z\Rightarrow x\sim z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $\{x,y,z\}\subseteq X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Assume 
+\begin_inset Formula $x\sim y$
+\end_inset
+
+ and 
+\begin_inset Formula $y\sim z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Then, 
+\begin_inset Formula $[(x\succeq y)\wedge(y\succeq x)]$
+\end_inset
+
+ and 
+\begin_inset Formula $[(y\succeq z)\wedge(z\succeq y)]$
+\end_inset
+
+
+\begin_inset Formula $ $
+\end_inset
+
+ by the definition of 
+\begin_inset Formula $\sim$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is transitive, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x\succeq y$
+\end_inset
+
+ and 
+\begin_inset Formula $y\succeq z\implies x\succeq z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Also, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $z\succeq y$
+\end_inset
+
+ and 
+\begin_inset Formula $y\succeq x\implies z\succeq x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Now, 
+\begin_inset Formula $x\succeq z$
+\end_inset
+
+ and 
+\begin_inset Formula $z\succeq x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies x\sim z$
+\end_inset
+
+ by the definition of 
+\begin_inset Formula $\sim$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Thus, 
+\begin_inset Formula $\forall\ \{x,y,z\}\subseteq X:x\sim y\wedge y\sim z\implies x\sim z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, 
+\begin_inset Formula $\sim$
+\end_inset
+
+ is transitive
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Is 
+\begin_inset Formula $\sim$
+\end_inset
+
+ negatively transitive?
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $\{a,b,c\}\subseteq X$
+\end_inset
+
+ where 
+\begin_inset Formula $a=c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Now, if 
+\begin_inset Formula $\neg(a\sim b)$
+\end_inset
+
+ and 
+\begin_inset Formula $\neg(b\sim c)$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $(a\sim c)$
+\end_inset
+
+ still holds since 
+\begin_inset Formula $a=c$
+\end_inset
+
+ and 
+\begin_inset Formula $\sim$
+\end_inset
+
+ is reflexive
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, 
+\begin_inset Formula $\sim$
+\end_inset
+
+ is not negatively transitive.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 2.2.3, Problem 7
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a finite set and 
+\begin_inset Formula $B$
+\end_inset
+
+ a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ The 
+\series bold
+transitive closure
+\series default
+ of 
+\begin_inset Formula $B$
+\end_inset
+
+ is the binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+, denoted 
+\begin_inset Formula $T_{B}$
+\end_inset
+
+, defined as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:x\ T_{B}\ y\iff\exists\ \{x_{i}\}_{i=1}^{n}\subseteq X,n\geq1:x_{1}=x,x_{n}=y,x_{1}\ B\ x_{2},\ldots,x_{n-1}\ B\ x_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+(a) Prove that 
+\begin_inset Formula $B\subseteq T_{B}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $(x,y)\in B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Set 
+\begin_inset Formula $n=2$
+\end_inset
+
+ and let 
+\begin_inset Formula $x_{1}=x$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}=y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Now, 
+\begin_inset Formula $\exists\ \{x_{i}\}_{i=1}^{2}\subseteq X,n=2\geq1:x_{1}=x,x_{2}=y,x_{1}\ B\ x_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\iff x\ T_{B}\ y$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Thus, 
+\begin_inset Formula $(x,y)\in T_{B}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, 
+\series bold
+
+\begin_inset Formula $B\subseteq T_{B}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+(b)
+\series default
+ 
+\series bold
+State the definition of transitivity of 
+\begin_inset Formula $T_{B}$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $T_{B}$
+\end_inset
+
+ is transitive
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Definition:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{B}$
+\end_inset
+
+ is transitive if and only if 
+\begin_inset Formula $\forall\ \{x,y,z\}\subseteq X:(x\ T_{B}\ y)\ \wedge\ (y\ T_{B}\ z)\implies(x\ T_{B}\ z)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\{x,y,z\}\subseteq X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Assume 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(x\ T_{B}\ y)\ \wedge\ (y\ T_{B}\ z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $(x\ T_{B}\ y)\iff\exists\ \{x_{i}\}_{i=1}^{n}\subseteq X,n\geq1:x_{1}=x,x_{n}=y,x_{1}\ B\ x_{2},\ldots,x_{n-1}\ B\ x_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $(y\ T_{B}\ z)\iff\exists\ \{y_{i}\}_{i=1}^{k}\subseteq X,k\geq1:y_{1}=y,y_{k}=z,y_{1}\ B\ y_{2},\ldots,y_{n-1}\ B\ y_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Since 
+\begin_inset Formula $x_{n}=y=y_{1}$
+\end_inset
+
+, we can combine the two lists above into one sequence, where each element
+ is binarly related to the successive element in the sequence.
+\end_layout
+
+\begin_layout Plain Layout
+Let 
+\series bold
+
+\begin_inset Formula $\{z_{i}\}_{i=1}^{n}=\{x_{i}\}_{i=1}^{n}$
+\end_inset
+
+ 
+\series default
+and 
+\begin_inset Formula $\{z_{i}\}_{i=n+1}^{n+k-1}=\{y_{i}\}_{i=2}^{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Now, 
+\begin_inset Formula $\exists\ \{z_{i}\}_{i=1}^{n+k-1},[n+k-1]\geq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $:z_{1}=x,z_{n}=y,z_{n+k-1}=z,z_{1}\ B\ z_{2},\ldots,z_{n-1}\ B\ z_{n},z_{n}\ B\ z_{n+1},\ldots,z_{n+k-2}\ B\ z_{n+k-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\iff x\ T_{B}\ z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Thus, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(x\ T_{B}\ y)\ \wedge\ (y\ T_{B}\ z)\Rightarrow(x\ T_{B}\ z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, 
+\begin_inset Formula $T_{B}$
+\end_inset
+
+ is transitive
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+(c)
+\series default
+ 
+\series bold
+Let 
+\begin_inset Formula $C$
+\end_inset
+
+ be a transitive binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+ that contains 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $T_{B}\subseteq C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $(x,y)\in T_{B}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Then, 
+\begin_inset Formula $(x\ T_{B}\ y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\iff\exists\ \{x_{i}\}_{i=1}^{n}\subseteq X,n\geq1:x_{1}=x,x_{n}=y,x_{1}\ B\ x_{2},\ldots,x_{n-1}\ B\ x_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+So, 
+\begin_inset Formula $\{(x_{i-1},x_{i})\}_{i=2}^{n}\subseteq B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies\{(x_{i-1},x_{i})\}_{i=2}^{n}\subseteq C$
+\end_inset
+
+ since 
+\begin_inset Formula $B\subseteq C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies(x_{1},x_{n})\in C$
+\end_inset
+
+ since C is a transitive binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Thus, 
+\begin_inset Formula $(x,y)\in C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, 
+\series bold
+
+\begin_inset Formula $T_{B}\subseteq C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 2.2.3, Problem 8
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $Z\equiv\{z_{1},\ldots,z_{n}\}$
+\end_inset
+
+ be a finite set and 
+\begin_inset Formula $X$
+\end_inset
+
+ be the set of all non-empty subsets of 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $X\equiv2^{z}\backslash\{\emptyset\}$
+\end_inset
+
+.
+ We say that a preference relation on 
+\begin_inset Formula $X$
+\end_inset
+
+ is monotone if for each two elements of 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, such that 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ is at least as good as 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+(a)
+\series default
+ 
+\series bold
+Construct a monotonic preference on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Provide an economic interpretation of this property when 
+\begin_inset Formula $Z$
+\end_inset
+
+ is the set of items that may appear in the menu of a restaurant and 
+\begin_inset Formula $X$
+\end_inset
+
+ is the set of possible menus with items in 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ When would it be an appropriate assumption on agents' preferences?
+\series default
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+For 
+\begin_inset Formula $Z$
+\end_inset
+
+ finite and 
+\begin_inset Formula $X=2^{z}\backslash\{\emptyset\}$
+\end_inset
+
+, 
+\begin_inset Formula $|\cdot|:X\rightarrow\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Define a binary relation on 
+\series bold
+
+\begin_inset Formula $X$
+\end_inset
+
+ 
+\series default
+as follows:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\succeq\equiv\{(B,A)\in X^{2}:|B|\ge|A|\}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+(Completeness)
+\series default
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $\{A,B\}\subseteq X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $a=|A|$
+\end_inset
+
+ and 
+\begin_inset Formula $b=|B|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Since 
+\begin_inset Formula $\{a,b\}\subseteq\mathbb{N}$
+\end_inset
+
+, then either 
+\begin_inset Formula $a\geq b\ \vee\ b\geq a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies|A|\geq|B|\ \vee\ |B|\geq|A|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Thus, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\forall\ \{A,B\}\subseteq X:(A\succeq B)\vee(B\succeq A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+(Transitivity)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $\{A,B,C\}\subseteq X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $a=|A|$
+\end_inset
+
+, 
+\begin_inset Formula $b=|B|$
+\end_inset
+
+, and 
+\begin_inset Formula $c=|C|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Assume 
+\begin_inset Formula $(A\succeq B)\wedge(B\succeq C)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies a\geq b\wedge b\geq c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies a\geq c$
+\end_inset
+
+ since 
+\begin_inset Formula $\{a,b,c\}\subseteq\mathbb{N}$
+\end_inset
+
+ and 
+\begin_inset Formula $\geq$
+\end_inset
+
+ is transitive on the natural numbers
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies(A\succeq C)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Thus, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\forall\ \{A,B,C\}\subseteq X:(A\succeq B)\wedge(B\succeq C)\implies(A\succeq C)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is transitive
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Since the binary relation is complete and transitive, it is a rational preferenc
+e relation.
+\end_layout
+
+\begin_layout Plain Layout
+Also, note that 
+\begin_inset Formula $A\subseteq B\implies|B|\ge|A|\implies B\succeq A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, the preference relation is monotonic.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Menu 
+\begin_inset Formula $B$
+\end_inset
+
+ is at least as good as menu 
+\begin_inset Formula $A$
+\end_inset
+
+ if and only if the amount of items on menu 
+\begin_inset Formula $B$
+\end_inset
+
+ is greater than or equal to the amount of items on menu 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ It would be an appropriate assumption on agent's preferences if the agent
+ prefers more choices on a menu over less.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+(b)
+\series default
+ 
+\series bold
+Describe a situation in which monotonicity may be violated.
+ Could a preference on 
+\begin_inset Formula $X$
+\end_inset
+
+ violate monotonicity?
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+A situation in which monotonicty may be violated is if an agent is a vegan
+ and he prefers a vegetarian menu with less items over a strictly meat based
+ menu that has several more options.
+\end_layout
+
+\begin_layout Plain Layout
+A preference on 
+\begin_inset Formula $X$
+\end_inset
+
+ can violate monotonicity.
+ For example, we can define a preference relation as: 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\succeq\equiv\{(A,B)\in X^{2}:|A|\leq|B|\}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\forall\ \{A,B\}\subseteq X$
+\end_inset
+
+ such that 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $A\succeq B\iff|A|\leq|B|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+In this case, an agent finds a set with less elements at least as good a
+ set with more elements.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 2.2.3, Problem 9
+\end_layout
+
+\begin_layout Standard
+Consider a set 
+\begin_inset Formula $Z\equiv\{a,b,c\}$
+\end_inset
+
+.
+ The set of lotteries over 
+\begin_inset Formula $Z$
+\end_inset
+
+ is 
+\begin_inset Formula $\Delta(Z)\equiv\{\pi\equiv(\pi_{a},\pi_{b},\pi_{c})\in\mathbb{R}_{+}^{3}:\pi_{a}+\pi_{b}+\pi_{c}=1\}$
+\end_inset
+
+.
+ An Expected Utility Function on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ is a function 
+\begin_inset Formula $U:\Delta(Z)\rightarrow\mathbb{R}$
+\end_inset
+
+ for which there is 
+\begin_inset Formula $u:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $U(\pi)=\pi_{a}u(a)+\pi_{b}u(b)+\pi_{c}u(c)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Prove that a preference 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ is represented by an Expected Utility Function if and only if there is
+ 
+\begin_inset Formula $v:Z\rightarrow\mathbb{R}_{++}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is represented by the function that associates with each 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+ the value
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $\Psi(\pi)=v(a)^{\pi(a)}\times v(b)^{\pi(b)}\times v(c)^{\pi(c)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+A preference 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $\triangle(Z)$
+\end_inset
+
+ is represented by an Expected Utility Function if and only if 
+\begin_inset Formula $\exists\ v:Z\to\mathbb{R}_{++}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by 
+\begin_inset Formula $\Psi(\pi)\equiv v(a)^{\pi(a)}v(b)^{\pi(b)}v(c)^{\pi(c)}$
+\end_inset
+
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ be a preference relation on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+1.
+ 
+\begin_inset Formula $(\implies)$
+\end_inset
+
+ 
+\series default
+Assume that a preference 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ is represented by an Expected Utility Function for which there is 
+\begin_inset Formula $u:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Formula $U(\pi)=\pi_{a}u(a)+\pi_{b}u(b)+\pi_{c}u(c)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $f$
+\end_inset
+
+ be the function defined by:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{array}{cccc}
+f: & \mathbb{R} & \rightarrow & \mathbb{R}_{++}\\
+ & x & \mapsto & f(x)\equiv e^{x}
+\end{array}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Note that 
+\begin_inset Formula $f$
+\end_inset
+
+ is an increasing function.
+\end_layout
+
+\begin_layout Plain Layout
+Also, define the function 
+\begin_inset Formula $v$
+\end_inset
+
+ as the composite function of 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $u$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{array}{cccc}
+v: & Z & \rightarrow & \mathbb{R}_{++}\\
+ & z & \mapsto & v(z)\equiv e^{u(z)}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Now, 
+\begin_inset Formula $\Psi(\pi)=(e^{u(a)})^{\pi(a)}\times(e^{u(b)})^{\pi(b)}\times(e^{u(c)})^{\pi(c)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $=e^{(u(a)\cdot\pi(a)+u(b)\cdot\pi(b)+u(c)\cdot\pi(c))}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $=e^{U(\pi)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ is represented by 
+\begin_inset Formula $U(\pi)$
+\end_inset
+
+ and 
+\begin_inset Formula $f$
+\end_inset
+
+ is an increasing function, then by Proposition 2, 
+\begin_inset Formula $f\circ U(\pi)=e^{U(\pi)}=\Psi(\pi)$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+2.
+ 
+\begin_inset Formula $(\Longleftarrow)$
+\end_inset
+
+ 
+\series default
+Assume there is 
+\begin_inset Formula $v:Z\rightarrow\mathbb{R}_{++}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is represented by the function that associates with each 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+ the value
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Formula $\Psi(\pi)=v(a)^{\pi(a)}\times v(b)^{\pi(b)}\times v(c)^{\pi(c)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $g$
+\end_inset
+
+ be the function defined by:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{array}{cccc}
+g: & \mathbb{R}_{++} & \rightarrow & \mathbb{R}\\
+ & x & \mapsto & g(x)\equiv ln(x)
+\end{array}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Note that 
+\begin_inset Formula $g$
+\end_inset
+
+ is an increasing function.
+\end_layout
+
+\begin_layout Plain Layout
+Also, define the function 
+\begin_inset Formula $u$
+\end_inset
+
+ as the composite function of 
+\begin_inset Formula $g$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{array}{cccc}
+g: & Z & \rightarrow & \mathbb{R}\\
+ & z & \mapsto & u(z)\equiv ln(v(z))
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Now, 
+\begin_inset Formula $U(\pi)=\pi_{a}[ln(v(a))]+\pi_{b}[ln(v(b))]+\pi_{c}[ln(v(c))]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $=ln(v(a)^{\pi(a)}\times v(b)^{\pi(b)}\times v(c)^{\pi(c)})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $=ln(\Psi(\pi))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ is represented by 
+\begin_inset Formula $\Psi(\pi)$
+\end_inset
+
+ and 
+\begin_inset Formula $g$
+\end_inset
+
+ is an increasing function, then by Proposition 2, 
+\begin_inset Formula $g\circ\Psi(\pi)=ln(\Psi(x))=U(\pi)$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 2.2.3, Problem 10
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proposition 1.
+
+\series default
+ Let 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ If there is a function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ that represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+, then 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete and transitive, i.e., it is a preference relation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Given:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset Formula $\succeq$
+\end_inset
+
+ 
+\series default
+is a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\exists$
+\end_inset
+
+ a function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ that represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete 
+\begin_inset Formula $\iff\forall\ \{x,y\}\subseteq X:(x\succeq y)\vee(y\succeq x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is transitive 
+\begin_inset Formula $\iff\forall\ \{x,y,z\}\subseteq X:(x\succeq y)\wedge(y\succeq z)\Rightarrow(x\succeq z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+(Completeness)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $\{x,y\}\subseteq X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $a=u(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $b=u(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Since 
+\begin_inset Formula $\{a,b\}\subseteq\mathbb{R}$
+\end_inset
+
+, then either 
+\begin_inset Formula $a\geq b\ \vee\ b\geq a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies u(x)\geq u(y)\ \vee\ u(y)\geq u(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+, then 
+\begin_inset Formula $x\succeq y\ \vee\ y\succeq x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Thus, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:(x\succeq y)\vee(y\succeq x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+(Transitivity)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $\{x,y,z\}\subseteq X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Assume 
+\begin_inset Formula $(x\succeq y)\wedge(y\succeq z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies u(x)\geq u(y)\wedge u(y)\geq u(z)$
+\end_inset
+
+ since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies u(x)\geq u(z)$
+\end_inset
+
+ since 
+\begin_inset Formula $\geq$
+\end_inset
+
+ is transitive on the real numbers
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies(x\succeq z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Thus, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\forall\ \{x,y,z\}\subseteq X:(x\succeq y)\wedge(y\succeq z)\implies(x\succeq z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is transitive
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 2.2.3, Problem 11
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proposition 2.
+ 
+\series default
+Let 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+ that is represented by a function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+.
+ For each increasing function 
+\begin_inset Formula $f:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+, we have that 
+\begin_inset Formula $f\circ u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Given:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+ that is represented by a function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall\ f:\mathbb{R}\rightarrow\mathbb{R}\ \mbox{increasing},f\circ u\ \mbox{represents}\succeq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take an increasing function, 
+\begin_inset Formula $f:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $\{x,y\}\subseteq X$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+1.
+ 
+\series default
+
+\begin_inset Formula $(\implies)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $x\succeq y$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\iff u(x)\ge u(y)$
+\end_inset
+
+ since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies f(u(x))\ge f(u(y))$
+\end_inset
+
+ since 
+\begin_inset Formula $f$
+\end_inset
+
+ is an increasing function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+2.
+
+\series default
+ 
+\begin_inset Formula $(\Longleftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $f(u(x))\ge f(u(y))$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Suppose for contradiction 
+\begin_inset Formula $\neg(x\succeq y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Then, by the completeness of 
+\begin_inset Formula $\succeq$
+\end_inset
+
+, 
+\begin_inset Formula $y\succeq x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Now, 
+\begin_inset Formula $\neg(x\succeq y)$
+\end_inset
+
+ and 
+\begin_inset Formula $y\succeq x$
+\end_inset
+
+ 
+\begin_inset Formula $\implies y\succ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\iff u(y)>u(x)$
+\end_inset
+
+ since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies f(u(y))>f(u(x))$
+\end_inset
+
+ since 
+\begin_inset Formula $f$
+\end_inset
+
+ is an increasing function
+\end_layout
+
+\begin_layout Plain Layout
+But, this is a contradiction since we assumed 
+\begin_inset Formula $f(u(x))\ge f(u(y))$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Thus, 
+\begin_inset Formula $x\succeq y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Section 2.2.3, Problem 13
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $Z\equiv\{z_{1},\ldots,z_{n}\}$
+\end_inset
+
+ be a finite set of alternatives.
+ Let 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ be a complete and transitive binary relation on 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is represented by the following utility function: 
+\begin_inset Formula $\forall\ i\in\{1,\ldots,n\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Formula $u(z_{i})\equiv{\displaystyle \sum_{k:z_{i}\succeq z_{k}}}\frac{1}{2^{k}}-{\displaystyle \sum_{k:z_{k}\succ z_{i}}}\frac{1}{2^{k}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Given:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $Z\equiv\{z_{1},\ldots,z_{n}\}$
+\end_inset
+
+ is finite
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is a complete and transitive binary relation on 
+\begin_inset Formula $Z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is represented by the given utility function, i.e., 
+\begin_inset Formula $\forall\ \{z_{i},z_{j}\}\subseteq Z,\ z_{i}\succeq z_{j}\iff u(z_{i})\ge u(z_{j})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $\{z_{i},z_{j}\}\subseteq Z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $\begin{array}{cc}
+A\equiv\{k:z_{i}\succeq z_{k}\} & B\equiv\{k:z_{j}\succeq z_{k}\}\\
+C\equiv\{k:z_{k}\succ z_{i}\} & D\equiv\{k:z_{k}\succ z_{j}\}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+1.
+
+\series default
+ 
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $z_{i}\succeq z_{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Claim: 
+\series default
+
+\begin_inset Formula $|B|\leq|A|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $z_{k}\in B$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $z_{j}\succeq z_{k}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $z_{i}\succeq z_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{j}\succeq z_{k}$
+\end_inset
+
+, then by transitivity of 
+\begin_inset Formula $\succeq$
+\end_inset
+
+, 
+\begin_inset Formula $z_{i}\succeq z_{k}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $z_{k}\in A$
+\end_inset
+
+.
+ Therefore, since 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+, then 
+\begin_inset Formula $|B|\leq|A|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+End Claim
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Claim:
+\series default
+ 
+\begin_inset Formula $|C|\leq|D|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $z_{k}\in C$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $z_{k}\succ z_{i}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $z_{k}\succ z_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{i}\succeq z_{j}$
+\end_inset
+
+, then be transitivity of 
+\begin_inset Formula $\succeq$
+\end_inset
+
+, 
+\begin_inset Formula $z_{k}\succ z_{j}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $z_{k}\in D$
+\end_inset
+
+.
+ Therefore, since 
+\begin_inset Formula $C\subseteq D$
+\end_inset
+
+, then 
+\begin_inset Formula $|C|\leq|D|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+End Claim
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Now, 
+\begin_inset Formula $u(z_{i})\geq u(z_{j})\iff u(z_{i})-u(z_{j})\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align left
+\begin_inset Formula $u(z_{i})-u(z_{j})=\left({\displaystyle \sum_{A}}\frac{1}{2^{k}}-{\displaystyle \sum_{C}}\frac{1}{2^{k}}\right)-\left({\displaystyle \sum_{B}}\frac{1}{2^{k}}-{\displaystyle \sum_{D}}\frac{1}{2^{k}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+ 
+\begin_inset Formula $=\left({\displaystyle \sum_{A}}\frac{1}{2^{k}}-{\displaystyle \sum_{B}}\frac{1}{2^{k}}\right)+\left({\displaystyle \sum_{D}}\frac{1}{2^{k}}-{\displaystyle \sum_{C}}\frac{1}{2^{k}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Since 
+\begin_inset Formula $|A|\geq|B|$
+\end_inset
+
+, 
+\begin_inset Formula $\left({\displaystyle \sum_{A}}\frac{1}{2^{k}}-{\displaystyle \sum_{B}}\frac{1}{2^{k}}\right)\ge0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Also, since 
+\begin_inset Formula $|D|\geq|C|$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\left({\displaystyle \sum_{D}}\frac{1}{2^{k}}-{\displaystyle \sum_{C}}\frac{1}{2^{k}}\right)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Thus, 
+\begin_inset Formula $u(z_{i})-u(z_{j})\geq0\iff u(z_{i})\geq u(z_{j})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+2.
+
+\series default
+ 
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $u(z_{i})\geq u(z_{j})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Suppose for contradiction 
+\begin_inset Formula $\neg(z_{i}\succeq z_{j})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete, then 
+\begin_inset Formula $z_{j}\succeq z_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $z_{j}\succeq z_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\neg(z_{i}\succeq z_{j})\implies z_{j}\succ z_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Claim: 
+\series default
+
+\begin_inset Formula $|A|\lneq|B|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $z_{k}\in A$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $z_{i}\succeq z_{k}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+.
+ Since 
+\begin_inset Formula $z_{j}\succ z_{i}$
+\end_inset
+
+ and 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $z_{i}\succeq z_{k}$
+\end_inset
+
+, then by transitivity of 
+\begin_inset Formula $\succeq$
+\end_inset
+
+, 
+\begin_inset Formula $z_{j}\succ z_{k}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $z_{k}\in B$
+\end_inset
+
+.
+ Finally, we claim that 
+\begin_inset Formula $z_{j}\in B\backslash A$
+\end_inset
+
+.
+ By completeness of 
+\begin_inset Formula $\succeq$
+\end_inset
+
+, 
+\begin_inset Formula $z_{j}\succeq z_{j}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $z_{j}\in B$
+\end_inset
+
+.
+ But, since 
+\begin_inset Formula $\neg(z_{i}\succeq z_{j})$
+\end_inset
+
+, then 
+\begin_inset Formula $z_{j}\notin A$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $z_{j}\in B\backslash A$
+\end_inset
+
+.
+ Therefore, since 
+\begin_inset Formula $A\subsetneq B$
+\end_inset
+
+, then 
+\begin_inset Formula $|A|\lneq|B|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+End Claim
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Claim: 
+\begin_inset Formula $|D|\lneq|C|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take 
+\begin_inset Formula $z_{k}\in D$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $z_{k}\succ z_{j}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $z_{k}\succ z_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{j}\succ z_{i}$
+\end_inset
+
+, then by transitivity of 
+\begin_inset Formula $\succeq$
+\end_inset
+
+, 
+\begin_inset Formula $z_{k}\succ z_{i}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $z_{k}\in C$
+\end_inset
+
+.
+ Finally, we claim that 
+\begin_inset Formula $z_{j}\in C\backslash D$
+\end_inset
+
+.
+ Since 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $z_{j}\succ z_{i}$
+\end_inset
+
+, then 
+\begin_inset Formula $z_{j}\in C$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ But, since 
+\begin_inset Formula $\succ$
+\end_inset
+
+ is irreflexive, 
+\begin_inset Formula $\neg(z_{j}\succ z_{j})\implies z_{j}\notin D$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $z_{j}\in C\backslash D$
+\end_inset
+
+.
+ Therefore, since 
+\begin_inset Formula $D\subsetneq C$
+\end_inset
+
+, then 
+\series bold
+
+\begin_inset Formula $|D|\lneq|C|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+End Claim
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $u(z_{j})-u(z_{i})=\left({\displaystyle \sum_{B}}\frac{1}{2^{k}}-{\displaystyle \sum_{D}}\frac{1}{2^{k}}\right)-\left({\displaystyle \sum_{A}}\frac{1}{2^{k}}-{\displaystyle \sum_{C}}\frac{1}{2^{k}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+ 
+\begin_inset Formula $=\left({\displaystyle \sum_{B}}\frac{1}{2^{k}}-{\displaystyle \sum_{A}}\frac{1}{2^{k}}\right)+\left({\displaystyle \sum_{C}}\frac{1}{2^{k}}-{\displaystyle \sum_{D}}\frac{1}{2^{k}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Since 
+\begin_inset Formula $|B|\gneq|A|,$
+\end_inset
+
+ 
+\begin_inset Formula $\left({\displaystyle \sum_{B}}\frac{1}{2^{k}}-{\displaystyle \sum_{A}}\frac{1}{2^{k}}\right)>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Also, since 
+\begin_inset Formula $|C|\gneq|D|$
+\end_inset
+
+, 
+\begin_inset Formula $\left({\displaystyle \sum_{C}}\frac{1}{2^{k}}-{\displaystyle \sum_{D}}\frac{1}{2^{k}}\right)>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+So, 
+\begin_inset Formula $u(z_{j})-u(z_{i})>0\iff u(z_{j})>u(z_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+But, this contradicts our assumption that 
+\begin_inset Formula $u(z_{i})\geq u(z_{j})$
+\end_inset
+
+.
+ 
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Thus, 
+\begin_inset Formula $z_{i}\succeq z_{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Therefore, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is represented by the given utility function, i.e., 
+\begin_inset Formula $\forall\ \{z_{i},z_{j}\}\subseteq Z,\ z_{i}\succeq z_{j}\iff u(z_{i})\ge u(z_{j})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

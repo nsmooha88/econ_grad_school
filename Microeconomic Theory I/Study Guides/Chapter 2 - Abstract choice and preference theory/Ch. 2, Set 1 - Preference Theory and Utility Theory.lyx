@@ -1,0 +1,5472 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 2: Abstract choice and preference theory
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An 
+\series bold
+economy
+\series default
+ is a mathematical object in which agents, resources, firms, etc.
+ (i.e., the elements that constitute the society) are represented.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We start by studying the representation of agents.
+ There are essentially two ways in which an agent is represented in economic
+ models: (i) by means of his/her preferences; (ii) by means of his/her choices.
+ We independently introduce them.
+ We also study the relation between these two approaches.
+\end_layout
+
+\begin_layout Section*
+2.1
+\begin_inset space \quad{}
+\end_inset
+
+Preference theory
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Our primitive is a set of alternatives 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ In the preference model, an agent is represented by his/her statements
+ of preference about the different alternatives in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Let us introduce the mathematical structure that allows us to formalize
+ this concept.
+\end_layout
+
+\begin_layout Subsection*
+2.1.1
+\begin_inset space \quad{}
+\end_inset
+
+Mathematical aside: product space and binary relations
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(12).
+ 
+\series default
+\emph on
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ be two sets.
+ The 
+\series bold
+cartesian product of 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+
+\series default
+, denoted 
+\begin_inset Formula $A\times B$
+\end_inset
+
+, is the set of all lists of two elements in which the first element belongs
+ to 
+\begin_inset Formula $A$
+\end_inset
+
+ and the second element belongs to 
+\begin_inset Formula $B$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $A\times B\equiv\left\{ (a,b):a\in A,\ b\in B\right\} $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection*
+2.1.2
+\begin_inset space \quad{}
+\end_inset
+
+Binary relations
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A binary relation is a mathematical object that represents statements between
+ pairs of elements of a set.
+ For instance, consider a set of alternatives 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ For each two alternatives, say 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+, we collect the information whether an agent, say 
+\begin_inset Formula $i$
+\end_inset
+
+, finds 
+\begin_inset Formula $a$
+\end_inset
+
+ at least as good as 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ We can then define the 
+\begin_inset Quotes eld
+\end_inset
+
+at least as good
+\begin_inset Quotes erd
+\end_inset
+
+ binary relation as the collection of the postive answers.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(13).
+ 
+\series default
+\emph on
+A 
+\series bold
+binary relation
+\series default
+ on a set 
+\begin_inset Formula $A$
+\end_inset
+
+ is a subset of the cross product space 
+\begin_inset Formula $A\times A$
+\end_inset
+
+.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+at least as good
+\begin_inset Quotes erd
+\end_inset
+
+ binary relation on a set 
+\begin_inset Formula $A$
+\end_inset
+
+ is defined as follows: 
+\begin_inset Formula $\succsim\equiv\left\{ (a,b)\in A\times A:i\ \mbox{finds \ensuremath{a}\ at least as good as \ensuremath{b}}\right\} \subseteq A\times A$
+\end_inset
+
+
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In general, this formality is avoided by using short notation that represents
+ the relation that holds between elements.
+\end_layout
+
+\begin_layout Note*
+\begin_inset Formula $X$
+\end_inset
+
+ is a set, 
+\begin_inset Formula $\succsim\ \subseteq X\times X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x\succsim y\iff(x,y)\in\succsim$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(14).
+ 
+\series default
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on a set 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\emph on
+Strict binary relation associated with 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\succ$
+\end_inset
+
+.
+
+\series default
+ 
+\emph default
+
+\begin_inset Formula $\forall\ \{a,b\}\subseteq A:a\succ b\iff\left[a\succsim b\ \wedge\ \neg(b\succsim a)\right]$
+\end_inset
+
+.
+
+\emph on
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Symmetric Binary Relation associated with 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\sim$
+\end_inset
+
+.
+
+\series default
+ 
+\begin_inset Formula $\forall\ \{a,b\}\subseteq A:a\sim b\iff\left[a\succsim b\ \wedge\ b\succsim a\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We refer to the strict relation associated to the 
+\begin_inset Quotes eld
+\end_inset
+
+at least as good as
+\begin_inset Quotes erd
+\end_inset
+
+ relation as 
+\begin_inset Quotes eld
+\end_inset
+
+preference,
+\begin_inset Quotes erd
+\end_inset
+
+ as in 
+\begin_inset Quotes eld
+\end_inset
+
+agent 
+\begin_inset Formula $i$
+\end_inset
+
+ preferes 
+\begin_inset Formula $a$
+\end_inset
+
+ to 
+\begin_inset Formula $b$
+\end_inset
+
+;.
+\begin_inset Quotes erd
+\end_inset
+
+ We refer to the symmetric relation associated to the 
+\begin_inset Quotes eld
+\end_inset
+
+at least as good as
+\begin_inset Quotes erd
+\end_inset
+
+ relation as 
+\begin_inset Quotes eld
+\end_inset
+
+indifference,
+\begin_inset Quotes erd
+\end_inset
+
+ as in 
+\begin_inset Quotes eld
+\end_inset
+
+agent 
+\begin_inset Formula $i$
+\end_inset
+
+ is indifferent between 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We usually assume in economics that binary relations that represent agent's
+ rankings of alternatives satisfy two consistency properties: completeness
+ and transitivity.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(15).
+ 
+\series default
+\emph on
+A binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+ is 
+\series bold
+complete
+\series default
+ iff 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:x\succsim y\ \vee\ y\succsim x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The assumption that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete says that the individual has a well-defined preference between
+ any two possible alternatives.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(16).
+ 
+\series default
+\emph on
+A binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+ is 
+\series bold
+transitive
+\series default
+ iff 
+\begin_inset Formula $\forall\ \{x,y,z\}\subseteq X:\left[x\succsim y\ \wedge\ y\succsim z\right]\implies x\succsim z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Transitivity implies that it is impossible to face the decision maker with
+ a sequence of pairwise choices in which her preferences appear to cycle.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(17).
+
+\series default
+ 
+\emph on
+A 
+\series bold
+rational preference relation
+\series default
+ is a complete and transitive binary relation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the next section, we will see that when the set on which agents have
+ preferences is finite, one can think of a preference as a ranking of the
+ alternatives.
+\end_layout
+
+\begin_layout Section*
+2.2
+\begin_inset space \quad{}
+\end_inset
+
+Utility theory
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Is it possible to condense all the information contained in a preference
+ relation in a 
+\emph on
+welfare index
+\emph default
+? The study of this question is known as utility theory.
+\end_layout
+
+\begin_layout Subsection*
+2.2.1
+\begin_inset space \quad{}
+\end_inset
+
+Mathematical aside: functions
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A function from a set 
+\begin_inset Formula $A$
+\end_inset
+
+ to a set 
+\begin_inset Formula $B$
+\end_inset
+
+ is a mathematical object that attaches to each element in 
+\begin_inset Formula $A$
+\end_inset
+
+ a unique element in 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ The domain of a function from 
+\begin_inset Formula $A$
+\end_inset
+
+ to 
+\begin_inset Formula $B$
+\end_inset
+
+ is the set 
+\begin_inset Formula $A$
+\end_inset
+
+ and its co-domain 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ A function from 
+\begin_inset Formula $A$
+\end_inset
+
+ to 
+\begin_inset Formula $B$
+\end_inset
+
+ is generically denoted 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ To make explicit the domain and co-domain of function 
+\begin_inset Formula $f$
+\end_inset
+
+, we usually write 
+\begin_inset Formula $f:A\rightarrow B$
+\end_inset
+
+.
+ The element attached by 
+\begin_inset Formula $f$
+\end_inset
+
+ to 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ is denoted 
+\begin_inset Formula $f(x)$
+\end_inset
+
+; we call 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ the image of 
+\begin_inset Formula $x$
+\end_inset
+
+ under 
+\begin_inset Formula $f$
+\end_inset
+
+, or the value of 
+\begin_inset Formula $f$
+\end_inset
+
+ at 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ We also say that 
+\begin_inset Formula $f$
+\end_inset
+
+ maps 
+\begin_inset Formula $x$
+\end_inset
+
+ to 
+\begin_inset Formula $f(x)$
+\end_inset
+
+.
+ A statement completely defining a function shows its name, domain, co-domain,
+ and the image of each element in its domain.
+ 
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(18).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $C$
+\end_inset
+
+ be three sets.
+ Let 
+\begin_inset Formula $g:A\rightarrow B$
+\end_inset
+
+ and 
+\begin_inset Formula $f:B\rightarrow C$
+\end_inset
+
+ be two functions.
+ The 
+\series bold
+composite function of 
+\begin_inset Formula $f$
+\end_inset
+
+and 
+\begin_inset Formula $g$
+\end_inset
+
+
+\series default
+, denoted 
+\begin_inset Formula $f\circ g$
+\end_inset
+
+, is the function
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+f\circ g: & A & \rightarrow & C\\
+ & x & \mapsto & f\circ g(x)\equiv f(g(x))
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+2.2.2
+\begin_inset space \quad{}
+\end_inset
+
+Representation of preferences
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(19).
+ 
+\series default
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ A function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ 
+\series bold
+represents
+\series default
+ 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ iff 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:x\succsim y\iff u(x)\geq u(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\emph on
+(1).
+
+\series default
+\emph default
+ Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ If there is a function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ that represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive, i.e., it is a preference relation.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $\exists$
+\end_inset
+
+ a function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ that represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+
+\series bold
+ 
+\series default
+We want to show: 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:(x\succsim y)\vee(y\succsim x)$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete; 
+\begin_inset Formula $\forall\ \{x,y,z\}\subseteq X:(x\succsim y)\wedge(y\succsim z)\implies(x\succsim z)$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is transitive.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+\begin_inset space \quad{}
+\end_inset
+
+
+\series default
+(Completeness): Take 
+\begin_inset Formula $\{x,y\}\subseteq X$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $a=u(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $b=u(y)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\{a,b\}\subseteq\mathbb{R}$
+\end_inset
+
+, then either 
+\begin_inset Formula $a\geq b\ \vee\ b\geq a$
+\end_inset
+
+.
+ So, either 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $u(x)\geq u(y)\ \vee\ u(y)\geq u(x)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ Since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then 
+\begin_inset Formula $x\succsim y\ \vee\ y\succsim x$
+\end_inset
+
+.
+ Thus, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:(x\succsim y)\vee(y\succsim x)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+\begin_inset space \quad{}
+\end_inset
+
+
+\series default
+(Transitivity): Take 
+\begin_inset Formula $\{x,y,z\}\subseteq X$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $(x\succsim y)\wedge(y\succsim z)$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $u(x)\geq u(y)\wedge u(y)\geq u(z)$
+\end_inset
+
+ since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\geq$
+\end_inset
+
+ is transitive on the real numbers, 
+\begin_inset Formula $u(x)\geq u(z)$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $x\succsim z$
+\end_inset
+
+.
+ Thus, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\forall\ \{x,y,z\}\subseteq X:(x\succsim y)\wedge(y\succsim z)\implies(x\succsim z)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is transitive.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(20).
+ 
+\series default
+\emph on
+Let 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+.
+ The 
+\series bold
+binary relation associated with 
+\begin_inset Formula $u$
+\end_inset
+
+
+\series default
+, 
+\series bold
+denoted 
+\begin_inset Formula $\succsim^{u}$
+\end_inset
+
+,
+\series default
+ is defined by: 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:x\succsim^{u}y\iff u(x)\geq u(y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The ability to represent preferences by a utility function is closely linked
+ to the assumption of rationality.
+ Utility functions induce rational preference relations.
+ However, in general, not all rational preference relations can be described
+ by some utility function.
+ Only under certain conditions to the alternative space do rational preferences
+ imply the existence of a utility function representation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A property of a real-valued function is said to be ordinal if it is preserved
+ under strictly increasing transformations.
+ Cardinal properties are those not preserved under all such transformations.
+ The following proposition states that the preference relation associated
+ with a real-valued function is an ordinal property of the function.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\emph on
+(2).
+
+\series default
+\emph default
+ Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+ that is represented by a function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+.
+ For each strictly increasing function 
+\begin_inset Formula $f:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+, we have that 
+\begin_inset Formula $f\circ u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+ that is represented by a function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+.
+ By Proposition 1, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive.
+ We want to show that 
+\begin_inset Formula $\forall\ f:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $f$
+\end_inset
+
+ is increasing, 
+\begin_inset Formula $f\circ u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ Take an increasing function 
+\begin_inset Formula $f:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\{x,y\}\subseteq X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $x\succsim y\iff u(x)\ge u(y)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $f$
+\end_inset
+
+ is an increasing function, then 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $f(u(x))\ge f(u(y))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $f(u(x))\ge f(u(y))$
+\end_inset
+
+.
+ Suppose for contradiction 
+\begin_inset Formula $\neg(x\succsim y)$
+\end_inset
+
+.
+ Then, by the completeness of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $y\succsim x$
+\end_inset
+
+.
+ Now, by the definition of 
+\begin_inset Formula $\succ$
+\end_inset
+
+, 
+\begin_inset Formula $\neg(x\succsim y)\wedge y\succsim x\iff y\succ x$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $y\succ x\iff u(y)>u(x)$
+\end_inset
+
+.
+ Then, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $f(u(y))>f(u(x))$
+\end_inset
+
+ since 
+\begin_inset Formula $f$
+\end_inset
+
+ is an increasing function.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ However, this is a contradiction since we assumed 
+\begin_inset Formula $f(u(x))\ge f(u(y))$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Therefore, for each increasing function 
+\begin_inset Formula $f:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+, we have that 
+\begin_inset Formula $f\circ u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Thus, the preference relation associated with a utility function is an ordinal
+ property.
+ On the other hand, the numeral values assocaited with the alternatives
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+, and hence the magnitude of any differences in the utility measure between
+ alternatives, are cardinal properties.
+ Note that a utility funciton that represents a preference relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is not unique.
+ For any strictly increasing function 
+\begin_inset Formula $f:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $v(x)=f(u(x))$
+\end_inset
+
+ is a new utility function representing the same preferences on 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+.
+ It is only the ranking of alternatives that matters.
+\end_layout
+
+\begin_layout Note*
+The existence of a utility functions imply rational preferences.
+ But, in general, rational preferences do not imply the existence of a utility
+ function.
+ Though, under certain conditions, rational preferences do imply the existence
+ of a utility function.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The 
+\series bold
+cardinality
+\series default
+ of a set 
+\begin_inset Formula $A$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\#A$
+\end_inset
+
+ or 
+\begin_inset Formula $\left|A\right|$
+\end_inset
+
+, is the number of elements contained in 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Set 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\series bold
+finite
+\series default
+ if 
+\begin_inset Formula $\left|A\right|<\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\emph on
+(3).
+
+\series default
+\emph default
+ Assume 
+\begin_inset Formula $X$
+\end_inset
+
+ is finite.
+ Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive, then there exists a function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ that represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a finite set and 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive.
+ Define the function 
+\begin_inset Formula $u$
+\end_inset
+
+ as follows:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+u: & X & \rightarrow & \mathbb{R}\\
+ & x & \mapsto & u(x)\equiv|\{z\in X:x\succsim z\}|
+\end{array}
+\]
+
+\end_inset
+
+Take 
+\begin_inset Formula $\{x,y\}\subseteq X$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $A\equiv\{z:x\succsim z\}$
+\end_inset
+
+ and 
+\begin_inset Formula $B\equiv\{z:y\succsim z\}$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $x\succsim y\iff u(x)\geq u(y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+.
+ We claim that 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $z\in B$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $y\succsim z$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+ and 
+\begin_inset Formula $y\succsim z$
+\end_inset
+
+, then by transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $x\succsim z$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $z\in A$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+, then 
+\begin_inset Formula $|B|\leq|A|$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u(x)=|A|$
+\end_inset
+
+ and 
+\begin_inset Formula $u(y)=|B|$
+\end_inset
+
+, then 
+\begin_inset Formula $u(y)\leq u(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $u(x)\geq u(y)$
+\end_inset
+
+.
+ Suppose for contradiction that 
+\begin_inset Formula $\neg(x\succsim y)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete, then 
+\begin_inset Formula $y\succsim x$
+\end_inset
+
+.
+ By the definition of 
+\begin_inset Formula $\succ$
+\end_inset
+
+, 
+\begin_inset Formula $\neg(x\succsim y)$
+\end_inset
+
+ and 
+\begin_inset Formula $y\succsim x$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $y\succ x$
+\end_inset
+
+.
+ We claim that 
+\begin_inset Formula $A\subsetneq B$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ and 
+\begin_inset Formula $B\setminus A\neq\emptyset$
+\end_inset
+
+.
+ First, we prove that 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $z\in A$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $x\succsim z$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $y\succ x$
+\end_inset
+
+ and 
+\begin_inset Formula $x\succsim z$
+\end_inset
+
+, then by transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $y\succ z$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $z\in B$
+\end_inset
+
+.
+ Finally, we prove that 
+\begin_inset Formula $y\in B\setminus A$
+\end_inset
+
+.
+ By completeness of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $y\succsim y$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $y\in B.$
+\end_inset
+
+ Now, since 
+\begin_inset Formula $\neg(x\succsim y)$
+\end_inset
+
+, then 
+\begin_inset Formula $y\notin A$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $y\in B\setminus A$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $A\subsetneq B$
+\end_inset
+
+, and this implies that 
+\begin_inset Formula $|A|<|B|$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u(x)=|A|$
+\end_inset
+
+ and 
+\begin_inset Formula $u(y)=|B|$
+\end_inset
+
+, then 
+\begin_inset Formula $u(x)<u(y)\ (\rightarrow\leftarrow).$
+\end_inset
+
+ Thus, 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Theorem 3 generalizes to countably infinite sets of alternatives.
+ This result is listed as Theorem 4, followed by the proof.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\emph on
+(4).
+
+\series default
+\emph default
+ Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a finite set and 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ a preference on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Then, there is a function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ that represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a finite set and 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ a preference on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ The proof proceeds by induction on the cardinality of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $|X|=1$
+\end_inset
+
+, then 
+\begin_inset Formula $X\equiv\{x\}$
+\end_inset
+
+.
+ Define the function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ as follows: 
+\begin_inset Formula $u(x)\equiv c$
+\end_inset
+
+ where 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+.
+ Note, 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ Assume that the theorem holds when 
+\begin_inset Formula $|X|\leq n$
+\end_inset
+
+.
+ We want to show that when 
+\begin_inset Formula $|X|=n+1$
+\end_inset
+
+, there exists a function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ that represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $|X|=n+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Define 
+\begin_inset Formula $X\equiv\{x_{1},\ldots,x_{n}\}\cup\{x_{n+1}\}=A\cup B$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $|A|=n$
+\end_inset
+
+, then by assumption, 
+\begin_inset Formula $\exists\ w:A\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ \{x_{i},x_{j}\}\subseteq A:x_{i}\succsim x_{j}\iff w(x_{i})\geq w(x_{j})$
+\end_inset
+
+.
+ Now, since 
+\begin_inset Formula $w(A)\subseteq\mathbb{R}$
+\end_inset
+
+ is a finite set, then it contains a maximum element.
+ Let 
+\begin_inset Formula $w(\bar{x})$
+\end_inset
+
+ be the maximum of the set 
+\begin_inset Formula $w(A)$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\forall\ w(x_{i})\in w(A):w(\bar{x})\geq w(x_{i})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $w$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then 
+\begin_inset Formula $\forall\ x_{i}\in A:\bar{x}\succsim x_{i}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is a preference on 
+\begin_inset Formula $X$
+\end_inset
+
+, then either 
+\begin_inset Formula $\bar{x}\succsim x_{n+1}\ \vee\ x_{n+1}\succsim\bar{x}$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ as:
+\begin_inset Formula 
+\[
+x^{*}\equiv\begin{cases}
+\bar{x} & \mbox{if}\ \bar{x}\succ x_{n+1}\\
+x_{n+1} & \mbox{if}\ x_{n+1}\succsim\bar{x}
+\end{cases}
+\]
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $\exists\ x^{*}\in X,\forall\ x\in X:x^{*}\succsim x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Fix 
+\begin_inset Formula $x^{*}\in X$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ y\in X:x^{*}\succsim y$
+\end_inset
+
+.
+ We know such an element of 
+\begin_inset Formula $X$
+\end_inset
+
+ exists from the claim above.
+ Consider the set 
+\begin_inset Formula $X\setminus\{x^{*}\}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $|X\setminus\{x^{*}\}|=n$
+\end_inset
+
+, then by assumption, 
+\begin_inset Formula $\exists\ v:X\setminus\{x^{*}\}\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ \{y,z\}\subseteq X\setminus\{x^{*}\}:y\succsim z\iff v(y)\geq v(z)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+We now identify a candidate 
+\begin_inset Formula $u$
+\end_inset
+
+ for a representation of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ and prove that it is in fact a representation of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ First, 
+\begin_inset Formula $v(X\setminus\{x^{*}\})\subseteq\mathbb{R}$
+\end_inset
+
+ is a finite set, so 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+it
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ contains a maximum element.
+ Let 
+\begin_inset Formula $v(\hat{x})$
+\end_inset
+
+ be the maximum of the set 
+\begin_inset Formula $v(X\setminus\{x^{*}\})$
+\end_inset
+
+.
+ Now, define the function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ as follows:
+\begin_inset Formula 
+\[
+u(x)\equiv\begin{cases}
+v(x) & \mbox{if}\ x\neq x^{*}\\
+v(\hat{x})+1 & \mbox{if}\ x=x^{*}
+\end{cases}
+\]
+
+\end_inset
+
+It can be shown that 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As stated previously, it is not true that for an arbitrary set of alternatives
+ an arbitrary preference has a utility representation.
+\end_layout
+
+\begin_layout Subsection*
+2.2.3
+\begin_inset space \quad{}
+\end_inset
+
+Problems
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $A\equiv]1,2]\cup[3,4]$
+\end_inset
+
+ and 
+\begin_inset Formula $B\equiv]1,2]\cup[3,4]$
+\end_inset
+
+.
+ Draw 
+\begin_inset Formula $A\times B$
+\end_inset
+
+ as a subset of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\succsim\equiv A\times B$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ Is 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ symmetric, i.e., for each 
+\begin_inset Formula $\{x,y\}\subseteq X,\ x\succsim y\implies y\succsim x$
+\end_inset
+
+? Is it transitive?
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim\equiv A\times B$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+(Symmetry): Take 
+\begin_inset Formula $\{x,y\}\subseteq X\equiv\mathbb{R}$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+.
+ By the definition of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(x,y)\in\ \succsim\equiv A\times B$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ Then, 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $y\in B$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $A=B$
+\end_inset
+
+, then 
+\begin_inset Formula $y\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in B$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $(y,x)\in\ \succeq\equiv A\times B$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $y\succsim x$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is symmetric.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+(Transitivity): Take 
+\begin_inset Formula $\{x,y,z\}\subseteq X\equiv\mathbb{R}$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+ and 
+\begin_inset Formula $y\succsim z$
+\end_inset
+
+.
+ By the definiton of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $(x,y)\in\ \succsim\equiv A\times B$
+\end_inset
+
+ and 
+\begin_inset Formula $(y,z)\in\ \succsim\equiv A\times B$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\left[x\in A\ \wedge\ y\in B\right]$
+\end_inset
+
+ and and 
+\begin_inset Formula $\left[y\in A\ \wedge\ z\in B\right]$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $z\in B$
+\end_inset
+
+.
+ By the defintion of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(x,z)\in\ \succsim\equiv A\times B$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ Thus, 
+\begin_inset Formula $x\succsim z$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is transitive.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $X\equiv\mathbb{N}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be the binary relation defined by: for each 
+\begin_inset Formula $\{x,y\}\subseteq X,x\succsim y$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $x\leq y$
+\end_inset
+
+.
+ Is 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ rational? Describe 
+\begin_inset Formula $\succ$
+\end_inset
+
+ and 
+\begin_inset Formula $\sim$
+\end_inset
+
+ as subsets of 
+\begin_inset Formula $\mathbb{N}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Let 
+\begin_inset Formula $\succsim\equiv\{(x,y)\in\mathbb{N}^{2}:x\leq y\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+(Completeness): Take 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{N}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\mathbb{N}\subseteq\mathbb{R}$
+\end_inset
+
+, then 
+\begin_inset Formula $x\leq y$
+\end_inset
+
+ or 
+\begin_inset Formula $y\leq x$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $(x,y)\in\ \succsim$
+\end_inset
+
+ or 
+\begin_inset Formula $(y,x)\in\ \succsim$
+\end_inset
+
+, which is equivalent to 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+ or 
+\begin_inset Formula $y\succsim x$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+(Transitivity): Take 
+\begin_inset Formula $\{x,y,z\}\subseteq\mathbb{N}$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+ and 
+\begin_inset Formula $y\succsim z$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $x\leq y$
+\end_inset
+
+ and 
+\begin_inset Formula $y\leq z$
+\end_inset
+
+.
+ Thus, by transitivity of 
+\begin_inset Formula $\leq$
+\end_inset
+
+, 
+\begin_inset Formula $x\leq z$
+\end_inset
+
+, which is equivalent to 
+\begin_inset Formula $x\succsim z$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is transitive.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $\succ\equiv\{(x,y)\in\mathbb{N}^{2}:x<y\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sim\equiv\{(x,y)\in\mathbb{N}^{2}:x=y\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a preference on a set 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+(a)
+\series bold
+ 
+\series default
+Prove that 
+\begin_inset Formula $\succ$
+\end_inset
+
+ is irreflexive, asymmetric, and negatively transitive.
+\end_layout
+
+\begin_layout Problem
+(b) Prove that 
+\begin_inset Formula $\sim$
+\end_inset
+
+ is reflexive, symmetric, and transitive.
+ Is 
+\begin_inset Formula $\sim$
+\end_inset
+
+ negatively transitive?
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a preference on a set 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+(a.1) 
+\begin_inset Formula $\succ$
+\end_inset
+
+ is irreflexive, i.e., 
+\begin_inset Formula $\forall\ x\in X:\neg(x\succ x)$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Suppose for contradiction 
+\begin_inset Formula $\exists\ x\in X:x\succ x$
+\end_inset
+
+.
+ Then, by the definition of 
+\begin_inset Formula $\succ$
+\end_inset
+
+, 
+\begin_inset Formula $x\succsim x$
+\end_inset
+
+ and 
+\begin_inset Formula $\neg(x\succsim x)$
+\end_inset
+
+.
+ However, a statement and its negation cannot both be true 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Thus, it must be the case that 
+\begin_inset Formula $\forall\ x\in X:\neg(x\succ x)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succ$
+\end_inset
+
+ is irreflexive.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+(a.2) 
+\begin_inset Formula $\succ$
+\end_inset
+
+ is asymetric, i.e., 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:x\succ y\implies\neg(y\succ x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Suppose for contradiciton 
+\begin_inset Formula $\exists\ \{x,y\}\subseteq X:x\succ y\ \wedge\ y\succ x$
+\end_inset
+
+.
+ Then, by the definition of 
+\begin_inset Formula $\succ$
+\end_inset
+
+, 
+\begin_inset Formula $\left[x\succsim y\wedge\neg(y\succsim x)\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[y\succsim x\land\neg(x\succsim y)\right]$
+\end_inset
+
+.
+ However, we cannot have both 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+ and 
+\begin_inset Formula $\neg(x\succsim y)$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:x\succ y\implies\neg(y\succ x)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succ$
+\end_inset
+
+ is asymetric
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+(a.3) 
+\begin_inset Formula $\succ$
+\end_inset
+
+ is negatively transitive, i.e., 
+\begin_inset Formula $\forall\ \{x,y,z\}\subseteq X:\neg(x\succ y)\ \mbox{\wedge}\ \neg(y\succ z)\implies\neg(x\succ z)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Take 
+\begin_inset Formula $\{x,y,z\}\subseteq X$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $\neg(x\succ y)$
+\end_inset
+
+ and 
+\begin_inset Formula $\neg(y\succ z)$
+\end_inset
+
+.
+ Then, by the definition of 
+\begin_inset Formula $\succ$
+\end_inset
+
+, 
+\begin_inset Formula $\neg[(x\succsim y)\wedge\neg(y\succsim x)]$
+\end_inset
+
+ and 
+\begin_inset Formula $\neg[(y\succsim z)\wedge\neg(z\succsim y)]$
+\end_inset
+
+.
+ By DeMorgan's Law, 
+\begin_inset Formula $[\neg(x\succsim y)\vee(y\succsim x)]$
+\end_inset
+
+ and 
+\begin_inset Formula $[\neg(y\succsim z)\vee(z\succsim y)]$
+\end_inset
+
+.
+ We now have 
+\begin_inset Formula $\left[\neg(x\succsim y)\ \wedge\ \neg(y\succsim z)\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\neg(x\succsim y)\ \wedge\ (z\succsim y)\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[(y\succsim x)\ \wedge\ \neg(y\succsim z)\right]$
+\end_inset
+
+, or 
+\begin_inset Formula $\left[(y\succsim x)\ \wedge\ (z\succsim y)\right]$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete, then 
+\begin_inset Formula $\left[\neg(x\succsim y)\ \wedge\ \neg(y\succsim z)\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[(y\succsim x)\ \wedge\ (z\succsim y)\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[(y\succsim x)\ \wedge\ (z\succsim y)\right]$
+\end_inset
+
+, or 
+\begin_inset Formula $\left[(y\succsim x)\ \wedge\ (z\succsim y)\right]$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $P\vee P\vee P\equiv P$
+\end_inset
+
+, then 
+\begin_inset Formula $\left[\neg(x\succsim y)\ \wedge\ \neg(y\succsim z)\right]$
+\end_inset
+
+ or 
+\begin_inset Formula $\left[(y\succsim x)\ \wedge\ (z\succsim y)\right]$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is transitive, then 
+\begin_inset Formula $\left[\neg(x\succsim z)\ \vee\ (z\succsim x)\right]$
+\end_inset
+
+.
+ By DeMorgan's Law, 
+\begin_inset Formula $\neg\left[(x\succsim z)\ \wedge\ \neg(z\succsim x)\right]$
+\end_inset
+
+.
+ Finally, by the definition of 
+\begin_inset Formula $\succ$
+\end_inset
+
+, 
+\begin_inset Formula $\neg(x\succ z)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\forall\ \{x,y,z\}\subseteq X:\neg(x\succ y)\ \mbox{\wedge}\ \neg(y\succ z)\implies\neg(x\succ z)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succ$
+\end_inset
+
+ is negatively transitive.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+(b.1) 
+\begin_inset Formula $\sim$
+\end_inset
+
+ is reflexive, i.e., 
+\begin_inset Formula $\forall\ x\in X:x\sim x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Take 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete, then 
+\begin_inset Formula $x\succsim x$
+\end_inset
+
+.
+ So, by the definition of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $x\sim x$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\forall\ x\in X:x\sim x$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\sim$
+\end_inset
+
+ is reflexive.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+(b.2) 
+\begin_inset Formula $\sim$
+\end_inset
+
+ is symmetric, i.e., 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:x\sim y\implies y\sim x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Take 
+\begin_inset Formula $\{x,y\}\subseteq X$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $x\sim y$
+\end_inset
+
+.
+ Then, by the definition of 
+\begin_inset Formula $\sim$
+\end_inset
+
+, 
+\begin_inset Formula $x\succsim y\ \wedge\ y\succsim x$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $A\ \wedge\ B\equiv B\ \wedge\ A$
+\end_inset
+
+, then 
+\begin_inset Formula $y\succsim x\ \wedge\ x\succsim y$
+\end_inset
+
+.
+ So, by the defintion of 
+\begin_inset Formula $\sim$
+\end_inset
+
+, 
+\begin_inset Formula $y\sim x$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:x\sim y\implies y\sim x$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\sim$
+\end_inset
+
+ is symmetric.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+(b.3) 
+\begin_inset Formula $\sim$
+\end_inset
+
+ is transitive, i.e., 
+\begin_inset Formula $\forall\ \{x,y,z\}\subseteq X:x\sim y\ \wedge\ y\sim z\implies x\sim z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Take 
+\begin_inset Formula $\{x,y,z\}\subseteq X$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $x\sim y$
+\end_inset
+
+ and 
+\begin_inset Formula $y\sim z$
+\end_inset
+
+.
+ Then, by the definition of 
+\begin_inset Formula $\sim$
+\end_inset
+
+, 
+\begin_inset Formula $[(x\succsim y)\wedge(y\succsim x)]$
+\end_inset
+
+ and 
+\begin_inset Formula $[(y\succsim z)\wedge(z\succsim y)]$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is transitive, then 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+ and 
+\begin_inset Formula $y\succsim z\implies x\succsim z$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ Also, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $z\succsim y$
+\end_inset
+
+ and 
+\begin_inset Formula $y\succsim x\implies z\succsim x$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ So, we have 
+\begin_inset Formula $x\succsim z$
+\end_inset
+
+ and 
+\begin_inset Formula $z\succsim x$
+\end_inset
+
+, which is equivalent to 
+\begin_inset Formula $x\sim z$
+\end_inset
+
+ by the definition of 
+\begin_inset Formula $\sim$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\forall\ \{x,y,z\}\subseteq X:x\sim y\ \wedge\ y\sim z\implies x\sim z$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\sim$
+\end_inset
+
+ is transitive.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+(b.4) Is 
+\begin_inset Formula $\sim$
+\end_inset
+
+ negatively transitive?
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\{a,b,c\}\subseteq X$
+\end_inset
+
+ such that 
+\begin_inset Formula $a=c$
+\end_inset
+
+.
+ Now, if 
+\begin_inset Formula $\neg(a\sim b)$
+\end_inset
+
+ and 
+\begin_inset Formula $\neg(b\sim c)$
+\end_inset
+
+, then 
+\begin_inset Formula $(a\sim c)$
+\end_inset
+
+ still holds since 
+\begin_inset Formula $a=c$
+\end_inset
+
+ and 
+\begin_inset Formula $\sim$
+\end_inset
+
+ is reflexive.
+ Therefore, 
+\begin_inset Formula $\sim$
+\end_inset
+
+ is not negatively transitive.
+\end_layout
+
+\begin_layout Problem
+Ann's preferences on money (i.e.
+ the set of alternatives 
+\begin_inset Formula $X\equiv\mathbb{R}$
+\end_inset
+
+) are represented by the function 
+\begin_inset Formula $x\in\mathbb{R}\mapsto u_{A}\equiv x^{3}$
+\end_inset
+
+ and Bob's preferences are represeted by the function 
+\begin_inset Formula $x\in\mathbb{R}\mapsto u_{B}(x)\equiv x$
+\end_inset
+
+.
+ Suppose that both Ann and Bob lose $100.
+ Could we say that Ann sufferes more than Bob from the loss?
+\end_layout
+
+\begin_layout Proof
+We can't say that Ann suffers more than Bob because utility functions preserve
+ ordinal properties not cardinal ones.
+ We can also have Ann's utility function match Bob's by using the composite
+ function 
+\begin_inset Formula $f(u(x))=\sqrt[3]{x^{3}}=x$
+\end_inset
+
+ to represent Ann's preferences.
+\end_layout
+
+\begin_layout Problem
+Let 
+\emph on
+
+\begin_inset Formula $X\equiv\{1,2,3,4,5\}$
+\end_inset
+
+.
+ 
+\emph default
+Construct a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+ that is complete but not transitive.
+ Construct a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+ that is transitive but not complete.
+ Show that both binary relations cannot be represented by a utility function.
+\end_layout
+
+\begin_layout Proof
+(Complete and intransitive binary relation):
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\succsim\equiv\{(1,2),(2,3),(3,1),(4,1),(5,1),(5,4),(2,4),(5,2),(3,5),(4,3),(1,1),(2,2),(3,3),(4,4),(5,5)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+If there is a function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+, then by transitivity of the real numbers, we have 
+\begin_inset Formula $u(1)\geq u(2)\ \wedge\ u(2)\geq u(3)\implies u(1)\geq u(3)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $(1,3)\in\ \succsim$
+\end_inset
+
+.
+ However, this does not hold since 
+\begin_inset Formula $(1,3)\notin\succsim$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+(Incomplete and transitive binary relation): 
+\begin_inset Formula $\succsim\equiv\{(1,2),(2,3),(1,3)\}$
+\end_inset
+
+.
+ A utility function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ cannot represent 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ since 
+\begin_inset Formula $u$
+\end_inset
+
+ would not defined for all elements in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+
+\emph on
+Let 
+\begin_inset Formula $N\equiv\{1,2,3\}$
+\end_inset
+
+ be a set of agents and 
+\begin_inset Formula $\succsim_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\succsim_{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $\succsim_{3}$
+\end_inset
+
+ be three preference relations on the set 
+\begin_inset Formula $A\equiv\{a,b,c\}$
+\end_inset
+
+.
+ The 
+\series bold
+majority binary relation induced by 
+\begin_inset Formula $\succsim_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\succsim_{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $\succsim_{3}$
+\end_inset
+
+, 
+\series default
+denoted 
+\begin_inset Formula $M$
+\end_inset
+
+ is defined as follows: for each 
+\begin_inset Formula $(x,y)\in A\times A$
+\end_inset
+
+, 
+\begin_inset Formula $(x,y)\in M$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $|\{i\in N:x\succsim_{i}y\}|\geq2$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula $M$
+\end_inset
+
+ is always complete, but may not be transititve
+\emph default
+.
+\end_layout
+
+\begin_layout Proof
+Define the preference relations on the set 
+\begin_inset Formula $A$
+\end_inset
+
+ for the three agents as follows:
+\begin_inset Formula 
+\begin{eqnarray*}
+\succsim_{1} & \equiv & \{(a,b),(b,c),(a,c),(a,a),(b,b),(c,c)\}\\
+\succsim_{2} & \equiv & \{(b,c),(c,a),(b,a),(a,a),(b,b),(c,c)\}\\
+\succsim_{3} & \equiv & \{(c,a),(a,b),(c,b),(a,a),(b,b),(c,c)\}
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $M\equiv\{(x,y)\in(A,A):|\{i\in N:x\succsim_{i}y\}|\geq2\}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+M\equiv\{(a,b),(b,c),(c,a),(a,a),(b,b),(c,c)\}
+\]
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+One can clearly see that 
+\begin_inset Formula $M$
+\end_inset
+
+ is complete, but it is not transitive.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a finite set and 
+\begin_inset Formula $B$
+\end_inset
+
+ a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ The 
+\series bold
+transitive closure
+\series default
+ of 
+\begin_inset Formula $B$
+\end_inset
+
+ is the binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+, denoted 
+\begin_inset Formula $T_{B}$
+\end_inset
+
+, defined as follows:
+\emph on
+ 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:x\ T_{B}\ y\iff\exists\ \{x_{i}\}_{i=1}^{n}\subseteq X,\ n\geq1:x_{1}=x,\ x_{n}=y,\ x_{1}\ B\ x_{2},\ldots,x_{n-1}\ B\ x_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+(a) Prove that
+\series bold
+ 
+\begin_inset Formula $B\subseteq T_{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+(b) Show 
+\begin_inset Formula $T_{B}$
+\end_inset
+
+ is transitive, i.e.,
+\series bold
+ 
+\begin_inset Formula $\forall\ \{x,y,z\}\subseteq X:(x\ T_{B}\ y)\ \wedge\ (y\ T_{B}\ z)\implies(x\ T_{B}\ z)$
+\end_inset
+
+
+\series default
+.
+\end_layout
+
+\begin_layout Problem
+(c) Let 
+\begin_inset Formula $C$
+\end_inset
+
+ be a transitive binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+ that contains 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $T_{B}\subseteq C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a finite set and 
+\begin_inset Formula $B$
+\end_inset
+
+ a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+(a) Prove that 
+\begin_inset Formula $B\subseteq T_{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Take 
+\begin_inset Formula $(x,y)\in B$
+\end_inset
+
+.
+ Set 
+\begin_inset Formula $n=2$
+\end_inset
+
+ and let 
+\begin_inset Formula $x_{1}=x$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}=y$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $\exists\ \{x_{i}\}_{i=1}^{2}\subseteq X,n=2\geq1:x_{1}=x,x_{2}=y,x_{1}\ B\ x_{2}\iff x\ T_{B}\ y$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $(x,y)\in T_{B}$
+\end_inset
+
+.
+ Therefore, 
+\series bold
+
+\begin_inset Formula $B\subseteq T_{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+(b) Prove that 
+\begin_inset Formula $T_{B}$
+\end_inset
+
+ is transitive.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Take 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\{x,y,z\}\subseteq X$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ Assume 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(x\ T_{B}\ y)\ \wedge\ (y\ T_{B}\ z)$
+\end_inset
+
+.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ Note, 
+\begin_inset Formula $(x\ T_{B}\ y)\iff\exists\ \{x_{i}\}_{i=1}^{n}\subseteq X,n\geq1:x_{1}=x,x_{n}=y,x_{1}\ B\ x_{2},\ldots,x_{n-1}\ B\ x_{n}$
+\end_inset
+
+, and 
+\begin_inset Formula $(y\ T_{B}\ z)\iff\exists\ \{y_{i}\}_{i=1}^{k}\subseteq X,k\geq1:y_{1}=y,y_{k}=z,y_{1}\ B\ y_{2},\ldots,y_{n-1}\ B\ y_{k}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x_{n}=y=y_{1}$
+\end_inset
+
+, then we can combine the two lists above into one sequence, where each
+ element is binarly related to the successive element in the sequence.
+ Let 
+\series bold
+
+\begin_inset Formula $\{z_{i}\}_{i=1}^{n}=\{x_{i}\}_{i=1}^{n}$
+\end_inset
+
+ 
+\series default
+and 
+\begin_inset Formula $\{z_{i}\}_{i=n+1}^{n+k-1}=\{y_{i}\}_{i=2}^{k}$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $\exists\ \{z_{i}\}_{i=1}^{n+k-1},[n+k-1]\geq1:z_{1}=x,z_{n}=y,z_{n+k-1}=z,z_{1}\ B\ z_{2},\ldots,z_{n-1}\ B\ z_{n},z_{n}\ B\ z_{n+1},\ldots,z_{n+k-2}\ B\ z_{n+k-1}\iff x\ T_{B}\ z$
+\end_inset
+
+.
+ Thus, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(x\ T_{B}\ y)\ \wedge\ (y\ T_{B}\ z)\Rightarrow(x\ T_{B}\ z)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ Therefore, 
+\begin_inset Formula $T_{B}$
+\end_inset
+
+ is transitive.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+(c) Let 
+\begin_inset Formula $C$
+\end_inset
+
+ be a transitive binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+ that contains 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $T_{B}\subseteq C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Take 
+\begin_inset Formula $(x,y)\in T_{B}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $(x\ T_{B}\ y)\iff\exists\ \{x_{i}\}_{i=1}^{n}\subseteq X,n\geq1:x_{1}=x,x_{n}=y,x_{1}\ B\ x_{2},\ldots,x_{n-1}\ B\ x_{n}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\{(x_{i-1},x_{i})\}_{i=2}^{n}\subseteq B$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $B\subseteq C$
+\end_inset
+
+, then 
+\begin_inset Formula $\{(x_{i-1},x_{i})\}_{i=2}^{n}\subseteq C$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $C$
+\end_inset
+
+ is a transitive binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+, then 
+\begin_inset Formula $(x_{1},x_{n})\in C$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $(x,y)\in C$
+\end_inset
+
+.
+ Therefore, 
+\series bold
+
+\begin_inset Formula $T_{B}\subseteq C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $Z\equiv\{z_{1},\ldots,z_{n}\}$
+\end_inset
+
+ be a finite set and 
+\begin_inset Formula $X$
+\end_inset
+
+ be the set of all non-empty subsets of 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $X\equiv2^{z}\backslash\{\emptyset\}$
+\end_inset
+
+.
+ We say that a preference relation on 
+\begin_inset Formula $X$
+\end_inset
+
+ is monotone if for each two elements of 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, such that 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ is at least as good as 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+(a)
+\series bold
+ 
+\series default
+Construct a monotonic preference on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Provide an economic interpretation of this property when 
+\begin_inset Formula $Z$
+\end_inset
+
+ is the set of items that may appear in the menu of a restaurant and 
+\begin_inset Formula $X$
+\end_inset
+
+ is the set of possible menus with items in 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ When would it be an appropriate assumption on agents' preferences?
+\end_layout
+
+\begin_layout Problem
+(b)
+\series bold
+ 
+\series default
+Describe a situation in which monotonicity may be violated.
+ Could a preference on 
+\begin_inset Formula $X$
+\end_inset
+
+ violate monotonicity?
+\end_layout
+
+\begin_layout Proof
+
+\emph on
+(a)
+\emph default
+ For 
+\begin_inset Formula $Z$
+\end_inset
+
+ finite and 
+\begin_inset Formula $X=2^{z}\backslash\{\emptyset\}$
+\end_inset
+
+, we have the cardinality of a set 
+\begin_inset Formula $A\in X$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\#A$
+\end_inset
+
+ or 
+\begin_inset Formula $\left|A\right|$
+\end_inset
+
+, which is the number of elements contained in 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Define a binary relation on 
+\series bold
+
+\begin_inset Formula $X$
+\end_inset
+
+ 
+\series default
+as follows: 
+\begin_inset Formula $\succsim\equiv\{(B,A)\in X^{2}:|B|\ge|A|\}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+(Completeness): Take 
+\begin_inset Formula $\{A,B\}\subseteq X$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $a=|A|$
+\end_inset
+
+ and 
+\begin_inset Formula $b=|B|$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\{a,b\}\subseteq\mathbb{N}$
+\end_inset
+
+, then either 
+\begin_inset Formula $a\geq b\ \vee\ b\geq a$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $|A|\geq|B|\ \vee\ |B|\geq|A|$
+\end_inset
+
+.
+ Thus, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\forall\ \{A,B\}\subseteq X:(A\succsim B)\vee(B\succsim A)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+(Transitivity): Take 
+\begin_inset Formula $\{A,B,C\}\subseteq X$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $a=|A|$
+\end_inset
+
+, 
+\begin_inset Formula $b=|B|$
+\end_inset
+
+, and 
+\begin_inset Formula $c=|C|$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $(A\succsim B)\ \wedge\ (B\succsim C)$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $a\geq b\ \wedge\ b\geq c$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\{a,b,c\}\subseteq\mathbb{N}$
+\end_inset
+
+ and 
+\begin_inset Formula $\geq$
+\end_inset
+
+ is transitive on the natural numbers, then 
+\begin_inset Formula $a\geq c$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $A\succsim C$
+\end_inset
+
+.
+ Thus, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\forall\ \{A,B,C\}\subseteq X:(A\succsim B)\ \wedge\ (B\succsim C)\implies(A\succsim C)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is transitive.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Since the binary relation is complete and transitive,then it is a rational
+ preference relation.
+ Also, note that 
+\begin_inset Formula $\forall\ \{A,B\}\subseteq X:A\subseteq B\implies|B|\ge|A|\iff B\succsim A$
+\end_inset
+
+.
+ Therefore, the preference relation is monotonic.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Menu 
+\begin_inset Formula $B$
+\end_inset
+
+ is at least as good as menu 
+\begin_inset Formula $A$
+\end_inset
+
+ if and only if the amount of items on menu 
+\begin_inset Formula $B$
+\end_inset
+
+ is greater than or equal to the amount of items on menu 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Monotonicity would be an appropriate assumption on agent's preferences
+ if the agent prefers more choices on a menu over less.
+\end_layout
+
+\begin_layout Proof
+
+\emph on
+(b)
+\emph default
+
+\begin_inset space \quad{}
+\end_inset
+
+A situation in which monotonicty may be violated is if an agent is a vegan
+ and he prefers a vegetarian menu with less items over a strictly meat based
+ menu that has several more options.
+ A preference on 
+\begin_inset Formula $X$
+\end_inset
+
+ can violate monotonicity.
+ For example, we can define a preference relation as: 
+\begin_inset Formula $\succsim\equiv\{(A,B)\in X^{2}:|A|\leq|B|\}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\forall\ \{A,B\}\subseteq X:A\succsim B\iff|A|\leq|B|$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\forall\ \{A,B\}\subseteq A:A\subseteq B\implies|A|\leq|B|\iff A\succsim B$
+\end_inset
+
+ .
+ In this case, an agent finds a set with less elements at least as good
+ a set with more elements.
+\end_layout
+
+\begin_layout Problem
+Consider a set 
+\begin_inset Formula $Z\equiv\{a,b,c\}$
+\end_inset
+
+.
+ The set of lotteries over 
+\begin_inset Formula $Z$
+\end_inset
+
+ is 
+\begin_inset Formula $\Delta(Z)\equiv\{\pi\equiv(\pi_{a},\pi_{b},\pi_{c})\in\mathbb{R}_{+}^{3}:\pi_{a}+\pi_{b}+\pi_{c}=1\}$
+\end_inset
+
+.
+ An Expected Utility Function on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ is a function 
+\begin_inset Formula $U:\Delta(Z)\rightarrow\mathbb{R}$
+\end_inset
+
+ for which there is 
+\begin_inset Formula $u:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+U(\pi)=\pi_{a}u(a)+\pi_{b}u(b)+\pi_{c}u(c)
+\]
+
+\end_inset
+
+Prove that a preference 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ is represented by an Expected Utility Function if and only if there is
+ 
+\begin_inset Formula $v:Z\rightarrow\mathbb{R}_{++}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the function that associates with each 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+ the value
+\begin_inset Formula 
+\[
+\Psi(\pi)=v(a)^{\pi(a)}\times v(b)^{\pi(b)}\times v(c)^{\pi(c)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a preference relation on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+.
+ We want to show that a preference 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $\triangle(Z)$
+\end_inset
+
+ is represented by an Expected Utility Function if and only if 
+\begin_inset Formula $\exists\ v:Z\to\mathbb{R}_{++}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by 
+\begin_inset Formula $\Psi(\pi)\equiv v(a)^{\pi(a)}v(b)^{\pi(b)}v(c)^{\pi(c)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ 
+\series default
+Assume that a preference 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ is represented by an Expected Utility Function for which there is 
+\begin_inset Formula $u:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+U(\pi)=\pi_{a}u(a)+\pi_{b}u(b)+\pi_{c}u(c)
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $f$
+\end_inset
+
+ be the function defined by:
+\begin_inset Formula 
+\[
+\begin{array}{cccc}
+f: & \mathbb{R} & \rightarrow & \mathbb{R}_{++}\\
+ & x & \mapsto & f(x)\equiv e^{x}
+\end{array}
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $f$
+\end_inset
+
+ is an increasing function.
+\end_layout
+
+\begin_layout Proof
+Also, define the function 
+\begin_inset Formula $v$
+\end_inset
+
+ as the composite function of 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $u$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\begin{array}{cccc}
+v: & Z & \rightarrow & \mathbb{R}_{++}\\
+ & z & \mapsto & v(z)\equiv e^{u(z)}
+\end{array}
+\]
+
+\end_inset
+
+Now,
+\begin_inset Formula 
+\begin{eqnarray*}
+\Psi(\pi) & = & (e^{u(a)})^{\pi(a)}\times(e^{u(b)})^{\pi(b)}\times(e^{u(c)})^{\pi(c)}\\
+ & = & e^{(u(a)\cdot\pi(a)+u(b)\cdot\pi(b)+u(c)\cdot\pi(c))}\\
+ & = & e^{U(\pi)}
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ is represented by 
+\begin_inset Formula $U(\pi)$
+\end_inset
+
+ and 
+\begin_inset Formula $f$
+\end_inset
+
+ is an increasing function, then by Proposition 2, 
+\begin_inset Formula $f\circ U(\pi)=e^{U(\pi)}=\Psi(\pi)$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume there is 
+\begin_inset Formula $v:Z\rightarrow\mathbb{R}_{++}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the function that associates with each 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+ the value
+\begin_inset Formula 
+\[
+\Psi(\pi)=v(a)^{\pi(a)}\times v(b)^{\pi(b)}\times v(c)^{\pi(c)}
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $g$
+\end_inset
+
+ be the function defined by:
+\begin_inset Formula 
+\[
+\begin{array}{cccc}
+g: & \mathbb{R}_{++} & \rightarrow & \mathbb{R}\\
+ & x & \mapsto & g(x)\equiv\ln(x)
+\end{array}
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $g$
+\end_inset
+
+ is an increasing function.
+ Also, define the function 
+\begin_inset Formula $u$
+\end_inset
+
+ as the composite function of 
+\begin_inset Formula $g$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\begin{array}{cccc}
+g: & Z & \rightarrow & \mathbb{R}\\
+ & z & \mapsto & u(z)\equiv\ln(v(z))
+\end{array}
+\]
+
+\end_inset
+
+Now, 
+\begin_inset Formula 
+\begin{eqnarray*}
+U(\pi) & = & \pi_{a}[\ln(v(a))]+\pi_{b}[\ln(v(b))]+\pi_{c}[\ln(v(c))]\\
+ & = & \ln(v(a)^{\pi(a)}\times v(b)^{\pi(b)}\times v(c)^{\pi(c)})\\
+ & = & \ln(\Psi(\pi))
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ is represented by 
+\begin_inset Formula $\Psi(\pi)$
+\end_inset
+
+ and 
+\begin_inset Formula $g$
+\end_inset
+
+ is an increasing function, then by Proposition 2, 
+\begin_inset Formula $g\circ\Psi(\pi)=ln(\Psi(x))=U(\pi)$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Prove Proposition 1 in the notes.
+\end_layout
+
+\begin_layout Proof
+The proof can be found in Section 2.2.2.
+\end_layout
+
+\begin_layout Problem
+Prove Proposition 2 in the notes.
+\end_layout
+
+\begin_layout Proof
+The proof can be found in Section 2.2.2.
+\end_layout
+
+\begin_layout Problem
+Prove Theorem 4 in the notes.
+\end_layout
+
+\begin_layout Proof
+The proof can be found in Section 2.2.2.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $Z\equiv\{z_{1},\ldots,z_{n}\}$
+\end_inset
+
+ be a finite set of alternatives.
+ Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a complete and transitive binary relation on 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the following utility function: 
+\begin_inset Formula $\forall\ i\in\{1,\ldots,n\}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+u(z_{i})\equiv{\displaystyle \sum_{k:z_{i}\succsim z_{k}}}\frac{1}{2^{k}}-{\displaystyle \sum_{k:z_{k}\succ z_{i}}}\frac{1}{2^{k}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $Z\equiv\{z_{1},\ldots,z_{n}\}$
+\end_inset
+
+ be a finite set of alternatives.
+ Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a complete and transitive binary relation on 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the given utility function, i.e., 
+\begin_inset Formula $\forall\ \{z_{i},z_{j}\}\subseteq Z:z_{i}\succsim z_{j}\iff u(z_{i})\ge u(z_{j})$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\{z_{i},z_{j}\}\subseteq Z$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $A\equiv\{k:z_{i}\succsim z_{k}\}$
+\end_inset
+
+, 
+\begin_inset Formula $B\equiv\{k:z_{j}\succsim z_{k}\}$
+\end_inset
+
+, 
+\begin_inset Formula $C\equiv\{k:z_{k}\succ z_{i}\}$
+\end_inset
+
+, 
+\begin_inset Formula $D\equiv\{k:z_{k}\succ z_{j}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $z_{i}\succsim z_{j}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\bar under
+Claim:
+\series bold
+\bar default
+ 
+\series default
+
+\begin_inset Formula $|B|\leq|A|$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $k\in B$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $z_{j}\succsim z_{k}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $z_{i}\succsim z_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{j}\succsim z_{k}$
+\end_inset
+
+, then by transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $z_{i}\succsim z_{k}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $k\in A$
+\end_inset
+
+.
+ Therefore, since 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+, then 
+\begin_inset Formula $|B|\leq|A|$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\bar under
+Claim:
+\series bold
+\bar default
+ 
+\series default
+
+\begin_inset Formula $|C|\leq|D|$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $k\in C$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $z_{k}\succ z_{i}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $z_{k}\succ z_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{i}\succsim z_{j}$
+\end_inset
+
+, then be transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $z_{k}\succ z_{j}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $k\in D$
+\end_inset
+
+.
+ Therefore, since 
+\begin_inset Formula $C\subseteq D$
+\end_inset
+
+, then 
+\begin_inset Formula $|C|\leq|D|$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Now,
+\begin_inset Formula 
+\begin{eqnarray*}
+u(z_{i})-u(z_{j}) & = & \left({\displaystyle \sum_{A}}\frac{1}{2^{k}}-{\displaystyle \sum_{C}}\frac{1}{2^{k}}\right)-\left({\displaystyle \sum_{B}}\frac{1}{2^{k}}-{\displaystyle \sum_{D}}\frac{1}{2^{k}}\right)\\
+ & = & \left({\displaystyle \sum_{A}}\frac{1}{2^{k}}-{\displaystyle \sum_{B}}\frac{1}{2^{k}}\right)+\left({\displaystyle \sum_{D}}\frac{1}{2^{k}}-{\displaystyle \sum_{C}}\frac{1}{2^{k}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $|A|\geq|B|$
+\end_inset
+
+, 
+\begin_inset Formula $\left({\displaystyle \sum_{A}}\frac{1}{2^{k}}-{\displaystyle \sum_{B}}\frac{1}{2^{k}}\right)\ge0$
+\end_inset
+
+.
+ Also, since 
+\begin_inset Formula $|D|\geq|C|$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\left({\displaystyle \sum_{D}}\frac{1}{2^{k}}-{\displaystyle \sum_{C}}\frac{1}{2^{k}}\right)\geq0$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ Thus, 
+\begin_inset Formula $u(z_{i})-u(z_{j})\geq0\iff u(z_{i})\geq u(z_{j})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $u(z_{i})\geq u(z_{j})$
+\end_inset
+
+.
+ Suppose for contradiction 
+\begin_inset Formula $\neg(z_{i}\succsim z_{j})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete, then 
+\begin_inset Formula $z_{j}\succsim z_{i}$
+\end_inset
+
+.
+ Note, 
+\begin_inset Formula $z_{j}\succsim z_{i}\wedge\neg(z_{i}\succsim z_{j})\iff z_{j}\succ z_{i}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\bar under
+Claim:
+\series bold
+\bar default
+ 
+\series default
+
+\begin_inset Formula $|A|\lneq|B|$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $k\in A$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $z_{i}\succsim z_{k}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+.
+ Since 
+\begin_inset Formula $z_{j}\succ z_{i}$
+\end_inset
+
+ and 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $z_{i}\succsim z_{k}$
+\end_inset
+
+, then by transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $z_{j}\succ z_{k}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $k\in B$
+\end_inset
+
+.
+ Finally, we claim that 
+\begin_inset Formula $j\in B\backslash A$
+\end_inset
+
+.
+ By completeness of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $z_{j}\succsim z_{j}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $j\in B$
+\end_inset
+
+.
+ However, since 
+\begin_inset Formula $\neg(z_{i}\succsim z_{j})$
+\end_inset
+
+, then 
+\begin_inset Formula $j\notin A$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $j\in B\backslash A$
+\end_inset
+
+.
+ Therefore, since 
+\begin_inset Formula $A\subsetneq B$
+\end_inset
+
+, then 
+\begin_inset Formula $|A|\lneq|B|$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\bar under
+Claim:
+\series bold
+\bar default
+ 
+\begin_inset Formula $|D|\lneq|C|$
+\end_inset
+
+
+\series default
+.
+ Take 
+\begin_inset Formula $k\in D$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $z_{k}\succ z_{j}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $z_{k}\succ z_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{j}\succ z_{i}$
+\end_inset
+
+, then by transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $z_{k}\succ z_{i}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $k\in C$
+\end_inset
+
+.
+ Finally, we claim that 
+\begin_inset Formula $j\in C\backslash D$
+\end_inset
+
+.
+ Since 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $z_{j}\succ z_{i}$
+\end_inset
+
+, then 
+\begin_inset Formula $j\in C$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ However, since 
+\begin_inset Formula $\succ$
+\end_inset
+
+ is irreflexive, then 
+\begin_inset Formula $\neg(z_{j}\succ z_{j})\implies j\notin D$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $j\in C\backslash D$
+\end_inset
+
+.
+ Therefore, since 
+\begin_inset Formula $D\subsetneq C$
+\end_inset
+
+, then 
+\series bold
+
+\begin_inset Formula $|D|\lneq|C|$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Now,
+\begin_inset Formula 
+\begin{eqnarray*}
+u(z_{j})-u(z_{i}) & = & \left({\displaystyle \sum_{B}}\frac{1}{2^{k}}-{\displaystyle \sum_{D}}\frac{1}{2^{k}}\right)-\left({\displaystyle \sum_{A}}\frac{1}{2^{k}}-{\displaystyle \sum_{C}}\frac{1}{2^{k}}\right)\\
+ & = & \left({\displaystyle \sum_{B}}\frac{1}{2^{k}}-{\displaystyle \sum_{A}}\frac{1}{2^{k}}\right)+\left({\displaystyle \sum_{C}}\frac{1}{2^{k}}-{\displaystyle \sum_{D}}\frac{1}{2^{k}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $|B|\gneq|A|,$
+\end_inset
+
+ 
+\begin_inset Formula $\left({\displaystyle \sum_{B}}\frac{1}{2^{k}}-{\displaystyle \sum_{A}}\frac{1}{2^{k}}\right)>0$
+\end_inset
+
+.
+ Also, since 
+\begin_inset Formula $|C|\gneq|D|$
+\end_inset
+
+, 
+\begin_inset Formula $\left({\displaystyle \sum_{C}}\frac{1}{2^{k}}-{\displaystyle \sum_{D}}\frac{1}{2^{k}}\right)>0$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $u(z_{j})-u(z_{i})>0\iff u(z_{j})>u(z_{i})$
+\end_inset
+
+.
+ However, this contradicts our assumption that 
+\begin_inset Formula $u(z_{i})\geq u(z_{j})$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $z_{i}\succsim z_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a finite set and 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Show that if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive, then there is 
+\begin_inset Formula $x^{*}\in X$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $x^{*}\succsim x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a finite set and 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive.
+ Then, by Theorem 3, 
+\begin_inset Formula $\exists\ u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X:x\succsim y\iff u(x)\succsim u(y)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u(X)\subseteq\mathbb{R}$
+\end_inset
+
+ is a finite set, then it contains a maximum element.
+ Let 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ be the maximum of the set 
+\begin_inset Formula $u(X)$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\forall\ x\in X:u(x^{*})\geq u(x)\iff x^{*}\succsim x$
+\end_inset
+
+ since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\exists\ x^{*}\in X$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ x\in X:x^{*}\succsim x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a non-empty finite set and 
+\begin_inset Formula $B$
+\end_inset
+
+ a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $B$
+\end_inset
+
+ satisfies the following two properties:
+\end_layout
+
+\begin_layout Problem
+(a) If 
+\begin_inset Formula $xBy$
+\end_inset
+
+, then 
+\begin_inset Formula $\neg(yBx)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+(b) If 
+\begin_inset Formula $\neg(xBy)$
+\end_inset
+
+ and 
+\begin_inset Formula $\neg(yBz)$
+\end_inset
+
+, then 
+\begin_inset Formula $\neg(xBz)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $W$
+\end_inset
+
+ be the binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+ defined by: 
+\begin_inset Formula $xWy$
+\end_inset
+
+ if 
+\begin_inset Formula $\neg(yBx)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+(a) State the definiton of completeness of 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+(b) Prove that 
+\begin_inset Formula $W$
+\end_inset
+
+ is complete.
+\end_layout
+
+\begin_layout Problem
+(c) State the definition of transitivity of 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+(d) Prove that 
+\begin_inset Formula $W$
+\end_inset
+
+ is transitive.
+\end_layout
+
+\begin_layout Problem
+(e) Prove that there is an element of 
+\begin_inset Formula $x^{*}\in X$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $y\in X,\neg(y\ B\ x^{*})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a non-empty finite set and 
+\begin_inset Formula $B$
+\end_inset
+
+ a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $B$
+\end_inset
+
+ satisfies the following two properties:
+\end_layout
+
+\begin_layout Proof
+(a) If 
+\begin_inset Formula $x\ B\ y$
+\end_inset
+
+, then 
+\begin_inset Formula $\neg(y\ B\ x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+(b) If 
+\begin_inset Formula $\neg(x\ B\ y)$
+\end_inset
+
+ and 
+\begin_inset Formula $\neg(y\ B\ z)$
+\end_inset
+
+, then 
+\begin_inset Formula $\neg(xBz)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $W$
+\end_inset
+
+ be the binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+ defined by: 
+\begin_inset Formula $x\ W\ y$
+\end_inset
+
+ if 
+\begin_inset Formula $\neg(y\ B\ x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\forall\ \{x,y\}\subseteq X$
+\end_inset
+
+, 
+\begin_inset Formula $xWy$
+\end_inset
+
+ or 
+\begin_inset Formula $yWx$
+\end_inset
+
+ or both.
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $\neg(xWy)$
+\end_inset
+
+, then by the definition of 
+\begin_inset Formula $W$
+\end_inset
+
+, 
+\begin_inset Formula $\neg(\neg(yBx))$
+\end_inset
+
+, which is equivalent to 
+\begin_inset Formula $yBx$
+\end_inset
+
+.
+ By proposition (a), 
+\begin_inset Formula $yBx\implies\neg(xBy)$
+\end_inset
+
+.
+ Then, by the definition of 
+\begin_inset Formula $W$
+\end_inset
+
+, 
+\begin_inset Formula $yWx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall\ \{x,y,z\}\subseteq X:xWy\ \wedge\ yWz\implies xWz$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Assume 
+\begin_inset Formula $xWy$
+\end_inset
+
+ and 
+\begin_inset Formula $yWz$
+\end_inset
+
+.
+ Then, by the definition of 
+\begin_inset Formula $W$
+\end_inset
+
+, 
+\begin_inset Formula $\neg(yBx)$
+\end_inset
+
+ and 
+\begin_inset Formula $\neg(zBy)$
+\end_inset
+
+.
+ By proposition (b), 
+\begin_inset Formula $\neg(yBx)\ \wedge\ \neg(zBy)\implies\neg(zBx)$
+\end_inset
+
+, which is equivalent to 
+\begin_inset Formula $xWz$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Since 
+\begin_inset Formula $X$
+\end_inset
+
+ is finite and 
+\begin_inset Formula $W$
+\end_inset
+
+ is complete and transitive, then by Theorem 3, 
+\begin_inset Formula $\exists\ u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ that represents 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $A\equiv\arg{\displaystyle \max_{x\in X}}\ u(x)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $X$
+\end_inset
+
+ is finite, then 
+\begin_inset Formula $A\neq\emptyset$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\exists\ x^{*}\in A,\forall\ y\in X:u(x^{*})\geq u(y)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\forall\ y\in X:x^{*}Wy\iff\forall\ y\in X:\neg(yBx^{*})$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

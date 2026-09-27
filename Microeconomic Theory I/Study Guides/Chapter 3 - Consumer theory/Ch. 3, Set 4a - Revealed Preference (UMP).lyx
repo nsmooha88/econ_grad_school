@@ -1,0 +1,4181 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 3 - Consumer Theory
+\end_layout
+
+\begin_layout Standard
+Check: Problem 3, Section 3.5.7
+\end_layout
+
+\begin_layout Section*
+3.5
+\begin_inset space \quad{}
+\end_inset
+
+Consumer Theory IV: Revealed Preference
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now turn to the study of the consumer's decision problem.
+ What are the testable implications of consumers' preference maximization?
+ For simplicity, we assume throughout this section that prices are strictly
+ positive.
+ We denote the set of Walrasian budget sets with strictly positive prices
+ 
+\begin_inset Formula $\mathcal{B}_{++}^{W}$
+\end_inset
+
+.
+ We assume throughout that 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+3.5.1
+\begin_inset space \quad{}
+\end_inset
+
+Preference maximization
+\end_layout
+
+\begin_layout Note*
+Maximization of preferences implies WARP and it is equivalent to SARP.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a preference relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Recall from our abstract study of choice that the choices of the agent
+ represented by 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ in a budget set 
+\begin_inset Formula $B(p,w)\in\mathcal{B}^{W}$
+\end_inset
+
+ are given by:
+\begin_inset Formula 
+\[
+C^{\succsim}(p,w)\equiv\left\{ x\in B(p,w):\forall\ y\in B(p,w),\ x\succsim y\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+3.5.2
+\begin_inset space \quad{}
+\end_inset
+
+Utility maximization
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose that preference 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by utility function 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $x^{*}\in C^{\succsim}(p,w)$
+\end_inset
+
+ if and only if for each 
+\begin_inset Formula $y\in B(p,w)$
+\end_inset
+
+, 
+\begin_inset Formula $u(x)\geq u(y)$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is chosen by agent 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ if and only if it solves the 
+\series bold
+Utility Maximization Problem (UMP):
+\series default
+
+\begin_inset Formula 
+\begin{gather*}
+\max\ u(x)\\
+\mbox{subject to}\ x\in\mathbb{R}_{+}^{L}\ \mbox{and}\ p\cdot x\leq w
+\end{gather*}
+
+\end_inset
+
+Thus, the consumer's problem of choosing her most preferred consumption
+ bundle given prices 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and wealth level 
+\begin_inset Formula $w>0$
+\end_inset
+
+ can now be stated as a UMP.
+ In the UMP, the consumer chooses a consumption bundle in the Walrasian
+ budget set 
+\begin_inset Formula $B(p,w)$
+\end_inset
+
+ to maximize her utility level.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(75).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be a set and 
+\begin_inset Formula $f:A\rightarrow\mathbb{R}$
+\end_inset
+
+ a real valued function defined on 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ An element 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ is a 
+\series bold
+maximizer of 
+\begin_inset Formula $f$
+\end_inset
+
+ on 
+\begin_inset Formula $A$
+\end_inset
+
+
+\series default
+ if for each 
+\begin_inset Formula $y\in A$
+\end_inset
+
+, 
+\begin_inset Formula $f(x)\geq f(y)$
+\end_inset
+
+.
+ The set of maximizers of 
+\begin_inset Formula $f$
+\end_inset
+
+ on 
+\begin_inset Formula $A$
+\end_inset
+
+ is denoted 
+\begin_inset Formula $\arg\max_{x\in A}f(x)$
+\end_inset
+
+, or alternatively 
+\begin_inset Formula $\arg\max\{f(x):x\in A\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Using the notation above, for each 
+\begin_inset Formula $(p,w)\in\mathbb{R}_{+}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+C^{\succsim}(p,w)=\arg\max\left\{ u(x):x\in B(p,w)\right\} =\{x\in\mathbb{R}_{+}^{L}|\forall\ y\in B(p,w):x\succsim y\}
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $C^{\succsim}(p,w)$
+\end_inset
+
+ is the choice set induced by the maximization of preferences.
+ So, for all 
+\begin_inset Formula $x^{*}\in C^{\succsim}(p,w)$
+\end_inset
+
+, 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ solves the UMP.
+\end_layout
+
+\begin_layout Subsection*
+3.5.3
+\begin_inset space \quad{}
+\end_inset
+
+Characterization of demand correspondence
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(17).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a continuous preference on 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Then, for each 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and each 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+, 
+\begin_inset Formula $C^{\succsim}(p,w)\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+By definition, the budget set 
+\begin_inset Formula $B(p,w)=\{x\in\mathbb{R}_{+}^{L}:p\cdot x\leq\}$
+\end_inset
+
+ is closed.
+ If 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+, then 
+\begin_inset Formula $B(p,w)$
+\end_inset
+
+ is also bounded because for any 
+\begin_inset Formula $l=1,\ldots,L$
+\end_inset
+
+, we have 
+\begin_inset Formula $x_{l}\leq(\nicefrac{w}{p_{l}})$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in B(p,w)$
+\end_inset
+
+.
+ So, by the Heine-Borel Theorem, each set 
+\begin_inset Formula $B(p,w)$
+\end_inset
+
+ is compact.
+ By Theorem 9, a continuous preference on 
+\begin_inset Formula $X\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ admits a continuous utility representation.
+ By Weierstrass's Theorem, each continuous function on a compact set has
+ a maximizer.
+ Thus, 
+\begin_inset Formula $C^{\succsim}(p,w)\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+With this result, we now focus our attention on the properties of two objects
+ that emerge from the UMP: the consumer's set of optimal consumption bundles
+ (the solution set of the UMP) and the consumer's maximal utility value
+ (the value function of the UMP).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The rule that assigns the set of optimal consumption vectors in the UMP
+ to each price-wealth situation 
+\begin_inset Formula $(p,w)\gg0$
+\end_inset
+
+ is represented by the choice structure 
+\begin_inset Formula $(\mathcal{B}^{W},C^{\succsim})$
+\end_inset
+
+, where 
+\begin_inset Formula $C^{\succsim}$
+\end_inset
+
+ is known as the 
+\emph on
+Walrasian
+\emph default
+ (or 
+\emph on
+ordinary
+\emph default
+ or 
+\emph on
+market
+\emph default
+) 
+\emph on
+demand correspondence
+\emph default
+.
+ Note that, as a general matter, for a given 
+\begin_inset Formula $(p,w)\gg0$
+\end_inset
+
+, the optimal set 
+\begin_inset Formula $C^{\succsim}(p,w)$
+\end_inset
+
+ may have more than one element.
+ When 
+\begin_inset Formula $C^{\succsim}$
+\end_inset
+
+ is single-valued for all 
+\begin_inset Formula $(p,w)$
+\end_inset
+
+, we refer to 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+, which is the unique element in 
+\begin_inset Formula $C^{\succsim}(p,w)$
+\end_inset
+
+, as the 
+\emph on
+Walrasian 
+\emph default
+(or 
+\emph on
+ordinary
+\emph default
+ or 
+\emph on
+market
+\emph default
+) 
+\emph on
+demand function
+\emph default
+.
+ Remember, the choices made my an agent represented by a preference relation,
+ i.e., 
+\begin_inset Formula $C^{\succsim}(p,w)$
+\end_inset
+
+, satisfy WARP by proposition 5.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The properties of 
+\begin_inset Formula $C^{\succsim}$
+\end_inset
+
+ stated in Proposition 18 follow from direct examination of the UMP.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(18).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a rational, locally non-satiated, and continuous preference and 
+\begin_inset Formula $\left(\mathcal{B}_{++}^{W},C^{\succsim}\right)$
+\end_inset
+
+ its associated Walrasian choice structure.
+ Then,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $C^{\succsim}$
+\end_inset
+
+ is homogenous of degree zero, i.e., for each 
+\begin_inset Formula $(p,w)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+ and each 
+\begin_inset Formula $\alpha\in\mathbb{R}_{++}$
+\end_inset
+
+, 
+\begin_inset Formula $C^{\succsim}(\alpha p,\alpha w)=C^{\succsim}(p,w)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\mathcal{B}_{++}^{W},C^{\succsim}\right)$
+\end_inset
+
+ satisfies Walras' Law.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is convex, then 
+\begin_inset Formula $C^{\succsim}$
+\end_inset
+
+ is convex-valued, i.e., for each 
+\begin_inset Formula $(p,w)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+, 
+\begin_inset Formula $C^{\succsim}(p,w)$
+\end_inset
+
+ is convex.
+ If 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is strictly convex, then 
+\begin_inset Formula $C^{\succsim}$
+\end_inset
+
+ is single-valued.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a rational, locally non-satiated, and continuous preference and 
+\begin_inset Formula $\left(\mathcal{B}_{++}^{W},C^{\succsim}\right)$
+\end_inset
+
+ its associated Walrasian choice structure.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+First, we prove that 
+\begin_inset Formula $C^{\succsim}$
+\end_inset
+
+ is homogenous of degree zero.
+ Take 
+\begin_inset Formula $(p,w)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+ and take 
+\begin_inset Formula $\alpha\in\mathbb{R}_{++}$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+C^{\succsim}(\alpha p,\alpha w)=\left\{ x\in B(\alpha p,\alpha w):\forall\ y\in B(\alpha p,\alpha w),\ x\succsim y\right\} 
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $B(\alpha p,\alpha w)\equiv\{x\in X:\alpha p\cdot x\leq\alpha w\}$
+\end_inset
+
+.
+ If we divide both sides of the inequality by 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, then the budget set is simply 
+\begin_inset Formula $B(\alpha p,\alpha w)=B(p,w)\equiv\left\{ x\in X:p\cdot x\leq w\right\} $
+\end_inset
+
+.
+ The set of feasible consumption bundles in the utility maximization problem
+ does not change when all prices and wealth are multiplied by a constant
+ 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+.
+ Thus, we can rewrite 
+\begin_inset Formula $C^{\succsim}(\alpha p,\alpha w)$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{eqnarray*}
+C^{\succsim}(\alpha p,\alpha w) & = & \left\{ x\in B(p,w):\forall\ y\in B(p,w),\ x\succsim y\right\} \\
+ & = & C^{\succsim}(p,w)
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $\forall\ (p,w)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+},\ \forall\ \alpha\in\mathbb{R}_{++}:C^{\succsim}(\alpha p,\alpha w)=C^{\succsim}(p,w)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $C^{\succsim}$
+\end_inset
+
+ is homogenous of degree zero.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Second, we prove that 
+\begin_inset Formula $\left(\mathcal{B}_{++}^{W},C^{\succsim}\right)$
+\end_inset
+
+ satisfies Walras' Law.
+ Suppose for contradiction that 
+\begin_inset Formula $\left(\mathcal{B}_{++}^{W},C^{\succsim}\right)$
+\end_inset
+
+ does not satisfy Walras' Law.
+ Then, 
+\begin_inset Formula $\exists\ (p,w)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+},\ \exists\ x\in C^{\succsim}(p,w):p\cdot x\neq w$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x\in C^{\succsim}(p,w)\subseteq B(p,w)$
+\end_inset
+
+, then 
+\begin_inset Formula $p\cdot x<w$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $x\in\mbox{Int}(B(p,w))$
+\end_inset
+
+, which, by definition, is an open set.
+ Since 
+\begin_inset Formula $\mbox{Int}(B(p,w))$
+\end_inset
+
+ is an open set, then 
+\begin_inset Formula $\exists\ \epsilon>0:B_{\epsilon}^{X}(x)\subseteq\mbox{Int}(B(p,w))$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is locally non-satiated, then 
+\begin_inset Formula $\exists\ y\in B_{\epsilon}^{X}(x):y\succ x$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $y\in B_{\epsilon}^{X}(x)\subseteq\mbox{Int}(B(p,w))$
+\end_inset
+
+, then 
+\begin_inset Formula $y\in\mbox{Int}(B(p,w))$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $y\succ x$
+\end_inset
+
+ and 
+\begin_inset Formula $y\in\mbox{Int}(B(p,w))$
+\end_inset
+
+.
+ However, this contradicts the fact that 
+\begin_inset Formula $x\in C^{\succsim}(p,w)$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\left(\mathcal{B}_{++}^{W},C^{\succsim}\right)$
+\end_inset
+
+ Walras' Law.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Next, we prove that if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is convex, then 
+\begin_inset Formula $C^{\succsim}$
+\end_inset
+
+ is convex-valued.
+ Assume preferences are convex.
+ Take 
+\begin_inset Formula $(p,w)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $C^{\succsim}(p,w)$
+\end_inset
+
+ is convex, i.e., 
+\begin_inset Formula $\forall\ \{x,x^{\prime}\}\subseteq C^{\succsim}(p,w),\ \forall\ \alpha\in[0,1]:\alpha x+(1-\alpha)x^{\prime}\in C^{\succsim}(p,w)$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\{x,x^{\prime}\}\subseteq C^{\succsim}(p,w)$
+\end_inset
+
+ and take 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+p\cdot(\alpha x+(1-\alpha)x^{\prime})=\alpha\left(p\cdot x\right)+(1-\alpha)\left(p\cdot x^{\prime}\right)\leq\alpha w+(1-\alpha)w=w
+\]
+
+\end_inset
+
+Hence, 
+\begin_inset Formula $\alpha x+(1-\alpha)x^{\prime}\in B(p,w)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\{x,x^{\prime}\}\subseteq C^{\succsim}(p,w)$
+\end_inset
+
+, then 
+\begin_inset Formula $x\sim x^{\prime}$
+\end_inset
+
+, which is equivalent to 
+\begin_inset Formula $x\succsim x^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{\prime}\succsim x$
+\end_inset
+
+.
+ Let us consider 
+\begin_inset Formula $x\succsim x^{\prime}$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $x\in U(\succsim,x^{\prime})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete, then 
+\begin_inset Formula $x^{\prime}\succsim x^{\prime}$
+\end_inset
+
+, so 
+\begin_inset Formula $x^{\prime}\in U(\succsim,x^{\prime})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is convex, then 
+\begin_inset Formula $U(\succsim,x^{\prime})$
+\end_inset
+
+ is a convex set.
+ By convexity of 
+\begin_inset Formula $U(\succsim,x^{\prime})$
+\end_inset
+
+, 
+\begin_inset Formula $\{x,x^{\prime}\}\subseteq U(\succsim,x^{\prime})\ \wedge\ \alpha\in[0,1]\implies\alpha x+(1-\alpha)x^{\prime}\in U(\succsim,x^{\prime})$
+\end_inset
+
+.
+ When considering 
+\begin_inset Formula $x^{\prime}\succsim x$
+\end_inset
+
+, we also obtain 
+\begin_inset Formula $\alpha x+(1-\alpha)x^{\prime}\in U(\succsim,x)$
+\end_inset
+
+ by symmetric arguments.
+ Thus, 
+\begin_inset Formula $\alpha x+(1-\alpha)x^{\prime}\in C^{\succsim}(p,w)$
+\end_inset
+
+, so 
+\begin_inset Formula $C^{\succsim}(p,w)$
+\end_inset
+
+ is convex.
+ Therefore, if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is convex, then for each 
+\begin_inset Formula $(p,w)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+, 
+\begin_inset Formula $C^{\succsim}(p,w)$
+\end_inset
+
+ is convex, i.e., 
+\begin_inset Formula $C^{\succsim}(p,w)$
+\end_inset
+
+ is convex-valued.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Finally, we prove that if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is stricly-convex, then 
+\begin_inset Formula $C^{\succsim}$
+\end_inset
+
+ is single-valued.
+ Assume 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is strictly convex.
+ Suppose for contradiction that
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $\exists\ (p,w)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+ such that 
+\begin_inset Formula $C^{\succsim}(p,w)$
+\end_inset
+
+ is not single-valued
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ Take 
+\begin_inset Formula $\{x,x^{\prime}\}\subseteq C^{\succsim}(p,w)$
+\end_inset
+
+ such that 
+\begin_inset Formula $x\neq x^{\prime}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $x\sim x^{\prime}$
+\end_inset
+
+, which is equivalent to 
+\begin_inset Formula $x\succsim x^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{\prime}\succsim x$
+\end_inset
+
+.
+ Let us consider 
+\begin_inset Formula $x\succsim x^{\prime}$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $x\in U(\succsim,x^{\prime})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete, then 
+\begin_inset Formula $x^{\prime}\succsim x^{\prime}$
+\end_inset
+
+, so 
+\begin_inset Formula $x^{\prime}\in U(\succsim,x^{\prime})$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+.
+ By strict-convextity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, with 
+\begin_inset Formula $\{x,x^{\prime}\}\subseteq U(\succsim,x^{\prime})$
+\end_inset
+
+, 
+\begin_inset Formula $x\neq x^{\prime}\implies\alpha x+(1-\alpha)x^{\prime}\succ x^{\prime}$
+\end_inset
+
+.
+ Moreover, by the arguments in the previous paragraph, we know that 
+\begin_inset Formula $\alpha x+(1-\alpha)x^{\prime}\in B(p,w)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\alpha x+(1-\alpha)x^{\prime}\succ x^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\alpha x+(1-\alpha)x^{\prime}\in B(p,w)$
+\end_inset
+
+.
+ However, this contradicts the fact that 
+\begin_inset Formula $x^{\prime}\in C^{\succsim}(p,w)$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $C^{\succsim}$
+\end_inset
+
+ is single-valued.
+ Therefore, if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is strictly-convex, then 
+\begin_inset Formula $\forall\ (p,w)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+, 
+\begin_inset Formula $C^{\succsim}(p,w)$
+\end_inset
+
+ is single-valued.
+\end_layout
+
+\begin_layout Subsection*
+3.5.4
+\begin_inset space \quad{}
+\end_inset
+
+Continuity of choice
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The following result is a direct consequence of a mathematical result known
+ as the Theorem of the Maximum (or Maximum Theorem).
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(19).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a continuous preference on 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $C^{\succsim}$
+\end_inset
+
+ is single-valued.
+ Then, the demand function associated with 
+\begin_inset Formula $\left(\mathcal{B}_{++}^{W},C^{\succsim}\right)$
+\end_inset
+
+ is continuous.
+\end_layout
+
+\begin_layout Proof
+The result is a direct consequence of a mathematical result known as the
+ Theorem of the Maximum (or Maximum Theorem).
+ For details see Section 3.4.5 of the notes and Sundaram (1996).
+\end_layout
+
+\begin_layout Subsubsection*
+Mathematical aside: The Theorem of the Maximum
+\end_layout
+
+\begin_layout Standard
+For details and proofs of this section see Sndaram (1996).
+\end_layout
+
+\begin_layout Subsection*
+3.5.5
+\begin_inset space \quad{}
+\end_inset
+
+Constrained maximization
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The theorem of Kuhn-Tucker provides conditions that allow us to identify
+ points of maxima.
+ You can find a complete treatment of the topic and a more general version
+ of the theorem in Sundaram (1996).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+ is continuously differentiable, an optimal consumption bundle 
+\begin_inset Formula $x^{*}\in C^{\succsim}(p,w)$
+\end_inset
+
+ can be characterized in a very useful manner by means of first-order conditions.
+ The 
+\emph on
+Kuhn-Tucker 
+\emph default
+(
+\emph on
+necessary
+\emph default
+) 
+\emph on
+conditions
+\emph default
+ say that if 
+\begin_inset Formula $x^{*}\in C^{\succsim}(p,w)$
+\end_inset
+
+ is a solution to the UMP, then there exists a 
+\emph on
+Lagrage multiplier
+\emph default
+ 
+\begin_inset Formula $\lambda\geq0$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $l=1,\ldots,L$
+\end_inset
+
+:
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+To be fully rigorous, these Kuhn-Tucker necessary conditions are valid only
+ if the constraint qualificaiton condition holds.
+ In the UMP, this is always so.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial u(x^{*})}{\partial x_{l}}\leq\lambda p_{l},\ \mbox{with equality if \ensuremath{x_{l}^{*}>0}}
+\end{equation}
+
+\end_inset
+
+Equivalently, if we let 
+\begin_inset Formula $\nabla u(x)=\left[\nicefrac{\partial u(x)}{\partial x_{l}},\ldots,\nicefrac{\partial u(x)}{\partial x_{L}}\right]$
+\end_inset
+
+ denote the gradient vector of 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+ at 
+\begin_inset Formula $x$
+\end_inset
+
+, we can write (5) in matrix notation as
+\begin_inset Formula 
+\begin{equation}
+\nabla u(x^{*})\leq\lambda p
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+x^{*}\cdot\left[\nabla u(x^{*})-\lambda p\right]=0
+\end{equation}
+
+\end_inset
+
+Thus, if we are at an interior optimum (i.e., if 
+\begin_inset Formula $x^{*}\gg0$
+\end_inset
+
+), we must have
+\begin_inset Formula 
+\begin{equation}
+\nabla u(x^{*})=\lambda p
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Condition (8) tells us that at an interior optimum, the gradient vector
+ of the consumer's utility funciton 
+\begin_inset Formula $\nabla u(x^{*})$
+\end_inset
+
+ must be proportional to the price vector 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\nabla u(x^{*})\gg0$
+\end_inset
+
+, this is equivalent to the requirement that for any two goods 
+\begin_inset Formula $l$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{equation}
+\frac{\nicefrac{\partial u(x^{*})}{\partial x_{l}}}{\nicefrac{\partial u(x^{*})}{\partial x_{k}}}=\frac{p_{l}}{p_{k}}
+\end{equation}
+
+\end_inset
+
+The expression on the left of (9) is the 
+\emph on
+marginal rate of substitution of good 
+\begin_inset Formula $l$
+\end_inset
+
+ for good 
+\begin_inset Formula $k$
+\end_inset
+
+ at 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+
+\emph default
+, 
+\begin_inset Formula $MRS_{lk}(x^{*})$
+\end_inset
+
+; it tells us the amount of good 
+\begin_inset Formula $k$
+\end_inset
+
+ that the consumer must be given to compensate her for a one-unit reduction
+ in her consumption of good 
+\begin_inset Formula $l$
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Note that if utility is unchanged with differential changes in 
+\begin_inset Formula $x_{l}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{k}$
+\end_inset
+
+, 
+\begin_inset Formula $dx_{l}$
+\end_inset
+
+ and 
+\begin_inset Formula $dx_{k}$
+\end_inset
+
+, then 
+\begin_inset Formula $[\nicefrac{\partial u(x)}{\partial x_{l}}]dx_{l}+[\nicefrac{\partial u(x)}{\partial x_{k}}]dx_{k}=0$
+\end_inset
+
+.
+ Thus, when 
+\begin_inset Formula $x_{l}$
+\end_inset
+
+ falls by amount 
+\begin_inset Formula $dx_{l}<0$
+\end_inset
+
+, the increase required in 
+\begin_inset Formula $x_{k}$
+\end_inset
+
+ to keep utility unchanged is precisely 
+\begin_inset Formula $dx_{k}=MRS_{lk}(x^{*})(-dx_{l})$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+Were this note the case, the consumer could do better by marginally changing
+ her consumption.
+ For example, if 
+\begin_inset Formula $\nicefrac{[\nicefrac{\partial u(x^{*})}{\partial x_{l}}]}{[\nicefrac{\partial u(x^{*})}{\partial x_{k}}]}>(\nicefrac{p_{l}}{p_{k}})$
+\end_inset
+
+, then an increase in the consumption of good 
+\begin_inset Formula $l$
+\end_inset
+
+ of 
+\begin_inset Formula $dx_{l}$
+\end_inset
+
+, would be feasible and would yield a utility change of 
+\begin_inset Formula $[\nicefrac{\partial u(x^{*})}{\partial x_{l}}]dx_{l}-[\nicefrac{\partial u(x^{*})}{\partial x_{k}}](\nicefrac{p_{l}}{p_{k}})dx_{l}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the case when the consumer's optimal bundle 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ lies on the boundary of the consumption set, the gradient vector need not
+ be proportional to the price vector.
+ In particular, the first-order conditions tell us that 
+\begin_inset Formula $\nicefrac{\partial u(x^{*})}{\partial x_{l}}\leq\lambda p_{l}$
+\end_inset
+
+ for those 
+\begin_inset Formula $l$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{l}^{*}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\nicefrac{\partial u(x^{*})}{\partial x_{l}}=\lambda p_{l}$
+\end_inset
+
+ for those 
+\begin_inset Formula $l$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{l}^{*}>0$
+\end_inset
+
+.
+ In contrast with the case of an interior optimum, an inequality between
+ the marginal rate of substitution and the price ratio can arise at a boundary
+ optimum because the consumer is unable to reduce her consumption of a good
+ any further.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The Lagrange multiplier 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ in the first-order conditions (6) and (7) gives the marginal, or shadow,
+ value of relaxing the constraint in the UMP (this is a general property
+ of Lagrange multipliers).
+ It therefore equals the consumer's marginal utility of wealth at the optimum.
+ To see this directly, consider for simplicity the case where 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+ is a differentiable function and 
+\begin_inset Formula $x(p,w)\gg0$
+\end_inset
+
+.
+ By the chain rule, the change in utility from a marginal increase in 
+\begin_inset Formula $w$
+\end_inset
+
+ is given by 
+\begin_inset Formula $\nabla u(x(p,w))\cdot D_{w}x(p,w)$
+\end_inset
+
+.
+ Substituting for 
+\begin_inset Formula $\nabla u(x(p,w))$
+\end_inset
+
+ from condition (8), we get
+\begin_inset Formula 
+\[
+\nabla u(x(p,w))\cdot D_{w}x(p,w)=\lambda p\cdot D_{w}x(p,w)=\lambda
+\]
+
+\end_inset
+
+where the last equality follows because 
+\begin_inset Formula $p\cdot x(p,w)=w$
+\end_inset
+
+ holds for all 
+\begin_inset Formula $w$
+\end_inset
+
+ (Walras' law) and therefore 
+\begin_inset Formula $p\cdot D_{w}x(p,w)=1$
+\end_inset
+
+.
+ Thus, the marginal change in utility arising from a marginal increase in
+ wealth, the consumer's 
+\emph on
+marginal utility of wealth
+\emph default
+, is precisely 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Note that if monotonicity of 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+ is strengthened slightly by requiring that 
+\begin_inset Formula $\nabla u(x)\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\nabla u(x)\neq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $x$
+\end_inset
+
+, then condition (8) and 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+also imply that 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is strictly positive at any solution of the UMP.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+We have seen that conditions (6) and (7) must necessarily be satisfied by
+ any 
+\begin_inset Formula $x^{*}\in C^{\succsim}(p,w)$
+\end_inset
+
+.
+ When, on the other hand, does satisfaction of these first-order conditions
+ by some bundle 
+\begin_inset Formula $x$
+\end_inset
+
+ imply that 
+\begin_inset Formula $x$
+\end_inset
+
+ is a solution to the UMP? That is, when are the first-order conditions
+ 
+\emph on
+sufficient
+\emph default
+ to establish 
+\begin_inset Formula $x$
+\end_inset
+
+ is a solution? If 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+ is quasi-concave and monotone and has 
+\begin_inset Formula $\nabla u(x)\neq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ , then the Kuhn-Tucker first-order conditions are indeed sufficient.
+ What if 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+ is not quasiconcave? In that case, if 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+ is locally quasiconcave at 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, and if 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ satisfies the first-order conditions, then 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is a local maximum.
+ Local quasiconcavity can be verified by means of a determinant test on
+ the 
+\emph on
+borded Hessian matrix
+\emph default
+ of 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+ at 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+3.5.6
+\begin_inset space \quad{}
+\end_inset
+
+Indirect utility
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(80).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a preference relation represented by a utility function 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ The 
+\series bold
+indirect utility function associated with 
+\begin_inset Formula $u$
+\end_inset
+
+
+\series default
+ is the function, denoted 
+\begin_inset Formula $V^{u}$
+\end_inset
+
+, that associated with each price vector 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and each wealth level 
+\begin_inset Formula $w$
+\end_inset
+
+ the maximum value of utility, with respect to welfare index 
+\begin_inset Formula $u$
+\end_inset
+
+, attained at choice problem 
+\begin_inset Formula $B(p,w)$
+\end_inset
+
+.
+ That is
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+V^{u}: & \mathbb{R}_{++}^{L}\times\mathbb{R}_{+} & \rightarrow & \mathbb{R}\\
+ & (p,w) & \mapsto & V^{u}(p,w)\equiv\max_{x\in B(p,w)}u(x)
+\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $(V^{u}(p,w)=u(x(p,w))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The following propositions states properties of indirect utility functions
+ (continuity follows from the Theorem of the Maximum).
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(20).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+ that is represented by a continuous utility function 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $V^{u}$
+\end_inset
+
+ is:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Homogeneous of degree zero.
+\end_layout
+
+\begin_layout Enumerate
+Strictly increasing in wealth and non-increasing in each price component.
+\end_layout
+
+\begin_layout Enumerate
+Quasi-convex, i.e., for each 
+\begin_inset Formula $\bar{u}\in\mathbb{R}$
+\end_inset
+
+, the set 
+\begin_inset Formula $\left\{ (p,w)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}:V^{u}(p,w)\leq\bar{u}\right\} $
+\end_inset
+
+ is convex.
+\end_layout
+
+\begin_layout Enumerate
+Continuous.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+ that is represented by a continuous utility function 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ Important to note, 
+\begin_inset Formula $V^{u}$
+\end_inset
+
+ is defined as follows
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+V^{u}: & \mathbb{R}_{++}^{L}\times\mathbb{R}_{+} & \rightarrow & \mathbb{R}\\
+ & (p,w) & \mapsto & V^{u}(p,w)\equiv{\displaystyle \max_{x\in B(p,w)}}\ u(x)=u(x(p,w))
+\end{array}
+\]
+
+\end_inset
+
+and since the sufficient conditions are satisfied, then the results of Propositi
+on 19 hold.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+First, we prove that 
+\begin_inset Formula $V^{u}$
+\end_inset
+
+ is homogenous of degree zero.
+ By Proposition 19, we know that 
+\begin_inset Formula $C^{\succsim}(p,w)$
+\end_inset
+
+ is homogenous of degree zero.
+ This implies that 
+\begin_inset Formula $\forall\ x\in C^{\succsim}(p,w)$
+\end_inset
+
+, 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+ is homogenous of degree zero.
+ Thus, 
+\begin_inset Formula $\forall\ (p,w)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+},\ \forall\ \alpha\in\mathbb{R}_{++}:u(x(\alpha p,\alpha w))=u(x(p,w))$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $V^{u}$
+\end_inset
+
+ is homogenous of degree zero.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Second, we prove that 
+\begin_inset Formula $V^{u}$
+\end_inset
+
+ is strictly increasing in wealth.
+ So, holding 
+\begin_inset Formula $p$
+\end_inset
+
+ constant, we prove that 
+\begin_inset Formula $\forall\ \{w,w^{\prime}\}:w>w^{\prime}\implies V^{u}(\bar{p},w)>V^{u}(\bar{p},w^{\prime})$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\{w,w^{\prime}\}\subseteq\mathbb{R}_{+}:w>w^{\prime}$
+\end_inset
+
+ and hold prices constant at 
+\begin_inset Formula $\bar{p}\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $V^{u}(\bar{p},w)>V^{u}(\bar{p},w^{\prime})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $w>w^{\prime}$
+\end_inset
+
+, then 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $B(\bar{p},w^{\prime})\subsetneq\mbox{Int}(B(\bar{p},w))$
+\end_inset
+
+.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ Also, since Walras' Law is satisfied, then 
+\begin_inset Formula $C^{\succsim}(\bar{p},w)\subseteq\mbox{Bd}(B(\bar{p},w))$
+\end_inset
+
+.
+ Hence, we have 
+\begin_inset Formula $B(\bar{p},w^{\prime})\cap C^{\succsim}(p,w)=\emptyset$
+\end_inset
+
+.
+ We claim that 
+\begin_inset Formula $\forall\ x\in C^{\succsim}(\bar{p},w),\ \forall\ y\in B(\bar{p},w^{\prime}):x\succ y$
+\end_inset
+
+.
+ Suppose for contradiction 
+\begin_inset Formula $\exists\ x\in C^{\succsim}(p,w),\ \exists\ y\in B(\bar{p},w^{\prime}):y\succsim x$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $y\in\mbox{Int}(B(\bar{p},w))$
+\end_inset
+
+, which is an open set by definition.
+ Since 
+\begin_inset Formula $\mbox{Int}(B(\bar{p},w))$
+\end_inset
+
+ is an open set, then 
+\begin_inset Formula $\exists\ \epsilon>0:B_{\epsilon}^{X}(y)\subseteq\mbox{Int}(B(\bar{p},w))$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is locally non-satiatied, then 
+\begin_inset Formula $\exists\ z\in B_{\epsilon}^{X}(y):z\succ y$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $z\in B_{\epsilon}^{X}(y)\subseteq\mbox{Int}(B(\bar{p},w))$
+\end_inset
+
+, then 
+\begin_inset Formula $z\in\mbox{Int}(B(\bar{p},w))$
+\end_inset
+
+.
+ By transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $z\succ y\succsim x\implies z\succ x$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $z\succ x$
+\end_inset
+
+ and 
+\begin_inset Formula $z\in\mbox{Int}(B(\bar{p},w))$
+\end_inset
+
+.
+ However, this contradicts the fact 
+\begin_inset Formula $x\in C^{\succsim}(p,w)$
+\end_inset
+
+.
+ Hence, our claim is true.
+ Since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then 
+\begin_inset Formula $\forall\ x\in C^{\succsim}(\bar{p},w),\ \forall\ y\in B(\bar{p},w^{\prime}):u(x)>u(y)$
+\end_inset
+
+.
+ Thus, holding 
+\begin_inset Formula $\bar{p}$
+\end_inset
+
+ fixed, 
+\begin_inset Formula $\forall\ \{w,w^{\prime}\}:w>w^{\prime}\implies u(x(\bar{p},w))>u(x(\bar{p},w^{\prime}))$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $V^{u}$
+\end_inset
+
+ is strictly increasing in wealth.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Next, we prove that 
+\begin_inset Formula $V^{u}$
+\end_inset
+
+ is non-increasing in each price component.
+ So, holding 
+\begin_inset Formula $w$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{-l}$
+\end_inset
+
+ constant, we prove that 
+\begin_inset Formula $\forall\ l\in\{1,\ldots,L\},\ \forall\ \left\{ p_{l},p_{l}^{\prime}\right\} \in\mathbb{R}_{++}:p_{l}>p_{l}^{\prime}\implies V^{u}(p_{l},p_{-l},w)\leq V^{u}(p_{l}^{\prime},p_{-l},w)$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $l\in\{1,\ldots,L\}$
+\end_inset
+
+ and take 
+\begin_inset Formula $\{p,p^{\prime}\}\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ such that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $p_{l}>p_{l}^{\prime}$
+\end_inset
+
+ and
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula $\forall\ k\neq l:p_{k}=p_{k}^{\prime}$
+\end_inset
+
+.
+ Also, hold wealth constant at 
+\begin_inset Formula $\bar{w}\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $V^{u}(p,\bar{w})\leq V^{u}(p^{\prime},w)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $p\gneq p^{\prime}$
+\end_inset
+
+, then 
+\begin_inset Formula $B(p,\bar{w})\subset B(p^{\prime},\bar{w})$
+\end_inset
+
+.
+ We claim that 
+\begin_inset Formula $\forall\ x^{\prime}\in C^{\succsim}(p^{\prime},\bar{w}),\ \forall\ x\in C^{\succsim}(p,\bar{w}):x^{\prime}\succsim x$
+\end_inset
+
+.
+ Suppose for contradiction 
+\begin_inset Formula $\exists\ x^{\prime}\in C^{\succsim}(p^{\prime},\bar{w}),\ \exists\ x\in C^{\succsim}(p,\bar{w}):x\succ x^{\prime}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x\in C^{\succsim}(p,\bar{w})$
+\end_inset
+
+ and 
+\begin_inset Formula $C^{\succsim}(p,\bar{w})\subset B(p,\bar{w})\subset B(p^{\prime},\bar{w})$
+\end_inset
+
+, then 
+\begin_inset Formula $x\in B(p^{\prime},\bar{w})$
+\end_inset
+
+.
+ We now have 
+\begin_inset Formula $x\succ x^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in B(p^{\prime},\bar{w})$
+\end_inset
+
+.
+ However, this contradicts the fact that 
+\begin_inset Formula $x^{\prime}\in C^{\succsim}(p^{\prime},w)$
+\end_inset
+
+.
+ Hence, our claim is true.
+ Since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then 
+\begin_inset Formula $\forall\ x^{\prime}\in C^{\succsim}(p^{\prime},\bar{w}),\ \forall\ x\in C^{\succsim}(p,\bar{w}):u(x^{\prime})\geq u(x)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $u(x(p^{\prime},\bar{w}))\geq u(x(p,\bar{w}))$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $V^{u}$
+\end_inset
+
+ is non-increasing in each price component.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+To see that 
+\begin_inset Formula $V^{u}(p,w)$
+\end_inset
+
+ is quasiconvex, take 
+\begin_inset Formula $\bar{u}\in\mathbb{R}$
+\end_inset
+
+ and suppose that 
+\begin_inset Formula $V^{u}(p,w)\leq\bar{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $V^{u}(p^{\prime},w^{\prime})\leq\bar{u}$
+\end_inset
+
+.
+ For any 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+, consider the price-wealth pair 
+\begin_inset Formula $(p^{\prime\prime},w^{\prime\prime})=(\alpha p+(1-\alpha)p^{\prime},\alpha w+(1-\alpha)w^{\prime})$
+\end_inset
+
+.
+ To establish quasiconvexity, we want to show that 
+\begin_inset Formula $V^{u}(p^{\prime\prime},w^{\prime\prime})\leq\bar{u}$
+\end_inset
+
+.
+ Thus, we show that for any 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ with 
+\begin_inset Formula $p^{\prime\prime}\cdot x\leq w^{\prime\prime}$
+\end_inset
+
+, we must have 
+\begin_inset Formula $u(x)\leq\bar{u}$
+\end_inset
+
+.
+ Note, first, that if 
+\begin_inset Formula $p^{\prime\prime}\cdot x\leq w^{\prime\prime}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\alpha p\cdot x+(1-\alpha)p^{\prime}\cdot x\leq\alpha w+(1-\alpha)w^{\prime}
+\]
+
+\end_inset
+
+Hence, either 
+\begin_inset Formula $p\cdot x\leq w$
+\end_inset
+
+ or 
+\begin_inset Formula $p^{\prime}\cdot x\leq w^{\prime}$
+\end_inset
+
+ (or both).
+ If the former inequality holds, then 
+\begin_inset Formula $u(x)\leq V^{u}(p,w)\leq\bar{u}$
+\end_inset
+
+, and we have established the result.
+ If the latter holds, then 
+\begin_inset Formula $u(x)\leq V^{u}(p^{\prime},w^{\prime})\leq\bar{u}$
+\end_inset
+
+, and the same conclusion follows.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part D.
+\end_layout
+
+\begin_layout Proof
+(This proof was found in the Microeconomic Theory I notes of Stanford University
+, but it was not attempted in Mas-Colell (1995)).
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Finally, we prove that 
+\begin_inset Formula $V^{u}(p,w)$
+\end_inset
+
+ is continuous.
+ Let 
+\begin_inset Formula $p^{n}\rightarrow p$
+\end_inset
+
+ and 
+\begin_inset Formula $w^{n}\rightarrow w$
+\end_inset
+
+ be the sequences of prices and wealth.
+ We must show that 
+\begin_inset Formula $\lim_{n\rightarrow\infty}V^{u}(p^{n},w^{n})=V^{u}(p,w)$
+\end_inset
+
+, which we doe by showing that 
+\begin_inset Formula $\lim\inf_{n}V^{u}(p^{n},w^{n})\geq V^{u}(p,w)\geq\lim\sup_{n}V^{u}(p^{n},p^{n})\geq\lim\inf_{n}V^{u}(p^{n},w^{n})$
+\end_inset
+
+.
+ The last inequality is true by definition, so we focus our attention the
+ the first two inequalities.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+For the first inequality, let 
+\begin_inset Formula $x\in C^{\succsim}(p,w)$
+\end_inset
+
+, so that 
+\begin_inset Formula $V^{u}(p,w)=u(x)$
+\end_inset
+
+, and let 
+\begin_inset Formula $a^{n}=\nicefrac{w^{n}}{(p^{n}\cdot x)}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $a^{n}x\in B(p^{n},w^{n})$
+\end_inset
+
+, so 
+\begin_inset Formula $V^{u}(p^{n},w^{n})\geq u(a^{n}\cdot x).$
+\end_inset
+
+ By Walras' Law, 
+\begin_inset Formula $p\cdot x=w$
+\end_inset
+
+, so 
+\begin_inset Formula $\lim_{n}a^{n}=\lim\nicefrac{w^{n}}{(p^{n}\cdot x)}=\nicefrac{w}{(p\cdot x)}=1$
+\end_inset
+
+.
+ Hence, using the continuity of 
+\begin_inset Formula $u$
+\end_inset
+
+, 
+\begin_inset Formula $\lim\inf_{n}V^{u}(p^{n},w^{n})\geq\lim\in u(a^{n}x)=u(x)=V^{u}(p,w)$
+\end_inset
+
+, which implies the first inequality.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+For the second inequality, let 
+\begin_inset Formula $x^{n}\in x(p^{n},w^{n})$
+\end_inset
+
+ so that 
+\begin_inset Formula $V^{u}(p^{n},w^{n})=u(x^{n})$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $n^{k}$
+\end_inset
+
+ be a subsequence along which 
+\begin_inset Formula $\lim_{k\rightarrow\infty}u(x^{n^{k}})=\lim\sup_{n}V^{u}(p^{n},w^{n})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $p^{n}\gg0$
+\end_inset
+
+, the union of the budget sets defined by 
+\begin_inset Formula $(p^{n^{k}},w^{n^{k}})$
+\end_inset
+
+ and 
+\begin_inset Formula $(p,w)$
+\end_inset
+
+ is bounded above by the vector 
+\begin_inset Formula $b$
+\end_inset
+
+ whose 
+\begin_inset Formula $i$
+\end_inset
+
+-th component is 
+\begin_inset Formula $b_{i}=\nicefrac{(\sup w^{n})}{(\inf p_{i}^{n})}$
+\end_inset
+
+.
+ Since the sequence 
+\begin_inset Formula $\{x^{n^{k}}\}$
+\end_inset
+
+ is bounded, it has some accumulation point 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $p^{n^{k}}\cdot x^{n^{k}}\leq w^{n^{k}}$
+\end_inset
+
+, it follows by taking limits that 
+\begin_inset Formula $p\cdot x\leq w$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $V^{u}(p,w)\geq u(x)=\lim_{k\rightarrow\infty}u(x^{n^{k}})=\lim\sup_{n}V^{u}(p^{n},w^{n})$
+\end_inset
+
+, which implies the second inequality.
+\end_layout
+
+\begin_layout Lemma*
+
+\series bold
+\shape up
+(3).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+ represented by a continuously differentibale utility function 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $C^{\succsim}$
+\end_inset
+
+ is single-valued and let 
+\begin_inset Formula $x$
+\end_inset
+
+ be the associated demand function.
+ Suppose that for some 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $w>0$
+\end_inset
+
+, 
+\begin_inset Formula $x(p,w)\gg0$
+\end_inset
+
+, that the K-T F.O.C.
+ for the associated UMP are satisfed at 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+, and that 
+\begin_inset Formula $x$
+\end_inset
+
+ is differentiable at 
+\begin_inset Formula $(p,w)$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\frac{\partial V^{u}(p,w)}{\partial w}(p,w)=\lambda$
+\end_inset
+
+, where 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is the multiplier associated with the budget constraint 
+\begin_inset Formula $p\cdot x-w\leq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We assume all of the sufficient conditions given in the Lemma.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Recall that 
+\begin_inset Formula $V^{u}(p,w)=u(x(p,w))$
+\end_inset
+
+.
+ Using the chain rule,
+\begin_inset Formula 
+\[
+\frac{\partial V^{u}}{\partial w}(p,w)=\frac{\partial u(x(p,w))}{\partial x_{1}}\frac{\partial x_{1}(p,w)}{\partial w}+\cdots+\frac{\partial u(x(p,w))}{\partial x_{L}}\frac{\partial x_{L}(p,w)}{\partial w}
+\]
+
+\end_inset
+
+In matrix notation, this is written as
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial V^{u}(p,w)}{\partial w} & = & \nabla u(x(p,w))^{T}D_{w}x(p,w)\\
+ & = & Du(x(p,w))D_{w}x(p,w)
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $Du(x(p,w))=\nabla u(x(p,w))^{T}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $Du(x(p,w))$
+\end_inset
+
+ is a 
+\begin_inset Formula $1\times L$
+\end_inset
+
+ matrix and 
+\begin_inset Formula $D_{w}x(p,w)$
+\end_inset
+
+ is a 
+\begin_inset Formula $L\times1$
+\end_inset
+
+ column vector.
+ From K-T F.O.C., 
+\begin_inset Formula $\nabla u(x(p,w))=\lambda p$
+\end_inset
+
+, so 
+\begin_inset Formula $Du(x(p,w))=\lambda p^{T}$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\[
+\frac{\partial V^{u}(p,w)}{\partial w}=\lambda p^{T}D_{w}x(p,w)
+\]
+
+\end_inset
+
+By Walras' Law, 
+\begin_inset Formula $p\cdot x(p,w)=p^{T}x(p,w)=w$
+\end_inset
+
+.
+ Differentiating with respect to 
+\begin_inset Formula $w$
+\end_inset
+
+, we get 
+\begin_inset Formula $p^{T}D_{w}x(p,w)=1$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\[
+\frac{\partial V^{u}(p,w)}{\partial w}=\lambda
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Note*
+The marginal, or shadow value, of relaxing the constraint in the UMP is
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, which is known as the 
+\begin_inset Quotes eld
+\end_inset
+
+shadow price.
+\begin_inset Quotes erd
+\end_inset
+
+ It equals the consumer's marginal utility value of ealth at the optimum.
+\end_layout
+
+\begin_layout Subsection*
+3.5.7
+\begin_inset space \quad{}
+\end_inset
+
+Problems
+\end_layout
+
+\begin_layout Problem
+Prove Proposition 18.
+\end_layout
+
+\begin_layout Proof
+The proof can be found in Section 3.5.3.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be the preference on 
+\begin_inset Formula $\mathbb{R}_{+}^{2}$
+\end_inset
+
+ represented by the utility funciton
+\begin_inset Formula 
+\[
+u(x_{1},x_{2})\equiv\min\{2x_{1},x_{2}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Draw the indifference curve that passes through 
+\begin_inset Formula $(1,2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Calculate the demand function associated with this preference, i.e., for each
+ 
+\begin_inset Formula $p\equiv(p_{1},p_{2})\in\mathbb{R}_{++}^{2}$
+\end_inset
+
+ and each 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+, calculate 
+\begin_inset Formula $x_{1}(p,w)$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}(p,w)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Calculate 
+\begin_inset Formula $S_{12}(p,w)$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{21}(p,w)$
+\end_inset
+
+.
+ Interpret the result.
+\end_layout
+
+\begin_layout Enumerate
+State the compensated law of demand.
+ Prove that 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies the compensated law of demand.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Part A of this problem will be skipped.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part B.
+\bar default
+
+\begin_inset Formula 
+\[
+x(p,w)\equiv\arg{\displaystyle \max_{x\in B(p,w)}}u(x)
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is monotone, then 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is locally non-satiated, and thus, Walras' law is holds.
+ Hence, we have
+\begin_inset Formula 
+\[
+p_{1}x_{1}+p_{2}x_{2}=w
+\]
+
+\end_inset
+
+By the utility function, the maximizer of 
+\begin_inset Formula $u(x)$
+\end_inset
+
+ on 
+\begin_inset Formula $B(p,w)$
+\end_inset
+
+ satisfies the following property: 
+\begin_inset Formula $x_{2}=2x_{1}$
+\end_inset
+
+.
+ Plugging this expressing into the budget constraint yields
+\begin_inset Formula 
+\[
+p_{1}x_{1}+p_{2}2x_{1}=w
+\]
+
+\end_inset
+
+We can now derive a function for 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x_{1}(p,w)=\frac{w}{(p_{1}+2p_{2})}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $x_{2}=2x_{1}$
+\end_inset
+
+, then we also obtain a function for 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x_{2}(p,w)=\frac{2w}{(p_{1}+2p_{2})}
+\]
+
+\end_inset
+
+
+\bar under
+Part C.
+\bar default
+
+\begin_inset Formula 
+\[
+S_{lk}(p,w)=\frac{\partial x_{l}(p,w)}{\partial p_{k}}+\frac{\partial x_{l}(p,w)}{\partial w}x_{k}(p,w)
+\]
+
+\end_inset
+
+Calculating 
+\begin_inset Formula $S_{12}(p,w)$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{21}(p,w)$
+\end_inset
+
+ we find that
+\begin_inset Formula 
+\[
+S_{12}(p,w)=0=S_{21}(p,w)
+\]
+
+\end_inset
+
+Thus, there is no substitution betwen 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, i.e., they are perfect complements.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part D.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The preference represented by the utility function is rational, monotone,
+ and continuous.
+ Let 
+\begin_inset Formula $(\mathcal{B}_{++}^{W},C^{\succsim})$
+\end_inset
+
+ be its associated Walrasian choice structure.
+ By Proposition 5, the choice structure 
+\begin_inset Formula $(\mathcal{B}_{++}^{W},C^{\succsim})$
+\end_inset
+
+ satisfies WARP.
+ From part B, we know that 
+\begin_inset Formula $C^{\succsim}$
+\end_inset
+
+ is single-valued.
+ Since preferences are locally non-satiated, then, by Proposition 18, 
+\begin_inset Formula $(\mathcal{B}_{++}^{W},C^{\succsim})$
+\end_inset
+
+ satisfies Walras' law.
+ By Proposition 11, a single-valued Walrasian choice structure that satisfies
+ Walras' law satisfies WARP if and only if its associated demand function
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies the compensated law of demand.
+ Therefore, 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies the compensated law of demand.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be the preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{2}$
+\end_inset
+
+ represented by the following utility function: for each 
+\begin_inset Formula $(x_{1},x_{2})\in\mathbb{R}_{+}^{2}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+u(x_{1},x_{2})\equiv\min\{x_{1},x_{2}^{2}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Draw three differenct indifference curves.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be the demand function associated with 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ Provide a formal definition of 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Calculate 
+\begin_inset Formula $x(p,w)\equiv(x_{1}(p,w),x_{2}(p,w))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+What is the value of the Slutsky matrix associated with 
+\begin_inset Formula $x$
+\end_inset
+
+ at some arbitrary 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Part A of this problem will be skipped.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part B.
+\bar default
+
+\begin_inset Formula 
+\[
+x(p,w)\equiv\arg{\displaystyle \max_{x\in B(p,w)}}u(x)
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is monotone, then 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is locally non-satiated, and thus, Walras' law is holds.
+ Hence, we have
+\begin_inset Formula 
+\[
+p_{1}x_{1}+p_{2}x_{2}=w
+\]
+
+\end_inset
+
+By the utility function, the maximizer of 
+\begin_inset Formula $u(x)$
+\end_inset
+
+ on 
+\begin_inset Formula $B(p,w)$
+\end_inset
+
+ satisfies the following property: 
+\begin_inset Formula $x_{1}=x_{2}^{2}$
+\end_inset
+
+.
+ Plugging this expressing into the budget constraint yields
+\begin_inset Formula 
+\[
+p_{1}x_{2}^{2}+p_{2}x_{2}=w
+\]
+
+\end_inset
+
+Using the quadratic formula, we obtain a function for 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+x_{2}(p,w)=-\frac{p_{2}}{2p_{1}}+\frac{\sqrt{p_{2}^{2}+4p_{1}w}}{2p_{1}}
+\]
+
+\end_inset
+
+Plugging this expression into the budget constraint, we can also derive
+ a function for 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+x_{1}(p,w)=\frac{w}{p_{1}}+\frac{p_{2}^{2}}{2p_{1}^{2}}-\frac{p_{2}\sqrt{p_{2}^{2}+4p_{1}w}}{2p_{1}^{2}}
+\]
+
+\end_inset
+
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+We wish to find the value of the Slutsky matrix associated with 
+\begin_inset Formula $x$
+\end_inset
+
+ at some arbitrary 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ We claim that
+\begin_inset Formula 
+\[
+S(p,w)=\left[\begin{array}{cc}
+0 & 0\\
+0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+Take 
+\begin_inset Formula $(p,w)\in\mathbb{R}_{+}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+ and take 
+\begin_inset Formula $p^{\prime}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Without loss of generality, let prices change from 
+\begin_inset Formula $p$
+\end_inset
+
+ to 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+.
+ In addition, let us compensate the wealth of the agent as prices change.
+ Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be the demand function associated with 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ To simplify notation, define 
+\begin_inset Formula $x\equiv x(p,w)$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{\prime}\equiv x(p^{\prime},w^{\prime})$
+\end_inset
+
+, where 
+\begin_inset Formula $w^{\prime}\equiv p^{\prime}\cdot x(p,w)$
+\end_inset
+
+.
+ By Walras' law,
+\begin_inset Formula 
+\[
+p_{1}^{\prime}x_{1}^{\prime}+p_{2}^{\prime}x_{2}^{\prime}=w^{\prime}
+\]
+
+\end_inset
+
+Also, since we are compensating wealth, then
+\begin_inset Formula 
+\[
+p_{1}^{\prime}x_{1}+p_{2}^{\prime}x_{2}=w^{\prime}
+\]
+
+\end_inset
+
+Hence, we have
+\begin_inset Formula 
+\[
+p_{1}^{\prime}x_{1}^{\prime}+p_{2}^{\prime}x_{2}^{\prime}=p_{1}^{\prime}x_{1}+p_{2}^{\prime}x_{2}
+\]
+
+\end_inset
+
+From the utility function, we have 
+\begin_inset Formula $x_{1}=x_{2}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{1}^{\prime}=(x_{2}^{\prime})^{2}$
+\end_inset
+
+.
+ Hence, the equation above becomes
+\begin_inset Formula 
+\begin{eqnarray}
+p_{1}^{\prime}(x_{2}^{\prime})^{2}+p_{2}^{\prime}x_{2}^{\prime} & = & p_{1}^{\prime}x_{2}^{2}+p_{2}^{\prime}x_{2}\nonumber \\
+p_{1}^{\prime}\left[(x_{2}^{\prime})^{2}-x_{2}^{2}\right] & = & -p_{2}(x_{2}^{\prime}-x_{2})
+\end{eqnarray}
+
+\end_inset
+
+We claim that 
+\begin_inset Formula $x_{2}^{\prime}=x_{2}$
+\end_inset
+
+.
+ Suppose for contradiciton 
+\begin_inset Formula $x_{2}^{\prime}\neq x_{2}$
+\end_inset
+
+.
+ Note that
+\begin_inset Formula 
+\[
+\left[(x_{2}^{\prime})^{2}-x_{2}^{2}\right]=(x_{2}^{\prime}+x_{2})(x_{2}^{\prime}-x_{2})
+\]
+
+\end_inset
+
+and plugging this expression into equation (6) yields
+\begin_inset Formula 
+\[
+p_{1}^{\prime}(x_{2}^{\prime}+x_{2})=-p_{2}^{\prime}
+\]
+
+\end_inset
+
+However, this contradicts the fact that 
+\begin_inset Formula $p^{\prime}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Thus, we can conclude that 
+\begin_inset Formula $x_{2}^{\prime}=x_{2}$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\[
+S(p,w)=\left[\begin{array}{cc}
+0 & 0\\
+0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be the preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{2}$
+\end_inset
+
+ represented by the following utility funciton: for each 
+\begin_inset Formula $(x_{1},x_{2})\in\mathbb{R}_{+}^{2}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+u(x_{1},x_{2})\equiv x_{1}^{\alpha}x_{2}^{1-\alpha}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Draw three different indifference curves.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be the demand function associated with 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ Provide a formal definition of 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Calculate 
+\begin_inset Formula $x(p,w)\equiv(x_{1}(p,w),x_{2}(p,w))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+What is the value of the Slutsky matrix associated with 
+\begin_inset Formula $x^{\succsim}$
+\end_inset
+
+ at some arbitrary 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Part A of this problem will be skipped.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part B.
+\bar default
+
+\begin_inset Formula 
+\[
+x(p,w)\equiv\arg{\displaystyle \max_{x\in B(p,w)}}u(x)
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is monotone, then 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is locally non-satiated, and thus, Walras' law is holds.
+ Hence, we have
+\begin_inset Formula 
+\[
+p_{1}x_{1}+p_{2}x_{2}=w
+\]
+
+\end_inset
+
+The Lagrangian of this problem is
+\begin_inset Formula 
+\[
+L=x_{1}^{\alpha}x_{2}^{1-\alpha}+\lambda(w-p_{1}x_{1}-p_{2}x_{2})
+\]
+
+\end_inset
+
+and the first-order conditions are
+\begin_inset Formula 
+\begin{gather*}
+\frac{\partial L}{\partial x_{1}}=0\iff\alpha x_{1}^{\alpha-1}x_{2}^{1-\alpha}=\lambda p_{1}\\
+\frac{\partial L}{\partial x_{2}}=0\iff(1-\alpha)x_{1}^{\alpha}x_{2}^{-\alpha}=\lambda p_{2}
+\end{gather*}
+
+\end_inset
+
+Equating the two equations we have
+\begin_inset Formula 
+\[
+\lambda=\frac{\alpha x_{1}^{\alpha-1}x_{2}^{1-\alpha}}{p_{1}}=\frac{(1-\alpha)x_{1}^{\alpha}x_{2}^{-\alpha}}{p_{2}}
+\]
+
+\end_inset
+
+and solving for 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\[
+x_{2}=\frac{p_{1}}{p_{2}}\frac{(1-\alpha)}{\alpha}x_{1}
+\]
+
+\end_inset
+
+We plug this expression for 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ into the budget constraint
+\begin_inset Formula 
+\[
+w-p_{1}x_{1}-p_{2}\left(\frac{p_{2}}{p_{1}}\frac{(1-\alpha)}{\alpha}x_{1}\right)=0
+\]
+
+\end_inset
+
+and solve for 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x_{1}=\frac{\alpha w}{p_{1}}
+\]
+
+\end_inset
+
+Finally, we obtain a function for 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x_{2}=\frac{(1-\alpha)w}{p_{2}}
+\]
+
+\end_inset
+
+
+\bar under
+Part C.
+\bar default
+
+\begin_inset Formula 
+\[
+S_{lk}(p,w)=\frac{\partial x_{l}(p,w)}{\partial p_{k}}+\frac{\partial x_{l}(p,w)}{\partial w}x_{k}(p,w)
+\]
+
+\end_inset
+
+The value of the Slutsky matrix associated with 
+\begin_inset Formula $x^{\succsim}$
+\end_inset
+
+ at some arbitrary 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+S(p,w)=\left[\begin{array}{cc}
+-\frac{\alpha w}{p_{1}^{2}}+\frac{\alpha^{2}w}{p_{1}^{2}} & \frac{\alpha}{p_{1}}\frac{(1-\alpha)w}{p_{2}}\\
+\frac{\alpha}{p_{1}}\frac{(1-\alpha)}{p_{2}}w & -\frac{(1-\alpha)w}{p_{2}^{2}}+\frac{(1-\alpha)^{2}w}{p_{2}^{2}}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\succsim_{lex}$
+\end_inset
+
+ be the lexicographic relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{2}$
+\end_inset
+
+ defined in Section 3.3.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Draw three different indifference sets.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $x^{lex}$
+\end_inset
+
+ be the demand function associated with 
+\begin_inset Formula $\succsim_{lex}$
+\end_inset
+
+.
+ Provide a formal definition of 
+\begin_inset Formula $x^{lex}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Calculate 
+\begin_inset Formula $x^{lex}(p,w)\equiv(x_{1}^{lex}(p,w),x_{2}^{lex}(p,w))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+What is the value of the Slutsky matrix associated with 
+\begin_inset Formula $x^{lex}$
+\end_inset
+
+ at some arbitrary 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Is there a continuous utility function 
+\begin_inset Formula $u$
+\end_inset
+
+ whose associated preference relation 
+\begin_inset Formula $\succsim^{u}$
+\end_inset
+
+ is such that 
+\begin_inset Formula $x^{\succsim^{u}}=x^{lex}$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Part A of this problem will be skipped.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+Since the agent prefers bundles with more 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ to all other bundles, the agent maximizes his utility on 
+\begin_inset Formula $B(p,w)$
+\end_inset
+
+ by consuming as much 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ as possible.
+\begin_inset Formula 
+\begin{gather*}
+x_{1}^{lex}(p,w)=\frac{w}{p_{1}}\\
+x_{2}^{lex}(p,w)=0
+\end{gather*}
+
+\end_inset
+
+
+\bar under
+Part C.
+\bar default
+
+\begin_inset Formula 
+\[
+S_{lk}(p,w)=\frac{\partial x_{l}(p,w)}{\partial p_{k}}+\frac{\partial x_{l}(p,w)}{\partial w}x_{k}(p,w)
+\]
+
+\end_inset
+
+The value of the Slutsky matrix associated with 
+\begin_inset Formula $x^{\succsim}$
+\end_inset
+
+ at some arbitrary 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+S(p,w)=\left[\begin{array}{cc}
+0 & 0\\
+0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\bar under
+Part D.
+\end_layout
+
+\begin_layout Standard
+A continuous utility function 
+\begin_inset Formula $u$
+\end_inset
+
+ whose associated preference relation 
+\begin_inset Formula $\succsim^{u}$
+\end_inset
+
+ is such 
+\begin_inset Formula $x^{\succsim^{u}}=x^{lex}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+u(x_{1},x_{2})=x_{1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Consider the problem of maximizing the funciton 
+\begin_inset Formula $x\equiv(x_{1},x_{2})\in\mathbb{R}^{2}\mapsto u(x)\equiv-(x_{1}-\nicefrac{9}{4})^{2}-(x_{2}-2)^{2}$
+\end_inset
+
+ subject to: (1) 
+\begin_inset Formula $x_{2}-x_{1}^{2}\geq0$
+\end_inset
+
+; (2) 
+\begin_inset Formula $x_{1}+x_{2}\leq6$
+\end_inset
+
+; (3) 
+\begin_inset Formula $x\in\mathbb{R}_{+}^{2}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $x_{1}\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Write the Kunh-Tucker F.O.C.
+ for this problem.
+\end_layout
+
+\begin_layout Enumerate
+Verify that at 
+\begin_inset Formula $x^{*}\equiv(\nicefrac{3}{2},\nicefrac{9}{4})$
+\end_inset
+
+ the K-T F.O.C.
+ are satisfied.
+\end_layout
+
+\begin_layout Enumerate
+Prove that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is the unique constrained maximizer.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+The Lagrangian of this problem is given by
+\begin_inset Formula 
+\[
+L=-\left(x_{1}-\frac{9}{4}\right)^{2}-\left(x_{2}-2\right)^{2}+\lambda_{1}\left(x_{2}-x_{1}^{2}\right)+\lambda_{2}\left(6-x_{1}-x_{2}\right)+\lambda_{3}x_{1}+\lambda_{4}x_{2}
+\]
+
+\end_inset
+
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Proof
+The Kunh-Tucker conditions for this problem are given by
+\begin_inset Formula 
+\begin{gather*}
+\frac{\partial L}{\partial x_{1}}=0\iff-2\left(x_{1}-\frac{9}{4}\right)-2x_{1}\lambda_{1}-\lambda_{2}+\lambda_{3}=0\\
+\frac{\partial L}{\partial x_{2}}=0\iff-2\left(x_{2}-2\right)+\lambda_{1}-\lambda_{2}+\lambda_{4}=0\\
+x_{2}-x_{1}^{2}\geq0\\
+6-x_{1}-x_{2}\geq0\\
+x_{3}\geq0\\
+x_{4}\geq0
+\end{gather*}
+
+\end_inset
+
+along with the Complementary Slackness conditions
+\begin_inset Formula 
+\begin{gather*}
+\lambda_{1}\left(x_{2}-x_{1}^{2}\right)=0\\
+\lambda_{2}\left(6-x_{1}-x_{2}\right)=0\\
+\lambda_{3}x_{1}=0\\
+\lambda_{4}x_{2}=0
+\end{gather*}
+
+\end_inset
+
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We verify that at 
+\begin_inset Formula $x^{*}\equiv(\nicefrac{3}{2},\nicefrac{9}{4})$
+\end_inset
+
+ the K-T F.O.C.
+ are satisfied.
+ Since 
+\begin_inset Formula $x_{1}>0$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}>0$
+\end_inset
+
+, then 
+\begin_inset Formula $\lambda_{3}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{4}=0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $6-(\nicefrac{3}{2})-(\nicefrac{9}{4})>0\implies\lambda_{2}=0$
+\end_inset
+
+.
+ Thus, the first-order conditions become
+\begin_inset Formula 
+\begin{gather*}
+-2\left(x_{1}-\frac{9}{4}\right)-2\lambda_{1}x_{1}=0\implies\lambda_{1}=\frac{9}{4x_{1}}-1\\
+-2\left(x_{2}-2\right)+\lambda_{1}=0\implies\lambda_{1}=2\left(x_{2}-2\right)
+\end{gather*}
+
+\end_inset
+
+Equating the two equations for 
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+ and plugging in 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\[
+\lambda_{1}=\frac{9}{4x_{1}}-1=2\left(x_{2}-2\right)\implies\lambda_{1}>\frac{1}{2}
+\]
+
+\end_inset
+
+This implies that 
+\begin_inset Formula $(\nicefrac{9}{4})-(\nicefrac{3}{2})^{2}=0$
+\end_inset
+
+, which is true.
+ Therefore, at the given 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, the K-T F.O.C.
+ are satisfied.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To prove that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is the unique constrained maximizer, we will show that 
+\begin_inset Formula $u(x)$
+\end_inset
+
+ is a strictly concave function.
+\begin_inset Formula 
+\begin{gather*}
+\frac{\partial u(x)}{\partial x_{1}}=-2\left(x_{1}-\frac{9}{4}\right)\\
+\frac{\partial u(x)}{\partial x_{2}}=-2\left(x_{2}-2\right)\\
+\frac{\partial^{2}u(x)}{\partial x_{1}^{2}}=-2\\
+\frac{\partial^{2}u(x)}{\partial x_{2}^{2}}=-2\\
+\frac{\partial u(x)}{\partial x_{1}\partial x_{2}}=\frac{\partial u(x)}{\partial x_{2}\partial x_{2}}=0
+\end{gather*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\nicefrac{\partial^{2}u(x)}{\partial x_{1}^{2}}=-2<0$
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+\frac{\partial^{2}u(x)}{\partial x_{1}^{2}}\frac{\partial^{2}u(x)}{\partial x_{2}^{2}}-\left(\frac{\partial u(x)}{\partial x_{1}\partial x_{2}}\right)^{2}=4-0>0
+\]
+
+\end_inset
+
+then the Hessian matrix of 
+\begin_inset Formula $u(x)$
+\end_inset
+
+ is negative definite.
+ This implies that 
+\begin_inset Formula $u(x)$
+\end_inset
+
+ is a strictly concave function.
+ Thus, the K-T F.O.C.
+ are sufficient to establish that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is a solution, and by Proposition 18, 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is unique.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference on 
+\begin_inset Formula $\mathbb{R}\times\mathbb{R}_{+}^{L-1}$
+\end_inset
+
+ that is quasi-linear with respect to commodity 
+\begin_inset Formula $k$
+\end_inset
+
+ and whose associated demand correspondence is single-valued.
+ Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be the associated demand function.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $l\neq k$
+\end_inset
+
+.
+ The 
+\series bold
+Marshallian demand for good l
+\series default
+ is the funciton denoted 
+\begin_inset Formula $x_{l}^{M}$
+\end_inset
+
+, defined by:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+x_{l}^{M}: & \mathbb{R}_{++}^{L} & \rightarrow & \mathbb{R}_{+}\\
+ & p & \mapsto & x_{l}^{M}(p)\equiv x_{l}(p,w)\ \mbox{for some}\ w\in\in\mathbb{R}_{++}
+\end{array}
+\]
+
+\end_inset
+
+Prove that the Marshallian demand for good 
+\begin_inset Formula $l$
+\end_inset
+
+ is well-defined, i.e., 
+\begin_inset Formula $\forall\ p\gg0,\ \forall\ \{w,w^{\prime}\}\subseteq\mathbb{R}_{++}:x_{l}(p,w)=x_{l}(p,w^{\prime})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference on 
+\begin_inset Formula $\mathbb{R}\times\mathbb{R}_{+}^{L-1}$
+\end_inset
+
+ that is quasi-linear with respect to commodity 
+\begin_inset Formula $k$
+\end_inset
+
+ and whose associated demand correspondence is single-valued.
+ Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be the associated demand function.
+ We prove that 
+\begin_inset Formula $\forall\ p\gg0,\ \forall\ \{w,w^{\prime}\}\subseteq\mathbb{R}_{++}:\ x_{l}(p,w)=x_{l}(p,w^{\prime})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Take 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and take 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\{w,w^{\prime}\}\subseteq\mathbb{R}_{++}$
+\end_inset
+
+ such that 
+\begin_inset Formula $w\neq w^{\prime}$
+\end_inset
+
+.
+ Without loss of generality, let 
+\begin_inset Formula $w<w^{\prime}$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $c\equiv\frac{w^{\prime}-w}{p_{k}}$
+\end_inset
+
+, and define 
+\begin_inset Formula $z\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ at follows: 
+\begin_inset Formula $z\equiv(\forall\ l\neq k:z_{l}=0;\ z_{k}=c)$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $x_{l}(p,w)=x_{l}(p,w^{\prime})$
+\end_inset
+
+.
+ Now, consider 
+\begin_inset Formula $x(p,w)+z$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\bar under
+Claim
+\bar default
+:
+\series bold
+ 
+\series default
+
+\begin_inset Formula $x(p,w)+z=x(p,w^{\prime})$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+We prove the claim in two steps.
+\end_layout
+
+\begin_layout Standard
+1.
+ Show 
+\series bold
+
+\begin_inset Formula $x(p,w)+z\in B(p,w^{\prime})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is monotone and continuous, then Walras' law is satisfied by Proposition
+ 18.
+ So, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+p\cdot(x(p,w)+z) & = & p\cdot x(p,w)+p\cdot z\\
+ & = & w+p_{k}c\\
+ & = & w+p_{k}\left(\frac{w^{\prime}-w}{p_{k}}\right)\\
+ & = & w^{\prime}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\series bold
+
+\begin_inset Formula $x(p,w)+z\in B(p,w^{\prime})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ Show 
+\begin_inset Formula $x(p,w)+z$
+\end_inset
+
+ is a utility maximizer on 
+\begin_inset Formula $B(p,w^{\prime})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+By Proposition 9, a continuous preference relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathbb{R}\times\mathbb{R}_{+}^{L-1}$
+\end_inset
+
+ is quasi-linear with respect to commodity 
+\begin_inset Formula $k$
+\end_inset
+
+ if and only if it admits a continuous utility representation of the form:
+\begin_inset Formula 
+\[
+\forall\ x\in\mathbb{R}\times\mathbb{R}_{+}^{L-1}:u(x)\equiv x_{k}+\varphi(x_{-k})
+\]
+
+\end_inset
+
+Suppose for contradiction that 
+\begin_inset Formula $x(p,w)+z$
+\end_inset
+
+ does not maximize utility on 
+\begin_inset Formula $B(p,w^{\prime})$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $x(p,w)+z\notin C^{\succsim}(p,w^{\prime})$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\exists\ v\in B(p,w^{\prime}):v\succ x(p,w)+z$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents the function, then 
+\begin_inset Formula $v\succ x(p,w)+z\iff u(v)>u(x(p,w)+z)$
+\end_inset
+
+.
+ By the definition of 
+\begin_inset Formula $u$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{eqnarray*}
+v_{k}+\varphi(v_{-k}) & > & \left(x_{k}+c\right)+\varphi(x_{-k})\\
+\left(v_{k}-c\right)+\varphi(v_{-k}) & > & x_{k}+\varphi(x_{-k})\\
+u(v-z) & > & u(x(p,w))
+\end{eqnarray*}
+
+\end_inset
+
+Now,
+\begin_inset Formula 
+\begin{eqnarray*}
+p\cdot(v-z) & = & p\cdot v-p\cdot z\\
+ & = & p\cdot v-p_{k}c\\
+ & = & p\cdot v-p_{k}\left(\frac{w^{\prime}-w}{p_{k}}\right)\\
+ & = & p\cdot v-w^{\prime}+w\\
+ & \leq & w^{\prime}-w^{\prime}+w\\
+ & = & w
+\end{eqnarray*}
+
+\end_inset
+
+So, we have shown that 
+\begin_inset Formula $v-z\in B(p,w)$
+\end_inset
+
+ and 
+\begin_inset Formula $u(v-z)>u(x(p,w))$
+\end_inset
+
+.
+ However, this contradicts the fact that 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+ is the unique utility maximizer on 
+\begin_inset Formula $B(p,w)$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $x(p,w)+z$
+\end_inset
+
+ is the utility maximizer on 
+\begin_inset Formula $B(p,w^{\prime})$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+We conclude that 
+\begin_inset Formula $x(p,w)+z$
+\end_inset
+
+ maximizes utility for 
+\begin_inset Formula $B(p,w^{\prime})$
+\end_inset
+
+, and since demand is single-valued, then 
+\begin_inset Formula $x(p,w)+z=x(p,w^{\prime})$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $x(p,w)+z\equiv(\forall\ l\neq k:x_{l}(p,w);\ x_{k}(p,w)+c\ \mbox{for}\ k)=x(p,w^{\prime})$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $x_{l}(p,w)=x_{l}(p,w^{\prime})$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\forall\ p\gg0,\ \forall\ \{w,w^{\prime}\}\subseteq\mathbb{R}_{++}:\ x_{l}(p,w)=x_{l}(p,w^{\prime})$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

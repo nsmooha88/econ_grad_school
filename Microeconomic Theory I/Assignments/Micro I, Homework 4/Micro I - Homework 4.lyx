@@ -1,0 +1,2166 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Microeconomic Theory I: Homework 4
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 3.2.3, Problem 5
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proposition 7.
+ 
+\series default
+If 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is represented by a continuous utility function, then 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is continuous.
+ (A function 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ is continuous if for each convergent sequence in 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $x^{t}\underset{t\to\infty}{\longrightarrow}x$
+\end_inset
+
+, we have that 
+\begin_inset Formula $u(x^{t})\underset{t\to\infty}{\longrightarrow}u(x).)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Given:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is represented by a continuous utility function
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is continuous 
+\begin_inset Formula $\iff\forall\ \{x^{t}\},\{y^{t}\}\subseteq X:\left[x^{t}\underset{t\to\infty}{\longrightarrow}x\land\; y^{t}\underset{t\to\infty}{\longrightarrow}y\;\land\;\left(\forall t\in\mathbb{N}:x^{t}\succsim y^{t}\right)\right]\implies x\succsim y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take two convergent sequences 
+\begin_inset Formula $x^{t}\underset{t\to\infty}{\longrightarrow}x$
+\end_inset
+
+ and 
+\begin_inset Formula $y^{t}\underset{t\to\infty}{\longrightarrow}y$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ t\in\mathbb{N},\ x^{t}\succeq y^{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show: 
+\begin_inset Formula $x\succeq y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is represented by 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+, we have that 
+\begin_inset Formula $u(x^{t})\ge u(y^{t})\ \forall\ t\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since limits preserve weak inequalities, we have that 
+\begin_inset Formula $\underset{t\to\infty}{\lim}\ u(x^{t})\geq\underset{t\to\infty}{\lim}\ u(y^{t})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ is a continuous function, then 
+\begin_inset Formula $u(x^{t})\underset{t\to\infty}{\longrightarrow}u(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $u(y^{t})\underset{t\to\infty}{\longrightarrow}u(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, we have that 
+\begin_inset Formula $u(x)\geq u(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $x\succeq y$
+\end_inset
+
+ since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence, 
+\begin_inset Formula $\forall\ \{x^{t}\},\{y^{t}\}\subseteq X:\left[x^{t}\underset{t\to\infty}{\longrightarrow}x\land\; y^{t}\underset{t\to\infty}{\longrightarrow}y\;\land\;\left(\forall t\in\mathbb{N}:x^{t}\succsim y^{t}\right)\right]\implies x\succsim y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is continuous
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 3.3.3, Problem 2
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}.$
+\end_inset
+
+ Prove that a monotone and continuous preference 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is homothetic if and only if it admits a representation 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ that is homogeneous of degree one, i.e., such that for each 
+\begin_inset Formula $\alpha\in\mathbb{R}_{+},\ u(\alpha x)=\alpha u(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Given:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is a monotone and continuous preference
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is homothetic if and only if it admits a continuous representation 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ that is homogeneous of degree one
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.
+ 
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ 
+\series default
+Assume a monotone and continuous preference 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is homothetic
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is a continuous preference, then there is a function 
+\begin_inset Formula $v:X\rightarrow\mathbb{R}$
+\end_inset
+
+ representing 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ by Theorem 9 (Debreu's Representation Theorem)
+\end_layout
+
+\begin_layout Standard
+Also note, since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is monotone, 
+\begin_inset Formula $v$
+\end_inset
+
+ is monotone
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $f(t)=v(tz)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $v$
+\end_inset
+
+ is continuous and monotone, 
+\begin_inset Formula $f$
+\end_inset
+
+ is continuous and monotone
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $u(x)=f^{-1}(v(x))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f$
+\end_inset
+
+ monotone 
+\begin_inset Formula $\implies$
+\end_inset
+
+ 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ is monotone
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ by Proposition 2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies f(u(x))=v(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies v(u(x)z)=v(x)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+by our definition of 
+\begin_inset Formula $f$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies u(x)z\sim x$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $v$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\series bold
+(1)
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\alpha\in\mathbb{R}_{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, we have that 
+\begin_inset Formula $\alpha u(x)z\sim\alpha x$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is homothetic
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\alpha u(x)z\sim u(\alpha x)z$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $u(\alpha x)z\sim\alpha x$
+\end_inset
+
+ by 
+\series bold
+(1)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\alpha u(x)=u(\alpha x)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $u$
+\end_inset
+
+ is homogenous of degree one
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+2.
+ 
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ 
+\series default
+Assume 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ admits a representation 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ that is homogeneous of degree one
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\{x,y\}\subseteq X$
+\end_inset
+
+ such that 
+\begin_inset Formula $x\sim y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\alpha\in\mathbb{R}_{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show: 
+\series default
+\emph default
+
+\begin_inset Formula $\alpha x\sim\alpha y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is represented by 
+\begin_inset Formula $u$
+\end_inset
+
+, 
+\begin_inset Formula $u(x)=u(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\alpha u(x)=\alpha u(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies u(\alpha x)=u(\alpha y)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $u$
+\end_inset
+
+ is homogeneous of degree one
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\alpha x\sim\alpha y$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is represented by 
+\begin_inset Formula $u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is homothetic
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is homothetic if and only if it admits a representation 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ that is homogeneous of degree one
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 3.3.3, Problem 7
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proposition 8.
+
+\series default
+ Let 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ be a preference on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+ that is represented by a utility function 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is convex if and only if 
+\begin_inset Formula $u$
+\end_inset
+
+ is quasi-concave.
+ Moreover, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is strictly convex if and only if 
+\begin_inset Formula $u$
+\end_inset
+
+ is strictly quasi-concave.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Given:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is a preference on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+ represented by a utility function 
+\begin_inset Formula $u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is convex 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $u$
+\end_inset
+
+ is quasi-concave
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is strictly convex 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $u$
+\end_inset
+
+ is strictly quasi-concave
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.
+ 
+\series default
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is convex
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\forall\ x\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succeq,x)$
+\end_inset
+
+ is convex, i.e., 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq U(\succeq,x),\ \forall\ \alpha\in[0,1]:\alpha x+(1-\alpha)y\in U(\succeq,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show:
+\series default
+ 
+\emph default
+
+\begin_inset Formula $u$
+\end_inset
+
+ is quasi-concave
+\emph on
+ 
+\begin_inset Formula $\iff\forall\ \{x,y\}\subseteq\mathbb{R}_{+}^{L},\ \forall\ \alpha\in[0,1]:u(\alpha x+(1-\alpha)y)\geq\mbox{min}\{u(x),u(y)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Without loss of generality, take 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $y\succeq x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y\succeq x\implies u(y)\ge u(x)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\mbox{min}\{u(x),u(y)\}=u(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, 
+\begin_inset Formula $y\succeq x\implies y\in U(\succeq,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete, 
+\begin_inset Formula $x\succeq x$
+\end_inset
+
+ 
+\begin_inset Formula $\implies x\in U(\succeq,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $\alpha x+(1-\alpha)y\in U(\succeq,x)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is convex
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\alpha x+(1-\alpha)y\succeq x$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+by the definition of 
+\begin_inset Formula $U(\succeq,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies u(\alpha x+(1-\alpha)y)\geq u(x)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence, 
+\emph on
+
+\begin_inset Formula $\forall\ \{x,y\}\subseteq\mathbb{R}_{+}^{L},\ \forall\ \alpha\in[0,1]:u(\alpha y+(1-\alpha)z)\geq\mbox{min}\{u(x),u(y)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $u$
+\end_inset
+
+ is quasi-concave
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+2.
+ 
+\series default
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $u$
+\end_inset
+
+ is quasi-concave
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\begin_inset Formula $\iff\forall\ \{x,y\}\subseteq\mathbb{R}_{+}^{L},\ \forall\ \alpha\in[0,1]:u(\alpha x+(1-\alpha)y)\geq\mbox{min}\{u(x),u(y)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show: 
+\series default
+\emph default
+
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is convex 
+\begin_inset Formula $\iff\forall\ x\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succeq,x)$
+\end_inset
+
+ is convex, i.e., 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq U(\succeq,x),\ \forall\ \alpha\in[0,1]:\alpha x+(1-\alpha)y\in U(\succeq,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Without loss of generality, take 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $y\succeq x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y\succeq x\implies y\in U(\succeq,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete, 
+\begin_inset Formula $x\succeq x$
+\end_inset
+
+ 
+\begin_inset Formula $\implies x\in U(\succeq,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, 
+\begin_inset Formula $y\succeq x\implies u(y)\ge u(x)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\mbox{min}\{u(x),u(y)\}=u(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ is quasi-concave, 
+\begin_inset Formula $u(\alpha x+(1-\alpha)y)\ge\mbox{min}\{u(x),u(y)\}=u(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\alpha x+(1-\alpha)y\succeq x$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\alpha x+(1-\alpha)y\in U(\succeq,x)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+by the definition of 
+\begin_inset Formula $U(\succeq,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence, 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq U(\succeq,x),\ \forall\ \alpha\in[0,1]:\alpha x+(1-\alpha)y\in U(\succeq,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is convex
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is convex 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $u$
+\end_inset
+
+ is quasi-concave
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.
+ 
+\series default
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is strictly convex
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\forall\ x\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succeq,x)$
+\end_inset
+
+ is convex, i.e., 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq U(\succeq,x),\ \forall\ \alpha\in(0,1):\alpha x+(1-\alpha)y\succ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show:
+\series default
+ 
+\emph default
+
+\begin_inset Formula $u$
+\end_inset
+
+ is strictly quasi-concave
+\emph on
+ 
+\begin_inset Formula $\iff\forall\ \{x,y\}\subseteq\mathbb{R}_{+}^{L},\ \forall\ \alpha\in(0,1):u(\alpha x+(1-\alpha)y)>\mbox{min}\{u(x),u(y)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Without loss of generality, take 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $y\succeq x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y\succeq x\implies u(y)\geq u(x)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\mbox{min}\{u(x),u(y)\}=u(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, 
+\begin_inset Formula $y\succeq x\implies y\in U(\succeq,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete, 
+\begin_inset Formula $x\succeq x$
+\end_inset
+
+ 
+\begin_inset Formula $\implies x\in U(\succeq,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $\alpha x+(1-\alpha)y\succ x$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is strictly convex
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies u(\alpha x+(1-\alpha)y)>u(x)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence, 
+\emph on
+
+\begin_inset Formula $\forall\ \{x,y\}\subseteq\mathbb{R}_{+}^{L},\ \forall\ \alpha\in(0,1):u(\alpha y+(1-\alpha)z)>\mbox{min}\{u(x),u(y)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $u$
+\end_inset
+
+ is strictly quasi-concave
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+2.
+ 
+\series default
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $u$
+\end_inset
+
+ is quasi-concave
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\begin_inset Formula $\iff\forall\ \{x,y\}\subseteq\mathbb{R}_{+}^{L},\ \forall\ \alpha\in(0,1):u(\alpha x+(1-\alpha)y)\geq>\mbox{min}\{u(x),u(y)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show: 
+\series default
+\emph default
+
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is strictly convex 
+\begin_inset Formula $\iff\forall\ x\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succeq,x)$
+\end_inset
+
+ is convex, i.e., 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq U(\succeq,x),\ \forall\ \alpha\in(0,1):\alpha x+(1-\alpha)y\succ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Without loss of generality, take 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $y\succeq x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y\succeq x\implies y\in U(\succeq,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete, 
+\begin_inset Formula $x\succeq x$
+\end_inset
+
+ 
+\begin_inset Formula $\implies x\in U(\succeq,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, 
+\begin_inset Formula $y\succeq x\implies u(y)\ge u(x)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\mbox{min}\{u(x),u(y)\}=u(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ is strictly quasi-concave, 
+\begin_inset Formula $u(\alpha x+(1-\alpha)y)>\mbox{min}\{u(x),u(y)\}=u(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\alpha x+(1-\alpha)y\succ x$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence, 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq U(\succeq,x),\ \forall\ \alpha\in(0,1):\alpha x+(1-\alpha)y\succ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is strictly convex
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is strictly convex 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $u$
+\end_inset
+
+ is strictly quasi-concave
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 3.3.3, Problem 10
+\end_layout
+
+\begin_layout Standard
+Consider an 
+\begin_inset Formula $L$
+\end_inset
+
+- commmodity space 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and a preference 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a) State the definition of homothetic preferences
+\end_layout
+
+\begin_layout Standard
+A preference relation 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is homothetic if its indifference sets are related by proportional expansion
+ along rays, i.e., for each pair 
+\begin_inset Formula $\{x,y\}\subseteq X$
+\end_inset
+
+ such that 
+\begin_inset Formula $x\sim y$
+\end_inset
+
+ and each 
+\begin_inset Formula $\alpha\in\mathbb{R}_{+}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha x\sim\alpha y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(b) State the definition of continuous preferences
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A preference relation 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+ is continuous if it is a closed subset of 
+\begin_inset Formula $\mathbb{R}_{+}^{L}\times\mathbb{R}_{+}^{L}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\forall\ \{x^{t}\},\{y^{t}\}\subseteq X:\left[x^{t}\underset{t\to\infty}{\longrightarrow}x\land\; y^{t}\underset{t\to\infty}{\longrightarrow}y\;\land\;\left(\forall t\in\mathbb{N}:x^{t}\succsim y^{t}\right)\right]\implies x\succsim y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(c) Prove that if preferences are homothetic and continuous, then for each
+ 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x\succeq y$
+\end_inset
+
+, and each 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha x\succeq\alpha y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Given:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is a preference on 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is homothetic and continuous
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\left(\forall\ \{x,y\}\subseteq\mathbb{R}_{+}^{L}:x\succeq y\right),\ \forall\ \alpha>0\right]:\alpha x\succeq\alpha y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x\succeq y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\forall\ \alpha>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show: 
+\begin_inset Formula $\alpha x\succeq\alpha y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By Theorem 10, a continuous preference 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is homothetic 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ admits a continuous representation 
+\begin_inset Formula $u:X\rightarrow\mathbb{R}$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $\alpha\in\mathbb{R}_{+},\ u(\alpha x)=\alpha u(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+, then 
+\begin_inset Formula $x\succeq y\iff u(x)\ge u(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\alpha u(x)\ge\alpha u(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies u(\alpha x)\geq u(\alpha y)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $u$
+\end_inset
+
+ is homogeneous of degree one
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\alpha x\succeq\alpha y$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\left[\left(\forall\ \{x,y\}\subseteq\mathbb{R}_{+}^{L}:x\succeq y\right),\ \forall\ \alpha>0\right]:\alpha x\succeq\alpha y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_body
+\end_document

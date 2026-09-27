@@ -1,0 +1,655 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Microeconomic Theory I: Homework 11
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 4.4, Problem 1
+\end_layout
+
+\begin_layout Standard
+Suppose that 
+\begin_inset Formula $f$
+\end_inset
+
+ is the production funciton associated with a single-output technology,
+ and let 
+\begin_inset Formula $Y$
+\end_inset
+
+ be the associated production set.
+ Prove that 
+\begin_inset Formula $Y$
+\end_inset
+
+ satisfies Constant Returns of Scale if and only if 
+\begin_inset Formula $f$
+\end_inset
+
+ is homogenous of degree one.
+ Conclude that in the single-input single-output case CRS implies that 
+\begin_inset Formula $f$
+\end_inset
+
+ is linear.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Given:
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f:\mathbb{R}^{L-1}\rightarrow\mathbb{\mathbb{R}}_{+}$
+\end_inset
+
+ is the production functionc associated with a single-output technology.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Y\equiv\left\{ (-z,q)\in\mathbb{R}^{L}:z\in\mathbb{R}^{L-1}\ \mbox{and}\ q-f(z)=0\right\} $
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Show:
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall\ y\in Y,\ \forall\ \alpha\in\mathbb{R}_{+}:\alpha y\in Y\iff\forall\ \alpha\in\mathbb{R}_{+},\ \forall\ z\in\mathbb{R}^{L-1}:\alpha f(z)=f(\alpha z)$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Proof:
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\forall\ y\in Y,\ \forall\ \alpha\in\mathbb{R}_{+}:\alpha y\in Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\alpha\in\mathbb{R}_{+},\ z\in\mathbb{R}^{L-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show
+\emph default
+:
+\series default
+ 
+\begin_inset Formula $\alpha f(z)=f(\alpha z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For this 
+\begin_inset Formula $z$
+\end_inset
+
+, let 
+\begin_inset Formula $f(z)=q\in\mathbb{R}_{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $(-z,q)\in\partial f\equiv\left\{ (-z,q)\in\mathbb{R}^{L}:z\in\mathbb{R}^{L-1}\ \mbox{and}\ q-f(z)=0\right\} \subseteq Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $Y$
+\end_inset
+
+ satisfies CRS, 
+\begin_inset Formula $(-\alpha z,\alpha q)\in Y\implies\alpha q\leq f(\alpha z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $f(\alpha z)=\tilde{q}\in\mathbb{R}_{+}\implies(-\alpha z,\tilde{q})\in Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since Y satisfies CRS, 
+\begin_inset Formula $\left(-z,\frac{\tilde{q}}{\alpha}\right)\in Y\implies\frac{\tilde{q}}{\alpha}\leq f(z)=q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, 
+\begin_inset Formula $\alpha q\leq f(\alpha z)=\tilde{q}\implies q\leq\frac{\tilde{q}}{\alpha}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $q\leq\frac{\tilde{q}}{\alpha}\ \wedge\ q\geq\frac{\tilde{q}}{\alpha}\implies q=\frac{\tilde{q}}{\alpha}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $f(z)=f(\alpha z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\forall\ \alpha\in\mathbb{R}_{+},\ \forall\ z\in\mathbb{R}^{L-1}:\alpha f(z)=f(\alpha z)$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\forall\ \alpha\in\mathbb{R}_{+},\ \forall\ z\in\mathbb{R}^{L-1}:\alpha f(z)=f(\alpha z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $y\in Y,\ \alpha\in\mathbb{R}_{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show
+\emph default
+: 
+\begin_inset Formula $\alpha y\in Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y\in Y\implies y=(-z,q)\in\mathbb{R}^{L}:z\in\mathbb{R}^{L-1}\ \wedge\ q-f(z)\leq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies q\leq f(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\alpha q\leq\alpha f(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\alpha q\leq f(\alpha z)\ \mbox{since}\ \alpha f(z)=f(\alpha z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $(-\alpha z,\alpha q)\in Y\implies\alpha(-z,q)\in Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\alpha y\in Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\forall\ y\in Y,\ \forall\ \alpha\in\mathbb{R}_{+}:\alpha y\in Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Part*
+
+\bar under
+Section 4.4, Problem 3
+\end_layout
+
+\begin_layout Standard
+Consider a production set 
+\begin_inset Formula $Y\subseteq\mathbb{R}^{L}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\pi^{Y}$
+\end_inset
+
+ be the profit function associated with set 
+\begin_inset Formula $Y$
+\end_inset
+
+, i.e., for each 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\pi^{Y}(p)\equiv{\displaystyle \max_{y\in Y}p\cdot y}
+\]
+
+\end_inset
+
+
+\series bold
+(a) Define free disposal and no free lunch.
+ Draw a production set that satisfies these two properties.
+ Illustrate the profit maximization for some price vector 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+No-free-lunch
+\series default
+: 
+\begin_inset Formula $\forall\ y\in Y:\left[y\geq0\implies y=0\right]$
+\end_inset
+
+.
+ Alternatively, 
+\begin_inset Formula $Y\cap\mathbb{R}_{+}^{L}\subseteq\{0\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Free-disposal
+\series default
+: 
+\begin_inset Formula $y\in Y\implies\left[\forall\ x\leq y:x\in Y\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(b) Is 
+\begin_inset Formula $\pi^{Y}$
+\end_inset
+
+ concave, convex, or neither of them?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim: 
+\series default
+
+\begin_inset Formula $\pi^{Y}(p)$
+\end_inset
+
+ is convex
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\{\hat{p},\tilde{p}\}\in\mathbb{R}_{+}^{L}\ \mbox{and}\ \alpha\in[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\hat{y}\equiv\arg{\displaystyle \max_{y\in Y}\hat{p}\cdot}y$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{y}\equiv\arg{\displaystyle \max_{y\in Y}\tilde{p}\cdot y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider 
+\begin_inset Formula $\alpha\hat{p}+(1-\alpha)\tilde{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi^{Y}(\alpha\hat{p}+(1-\alpha)\tilde{p})=(\alpha\hat{p}+(1-\alpha)\tilde{p})\cdot\bar{y}$
+\end_inset
+
+ where 
+\begin_inset Formula $\bar{y}\equiv\arg{\displaystyle \max_{y\in Y}}(\alpha\hat{p}+(1-\alpha)\tilde{p})\cdot y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\alpha\hat{p}\cdot\bar{y}+(1-\alpha)\tilde{p}\cdot\bar{y}\leq\alpha\pi^{Y}(\hat{p})+(1-\alpha)\pi^{Y}(\tilde{p})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\forall\ \{p,p^{\prime}\}\subseteq\mathbb{R}_{+}^{L},\ \forall\ \alpha\in[0,1]:\pi^{Y}(\alpha p+(1-\alpha)p^{\prime})\leq\alpha\pi^{Y}(p)+(1-\alpha)\pi^{Y}(p^{\prime})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\pi^{Y}(p)$
+\end_inset
+
+ is a convex function.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(c) Suppose now that a firm with production set 
+\begin_inset Formula $Y$
+\end_inset
+
+ may face an uncertain market.
+ The firm is an expected profit maximizer and is risk neutral.
+ There are two markets in which the firm may participate
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Market 1: price is uncertain with some probability distribution
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Market 2: price is certian; it is exactly the expected price in Market 1.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Prove that the firm always finds participating in Market 1 as good as participat
+ing in Market 2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Market 1: 
+\begin_inset Formula ${\displaystyle \int}\pi^{Y}(p)dF(p)$
+\end_inset
+
+ for some distribution of random price
+\end_layout
+
+\begin_layout Standard
+Market 2: 
+\begin_inset Formula $\pi^{Y}\left({\displaystyle \int}pdF(p)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\pi^{Y}(p)$
+\end_inset
+
+ is a convex function, then by Jensen's inequality, 
+\begin_inset Formula $\pi^{Y}\left({\displaystyle \int}pdF(p)\right)\leq{\displaystyle \int}\pi^{Y}(p)dF(p)$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

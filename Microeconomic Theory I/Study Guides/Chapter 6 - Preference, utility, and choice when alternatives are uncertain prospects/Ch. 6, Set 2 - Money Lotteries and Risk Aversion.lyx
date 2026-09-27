@@ -1,0 +1,5353 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 6: Preference, utility, and choice when alternatives are uncertain
+ prospects
+\end_layout
+
+\begin_layout Standard
+Need to complete: Proposition 60, Theorem 24, Theorem 25, Theorem 26, Propositio
+n 62/63.
+\end_layout
+
+\begin_layout Section*
+6.4
+\begin_inset space \quad{}
+\end_inset
+
+Money lotteries and risk aversion
+\end_layout
+
+\begin_layout Subsection*
+6.4.1
+\begin_inset space \quad{}
+\end_inset
+
+Expected utility theory
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Primitives of the model:
+\end_layout
+
+\begin_layout Enumerate
+Set of prices 
+\begin_inset Formula $Z\equiv\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Alternative set 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(117).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a preference on 
+\begin_inset Formula $\Delta(\mathbb{R})$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is 
+\series bold
+money monotone
+\series default
+ iff 
+\begin_inset Formula $\forall\ \{z,z^{\prime}\}\subseteq\mathbb{R}:z\geq z^{\prime}\implies\delta_{z}\succsim\delta_{z^{\prime}}$
+\end_inset
+
+; it is 
+\series bold
+strictly money monotone
+\series default
+ iff 
+\begin_inset Formula $\forall\ \{z,z^{\prime}\}\subseteq\mathbb{R}:z>z^{\prime}\implies\delta_{z}\succ\delta_{z^{\prime}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Note*
+\begin_inset Formula $z^{\prime}\geq z\implies\delta_{z^{\prime}}\succsim\delta_{z}\implies U(\delta_{z^{\prime}})\geq U(\delta_{z^{\prime}})\implies u(z^{\prime})\geq u(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+(23).
+
+\series default
+ 
+\emph on
+A preference on 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta(\mathbb{R})$
+\end_inset
+
+ satisfies A1, A2*, and A3* if and only if there is an index 
+\begin_inset Formula $u:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $\{F,G\}\subseteq\Delta(\mathbb{R})$
+\end_inset
+
+, 
+\begin_inset Formula $F\succsim G$
+\end_inset
+
+ if and only if
+\begin_inset Formula 
+\[
+E_{F}u\geq E_{G}u
+\]
+
+\end_inset
+
+The index 
+\begin_inset Formula $u$
+\end_inset
+
+ is unique up to a positive affine linear transformation.
+ Moreover, if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is money monotone, then 
+\begin_inset Formula $u$
+\end_inset
+
+ is non-decreasing; and if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is strictly money monotone, then 
+\begin_inset Formula $u$
+\end_inset
+
+ is increasing.
+ 
+\end_layout
+
+\begin_layout Proof
+This proof is analogous to the proof of Theorem 21.
+ However, the proof is very technical, and it was not covered during class.
+ Therefore, it will not be presented in these notes.
+\end_layout
+
+\begin_layout Remark*
+We assume that the index 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+ is a continuous function.
+\end_layout
+
+\begin_layout Subsection*
+6.4.2
+\begin_inset space \quad{}
+\end_inset
+
+Risk Aversion
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The concept of risk aversion provides one of the central analytical techniques
+ of economic analysis.
+ We begin our discussion of risk aversion with a simple example and a general
+ definition that does not presume an expected utility formulation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the lottery 
+\begin_inset Formula $F$
+\end_inset
+
+ that assigns probability 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ to the outcomes 
+\begin_inset Formula $\$1$
+\end_inset
+
+ and 
+\begin_inset Formula $-\$1$
+\end_inset
+
+.
+ Consider an agent who chooses between 
+\begin_inset Formula $F$
+\end_inset
+
+ and the lottery that places probability one in 
+\begin_inset Formula $\$0$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\delta_{0}$
+\end_inset
+
+.
+ What would an agent who is 
+\begin_inset Quotes eld
+\end_inset
+
+averse to risk
+\begin_inset Quotes erd
+\end_inset
+
+ choose? Lottery 
+\begin_inset Formula $F$
+\end_inset
+
+ offers only risk compared to 
+\begin_inset Formula $\delta_{0}$
+\end_inset
+
+.
+ Thus, a risk averse agent would prefer 
+\begin_inset Formula $\delta_{0}$
+\end_inset
+
+ to 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(118).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a preference on 
+\begin_inset Formula $\Delta(\mathbb{R})$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+\emph on
+risk averse
+\series default
+ iff 
+\begin_inset Formula $\forall\ F\in\Delta(\mathbb{R}):\delta_{\mu_{F}}\succsim F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+\emph on
+strictly risk averse
+\series default
+ iff 
+\begin_inset Formula $\forall\ F\in\Delta(\mathbb{R}):\delta_{\mu_{F}}\neq F\implies\delta_{\mu_{F}}\succ F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+\emph on
+risk neutral
+\series default
+ iff 
+\begin_inset Formula $\forall\ F\in\Delta(\mathbb{R}):\delta_{\mu_{F}}\sim F$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+6.4.3
+\begin_inset space \quad{}
+\end_inset
+
+Index characterization of risk aversion
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(59).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be an EU maximizer with associated index 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is risk averse if and only if 
+\begin_inset Formula $u$
+\end_inset
+
+ is concave.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be an EU maximizaer with associated index 
+\begin_inset Formula $u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is risk averse.
+ We prove that 
+\begin_inset Formula $u$
+\end_inset
+
+ is concave.
+ Let 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $F$
+\end_inset
+
+ be the lottery that assigns probability 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ to 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $(1-\alpha)$
+\end_inset
+
+ to 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is risk averse, then
+\begin_inset Formula 
+\[
+\delta_{\alpha x+(1-\alpha)y}\succsim F
+\]
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\[
+U(\delta_{\alpha x+(1-\alpha)y})=u(\alpha+(1-\alpha)y)\geq\alpha u(x)+(1-\alpha)u(y)=U(F)
+\]
+
+\end_inset
+
+which proves that 
+\begin_inset Formula $u$
+\end_inset
+
+ is concave.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume that 
+\begin_inset Formula $u$
+\end_inset
+
+ is concave.
+ We prove that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is risk averse.
+ Take 
+\begin_inset Formula $F\in\Delta(\mathbb{R})$
+\end_inset
+
+.
+ We claim that 
+\begin_inset Formula $\delta_{\mu_{F}}\succsim F$
+\end_inset
+
+.
+ Consider the tangent to 
+\begin_inset Formula $u$
+\end_inset
+
+ at 
+\begin_inset Formula $\mu_{F}$
+\end_inset
+
+.
+ The equation of this line is, for each 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+y(t)=u(\mu_{F})+u^{\prime}(\mu_{F})(t-\mu_{F})
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ is concave, then for each 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $y(t)\geq u(t)$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\[
+{\displaystyle \int}y(t)dF(t)\geq{\displaystyle \int}u(t)dF(t)
+\]
+
+\end_inset
+
+which is
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \int}\left[u(\mu_{F})+u^{\prime}(\mu_{F})(t-\mu_{F})\right]dF(t) & \geq & {\displaystyle \int}u(t)dF(t)\\
+u(\mu_{F}){\displaystyle \int}dF(t)+u^{\prime}(\mu_{F}){\displaystyle \int}tdF(t)-u^{\prime}(\mu_{F})\mu_{F}{\displaystyle \int}dF(t) & \geq & {\displaystyle \int}u(t)dF(t)
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\int dF=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\int tdF(t)=\mu_{F}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+u\left(\int tdF(t)\right)\geq{\displaystyle \int}u(t)dF(t)
+\]
+
+\end_inset
+
+where the above equation is known as 
+\emph on
+Jensen's Inequality
+\emph default
+, and it holds for all 
+\begin_inset Formula $F(\cdot)$
+\end_inset
+
+.
+ It is the defining property of a concave function.
+ Thus, 
+\begin_inset Formula $\delta_{\mu_{F}}\succsim F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Hence, in the context of expected utility theory, we see that risk aversion
+ is equivalent to the concavity of 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+, and that strict risk aversion is equivalent to the strict concavity of
+ 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+.
+ Strict concavity means that the marginal utility of money is decreasing.
+ Hence, at any level of wealth 
+\begin_inset Formula $x$
+\end_inset
+
+, the utility gain from an extra dollar is small than (the absolute value
+ of) the utility loss of having a dollar less.
+ It follows that a risk of gaining or losing a dollar with even proability
+ is not worth taking.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For a risk-neutral expected utility maximizer, Jensen's inequality must
+ hold with 
+\emph on
+equality
+\emph default
+ for all 
+\begin_inset Formula $F(\cdot)$
+\end_inset
+
+.
+ Hence, the decision maker is risk neutral if and only if the index function
+ 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+ is linear.
+\end_layout
+
+\begin_layout Subsection*
+6.4.4
+\begin_inset space \quad{}
+\end_inset
+
+Certainty equivalent and probability premium characterization of risk aversion
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(119).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be an EU maximizer with associated index 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $F\in\Delta(\mathbb{R})$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\emph on
+The 
+\series bold
+certainty equivalent of 
+\begin_inset Formula $F$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $u$
+\end_inset
+
+
+\series default
+ is the amount of money 
+\begin_inset Formula $c(F,u)$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+\delta_{c(F,u)}\sim F
+\]
+
+\end_inset
+
+Equivalently
+\begin_inset Formula 
+\[
+u(c(F,u))={\displaystyle \int}u\ dF
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Let 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+.
+ The 
+\series bold
+probability premium at 
+\begin_inset Formula $x$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ and 
+\begin_inset Formula $u$
+\end_inset
+
+
+\series default
+ is the premium 
+\begin_inset Formula $\pi(x,\epsilon,u)$
+\end_inset
+
+ such that if 
+\begin_inset Formula $F$
+\end_inset
+
+ is the lottery that assigns probability 
+\begin_inset Formula $\frac{1}{2}-\pi(x,\epsilon,u)$
+\end_inset
+
+ to 
+\begin_inset Formula $x-\epsilon$
+\end_inset
+
+ and probability 
+\begin_inset Formula $\frac{1}{2}+\pi(x,\epsilon,u)$
+\end_inset
+
+ to 
+\begin_inset Formula $x+\epsilon$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\delta_{x}\sim F
+\]
+
+\end_inset
+
+Equivalently
+\begin_inset Formula 
+\[
+U(x)=\left(\frac{1}{2}-\pi(x,\epsilon,u)\right)u(x-\epsilon)+\left(\frac{1}{2}+\pi(x,\epsilon,u)\right)u(x+\epsilon)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Remark*
+Note that 
+\begin_inset Formula $\mu_{F}\geq c(F,u)$
+\end_inset
+
+.
+ Also, 
+\begin_inset Formula $\delta_{x}\sim F^{\alpha};\ \mbox{\alpha\geq\frac{1}{2};\ }\pi(x,\epsilon,u)=\alpha-\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(60).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be an EU maximizer with associated index 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ Then, the following conditions are equivalent:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is risk averse.
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $F\in\Delta(\mathbb{R})$
+\end_inset
+
+, 
+\begin_inset Formula $c(F,u)\leq\mu_{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+ and each 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, 
+\begin_inset Formula $\pi(x,\epsilon,u)\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+u is concave.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Will prove.
+ Check page 187 of Mas-Colell.
+\end_layout
+
+\begin_layout Section*
+6.5
+\begin_inset space \quad{}
+\end_inset
+
+Comparisons of risk aversion across agents
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now that we know what it means to be risk averse, we can try to measure
+ the extent of risk aversion.
+ In addition, we can compare risk aversion across individuals.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(120).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim^{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\succsim^{2}$
+\end_inset
+
+ be two risk averse EU maximizers.
+ Then 
+\begin_inset Formula $\succsim^{1}$
+\end_inset
+
+ is more risk averse than 
+\begin_inset Formula $\succsim^{2}$
+\end_inset
+
+ iff 
+\begin_inset Formula $\forall\ F\in\Delta(Z),\ \forall\ c\in\mathbb{R}:$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[F\succsim^{1}\delta_{c}\implies F\succsim^{2}\delta_{c}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose that 
+\begin_inset Formula $\succsim^{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\succsim^{2}$
+\end_inset
+
+ are two risk averse EU maximizers and that 
+\begin_inset Formula $\succsim^{1}$
+\end_inset
+
+ is more risk averse than 
+\begin_inset Formula $\succsim^{2}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ be their respective utility indices.
+ As we saw in the previous section, an agent is risk averse when his/her
+ associated utility index is concave.
+ As we will see, 
+\begin_inset Formula $\succsim^{1}$
+\end_inset
+
+ is more risk averse than 
+\begin_inset Formula $\succsim^{2}$
+\end_inset
+
+ whenever 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ is 
+\begin_inset Quotes eld
+\end_inset
+
+more concave
+\begin_inset Quotes erd
+\end_inset
+
+ than 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The issue then is how to measure concavity of a function.
+ We know that if the second derivative of a funciton is negative, then the
+ function is concave.
+ However, the comparison of second derivatives across functions does not
+ tell us which function is more concave.
+ Think for instance of 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $2u$
+\end_inset
+
+.
+ Clearly, these two functions represent the same agent.
+ However, the absolute value of the second derivative of 
+\begin_inset Formula $2u$
+\end_inset
+
+ is always twice that of 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ This happens because the first derivative of 
+\begin_inset Formula $2u$
+\end_inset
+
+ is always twice the first derivative of 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ Thus, since the functions represent the same agent, the derivative of 
+\begin_inset Formula $2u$
+\end_inset
+
+ has to decrease twice as fast as the derivative of 
+\begin_inset Formula $u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This is why in order to learn 
+\begin_inset Quotes eld
+\end_inset
+
+how concave a funciton 
+\begin_inset Formula $u$
+\end_inset
+
+ is at 
+\begin_inset Formula $x$
+\end_inset
+
+,
+\begin_inset Quotes erd
+\end_inset
+
+ one has to normalize the first derivative of 
+\begin_inset Formula $u$
+\end_inset
+
+ at 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Consider the function that assigns to each 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+ the value
+\begin_inset Formula 
+\[
+\frac{1}{u^{\prime}(x)}u(t)
+\]
+
+\end_inset
+
+This function's derivative at 
+\begin_inset Formula $t=x$
+\end_inset
+
+ is 1.
+\begin_inset Formula 
+\[
+\begin{array}{cccc}
+\Phi^{u}: & \mathbb{R} & \rightarrow & \mathbb{R}\\
+ & t & \mapsto & \frac{1}{u^{\prime}(x)}u(t)
+\end{array}
+\]
+
+\end_inset
+
+So, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d\Phi^{u}}{dt}(t) & = & \frac{u^{\prime}(t)}{u^{\prime}(x)}\\
+\frac{d\Phi^{u}}{dt}(x) & = & 1
+\end{eqnarray*}
+
+\end_inset
+
+Thus, its second derivative evaluated at 
+\begin_inset Formula $t=x$
+\end_inset
+
+, i.e.,
+\begin_inset Formula 
+\[
+\frac{d^{2}\Phi^{u}}{dt^{2}}=\frac{1}{u^{\prime}(x)}u^{\prime\prime}(x)
+\]
+
+\end_inset
+
+says how concave the funciton is at 
+\begin_inset Formula $x$
+\end_inset
+
+, and can be compared to the second derivative of another function whose
+ first derivative at 
+\begin_inset Formula $x$
+\end_inset
+
+ is also 1.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We want to define an index that tells us how concave the function is.
+ Since the second derivative of a concave function is non-positive, then
+ we define the 
+\series bold
+coefficient of absolute risk aversion of 
+\begin_inset Formula $u$
+\end_inset
+
+ at 
+\begin_inset Formula $x$
+\end_inset
+
+
+\series default
+ as
+\begin_inset Formula 
+\[
+r_{A}^{u}(x)\equiv-\frac{u^{\prime\prime}(x)}{u^{\prime}(x)}\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Note*
+Higher values of 
+\begin_inset Formula $r_{A}^{u}(x)$
+\end_inset
+
+ means 
+\begin_inset Formula $u$
+\end_inset
+
+ is more concave.
+ Also, the more risk averse the agent, the quicker the function goes down
+ from the normalized slope.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+(24).
+ 
+\series default
+\emph on
+Let 
+\begin_inset Formula $\succsim^{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\succsim^{2}$
+\end_inset
+
+ be two risk averse EU maximizers with associated indices 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+, respectively.
+ The following are equivalent.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\succsim^{1}$
+\end_inset
+
+ is more risk averse than 
+\begin_inset Formula $\succsim^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $F\in\Delta(\mathbb{R})$
+\end_inset
+
+ and each 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+{\displaystyle \int}u_{1}dF\geq u_{1}(c)\implies\int u_{2}dF\geq u_{2}(c)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ is more concave than 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+, i.e., there is an increasing and concave function 
+\begin_inset Formula $\psi$
+\end_inset
+
+ such that 
+\begin_inset Formula $u_{1}=\psi\circ u_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ are twice differentiable, then for each 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+r_{A}^{u_{1}}(x)\geq r_{A}^{u_{2}}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $F\in\Delta(\mathbb{R})$
+\end_inset
+
+, 
+\begin_inset Formula $c(F,u_{1})\leq c(F,u_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+ and each 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, 
+\begin_inset Formula $\pi(x,\epsilon,u_{1})\geq\pi(x,\epsilon,u_{2})$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Will prove.
+ Check Mas-Colell page 191, check Micro Homework Assignment 9 (2011), and
+ check Daniel's risk aversion notes (Theorem 4).
+\end_layout
+
+\begin_layout Section*
+6.6
+\begin_inset space \quad{}
+\end_inset
+
+Comparisons of risk aversion across different levels of wealth
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let us consider a risk EU maximizer with associated utility index 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ We are interested in studying when does the agent become less risk averse
+ as he/she becomes wealthier.
+ The answer depends on the nature of the risk the agent faces
+\end_layout
+
+\begin_layout Subsection*
+6.6.1
+\begin_inset space \quad{}
+\end_inset
+
+Decreasing risk aversion to additive risk
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+First, we consider additive risks.
+ Let 
+\begin_inset Formula $w\in\mathbb{R}$
+\end_inset
+
+ be the agent's initial wealth.
+ Consider a random variable 
+\begin_inset Formula $z$
+\end_inset
+
+ with distribution 
+\begin_inset Formula $F$
+\end_inset
+
+.
+ We interpret the random variable as an additive lottery that will realize
+ an additive gain for the agent.
+ Then, the final distribution of wealth of the agent is the random variable
+ 
+\begin_inset Formula $w+z$
+\end_inset
+
+ where 
+\begin_inset Formula $z$
+\end_inset
+
+ is distributed 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The expected utility of 
+\begin_inset Formula $w+F$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+U(w+F)\equiv{\displaystyle \int}u(w+t)\ dF(t)={\displaystyle \int}u(w+\cdot)\ dF
+\]
+
+\end_inset
+
+That is, the expected utility of 
+\begin_inset Formula $w+F$
+\end_inset
+
+ is also the expected utility of the random variable distributed 
+\begin_inset Formula $F$
+\end_inset
+
+ for the agent with utility function 
+\begin_inset Formula $u(w+\cdot)$
+\end_inset
+
+, which is the horizontal translation of 
+\begin_inset Formula $u$
+\end_inset
+
+ to the left by 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We are interested in characterizing the conditions under which the agent
+ more easily accepts an additive lottery when his/her wealth increases.
+ That is, when is it true that if the agent prefers the addtive lottery
+ 
+\begin_inset Formula $F$
+\end_inset
+
+ to the certain change in wealth 
+\begin_inset Formula $c$
+\end_inset
+
+ at a level of wealth 
+\begin_inset Formula $w$
+\end_inset
+
+, then he/she will prefer 
+\begin_inset Formula $F$
+\end_inset
+
+ to the certain change in wealth 
+\begin_inset Formula $c$
+\end_inset
+
+ at any level of wealth higher than 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(121).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a risk averse EU maximizer.
+ Then 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ exhibits 
+\series bold
+decreasing relative aversion to additive risks
+\series default
+ iff 
+\begin_inset Formula $\forall\ w_{2}>w_{1},\ \forall\ F\in\Delta(Z),\ \forall\ c\in\mathbb{R}:$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[w_{1}+F\succsim\delta_{w_{1}+c}\implies w_{2}+F\succsim\delta_{w_{2}+c}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+(25).
+
+\series default
+\emph on
+ The following are equivalent.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\succsim$
+\end_inset
+
+ exhibits decreasing risk aversion to additive risks.
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $w_{2}>w_{1}$
+\end_inset
+
+, each 
+\begin_inset Formula $F\in\Delta(\mathbb{R})$
+\end_inset
+
+, and each 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+{\displaystyle \int}u(w_{1}+t)dF(t)\geq u(w_{1}+c)\implies{\displaystyle \int}u(w_{2}+t)dF(t)\geq u(w_{2}+c)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The EU preference associated with index 
+\begin_inset Formula $u(w_{1}+\cdot)$
+\end_inset
+
+ is more risk averse than the preference associated with index 
+\begin_inset Formula $u(w_{2}+\cdot)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $w_{2}>w_{1}$
+\end_inset
+
+, the function 
+\begin_inset Formula $u(w_{1}+\cdot)$
+\end_inset
+
+ is more concave than 
+\begin_inset Formula $u(w_{2}+\cdot)$
+\end_inset
+
+.
+ That is, there is an increasing and concave function 
+\begin_inset Formula $\psi$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $u(w_{1}+t)=\psi(u(w_{2}+t))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $u$
+\end_inset
+
+ is twice differentiable, the coefficient of absolute risk aversion for
+ 
+\begin_inset Formula $u$
+\end_inset
+
+ is a non-increasing function, that is, if 
+\begin_inset Formula $x>y$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+r_{A}^{u}(y)\geq r_{A}^{u}(x)
+\]
+
+\end_inset
+
+To elaborate, if 
+\begin_inset Formula $w_{2}>w_{1}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+r_{A}^{u(w_{1}+\cdot)}(x)\geq r_{A}^{u(w_{2}+\cdot)}(x)
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+\begin{array}{cccc}
+u(w+\cdot): & \mathbb{R} & \rightarrow & \mathbb{R}\\
+ & x & \mapsto & u(w+\cdot)\equiv u(w+x)
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $w_{2}>w_{1}$
+\end_inset
+
+ and each 
+\begin_inset Formula $F\in\Delta(\mathbb{R})$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+c(F,u(w_{1}+\cdot))\leq c(F,u(w_{2}+\cdot))
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $c(\cdot)$
+\end_inset
+
+ is the minimum final wealth the agent is willing to accept.
+ Equivalently,
+\begin_inset Formula 
+\begin{eqnarray*}
+c(w_{1}+F,u)-w_{1} & \leq & c(w_{2}+F,u)-w_{2}\\
+w_{2}-c(w_{2},+F,u) & \leq & w_{1}-c(w_{1}+F,u)
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $w-c(\cdot)$
+\end_inset
+
+ represents the maximum amount the agent is willing to pay to get rid of
+ risk.
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $w_{2}>w_{1}$
+\end_inset
+
+, each 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+, and each 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\pi(t,\epsilon,u(w_{1}+\cdot))\geq\pi(t,\epsilon,u(w_{2}+\cdot))
+\]
+
+\end_inset
+
+Equivalently, for each 
+\begin_inset Formula $x>y$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\pi(y,\epsilon,u)\geq\pi(x,\epsilon,u)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Will prove.
+ Check Mas-Colell page 193.
+ The results in Theorem 25 follow directly from Theorem 24.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Here, we will prove that 
+\begin_inset Formula $c(F,u(w+\cdot))=c(w+F)-w$
+\end_inset
+
+.
+ By the definition of the certainty equivalent, 
+\begin_inset Formula $\forall\ v:\mathbb{R}\rightarrow\mathbb{R}:v(c(F,u))=\int vdF\equiv E\{v(F)\}$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $v=u(w+\cdot)$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray*}
+u(w+c(F,u(w+\cdot))) & = & E\{u(w+F)\}\\
+u(w+c(F,u(w+\cdot))) & = & u(c(w+F,u))
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ is monotone, then we have
+\begin_inset Formula 
+\begin{eqnarray*}
+w+c(F,u(w+\cdot)) & = & c(w+F,u)\\
+c(F,u(w+\cdot)) & = & c(w+F,u)-w
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+6.6.2
+\begin_inset space \quad{}
+\end_inset
+
+Decreasing risk aversion to multiplicative risk
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, we consider multiplicative risks.
+ Throughout this subsection, we assume that 
+\begin_inset Formula $Z\equiv\mathbb{R}_{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+ be the agent's initial wealth.
+ Consider a random variable 
+\begin_inset Formula $z$
+\end_inset
+
+ with distribution 
+\begin_inset Formula $F$
+\end_inset
+
+ that has support on 
+\begin_inset Formula $[0,+\infty)$
+\end_inset
+
+.
+ We interpret the random variable as a multiplicative lottery that will
+ realize a multiplicative gain for the agent.
+ For instance if 
+\begin_inset Formula $z$
+\end_inset
+
+ turns out to be 2, then the agent's wealth is multiplied by 2.
+ Then, the final distribution of wealth of the agent is the random variable
+ 
+\begin_inset Formula $wz$
+\end_inset
+
+ where 
+\begin_inset Formula $z$
+\end_inset
+
+ is distributed 
+\begin_inset Formula $F$
+\end_inset
+
+.
+ We denoted the distribution of this random variable 
+\begin_inset Formula $wF$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The expected utility of 
+\begin_inset Formula $wF$
+\end_inset
+
+ is given by:
+\begin_inset Formula 
+\[
+U(wF)\equiv{\displaystyle \int}u(wt)\ dF(t)={\displaystyle \int}u(w\cdot)\ dF
+\]
+
+\end_inset
+
+That is, the expected utility of 
+\begin_inset Formula $wF$
+\end_inset
+
+ is also the expected utility of the random variable distributed 
+\begin_inset Formula $F$
+\end_inset
+
+ for the agent with utility function 
+\begin_inset Formula $u(w\cdot)$
+\end_inset
+
+, which is the horizontal contraction of 
+\begin_inset Formula $u$
+\end_inset
+
+ to the left by the ratio 
+\begin_inset Formula $\frac{1}{w}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We are interested in characterizing the conditions under which the agent
+ more easily accepts a multiplicative lottery when his/her wealth increases.
+ That is, when is it true that if the agent prefers the multiplicative lottery
+ 
+\begin_inset Formula $F$
+\end_inset
+
+ to the certain multiplicative change in wealth 
+\begin_inset Formula $c$
+\end_inset
+
+ at a level of wealth 
+\begin_inset Formula $w$
+\end_inset
+
+, then he/she will prefer 
+\begin_inset Formula $F$
+\end_inset
+
+ to the certain multiplicative change in wealth 
+\begin_inset Formula $c$
+\end_inset
+
+ at any level of wealth higher than 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(122).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a risk averse EU maximizer.
+ Then 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ exhibits 
+\series bold
+decreasing risk aversion to multiplicative risk
+\series default
+ iff 
+\begin_inset Formula $\forall\ w_{2}>w_{1}\geq0,\ \forall\ F\in\Delta(\mathbb{R})\ (\mbox{with support}\ [0,+\infty)),\ \forall\ c\in\mathbb{R}_{+}:$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[w_{1}F\succsim\delta_{w_{1}c}\implies w_{2}F\succsim\delta_{w_{2}c}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+(26).
+ 
+\series default
+\emph on
+The following are equivalent.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\succsim$
+\end_inset
+
+ exhibits decreasing risk aversion to multiplicative risks.
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $w_{2}>w_{1}$
+\end_inset
+
+, each 
+\begin_inset Formula $F$
+\end_inset
+
+, and each 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+{\displaystyle \int}u(w_{1}t)dF(t)\geq u(w_{1}c)\implies{\displaystyle \int}u(w_{2}t)dF(t)\geq u(w_{2}c)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $w_{2}>w_{1}\geq0$
+\end_inset
+
+, the EU preference associated with index 
+\begin_inset Formula $u(w_{1}\cdot)$
+\end_inset
+
+ is more risk averse than the preference associated with index 
+\begin_inset Formula $u(w_{2}\cdot)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $w_{2}>w_{1}\geq0$
+\end_inset
+
+, the function 
+\begin_inset Formula $u(w_{1}\cdot)$
+\end_inset
+
+ is more concave than 
+\begin_inset Formula $u(w_{2}\cdot)$
+\end_inset
+
+.
+ That is, there is an increasing and concave function 
+\begin_inset Formula $\psi$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $u(w_{1}t)=\psi(u(w_{2}t))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $u$
+\end_inset
+
+ is twice differentiable, then for each 
+\begin_inset Formula $t\in\mathbb{R}_{+}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+r_{A}^{u(w_{1}\cdot)}(t)\geq r_{A}^{u(w_{2}\cdot)}(t)
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+\begin{array}{cccc}
+u(w\cdot): & \mathbb{R} & \rightarrow & \mathbb{R}\\
+ & x & \mapsto & u\equiv u(wx)
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $u$
+\end_inset
+
+ is twice differentiable, then the coefficient of relative risk aversion
+ for 
+\begin_inset Formula $u$
+\end_inset
+
+ defined by
+\begin_inset Formula 
+\[
+r_{R}^{u}\equiv-x\frac{u^{\prime\prime}(x)}{u^{\prime}(x)}
+\]
+
+\end_inset
+
+is a non-increasing function.
+ To elaborate, if 
+\begin_inset Formula $z>y$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+r_{R}^{u}(y)\geq r_{R}^{u}(z)
+\]
+
+\end_inset
+
+(where 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $y\equiv w_{1}x$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+and 
+\begin_inset Formula $z\equiv w_{2}x$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $w_{2}>w_{1}\geq0$
+\end_inset
+
+ and each 
+\begin_inset Formula $F\in\Delta(\mathbb{R})$
+\end_inset
+
+ with support 
+\begin_inset Formula $[0,+\infty)$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+c(F,u(w_{1}\cdot))\leq c(F,u(w_{2}\cdot))
+\]
+
+\end_inset
+
+Equivalently,
+\begin_inset Formula 
+\[
+\frac{c(w_{1}F,u)}{w_{1}}\leq\frac{c(w_{2}F,u)}{w_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Will prove.
+ Check Mas-Colell page 194, and Daniel's risk aversion notes (Theorem 6).
+\end_layout
+
+\begin_layout Remark*
+Important to note, non-increasing relative risk aversion implies non-increasing
+ absolute risk aversion, but not vice versa.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, we will prove that 
+\begin_inset Formula $c(F,u(w\cdot))=\frac{c(wF,u)}{w}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+By the definition of the certainty equivalent, 
+\begin_inset Formula $\forall\ v:\mathbb{R}\rightarrow\mathbb{R}:v(c(F,v))=\int vdF\equiv E\left\{ v(F)\right\} $
+\end_inset
+
+.
+ When 
+\begin_inset Formula $v=u(w\cdot)$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray*}
+u(wc(F,u(w\cdot))) & = & E\left\{ u(wF)\right\} \\
+u(wc(F,u(w\cdot))) & = & u(c(wF,u))
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ is monotone, then
+\begin_inset Formula 
+\begin{eqnarray*}
+wc(F,u(w\cdot)) & = & c(wF,u)\\
+c(F,u(w\cdot)) & = & \frac{c(wF,u)}{w}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+6.7
+\begin_inset space \quad{}
+\end_inset
+
+Problems
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $u:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+ be a non-decreasing and concave function.
+ Prove that for each 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $r_{A}(x,u)=a>0$
+\end_inset
+
+, if and only if 
+\begin_inset Formula $u$
+\end_inset
+
+ is an affine linear transformation of the function 
+\begin_inset Formula $x\in\mathbb{R}\mapsto\tilde{u}(x)\equiv-e^{-ax}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $u:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+ be a non-decreasing and concave function.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\forall\ x\in\mathbb{R}:r_{A}(x,u)=a>0$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $u$
+\end_inset
+
+ is an affine linear transformation of the function 
+\begin_inset Formula $x\in\mathbb{R}\mapsto\tilde{u}(x)\equiv-e^{-ax}$
+\end_inset
+
+.
+ The coefficient of absolute risk aversion of 
+\begin_inset Formula $u$
+\end_inset
+
+ at 
+\begin_inset Formula $x$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{eqnarray*}
+r_{A}(x,u) & = & -\frac{u^{\prime\prime}(x)}{u^{\prime}(x)}\\
+-\frac{u^{\prime\prime}(x)}{u^{\prime}(x)} & = & a\\
+u^{\prime\prime}(x)+au^{\prime}(x) & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+To solve this second-order differential equation, we must first find the
+ roots of the characteristic equation: 
+\begin_inset Formula $\lambda^{2}+\alpha\lambda=0$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\lambda\in\{0,-a\}$
+\end_inset
+
+.
+ The general solution to the second-order homogenuous linear differential
+ equation is:
+\begin_inset Formula 
+\[
+u(x)=-c_{1}e^{-ax}+c_{2}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $u$
+\end_inset
+
+ is an affine linear transformation of 
+\begin_inset Formula $\tilde{u}(x)=-e^{-ax}$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\forall\ x\in\mathbb{R}:r_{A}(x,u)=a>0$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $u(x)=\alpha\left(-e^{-ax}\right)+\beta$
+\end_inset
+
+ where 
+\begin_inset Formula $\{\alpha,\beta\}\subseteq\mathbb{R}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+u^{\prime}(x) & = & \alpha ae^{-ax}\\
+u^{\prime\prime}(x) & = & -\alpha a^{2}e^{-ax}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the coefficient of absolute risk aversion of 
+\begin_inset Formula $u$
+\end_inset
+
+ at 
+\begin_inset Formula $x$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+r_{A}(x,u)=-\frac{u^{\prime\prime}(x)}{u^{\prime}(x)}=-\frac{-\alpha\cdot a^{2}\cdot e^{-ax}}{\alpha\cdot a\cdot e^{-ax}}=a>0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Suppose that there is a risk free asset that returns 
+\begin_inset Formula $r>0$
+\end_inset
+
+ dollars for each dollar invested and a risky asset that for each dollar
+ invested returns 
+\begin_inset Formula $0$
+\end_inset
+
+ dollars with probability 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $3r>0$
+\end_inset
+
+ dollars with probability 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\succsim_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\succsim_{2}$
+\end_inset
+
+ be two expected utility maximizers with indices 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+, respectively.
+ Assume that both agents are risk averse and that each of them has a budget
+ of one hundred dollars to allocate between these two assets.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Characterize the agents' optimal portfolio.
+\end_layout
+
+\begin_layout Enumerate
+Prove that at their optimal portfolio, the agents buy a non-zero amount
+ of the risky asset.
+\end_layout
+
+\begin_layout Enumerate
+Prove that if agent 1 is more risk averse than agent 2, then at her optimal
+ portfolio, agent 2's optimal share of the risky asset is greater than or
+ equal to agent 1's.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+We solve each part independently.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ be the respective investments for agents 1 and 2 in the risky asset.
+ Each agent is an expected utility maximizer.
+\begin_inset Formula 
+\[
+\max_{0\leq x_{i}\leq100}\ \frac{1}{2}u_{i}\left[(100-x_{i})r+x_{i}3r\right]+\frac{1}{2}u_{i}\left[(100-x_{i})r\right]
+\]
+
+\end_inset
+
+To find the optimal portfolio, we derive the first-order condition with
+ respect to 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{2}u_{i}^{\prime}\left(100r+2x_{i}r\right)2r-\frac{1}{2}u_{i}^{\prime}\left(100r-x_{i}r\right)r & = & 0\\
+2u_{i}^{\prime}(100r+2x_{i}r) & = & u_{i}^{\prime}(100r-x_{i}r)
+\end{eqnarray*}
+
+\end_inset
+
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+We want to show that at their optimal portfolio, the agents buy a non-zero
+ amount of the risky asset, i.e., 
+\begin_inset Formula $\forall\ i\in\{1,2\}:x_{i}^{*}\neq0$
+\end_inset
+
+.
+ From the first-order condition, we have
+\begin_inset Formula 
+\[
+u_{i}^{\prime}(100r-x_{i}r)>u_{i}^{\prime}(100r+2x_{i}r)
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ is a concave function, then
+\begin_inset Formula 
+\begin{eqnarray*}
+100r-x_{i}r & < & 100r+2x_{i}r\\
+3x_{i}r & > & 0
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $r>0$
+\end_inset
+
+, then 
+\begin_inset Formula $x_{i}\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Assume that 
+\begin_inset Formula $\succsim_{1}$
+\end_inset
+
+ is more risk averse than 
+\begin_inset Formula $\succsim_{2}$
+\end_inset
+
+.
+ By Theorem 24, there exists an increasing and concave function 
+\begin_inset Formula $\psi$
+\end_inset
+
+ such that 
+\begin_inset Formula $u_{1}=\psi\circ u_{2}$
+\end_inset
+
+.
+ Let
+\begin_inset Formula 
+\[
+x_{1}=\arg\max_{x_{1}}\left[E\left\{ u_{1}\left[(100-x_{1})r+x_{1}z\right]\right\} \right]
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+x_{2}^{*}=\arg\max_{x_{2}}E\left\{ u_{2}\left[(100-x_{2})r+x_{1}z\right]\right\} 
+\]
+
+\end_inset
+
+We want to show that 
+\begin_inset Formula $x_{2}\geq x_{1}$
+\end_inset
+
+.
+ From part A, 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ must satisfy the F.O.C.
+ for agent 1
+\begin_inset Formula 
+\begin{eqnarray*}
+2u_{1}^{\prime}(100r+2x_{1}r) & = & u_{1}^{\prime}(100r-x_{1}r)\\
+2\left(\psi\circ u_{2}\right)^{\prime}(100r+2x_{1}r) & = & \left(\psi\circ u_{2}\right)^{\prime}(100r-x_{1}r)
+\end{eqnarray*}
+
+\end_inset
+
+Application of the chain rule yields
+\begin_inset Formula 
+\begin{equation}
+2\psi^{\prime}\left[u_{2}(100r+2x_{1}r)\right]u_{2}^{\prime}(100r+2x_{1}r)=\psi^{\prime}\left[u_{2}(100r-x_{1}r)\right]u_{2}^{\prime}(100r-x_{1}r)
+\end{equation}
+
+\end_inset
+
+Since 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ is a non-decreasing function, then
+\begin_inset Formula 
+\[
+u_{2}(100r+2x_{1}r)\geq u_{2}(100r-x_{1}r)
+\]
+
+\end_inset
+
+Thus, since 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ is concave, then
+\begin_inset Formula 
+\begin{eqnarray*}
+\psi^{\prime}\left[u_{2}(100r-x_{1}r)\right] & \geq & \psi^{\prime}\left[u_{2}(100r+2x_{1}r)\right]\\
+\frac{\psi^{\prime}\left[u_{2}(100r-x_{1}r)\right]}{\psi^{\prime}\left[u_{2}(100r+2x_{1}r)\right]} & \geq & 1
+\end{eqnarray*}
+
+\end_inset
+
+As a result, expression (1) can be rewritten as
+\begin_inset Formula 
+\[
+2u_{2}^{\prime}(100r+2x_{1}r)\geq u_{2}^{\prime}(100r-x_{1}r)
+\]
+
+\end_inset
+
+From part A, 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ must satisfy the F.O.C.
+ of agent 2
+\begin_inset Formula 
+\[
+2u_{2}^{\prime}(100r+2x_{2}r)=u_{2}^{\prime}(100r-x_{2}r)
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ are concave functions with decreasing marginal utility, then 
+\begin_inset Formula $x_{2}\geq x_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+An Expectued Utility preference on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ is risk neutral if for each 
+\begin_inset Formula $F\in\Delta(Z),F\sim\delta_{\mu_{F}}$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is risk neutral if and only if it is represented by the EU associated with
+ each index 
+\begin_inset Formula $u$
+\end_inset
+
+ of the form 
+\begin_inset Formula $u(t)=at+b$
+\end_inset
+
+ where 
+\begin_inset Formula $\{a,b\}\subseteq\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $a>0$
+\end_inset
+
+.
+ Conclude that there is only one risk neutral preference and it is represented
+ by the EU whose associated index is 
+\begin_inset Formula $t\in\mathbb{R}\overset{u}{\mapsto}t.$
+\end_inset
+
+ Thus, the risk neutral preference 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is the one that for each 
+\begin_inset Formula $\{F,G\}\subseteq\Delta(Z),F\succsim G$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\mu_{F}\geq\mu_{G}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be money monotone.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is risk neutral, i.e., 
+\begin_inset Formula $\forall\ F\in\Delta(\mathbb{R}):F\sim\delta_{\mu_{F}}$
+\end_inset
+
+.
+ We prove that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the EU associated with each index 
+\begin_inset Formula $u$
+\end_inset
+
+ of the form 
+\begin_inset Formula $u(t)=at+b$
+\end_inset
+
+ where 
+\begin_inset Formula $\{a,b\}\subseteq\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $a>0$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\{F,G\}\in\Delta(\mathbb{R})$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $F\succsim G\iff E_{F}u\geq E_{G}u$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $F\succsim G$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $E_{F}u\geq E_{G}u$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is risk neutral, then 
+\begin_inset Formula $F\sim\delta_{\mu_{F}}$
+\end_inset
+
+ and 
+\begin_inset Formula $G\sim\delta_{\mu_{G}}$
+\end_inset
+
+.
+ By transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $\delta_{\mu_{F}}\sim F\succsim G\sim\delta_{\mu_{F}}\implies\delta_{\mu_{F}}\succsim\delta_{\mu_{G}}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is money monotone, then 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\delta_{\mu_{F}}\succsim\delta_{\mu_{G}}\implies\mu_{F}\geq\mu_{G}$
+\end_inset
+
+.
+ Now, take 
+\begin_inset Formula $a\in\mathbb{R}_{++}$
+\end_inset
+
+ and 
+\begin_inset Formula $b\in\mathbb{R}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mu_{F}\geq\mu_{G}\implies a\mu_{F}+b\geq a\mu_{G}+b$
+\end_inset
+
+.
+ By the definition of expected value, 
+\begin_inset Formula $a\left(\int tdF\right)+b\geq a\left(\int tdG\right)+b$
+\end_inset
+
+, and this is equivalent to 
+\begin_inset Formula $\int[at+b]dF\geq\int[at+b]dG$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $u(t)=at+b$
+\end_inset
+
+.
+ Then, we have 
+\begin_inset Formula $\int u(t)dF\geq\int u(t)dG\iff E_{F}u\geq E_{G}u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $E_{F}u\geq E_{G}u$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $F\succsim G$
+\end_inset
+
+.
+ 
+\begin_inset Formula $E_{F}u\geq E_{G}u\iff\int u(t)dF\geq\int u(t)dG$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $u(t)=at+b$
+\end_inset
+
+ where 
+\begin_inset Formula $a\in\mathbb{R}_{++}$
+\end_inset
+
+ and 
+\begin_inset Formula $b\in\mathbb{R}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\int\left[at+b\right]dF\geq\int[at+b]dG\iff a\int tdF+b\geq a\int tdG+b$
+\end_inset
+
+.
+ By the definition of expected value, 
+\begin_inset Formula $a\mu_{F}+b\geq a\mu_{G}+b$
+\end_inset
+
+, and this is equivalent to 
+\begin_inset Formula $\mu_{F}\geq\mu_{G}$
+\end_inset
+
+.
+ Now, suppose for contradiction 
+\begin_inset Formula $\delta_{\mu_{G}}\succ\delta_{\mu_{F}}$
+\end_inset
+
+.
+ By money monotonicity, 
+\begin_inset Formula $\delta_{\mu_{G}}\succ\delta_{\mu_{F}}\implies\mu_{G}>\mu_{F}$
+\end_inset
+
+.
+ But this contradicts 
+\begin_inset Formula $\mu_{F}\geq\mu_{G}$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\delta_{\mu_{F}}\succsim\delta_{\mu_{G}}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is risk neutral, 
+\begin_inset Formula $F\sim\delta_{\mu_{F}}$
+\end_inset
+
+ and 
+\begin_inset Formula $G\sim\delta_{\mu_{G}}$
+\end_inset
+
+, and thus, 
+\begin_inset Formula $F\succsim G$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the EU associated with each index 
+\begin_inset Formula $u$
+\end_inset
+
+ of the form 
+\begin_inset Formula $u(t)=at+b$
+\end_inset
+
+ where 
+\begin_inset Formula $\{a,b\}\subseteq\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $a>0$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is risk neutral, i.e., 
+\begin_inset Formula $\forall\ F\in\Delta(\mathbb{R}):F\sim\delta_{\mu_{F}}$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $F\in\Delta(\mathbb{R})$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+U(F) & \equiv & E_{F}u\\
+ & = & \int udF\\
+ & = & \int\left[at+b\right]dF\\
+ & = & a\int tdF+b\int dF\\
+ & = & a\mu_{F}+b\\
+ & = & u(\mu_{F})\\
+ & = & U(\delta_{\mu_{F}})
+\end{eqnarray*}
+
+\end_inset
+
+Now, since 
+\begin_inset Formula $U(\cdot)$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $U(F)=U(\delta_{\mu_{F}})\iff F\sim\delta_{\mu_{F}}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\forall\ F\in\Delta(\mathbb{R}):F\sim\delta_{\mu_{F}}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is risk neutral.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Recall that 
+\begin_inset Formula $u$
+\end_inset
+
+ is unique up to a positive affine linear transformation.
+ So, if 
+\begin_inset Formula $u(t)=t$
+\end_inset
+
+ we can take 
+\begin_inset Formula $\{a,b\}\subseteq\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $a>0$
+\end_inset
+
+ where 
+\begin_inset Formula $v(t)=au(t)+b=at+b$
+\end_inset
+
+.
+ Now, using the results above, we can show that for the risk neutral preference
+ 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is the one that 
+\begin_inset Formula $\forall\ \{F,G\}\subseteq\Delta(\mathbb{R}):F\succsim G\iff\mu_{F}\geq\mu_{G}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the EU associated with each index 
+\begin_inset Formula $u$
+\end_inset
+
+ of the form 
+\begin_inset Formula $u(t)=at+b$
+\end_inset
+
+ where 
+\begin_inset Formula $\{a,b\}\subseteq\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $a>0$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray*}
+F\succsim G & \iff & E_{F}u\geq E_{G}u\\
+ & \iff & \int udF\geq\int udG\\
+ & \iff & \int\left[at+b\right]dF\geq\int\left[at+b\right]dG\\
+ & \iff & a\mu_{F}+b\geq a\mu_{G}+b\\
+ & \iff & \mu_{F}\geq\mu_{G}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+An asset is a divisible claim to a financial return in the future.
+ Suppose that there are two assets, a safe asset with a return of 1 dollar
+ per dollar invested and a risky asset with a random return of 
+\begin_inset Formula $z$
+\end_inset
+
+ dollars per dollar invested.
+ The random return 
+\begin_inset Formula $z$
+\end_inset
+
+ has the following probability distribution: 
+\begin_inset Formula $z=0$
+\end_inset
+
+ with probability 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $z=1$
+\end_inset
+
+ with probability 
+\begin_inset Formula $\beta$
+\end_inset
+
+, and 
+\begin_inset Formula $z=2$
+\end_inset
+
+ with probability 
+\begin_inset Formula $1-\alpha-\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+A 
+\series bold
+risk neutral
+\series default
+ individual, who we refer to as agent 
+\begin_inset Formula $A$
+\end_inset
+
+, has aninitial wealth 
+\begin_inset Formula $w$
+\end_inset
+
+ to invest in these two assets.
+ Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be the part of agent 
+\begin_inset Formula $A\mbox{'s}$
+\end_inset
+
+ wealth invested in the risky asset.
+ The amount invested in the safe asset is 
+\begin_inset Formula $w-x$
+\end_inset
+
+.
+ Thus, for any realtization the random return 
+\begin_inset Formula $z$
+\end_inset
+
+, agent 
+\begin_inset Formula $A\mbox{'s}$
+\end_inset
+
+ portfolio 
+\begin_inset Formula $(x,w-x)$
+\end_inset
+
+ pays 
+\begin_inset Formula $xz+w-x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We list each part of the problem, and then solve it.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Proof
+Characterize agent 
+\begin_inset Formula $A\mbox{'s}$
+\end_inset
+
+ optimal portfolio, i.e., find 
+\begin_inset Formula $x$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ When does 
+\begin_inset Formula $A$
+\end_inset
+
+ invest in the risky asset? Interpret.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+We assume that agent 
+\begin_inset Formula $A$
+\end_inset
+
+ is an expected utility maximizer.
+ Let 
+\begin_inset Formula $F$
+\end_inset
+
+ denote the CDF of the random return 
+\begin_inset Formula $z$
+\end_inset
+
+ for the risky asset, and let 
+\begin_inset Formula $G$
+\end_inset
+
+ denote the CDF of the certain return for the safe asset.
+ From the results of Problem 3, the risk neutral preference 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is the one that 
+\begin_inset Formula $\forall\ \{F,G\}\subseteq\Delta(Z):F\succsim G\iff\mu_{F}\geq\mu_{G}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $\mu_{F}=(\alpha(0)+\beta(1)+(1-\alpha-\beta)2)=2-2\alpha-\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu_{G}=1$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $F\succsim G\iff2-2\alpha-\beta\geq1\iff2\alpha+\beta\leq1$
+\end_inset
+
+.
+ Also by Problem 3, since agent 
+\begin_inset Formula $A$
+\end_inset
+
+ is risk neutral, her index utility function is linear.
+ So, to maximize her expected utility, she will either invest all of her
+ wealth, 
+\begin_inset Formula $w$
+\end_inset
+
+, in the risky asset, or none of it.
+ Thus, we can characterize 
+\begin_inset Formula $x$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+x=\begin{cases}
+w & \mbox{if}\ 2\alpha+\beta<1\\
+\{0,w\} & \mbox{if}\ 2\alpha+\beta=1\\
+0 & \mbox{if}\ 2\alpha+\beta>1
+\end{cases}
+\]
+
+\end_inset
+
+Therefore, 
+\begin_inset Formula $A$
+\end_inset
+
+ will invest in the risky asset if its expected return, 
+\begin_inset Formula $\mu_{F}$
+\end_inset
+
+, is greater than the certain return of the safe asset.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Suppose now that agent 
+\begin_inset Formula $A$
+\end_inset
+
+ cannot directly invest in these two assets.
+ Instead, agent 
+\begin_inset Formula $A$
+\end_inset
+
+ can invest through a financial manager who gets a percentage of the agent's
+ return.
+ Suppose for simplicity that agent 
+\begin_inset Formula $A$
+\end_inset
+
+ would receive a return of zero if she does not invest through a financial
+ manager.
+ There are two financial managers: 
+\begin_inset Formula $M1$
+\end_inset
+
+ and 
+\begin_inset Formula $M2$
+\end_inset
+
+.
+ Suppose that the initial wealth of 
+\begin_inset Formula $M1$
+\end_inset
+
+ and 
+\begin_inset Formula $M2$
+\end_inset
+
+ is zero and that each gets a portion 
+\begin_inset Formula $\varphi\in(0,1)$
+\end_inset
+
+ of the corresponding agents' returns.
+ For instance, if agent 
+\begin_inset Formula $A$
+\end_inset
+
+ gives 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ dollars to 
+\begin_inset Formula $M1$
+\end_inset
+
+ and this financial manager invests 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ in the risky asset and 
+\begin_inset Formula $y_{1}-x_{1}$
+\end_inset
+
+ in the safe asset, then for each realization of the random return, the
+ manager gets 
+\begin_inset Formula $\varphi(x_{1}z+y_{1}-x_{1})$
+\end_inset
+
+ and agent 
+\begin_inset Formula $A$
+\end_inset
+
+ gets 
+\begin_inset Formula $(1-\varphi)(x_{1}z+y_{1}-x_{1}).$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose that 
+\begin_inset Formula $M1$
+\end_inset
+
+ is an expected utility maximizer with vNM utility index: 
+\begin_inset Formula $u_{1}(x)\equiv\sqrt{x}$
+\end_inset
+
+.
+ If agent 
+\begin_inset Formula $A$
+\end_inset
+
+ gives 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ dollars to 
+\begin_inset Formula $M1$
+\end_inset
+
+, what is the manager's optimal portfolio? That is, calculate 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ When does 
+\begin_inset Formula $M1$
+\end_inset
+
+ invest in the risky asset?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+To find the manager's optimal portfolio, we solve the following maximization
+ problem
+\begin_inset Formula 
+\begin{gather*}
+{\displaystyle \max_{0\le x_{1}\leq y_{1}}{\displaystyle \int\sqrt{\varphi(x_{1}z+y_{1}-x_{1})}\ dF}}\\
+={\displaystyle \max_{0\le x_{1}\leq y_{1}}}{\displaystyle \alpha\sqrt{\varphi(y_{1}-x_{1})}+\beta\sqrt{\varphi(x_{1}+y_{1}-x_{1})}+(1-\alpha-\beta)\sqrt{\varphi(2x_{1}+y_{1}-x_{1})}}
+\end{gather*}
+
+\end_inset
+
+We derive the first order condition of 
+\begin_inset Formula $E_{F}u_{1}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+, and then solve for 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+-\varphi\frac{\alpha}{2\sqrt{\varphi(y_{1}-x_{1})}}+\varphi\frac{(1-\alpha-\beta)}{2\sqrt{\varphi(x_{1}+y_{1})}} & = & 0\\
+\frac{\alpha}{2\sqrt{\varphi(y_{1}-x_{1})}} & = & \frac{(1-\alpha-\beta)}{2\sqrt{\varphi(x_{1}+y_{1})}}\\
+\alpha2\sqrt{\varphi(x_{1}+y_{1})} & = & (1-\alpha-\beta)2\sqrt{\varphi(y_{1}-x_{1})}\\
+\alpha^{2}(x_{1}+y_{1}) & = & (1-\alpha-\beta)^{2}(y_{1}-x_{1})\\
+x_{1}^{*} & = & y_{1}\left(\frac{(1-\alpha-\beta)^{2}-\alpha^{2}}{(1-\alpha-\beta)^{2}+\alpha^{2}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Note that 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ is risk averse.
+ Consequently, if 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $E(z)\geq1\iff2\alpha+\beta\leq1$
+\end_inset
+
+, then 
+\begin_inset Formula $x_{1}=x_{1}^{*}$
+\end_inset
+
+, and if 
+\begin_inset Formula $E(z)<1\iff2\alpha+\beta>1$
+\end_inset
+
+, then 
+\begin_inset Formula $x_{1}=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suppose that 
+\begin_inset Formula $M2$
+\end_inset
+
+ is an expected utility maximizer with vNM utility index: 
+\begin_inset Formula $u_{2}(x)\equiv\ln x$
+\end_inset
+
+.
+ If agent 
+\begin_inset Formula $A$
+\end_inset
+
+ gives 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ dollars to 
+\begin_inset Formula $M2$
+\end_inset
+
+, what is the managers' optimal portfolio? That is, calculate 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ When does 
+\begin_inset Formula $M2$
+\end_inset
+
+ invest in the risky asset?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+To find the manager's optimal portfolio, we solve the following maximization
+ problem
+\begin_inset Formula 
+\begin{gather*}
+{\displaystyle \max_{0\le x_{2}\leq y_{2}}{\displaystyle \int\ln\left[\varphi(x_{2}z+y_{2}-x_{2})\right]\ dF}}\\
+={\displaystyle \max_{0\le x_{2}\leq y_{2}}}\alpha\ln\left[\varphi(y_{2}-x_{2})\right]+\beta\ln[\varphi y_{2}]+(1-\alpha-\beta)\ln[\varphi(x_{2}+y_{2})]
+\end{gather*}
+
+\end_inset
+
+We derive the first order condition of 
+\begin_inset Formula $E_{F}u$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, and then solve for 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+-\varphi\frac{\alpha}{\varphi(y_{2}-x_{2})}+\varphi\frac{(1-\alpha-\beta)}{\varphi(y_{2}+x_{2})} & = & 0\\
+\frac{\alpha}{(y_{2}-x_{2})} & = & \frac{(1-\alpha-\beta)}{(y_{2}+x_{2})}\\
+\alpha(y_{2}+x_{2}) & = & (1-\alpha-\beta)(y_{2}-x_{2})\\
+x_{2}^{*} & = & y_{2}\left(\frac{1-2\alpha-\beta}{1-\beta}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Note that 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ is risk averse.
+ Consequently, if 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $E(z)\geq1\iff2\alpha-+\beta\leq1$
+\end_inset
+
+, then 
+\begin_inset Formula $x_{2}=x_{2}^{*}$
+\end_inset
+
+, and if 
+\begin_inset Formula $E(z)<1\iff2\alpha+\beta>1$
+\end_inset
+
+, then 
+\begin_inset Formula $x_{2}=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Characterize agent 
+\begin_inset Formula $A\mbox{'s}$
+\end_inset
+
+ optimal portfolio, i.e., find the amounts 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ that agent 
+\begin_inset Formula $A$
+\end_inset
+
+ gives to 
+\begin_inset Formula $M1$
+\end_inset
+
+ and 
+\begin_inset Formula $M2$
+\end_inset
+
+, repsectively.
+ In a graph of 
+\begin_inset Formula $\alpha\ \mbox{vs}\ \beta$
+\end_inset
+
+ show the different portfolios associated with the pairs 
+\begin_inset Formula $(\alpha,\beta)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Recall, when agent 
+\begin_inset Formula $A$
+\end_inset
+
+ is able to invest on her own, her optimal strategy is as follows:
+\begin_inset Formula 
+\[
+x=\begin{cases}
+w & \mbox{if}\ 2\alpha+\beta<1\\
+\{0,w\} & \mbox{if}\ 2\alpha+\beta=1\\
+0 & \mbox{if}\ 2\alpha+\beta>1
+\end{cases}
+\]
+
+\end_inset
+
+So, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+when 
+\begin_inset Formula $2\alpha+\beta<1$
+\end_inset
+
+, agent 
+\begin_inset Formula $A$
+\end_inset
+
+ wants to give all of her wealth to the financial manager who will invest
+ the highest amount of money in the risky asset.
+ Note that
+\begin_inset Formula 
+\[
+x_{1}=y_{1}\left[\frac{(1-\alpha-\beta)^{2}-\alpha^{2}}{(1-\alpha-\beta)^{2}+\alpha^{2}}\right]
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+x_{2}=y_{2}\left(\frac{1-2\alpha-\beta}{1-\beta}\right)
+\]
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{(1-\alpha-\beta)^{2}-\alpha^{2}}{(1-\alpha-\beta)^{2}+\alpha^{2}} & \approx & \frac{a^{2}-b^{2}}{a^{2}+b^{2}}\\
+ & = & \frac{(a+b)(a-b)}{a^{2}+b^{2}}\\
+ & > & \frac{(a+b)(a-b)}{(a+b)^{2}}\\
+ & = & \frac{a-b}{a+b}\\
+ & \approx & \frac{1-2\alpha-\beta}{1-\beta}
+\end{eqnarray*}
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+We have show that 
+\begin_inset Formula $M1$
+\end_inset
+
+ assigns a larger fraction of wealth to the risky asset.
+ Hence, we can redefine agent 
+\begin_inset Formula $A\mbox{'s}$
+\end_inset
+
+ optimal strategy as follows:
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+y_{1}\\
+y_{2}
+\end{array}\right]=\begin{cases}
+\left[\begin{array}{c}
+w\\
+0
+\end{array}\right] & \mbox{if}\ 2\alpha+\beta<1\\
+\left[\begin{array}{c}
+a\\
+w-a
+\end{array}\right] & \mbox{if}\ 2\alpha+\beta\geq1
+\end{cases}
+\]
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+where 
+\begin_inset Formula $a\in[0,w]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Problem
+Suppose that there is a risk free asset that returns 
+\begin_inset Formula $r>0$
+\end_inset
+
+ dollars for each dollar invested and a risky asset that for each dollar
+ invested returns 0 dollars with probability 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $3r>0$
+\end_inset
+
+ with probability 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be an expected utility maximizer whose associated index is 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ Assume that the agent is risk averse and has 
+\begin_inset Formula $w$
+\end_inset
+
+ dollars to allocate between these two assets.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Characterize the agent's optimal portfolio.
+\end_layout
+
+\begin_layout Enumerate
+Assume that the agent exhibits decreasing relative risk aversion.
+ Prove that her demand of the risky asset as a proportion of total wealth
+ increases with wealth.
+\end_layout
+
+\begin_layout Enumerate
+Select 
+\begin_inset Formula $u$
+\end_inset
+
+ that exhibits constant relative risk aversion (find one).
+ Calculate the demand of the risky asset as a proportion of total wealth.
+ Is it constant?
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be an expected utility maximizer whose associated index is 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ Assume that the agent is risk averse and has 
+\begin_inset Formula $w$
+\end_inset
+
+ dollards to allocate between these two assets.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $x$
+\end_inset
+
+ be the percentage of wealth invested in the risky asset.
+ To characterize the agent's optimal portfolio, we maximize her expected
+ utility
+\begin_inset Formula 
+\[
+\max_{0\leq x\leq w}\frac{1}{2}u\left(2xrw+rw\right)+\frac{1}{2}u\left(wr-xrw\right)
+\]
+
+\end_inset
+
+We derive the first order condition of 
+\begin_inset Formula $E_{F}u$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $x$
+\end_inset
+
+ to characterize the optimal amount of 
+\begin_inset Formula $x$
+\end_inset
+
+ to invest.
+\begin_inset Formula 
+\[
+2u^{\prime}(2xrw+rw)=u^{\prime}(wr-xrw)
+\]
+
+\end_inset
+
+The optimal 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ satisfies this first-order condition
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Assume that the agent exhibits decreasing relative risk aversion.
+ Prove that her demand of the risky asset as a proportion of total wealth
+ increases with wealth.
+ Take 
+\begin_inset Formula $\{w_{1},w_{2}\}\in\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $w_{2}>w_{1}$
+\end_inset
+
+.
+ Since the agent exhibits decreasing relative risk aversion, then by Theorem
+ 26, there exists an increasing and concave function 
+\begin_inset Formula $\psi$
+\end_inset
+
+ such that 
+\begin_inset Formula $u(w_{1}\cdot)=\psi(u_{2}(w_{2}\cdot))$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula 
+\begin{equation}
+D_{x}\left[u(w_{1}x)\right]=D_{x}\left[\psi(u(w_{2}x))\right]=w_{2}u^{\prime}(w_{2}x)\psi^{\prime}(u(w_{2}x))
+\end{equation}
+
+\end_inset
+
+Let 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ be the optimal percentage invested in the risky assets under wealths 
+\begin_inset Formula $w_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}$
+\end_inset
+
+, respectively.
+ We want to show that 
+\begin_inset Formula $x_{2}>x_{1}$
+\end_inset
+
+.
+ From part A, the first-order condition for 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+2u^{\prime}(2x_{1}rw_{1}+rw_{1})=u^{\prime}(w_{1}r-x_{1}rw_{1})
+\]
+
+\end_inset
+
+Substituting expression (2) into the equation above yields
+\begin_inset Formula 
+\[
+2w_{2}u^{\prime}(2x_{1}rw_{2}+rw_{2})\psi^{\prime}\left(u(2x_{1}rw_{2}+rw_{2})\right)=w_{2}u^{\prime}(w_{2}r-x_{1}rw_{2})\psi^{\prime}\left(u(w_{2}r-x_{1}rw_{2})\right)
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ is an increasing function, then 
+\begin_inset Formula $u(2x_{1}rw_{2}+rw_{2})>u(w_{2}r-x_{1}rw_{2})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\psi$
+\end_inset
+
+ is a concave function, then
+\begin_inset Formula 
+\begin{eqnarray*}
+\psi^{\prime}\left(u(w_{2}r-x_{1}rw_{2})\right) & > & \psi^{\prime}\left(u(2x_{1}rw_{2}+rw_{2})\right)\\
+\frac{\psi^{\prime}\left(u(w_{2}r-xrw_{2})\right)}{\psi^{\prime}\left(u(2xrw_{2}+rw_{2})\right)} & > & 1
+\end{eqnarray*}
+
+\end_inset
+
+Thus, we have
+\begin_inset Formula 
+\[
+2u^{\prime}(2x_{1}rw_{2}+rw_{2})>u^{\prime}(w_{2}r-x_{1}rw_{2})
+\]
+
+\end_inset
+
+From part A, 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ must satisfy the F.O.C.
+ of agent 2
+\begin_inset Formula 
+\[
+2u^{\prime}(2x_{2}rw_{2}+rw_{2})=u^{\prime}(w_{2}r-x_{2}rw_{2})
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ is a concave function with decreasing marginal utility, then 
+\begin_inset Formula $x_{2}>x_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Assume 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by 
+\begin_inset Formula $E\left\{ u(x)\right\} $
+\end_inset
+
+ where 
+\begin_inset Formula $u(x)=\ln(x)$
+\end_inset
+
+.
+ We show that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ exhibits constant relative risk aversion.
+\begin_inset Formula 
+\[
+r_{R}^{u}(x)=-x\frac{u^{\prime\prime}(x)}{u^{\prime}(x)}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $u^{\prime}(x)=\nicefrac{1}{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $u^{\prime\prime}(x)=-\nicefrac{1}{x^{2}}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+r_{R}^{u}=x\frac{x}{x^{2}}=1
+\]
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ exhibits constant relative risk aversion.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Now, we can obtain an expression for the demand of the risky asset as a
+ proportion of total wealth.
+ From part A, we know that the optimal 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ satisfies the first-order condition
+\begin_inset Formula 
+\[
+2u^{\prime}(2xrw+rw)=u^{\prime}(wr-xrw)
+\]
+
+\end_inset
+
+Using 
+\begin_inset Formula $u(x)=\ln(x)$
+\end_inset
+
+ as the utility funciton yields
+\begin_inset Formula 
+\begin{eqnarray*}
+2\frac{1}{2xrw+rw} & = & \frac{1}{wr-xrw}\\
+2(wr-xrw) & = & 2xrw+rw\\
+2wr-2xrw & = & 2xrw+rw\\
+4xrw & = & wr\\
+x & = & \frac{1}{4}
+\end{eqnarray*}
+
+\end_inset
+
+Therefore, the demand of the risky asset as a proportion of total wealth
+ is constant.
+\end_layout
+
+\begin_layout Problem
+An expected utility maximizer over lotteries of money has utility index
+ 
+\begin_inset Formula $u$
+\end_inset
+
+ and initial wealth 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ Lottery 
+\begin_inset Formula $l$
+\end_inset
+
+ offers a payoff of 
+\begin_inset Formula $x>0$
+\end_inset
+
+ dollars with probability 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and a payoff of 
+\begin_inset Formula $y>x$
+\end_inset
+
+ dollars with probability 
+\begin_inset Formula $(1-\alpha)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If the agent owns the lottery, what is the minimum price 
+\begin_inset Formula $\overline{p}$
+\end_inset
+
+ at which she is willing to sell it (find the equation that characterizes
+ 
+\begin_inset Formula $\overline{p}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+If the agent does not own the lottery, what is the maximum price 
+\begin_inset Formula $\underline{p}$
+\end_inset
+
+ that she is willing to pay for it (find the equation that characterizes
+ 
+\begin_inset Formula $\underline{p})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If the agent is risk averse and exhibits non-increasing absolute risk aversion,
+ what can we say about the relation between 
+\begin_inset Formula $\underline{p}$
+\end_inset
+
+ and 
+\begin_inset Formula $\overline{p}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+If the agent is risk averse and exhibits non-increasing relative risk aversion,
+ what can we say about the relation between 
+\begin_inset Formula $\underline{p}$
+\end_inset
+
+ and 
+\begin_inset Formula $\overline{p}$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula $l=\alpha\delta_{x}+(1-\alpha)\delta_{y}$
+\end_inset
+
+ where 
+\begin_inset Formula $0<x<y$
+\end_inset
+
+.
+ Consider an expected utility maximizer 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ with initial wealth 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+If the agent owns the lottery already, then the minimum price 
+\begin_inset Formula $\overline{p}$
+\end_inset
+
+ at which she is willing to sell satisfies
+\begin_inset Formula 
+\begin{eqnarray*}
+u(w+\overline{p}) & = & E\left\{ u(w+l)\right\} =\alpha u(w+x)+(1-\alpha)u(w+y)\\
+ & = & u\left[c(l,u(w+\cdot))\right]
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $c(l,u(w+\cdot))$
+\end_inset
+
+ is the certainty equivalent of 
+\begin_inset Formula $l$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $u(w+\cdot)$
+\end_inset
+
+.
+ Hence,
+\begin_inset Formula 
+\begin{eqnarray*}
+w+\overline{p} & = & c(l,u(w+\cdot))\\
+\overline{p} & = & c(l,u(w+\cdot))-w
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\mu_{l}=\alpha x+(1-\alpha)y$
+\end_inset
+
+, then 
+\begin_inset Formula $w+x\leq c(l,u(w+\cdot))\leq w+\mu_{l}$
+\end_inset
+
+, and thus, 
+\begin_inset Formula $c(l,u(w+\cdot))\geq w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+If the agent does not currently own the lottery, the maximum price 
+\begin_inset Formula $\underline{p}$
+\end_inset
+
+ at which she is willing to buy satisfies
+\begin_inset Formula 
+\begin{eqnarray*}
+u(w) & = & E\left\{ u(w-\underline{p}+l)\right\} =\alpha u(w-\underline{p}+x)+(1-\alpha)u(w-\underline{p}+y)\\
+ & = & u\left[c(l,u([w-\underline{p}]+\cdot])\right]
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $c(l,u[(w-\underline{p})+\cdot])$
+\end_inset
+
+ is the certaintly equivalent of 
+\begin_inset Formula $l$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $u\left[(w-\underline{p})+\cdot\right]$
+\end_inset
+
+.
+ Hence,
+\begin_inset Formula 
+\[
+w=c(l,u[(w-\underline{p})+\cdot])
+\]
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar under
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+Part C.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Suppose the agent is risk averse and exhibits non-increasing absolute risk
+ aversion.
+ By Theorem 25, for each 
+\begin_inset Formula $w_{2}>w_{1}$
+\end_inset
+
+, there is an increasing and concave function 
+\begin_inset Formula $\psi$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ t\in\mathbb{R}:u(w_{1}+t)=\psi\left[u(w_{2}+t)\right]$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $w-\underline{p}<w$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray*}
+u(w-\underline{p}+t) & = & \psi\left[u(w+t)\right]\\
+E\left\{ u(w-\underline{p}+l)\right\}  & = & E\left\{ \psi\left[u(w+l)\right]\right\} 
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $E\left\{ u(w-\underline{p}+l)\right\} =u(w)$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+u(w)=E\left\{ \psi\left[u(w+l)\right]\right\} 
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\psi$
+\end_inset
+
+ is a concave function, then 
+\begin_inset Formula $E\left\{ \psi(u(w+l))\right\} \leq\psi\left[E\left\{ u(w+l)\right\} \right]$
+\end_inset
+
+.
+ Hence,
+\begin_inset Formula 
+\[
+u(w)\leq\psi\left[E\left\{ u(w+l)\right\} \right]
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $E\left\{ u(w+l)\right\} =u(w+\overline{p})$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+u(w)\leq\psi\left[u(w+\overline{p})\right]
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\forall\ t\in\mathbb{R}:u(w-\underline{p}+t)=\psi\left[u(w+t)\right]$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+u(w)\leq u(w-\underline{p}+\overline{p})
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ is monotone, then
+\begin_inset Formula 
+\begin{eqnarray*}
+w & \leq & w-\underline{p}+\overline{p}\\
+\underline{p} & \leq & \overline{p}
+\end{eqnarray*}
+
+\end_inset
+
+
+\bar under
+Part D.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Now, suppose that the agent is risk averse and exhibits non-increasing relative
+ risk aversion.
+ This means that the agent is less averse to multiplicative risk at higher
+ wealth levels.
+ Since non-increasing relative risk aversion implies non-increasing absolute
+ risk aversion, our previous result still holds.
+\end_layout
+
+\begin_layout Problem
+(Separate problem attached with Micro Homework Assignment 10).
+ Consider an expected utility maximizer with utility index 
+\begin_inset Formula $u(x)=-e^{-ax}$
+\end_inset
+
+ with 
+\begin_inset Formula $a>0$
+\end_inset
+
+ and initial wealth 
+\begin_inset Formula $w>0$
+\end_inset
+
+.
+ There is a risk free asset that has a return of 
+\begin_inset Formula $2$
+\end_inset
+
+ (if the agent invest 
+\begin_inset Formula $x$
+\end_inset
+
+ dollars, then she receives 
+\begin_inset Formula $2x$
+\end_inset
+
+).
+ There is also a risky asset with random return 
+\begin_inset Formula $1$
+\end_inset
+
+ with probability 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+ and 
+\begin_inset Formula $3$
+\end_inset
+
+ with probability 
+\begin_inset Formula $(1-\alpha)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Set up the portfolio choice problem for the agent (denote the amount ivested
+ in the risky asset by 
+\begin_inset Formula $x$
+\end_inset
+
+ and its optimal value by 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+Under what conditions is 
+\begin_inset Formula $x^{*}>0$
+\end_inset
+
+? Interpret.
+\end_layout
+
+\begin_layout Enumerate
+Under what conditions is 
+\begin_inset Formula $x^{*}<w$
+\end_inset
+
+? Interpret.
+\end_layout
+
+\begin_layout Enumerate
+Assume that the conditions guaranteeing that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is interior are satisfied.
+ Calculate 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+How does 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ depend on 
+\begin_inset Formula $a$
+\end_inset
+
+? Interpret?
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+We assume that the agent is an expected utility maximizer, and from his
+ utility index, we know that he is risk averse.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $F$
+\end_inset
+
+ denote the CDF of the random return 
+\begin_inset Formula $z$
+\end_inset
+
+ for the risky asset, and let 
+\begin_inset Formula $G$
+\end_inset
+
+ denote the CDF of the certain return for the safe asset.
+ Since the agent is an expected utility maximizer, then 
+\begin_inset Formula $F\succsim G\iff E_{F}u\geq E_{G}u$
+\end_inset
+
+.
+ Note that if the agent invests all of his wealth in the safe asset, then
+ 
+\begin_inset Formula $E_{G}u=-e^{-a(2w)}$
+\end_inset
+
+.
+ So, the agent's optimal investment strategy is given by:
+\begin_inset Formula 
+\[
+x=\begin{cases}
+x^{*} & \mbox{if}\ E_{F}u>-e^{-a(2w)}\\
+\{0,x^{*}\} & \mbox{if}\ E_{F}u=-e^{-a(2w)}\\
+0 & \mbox{if}\ E_{F}u<-e^{-a(2w)}
+\end{cases}
+\]
+
+\end_inset
+
+For any realization of the random return 
+\begin_inset Formula $z$
+\end_inset
+
+, the agent's portfolio 
+\begin_inset Formula $(x,w-x)$
+\end_inset
+
+ pays 
+\begin_inset Formula $xz+2(w-x)$
+\end_inset
+
+.
+ Thus, the agent's choice problem for the amount invested in the risky asset
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ is:
+\begin_inset Formula 
+\[
+{\displaystyle \max_{0\le x\leq w}}\ \alpha\left[-e^{-a\left(2w-x\right)}\right]+(1-\alpha)\left[-e^{-a\left(2w+x\right)}\right]={\displaystyle \max_{0\le x\leq w}}\ -e^{-2aw}\left[\alpha(e^{ax})+(1-\alpha)(e^{-ax})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part B and Part C.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+The optimal 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ satisfies the first-order condition of the maximization problem presented
+ in part A.
+\begin_inset Formula 
+\[
+\frac{d\left[E_{F}u(x)\right]}{dx}=-e^{-2aw}a\left[\alpha e^{ax}-(1-\alpha)(e^{-ax})\right]
+\]
+
+\end_inset
+
+By the Intermediate Value Theorem, if 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\left(\frac{d\left[E_{F}u(0)\right]}{dx}\right)\cdot\left(\frac{d\left[E_{F}u(w)\right]}{dx}\right)<0,$
+\end_inset
+
+ then 
+\begin_inset Formula $\exists\ x^{*}\in(0,w):\frac{d\left[E_{F}u(x^{*})\right]}{dx}=0$
+\end_inset
+
+.
+ Since the index function is strictly concave, then 
+\begin_inset Formula $\frac{d^{2}\left[E_{F}u(x)\right]}{dx^{2}}<0$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $\frac{d\left[E_{F}u(x)\right]}{dx}$
+\end_inset
+
+ is a decreasing function.
+ Hence, we need to have 
+\begin_inset Formula $\left(\frac{d\left[E_{F}u(0)\right]}{dx}\right)>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(\frac{d\left[E_{F}u(w)\right]}{dx}\right)<0$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d\left[E_{F}u(0)\right]}{dx} & > & 0\\
+-e^{-2aw}a\left[\alpha-(1-\alpha)\right] & > & 0\\
+\iff\left[\alpha-(1-\alpha)\right] & < & 0\\
+2\alpha & < & 1\\
+\alpha & < & \frac{1}{2}
+\end{eqnarray*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d\left[E_{F}u(w)\right]}{dx} & < & 0\\
+-e^{-2aw}a\left[\alpha e^{aw}-(1-\alpha)(e^{-aw})\right] & < & 0\\
+\iff\left[\alpha e^{aw}-(1-\alpha)(e^{-aw})\right] & > & 0\\
+\alpha & > & \frac{e^{-aw}}{(e^{aw}+e^{-aw})}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, to obtain an interior solution for 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha\in\left(\frac{e^{-aw}}{(e^{aw}+e^{-aw})},\frac{1}{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part D.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Now, we assume that the conditions guaranteeing that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is interior are satisfied, so we can calculate 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+.
+ As has been noted, the optimal 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ satisfies the first-order condition of the maximization problem presented
+ in part A.
+\begin_inset Formula 
+\begin{eqnarray*}
+-e^{-2aw}a\left[\alpha e^{ax}-(1-\alpha)(e^{-ax})\right] & = & 0\\
+\left[\alpha e^{ax}-(1-\alpha)(e^{-ax})\right] & = & 0\\
+\alpha e^{ax} & = & (1-\alpha)(e^{-ax})\\
+e^{2ax} & = & \frac{(1-\alpha)}{\alpha}\\
+2ax & = & \ln\left[\frac{(1-\alpha)}{\alpha}\right]\\
+x^{*} & = & \frac{1}{2a}\ln\left[\frac{(1-\alpha)}{\alpha}\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part E.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+How does 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ depend on 
+\begin_inset Formula $a$
+\end_inset
+
+? From Problem 1, Section 6.7, 
+\begin_inset Formula $r_{A}(x,u)=-\frac{u^{\prime\prime}(x)}{u^{\prime}(x)}=a>0$
+\end_inset
+
+.
+ Thus, as 
+\begin_inset Formula $a$
+\end_inset
+
+ increases, the agent becomes more risk averse.
+ Consequently, as 
+\begin_inset Formula $a$
+\end_inset
+
+ increases, the agent will invest less of his wealth in the risky asset.
+\end_layout
+
+\begin_layout Section*
+6.8
+\begin_inset space \quad{}
+\end_inset
+
+Comparison of distributions in terms of return and risk
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When is a lotter 
+\begin_inset Formula $F$
+\end_inset
+
+ unambiguously better than a lottery 
+\begin_inset Formula $G$
+\end_inset
+
+ for a money monotone EU maximizer? For example if 
+\begin_inset Formula $x>y$
+\end_inset
+
+, we know that for each 
+\begin_inset Formula $EU$
+\end_inset
+
+ money monotone preference 
+\begin_inset Formula $\succsim$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\delta_{x}\succsim\delta_{y}
+\]
+
+\end_inset
+
+We now characterize these situations.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(123).
+ 
+\series default
+\emph on
+Let 
+\begin_inset Formula $\{F,G\}\subseteq\Delta(\mathbb{R})$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $F$
+\end_inset
+
+ 
+\series bold
+first order stochastically dominates 
+\begin_inset Formula $G$
+\end_inset
+
+
+\series default
+, denoted 
+\begin_inset Formula $F\geq_{FSD}G$
+\end_inset
+
+ iff for each money monotone EU preference 
+\begin_inset Formula $\succsim$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+F\succsim G
+\]
+
+\end_inset
+
+Equivalently, if for each non-decreasing 
+\begin_inset Formula $u:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+E_{F}u\geq E_{G}G
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Compact support
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(124).
+
+\series default
+ 
+\emph on
+A lottery 
+\begin_inset Formula $F\in\Delta(\mathbb{R})$
+\end_inset
+
+ has compact support if there is 
+\begin_inset Formula $m\in\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $F(-m)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $F(m)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(61).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\{F,G\}\subseteq\Delta(\mathbb{R})$
+\end_inset
+
+ with compact support.
+ Then 
+\begin_inset Formula $F\geq_{FSD}G$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\forall\ x\in\mathbb{R}:F(x)\leq G(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\{F,G\}\subseteq\Delta(\mathbb{R})$
+\end_inset
+
+ with compact support.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Suppose that 
+\begin_inset Formula $F\geq_{FSD}G$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+.
+ We prove that 
+\begin_inset Formula $F(x)\leq G(x)$
+\end_inset
+
+.
+ Consider the step function
+\begin_inset Formula 
+\[
+u(t)\equiv\begin{cases}
+0 & \mbox{if}\ t\leq x\\
+1 & \mbox{otherwise}
+\end{cases}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ is non-decreasing, then 
+\begin_inset Formula $E_{F}u\geq E_{G}u$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \int}udF & \geq & {\displaystyle \int}udG\\
+\intop_{-\infty}^{x}(0)dF+\intop_{x}^{\infty}dF & \geq & \intop_{-\infty}^{x}(0)dG+\intop_{x}^{\infty}dG\\
+\left.F(t)\right|_{x}^{\infty} & \geq & \left.G(t)\right|_{x}^{\infty}\\
+1-F(x) & \geq & 1-G(x)
+\end{eqnarray*}
+
+\end_inset
+
+That is, 
+\begin_inset Formula $F(x)\leq G(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Suppose that 
+\begin_inset Formula $\forall\ x\in\mathbb{R}:F(x)\leq G(x)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $u$
+\end_inset
+
+ be a non-decreasing funciton.
+ We claim that 
+\begin_inset Formula $E_{F}u\geq E_{G}u$
+\end_inset
+
+.
+ For each 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+, let 
+\begin_inset Formula $H(x)\equiv F(x)-G(x)$
+\end_inset
+
+.
+ Note that, since 
+\begin_inset Formula $F(x)\leq G(x)$
+\end_inset
+
+, then 
+\begin_inset Formula $H(x)\leq0$
+\end_inset
+
+.
+ Now, integrating by parts, for 
+\begin_inset Formula $m$
+\end_inset
+
+ large enough
+\begin_inset Formula 
+\[
+\intop_{-\infty}^{\infty}udH=\left.u(x)H(x)\right|_{-m}^{m}-\intop_{-\infty}^{\infty}H(t)u^{\prime}(t)dt\geq0
+\]
+
+\end_inset
+
+since 
+\begin_inset Formula $u^{\prime}\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $H(-m)=H(m)=0$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\[
+{\displaystyle \int}udF\geq{\displaystyle \int}udG
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, we consider the question: when is a lottery 
+\begin_inset Formula $F$
+\end_inset
+
+unambiguously riskier than another lottery 
+\begin_inset Formula $G$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(125).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\{F,G\}\subseteq\Delta(\mathbb{R})$
+\end_inset
+
+.
+ Then, 
+\series bold
+
+\begin_inset Formula $F$
+\end_inset
+
+
+\series default
+ 
+\series bold
+second order stochastically dominates 
+\begin_inset Formula $G$
+\end_inset
+
+
+\series default
+, denoted 
+\begin_inset Formula $F\geq_{SSD}G$
+\end_inset
+
+, iff for each money monotone 
+\bar under
+risk averse
+\bar default
+ EU preference 
+\begin_inset Formula $\succsim$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+F\succsim G
+\]
+
+\end_inset
+
+Equivalently, if for each 
+\bar under
+concave
+\series bold
+\bar default
+ 
+\series default
+and non-decreasing 
+\begin_inset Formula $u:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+E_{F}u\geq E_{G}u
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Mean preserving spread
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(126).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\{F,G\}\subseteq\Delta(\mathbb{R})$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $G$
+\end_inset
+
+ is a mean preserving spread of 
+\begin_inset Formula $F$
+\end_inset
+
+ if there is a family of distributions 
+\begin_inset Formula $\left\{ H_{x}:x\in\mathbb{R},\ \mu_{H_{x}}=0\right\} $
+\end_inset
+
+ such that for each 
+\begin_inset Formula $y\in\mathbb{R}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+G(y)={\displaystyle \int_{-\infty}^{\infty}}\left({\displaystyle \int_{-\infty}^{y}}dH_{x}(t)\right)dF(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(62 & 63).
+ 
+\series default
+\emph on
+Let 
+\begin_inset Formula $\{F,G\}\subseteq\Delta(\mathbb{R})$
+\end_inset
+
+ with compact support be such that 
+\begin_inset Formula $\mu_{F}=\mu_{G}$
+\end_inset
+
+.
+ Then, the following statements are equivalent
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $F\geq_{SSD}G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \int_{-\infty}^{x}}F(t)dt\leq{\displaystyle \int_{-\infty}^{x}}G(t)dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $G(\cdot)$
+\end_inset
+
+ is a mean-preserving spread of 
+\begin_inset Formula $F(\cdot)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Will prove.
+ Check Mas-Colell page 199 Proposition 6.D.2.
+ In Exercise 6.D.4, we are asked to verify the equivalence of these three
+ properties.
+\end_layout
+
+\begin_layout Remark*
+\begin_inset Formula $F\geq_{FSD}G\implies F\geq_{SSD}G$
+\end_inset
+
+, but not vice versa.
+\end_layout
+
+\end_body
+\end_document

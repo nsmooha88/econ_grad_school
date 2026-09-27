@@ -1,0 +1,1751 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Microeconomic Theory I: Homework 3
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 3.2.3, Problem 1
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Prove that: (a) Strict monotonicity implies monotonicity; (b) Monotonicity
+ implies local non-satiation; (c) The converse statements are not true.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a) Strict monotonicity implies monotonicity
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let the binary relation 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ be strictly monotone
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x\gg y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x\gg y\implies x\gneq y\implies x\succ y$
+\end_inset
+
+ since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is strictly monotone.
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\forall\ \{x,y\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x\gg y$
+\end_inset
+
+, we have that 
+\begin_inset Formula $x\succ y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is monotone
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(b) Monotonicity implies local non-satiation
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let the binary relation 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ be monotone
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $x\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and take 
+\begin_inset Formula $\epsilon\in\mathbb{R}_{++}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, define 
+\begin_inset Formula $y\equiv\left(y_{i}=x_{i}+\frac{\epsilon}{2}\right),\ i=i,\ldots,L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, 
+\begin_inset Formula $y\in B_{\epsilon}^{X}(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $y\gg x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies y\succ x$
+\end_inset
+
+ since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is monotone
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\forall\ x\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $\forall\ \epsilon\in\mathbb{R}_{++}$
+\end_inset
+
+, 
+\begin_inset Formula $\exists\ y\in B_{\epsilon}^{X}(x):y\succ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is locally non-satiated
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(c) The converse statements are not true
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 3.2.3, Problem 4
+\end_layout
+
+\begin_layout Standard
+Prove that continuity and continuity* are not necessarily equivlatent for
+ binary relations that are complete but not, transitive, that is construct
+ a complete and continuous* binary relation that is not continuous.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $X\equiv\left[0,1\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We will now define a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+ that is complete, intransitive, continuous*, but not continuous.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq\equiv\left\{ (x,y)\in X^{2}:x_{1}\geq x_{2}\right\} \cup\left\{ (x,y)\in X^{2}:y=1-x,\ x>\frac{1}{4}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\forall\ \left\{ x,y\right\} \subseteq X$
+\end_inset
+
+, 
+\begin_inset Formula $x\succeq y\iff[x\geq y]\ \vee\ \left[(y=1-x)\ \wedge\ \left(x>\frac{1}{4}\right)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall\ x\in[0,1],\ L\left(\succeq,x\right)\equiv\left\{ \begin{array}{cc}
+[0,x] & \mbox{if}\ x\leq\frac{1}{4}\\
+{}[0,x]\cup\{1-x\} & \mbox{if}\ x>\frac{1}{4}
+\end{array}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall\ y\in[0,1]$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succeq,y)\equiv\left\{ \begin{array}{cc}
+[1,y] & \mbox{if}\ y\geq\frac{3}{4}\\
+{}[1,y]\cup\{1-y\} & \mbox{if}\ y<\frac{3}{4}
+\end{array}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence, 
+\begin_inset Formula $\forall\ x\in[0,1],\ U(\succeq,x)\ \mbox{and}\ L(\succeq,x)$
+\end_inset
+
+ are closed sets
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is continuous*
+\end_layout
+
+\begin_layout Standard
+Now, let 
+\begin_inset Formula $\left(x^{t},y^{t}\right)=\left(\frac{1}{4},\frac{3}{4}\right)+\left(\frac{1}{2t},-\frac{1}{2t}\right),\ \forall\ t\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\left(x^{t},y^{t}\right)\rightarrow\left(\frac{1}{4},\frac{3}{4}\right)=(x,y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, 
+\begin_inset Formula $\forall\ t\in\mathbb{N},\ x^{t}\succeq y^{t}$
+\end_inset
+
+ since 
+\begin_inset Formula $x^{t}>\frac{1}{4}$
+\end_inset
+
+ and 
+\begin_inset Formula $y^{t}=1-x^{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But, 
+\begin_inset Formula $x\nsucceq y$
+\end_inset
+
+ since 
+\begin_inset Formula $x=\frac{1}{4}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(\frac{1}{4},\frac{3}{4}\right)\notin\succsim$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is not continuous
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 3.2.3, Problem 6
+\end_layout
+
+\begin_layout Standard
+Construct a quasilinear preference that is not continuous.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $X\equiv\mathbb{R}^{2}$
+\end_inset
+
+ and define 
+\begin_inset Formula $\succeq_{lex}$
+\end_inset
+
+ as follows: for each 
+\begin_inset Formula $x\equiv(x_{1},x_{2})\in\mathbb{R}^{2}$
+\end_inset
+
+ and each 
+\begin_inset Formula $y\equiv(y_{1},y_{2})\in\mathbb{R}^{2},\ x\succeq_{lex}y\iff\left[\left(x_{1}>y_{1}\right)\ \vee\ \left(x_{1}=y_{1}\ \wedge\ x_{2}\geq y_{2}\right)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, with this preference relation, indifference sets are just singletons.
+\end_layout
+
+\begin_layout Standard
+This preference relation 
+\begin_inset Formula $\succeq_{lex}$
+\end_inset
+
+ on 
+\begin_inset Formula $X\equiv\mathbb{R}\times\mathbb{R}_{+}$
+\end_inset
+
+ is quasilinear with respect to commodity 1:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall\ (x_{1},x_{2})\in\mathbb{R}\times\mathbb{R}_{+},\ (x_{1},x_{2})\sim(x_{1},x_{2})$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\forall\ \alpha\in\mathbb{R},\ (x_{1}+\alpha,x_{2})\sim(x_{1}+\alpha,x_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall\ (x_{1},x_{2})\in\mathbb{R}\times\mathbb{R}_{+},\ \forall\ \alpha\in\mathbb{R}_{++},(x_{1}+\alpha,x_{2})\succ(x_{1},x_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+However, 
+\begin_inset Formula $\succeq_{lex}$
+\end_inset
+
+ is not a continuous preference.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 3.2.3, Problem 8
+\end_layout
+
+\begin_layout Standard
+Consider the preferences on 
+\begin_inset Formula $[1,2]\subseteq\mathbb{R}$
+\end_inset
+
+ that are represented by the functions in Figure 3.5
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a) Is the preference in Figure 3.5 (a) continuous? Formally support your
+ answer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since we have a preference, then continuity* is equivalent to continuity
+ by Theorem 7.
+ So, to see if the preference is continuous, we will check to see if the
+ preference is continuous*, i.e., if 
+\begin_inset Formula $\forall\ x\in[1,2],\ U(\succsim,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succsim,x)$
+\end_inset
+
+ are closed in 
+\begin_inset Formula $[1,2]$
+\end_inset
+
+.
+ After analyzing the graph, the two discontinuities occur at 
+\begin_inset Formula $\frac{5}{4}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{7}{4}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L\left(\succsim,\frac{5}{4}\right)\equiv\left\{ x\in[1,2]:\frac{5}{4}\succsim x\right\} =\left[1,\frac{5}{4}\right]\cup\left[\frac{7}{4},2\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $U\left(\succsim,\frac{5}{4}\right)\equiv\left\{ x\in[1,2]:x\succsim\frac{5}{4}\right\} =\left[\frac{5}{4},\frac{7}{4}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L\left(\succsim,\frac{7}{4}\right)\equiv\left\{ x\in[1,2]:\frac{7}{4}\succsim x\right\} =\left[1,\frac{5}{4}\right]\cup\left[\frac{7}{4},2\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $U\left(\succeq,\frac{7}{4}\right)\equiv\left\{ x\in[1,2]:x\succsim\frac{5}{4}\right\} =\left[\frac{5}{4},\frac{7}{4}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, all the sets listed above are closed.
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\forall\ x\in[1,2],\ U(\succsim,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succsim,x)$
+\end_inset
+
+ are closed in 
+\begin_inset Formula $[1,2]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous*
+\begin_inset Formula $\iff$
+\end_inset
+
+
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous
+\end_layout
+
+\begin_layout Standard
+Also, note that we can take an increasing function 
+\begin_inset Formula $f:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+, and transform the utility function as follows
+\end_layout
+
+\begin_layout Standard
+By Proposition 2 in the class notes, 
+\begin_inset Formula $f\circ u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ Also, 
+\begin_inset Formula $f\circ u$
+\end_inset
+
+ is a continuous function, so by Proposition 7 in the class notes, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\series bold
+(b) Is the preference in Figure 3.5(b) continuous? Formally support your
+ answer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since we have a preference, then continuity* is equivalent to continuity
+ by Theorem 7.
+ So, to see if the preference is continuous, we will check to see if the
+ preference is continuous*, i.e., if 
+\begin_inset Formula $\forall\ x\in[1,2],\ U(\succsim,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succsim,x)$
+\end_inset
+
+ are closed in 
+\begin_inset Formula $[1,2]$
+\end_inset
+
+.
+ After analyzing the graph, the two discontinuities occur at 
+\begin_inset Formula $\frac{5}{4}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{7}{4}$
+\end_inset
+
+ .
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $U\left(\succsim,\frac{5}{4}\right)\equiv\left\{ x\in[1,2]:x\succsim\frac{5}{4}\right\} =\left[\frac{5}{4},\frac{7}{4}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, The upper contour set is not closed.
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is not continuous*
+\begin_inset Formula $\iff\succsim$
+\end_inset
+
+ is not continuous
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 3.2.3, Problem 9
+\end_layout
+
+\begin_layout Standard
+Suppose that the set of alternatives is 
+\begin_inset Formula $\mathbb{R}_{+}$
+\end_inset
+
+.
+ A preference 
+\begin_inset Formula $R$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathbb{R}_{+}$
+\end_inset
+
+ is 
+\series bold
+single peaked
+\series default
+ if there is 
+\begin_inset Formula $x^{*}\in\mathbb{R}_{+}$
+\end_inset
+
+such that:
+\end_layout
+
+\begin_layout Itemize
+For each pair 
+\begin_inset Formula $\left\{ x,y\right\} \subseteq\mathbb{R}_{+}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x<y\leq x^{*},\ y\ P\ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For each pair 
+\begin_inset Formula $\left\{ x,y\right\} \subseteq\mathbb{R}_{+}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x^{*}\leq y<x,\ y\ P\ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a) Show that if 
+\begin_inset Formula $R$
+\end_inset
+
+ is continuous, then it can be represented by a function 
+\begin_inset Formula $u$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $x\leq x^{*},\ u(x)=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is continuous, it has a continuous utility representation 
+\begin_inset Formula $v$
+\end_inset
+
+ by Theorem 9 (Debreu's Representation Theorem).
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $\forall\ \left\{ x,y\right\} \subseteq\left[0,x^{*}\right],\ v(x)\geq v(y)\iff x\succeq y\iff x\geq y$
+\end_inset
+
+ since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is single peaked at 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence, 
+\begin_inset Formula $v(x)$
+\end_inset
+
+ is monotonically equivalent to 
+\begin_inset Formula $x$
+\end_inset
+
+ on 
+\begin_inset Formula $\left[0,x^{*}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, there is a monotone function 
+\begin_inset Formula $\varphi:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ x\in\left[0,x^{*}\right],\ \varphi(v(x))=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $u(x)=\varphi(v(x))\ \forall\ x\in\mathbb{R}_{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ by Proposition 2 since 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is monotone
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\forall\ x\in\left[0,x^{*}\right],\ u(x)=\varphi(v(x))=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(b) Show that if 
+\begin_inset Formula $R$
+\end_inset
+
+ is not continuous, then it may not be represented by a function 
+\begin_inset Formula $u$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $x\leq x^{*},\ u(x)=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\succeq^{d}$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathbb{R}_{+}$
+\end_inset
+
+ be represented by the utility function 
+\begin_inset Formula $f(x)=\left\{ \begin{array}{cc}
+x & \mbox{if}\ x<1\\
+x+1 & \mbox{if}\ 1\leq x\leq2\\
+3-x & \mbox{if}\ 2\leq x<3\\
+2-x & \mbox{if}\ 3\leq x
+\end{array}\right.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that 
+\begin_inset Formula $\succeq^{d}$
+\end_inset
+
+ is discontinuous since 
+\begin_inset Formula $U(\succeq^{d},1)$
+\end_inset
+
+ is not closed.
+\end_layout
+
+\begin_layout Standard
+Suppose for contradiction 
+\begin_inset Formula $\succeq^{d}$
+\end_inset
+
+ has a utility representation 
+\begin_inset Formula $u$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ x\in\left[0,x^{*}\right],\ u(x)=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq^{d}$
+\end_inset
+
+ , it must be monotonically equivalent to 
+\begin_inset Formula $f$
+\end_inset
+
+on 
+\begin_inset Formula $\left[0,x^{*}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, there is a monotone function 
+\begin_inset Formula $\varphi:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ x\in\left[0,x^{*}\right],\ \varphi(f(x))=u(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $\forall\ z\in[0,1),\ \varphi(z)=z$
+\end_inset
+
+ and 
+\begin_inset Formula $\forall\ z\in[2,3],\ \varphi(z)=z-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence, 
+\begin_inset Formula $\forall\ x\leq2,\ u(x)=\varphi(f(x))=x$
+\end_inset
+
+ and 
+\begin_inset Formula $\forall\ x\geq2,\ u(x)=\varphi(f(x))=4-x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $u(x)$
+\end_inset
+
+ is continuous on 
+\begin_inset Formula $\mathbb{R}_{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But, this contradicts the discontinuity of 
+\begin_inset Formula $\succeq^{d}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\succeq^{d}$
+\end_inset
+
+ must not have any utility representation 
+\begin_inset Formula $u$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ x\in\left[0,x^{*}\right],\ u(x)=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(c) Describe a situation in which it is reasonable to assume that the set
+ of alternatives is 
+\begin_inset Formula $\mathbb{R}_{+}$
+\end_inset
+
+ and preferences are single peaked.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+When comparing candidates for political office, it is reasonable to assume
+ the set of alternatives is 
+\begin_inset Formula $\mathbb{R}_{+}$
+\end_inset
+
+ and preferences are single peaked.
+ Many voters prefer a candidate that is more moderate to candidates that
+ reside on either extremes.
+\end_layout
+
+\begin_layout Itemize
+Eating is another situation in which it is reasonable to assume the set
+ of alternatives is 
+\begin_inset Formula $\mathbb{R}_{+}$
+\end_inset
+
+ and preferences are single peaked.
+ People prefer more food to less food up until the point where they have
+ completely satiated themselves.
+ After this point, more food is no longer ideal.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 3.3.3, Problem 11
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ be a monotone and continuous preference on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p\in\mbox{\mathbb{R}}_{++}^{L}.$
+\end_inset
+
+ Prove that 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is represented by the function 
+\begin_inset Formula $m_{p}$
+\end_inset
+
+ that associates with each 
+\begin_inset Formula $x\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ the value
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $m_{p}(x)\equiv\begin{array}{c}
+\mbox{min}\\
+y\in U(\succeq,x)
+\end{array}p\cdot y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a) Write the statement 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $m_{p}$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ as an if and only if statement.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m_{p}$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\forall\ \left\{ x,y\right\} \subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $x\succeq y\iff m_{p}(x)\geq m_{p}(y)$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(b) Provide an explicit proof of 
+\begin_inset Formula $\left(\Longrightarrow\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $x\succeq y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show:
+\series default
+\emph default
+ 
+\begin_inset Formula $m_{p}(x)\geq m_{p}(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $x^{*}\in\ \arg{\displaystyle \min_{z\in U(\succsim,x)}}\ p\cdot z$
+\end_inset
+
+ and 
+\begin_inset Formula $y^{*}\in\ \arg{\displaystyle \min_{t\in U(\succsim,y)}}\ p\cdot t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $m_{p}(x)=p\cdot x^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{p}(y)=p\cdot y^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $x^{*}\succeq x\succeq y\implies x^{*}\succeq y$
+\end_inset
+
+ by transitivity of 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies x^{*}\in U(\succeq,y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies U(\succsim,x)\subseteq U(\succsim,y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies m_{p}(x)=p\cdot x^{*}\geq\begin{array}{c}
+\mbox{min}\\
+t\in U(\succeq,y)
+\end{array}p\cdot t=m_{p}(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(c) Provide an explicit proof of 
+\begin_inset Formula $\left(\Longleftarrow\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $m_{p}(x)\geq m_{p}(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show:
+\series default
+\emph default
+ 
+\begin_inset Formula $x\succeq y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose for contradiction 
+\begin_inset Formula $\neg(x\succeq y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete, then 
+\begin_inset Formula $(y\succeq x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $(y\succeq x)$
+\end_inset
+
+ and 
+\begin_inset Formula $\neg(x\succeq y)\implies y\succ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is monotone and continuous, 
+\begin_inset Formula $y\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $x^{*}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x^{*}\succeq x$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{p}(x)=p\cdot x^{*}=\begin{array}{c}
+\mbox{min}\\
+z\in U(\succeq,x)
+\end{array}p\cdot z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $y^{*}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $y^{*}\succeq x$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{p}(y)=p\cdot y^{*}=\begin{array}{c}
+\mbox{min}\\
+t\in U(\succeq,y)
+\end{array}p\cdot t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is a preference, then 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is continuous 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is continuous* by Theorem 7
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is continuous* 
+\begin_inset Formula $\iff\forall\ x\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succeq,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succeq,x)$
+\end_inset
+
+ are closed in 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $L(\succeq,x)$
+\end_inset
+
+ is closed 
+\begin_inset Formula $\iff L(\succeq,x)^{c}=U(\succ,x)$
+\end_inset
+
+ is open
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y^{*}\succeq y\succ x\implies y^{*}\succ x$
+\end_inset
+
+ by transitivity of 
+\begin_inset Formula $\succeq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies y^{*}\in U(\succ,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\exists\ \epsilon>0$
+\end_inset
+
+ such that 
+\begin_inset Formula $B_{\epsilon}^{X}(y^{*})\subseteq U(\succ,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Define 
+\begin_inset Formula $\tilde{y}=\left(\tilde{y_{i}}=\mbox{max}\left\{ y_{i}^{*}-\frac{\epsilon}{2},0\right\} ,i=1\ldots,L\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $\tilde{y}\in B_{\epsilon}^{X}(y^{*})\implies\tilde{y}\in U(\succ,x)\implies\tilde{y}\succ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $y^{*}\gneq\tilde{y}$
+\end_inset
+
+ and 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $p\cdot x^{*}\geq p\cdot y^{*}>p\cdot\tilde{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies p\cdot x^{*}>p\cdot\tilde{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But, 
+\begin_inset Formula $p\cdot x^{*}>p\cdot\tilde{y}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{y}\succ x$
+\end_inset
+
+ contradicts 
+\begin_inset Formula $p\cdot x^{*}=\begin{array}{c}
+\mbox{min}\\
+z\in U(\succeq,x)
+\end{array}p\cdot z\ \ \ \left(\rightarrow\leftarrow\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $x\succeq y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_body
+\end_document

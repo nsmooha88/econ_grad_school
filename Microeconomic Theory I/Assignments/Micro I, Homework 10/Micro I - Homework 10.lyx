@@ -1,0 +1,2221 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Microeconomic Theory I: Homework 10
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 6.7, Problem 1
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $u:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+ be a non-decreasing and concave function.
+ Prove that for each 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $r_{A}(x,u)=a>0$
+\end_inset
+
+, if and only if 
+\begin_inset Formula $u$
+\end_inset
+
+ is an affine linear transformation of the function 
+\begin_inset Formula $x\in\mathbb{R}\mapsto\tilde{u}(x)\equiv-e^{-ax}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\forall\ x\in\mathbb{R},r_{A}(x,u)=a>0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show
+\emph default
+: 
+\series default
+
+\begin_inset Formula $u$
+\end_inset
+
+ is an affine linear transformation of 
+\begin_inset Formula $\tilde{u}(x)=-e^{-ax}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $u:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+ be a non-decreasing and concave function
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r_{A}(x,u)=\frac{u^{\prime\prime}(x)}{u^{\prime}(x)}=a>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff u^{\prime\prime}(x)+au^{\prime}(x)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Find the roots of the characteristic equation: 
+\begin_inset Formula $\lambda^{2}+a\lambda=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lambda^{2}+a\lambda=0\iff\lambda(\lambda+a)=0\implies\lambda\in\{0,-a\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The general solution to the second-order homogenuous linear differential
+ equation is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u(x)=-c_{1}e^{-ax}+c_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $u$
+\end_inset
+
+ is an affine linear transformation of 
+\begin_inset Formula $\tilde{u}(x)=-e^{-ax}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show
+\emph default
+:
+\series default
+ 
+\begin_inset Formula $\forall\ x\in\mathbb{R},r_{A}(x,u)=a>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\forall\ x\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $u(x)=\alpha\left(-e^{-ax}\right)+\beta$
+\end_inset
+
+ where 
+\begin_inset Formula $\{\alpha,\beta\}\subseteq\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u^{\prime}(x)=\alpha\cdot a\cdot e^{-ax}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u^{\prime\prime}(x)=-\alpha\cdot a^{2}\cdot e^{-ax}$
+\end_inset
+
+
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r_{A}(x,u)=\frac{u^{\prime\prime}(x)}{u^{\prime}(x)}=-\frac{-\alpha\cdot a^{2}\cdot e^{-ax}}{\alpha\cdot a\cdot e^{-ax}}=a>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 6.7, Problem 3
+\end_layout
+
+\begin_layout Standard
+An Expectued Utility preference on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ is risk neutral if for each 
+\begin_inset Formula $F\in\Delta(Z),F\sim\delta_{\mu_{F}}$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is risk neutral if and only if it is represented by the EU associated with
+ each index 
+\begin_inset Formula $u$
+\end_inset
+
+ of the form 
+\begin_inset Formula $u(t)=at+b$
+\end_inset
+
+ where 
+\begin_inset Formula $\{a,b\}\subseteq\mathbb{R}\ \mbox{and}\ a>0.$
+\end_inset
+
+ Conclude that there is only one risk neutral preference and it is represented
+ by the EU whose associated index is 
+\begin_inset Formula $t\in\mathbb{R}\overset{u}{\mapsto}t.$
+\end_inset
+
+ Thus, the risk neutral preference 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is the one that for each 
+\begin_inset Formula $\{F,G\}\subseteq\Delta(Z),F\succsim G$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\mu_{F}\geq\mu_{G}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be strictly money monotone
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is risk neutral and
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Given
+\emph default
+:
+\series default
+ 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the EU with associated each index 
+\begin_inset Formula $u$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show
+\emph default
+: 
+\series default
+The index 
+\begin_inset Formula $u$
+\end_inset
+
+ is of the form 
+\begin_inset Formula $u(t)=at+b$
+\end_inset
+
+ where 
+\begin_inset Formula $\{a,b\}\subseteq\mathbb{R}\ \mbox{and}\ a>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is risk neutral if and only if 
+\begin_inset Formula $\forall\ F\in\Delta(Z),\delta_{\mu_{F}}\sim F$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\delta_{\mu_{F}}\sim F\iff U\left(\delta_{\mu_{F}}\right)=U(F)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $U\left(\delta_{\mu_{F}}\right)=U(F)\iff u\left(\mu_{F}\right)=\int u\ dF$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By Jensen's Inequality, 
+\begin_inset Formula $u$
+\end_inset
+
+ is concave if and only if 
+\begin_inset Formula $u(\mu_{F})\geq\int u\ dF$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, 
+\begin_inset Formula $u$
+\end_inset
+
+ is convex if and only if 
+\begin_inset Formula $u(\mu_{F})\leq\int u\ dF$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, since both inequalities are satisfied, then 
+\begin_inset Formula $u$
+\end_inset
+
+ is a linear function of the form 
+\begin_inset Formula $u(t)=at+b$
+\end_inset
+
+ where 
+\begin_inset Formula $\{a,b\}\subseteq\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is strictly money monotone, then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mu_{F}>\mu_{G}\implies\delta_{\mu_{F}}>\delta_{\mu_{G}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies U\left(\delta_{\mu_{F}}\right)>U\left(\delta_{\mu_{G}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies u(\mu_{F})>u(\mu_{G})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence, 
+\begin_inset Formula $u$
+\end_inset
+
+ must be an increasing function
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $a>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, the index 
+\begin_inset Formula $u$
+\end_inset
+
+ is of the form 
+\begin_inset Formula $u(t)=at+b$
+\end_inset
+
+ where 
+\begin_inset Formula $\{a,b\}\subseteq\mathbb{R}\ \mbox{and}\ a>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the EU associated with each index 
+\begin_inset Formula $u$
+\end_inset
+
+ of the form 
+\begin_inset Formula $u(t)=at+b$
+\end_inset
+
+ where 
+\begin_inset Formula $\{a,b\}\subseteq\mathbb{R}\ \mbox{and}\ a>0$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $F\succsim G\iff U(F)\equiv E_{F}u\geq U(G)\equiv E_{G}u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show
+\emph default
+: 
+\series default
+
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is risk neutral
+\end_layout
+
+\begin_layout Standard
+Note, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is risk neutral if and only if 
+\begin_inset Formula $\forall\ F\in\Delta(Z),\delta_{\mu_{F}}\sim F$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $F\in\Delta(Z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $U(F)\equiv E_{F}u=\int u\ dF$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $\ \ =\int\left[at+b\right]\ dF$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $u(t)=at+b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $\ \ =a\int t\ dF+b\int dF$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $\ \ =a\mu_{F}+b$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $\int t\ dF=\mu_{F}$
+\end_inset
+
+ and 
+\begin_inset Formula $\int dF=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $\ \ =u(\mu_{F})=U(\delta_{\mu_{F}})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $U(F)=U(\delta_{\mu_{F}})\iff F\sim\delta_{\mu_{F}}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+by assumption
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\forall\ F\in\Delta(Z),\delta_{\mu_{F}}\sim F$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is risk neutral
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Conclusion:
+\series default
+ Recall that 
+\begin_inset Formula $u$
+\end_inset
+
+ is unique up to a positive affine linear transformation.
+ So, if 
+\begin_inset Formula $u(t)=t$
+\end_inset
+
+ we can take 
+\begin_inset Formula $\{a,b\}\subseteq\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $a>0$
+\end_inset
+
+ where 
+\begin_inset Formula $v(t)=au(t)+b=at+b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, using the result above, we can show that for the risk neutral preference
+ 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is the one that 
+\begin_inset Formula $\forall\ \{F,G\}\subseteq\Delta(Z),F\succsim G\iff\mu_{F}\geq\mu_{G}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the EU associated with each index 
+\begin_inset Formula $u$
+\end_inset
+
+ of the form 
+\begin_inset Formula $u(t)=at+b$
+\end_inset
+
+ where 
+\begin_inset Formula $\{a,b\}\subseteq\mathbb{R}\ \mbox{and}\ a>0$
+\end_inset
+
+, then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F\succsim G\iff E_{F}u\geq E_{G}u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E_{F}u\geq E_{G}u\iff\int u\ dF\geq\int u\ dG$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int u\ dF\geq\int u\ dG\iff\int\left[at+b\right]\ dF\geq\int\left[at+b\right]\ dG$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int\left[at+b\right]\ dF\geq\int\left[at+b\right]\ dG\iff a\mu_{F}+b\geq a\mu_{G}+b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a\mu_{F}+b\geq a\mu_{G}+b\iff\mu_{F}\geq\mu_{G}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Problem 4
+\end_layout
+
+\begin_layout Standard
+An asset is a divisible claim to a financial return in the future.
+ Suppose that there are two assets, a safe asset with a return of 1 dollar
+ per dollar invested and a risky asset with a random return of 
+\begin_inset Formula $z$
+\end_inset
+
+ dollars per dollar invested.
+ The random return 
+\begin_inset Formula $z$
+\end_inset
+
+ has the following probability distribution: 
+\begin_inset Formula $z=0$
+\end_inset
+
+ with probability 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $z=1$
+\end_inset
+
+ with probability 
+\begin_inset Formula $\beta$
+\end_inset
+
+, and 
+\begin_inset Formula $z=2$
+\end_inset
+
+ with probability 
+\begin_inset Formula $1-\alpha-\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A 
+\series bold
+risk neutral
+\series default
+ individual, who we refer to as agent 
+\begin_inset Formula $A$
+\end_inset
+
+, has aninitial wealth 
+\begin_inset Formula $w$
+\end_inset
+
+ to invest in these two assets.
+ Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be the part of agent 
+\begin_inset Formula $A\mbox{'s}$
+\end_inset
+
+ wealth invested in the risky asset.
+ The amount invested in the safe asset is 
+\begin_inset Formula $w-x$
+\end_inset
+
+.
+ Thus, for any realtization the random return 
+\begin_inset Formula $z$
+\end_inset
+
+, agent 
+\begin_inset Formula $A\mbox{'s}$
+\end_inset
+
+ portfolio 
+\begin_inset Formula $(x,w-x)$
+\end_inset
+
+ pays 
+\begin_inset Formula $xz+w-x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a) Characterize agent 
+\begin_inset Formula $A\mbox{'s}$
+\end_inset
+
+ optimal portfolio, i.e., find 
+\begin_inset Formula $x$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ When does 
+\begin_inset Formula $A$
+\end_inset
+
+ invest in the risky asset? Interpret.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+We assume that agent 
+\begin_inset Formula $A$
+\end_inset
+
+ is an expected utility maximizer
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $F$
+\end_inset
+
+ denote the c.d.f of the random return 
+\begin_inset Formula $z$
+\end_inset
+
+ for the risky asset, and let 
+\begin_inset Formula $G$
+\end_inset
+
+ denote the c.d.f of the certain return for the safe asset
+\end_layout
+
+\begin_layout Standard
+From the results of problem 3, the risk neutral preference 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is the one that 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall\ \{F,G\}\subseteq\Delta(Z),F\succsim G\iff\mu_{F}\geq\mu_{G}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mu_{F}=(\alpha(0)+\beta(1)+(1-\alpha-\beta)2)=2-2\alpha-\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu_{G}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $F\succsim G\iff2-2\alpha-\beta\geq1\iff2\alpha-\beta\leq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From problem 3, since agent 
+\begin_inset Formula $A$
+\end_inset
+
+ is risk neutral, her index utility function is linear.
+ So, to maximize her expected utility, she will either invest all of her
+ wealth, 
+\begin_inset Formula $w$
+\end_inset
+
+, in the risky asset, or none of it.
+ Thus, we can characterize 
+\begin_inset Formula $x$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x=\begin{cases}
+w & \mbox{if}\ 2\alpha-\beta<1\\
+\{0,w\} & \mbox{if}\ 2\alpha-\beta=1\\
+0 & \mbox{if}\ 2\alpha-\beta>1
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $A$
+\end_inset
+
+ will invest in the risky asset if its expected return, 
+\begin_inset Formula $\mu_{F}$
+\end_inset
+
+, is greater than the certain return of the safe asset.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(b) Suppose now that agent 
+\begin_inset Formula $A$
+\end_inset
+
+ cannot directly invest in these two assets.
+ Instead, agent 
+\begin_inset Formula $A$
+\end_inset
+
+ can invest through a financial manager who gets a percentage of the agent's
+ return.
+ Suppose for simplicity that agent 
+\begin_inset Formula $A$
+\end_inset
+
+ would receive a return of zero if she does not invest through a financial
+ manager.
+ There are two financial managers: 
+\begin_inset Formula $M1$
+\end_inset
+
+ and 
+\begin_inset Formula $M2$
+\end_inset
+
+.
+ Suppose that the initial wealth of 
+\begin_inset Formula $M1$
+\end_inset
+
+ and 
+\begin_inset Formula $M2$
+\end_inset
+
+ is zero and that each gets a portion 
+\begin_inset Formula $\varphi\in(0,1)$
+\end_inset
+
+ of the corresponding agents' returns.
+ For instance, if agent 
+\begin_inset Formula $A$
+\end_inset
+
+ gives 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ dollars to 
+\begin_inset Formula $M1$
+\end_inset
+
+ and this finaancial manager invests 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ in the risky asset and 
+\begin_inset Formula $y_{1}-x_{1}$
+\end_inset
+
+ in the safe asset, then for each realization of the random return, the
+ manager gets 
+\begin_inset Formula $\varphi(x_{1}z+y_{1}-x_{1})$
+\end_inset
+
+ and agent 
+\begin_inset Formula $A$
+\end_inset
+
+ gets 
+\begin_inset Formula $(1-\varphi)(x_{1}z+y_{1}-x_{1}).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(i) Suppose that 
+\begin_inset Formula $M1$
+\end_inset
+
+ is an expected utility maximizer with vNM utility index: 
+\begin_inset Formula $u_{1}(x)\equiv\sqrt{x}$
+\end_inset
+
+.
+ If agent 
+\begin_inset Formula $A$
+\end_inset
+
+ gives 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ dollars to 
+\begin_inset Formula $M1$
+\end_inset
+
+, what is the manager's optimal portfolio? That is, calculate 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ When does 
+\begin_inset Formula $M1$
+\end_inset
+
+ invest in the risky asset?
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \max_{0\le x_{1}\leq y_{1}}{\displaystyle \int\sqrt{\varphi(x_{1}z+y_{1}-x_{1})}\ dF}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $={\displaystyle \max_{0\le x_{1}\leq y_{1}}}{\displaystyle \alpha\sqrt{\varphi(y_{1}-x_{1})}+\beta\sqrt{\varphi(x_{1}+y_{1}-x_{1})}+(1-\alpha-\beta)\sqrt{\varphi(2x_{1}+y_{1}-x_{1})}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+FOC of 
+\begin_inset Formula $E_{F}u_{1}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial E_{F}u_{1}}{\partial x}=-\varphi\frac{\alpha}{2\sqrt{\varphi(y_{1}-x_{1})}}+\varphi\frac{(1-\alpha-\beta)}{2\sqrt{\varphi(x_{1}+y_{1})}}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\frac{\alpha}{2\sqrt{\varphi(y_{1}-x_{1})}}=\frac{(1-\alpha-\beta)}{2\sqrt{\varphi(x_{1}+y_{1})}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\alpha2\sqrt{\varphi(x_{1}+y_{1})}=(1-\alpha-\beta)2\sqrt{\varphi(y_{1}-x_{1})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\alpha^{2}(x_{1}+y_{1})=(1-\alpha-\beta)^{2}(y_{1}-x_{1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff x_{1}^{*}=y_{1}\frac{(1-\alpha-\beta)^{2}-\alpha^{2}}{(1-\alpha-\beta)^{2}+\alpha^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $M1$
+\end_inset
+
+ is an expected utility maximizer, then 
+\begin_inset Formula $F\succsim G\iff E_{F}u_{1}\geq E_{G}u_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, we know that if 
+\begin_inset Formula $M1$
+\end_inset
+
+ invests all of 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ in the safe asset, then 
+\begin_inset Formula $E_{G}u_{1}=\sqrt{\varphi y_{1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, the manager's optimal investment strategy is given by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}=\begin{cases}
+x_{1}^{*} & \mbox{if}\ E_{F}u_{1}>\sqrt{\varphi y_{1}}\\
+0 & \mbox{otherwise}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(ii) Suppose that 
+\begin_inset Formula $M2$
+\end_inset
+
+ is an expected utility maximizer with vNM utility index: 
+\begin_inset Formula $u_{2}(x)\equiv\ln x$
+\end_inset
+
+.
+ If agent 
+\begin_inset Formula $A$
+\end_inset
+
+ gives 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ dollars to 
+\begin_inset Formula $M2$
+\end_inset
+
+, what is the managers' optimal portfolio? That is, calculate 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ When does 
+\begin_inset Formula $M2$
+\end_inset
+
+ invest in the risky asset?
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \max_{0\le x_{2}\leq y_{2}}{\displaystyle \int\ln\left[\varphi(x_{2}z+y_{2}-x_{2})\right]\ dF}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $={\displaystyle \max_{0\le x_{2}\leq y_{2}}}\alpha\ln\left[\varphi(y_{2}-x_{2})\right]+\beta\ln[\varphi y_{2}]+(1-\alpha-\beta)\ln[\varphi(x_{2}+y_{2})]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+FOC of 
+\begin_inset Formula $E_{F}u_{2}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial E_{F}u_{2}}{\partial x}=-\varphi\frac{\alpha}{\varphi(y_{2}-x_{2})}+\varphi\frac{(1-\alpha-\beta)}{\varphi(y_{2}+x_{2})}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\frac{\alpha}{(y_{2}-x_{2})}=\frac{(1-\alpha-\beta)}{(y_{2}+x_{2})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\alpha(y_{2}+x_{2})=(1-\alpha-\beta)(y_{2}-x_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff x_{2}^{*}=y_{2}\frac{1-2\alpha-\beta}{1-\beta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $M2$
+\end_inset
+
+ is an expected utility maximizer, then 
+\begin_inset Formula $F\succsim G\iff E_{F}u_{2}\geq E_{G}u_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, we know that if 
+\begin_inset Formula $M2$
+\end_inset
+
+ invests all of 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ in the safe asset, then 
+\begin_inset Formula $E_{G}u_{2}=\ln\left(\varphi y_{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, the manager's optimal investment strategy is given by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{2}=\begin{cases}
+x_{2}^{*} & \mbox{if}\ E_{F}u_{1}>\ln(\varphi y_{2})\\
+0 & \mbox{otherwise}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(iii) Characterize agent 
+\begin_inset Formula $A\mbox{'s}$
+\end_inset
+
+ optimal portfolio, i.e., find the amounts 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ that agent 
+\begin_inset Formula $A$
+\end_inset
+
+ gives to 
+\begin_inset Formula $M1$
+\end_inset
+
+ and 
+\begin_inset Formula $M2$
+\end_inset
+
+, repsectively.
+ In a graph of 
+\begin_inset Formula $\alpha\ \mbox{vs}\ \beta$
+\end_inset
+
+ show the different portfolios associated with the pairs 
+\begin_inset Formula $(\alpha,\beta)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Recall, when agent 
+\begin_inset Formula $A$
+\end_inset
+
+ is able to invest on her own, her optimal strategy is as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x=\begin{cases}
+w & \mbox{if}\ 2\alpha-\beta<1\\
+\{0,w\} & \mbox{if}\ 2\alpha-\beta=1\\
+0 & \mbox{if}\ 2\alpha-\beta>1
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+when 
+\begin_inset Formula $2\alpha-\beta<1$
+\end_inset
+
+, agent 
+\begin_inset Formula $A$
+\end_inset
+
+ wants to give all of her wealth to the financial manager who will invest
+ the highest amount of money in the risky asset
+\end_layout
+
+\begin_layout Standard
+Note, 
+\begin_inset Formula $x_{1}=y_{1}\frac{(1-\alpha-\beta)^{2}-\alpha^{2}}{(1-\alpha-\beta)^{2}+\alpha^{2}}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}=y_{2}\frac{1-2\alpha-\beta}{1-\beta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{(1-\alpha-\beta)^{2}-\alpha^{2}}{(1-\alpha-\beta)^{2}+\alpha^{2}}\approx\frac{a^{2}-b^{2}}{a^{2}+b^{2}}=\frac{(a+b)(a-b)}{a^{2}+b^{2}}>\frac{(a+b)(a-b)}{(a+b)^{2}}=\frac{a-b}{a+b}\approx\frac{1-2\alpha-\beta}{1-\beta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M1$
+\end_inset
+
+ assigns a larger fraction of wealth to the risky asset.
+\end_layout
+
+\begin_layout Standard
+So, we can redefine agent 
+\begin_inset Formula $A\mbox{'s}$
+\end_inset
+
+ optimal strategy as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{c}
+y_{1}\\
+y_{2}
+\end{array}\right]=\begin{cases}
+\left[\begin{array}{c}
+w\\
+0
+\end{array}\right] & \mbox{if}\ 2\alpha-\beta<1\\
+\left[\begin{array}{c}
+a\\
+w-a
+\end{array}\right] & \mbox{if}\ 2\alpha-\beta\geq1
+\end{cases}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+where 
+\begin_inset Formula $a\in[0,w]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Extra Assigned Problem
+\end_layout
+
+\begin_layout Standard
+Consider an expected utility maximizer with utility index 
+\begin_inset Formula $u(x)=-e^{-ax}$
+\end_inset
+
+ with 
+\begin_inset Formula $a>0$
+\end_inset
+
+ and initial wealth 
+\begin_inset Formula $w>0$
+\end_inset
+
+.
+ There is a risk free asset that has a return of 
+\begin_inset Formula $2$
+\end_inset
+
+ (if the agent invest 
+\begin_inset Formula $x$
+\end_inset
+
+ dollars, then she receives 
+\begin_inset Formula $2x$
+\end_inset
+
+).
+ There is also a risky asset with random return 
+\begin_inset Formula $1$
+\end_inset
+
+ with probability 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+ and 
+\begin_inset Formula $3$
+\end_inset
+
+ with probability 
+\begin_inset Formula $(1-\alpha)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a) Set up the portfolio choice problem for the agent (denote the amount
+ invested in the risky asset by 
+\begin_inset Formula $x$
+\end_inset
+
+ and its optimal value by 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We assume that the agent is an expected utility maximizer, and from his
+ utility index, we know that he is risk averse
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $F$
+\end_inset
+
+ denote the c.d.f of the random return 
+\begin_inset Formula $z$
+\end_inset
+
+ for the risky asset, and let 
+\begin_inset Formula $G$
+\end_inset
+
+ denote the c.d.f of the certain return for the safe asset
+\end_layout
+
+\begin_layout Standard
+Since the agen is an expected utility maximizer, then 
+\begin_inset Formula $F\succsim G\iff E_{F}u\geq E_{G}u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, if the agent invests all of his wealth in the safe asset, then 
+\begin_inset Formula $E_{G}u=-e^{-a(2w)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, the agent's optimal investment strategy is given by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x=\begin{cases}
+x^{*} & \mbox{if}\ E_{F}u>-e^{-a(2w)}\\
+\{0,x^{*}\} & \mbox{if}\ E_{F}u=-e^{-a(2w)}\\
+0 & \mbox{if}\ E_{F}u<-e^{-a(2w)}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For any realization of the random return 
+\begin_inset Formula $z$
+\end_inset
+
+, the agent's portfolio 
+\begin_inset Formula $(x,w-x)$
+\end_inset
+
+ pays 
+\begin_inset Formula $xz+2(w-x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, the agent's choice problem for the amount invested in the risky asset
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \max_{0\le x\leq w}}\ \alpha\left[-e^{-a\left(2w-x\right)}\right]+(1-\alpha)\left[-e^{-a\left(2w+x\right)}\right]={\displaystyle \max_{0\le x\leq w}}\ -e^{-2aw}\left[\alpha(e^{ax})+(1-\alpha)(e^{-ax})\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(b) Under what conditions is 
+\begin_inset Formula $x^{*}>0$
+\end_inset
+
+? Interpret.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{d\left[E_{F}u\right]}{dx}(x)=-e^{-2aw}a\left[\alpha e^{ax}-(1-\alpha)(e^{-ax})\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By the Intermediate Value Theorem, if 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\left(\frac{d\left[E_{F}u\right]}{dx}(0)\right)\cdot\left(\frac{d\left[E_{F}u\right]}{dx}(w)\right)<0,$
+\end_inset
+
+ then 
+\begin_inset Formula $\exists\ x^{*}\in(0,w):\frac{d\left[E_{F}u\right]}{dx}(x^{*})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since the index function is concave, then 
+\begin_inset Formula $\frac{d^{2}\left[E_{F}u\right]}{dx^{2}}(x)<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{d^{2}\left[E_{F}u\right]}{dx^{2}}(x)<0\implies\frac{d\left[E_{F}u\right]}{dx}(x)$
+\end_inset
+
+ is a decreasing function
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\left(\frac{d\left[E_{F}u\right]}{dx}(0)\right)>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(\frac{d\left[E_{F}u\right]}{dx}(w)\right)<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{d\left[E_{F}u\right]}{dx}(0)>0\iff-e^{-2aw}a\left[\alpha-(1-\alpha)\right]>0\iff\left[\alpha-(1-\alpha)\right]<0\iff2\alpha<1\iff\alpha<\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{d\left[E_{F}u\right]}{dx}(w)<0\iff-e^{-2aw}a\left[\alpha e^{aw}-(1-\alpha)(e^{-aw})\right]<0\iff\left[\alpha e^{aw}-(1-\alpha)(e^{-aw})\right]>0\iff\alpha>\frac{e^{-aw}}{(e^{aw}+e^{-aw})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, to obtain an interior solution for 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha\in\left(\frac{e^{-aw}}{(e^{aw}+e^{-aw})},\frac{1}{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(c) Under what conditions is 
+\begin_inset Formula $x^{*}<w$
+\end_inset
+
+? Interpret.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{d\left[E_{F}u\right]}{dx}(x)=-e^{-2aw}a\left[\alpha e^{ax}-(1-\alpha)(e^{-ax})\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By the Intermediate Value Theorem, 
+\end_layout
+
+\begin_layout Standard
+if 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\left(\frac{d\left[E_{F}u\right]}{dx}(0)\right)\cdot\left(\frac{d\left[E_{F}u\right]}{dx}(w)\right)<0,$
+\end_inset
+
+ then 
+\begin_inset Formula $\exists\ x^{*}\in(0,w):\frac{d\left[E_{F}u\right]}{dx}(x^{*})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since the index function is concave, then 
+\begin_inset Formula $\frac{d^{2}\left[E_{F}u\right]}{dx^{2}}(x)\leq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{d^{2}\left[E_{F}u\right]}{dx^{2}}(x)\leq0\implies\frac{d\left[E_{F}u\right]}{dx}(x)$
+\end_inset
+
+ is a decreasing function
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\left(\frac{d\left[E_{F}u\right]}{dx}(0)\right)>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(\frac{d\left[E_{F}u\right]}{dx}(w)\right)<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{d\left[E_{F}u\right]}{dx}(0)>0\iff-e^{-2aw}a\left[\alpha-(1-\alpha)\right]>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\left[\alpha-(1-\alpha)\right]<0\iff2\alpha<1\iff\alpha<\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{d\left[E_{F}u\right]}{dx}(w)<0\iff-e^{-2aw}a\left[\alpha e^{aw}-(1-\alpha)(e^{-aw})\right]<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\left[\alpha e^{aw}-(1-\alpha)(e^{-aw})\right]>0\iff\alpha>\frac{e^{-aw}}{(e^{aw}+e^{-aw})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, to obtain an interior solution for 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha\in\left(\frac{e^{-aw}}{(e^{aw}+e^{-aw})},\frac{1}{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(d) Assume that the conditions guaranteeing that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is interior are satisfied.
+ Calculate 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The FOC of 
+\begin_inset Formula $E_{F}u(x)$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $x$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{d\left[E_{F}u\right]}{dx}(x)=-e^{-2aw}a\left[\alpha e^{ax}-(1-\alpha)(e^{-ax})\right]=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff\left[\alpha e^{ax}-(1-\alpha)(e^{-ax})\right]=0\iff\alpha e^{ax}=(1-\alpha)(e^{-ax})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff e^{2ax}=\frac{(1-\alpha)}{\alpha}\iff2ax=\ln\left[\frac{(1-\alpha)}{\alpha}\right]\iff x^{*}=\frac{1}{2a}\ln\left[\frac{(1-\alpha)}{\alpha}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(e) How does 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ depend on 
+\begin_inset Formula $a$
+\end_inset
+
+? Interpret.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From problem 1, 
+\begin_inset Formula $r_{A}(x,u)=\frac{u^{\prime\prime}(x)}{u^{\prime}(x)}=a>0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Hence, as 
+\begin_inset Formula $a$
+\end_inset
+
+ increases, the agent becomes more risk averse.
+ 
+\end_layout
+
+\begin_layout Standard
+As a result, he will invest less of his wealth in the risky asset.
+\end_layout
+
+\end_body
+\end_document

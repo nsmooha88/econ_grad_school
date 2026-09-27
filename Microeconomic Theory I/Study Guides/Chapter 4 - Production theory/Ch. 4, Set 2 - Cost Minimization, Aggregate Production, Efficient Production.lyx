@@ -1,0 +1,1498 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 4: Production theory
+\end_layout
+
+\begin_layout Standard
+Need to complete: Proposition 53, Proposition 54, Proposition 55, Problem
+ 1
+\end_layout
+
+\begin_layout Section*
+4.5
+\begin_inset space \quad{}
+\end_inset
+
+Cost minimization
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the context of the Production function model, we can unambiguously refer
+ to inputs and hence keep track of a firm's costs.
+ In this section we characterize a firm's profit maximizaiton problem by
+ means of its cost minimization problem.
+ For simplicity, we will concentrate in the single-ouput case.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider a firm represented by a production function 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Imagine that the firm decides to produce 
+\begin_inset Formula $q$
+\end_inset
+
+ units of output and input prices are 
+\begin_inset Formula $w\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ The firm's Cost Minimization Problem for 
+\begin_inset Formula $q$
+\end_inset
+
+ at 
+\begin_inset Formula $w$
+\end_inset
+
+ is:
+\begin_inset Formula 
+\[
+{\displaystyle \min_{\{z\in\mathbb{R}_{+}^{L}:f(z)\geq q\}}}\ w\cdot z
+\]
+
+\end_inset
+
+
+\series bold
+Cost function
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(100).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $f$
+\end_inset
+
+ be a production function.
+ The 
+\series bold
+cost function associated with 
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\series default
+is defined by:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+c^{f}: & \mathbb{R}_{+}^{L} & \rightarrow & \mathbb{R}\\
+ & (w,q) & \mapsto & c^{f}(w,q)\equiv{\displaystyle \min_{\{z\in\mathbb{R}_{+}^{L}:f(z)\geq q\}}}\ w\cdot z
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Conditional factor demand correspondence
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(101).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $f$
+\end_inset
+
+ be a production function.
+ The 
+\series bold
+conditional factor demand correspondence associated with 
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\series default
+is defined by:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+z^{f}: & \mathbb{R}_{+}^{L} & \rightarrow & \mathbb{R}_{+}^{L-1}\\
+ & (w,q) & \mapsto & z^{f}(w,q)\equiv{\displaystyle \arg\min_{\{z\in\mathbb{R}_{+}^{L}:f(z)\geq q\}}}\ w\cdot z
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(53).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $f$
+\end_inset
+
+ be a production function, 
+\begin_inset Formula $w\in\mathbb{R}_{+}^{L-1}$
+\end_inset
+
+ and 
+\begin_inset Formula $q\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $\left|z^{f}(w,q)\right|=1$
+\end_inset
+
+ and 
+\begin_inset Formula $z^{f}(w,q)\gg0$
+\end_inset
+
+.
+ Then:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+For each pair 
+\begin_inset Formula $\{l,k\}\subseteq\{1,\ldots,L-1\}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{w_{l}}{w_{k}}=MRTS_{lk}(z^{f}(w,q))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is the Lagrange Multiplier associated with the Cost Minimization Problem
+ for the constraint 
+\begin_inset Formula $q-f(z)\leq0$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\frac{\partial c}{\partial q}(w,q)=\left|\lambda\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Will prove.
+ Check Mas-Colell, Chapter 5 (Cost Minimization).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The following are properties of a cost function.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(54).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $f$
+\end_inset
+
+ be a production function.
+ Then:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $c^{f}$
+\end_inset
+
+ is homogeneous of degree one in 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $q\in\mathbb{R}_{+}$
+\end_inset
+
+, 
+\begin_inset Formula $c^{f}(\cdot,q)$
+\end_inset
+
+ is a concave function, i.e., 
+\begin_inset Formula $c^{f}$
+\end_inset
+
+ is a concave function of 
+\begin_inset Formula $w$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If for each 
+\begin_inset Formula $q>0$
+\end_inset
+
+, 
+\begin_inset Formula $\{z\in\mathbb{R}_{+}^{L-1}:f(z)\geq q\}$
+\end_inset
+
+ are convex sets, then
+\begin_inset Formula 
+\[
+Y^{f}\equiv\left\{ (-z,q):z\geq0,\ \forall\ w\gg0,\ w\cdot z\geq c(w,q)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $z^{f}$
+\end_inset
+
+ is homogeneous of degree zero in 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If for each 
+\begin_inset Formula $q\in\mathbb{R}_{+}$
+\end_inset
+
+, 
+\begin_inset Formula $\{z\in\mathbb{R}_{+}^{L-1}:f(z)\geq q\}$
+\end_inset
+
+ is convex, then 
+\begin_inset Formula $z^{f}$
+\end_inset
+
+ is convex-valued.
+ If for each 
+\begin_inset Formula $q\in\mathbb{R}_{+}$
+\end_inset
+
+, 
+\begin_inset Formula $\{z\in\mathbb{R}_{+}^{L-1}:f(z)\geq q\}$
+\end_inset
+
+ is strictly convex, then 
+\begin_inset Formula $z^{f}$
+\end_inset
+
+ is single-valued.
+\end_layout
+
+\begin_layout Enumerate
+(Sheppard's Lemma) Let 
+\begin_inset Formula $w\in\mathbb{R}_{+}^{L-1}$
+\end_inset
+
+ and 
+\begin_inset Formula $q\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\left|z^{f}(w,q)\right|=1$
+\end_inset
+
+, then 
+\begin_inset Formula $c^{f}$
+\end_inset
+
+ is differentiable with respect to 
+\begin_inset Formula $w$
+\end_inset
+
+ at 
+\begin_inset Formula $(w,q)$
+\end_inset
+
+ and for each 
+\begin_inset Formula $l\in\{1,\ldots,L-1\}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\frac{\partial c^{f}}{\partial w_{l}}(w,q)=z_{l}^{f}(w,q)
+\]
+
+\end_inset
+
+or in matrix notation,
+\begin_inset Formula 
+\[
+\nabla_{w}c(w,q)=z(w,q)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $z^{f}$
+\end_inset
+
+ is a differentiable function in a neighborhood of 
+\begin_inset Formula $w\in\mathbb{R}_{+}^{L-1}$
+\end_inset
+
+, then
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $D_{w}z^{f}(w,q)w=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D_{w}z^{f}(w,q)=D_{w}^{2}c(w,q)$
+\end_inset
+
+ is symmetric and negative semi-definite.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ is homogeneous of degree one, i.e., 
+\begin_inset Formula $Y^{f}$
+\end_inset
+
+ satisfies CR, then 
+\begin_inset Formula $c^{f}$
+\end_inset
+
+ and 
+\begin_inset Formula $z^{f}$
+\end_inset
+
+ are homogenous of degree one in 
+\begin_inset Formula $q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ is concave, then for each 
+\begin_inset Formula $w\in\mathbb{R}_{+}^{L-1}$
+\end_inset
+
+, 
+\begin_inset Formula $c^{f}(w,\cdot)$
+\end_inset
+
+ is a convex function, i.e., 
+\begin_inset Formula $c^{f}$
+\end_inset
+
+ is a convex function of 
+\begin_inset Formula $q$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Will prove.
+ Check Mas-Colell Proposition 5.C.2
+\end_layout
+
+\begin_layout Subsection*
+4.5.1
+\begin_inset space \quad{}
+\end_inset
+
+Single-input and single-output model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this section, we study the single-input and single-output model.
+ The simplicity of this environment allows us to graphically characterize
+ a firm's cost minimization and profit maximization.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider a firm represented by the production function 
+\begin_inset Formula $f:\mathbb{R}_{+}\rightarrow\mathbb{R}_{+}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p\in\mathbb{R}_{+}$
+\end_inset
+
+ be the output price and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+ be the input price.
+ In order to simplify notation, we consider 
+\begin_inset Formula $w$
+\end_inset
+
+ to be fixed and denoted 
+\begin_inset Formula $c^{f}(w,q)$
+\end_inset
+
+ by 
+\begin_inset Formula $c(q)$
+\end_inset
+
+.
+ Likewise, we denote 
+\begin_inset Formula $y^{f}(w,p)$
+\end_inset
+
+ by 
+\begin_inset Formula $Q(p)$
+\end_inset
+
+.
+ The PMP is then
+\begin_inset Formula 
+\[
+{\displaystyle \max_{q\geq0}}\ pq-c(q)
+\]
+
+\end_inset
+
+Assume that this problem has a unique solution 
+\begin_inset Formula $Q(p)$
+\end_inset
+
+.
+ If this solution is interior and the cost function is differentiable, then
+\begin_inset Formula 
+\[
+p=c^{\prime}(Q(p))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(102).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $q\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Then
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $AC(q)\equiv\frac{c(q)}{q}$
+\end_inset
+
+ is the average cost at 
+\begin_inset Formula $q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $MC(c)\equiv c^{\prime}(q)$
+\end_inset
+
+ is the marginal cost at 
+\begin_inset Formula $q$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+4.5.2
+\begin_inset space \quad{}
+\end_inset
+
+Long-run vs.
+ short-run
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose that a firm is represented by a production set 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ If there is free entry of firms to this market, this firm can be replciated
+ as many times as possible.
+ Thus, in the 
+\begin_inset Quotes eld
+\end_inset
+
+long-run,
+\begin_inset Quotes erd
+\end_inset
+
+ the aggregate technical restrictions are given by the set
+\begin_inset Formula 
+\[
+AY\equiv\{y_{1}+\cdots+y_{n}:n\in\mathbb{N},\ \forall\ i=1,\ldots,n,\ y_{i}\in Y\}
+\]
+
+\end_inset
+
+This is the aggregate produciton set, which describes the feasible production
+ plans for an industry, as a whole.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(55).
+
+\series default
+ 
+\emph on
+If 
+\begin_inset Formula $Y$
+\end_inset
+
+ satisfies NI returns to scale, then 
+\begin_inset Formula $AY$
+\end_inset
+
+ satisfies CR to scale.
+\end_layout
+
+\begin_layout Proof
+Will prove.
+ Check Problem 2, Section 4.4 for a basic outline of this proof.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Under additional technical conditions, one can guarantee that if 
+\begin_inset Formula $Y$
+\end_inset
+
+ is represented by a production functions that is homogeneous of degree
+ one, then the supply correspondence is flat.
+\end_layout
+
+\begin_layout Subsubsection*
+Multiple input case with temporarily fixed inputs
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In situations in which there are multiple inputs, some of these may be temporari
+ly fixed.
+ Economists refer to these situations as 
+\begin_inset Quotes eld
+\end_inset
+
+short-run.
+\begin_inset Quotes erd
+\end_inset
+
+ Consistently, they refer to situations in which no input is fixed in the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+long-run.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For instance, suppose that there are two inputs: labor, denoted by 
+\begin_inset Formula $L$
+\end_inset
+
+, and capital, denoted by 
+\begin_inset Formula $K$
+\end_inset
+
+.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+long-run
+\begin_inset Quotes erd
+\end_inset
+
+ production function is simply the production function as we have defined
+ it in our production model
+\begin_inset Formula 
+\[
+(L,K)\in\mathbb{R}_{+}^{2}\mapsto f(L,K)\in\mathbb{R}_{+}
+\]
+
+\end_inset
+
+For a fixed amount of capital, say 
+\begin_inset Formula $\bar{K}$
+\end_inset
+
+, the short-run production function is 
+\begin_inset Formula $f_{\bar{K}}$
+\end_inset
+
+ defined by, for each 
+\begin_inset Formula $L$
+\end_inset
+
+, 
+\begin_inset Formula $f_{\bar{K}}(L)\equiv f(L,\bar{K})$
+\end_inset
+
+.
+ The cost function associated with 
+\begin_inset Formula $f_{\bar{K}}$
+\end_inset
+
+ is the short-run cost function at 
+\begin_inset Formula $\bar{K}$
+\end_inset
+
+.
+ One can easily graphically characterize the long-run cost and average cost
+ functions, as the lower envelope of short-run cost and short-run average
+ cost functions.
+ Clearly, under this interpretation, long-run supply correspondences are
+ not necessarily flat.
+\end_layout
+
+\begin_layout Section*
+4.6
+\begin_inset space \quad{}
+\end_inset
+
+Aggregate production
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\{Y_{1},\ldots,Y_{J}\}$
+\end_inset
+
+ be a family of production sts.
+ The aggregate production set associated with 
+\begin_inset Formula $\{Y_{1},\ldots,Y_{J}\}$
+\end_inset
+
+ is the set
+\begin_inset Formula 
+\[
+Y_{AG}\equiv Y_{1}+\cdots+Y_{J}\equiv\left\{ y_{1}+\cdots+y_{J}:y_{1}\in y_{1},\ldots,y_{J}\in Y_{J}\right\} 
+\]
+
+\end_inset
+
+The aggregate supply correspondence associated with 
+\begin_inset Formula $\{Y_{1},\ldots,Y_{J}\}$
+\end_inset
+
+ is the correspondence that associated with each 
+\begin_inset Formula $p\in\mathbb{R}^{L}$
+\end_inset
+
+, the set
+\begin_inset Formula 
+\[
+y_{AG}(p)\equiv y^{Y_{1}}(p)+\cdots+y^{Y_{J}}(p)\equiv\left\{ y_{1}+\cdots+y_{J}:y_{1}\in y^{Y_{1}},\ldots,y_{J}\in y^{Y_{J}}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(56).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\left\{ Y_{1},\ldots,Y_{J}\right\} $
+\end_inset
+
+ be a family of production sets.
+ Then, for each 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $y^{Y_{AG}}(p)=y_{AG}(p)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\Pi^{Y_{AG}}(p)=\Pi^{Y_{1}}(p)+\cdots+\Pi^{Y_{J}}(p)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula $y\in y_{AG}(p)$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $y=y_{1}+\cdots+y_{J}$
+\end_inset
+
+ where 
+\begin_inset Formula $y_{1}\in y^{Y_{1}},\ldots,y_{J}\in y^{Y_{J}}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $y\in Y_{AG}$
+\end_inset
+
+ and consequently, 
+\begin_inset Formula $p\cdot y\leq\Pi^{Y_{AG}}(p)$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\[
+p\cdot y=\Pi^{Y_{1}}(p)+\cdots+\Pi^{Y_{J}}(p)\leq\Pi^{Y_{AG}}(p)
+\]
+
+\end_inset
+
+We claim that 
+\begin_inset Formula $p\cdot y\geq\Pi^{Y_{AG}}(p)$
+\end_inset
+
+.
+ Suppose by contradiction that 
+\begin_inset Formula $p\cdot y<\Pi^{Y_{AG}}(p)$
+\end_inset
+
+.
+ Then, there is 
+\begin_inset Formula $y^{\prime}\equiv y_{1}^{\prime}+\cdots+y_{J}^{\prime}\in Y_{AG}$
+\end_inset
+
+ such that 
+\begin_inset Formula $p\cdot y<p\cdot y^{\prime}$
+\end_inset
+
+.
+ Then, there is 
+\begin_inset Formula $j\in\{1,\ldots,J\}$
+\end_inset
+
+ such that 
+\begin_inset Formula $p\cdot y_{j}^{\prime}>p\cdot y_{j}$
+\end_inset
+
+ for otherwise 
+\begin_inset Formula $p\cdot y_{1}^{\prime}+\cdots+p\cdots y_{J}^{\prime}\leq p\cdot y_{1}+\cdots+p\cdot y_{J}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $y_{j}\notin y^{Y_{j}}(p)$
+\end_inset
+
+.
+ This is a contradiction.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Thus, 
+\begin_inset Formula $y\in y^{Y_{AG}}(p)$
+\end_inset
+
+ and 
+\begin_inset Formula $p\cdot y=\Pi^{Y_{AG}}(p)=\Pi^{Y_{1}}(p)+\cdots+\Pi^{Y_{J}}(p)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Now, let 
+\begin_inset Formula $y\in y^{Y_{AG}}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $p\cdot y=\Pi^{Y_{AG}}$
+\end_inset
+
+ and there are 
+\begin_inset Formula $y_{1}\in Y_{1},\ldots,y_{J}\in Y_{J}$
+\end_inset
+
+ such that 
+\begin_inset Formula $y=y_{1}+\cdots+y_{J}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $j\in\{1,\ldots,J\}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $p\cdot y_{j}\leq\Pi^{Y_{j}}(p)$
+\end_inset
+
+.
+ We claim that 
+\begin_inset Formula $y_{j}\in y^{Y_{j}}(p)$
+\end_inset
+
+.
+ Suppose for contradiction that for some 
+\begin_inset Formula $j^{*}\in\{1,\ldots,J\}$
+\end_inset
+
+, 
+\begin_inset Formula $p\cdot y_{j^{*}}<\Pi^{Y_{j^{*}}}(p)$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $p\cdot y_{1}+\cdots+p\cdot y_{J}<\Pi^{Y_{1}}(p)+\cdots+\Pi^{Y_{J}}(p)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\Pi^{Y_{AG}}<\Pi^{Y_{1}}(p)+\cdots+\Pi^{Y_{J}}(p)$
+\end_inset
+
+.
+ This is a contradiction.
+\end_layout
+
+\begin_layout Section*
+4.7
+\begin_inset space \quad{}
+\end_inset
+
+Efficient production
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(103).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $Y\subseteq\mathbb{R}^{L}$
+\end_inset
+
+ be a production set.
+ A feasible vector 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+ is efficient if there is no 
+\begin_inset Formula $y^{\prime}\in Y$
+\end_inset
+
+ such that 
+\begin_inset Formula $y^{\prime}\gneq y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(57).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $Y\subseteq\mathbb{R}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ Then,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+ is profit maximizing at some 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+, then 
+\begin_inset Formula $y$
+\end_inset
+
+ is efficient.
+\end_layout
+
+\begin_layout Enumerate
+Suppose that 
+\begin_inset Formula $Y$
+\end_inset
+
+ is convex.
+ If 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+ is efficient for 
+\begin_inset Formula $Y$
+\end_inset
+
+, then it is profit maxizing for some 
+\begin_inset Formula $p\geq0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula $Y\subseteq\mathbb{R}^{L}$
+\end_inset
+
+ be a production set and 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Assume 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+ is profit maximizing at some 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+.
+ We want to prove that 
+\begin_inset Formula $y$
+\end_inset
+
+ is efficient.
+ Suppose for contradiction that 
+\begin_inset Formula $y$
+\end_inset
+
+ is not efficient.
+ Then, there is 
+\begin_inset Formula $y^{\prime}\in Y$
+\end_inset
+
+ such that 
+\begin_inset Formula $y^{\prime}\neq y$
+\end_inset
+
+ and 
+\begin_inset Formula $y^{\prime}\geq y$
+\end_inset
+
+, Because 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+, this implies that 
+\begin_inset Formula $p\cdot y^{\prime'}>p\cdot y$
+\end_inset
+
+, contradicting the assumption that 
+\begin_inset Formula $y$
+\end_inset
+
+ is profit maximizing.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $Y\subseteq\mathbb{R}^{L}$
+\end_inset
+
+ be a non-empty convex production set that satisfies free disposal.
+ Let 
+\begin_inset Formula $y$
+\end_inset
+
+ be efficient at 
+\begin_inset Formula $Y$
+\end_inset
+
+, i.e., there is no 
+\begin_inset Formula $y^{\prime}\in Y$
+\end_inset
+
+ such that 
+\begin_inset Formula $y^{\prime}\gneq y$
+\end_inset
+
+ We prove that there is 
+\begin_inset Formula $p\geq0$
+\end_inset
+
+ such that 
+\begin_inset Formula $y$
+\end_inset
+
+ is profit maximizing at 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+First, we show that 
+\begin_inset Formula $y$
+\end_inset
+
+ is a boundary point of 
+\begin_inset Formula $Y$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $y\in\overline{Y}\cap\overline{Y^{c}}$
+\end_inset
+
+.
+ Suppose for contradiction that 
+\begin_inset Formula $y\notin\overline{Y}\cap\overline{Y^{c}}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $y\in\mbox{Int}(Y)$
+\end_inset
+
+, which by definition is an open set.
+ So, 
+\begin_inset Formula $\exists\ \epsilon>0$
+\end_inset
+
+ such that 
+\begin_inset Formula $B_{\epsilon}(y)\subseteq\mbox{Int}(Y)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\tau\in\mathbb{R}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ l\in\{1,\ldots,L\}:\tau_{l}=1$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $y^{\prime}=y+\left(\nicefrac{\epsilon}{2}\right)\tau$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $y^{\prime}\in B_{\epsilon}(y)$
+\end_inset
+
+, and thus, 
+\begin_inset Formula $y^{\prime}\in Y$
+\end_inset
+
+.
+ However, 
+\begin_inset Formula $y^{\prime}\geq y$
+\end_inset
+
+, which contradicts the fact that 
+\begin_inset Formula $y$
+\end_inset
+
+ is efficient in 
+\begin_inset Formula $Y$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $y\in\overline{Y}\cap\overline{Y^{c}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Now, by the Basic Supporting Hyperplane Theorem, 
+\begin_inset Formula $\exists\ p\in\mathbb{R}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $p\neq0$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ y^{\prime}\in Y$
+\end_inset
+
+, 
+\begin_inset Formula $p\cdot y^{\prime}\leq p\cdot y$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $\tilde{y}=y-\epsilon v_{l}$
+\end_inset
+
+ for some 
+\begin_inset Formula $l$
+\end_inset
+
+, where 
+\begin_inset Formula $v_{l}\in\mathbb{R}^{L}$
+\end_inset
+
+ that has 1 in the 
+\begin_inset Formula $l$
+\end_inset
+
+-th component and zeros for 
+\begin_inset Formula $k\neq l$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $y\geq\tilde{y}$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ satisfies free disposal, then 
+\begin_inset Formula $\tilde{y}\in Y$
+\end_inset
+
+.
+ As a result, 
+\begin_inset Formula $p\cdot y\geq p\cdot\tilde{y}$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $p\cdot(y-\tilde{y})\geq0$
+\end_inset
+
+.
+ So, we have 
+\begin_inset Formula $p\cdot v_{l}\geq0$
+\end_inset
+
+, and thus, 
+\begin_inset Formula $p_{l}\geq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Therefore, there is 
+\begin_inset Formula $p\geq0$
+\end_inset
+
+ such that 
+\begin_inset Formula $y$
+\end_inset
+
+ is profit maximizing at 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+4.8
+\begin_inset space \quad{}
+\end_inset
+
+Problems
+\end_layout
+
+\begin_layout Problem
+Prove that the converse of Statement A in Proposition 57 is not necessarily
+ true.
+ Prove that Statement 2 in the same proposition cannot be strengthened to
+ require 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Will prove.
+ The second part of this proof is given by the solution to Problem 9, Section
+ 4.4.
+\end_layout
+
+\end_body
+\end_document

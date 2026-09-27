@@ -1,0 +1,1929 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Microeconomic Theory I: Homework 2
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 2.3.4, Problem 2
+\end_layout
+
+\begin_layout Standard
+Assume that 
+\begin_inset Formula $X$
+\end_inset
+
+ is finite and let 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ For each 
+\begin_inset Formula $B\subseteq X$
+\end_inset
+
+, let 
+\begin_inset Formula $C^{\succ}(B)$
+\end_inset
+
+ be the set
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $C^{\succ}(B)\equiv\{x\in B:\nexists\ \ensuremath{y\in B}\ \ensuremath{\mbox{s.t.}}\ \ensuremath{y\succ x\}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Prove that for each binary relation 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ and each family of non-empty subsets of 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+, 
+\begin_inset Formula $(\mathcal{B},C^{\succ})$
+\end_inset
+
+ satisfies Sen's property 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Given:
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X$
+\end_inset
+
+ is finite
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is a binary relation on 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall\ B\subseteq X,\ C^{\succ}(B)\equiv\{x\in B:\mbox{there is no \ensuremath{y\in B,}\ \ensuremath{\mbox{s.t.}}\ \ensuremath{y\succ x\}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall\ \succeq,\ \forall\ \mathcal{B}\subseteq2^{X}\backslash\{\emptyset\}:(\mathcal{B},C^{\succ})$
+\end_inset
+
+ satisfies Sen's property 
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take a binary relation 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ on the set 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Take a family of non-empty subsets of 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{B}\subseteq2^{X}\backslash\{\emptyset\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show:
+\emph default
+ 
+\series default
+
+\begin_inset Formula $\forall\ \{A,B\}\subseteq\mathcal{B}\ \mbox{such that}\ A\subseteq B,\forall\ x\in C^{\succ}(B)\cap A:x\in C^{\succ}(A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\{A,B\}\subseteq\mathcal{B}$
+\end_inset
+
+ such that 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $x\in C^{\succ}(B)\cap A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies x\in C^{\succ}(B)\ \wedge\ x\in A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\nexists\ y\in B:y\succ x\ \wedge\ x\in A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+, 
+\begin_inset Formula $\nexists\ y\in A:y\succ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies x\in C^{\succ}(A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(\mathcal{B},C^{\succ})$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ satisfies Sen's property 
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 2.3.4, Problem 3
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ be a binary relation on a set 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Prove that if 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete and transitive, then for each 
+\begin_inset Formula $B\subseteq X$
+\end_inset
+
+, 
+\begin_inset Formula $B\neq\emptyset$
+\end_inset
+
+, 
+\begin_inset Formula $C^{\succeq}(B)=C^{\succ}(B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Given:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is a binary relation on a set 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete and transitive
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall\ B\subseteq X,B\neq\emptyset:C^{\succeq}(B)=C^{\succ}(B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $B\subseteq X$
+\end_inset
+
+ such that 
+\begin_inset Formula $B\neq\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.
+ 
+\begin_inset Formula $(\subseteq)$
+\end_inset
+
+ 
+\series default
+Take 
+\begin_inset Formula $x\in C^{\succeq}(B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\forall\ y\in B:x\succeq y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show:
+\emph default
+ 
+\series default
+
+\begin_inset Formula $\nexists\ y\in B:y\succ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose for contradiction 
+\begin_inset Formula $\exists\ y\in B:y\succ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\exists\ y\in B:(y\succeq x)\ \wedge\ \neg(x\succeq y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But this contradicts 
+\begin_inset Formula $\forall\ y\in B:x\succeq y\ (\rightarrow\leftarrow)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\nexists\ y\in B:y\succ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $x\in C^{\succ}(B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+2.
+ 
+\begin_inset Formula $(\supseteq)$
+\end_inset
+
+ 
+\series default
+Take 
+\begin_inset Formula $x\in C^{\succ}(B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\nexists\ y\in B:y\succ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\nexists\ y\in B:(y\succeq x)\ \wedge\ \neg(x\succeq y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\forall\ y\in B:\neg(y\succeq x)\ \vee\ (x\succeq y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete, then 
+\begin_inset Formula $\neg(y\succeq x)\implies(x\succeq y)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Also, 
+\begin_inset Formula $P\ \vee\ P\equiv P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\forall\ y\in B:(x\succeq y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $x\in C^{\succeq}(B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $C^{\succeq}(B)=C^{\succ}(B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 2.3.4, Problem 4
+\end_layout
+
+\begin_layout Standard
+A binary relation 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- acyclic}$
+\end_inset
+
+ if there is no 
+\begin_inset Formula $\{x_{1},\ldots,x_{n}\}\subseteq X$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $i=1,\ldots,n-1$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}\succ x_{i+1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{1}=x_{n}$
+\end_inset
+
+.
+ Prove that if 
+\begin_inset Formula $X$
+\end_inset
+
+ is finite, then 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- acyclic}$
+\end_inset
+
+ if and only if for each 
+\begin_inset Formula $B\subseteq X$
+\end_inset
+
+, 
+\begin_inset Formula $B\neq\emptyset$
+\end_inset
+
+, 
+\begin_inset Formula $C^{\succ}(B)\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Given:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is a binary relation on a set 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The set 
+\begin_inset Formula $X$
+\end_inset
+
+ is finite
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- acyclic}\iff\forall\ \emptyset\ne B\subseteq X:C^{\succ}(B)\neq\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.
+ 
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ 
+\series default
+For this direction, we will be proving the contrapositive, i.e.
+ 
+\begin_inset Formula $P\implies Q\ \equiv\ \neg Q\implies\neg P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $\exists\ \emptyset\ne B\subseteq X$
+\end_inset
+
+ 
+\begin_inset Formula $:C^{\succ}(B)=\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $X$
+\end_inset
+
+ is finite, then 
+\begin_inset Formula $B$
+\end_inset
+
+ is also finite.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C^{\succ}(B)=\emptyset\implies\forall\ x\in B,\exists\ y\in B:y\succ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show:
+\series default
+\emph default
+ 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- cyclic}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We will prove this by induction
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|B|=1\implies B=\{x\}\ (\rightarrow\leftarrow)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Base case): 
+\begin_inset Formula $|B|=2\implies B=\{x_{1},x_{2}\}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $C^{\succ}(B)=\emptyset$
+\end_inset
+
+, then 
+\begin_inset Formula $(x_{1}\succ x_{2})\ \wedge\ (x_{2}\succ x_{1})\implies\succ\mbox{- cyclic}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, suppose 
+\begin_inset Formula $\forall\ k<l,\ |B|=k\implies\succ\mbox{- cyclic}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $|B|=l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $C^{\succ}(B)=\emptyset$
+\end_inset
+
+, then 
+\begin_inset Formula $\forall\ x_{i}\in B,\ \exists\ x_{j}:x_{j}\succ x_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $B$
+\end_inset
+
+ is finite, we can enumerate its elements in this way, 
+\end_layout
+
+\begin_layout Standard
+i.e., 
+\begin_inset Formula $x_{i}\in B,\ i=1,\ldots,l:x_{1}\succ x_{2}\succ\ldots\succ x_{l}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+However, from our initial assumption, this enumeration must continue.
+\end_layout
+
+\begin_layout Standard
+So, since 
+\begin_inset Formula $B$
+\end_inset
+
+ is finite, there must be 
+\begin_inset Formula $x_{m}=x_{n}$
+\end_inset
+
+ with 
+\begin_inset Formula $m>n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now, we have a subsequence where 
+\begin_inset Formula $x_{m}\succ\ldots\succ x_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{m}=x_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- cyclic}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+2.
+
+\series default
+ 
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ For this direction, we will be proving the contrapositive, i.e.
+ 
+\begin_inset Formula $Q\implies P\ \equiv\ \neg P\implies\neg Q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- cyclic}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show: 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\exists\ \emptyset\ne B\subseteq X:C^{\succ}(B)=\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $B=\{x_{1},\ldots,x_{n}\}\subseteq X\ \mbox{s.t.}\ \forall\ i=1,\ldots,n-1,\ x_{i}\succ x_{i+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies$
+\end_inset
+
+
+\begin_inset Formula $x_{1}=x_{n}$
+\end_inset
+
+ since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- cyclic}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\forall\ x\in B,\exists\ y\in B:y\succ x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $C^{\succ}(B)=\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- acyclic}\iff\forall\ \emptyset\ne B\subseteq X:C^{\succ}(B)\neq\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 2.3.4, Problem 5
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ be a binary relation on a set 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Prove that if 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete and transitive and 
+\begin_inset Formula $B\neq\emptyset$
+\end_inset
+
+ is finite, then 
+\begin_inset Formula $C^{\succeq}(B)$
+\end_inset
+
+ is non-empty.
+ Hint: does rationality of 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ imply 
+\begin_inset Formula $\succ\mbox{- acyclicity}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Given:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is a binary relation on a set 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete and transitive
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B\subseteq X,\ B\ne\emptyset,\ B$
+\end_inset
+
+ is finite
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C^{\succeq}(B)\ne\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Claim: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete and transitive 
+\begin_inset Formula $\implies\succeq\mbox{is}\succ\mbox{- acyclic}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Proof:
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(P\ \wedge\ Q)\implies R$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\equiv\ \left[\neg R\implies\neg P\ \vee\ \neg Q\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\equiv\ \left[\neg R\implies\neg(P\ \wedge\ Q)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\equiv\ \left[\neg(\neg R)\ \vee\ (\neg P\ \vee\ \neg Q)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\equiv\ \left[(\neg(\neg R)\ \vee\ \neg P)\ \vee\ \neg Q)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\equiv\ \left[\neg(\neg R\ \wedge\ P)\ \vee\ \neg Q\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\equiv\ \left[\neg R\ \wedge\ P\implies\neg Q\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, 
+\begin_inset Formula $\left[\succeq\mbox{is transitive}\implies\succ\mbox{is transitive}\right]\equiv\left[\succ\mbox{is not transitive}\implies\succeq\mbox{is not transitive}\right]$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete and 
+\begin_inset Formula $\succ\mbox{- cyclic}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show:
+\series default
+\emph default
+ 
+\begin_inset Formula $\succ$
+\end_inset
+
+ is not transitive
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $B$
+\end_inset
+
+ is finite, we can enumerate its elements
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete, we can take a sequence in 
+\begin_inset Formula $B$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $x_{1}\succ\ldots\succ x_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies x_{1}=x_{n}$
+\end_inset
+
+ since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is 
+\begin_inset Formula $\succ\mbox{- cyclic}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $x_{1}\succ\ldots\succ x_{n-1}\succ x_{n}=x_{1}\succ\ldots\succ x_{n-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\succ$
+\end_inset
+
+ is not transitive
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\succeq$
+\end_inset
+
+ is not transitive
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is complete and 
+\begin_inset Formula $\succ\mbox{- cyclic}\implies\succeq\mbox{is not transitive}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+which is equivalent to 
+\begin_inset Formula $\succeq\mbox{is complete and transitive}\implies\succeq\mbox{is}\succ\mbox{- acyclic}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+End Claim
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $B$
+\end_inset
+
+ is finite, then 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is a 
+\begin_inset Formula $\succ\mbox{- acyclic}\iff C^{\succ}(B)\neq\emptyset$
+\end_inset
+
+ by problem 4
+\end_layout
+
+\begin_layout Standard
+Also, since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is a rational preference relation, then 
+\begin_inset Formula $C^{\succeq}(B)=C^{\succ}(B)$
+\end_inset
+
+ by problem 3
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $C^{\succeq}(B)\ne\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 2.3.4, Problem 7
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $L\in\mathbb{N}$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ The competitive (Walrasian) budget set at prices 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and wealth 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+ is the set 
+\begin_inset Formula $B(p,w)\equiv\{x\in X:p\cdot x\le w\}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\mathcal{B}^{W}\equiv\{B(p,w):p\in\mathbb{R}_{+}^{L},w\in\mathbb{R}_{+}\}$
+\end_inset
+
+ be the faimly of competitive budget sets 
+\begin_inset Formula $(\mathcal{B}^{W}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+is the family of menus that an agent may face in a competitive environment
+\begin_inset Formula $)$
+\end_inset
+
+.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ Let 
+\begin_inset Formula $C:\mathcal{B}^{W}\rightrightarrows X$
+\end_inset
+
+ be a correspondence such that for each 
+\begin_inset Formula $B\in\mathcal{B}^{W}$
+\end_inset
+
+, 
+\begin_inset Formula $\emptyset\ne C(B)\subseteq B$
+\end_inset
+
+.
+ Correspondence 
+\begin_inset Formula $C$
+\end_inset
+
+ collects all the information of an agents' market behavior.
+ Does the family of sets 
+\begin_inset Formula $\mathcal{B}^{W}$
+\end_inset
+
+ satisfy the pair-and-triple condition?
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Definition:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A family of non-empty sets of 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+, satisfies the pair-and-triple condition if it contains, at least, all
+ subsets of two and three elements of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Claim:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{B}^{W}$
+\end_inset
+
+ does not satisfy the pair-and-triple condition
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose for contradiction that 
+\begin_inset Formula $\mathcal{B}^{W}$
+\end_inset
+
+ satisfies the pair-and-triple condition
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\forall\ \{x_{1},x_{2}\}\subseteq X\ \wedge\ \forall\ \{x_{1},x_{2},x_{3}\}\subseteq X:\left\{ \{x_{1},x_{2}\},\{x_{1},x_{2},x_{3}\}\right\} \subseteq\mathcal{B}^{W}\equiv\{B(p,w):p\in\mathbb{R}_{+}^{L},w\in\mathbb{R}_{+}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Without loss of generality, take 
+\begin_inset Formula $\{x_{1},x_{2}\}\in\mathcal{B}^{W}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies B(p,w)=\{x_{1},x_{2}\}$
+\end_inset
+
+ for some 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, 
+\begin_inset Formula $B(p,w)\equiv\{x\in X:p\cdot x\le w\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $p\cdot x_{1}\leq w$
+\end_inset
+
+ and 
+\begin_inset Formula $p\cdot x_{2}\leq w$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $z=\frac{1}{2}(x_{1}+x_{2})\in X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $p\cdot x_{1}\leq w$
+\end_inset
+
+ and 
+\begin_inset Formula $p\cdot x_{2}\leq w$
+\end_inset
+
+, then 
+\begin_inset Formula $p\cdot z\leq w$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies z\in B(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But this contradicts 
+\begin_inset Formula $B(p,w)=\{x_{1},x_{2}\}$
+\end_inset
+
+ for some 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\mathcal{B}^{W}$
+\end_inset
+
+ does not satisfy the pair-and-triple condition
+\end_layout
+
+\end_body
+\end_document

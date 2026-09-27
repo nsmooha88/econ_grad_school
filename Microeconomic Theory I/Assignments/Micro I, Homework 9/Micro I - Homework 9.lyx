@@ -1,0 +1,1210 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Microeconomic Theory I: Homework 9
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Part*
+1.
+ Problems 7, 8 in Section 6.2.1
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 6.2.1, Problem 7
+\end_layout
+
+\begin_layout Standard
+Prove Step 4 in the proof of Theorem 21
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Step 4: 
+\series default
+Let 
+\begin_inset Formula $u:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ be the index defined by: 
+\begin_inset Formula $\forall\ z\in Z,\ u(z)\equiv U(\delta_{z})$
+\end_inset
+
+ where 
+\begin_inset Formula $\delta_{z}$
+\end_inset
+
+ is the lottery that assigns probability one to outcome 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\forall\ \pi\in\Delta(Z)$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $U(\pi)={\displaystyle \sum_{z\in Z}u(z)\pi(z)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider the set 
+\begin_inset Formula $\left\{ z_{i}\in Z:\pi(z_{i})>0\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $m\equiv|\left\{ z_{i}\in Z:\pi(z_{i})>0\right\} |$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We will now prove the above step by induction.
+\end_layout
+
+\begin_layout Standard
+(i) Base case
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $m=1$
+\end_inset
+
+, then 
+\begin_inset Formula $\pi=\delta_{z^{*}}$
+\end_inset
+
+ for some 
+\begin_inset Formula $z^{*}\in Z$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $U(\pi)=U(\delta_{z^{*}})={\displaystyle \sum\pi(z^{*})u(z^{*})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $m=2$
+\end_inset
+
+, then 
+\begin_inset Formula $\pi=\alpha\delta z_{i}+(1-\alpha)\delta z_{j}$
+\end_inset
+
+ for some 
+\begin_inset Formula $z_{i},z_{j}\in Z$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Without loss of generality, let 
+\begin_inset Formula $\alpha=\pi(z_{i})$
+\end_inset
+
+, and 
+\begin_inset Formula $(1-\alpha)=\pi(z_{j})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $U(\pi)=U\left(\alpha\delta_{z_{i}}+(1-\alpha)\delta_{z_{j}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $=\alpha U(\delta_{z_{i}})+(1-\alpha)U(\delta_{z_{J}})$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+by the result of Step 3
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $=\alpha u(z_{i})+(1-\alpha)u(z_{j})$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+by the definition of 
+\begin_inset Formula $u(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $={\displaystyle \sum_{z\in Z}\pi(z)u(z)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(ii) Assume 
+\begin_inset Formula $\forall\ \pi\in\Delta(Z),U(\pi)={\displaystyle \sum_{z\in Z}u(z)\pi(z)}$
+\end_inset
+
+ when 
+\begin_inset Formula $m=n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show
+\emph default
+: 
+\series default
+
+\begin_inset Formula $\forall\ \pi\in\Delta(Z),U(\pi)={\displaystyle \sum_{z\in Z}u(z)\pi(z)}$
+\end_inset
+
+ when 
+\begin_inset Formula $m=n+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi=\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{n+1}\delta_{z_{n+1}}$
+\end_inset
+
+ where 
+\begin_inset Formula $\alpha_{i}=\pi(z_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $=\alpha_{1}\delta_{z_{1}}+(1-\alpha_{1})\left[\frac{\alpha_{2}}{1-\alpha_{1}}\delta_{z_{2}}+\ldots+\frac{\alpha_{n+1}}{1-\alpha_{1}}\delta_{z_{n+1}}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $U(\pi)=\alpha_{1}U(\delta_{z_{1}})+(1-\alpha_{1})U\left[\frac{\alpha_{2}}{1-\alpha_{1}}\delta_{z_{2}}+\ldots+\frac{\alpha_{n+1}}{1-\alpha_{1}}\delta_{z_{n+1}}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $=\alpha_{1}U(\delta_{z_{1}})+(1-\alpha_{1})\left[\frac{\alpha_{2}}{1-\alpha_{1}}U\left(\delta_{z_{2}}\right)+\ldots+\frac{\alpha_{n+1}}{1-\alpha_{1}}U\left(\delta_{z_{n+1}}\right)\right]$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+by the result of Step 3
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $=\alpha u(z_{1})+{\displaystyle \ldots+\pi(z_{n+1})u(z_{n+1})}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+by the definitions of 
+\begin_inset Formula $u(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $=\alpha u(z_{1})+{\displaystyle \sum_{i=2}^{n+1}\pi(z_{i})u(z_{i})}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+by the inductive hypothesis
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $={\displaystyle \sum_{z\in Z}\pi(z)u(z)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 6.2.1, Problem 8
+\end_layout
+
+\begin_layout Standard
+Prove Step 5 in the proof of Theorem 21.
+ That is, 
+\begin_inset Formula $u$
+\end_inset
+
+ constructed in the proof is unique up to positive affine linear transformation,
+ i.e., if there is another function 
+\begin_inset Formula $v:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the function 
+\begin_inset Formula $E_{\pi}v$
+\end_inset
+
+, then there are real numbers 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ such that 
+\begin_inset Formula $a>0$
+\end_inset
+
+ and for each 
+\begin_inset Formula $z\in Z,u(z)=av(z)+b$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $E_{\pi}u$
+\end_inset
+
+ represent 
+\begin_inset Formula $\succsim$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $\exists\ v:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the function 
+\begin_inset Formula $E_{\pi}v$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show
+\emph default
+: 
+\series default
+
+\begin_inset Formula $\exists\ a\in\mathbb{R}_{++},\exists\ b\in\mathbb{R},\forall\ z\in Z:u(z)=av(z)+b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $E_{\pi}v$
+\end_inset
+
+ represents the preferences 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, define 
+\begin_inset Formula $\lambda_{\pi}\in[0,1]$
+\end_inset
+
+ by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E_{\pi}v=\lambda_{\pi}E_{\overline{\pi}}v+(1-\lambda_{\pi})E_{\underline{\pi}}v$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\lambda_{\pi}=\frac{E_{\pi}v-E_{\underline{\pi}}v}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(8.1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, from step three of the proof, 
+\begin_inset Formula $\lambda_{\pi}E_{\overline{\pi}}v+(1-\lambda_{\pi})E_{\underline{\pi}}v=E_{\lambda_{\pi}\overline{\pi}+(1-\lambda_{\pi})\underline{\pi}}v$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $E_{\pi}u$
+\end_inset
+
+ representes the preferences 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, it must be that 
+\begin_inset Formula $\pi\sim\lambda_{\pi}\overline{\pi}+(1-\lambda_{\pi})\underline{\pi}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But if so, then since 
+\begin_inset Formula $E_{\pi}u$
+\end_inset
+
+ is also linear and represents these same preferences, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E_{\pi}u=E_{\lambda_{\pi}\overline{\pi}+(1-\lambda_{\pi})\underline{\pi}}u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $=\lambda_{\pi}E_{\overline{\pi}}u+(1-\lambda_{\pi})E_{\underline{\pi}}u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $=\lambda_{\pi}(E_{\overline{\pi}}u-E_{\underline{\pi}}u)+E_{\underline{\pi}}u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $=\frac{E_{\pi}v-E_{\underline{\pi}}v}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}(E_{\overline{\pi}}u-E_{\underline{\pi}}u)+E_{\underline{\pi}}u$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset space \quad{}
+\end_inset
+
+from 
+\begin_inset Formula $(8.1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $=\frac{E_{\pi}vE_{\overline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}-\frac{E_{\pi}vE_{\underline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}+\frac{E_{\overline{\pi}}vE_{\underline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}-\frac{E_{\underline{\pi}}vE_{\overline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}+\frac{E_{\underline{\pi}}vE_{\underline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}-\frac{E_{\underline{\pi}}vE_{\underline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $=\left[\frac{E_{\overline{\pi}}u-E_{\underline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}\right]E_{\pi}v+\left[\frac{E_{\overline{\pi}}vE_{\underline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}-\frac{E_{\underline{\pi}}vE_{\overline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Define 
+\begin_inset Formula $\alpha\equiv\left[\frac{E_{\overline{\pi}}u-E_{\underline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta\equiv\left[\frac{E_{\overline{\pi}}vE_{\underline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}-\frac{E_{\underline{\pi}}vE_{\overline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $E_{\pi}u=\alpha E_{\pi}v+\beta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \sum_{z\in Z}u(z)\pi(z)={\displaystyle \sum_{z\in Z}\alpha v(z)\pi(z)+\beta=\sum_{z\in Z}\alpha v(z)\pi(z)+\sum_{z\in Z}\beta\pi(z)=\sum_{z\in Z}\left[\alpha v(z)+b\right]\pi(z)}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, we have 
+\begin_inset Formula $\sum_{z\in Z}u(z)\pi(z)={\displaystyle \sum_{z\in Z}\left[\alpha v(z)+b\right]\pi(z)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, 
+\begin_inset Formula $\pi(z)$
+\end_inset
+
+ is the same on both sides for all 
+\begin_inset Formula $z\in Z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\forall\ z\in Z,u(z)=\left[\alpha v(z)+b\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\exists\ a\in\mathbb{R}_{++},\exists\ b\in\mathbb{R},\forall\ z\in Z:u(z)=av(z)+b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D
+\end_layout
+
+\begin_layout Part*
+2.
+ From Homework Sheet
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $Z\equiv\{a,b,c\}$
+\end_inset
+
+ be a set of three prizes.
+ Consider an agent who has complete and transitive preferences on the set
+ of lotteries on 
+\begin_inset Formula $Z$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+.
+ The generic lottery is denoted by 
+\begin_inset Formula $p\equiv(p_{a},p_{b},p_{c})$
+\end_inset
+
+ where 
+\begin_inset Formula $p_{a}$
+\end_inset
+
+is the probability that the agent receives 
+\begin_inset Formula $a$
+\end_inset
+
+, and so on.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a) State the Independence axiom for a preference on the set of lotteries
+ 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall\ \left\{ \pi,\pi^{\prime},\pi^{\prime\prime}\right\} \subseteq\Delta(Z),\forall\ \alpha\in(0,1):\pi\succsim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(b) Assume that the agent's preferences are continuous and satisfy the independe
+nce axiom.
+ Suppose that she selects 
+\begin_inset Formula $\{(1,0,0)\}$
+\end_inset
+
+ as the set of her best choices from the set
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $B_{1}\equiv\left\{ \left(1,0,0\right),\left(0,\frac{1}{2},\frac{1}{2}\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+What is her best choice from the set
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $B_{2}\equiv\left\{ \left(\alpha,\frac{1-\alpha}{2},\frac{1-\alpha}{2}\right):\alpha\in[0,1]\right\} $
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, the agent finds 
+\begin_inset Formula $\left(1,0,0\right)\succsim\left(0,\frac{1}{2},\frac{1}{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+According to the Independence Axiom, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\forall\ \alpha\in(0,1):$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(1,0,0\right)\succsim\left(0,\frac{1}{2},\frac{1}{2}\right)\iff\alpha\left(1,0,0\right)+(1-\alpha)(1,0,0)\succsim\alpha\left(1,0,0\right)+(1-\alpha)\left(0,\frac{1}{2},\frac{1}{2}\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(1,0,0\right)\succsim\left(0,\frac{1}{2},\frac{1}{2}\right)\iff\alpha\left(1,0,0\right)+(1-\alpha)\left(0,\frac{1}{2},\frac{1}{2}\right)\succsim\alpha\left(0,\frac{1}{2},\frac{1}{2}\right)+(1-\alpha)\left(0,\frac{1}{2},\frac{1}{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, 
+\begin_inset Formula $\alpha\left(1,0,0\right)+(1-\alpha)(1,0,0)\succsim\alpha\left(1,0,0\right)\equiv(1,0,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\left(0,\frac{1}{2},\frac{1}{2}\right)+(1-\alpha)\left(0,\frac{1}{2},\frac{1}{2}\right)\equiv\left(0,\frac{1}{2},\frac{1}{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $\forall\ \alpha\in(0,1):(1,0,0)\succsim\alpha\left(1,0,0\right)+(1-\alpha)\left(0,\frac{1}{2},\frac{1}{2}\right)\succsim\left(0,\frac{1}{2},\frac{1}{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since the agent's preferences are complete, if 
+\begin_inset Formula $\alpha=0,\ \mbox{then}\ (1,0,0)\succsim\left(0,\frac{1}{2},\frac{1}{2}\right)\succsim\left(0,\frac{1}{2},\frac{1}{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, if 
+\begin_inset Formula $\alpha=1,\ \mbox{then}\ (1,0,0)\succsim(1,0,0)\succsim\left(0,\frac{1}{2},\frac{1}{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, since the agent's preferences are continuous, then 
+\begin_inset Formula $\forall\ \alpha\in[0,1]:(1,0,0)\succsim\left(\alpha,\frac{1-\alpha}{2},\frac{1-\alpha}{2}\right)\succsim\left(0,\frac{1}{2},\frac{1}{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, the agent's best choice from the set 
+\begin_inset Formula $B_{2}$
+\end_inset
+
+ is 
+\begin_inset Formula $(1,0,0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(c) Now, suppose that the agent's indifference curves are as shown in the
+ Figure.
+ Is this agent an Expected Utility maximizer?
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem 21.
+ 
+\series default
+A binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ satisfies A1, A2, A3 if and only if there is an index 
+\begin_inset Formula $u:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the function 
+\begin_inset Formula $U:\Delta(Z)\rightarrow\mathbb{R}$
+\end_inset
+
+ defined by: 
+\begin_inset Formula $\forall\ \pi\in\Delta(Z),U(\pi)\equiv E_{\pi}u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now, if the Independence Axiom, A3, is satisfied, then by 
+\series bold
+Lemma 4
+\series default
+, 
+\begin_inset Formula $\forall\ \{\pi,\pi^{\prime},\pi^{\prime\prime}\}\subseteq\Delta(Z),\forall\ \alpha\in(0,1):\pi\sim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\sim\alpha\pi^{\prime}(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitivie, i.e., A1 is satisfied, then 
+\begin_inset Formula $\forall\ \{\pi,\pi^{\prime},\pi^{\prime\prime}\}\subseteq\Delta(Z),\forall\ \alpha\in[0,1]:\pi\sim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\sim\alpha\pi^{\prime}(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This result implies that indfference curves are parallel to one another.
+\end_layout
+
+\begin_layout Standard
+In addition, when 
+\begin_inset Formula $|Z|=3$
+\end_inset
+
+, indifference curves are straight lines: 
+\begin_inset Formula $\forall\ \{\pi,\pi^{\prime}\}\subseteq\Delta(Z),\forall\ \alpha[0,1],\pi\sim\pi^{\prime}\iff\pi\sim\alpha\pi+(1-\alpha)\pi^{\prime}\sim\pi^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From the Figure, the indifference curves cross outside the set, 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+.
+ Thus, the Independence Axiom is violated.
+\end_layout
+
+\begin_layout Standard
+Hence, the agent's binary relation is not represented by an Expected Utility
+ function.
+\end_layout
+
+\begin_layout Standard
+Therefore, the agent is not an Expected Utility maximizer.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1482 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Microeconomic Theory I: Homework 6
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 3.5.9, Problem 1
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $X\equiv\mathbb{R}^{3}$
+\end_inset
+
+.
+ Suppose that a Walrasian demand function 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies Walras' law and is such that:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $x_{1}(p,w)\equiv a+b\frac{p_{1}}{p_{3}}+c\frac{p_{2}}{p_{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $x_{2}(p,w)\equiv d+e\frac{p_{1}}{p_{3}}+f\frac{p_{2}}{p_{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a) Calculate 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies Walras' law, then 
+\begin_inset Formula $p\cdot x=p_{1}x_{1}(p,w)+p_{2}x_{2}(p,w)+p_{3}x_{3}(p,w)=w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Since we have the expressions for 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, we can solve for 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+ using the equation above.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{3}(p,w)=\frac{w}{p_{3}}-\frac{p_{1}}{p_{3}}x_{1}(p,w)-\frac{p_{2}}{p_{3}}x_{2}(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $\ \ =\frac{w}{p_{3}}-\frac{p_{1}}{p_{3}}\left(a+b\frac{p_{1}}{p_{3}}+c\frac{p_{2}}{p_{3}}\right)-\frac{p_{2}}{p_{3}}\left(d+e\frac{p_{1}}{p_{3}}+f\frac{p_{2}}{p_{3}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(b) Prove 
+\begin_inset Formula $x$
+\end_inset
+
+ is homogeneous of degree zero.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\alpha\in\mathbb{R}_{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}(\alpha p,\alpha w)=a+b\frac{\alpha p_{1}}{\alpha p_{3}}+c\frac{\alpha p_{2}}{\alpha p_{3}}=a+b\frac{p_{1}}{p_{3}}+c\frac{p_{2}}{p_{3}}=x_{1}(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{2}(\alpha p,\alpha w)=d+e\frac{\alpha p_{1}}{\alpha p_{3}}+f\frac{\alpha p_{2}}{\alpha p_{3}}=d+e\frac{p_{1}}{p_{3}}+f\frac{p_{2}}{p_{3}}=x_{2}(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{3}(\alpha p,\alpha w)=\frac{\alpha w}{\alpha p_{3}}-\frac{\alpha p_{1}}{\alpha p_{3}}\left(a+b\frac{\alpha p_{1}}{\alpha p_{3}}+c\frac{\alpha p_{2}}{\alpha p_{3}}\right)-\frac{\alpha p_{2}}{\alpha p_{3}}\left(d+e\frac{\alpha p_{1}}{\alpha p_{3}}+f\frac{\alpha p_{2}}{\alpha p_{3}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $\ \ \ =\frac{w}{p_{3}}-\frac{p_{1}}{p_{3}}\left(a+b\frac{p_{1}}{p_{3}}+c\frac{p_{2}}{p_{3}}\right)-\frac{p_{2}}{p_{3}}\left(d+e\frac{p_{1}}{p_{3}}+f\frac{p_{2}}{p_{3}}\right)=x_{3}(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\forall\ \alpha\in\mathbb{R}_{+},\ \forall\ (p,w)\in\mathbb{R}_{+}^{3}\times\mathbb{R}_{+}:x(\alpha p,\alpha w)=x(p,w)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $x$
+\end_inset
+
+ is homogeneous of degree zero.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(c) Calculate the Slutsky matrix at some 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $w>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $lk$
+\end_inset
+
+ component of the Slutsky matrix associated with 
+\begin_inset Formula $x$
+\end_inset
+
+ at 
+\begin_inset Formula $(p,w)$
+\end_inset
+
+, denoted 
+\begin_inset Formula $S_{lk}(p,w)$
+\end_inset
+
+, is defined by the following equation:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $S_{lk}(p,w)=\frac{\partial x_{l}}{\partial p_{k}}(p,w)+\frac{\partial x_{l}}{\partial w}(p,w)x_{k}(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{11}(p,w)=\frac{b}{p_{3}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{12}(p,w)=\frac{c}{p_{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{13}(p,w)=-\frac{1}{p_{3}^{2}}\left[bp_{1}+cp_{2}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{21}(p,w)=\frac{e}{p_{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{22}(p,w)=\frac{f}{p_{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{23}(p,w)=-\frac{1}{p_{3}^{2}}\left[ep_{1}+fp_{2}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{31}(p,w)=-\frac{1}{p_{3}^{2}}\left[bp_{1}+ep_{2}\right]$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{32}(p,w)=-\frac{1}{p_{3}^{2}}\left[cp_{1}+fp_{2}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{33}(p,w)=\frac{1}{p_{3}^{2}}\left[p_{1}p_{2}(c+e)+\frac{1}{p_{3}}\left(bp_{1}^{2}+fp_{2}^{2}\right)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(d) Provide the restrictions on the demand parameters that are implied by
+ utility maximization.
+ (Disregard the fact that our results were developed under the assumption
+ 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary 7.
+
+\series default
+ Let 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ be a locally non-satiated and continuous preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Suppose that the associated choice correspondence is single-valued and
+ its associated demand function is 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+.
+ Then, for each pair 
+\begin_inset Formula $(p,w)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+1.
+ 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ is symmetric.
+\end_layout
+
+\begin_layout Standard
+2.
+ 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ is negative semi-definite.
+\end_layout
+
+\begin_layout Standard
+3.
+ 
+\begin_inset Formula $S(p,w)p=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4.
+ The matrix obtained by deleting the 
+\begin_inset Formula $l\mbox{-th}$
+\end_inset
+
+ row and the 
+\begin_inset Formula $l\mbox{-th}$
+\end_inset
+
+ column from 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ for some 
+\begin_inset Formula $l\in\left\{ 1,\ldots,L\right\} $
+\end_inset
+
+, is negative semi-definite.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.
+ 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ is symmetric
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{12}(p,w)=S_{21}(p,w)\iff\frac{c}{p_{3}}=\frac{e}{p_{3}}\iff c=e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{13}(p,w)=S_{31}(p,w)\iff-\frac{1}{p_{3}^{2}}\left[bp_{1}+cp_{2}\right]=-\frac{1}{p_{3}^{2}}\left[bp_{1}+ep_{2}\right]\iff c=e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{23}(p,w)=S_{32}(p,w)\iff-\frac{1}{p_{3}^{2}}\left[ep_{1}+fp_{2}\right]=-\frac{1}{p_{3}^{2}}\left[cp_{1}+fp_{2}\right]\iff c=e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+2.
+ 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ is negative semi-definite.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ is negative semi-definite if and only if 
+\begin_inset Formula $-S(p,w)$
+\end_inset
+
+ is positive semi-definite.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $-S(p,w)$
+\end_inset
+
+ is positive semi-definite if and only if its principal minors are all non-negat
+ive.
+\end_layout
+
+\begin_layout Standard
+The prinicpal minors of 
+\begin_inset Formula $-S(p,w)$
+\end_inset
+
+ are: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|-S_{11}|$
+\end_inset
+
+; 
+\begin_inset Formula $|-S_{22}|$
+\end_inset
+
+; 
+\begin_inset Formula $|-S_{33}|$
+\end_inset
+
+; 
+\begin_inset Formula $\left|-\left[\begin{array}{cc}
+S_{11} & S_{12}\\
+S_{21} & S_{22}
+\end{array}\right]\right|$
+\end_inset
+
+; 
+\begin_inset Formula $\left|-\left[\begin{array}{cc}
+S_{11} & S_{13}\\
+S_{31} & S_{33}
+\end{array}\right]\right|$
+\end_inset
+
+; 
+\begin_inset Formula $\left|-\left[\begin{array}{cc}
+S_{22} & S_{23}\\
+S_{32} & S_{33}
+\end{array}\right]\right|$
+\end_inset
+
+; 
+\begin_inset Formula $\left|-S(p,w)\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|-S_{11}|\geq0\iff-\frac{b}{p_{3}}\geq0\iff b\leq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|-S_{22}|\geq0\iff-\frac{f}{p_{3}}\geq0\iff f\leq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|-S_{33}|\geq0\iff-\frac{1}{p_{3}^{2}}\left[p_{1}p_{2}(c+e)+\frac{1}{p_{3}}\left(bp_{1}^{2}+fp_{2}^{2}\right)\right]\ge0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $\ \ \ \iff p_{1}p_{2}(c+e)+\frac{1}{p_{3}}\left(bp_{1}^{2}+fp_{2}^{2}\right)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $\ \ \ \iff p_{1}p_{2}p_{3}(c+e)\geq\left(bp_{1}^{2}+fp_{2}^{2}\right)$
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+since 
+\begin_inset Formula $b\leq0$
+\end_inset
+
+ and 
+\begin_inset Formula $f\leq0$
+\end_inset
+
+ must be satisfied
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left|-\left[\begin{array}{cc}
+S_{11} & S_{12}\\
+S_{21} & S_{22}
+\end{array}\right]\right|\geq0\iff\left|\begin{array}{cc}
+-\frac{b}{p_{3}} & -\frac{c}{p_{3}}\\
+-\frac{e}{p_{3}} & -\frac{f}{p_{3}}
+\end{array}\right|\geq0\iff bf-ce\geq0\iff bf\geq ce$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left|-\left[\begin{array}{cc}
+S_{11} & S_{13}\\
+S_{31} & S_{33}
+\end{array}\right]\right|\geq0\iff\left|\begin{array}{cc}
+-\frac{b}{p_{3}} & \frac{1}{p_{3}^{2}}\left[bp_{1}+cp_{2}\right]\\
+\frac{1}{p_{3}^{2}}\left[bp_{1}+ep_{2}\right] & -\frac{1}{p_{3}^{2}}\left[p_{1}p_{2}(c+e)+\frac{1}{p_{3}}\left(bp_{1}^{2}+fp_{2}^{2}\right)\right]
+\end{array}\right|\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff b\left[p_{1}p_{2}p_{3}(c+e)+\left(bp_{1}^{2}+fp_{2}^{2}\right)\right]\geq\left[bp_{1}+cp_{2}\right]\left[bp_{1}+ep_{2}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left|-\left[\begin{array}{cc}
+S_{22} & S_{23}\\
+S_{32} & S_{33}
+\end{array}\right]\right|\geq0\iff\left|\begin{array}{cc}
+-\frac{f}{p_{3}} & \frac{1}{p_{3}^{2}}\left[ep_{1}+fp_{2}\right]\\
+\frac{1}{p_{3}^{2}}\left[cp_{1}+fp_{2}\right] & -\frac{1}{p_{3}^{2}}\left[p_{1}p_{2}(c+e)+\frac{1}{p_{3}}\left(bp_{1}^{2}+fp_{2}^{2}\right)\right]
+\end{array}\right|\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff f\left[p_{1}p_{2}p_{3}(c+e)+\left(bp_{1}^{2}+fp_{2}^{2}\right)\right]\geq\left[ep_{1}+fp_{2}\right]\left[cp_{1}+fp_{2}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left|-S(p,w)\right|\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+3.
+ 
+\begin_inset Formula $S(p,w)p=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{ccc}
+\frac{b}{p_{3}} & \frac{c}{p_{3}} & -\frac{1}{p_{3}^{2}}\left[bp_{1}+cp_{2}\right]\\
+\frac{e}{p_{3}} & \frac{f}{p_{3}} & -\frac{1}{p_{3}^{2}}\left[ep_{1}+fp_{2}\right]\\
+-\frac{1}{p_{3}^{2}}\left[bp_{1}+ep_{2}\right] & -\frac{1}{p_{3}^{2}}\left[cp_{1}+fp_{2}\right] & \frac{1}{p_{3}^{2}}\left[p_{1}p_{2}(c+e)+\frac{1}{p_{3}}\left(bp_{1}^{2}+fp_{2}^{2}\right)\right]
+\end{array}\right]\left[\begin{array}{c}
+p_{1}\\
+p_{2}\\
+p_{3}
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+4.
+ The matrix obtained by deleting the 
+\begin_inset Formula $l\mbox{-th}$
+\end_inset
+
+ row and the 
+\begin_inset Formula $l\mbox{-th}$
+\end_inset
+
+ column from 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ for some 
+\begin_inset Formula $l\in\left\{ 1,\ldots,L\right\} $
+\end_inset
+
+, is negative semi-definite.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 3.5.9, Problem 3
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ be a monotone and continuous preference whose associated demand correspondence
+ is single-valued.
+ Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be the associated demand funciton.
+ The 
+\series bold
+equivalent variation of 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ from 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ to 
+\begin_inset Formula $p^{\prime}\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ at wealth level 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+
+\series default
+, denoted 
+\begin_inset Formula $EV^{\succeq}(p,p^{\prime},w)$
+\end_inset
+
+, is defined by:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $EV^{\succeq}(p,p^{\prime},w)\equiv V^{m\left\langle \succeq,p\right\rangle }(p^{\prime},w)-V^{m\left\langle \succeq,p\right\rangle }(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+compensating variation of 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ from 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ to 
+\begin_inset Formula $p^{\prime}\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ at wealth level 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+
+\series default
+, denoted 
+\begin_inset Formula $CV^{\succeq}(p,p^{\prime},w)$
+\end_inset
+
+, is defined by:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $CV^{\succeq}(p,p^{\prime},w)\equiv V^{m\left\langle \succeq,p^{\prime}\right\rangle }(p^{\prime},w)-V^{m\left\langle \succeq,p^{\prime}\right\rangle }(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and wealth 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Prove that for each 
+\begin_inset Formula $p^{\prime}\gg0$
+\end_inset
+
+, the following three statements are equivalent:
+\end_layout
+
+\begin_layout Standard
+(a) 
+\begin_inset Formula $x(p^{\prime},w)\succeq x(p,w)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(b) 
+\begin_inset Formula $EV^{\succeq}(p,p^{\prime},w)\ge0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(c) 
+\begin_inset Formula $CV^{\succeq}(p,p^{\prime},w)\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Given:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is a monotone and continuous preference.
+\end_layout
+
+\begin_layout Standard
+The associated demand correspondence of 
+\begin_inset Formula $\succeq$
+\end_inset
+
+, 
+\begin_inset Formula $x$
+\end_inset
+
+, is single-valued.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and wealth 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Show:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall\ p^{\prime}\gg0:x(p^{\prime},w)\succeq x(p,w)\iff EV^{\succeq}(p,p^{\prime},w)\ge0\iff CV^{\succeq}(p,p^{\prime},w)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $p^{\prime}\gg0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.
+ 
+\series default
+Assume 
+\begin_inset Formula $x(p^{\prime},w)\succeq x(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is a monotone and continuous preference, then the money metric representation
+ of 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $p$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $x(p^{\prime},w)\succeq x(p,w)\iff m\left\langle \succeq,p\right\rangle (x(p^{\prime},w))\geq m\left\langle \succeq,p\right\rangle (x(p,w))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff m\left\langle \succeq,p\right\rangle (x(p^{\prime},w))-m\left\langle \succeq,p\right\rangle (x(p,w))\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show
+\series default
+\emph default
+: 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $EV^{\succeq}(p,p^{\prime},w)\ge0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $EV^{\succeq}(p,p^{\prime},w)\equiv V^{m\left\langle \succeq,p\right\rangle }(p^{\prime},w)-V^{m\left\langle \succeq,p\right\rangle }(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $=m\left\langle \succeq,p\right\rangle (x(p^{\prime},w))-m\left\langle \succeq,p\right\rangle (x(p,w))\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+2.
+ 
+\series default
+Assume 
+\begin_inset Formula $EV^{\succeq}(p,p^{\prime},w)\ge0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $EV^{\succeq}(p,p^{\prime},w)\ge0\iff m\left\langle \succeq,p\right\rangle (x(p^{\prime},w))-m\left\langle \succeq,p\right\rangle (x(p,w))\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff m\left\langle \succeq,p\right\rangle (x(p^{\prime},w))\geq m\left\langle \succeq,p\right\rangle (x(p,w))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is a monotone and continuous preference, then the money metric representation
+ of 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $p$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+So, 
+\begin_inset Formula $m\left\langle \succeq,p\right\rangle (x(p^{\prime},w))\geq m\left\langle \succeq,p\right\rangle (x(p,w))\iff x(p^{\prime},w)\succeq x(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, the money metric representation of 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $x(p^{\prime},w)\succeq x(p,w)\iff m\left\langle \succeq,p^{\prime}\right\rangle (x(p^{\prime},w))\geq m\left\langle \succeq,p^{\prime}\right\rangle (x(p,w))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff m\left\langle \succeq,p^{\prime}\right\rangle (x(p^{\prime},w))-m\left\langle \succeq,p^{\prime}\right\rangle (x(p,w))\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show
+\series default
+\emph default
+: 
+\begin_inset Formula $CV^{\succeq}(p,p^{\prime},w)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset Formula $CV^{\succeq}(p,p^{\prime},w)\equiv V^{m\left\langle \succeq,p^{\prime}\right\rangle }(p^{\prime},w)-V^{m\left\langle \succeq,p^{\prime}\right\rangle }(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $=m\left\langle \succeq,p^{\prime}\right\rangle (x(p^{\prime},w))-m\left\langle \succeq,p^{\prime}\right\rangle (x(p,w))\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+3.
+ 
+\series default
+Assume 
+\begin_inset Formula $CV^{\succeq}(p,p^{\prime},w)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $CV^{\succeq}(p,p^{\prime},w)\geq0\iff m\left\langle \succeq,p^{\prime}\right\rangle (x(p^{\prime},w))-m\left\langle \succeq,p^{\prime}\right\rangle (x(p,w))\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iff m\left\langle \succeq,p^{\prime}\right\rangle (x(p^{\prime},w))\geq m\left\langle \succeq,p^{\prime}\right\rangle (x(p,w))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show
+\series default
+\emph default
+: 
+\begin_inset Formula $x(p^{\prime},w)\succeq x(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ is a monotone and continuous preference, then the money metric representation
+ of 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succeq$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $m\left\langle \succeq,p^{\prime}\right\rangle (x(p^{\prime},w))\geq m\left\langle \succeq,p^{\prime}\right\rangle (x(p,w))\iff x(p^{\prime},w)\succeq x(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\forall\ p^{\prime}\gg0:x(p^{\prime},w)\succeq x(p,w)\iff EV^{\succeq}(p,p^{\prime},w)\ge0\iff CV^{\succeq}(p,p^{\prime},w)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\end_layout
+
+\end_body
+\end_document

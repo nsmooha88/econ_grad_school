@@ -1,0 +1,4936 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 3: Consumer Theory
+\end_layout
+
+\begin_layout Standard
+Need to complete: Proposition 46, Example 1, Problem 5
+\end_layout
+
+\begin_layout Section*
+3.8
+\begin_inset space \quad{}
+\end_inset
+
+Aggregate demand
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For most questions in economics, the aggregate behavior of consumers is
+ more important the the behavior of any single consumer.
+ In this chapter, we investigate the extent to which the theory presented
+ in the previous sections can be applied to 
+\emph on
+aggregate demand
+\emph default
+, a suitably defined sum of demands arising from all the economy's consumers.
+ There are, in fact, a number of different properties of individual demand
+ that we might hope would also hild in the aggregate.
+ Which ones we are interested in at any given moment depend on the particular
+ application at hand.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this section, we ask three quesitons about aggregate demand:
+\end_layout
+
+\begin_layout Enumerate
+Individual demand can be expressed as a function of prices and the individual's
+ wealth level.
+ 
+\emph on
+When can aggregate demand be expressed as a function of prices and aggregate
+ wealth?
+\end_layout
+
+\begin_layout Enumerate
+Individual demand derived from rational preferences necessarily satisfies
+ the weak axiom of revealed preference.
+ 
+\emph on
+When does aggregate demand satisfy the weak axiom?
+\end_layout
+
+\begin_layout Enumerate
+Individual demand has welfare significance; from it, we can derive measures
+ of welfare change for the consumer.
+ 
+\emph on
+When does aggregate demand have welfare significance?
+\end_layout
+
+\begin_layout Standard
+Although the conditions we identify as important for each of these aggregation
+ questions are closely related, the questions being asked in the three cases
+ are conceptually quite distinct.
+ Overall, we shall see that, in all three cases, very strong restrictions
+ will need to hold for the desired aggregation properties to obtain.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now consider a multi-agent model.
+\end_layout
+
+\begin_layout Itemize
+There are 
+\begin_inset Formula $L\in N$
+\end_inset
+
+ commodities.
+\end_layout
+
+\begin_layout Itemize
+There is a set of agents 
+\begin_inset Formula $N\equiv\{1,\ldots,n\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Agents consumer bundles of commodities in 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Agent 
+\begin_inset Formula $i$
+\end_inset
+
+'s preferences are denoted by 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+We assume that the demand correspondence induced by each 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+ is single-valued, with demand function 
+\begin_inset Formula $x^{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+3.8.1 Aggregate demand function
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(90).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $(x^{i})_{i\in N}$
+\end_inset
+
+ be a profile of demand functions.
+ The 
+\series bold
+summation of demands
+\series default
+ associated with this profile is the function:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+SD: & \mathbb{R}_{+}^{L}\times\mathbb{R}_{+}^{N} & \rightarrow & \mathbb{R}_{+}^{L}\\
+ & (p,w^{1},\ldots,w^{n}) & \mapsto & SD(p,w^{1},\ldots,w^{n})\equiv\sum_{i\in N}x^{i}(p,w^{i})
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Thus, the summation of demands depends not only on prices but also on the
+ specific wealth levels of the various consumers.
+ There are two conditions under which we can talk about an 
+\begin_inset Quotes eld
+\end_inset
+
+aggregate demand function
+\begin_inset Quotes erd
+\end_inset
+
+ instead of the summation of demands.
+ Our first condition requires the summation of demand depend only on prices
+ and aggregate wealth.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(91).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $(x^{i})_{i\in N}$
+\end_inset
+
+ be a profile of demand functions and 
+\begin_inset Formula $SD$
+\end_inset
+
+ its associated summation of demands.
+ We say that 
+\begin_inset Formula $SD$
+\end_inset
+
+ is an 
+\series bold
+aggregate demand function
+\series default
+ iff 
+\begin_inset Formula $\forall\ p\in\mathbb{R}_{++}^{L},\ \forall\ \left\{ w\equiv(w^{i})_{i\in N},\bar{w}\equiv(\bar{w}^{i})_{i\in N}\right\} \subseteq\mathbb{R}_{+}^{N}:\sum_{i\in N}w^{i}=\sum_{i\in N}\bar{w}^{i}\implies SD(p,w)=SD(p,\bar{w})$
+\end_inset
+
+.
+ For each 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ and each aggregate wealth level 
+\begin_inset Formula $\mu\in\mathbb{R}_{+}$
+\end_inset
+
+ we conveniently denote
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+AD: & \mathbb{R}_{++}^{L}\times\mathbb{R}_{+} & \rightarrow & \mathbb{R}_{+}^{L}\\
+ & (p,\mu) & \mapsto & AD(p,\mu)\equiv SD(p,w^{1},\ldots,w^{n})
+\end{array}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $(w^{i})_{i\in N}\in\mathbb{R}_{+}^{N}$
+\end_inset
+
+ is a profile of wealth such that 
+\begin_inset Formula $\sum_{i\in N}w^{i}=\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+One special case in which this property holds arises when all consumers
+ have identical preferences that are homothetic.
+ Another is when all consumers have preferences that are quasilinear with
+ respect to the same good.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\emph on
+(37).
+ 
+\series default
+\emph default
+The aggregate demand function is well defined whenever:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Preferences are quasi-linear all with respect to the same commodity.
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $i\in N$
+\end_inset
+
+, 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+ is homothetic, and for each pair 
+\begin_inset Formula $\{i,j\}\subseteq N$
+\end_inset
+
+, 
+\begin_inset Formula $\succsim^{i}=\succsim^{j}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Assume 
+\begin_inset Formula $\forall\ i\in N$
+\end_inset
+
+, 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+ is rational, locally non-satiated, and continuous.
+ Take two profiles of wealth 
+\begin_inset Formula $w\equiv\left(w^{i}\right)_{i\in N}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{w}\equiv\left(\bar{w}^{i}\right)_{i\in N}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ i\in N$
+\end_inset
+
+, 
+\begin_inset Formula $\left\{ w^{i},\bar{w}^{i}\right\} \subseteq\mathbb{R}_{++}$
+\end_inset
+
+, and 
+\begin_inset Formula $\sum_{i\in N}w^{i}=\sum_{i\in N}\bar{w}^{i}=\mu$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\forall\ i\in N$
+\end_inset
+
+, 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+ is locally non-satiated, then the profile of demand functions, 
+\begin_inset Formula $\left(x^{i}\right)_{i\in N}$
+\end_inset
+
+, satisfies Walras' Law.
+ For both cases, we want to show that 
+\begin_inset Formula $SD(p,w)=SD(p,\bar{w})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Case 1: Preferences are quasi-linear all with respect to the same commodity
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $\forall\ i\in N,$
+\end_inset
+
+ let 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+ be quasi-linear with respect to commodity 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ Consider commodity 
+\begin_inset Formula $l\neq k$
+\end_inset
+
+.
+ Agent 
+\begin_inset Formula $i$
+\end_inset
+
+'s Marshallian demand for good 
+\begin_inset Formula $l$
+\end_inset
+
+ is the function, denoted 
+\begin_inset Formula $x_{l}^{M^{i}}$
+\end_inset
+
+, defined by:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+x_{l}^{M^{i}}: & \mathbb{R}_{++}^{L} & \rightarrow & \mathbb{R}_{+}\\
+ & p & \mapsto & x_{l}^{M^{i}}(p)\equiv x_{l}^{i}(p,w^{i})\ \mbox{for some}\ w^{i}\in\mathbb{R}_{++}
+\end{array}
+\]
+
+\end_inset
+
+By Proposition 35, since preferences are continuous and locally non-satiated,
+ then agent 
+\begin_inset Formula $i$
+\end_inset
+
+'s Marshallian demand for good 
+\begin_inset Formula $l$
+\end_inset
+
+ is well defined, i.e., 
+\begin_inset Formula $\forall\ p\gg0$
+\end_inset
+
+ and each 
+\begin_inset Formula $\left\{ w^{i},\bar{w}^{i}\right\} \subseteq\mathbb{R}_{++}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{l}^{i}\left(p,w^{i}\right)=x_{l}^{i}\left(p,\bar{w}^{i}\right)$
+\end_inset
+
+.
+ As a result, 
+\begin_inset Formula $\forall\ i\in N$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\sum_{l\ne k}x_{l}^{i}\left(p,w^{i}\right)=\sum_{l\ne k}x_{l}^{i}\left(p,\bar{w}^{i}\right)\iff\sum_{l\ne k}p_{l}x_{l}^{i}\left(p,w^{i}\right)=\sum_{l\ne k}p_{l}x_{l}^{i}\left(p,\bar{w}^{i}\right)
+\]
+
+\end_inset
+
+ Since Walras' Law holds, then we can find an equation for the demand of
+ commodity 
+\begin_inset Formula $k$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+x_{k}^{i}(p,w^{i})=\frac{w^{i}}{p_{k}}-\frac{\sum_{l\ne k}p_{l}\cdot x_{l}^{i}\left(p,w^{i}\right)}{p_{k}}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+x_{k}^{i}\left(p,\bar{w}^{i}\right)=\frac{\bar{w}^{i}}{p_{k}}-\frac{\sum_{l\ne k}p_{l}\cdot x_{l}^{i}\left(p,\bar{w}^{i}\right)}{p_{k}}
+\]
+
+\end_inset
+
+Now, since 
+\begin_inset Formula $\sum_{l\ne k}p_{l}\cdot x_{l}^{i}\left(p,w^{i}\right)=\sum_{l\ne k}p_{l}\cdot x_{l}^{i}\left(p,\bar{w}^{i}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum_{i\in N}w^{i}=\sum_{i\in N}\bar{w}^{i}=\mu$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{i\in N}x_{k}^{i}(p,w^{i})-\sum_{i\in N}x_{k}^{i}\left(p,\bar{w}^{i}\right) & = & \sum_{i\in N}\frac{w^{i}}{p_{k}}-\sum_{i\in N}\frac{\bar{w}^{i}}{p_{k}}\\
+ & = & \frac{\mu}{p_{k}}-\frac{\mu}{p_{k}}=0
+\end{eqnarray*}
+
+\end_inset
+
+Hence, 
+\begin_inset Formula $\sum_{i\in N}x_{k}^{i}(p,w^{i})=\sum_{i\in N}x_{k}^{i}(p,\bar{w}^{i})$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $SD(p,w)=SD(p,\bar{w})$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $AD(p,\mu)$
+\end_inset
+
+ is well defined.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Case 2: For each 
+\begin_inset Formula $i\in N$
+\end_inset
+
+, 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+ is homothetic, and for each pair 
+\begin_inset Formula $\{i,j\}\subseteq N$
+\end_inset
+
+, 
+\begin_inset Formula $\succsim^{i}=\succsim^{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+By Theorem 10, a continuous preference 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+ is homothetic if and only if it admits a continuous representation 
+\begin_inset Formula $u^{i}:X\rightarrow\mathbb{R}$
+\end_inset
+
+ that is homogeneous of degree one, i.e., such that 
+\begin_inset Formula $\forall\ \alpha\in\mathbb{R}_{+}:u^{i}(\alpha x)=\alpha u^{i}(x)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\forall\ \{i,j\}\subseteq N:\ \succsim^{i}=\succsim^{j}$
+\end_inset
+
+, then 
+\begin_inset Formula $\forall\ i\in N:u^{i}(x)=u(x)$
+\end_inset
+
+.
+ This implies that 
+\begin_inset Formula $\forall\ i\in N:x^{i}(p,w^{i})=x(p,w^{i})$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $i\in N$
+\end_inset
+
+, and take 
+\begin_inset Formula $y\in B(p,w^{i})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x(p,w^{i})\in C^{\succsim}(p,w^{i})$
+\end_inset
+
+, then 
+\begin_inset Formula $x(p,w^{i})\succsim y$
+\end_inset
+
+.
+ Now, consider 
+\begin_inset Formula $\left(\frac{1}{w^{i}}\right)y\in B(p,1)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x$
+\end_inset
+
+ is a preference maximizing demand function, then 
+\begin_inset Formula $x(p,1)\succsim\left(\frac{1}{w^{i}}\right)y$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+, then 
+\begin_inset Formula $x(p,1)\succsim\left(\frac{1}{w^{i}}\right)y\iff u\left(x(p,1)\right)\geq u\left(\left(\frac{1}{w^{i}}\right)y\right)$
+\end_inset
+
+.
+ Multiplying both sides by 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ yields 
+\begin_inset Formula $w^{i}u\left(x(p,1)\right)\geq w^{i}u\left(\left(\frac{1}{w^{i}}\right)y\right)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u$
+\end_inset
+
+ is homogenous of degree one, then 
+\begin_inset Formula $w^{i}u\left(x(p,1)\right)\geq w^{i}u\left(\left(\frac{1}{w^{i}}\right)y\right)\iff u\left(w^{i}x^{i}(p,1)\right)\geq u\left(y\right)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+, then 
+\begin_inset Formula $u\left(w^{i}x^{i}(p,1)\right)\geq u\left(y\right)\iff w^{i}\cdot x(p,1)\succsim y$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\forall\ y\in B(p,w^{i}):w^{i}\cdot x(p,1)\succsim y$
+\end_inset
+
+.
+ Since the demand correspondence induced by each 
+\begin_inset Formula $\succsim^{i}$
+\end_inset
+
+ is single-valued, then we must have 
+\begin_inset Formula $x(p,w^{i})=w^{i}\cdot x(p,1)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $i$
+\end_inset
+
+ was an arbitrary agent from the set 
+\begin_inset Formula $N$
+\end_inset
+
+, then this result holds 
+\begin_inset Formula $\forall\ i\in N$
+\end_inset
+
+.
+ Hence,
+\begin_inset Formula 
+\[
+SD(p,w)\equiv\sum_{i\in N}x^{i}(p,w^{i})=\sum_{i\in N}x(p,w^{i})=\sum_{i\in N}w^{i}\cdot x(p,1)=\mu\cdot x(p,1)
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+SD(p,\bar{w})\equiv\sum_{i\in N}x^{i}(p,\bar{w}^{i})=\sum_{i\in N}x(p,\bar{w}^{i})=\sum_{i\in N}\bar{w}^{i}\cdot x(p,1)=\mu\cdot x(p,1)
+\]
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $SD(p,w)=SD(p,\bar{w})$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $AD(p,\mu)$
+\end_inset
+
+ is well defined.
+\end_layout
+
+\begin_layout Remark*
+The conditions in Proposition 37 are sufficient for the aggregate demand
+ function to be well-defined, but they are not necessary.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(38).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $(x^{i})_{i\in N}$
+\end_inset
+
+ be a profile of differentiable demand functions and 
+\begin_inset Formula $SD$
+\end_inset
+
+ its associated summation of demands.
+ Then 
+\begin_inset Formula $SD$
+\end_inset
+
+ is an aggregate demand function if and only if for each 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+, each wealth vector 
+\begin_inset Formula $w\in\mathbb{R}_{++}^{n}$
+\end_inset
+
+, and each 
+\begin_inset Formula $v\in\mathbb{R}^{n}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sum_{i\in N}v_{i}=0$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+D_{w}SD(p,w)v=0
+\]
+
+\end_inset
+
+which is the direction derivative of 
+\begin_inset Formula $SD(p,w)$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $w$
+\end_inset
+
+ in the direction of 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $v$
+\end_inset
+
+ is just a redistribution of wealth.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $(x^{i})_{i\in N}$
+\end_inset
+
+ be a profile of differentiable demand functions and 
+\begin_inset Formula $SD$
+\end_inset
+
+ its associated summation of demands.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Suppose that for each pair of vectors 
+\begin_inset Formula $w$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{w}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sum_{i\in N}w^{i}=\sum_{i\in N}\bar{w}^{i}$
+\end_inset
+
+, 
+\begin_inset Formula $SD(p,w)=SD(p,\bar{w})$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $SD$
+\end_inset
+
+ is an aggregate demand function.
+ Let 
+\begin_inset Formula $v\in\mathbb{R}^{n}$
+\end_inset
+
+ be such that 
+\begin_inset Formula $\sum_{i\in N}v_{i}=0$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $w\gg0$
+\end_inset
+
+ be such that 
+\begin_inset Formula $w+v\geq0$
+\end_inset
+
+.
+ Define the following function:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+\Phi: & [0,1] & \rightarrow & \mathbb{R}_{+}^{L}\\
+ & \alpha & \mapsto & \Phi(\alpha)\equiv SD(p,w+\alpha v)
+\end{array}
+\]
+
+\end_inset
+
+We claim that 
+\begin_inset Formula $\forall\ \alpha\in[0,1]:\Phi(\alpha)=\Phi(0)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\bar{w}=w+\alpha v$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\sum_{i\in N}v^{i}=0$
+\end_inset
+
+, then 
+\begin_inset Formula $\sum_{i\in N}\bar{w}^{i}=\sum_{i\in N}w^{i}+\alpha\sum_{i\in}v^{i}=\sum_{i\in}w^{i}$
+\end_inset
+
+.
+ By our supposition, 
+\begin_inset Formula $SD$
+\end_inset
+
+ is an aggregate demand function, so 
+\begin_inset Formula $S(p,w)=S(p,\bar{w})$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\Phi(\alpha)=\Phi(0)$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $\Phi(\cdot)$
+\end_inset
+
+ is a constant function.
+ Thus, taking the derivative of 
+\begin_inset Formula $\Phi(\alpha)$
+\end_inset
+
+ and evaluating it 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{gather*}
+\Phi(\alpha)=x^{1}(p,w^{1}+\alpha v^{1})+\cdots+x^{n}(p,w^{n}+\alpha v^{n})=SD(p,w+\alpha v)\\
+\Phi^{\prime}(\alpha)=\frac{\partial x^{1}(p,w^{1}+\alpha v^{1})}{\partial w^{1}}v^{1}+\cdots+\frac{\partial x^{n}(p,w^{n}+\alpha v^{n})}{\partial w^{n}}v^{n}=0
+\end{gather*}
+
+\end_inset
+
+or in matrix notation
+\begin_inset Formula 
+\[
+D_{w}SD(p,w)v=0
+\]
+
+\end_inset
+
+ 
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Suppose that for each 
+\begin_inset Formula $w$
+\end_inset
+
+ and each 
+\begin_inset Formula $v\in\mathbb{R}^{n}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sum_{i\in N}v^{i}=0$
+\end_inset
+
+, 
+\begin_inset Formula $D_{w}SD(p,w)v=0$
+\end_inset
+
+.
+ Define the following function:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+\varphi: & [0,1] & \rightarrow & \mathbb{R}_{+}^{L}\\
+ & \alpha & \mapsto & \varphi(\alpha)\equiv SD(p,\alpha w+(1-\alpha)\bar{w})
+\end{array}
+\]
+
+\end_inset
+
+Application of the chain rule yields the following result: 
+\begin_inset Formula $\forall\ \alpha\in[0,1]:\varphi^{\prime}(\alpha)=D_{w}SD(p,\alpha w+(1-\alpha)\bar{w})(w-\bar{w})$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $v\equiv w-\bar{w}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\sum_{i\in N}v^{i}=0$
+\end_inset
+
+, then 
+\begin_inset Formula $\varphi^{\prime}(\alpha)=0$
+\end_inset
+
+, so 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is a constaint function.
+ Thus, 
+\begin_inset Formula $\varphi(1)=\varphi(0)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $SD(p,w)=SD(p,\bar{w})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark*
+Important to note, the 
+\begin_inset Formula $v$
+\end_inset
+
+ in Proposition 38 is just a redistribution of wealth, while 
+\begin_inset Formula $D_{w}SD(p,w)v$
+\end_inset
+
+ is a directional derivative of 
+\begin_inset Formula $SD(p,w)$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $w$
+\end_inset
+
+ in the direction of 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ In the first part of the proof above, a directional derivative of 
+\begin_inset Formula $f$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $x$
+\end_inset
+
+ in the direction of 
+\begin_inset Formula $u$
+\end_inset
+
+ is defined as:
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial x}\cdot u=Df(x)[u]=\left[\frac{d}{da}f(v+\alpha u)\right]_{\alpha=0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary*
+
+\series bold
+\shape up
+(9).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $(x^{i})_{i\in N}$
+\end_inset
+
+ be a profile of differentiable demand functions and 
+\begin_inset Formula $SD$
+\end_inset
+
+ its associated summation of demands.
+ Then 
+\begin_inset Formula $SD$
+\end_inset
+
+ is an aggregate demand function if and only if for each 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+, each pair of agents 
+\begin_inset Formula $\{i,j\}\subseteq N$
+\end_inset
+
+, and each pair of individual wealth levels 
+\begin_inset Formula $\{w^{i},w^{j}\}\subseteq\mathbb{R}_{+}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\frac{\partial x^{i}(p,w)}{\partial w^{i}}=\frac{\partial x^{i}(p,w^{j})}{\partial w^{j}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $(x^{i})_{i\in N}$
+\end_inset
+
+ be a profile of differentiable demand functions and 
+\begin_inset Formula $SD$
+\end_inset
+
+ its associated summation of demands.
+ By Proposition 38, 
+\begin_inset Formula $SD$
+\end_inset
+
+ is an aggregate demand function if and only if for each 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+, each wealth vector 
+\begin_inset Formula $w\in\mathbb{R}_{++}^{n}$
+\end_inset
+
+, and each 
+\begin_inset Formula $v\in\mathbb{R}^{n}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sum_{i\in N}v_{i}=0$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+D_{w}SD(p,w)v=0
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $v\equiv(0,\ldots,0,1,0,\ldots,0,-1,0,\ldots,0)$
+\end_inset
+
+ where 
+\begin_inset Formula $1$
+\end_inset
+
+ is in the 
+\begin_inset Formula $i$
+\end_inset
+
+-th position and 
+\begin_inset Formula $-1$
+\end_inset
+
+ is in the 
+\begin_inset Formula $j$
+\end_inset
+
+-th position.
+ Then
+\begin_inset Formula 
+\begin{eqnarray*}
+D_{w}SD(p,w)v & = & 0\\
+\frac{\partial x^{i}(p,w^{i})}{\partial w^{i}}-\frac{\partial x^{j}(p,w^{j})}{\partial w^{j}} & = & 0\\
+\frac{\partial x^{i}(p,w^{i})}{\partial w} & = & \frac{\partial x^{j}(p,w^{j})}{\partial w}
+\end{eqnarray*}
+
+\end_inset
+
+Therefore, 
+\begin_inset Formula $SD$
+\end_inset
+
+ is an aggregate demand function if and only if for each 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+, each pair of agents 
+\begin_inset Formula $\{i,j\}\subseteq N$
+\end_inset
+
+, and each pair of individual wealth levels 
+\begin_inset Formula $\{w^{i},w^{j}\}\subseteq\mathbb{R}_{+}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\frac{\partial x^{i}(p,w)}{\partial w^{i}}=\frac{\partial x^{i}(p,w^{j})}{\partial w^{j}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In short, for any fixed price vector 
+\begin_inset Formula $p$
+\end_inset
+
+, and any commodity 
+\begin_inset Formula $l$
+\end_inset
+
+, the wealth effect at 
+\begin_inset Formula $p$
+\end_inset
+
+ must be the same whatever consumer we look at and whatever his wealth.
+ It is indeed farily intuitive that in this case, the individual demand
+ changes arising from any wealth redistribution across consumers will cancel
+ out.
+ Geometrically, the conditions is equivalent to the statement that all consumers
+' wealth expansion paths are parallel, straight lines.
+\end_layout
+
+\begin_layout Lemma*
+
+\shape up
+\emph on
+Let 
+\begin_inset Formula $(x^{i})_{i\in N}$
+\end_inset
+
+ be a profile of differentiable demand functions and 
+\begin_inset Formula $SD$
+\end_inset
+
+ its associated summation of demands.
+ Then 
+\begin_inset Formula $SD$
+\end_inset
+
+ is an aggregate demand function if and only if for each agent 
+\begin_inset Formula $i\in N$
+\end_inset
+
+, each 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+, and each wealth vector 
+\begin_inset Formula $w\in\mathbb{R}_{++}^{n}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+x^{i}(p,w^{i})=f^{i}(p)+g(p)w^{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $f^{i}(\cdot)$
+\end_inset
+
+ and 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $g(\cdot)$
+\end_inset
+
+ are vector-valued functions of the vector 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $(x^{i})_{i\in N}$
+\end_inset
+
+ be a profile of differentiable demand functions and 
+\begin_inset Formula $SD$
+\end_inset
+
+ its associated summation of demands.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Suppose 
+\begin_inset Formula $SD$
+\end_inset
+
+ is an aggregate demand function.
+ Let 
+\begin_inset Formula $\{w,\bar{w}\}\subseteq\mathbb{R}_{+}^{N}$
+\end_inset
+
+ such that such that 
+\begin_inset Formula $\sum_{i\in N}w^{i}=\sum_{i\in N}\bar{w}^{i}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $SD$
+\end_inset
+
+ is an aggregate demand function, then 
+\begin_inset Formula $SD(p,w)=SD(p,\bar{w})$
+\end_inset
+
+, i.e.,
+\begin_inset Formula 
+\[
+\sum_{i\in N}x^{i}(p,w^{i})=\sum_{i\in N}x^{i}(p,\bar{w}^{i})
+\]
+
+\end_inset
+
+So, for any 
+\begin_inset Formula $k$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{equation}
+x^{k}(p,w^{k})+\sum_{i\neq k}x^{i}(p,w^{i})={\displaystyle x}^{j}(p,w^{j})+\sum_{i\neq j}x^{i}(p,\bar{w}^{i})
+\end{equation}
+
+\end_inset
+
+By keeping the total wealth equal on both sides, we can obtain
+\begin_inset Formula 
+\begin{equation}
+x^{k}(p,w^{k}+\epsilon)+\sum_{i\neq k}x^{i}(p,w^{i})={\displaystyle x}^{j}(p,w^{j}+\epsilon)+\sum_{i\neq j}x^{i}(p,\bar{w}^{i})
+\end{equation}
+
+\end_inset
+
+Now, subtracting equation (1) from equation (2) and dividing by 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ yields
+\begin_inset Formula 
+\[
+\frac{x^{k}(p,w^{k}+\epsilon)-x^{k}(p,w^{k})}{\epsilon}=\frac{x^{j}(p,w^{j}+\epsilon)-x^{j}(p,w^{j})}{\epsilon}
+\]
+
+\end_inset
+
+which is the definition of the partial derivative of 
+\begin_inset Formula $x^{i}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $w^{i}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial x^{k}(p,w^{k})}{\partial w^{k}}=\frac{\partial x^{j}(p,w^{j})}{\partial w^{j}}\equiv g(p)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $g(\cdot):\mathbb{R}_{+}^{L}\rightarrow\mathbb{R}^{L}$
+\end_inset
+
+.
+ Thus, by the Fundamental Theorem of Calculus, we must have
+\begin_inset Formula 
+\[
+x^{i}(p,w^{i})=f^{i}(p)+g(p)w^{i}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+
+\emph on
+ 
+\emph default
+Suppose for each agent 
+\begin_inset Formula $i\in N$
+\end_inset
+
+, each 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+, and each wealth vector 
+\begin_inset Formula $w\in\mathbb{R}_{++}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $x^{i}(p,w^{i})=f^{i}(p)+g(p)w^{i}$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ and let 
+\begin_inset Formula $\{w,\bar{w}\}\subseteq\mathbb{R}_{+}^{N}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sum_{i\in N}w^{i}=\sum_{i\in N}\bar{w}^{i}$
+\end_inset
+
+.
+ We want to show that
+\begin_inset Formula 
+\[
+\sum_{i\in N}x^{i}(p,w^{i})=\sum_{i\in N}x^{i}(p,\bar{w}^{i})
+\]
+
+\end_inset
+
+ By our supposition, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{i\in N}x^{i}(p,w^{i}) & = & \sum_{i\in N}f^{i}(p)+g(p)w^{i}\\
+ & = & \sum_{i\in N}f^{i}(p)+g(p)\sum_{i\in}w^{i}
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\sum_{i\in N}w^{i}=\sum_{i\in N}\bar{w}^{i}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{i\in N}x^{i}(p,\bar{w}^{i}) & = & \sum_{i\in N}f^{i}(p)+g(p)\sum_{i\in N}\bar{w}^{i}\\
+ & = & \sum_{i\in N}f^{i}(p)+g(p)\sum_{i\in N}w^{i}\\
+ & = & \sum_{i\in N}x^{i}(p,\bar{w}^{i})
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $SD(p,w)=SD(p,\bar{w})$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $SD$
+\end_inset
+
+ is an aggregate demand function.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(39).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $(x^{i})_{i\in N}$
+\end_inset
+
+ be a profile of differentiable demand functions and 
+\begin_inset Formula $SD$
+\end_inset
+
+ its associated summation of demands.
+ Then 
+\begin_inset Formula $SD$
+\end_inset
+
+ is an aggregate demand function if and only if there is a profile of utility
+ representations 
+\begin_inset Formula $(u^{i})_{i\in N}$
+\end_inset
+
+ such that the associated indirect utility functions have the Gorman form
+\begin_inset Formula 
+\[
+(p,w^{i})\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}\mapsto V^{u^{i}}(p,w^{i})=a^{i}(p)+b(p)w^{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $(x^{i})_{i\in N}$
+\end_inset
+
+ be a profile of differentiable demand functions and 
+\begin_inset Formula $SD$
+\end_inset
+
+ its associated summation of demands.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Suppose 
+\begin_inset Formula $SD$
+\end_inset
+
+ is an aggregate demand function.
+ By Proposition 30, the money metric representation of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $p$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ So, we have
+\begin_inset Formula 
+\[
+u^{i}(x^{i}(p,w^{i}))=p\cdot h^{i}(p,x^{i}(p,w^{i}))
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $x^{i}(p,w^{i})=h^{i}(p,x^{i}(p,w^{i}))$
+\end_inset
+
+ by Corollary 5 (i.e., cost minimization duality), then
+\begin_inset Formula 
+\[
+u^{i}(x^{i}(p,w^{i}))=p\cdot x^{i}(p,w^{i})
+\]
+
+\end_inset
+
+By the Lemma above, 
+\begin_inset Formula $SD$
+\end_inset
+
+ is a an aggregate demand function if and only if for each 
+\begin_inset Formula $i\in N$
+\end_inset
+
+, for each 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+, and for each 
+\begin_inset Formula $w\in\mathbb{R}_{+}^{N}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+x^{i}(p,w^{i})=f^{i}(p)+g(p)w^{i}
+\]
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\begin{eqnarray*}
+u^{i}(x^{i}(p,w^{i})) & = & p\cdot\left[f^{i}(p)+g(p)w^{i}\right]\\
+ & = & p\cdot f^{i}(p)+p\cdot g(p)w^{i}
+\end{eqnarray*}
+
+\end_inset
+
+Define 
+\begin_inset Formula $a^{i}(p)\equiv p\cdot f^{i}(p)$
+\end_inset
+
+ and 
+\begin_inset Formula $b(p)\equiv p\cdot g(p)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula 
+\[
+u^{i}(x^{i}(p,w^{i}))=a^{i}(p)+b(p)w^{i}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Suppose there is profile of utility representations 
+\begin_inset Formula $(u^{i})_{i\in N}$
+\end_inset
+
+ such that the associated indirect utility functions have the form
+\begin_inset Formula 
+\[
+(p,w^{i})\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}\mapsto V^{u^{i}}(p,w^{i})=a^{i}(p)+b(p)w^{i}
+\]
+
+\end_inset
+
+Take 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ and let 
+\begin_inset Formula $\{w,\bar{w}\}\subseteq\mathbb{R}_{+}^{N}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sum_{i\in N}w^{i}=\sum_{i\in N}\bar{w}^{i}$
+\end_inset
+
+.
+ We want to show that
+\begin_inset Formula 
+\[
+\sum_{i\in N}x^{i}(p,w^{i})=\sum_{i\in N}x^{i}(p,\bar{w}^{i})
+\]
+
+\end_inset
+
+By Proposition 29 (Roy's Identity), we have
+\begin_inset Formula 
+\begin{eqnarray*}
+x^{i}(p,w^{i}) & = & -\frac{1}{\nabla_{w^{i}}V^{u^{i}}(p,w^{i})}\nabla_{p}V^{u^{i}}(p,w^{i})\\
+ & = & -\frac{1}{b(p)}\nabla_{p}a^{i}(p)-\frac{w^{i}}{b(p)}\nabla_{p}b(p)
+\end{eqnarray*}
+
+\end_inset
+
+Equivalently,
+\begin_inset Formula 
+\[
+x^{i}(p,\bar{w}^{i})=-\frac{1}{b(p)}\nabla_{p}a^{i}(p)-\frac{\bar{w}^{i}}{b(p)}\nabla_{p}b(p)
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\sum_{i\in N}w^{i}=\sum_{i\in N}\bar{w}^{i}$
+\end_inset
+
+, then we must have
+\begin_inset Formula 
+\[
+\sum_{i\in N}x^{i}(p,w^{i})=\sum_{i\in N}x^{i}(p,\bar{w}^{i})
+\]
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $SD(p,w)=SD(p,\bar{w})$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $SD$
+\end_inset
+
+ is an aggregate demand function.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Thus, aggregate demand can be written as a function of aggregate wealth
+ if and only if all consumers have preferences that admit indirect utility
+ functions of the Gorman form with equal wealth coefficients 
+\begin_inset Formula $b(p)$
+\end_inset
+
+.
+ Needless to say, this is a very restrictive condition on preferences.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Given this conclusion, we might ask whether less restrictive conditions
+ can be obtained if we consider aggregate demand functions that depend on
+ a wider set of aggregate variables than just the total (or, equivalently,
+ the mean) wealth level.
+ These more general forms of dependence on the distribution of wealth are
+ indeed valid under weaker conditions than those required for aggregate
+ demand to depend only on aggregate wealth.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Besides the conditions above, we can talk about aggregate demand when we
+ assume that society distributes wealth in a way that is independent of
+ the agents preferences, that is, depends only on prices and aggregate wealth.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(92).
+
+\series default
+ 
+\emph on
+A 
+\series bold
+wealth distribution rule
+\series default
+ is a function that associates a distribution of wealth with each pair 
+\begin_inset Formula $(p,\mu)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+.
+ The generic wealth distribution rule is denoted:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+\omega: & \mathbb{R}_{+}^{L}\times\mathbb{R}_{+} & \rightarrow & \mathbb{R}_{+}^{N}\\
+ & (p,\mu) & \mapsto & \omega(p,\mu)\equiv(\omega^{1}(p,\mu),\ldots,\omega^{n}(p,\mu))
+\end{array}
+\]
+
+\end_inset
+
+such that 
+\begin_inset Formula $\sum_{i\in N}\omega^{i}(p,\mu)=\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+When individual wealth levels are generated by a wealth distribution rule,
+ we can indeed 
+\emph on
+always
+\emph default
+ write aggregate demand as a function that depends only on prices and aggregate
+ wealth.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(93).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $(x^{i})_{i\in N}$
+\end_inset
+
+ be a profile of demand functions and 
+\begin_inset Formula $\omega$
+\end_inset
+
+ a wealth distribution rule.
+ The 
+\series bold
+aggregate demand associated with 
+\begin_inset Formula $(x^{i})_{i\in N}$
+\end_inset
+
+ and 
+\begin_inset Formula $\omega$
+\end_inset
+
+ 
+\series default
+is a function
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+AD^{\omega}: & \mathbb{R}_{+}^{L}\times\mathbb{R}_{+} & \rightarrow & \mathbb{R}_{+}^{L}\\
+ & (p,\mu) & \mapsto & AD^{\omega}(p,\mu)\equiv\sum_{i\in}x^{i}(p,\omega^{i}(p,\mu))
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark*
+While 
+\begin_inset Formula $AD$
+\end_inset
+
+ may not be well-defined, 
+\begin_inset Formula $AD^{\omega}$
+\end_inset
+
+ is always well-defined no matter what the profile of preferences 
+\begin_inset Formula $(\succsim^{i})_{i\in N}$
+\end_inset
+
+ looks like.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(94).
+
+\series default
+ 
+\emph on
+A wealth distribution rule is 
+\series bold
+price-independent 
+\series default
+iff 
+\begin_inset Formula $\forall\ \{p,p^{\prime}\}\subseteq\mathbb{R}_{++}^{L},\ \forall\ \mu\in\mathbb{R}_{+}:\omega(p,\mu)=\omega(p^{\prime},\mu)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+(A price-independent wealth distribution rule).
+ Let 
+\begin_inset Formula $(\alpha_{i})_{i\in N}$
+\end_inset
+
+ be such that for each 
+\begin_inset Formula $i\in N$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha\equiv\alpha_{i}\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum_{i\in N}\alpha_{i}=1$
+\end_inset
+
+.
+ The 
+\series bold
+proportional wealth distribution rule with weights 
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\series default
+ is the function:
+\begin_inset Formula 
+\[
+(p,\mu)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}\mapsto(\alpha_{1}\mu,\ldots,\alpha_{n}\mu)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+3.8.2
+\begin_inset space \quad{}
+\end_inset
+
+Aggregate demand and WARP
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To what extent do the positive properties of individual demand carry over
+ to the aggregate demand function? We can note immediately three properties
+ that do: continuity, homogeneity of degree zero, and Walras' law.
+ In this subsection, we focus on the conditions under which aggregate demand
+ also satisfies the weak axiom, arguably the most central positive property
+ of the individual Walrasian demand function.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To study this quesiton, we would like to operate on an aggregate demand
+ function that depends only on prices and aggregate wealth, so it is, in
+ a sense, a market demand function.
+ We accomplish this by supposing that there is a wealth distribution rule
+ determining individual wealths from the price vector and total wealth.
+ In point of fact, and merely for the sake of concreteness, we shall be
+ even more specific and focus on cases in which relative wealths are independent
+ of prices.
+ We now investigate the fulfullment of the weak axiom by the aggregate demand
+ function.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the rest of this section, we only focus on 
+\begin_inset Formula $AD^{\omega}$
+\end_inset
+
+, which is the aggregate demand associated with a profile of demands 
+\begin_inset Formula $(x^{i})_{i\in N}$
+\end_inset
+
+ and wealth distribution rule 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+ The following example shows that properties of individual demand functions
+ are not necessarily transferred into aggregate demand.
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+(12).
+ 
+\series default
+Let 
+\begin_inset Formula $N\equiv\{1,2\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\omega$
+\end_inset
+
+ the proportional wealth distribution rule with weights 
+\begin_inset Formula $\alpha_{1}=\alpha_{2}=\frac{1}{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $AD^{\omega}$
+\end_inset
+
+ may not satisfy WARP.
+\end_layout
+
+\begin_layout Remark*
+The individual demand functions satisfy WARP, but the aggregate demand functions
+ 
+\begin_inset Formula $AD$
+\end_inset
+
+ and 
+\begin_inset Formula $AD^{\omega}$
+\end_inset
+
+ may not.
+ Also, 
+\begin_inset Formula $AD$
+\end_inset
+
+ may not satisfy WARP when preferences are quasi-linear, but 
+\begin_inset Formula $AD$
+\end_inset
+
+ will satisfy WARP if preferences are homothetic and equal.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The example above shows that this inequality may be violated even for proportion
+al wealth distribution rules.
+ The reason for the failure can be traced to wealth effects.
+ Recall that 
+\begin_inset Formula $AD^{\omega}$
+\end_inset
+
+ satisfies WARP if and only if it satisfies the compensated law of demand,
+ i.e., 
+\begin_inset Formula $\forall\ \{p,p^{\prime}\}\subseteq\mathbb{R}_{++}^{L},\ \forall\ \mu\in\mathbb{R}_{+}:$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left(p^{\prime}-p\right)\cdot\left[AD^{\omega}\left(p^{\prime},p^{\prime}\cdot AD^{\omega}(p,\mu)\right)-AD^{\omega}(p,\mu)\right]\leq0
+\end{equation}
+
+\end_inset
+
+with strict inequality when 
+\begin_inset Formula $AD^{\omega}\left(p^{\prime},p^{\prime}\cdot AD^{\omega}(p,\mu)\right)\neq AD^{\omega}(p,\mu)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If the price-wealth change under consideration, say from 
+\begin_inset Formula $(p,w)$
+\end_inset
+
+ to 
+\begin_inset Formula $(p^{\prime},w^{\prime})$
+\end_inset
+
+, happened to be a compensated price change for 
+\emph on
+every
+\emph default
+ consumer 
+\begin_inset Formula $i$
+\end_inset
+
+, then because individual demand satisfies the weak axiom, adding over 
+\begin_inset Formula $i$
+\end_inset
+
+ gives precisely (3).
+ Thus, we conclude that aggregate demand must satisfy the weak axiom for
+ any price-wealth change that is compensated for every consumer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The difficulty arises because a price-wealth change that is compensated
+ in the aggregate, need not be compensated for each individual.
+ If so, the individual wealth effects [which, except for certain conditions,
+ are essentially unrestricted] can play havoc with the well-behaved but
+ possibly small individual substitution effects.
+ The result may be that the compensated law of demand fails to hold for
+ some 
+\begin_inset Formula $i$
+\end_inset
+
+, thus making possible the failure in the aggregate.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Given that a property of individual demand as basic as the weak axiom cannot
+ be expected to hold generally for aggregate demand, we mught wish to know
+ whether there are any restrictions on individual preferences under which
+ it must be satisfied.
+ The preceding discussion suggests that it may be worth exploring the implicaito
+ns of assuming that the law of demand holds at the individual level for
+ price changes that are left uncompensated.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(95).
+
+\series default
+ 
+\emph on
+A demand function 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies the 
+\series bold
+uncompensated law of demand 
+\series default
+iff 
+\begin_inset Formula $\forall\ \{p,p^{\prime}\}\subseteq\mathbb{R}_{++}^{L},\ \forall\ \mu\in\mathbb{R}_{+}:$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(p^{\prime}-p\right)\cdot\left[x(p^{\prime},\mu)-x(p,\mu)\right]\leq0
+\]
+
+\end_inset
+
+with strict inequality when 
+\begin_inset Formula $x(p^{\prime},\mu)\neq x(p,\mu)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In view of our discussion of the weak axiom in previous sections, the following
+ differential version of the ULD property should come as no surprise:
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $x^{i}(p,w^{i})$
+\end_inset
+
+ satisfies the ULD property, then 
+\begin_inset Formula $D_{p}x^{i}(p,w^{i})$
+\end_inset
+
+ is negative semidefinite; that is, 
+\begin_inset Formula $dp\cdot D_{p}x^{i}(p,w^{i})dp\leq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $dp$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+As with the weak axiom, there is a converse to this:
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $D_{p}x^{i}(p,w^{i})$
+\end_inset
+
+ is negative definite for all 
+\begin_inset Formula $p$
+\end_inset
+
+, then 
+\begin_inset Formula $x^{i}(p,w^{i})$
+\end_inset
+
+ satisfies the ULD property.
+\end_layout
+
+\begin_layout Standard
+The analogous differential version holds for the aggregate demand function.
+ The great virtue of the ULD property is that, in contrast with the weak
+ axiom, it does, in fact, aggregate.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(40).
+
+\series default
+ 
+\emph on
+Suppose that 
+\begin_inset Formula $\omega$
+\end_inset
+
+ is price-independent.
+ If for each 
+\begin_inset Formula $i\in N$
+\end_inset
+
+, 
+\begin_inset Formula $x^{i}$
+\end_inset
+
+ satisfies the uncompensated law of demand, then 
+\begin_inset Formula $AD^{\omega}$
+\end_inset
+
+ satisfies the uncompensated law of demand.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\{p,p^{\prime}\}\subseteq\mathbb{R}_{++}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $w\equiv\omega(p,\mu)=\omega(p^{\prime},\mu)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\omega$
+\end_inset
+
+ is price-independent, then 
+\begin_inset Formula $w$
+\end_inset
+
+ is well-defined.
+ We prove that
+\begin_inset Formula 
+\begin{equation}
+(p^{\prime}-p)\cdot\left({\displaystyle \sum_{i\in N}}x^{i}(p^{\prime},w^{i})-{\displaystyle \sum_{i\in N}}x^{i}(p,w^{i})\right)\leq0
+\end{equation}
+
+\end_inset
+
+with strict inequality when 
+\begin_inset Formula $\sum_{i\in N}x^{i}(p^{\prime},w^{i})\neq\sum_{i\in}x^{i}(p,w^{i})$
+\end_inset
+
+.
+ Clearly, we can write the inequality above as:
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i\in N}}(p^{\prime}-p)\cdot\left(x^{i}(p^{\prime},w^{i})-x^{i}(p,w^{i})\right)\leq0
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $i\in N$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x^{i}$
+\end_inset
+
+ satisfies ULD, then 
+\begin_inset Formula $(p^{\prime}-p)\cdot\left(x^{i}(p^{\prime},w^{i})-x^{i}(p,w^{i})\right)\leq0$
+\end_inset
+
+.
+ Thus, the weak inequality (3) holds.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Now if 
+\begin_inset Formula $\sum_{i\in N}x^{i}(p^{\prime},w^{i})\neq\sum_{i\in}x^{i}(p,w^{i})$
+\end_inset
+
+, then it must be the case that for some 
+\begin_inset Formula $i\in N$
+\end_inset
+
+, 
+\begin_inset Formula $x^{i}(p^{\prime},w^{i})\neq x^{i}(p,w^{i})$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $(p^{\prime}-p)\cdot\left(x^{i}(p^{\prime},w^{i})-x^{i}(p,w^{i})\right)<0$
+\end_inset
+
+.
+ Therefore, the strict inequality in (3) holds.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(41).
+
+\series default
+ 
+\emph on
+If a demand function 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies Walras' law and the uncompensated law of demand, then it satisfies
+ WARP.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\{p,p^{\prime}\}\subseteq\mathbb{R}_{++}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ We prove that
+\begin_inset Formula 
+\[
+(p^{\prime}-p)\cdot\left(x(p^{\prime},p^{\prime}\cdot x(p,w))-x(p,w)\right)<0
+\]
+
+\end_inset
+
+when 
+\begin_inset Formula $x(p^{\prime},p^{\prime}\cdot x(p,w))\neq x(p,w)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $p^{\prime}\cdot x(p^{\prime},p^{\prime}\cdot x(p,w))=p^{\prime}\cdot x(p,w)$
+\end_inset
+
+ then the inequality above is equivalent to
+\begin_inset Formula 
+\[
+-p\cdot\left(x(p^{\prime},p^{\prime}\cdot x(p,w))-x(p,w)\right)<0
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $w^{\prime}\equiv p^{\prime}\cdot x(p,w)$
+\end_inset
+
+.
+ Suppose without loss of generality that 
+\begin_inset Formula $w^{\prime}>0$
+\end_inset
+
+, for otherwise the problem is trivial.
+ Let 
+\begin_inset Formula $\alpha=\frac{w}{w^{\prime}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{p}\equiv\alpha p^{\prime}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x$
+\end_inset
+
+ is homogenous of degree zero, then 
+\begin_inset Formula $x(p^{\prime},p^{\prime}\cdot x(p,w))=x(p^{\prime},w^{\prime})=x(p^{\prime},\frac{w}{\alpha})=x(\tilde{p},w)$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $x(\tilde{p},w)\neq x(p,w)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies the ULD, then
+\begin_inset Formula 
+\[
+(\tilde{p}-p)\cdot\left(x(\tilde{p},w)-x(p,w)\right)<0
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\tilde{p}\cdot x(\tilde{p},w)=w$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{p}\cdot x(p,w)=\frac{w}{w^{\prime}}p^{\prime}\cdot x(p,w)=w$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+-p\cdot\left(x(\tilde{p},w)-x(p,w)\right)<0
+\]
+
+\end_inset
+
+Equivalently,
+\begin_inset Formula 
+\[
+-p\cdot\left(x(p^{\prime},p^{\prime}\cdot x(p,w))-x(p,w)\right)<0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary*
+
+\series bold
+\shape up
+(10).
+
+\series default
+ 
+\emph on
+Suppose that 
+\begin_inset Formula $\omega$
+\end_inset
+
+ is price-independent and for each 
+\begin_inset Formula $i\in N$
+\end_inset
+
+, 
+\begin_inset Formula $x^{i}$
+\end_inset
+
+ satisfies Walras' law and the uncompensated law of demand.
+ Then 
+\begin_inset Formula $AD^{\omega}$
+\end_inset
+
+ satisfies WARP.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\omega$
+\end_inset
+
+ is price-independent and for each 
+\begin_inset Formula $i\in N$
+\end_inset
+
+, 
+\begin_inset Formula $x^{i}$
+\end_inset
+
+ satisfies Walras' law and the uncompensated law of demand.
+ So, by Proposition 40, 
+\begin_inset Formula $AD^{\omega}$
+\end_inset
+
+ satisfies Walras' law and the uncompensated law of demand.
+ Thus, by Proposition 41, 
+\begin_inset Formula $AD^{\omega}$
+\end_inset
+
+ satisfies WARP.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+How restrictive is the ULD property as an axiom of individual behavior?
+ It is clearly not implied by preference maximization.
+ Propositions 42 and 44 provide sufficient conditions for individual demands
+ to satisfy the ULD property.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\emph on
+(42).
+
+\series default
+ 
+\emph default
+Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be a twice differentiable demand function.
+ If for each pair 
+\begin_inset Formula $(p,\mu)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{++}$
+\end_inset
+
+, 
+\begin_inset Formula $D_{p}x(p,\mu)$
+\end_inset
+
+ is negative definite, then the demand function 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies the uncompensated law of demand.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be a twice differentiable demand function.
+ Assume 
+\begin_inset Formula $\forall\ (p,\mu)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{++}$
+\end_inset
+
+, 
+\begin_inset Formula $D_{p}x(p,\mu)$
+\end_inset
+
+ is negative definite.
+ Take 
+\begin_inset Formula $\{p,p^{\prime}\}\subseteq\mathbb{R}_{++}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $p^{\prime}\neq p$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ We prove that
+\begin_inset Formula 
+\[
+\left(p^{\prime}-p\right)\cdot\left[x(p^{\prime},\mu)-x(p,\mu)\right]<0
+\]
+
+\end_inset
+
+when 
+\begin_inset Formula $x(p,w)\neq x(p^{\prime},w)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $\forall\ \lambda\in[0,1]$
+\end_inset
+
+, define
+\begin_inset Formula 
+\[
+p(\lambda)=\lambda p^{\prime}+(1-\lambda)p
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\mu(\lambda)=\left(p^{\prime}-p\right)\cdot\left[x(p(\lambda),\mu)-x(p,\mu)\right]
+\]
+
+\end_inset
+
+So, we have
+\begin_inset Formula 
+\[
+\mu(0)=\left(p^{\prime}-p\right)\cdot\left[x(p,\mu)-x(p,\mu)\right]=0
+\]
+
+\end_inset
+
+since 
+\begin_inset Formula $x(p,\mu)-x(p,\mu)=0$
+\end_inset
+
+.
+ By the Chain Rule, 
+\begin_inset Formula $\forall\ \lambda\in[0,1]$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\mu^{\prime}(\lambda) & = & \left(p^{\prime}-p\right)^{T}D_{p}x(p(\lambda),\mu))p^{\prime}(\lambda)\\
+ & = & \left(p^{\prime}-p\right)^{T}D_{p}x(p(\lambda),\mu))(p^{\prime}-p)
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $D_{p}x(p,\mu)$
+\end_inset
+
+ is negative definite and 
+\begin_inset Formula $p^{\prime}\neq p$
+\end_inset
+
+, then 
+\begin_inset Formula $\forall\ \lambda\in[0,1]$
+\end_inset
+
+, 
+\begin_inset Formula $\mu^{\prime}(\lambda)<0$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\[
+\mu(1)=\left(p^{\prime}-p\right)\cdot\left[x(p^{\prime},w)-x(p,\mu)\right]<0
+\]
+
+\end_inset
+
+Therefore, 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+ satisfies the uncompensated law of demand.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(43).
+
+\series default
+ 
+\emph on
+If a twice differentiable demand function 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies the uncompensated law of demand, then for each 
+\begin_inset Formula $(p,\mu)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+, 
+\begin_inset Formula $D_{p}x(p,\mu)$
+\end_inset
+
+ is negative semi-definite.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $x$
+\end_inset
+
+ is a twice differentiable demand function that satisfies the uncompensated
+ law of demand.
+ Take 
+\begin_inset Formula $(p,\mu)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+.
+ We will prove that 
+\begin_inset Formula $D_{p}x(p,\mu)$
+\end_inset
+
+ is negative semi-definite.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+By the definition of a directional partial derivative,
+\begin_inset Formula 
+\[
+D_{p}x(p,w)dp={\displaystyle \lim_{\epsilon\rightarrow0}}\frac{x(p+\epsilon dp,w)-x(p,w)}{\epsilon}
+\]
+
+\end_inset
+
+Hence
+\begin_inset Formula 
+\begin{eqnarray*}
+dp\cdot D_{p}x(p,w)dp & = & dp\cdot\left[{\displaystyle \lim_{\epsilon\rightarrow0}}\frac{x(p+\epsilon dp,w)-x(p,w)}{\epsilon}\right]\\
+ & = & {\displaystyle \lim_{\epsilon\rightarrow0}}\frac{dp\cdot\left[x(p+\epsilon dp,w)-x(p,w)\right]}{\epsilon}
+\end{eqnarray*}
+
+\end_inset
+
+Note that the ULD property implies that
+\begin_inset Formula 
+\[
+dp\cdot\left[x(p+\epsilon dp,w)-x(p,w)\right]\leq0
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+.
+ Thus, by taking the limit 
+\begin_inset Formula $\epsilon\rightarrow0$
+\end_inset
+
+, we obtain
+\begin_inset Formula 
+\[
+dp\cdot D_{p}x(p,w)dp\leq0
+\]
+
+\end_inset
+
+Therefore, 
+\begin_inset Formula $D_{p}x(p,w)$
+\end_inset
+
+ is negative semidefinite.
+ 
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(44).
+ 
+\series default
+\emph on
+Suppose that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is homothetic and its associated demand correspondence is single-valued
+ with demand 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies the ULD.
+\end_layout
+
+\begin_layout Proof
+We will consider the differentiable case, so we assume that 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+ is differentiable and that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is representable by a differentiable utility function.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is homothetic, then from the proof of Proposition 37, 
+\begin_inset Formula $x(p,w)=w\cdot x(p,1)$
+\end_inset
+
+.
+ The matrix 
+\begin_inset Formula $D_{p}x(p,w)$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{eqnarray*}
+D_{p}x(p,w) & = & S(p,w)-D_{w}x(p,w)x(p,w)^{T}\\
+ & = & S(p,w)-D_{w}\left[w\cdot x(p,1)\right]x(p,w)^{T}\\
+ & = & S(p,w)-x(p,1)x(p,w)^{T}\\
+D_{p}x(p,w) & = & S(p,w)-\frac{1}{w}x(p,w)x(p,w)^{T}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ is the consumer's Slutsky matrix.
+ Because 
+\begin_inset Formula $\left[dp\cdot x(p,w)\right]^{2}>0$
+\end_inset
+
+ except when 
+\begin_inset Formula $dp\cdot x(p,w)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $dp\cdot S(p,w)dp<0$
+\end_inset
+
+ except when 
+\begin_inset Formula $dp$
+\end_inset
+
+ is proportional to 
+\begin_inset Formula $p$
+\end_inset
+
+, we can conclude that 
+\begin_inset Formula $D_{p}x(p,w)$
+\end_inset
+
+ is negative definite.
+ Thus, by Proposition 42, the ULD condition holds.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(45).
+
+\series default
+ 
+\emph on
+Assume that 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is a homothetic preference relation such that for each pair 
+\begin_inset Formula $(p,\mu)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{++}$
+\end_inset
+
+ and each vector 
+\begin_inset Formula $v\in\mathbb{R}^{L}$
+\end_inset
+
+ that is not multiple scalar of 
+\begin_inset Formula $p$
+\end_inset
+
+, 
+\begin_inset Formula $v^{T}S(p,\mu)v<0$
+\end_inset
+
+.
+ Then, for each pair 
+\begin_inset Formula $(p,\mu)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{++}$
+\end_inset
+
+, 
+\begin_inset Formula $D_{p}x(p,\mu)$
+\end_inset
+
+ is negative definite and thus, 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies the uncompensated law of demand.
+\end_layout
+
+\begin_layout Proof
+This proposition is a direct consequence of Proposition 44, so its proof
+ will not be given.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In Proposition 44, the conclusion is obtained with minimal help from the
+ substitution effects.
+ Those could all be arbitrarily small.
+ The wealth effects by themselves turn out to be sufficiently well behaved.
+ Unfortunately, the homothetic case is the only one in which this is so.
+ More generally, for the ULD property to hold, the substitution effects
+ (which are always well behaved) must be large enough to overcome possible
+ 
+\begin_inset Quotes eld
+\end_inset
+
+perversities
+\begin_inset Quotes erd
+\end_inset
+
+ coming from the wealth effects.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The condition in Proposition 42 is not an extremely stringent one.
+ In particular, notice how amply the homothetic case fits into it.
+ So, to the quesiton 
+\begin_inset Quotes eld
+\end_inset
+
+How restrictive is the ULD property as an axiom of individual behavior?
+\begin_inset Quotes erd
+\end_inset
+
+ perhaps we can answer: 
+\begin_inset Quotes eld
+\end_inset
+
+restrictive, but not extremely so.
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Not to misrepresent the import of this claim, we should emphasize that Propositi
+on 40, which asserts that the ULD property is preserved under addition,
+ holds for the price-independent distribution rules that we are considering
+ in this section.
+ When the distribution of real wealth may depend on prices (as it typically
+ will in the general equilibrium applications), then aggregate demand may
+ violate the weak axiom even if individual demand satisfies the ULD property.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Note, in addition, that for the ULD property to hold for aggregate demand,
+ it is not necessary that the ULD be satisfied at the individual level.
+ It may arise out of aggregation itself.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(46).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\omega$
+\end_inset
+
+ be the proportional wealth distribution rule with weights 
+\begin_inset Formula $(\alpha_{i})_{i\in N}$
+\end_inset
+
+.
+ For each 
+\begin_inset Formula $i\in N$
+\end_inset
+
+ and each pair 
+\begin_inset Formula $(p,\mu)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+, let 
+\begin_inset Formula $S_{i}(p,\mu)$
+\end_inset
+
+ be the Slutsky matrix associated with 
+\begin_inset Formula $x^{i}$
+\end_inset
+
+ at 
+\begin_inset Formula $(p,\mu)$
+\end_inset
+
+.
+ Then for each 
+\begin_inset Formula $(p,\mu)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+, the Slutsky matrix associated to 
+\begin_inset Formula $AD^{\omega}$
+\end_inset
+
+, denoted 
+\begin_inset Formula $S$
+\end_inset
+
+, can be calculated as
+\begin_inset Formula 
+\[
+S(p,\mu)={\displaystyle \sum_{i\in N}}S_{i}(p,\mu)-{\displaystyle \sum_{i\in N}}\alpha_{i}A_{i}B_{i}^{T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+
+\shape up
+\emph on
+where for each 
+\begin_inset Formula $i\in N$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+A_{i}=\left[D_{w^{i}}x^{i}(p,\alpha_{i}\mu)-D_{\mu}AD^{\omega}(p,\mu)\right]
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+B_{i}\equiv\left[\frac{1}{\alpha_{i}}x^{i}(p,\alpha_{i}\mu)-AD^{\omega}(p,\mu)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Will prove.
+\end_layout
+
+\begin_layout Subsection*
+3.8.3
+\begin_inset space \quad{}
+\end_inset
+
+Aggregate demand and welfare
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The aggregation question we pose in this subsection is: When can we compute
+ meaningful measures of aggregate welfare using the aggregate demand function
+ and the welfare measurement techniques for individual consumers? More specifica
+lly, when can we treat the aggregate demand function as if it were generated
+ by a fictional 
+\emph on
+representative consumer
+\emph default
+ whose preferences can be used as a measure of aggregate societal (or 
+\emph on
+social
+\emph default
+) welfare?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is useful to begin by distinguishing two senses in which we could say
+ that there is a representative consumer.
+ The first is a positive, or behavioral, sense.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A positive representative consumer can be thought of as a fictional individual
+ whose utility maximization problem when facing society's budget set 
+\begin_inset Formula $\{x\in\mathbb{R}_{+}^{L}:p\cdot x\leq\mu\}$
+\end_inset
+
+ would generate the economy's aggregate demand function 
+\begin_inset Formula $AD^{\omega}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For it to be correct to treat aggregate demand as we did individual demand
+ functions, there must be a positive representative consumer.
+ However, although this is a necessary condition for the property of aggregate
+ demand that we seek, it is not sufficient.
+ We also need to be able to assign welfare significance to this ficitonal
+ individual's demand function.
+ This will lead to the definition of a 
+\emph on
+normative
+\emph default
+ representative consumer.
+ To do so, however, we first have to be more specific about what we mean
+ by the term 
+\emph on
+social welfare
+\emph default
+.
+ We accomplish this by introducing the concept of a 
+\emph on
+social welfare function
+\emph default
+, a function that provides a summary (social) utility index for any collection
+ of individual utilities.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(96).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim\equiv(\succsim_{i})_{i\in N}$
+\end_inset
+
+ be a profile of preferences.
+ A 
+\series bold
+social welfare pair for 
+\begin_inset Formula $\succsim$
+\end_inset
+
+
+\series default
+ is a pair 
+\begin_inset Formula $(u,W)$
+\end_inset
+
+ where 
+\begin_inset Formula $u=(u_{i})_{i\in N}$
+\end_inset
+
+ is a profile of representations for 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ and 
+\begin_inset Formula $W$
+\end_inset
+
+ is a function from 
+\begin_inset Formula $\mathbb{R}^{N}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ The 
+\series bold
+social weflare order associated with 
+\begin_inset Formula $(u,W)$
+\end_inset
+
+ 
+\series default
+is a complete and transitive binary relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L\times N}$
+\end_inset
+
+ represented by the function
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+W: & \mathbb{R}_{+}^{L\times N} & \rightarrow & \mathbb{R}\\
+ & (x^{1},\ldots,x^{n}) & \mapsto & W(u_{1}(x^{1}),\ldots,u_{n}(x^{n}))
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark*
+We assume in this subsection that our direct utility functions 
+\begin_inset Formula $u_{i}(\cdot)$
+\end_inset
+
+ are concave.
+ This is a weak hypothesis (once quasiconcavity has been assumed) which
+ makes sure that in all the optimization problems to be considered, the
+ first-order conditions are sufficient for the determination of global optimal.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The idea behind a social welfare function 
+\begin_inset Formula $W(u_{1},\ldots,u_{n})$
+\end_inset
+
+ is that it accurately expresses society's judgments on how individual utilities
+ have to be compared to produce an ordering of possible social outcomes.
+ We also assume that social welfare functions are increasing, concave, and
+ whenever convenient, differentiable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let us now hypothesize that there is a process, a benevolent central authority
+ perhaps, that, for any given prices 
+\begin_inset Formula $p$
+\end_inset
+
+ and aggregate wealth level 
+\begin_inset Formula $w$
+\end_inset
+
+, redistributes wealth in order to maximize social welfare.
+ 
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(47).
+
+\series default
+ 
+\emph on
+Assume that 
+\begin_inset Formula $(x^{i})_{i\in N}$
+\end_inset
+
+ are the result of the maximization of preferences 
+\begin_inset Formula $\succsim\equiv(\succsim_{i})_{i\in N}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $(u,W)$
+\end_inset
+
+ be a social welfare pair for 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ Suppose that for each 
+\begin_inset Formula $(p,w)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+, 
+\begin_inset Formula $\omega(p,w)$
+\end_inset
+
+ solves the problem
+\begin_inset Formula 
+\begin{eqnarray}
+\max & W(u_{1}(x^{1}(p,w^{1})),\ldots,u_{n}(x^{n}(p,w^{n}))\\
+\mbox{s.t.} & (w^{i})_{i\in N}\in\mathbb{R}_{+}^{N},\ \sum_{i\in N}w^{i}=w\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+Then, the aggregate demand function 
+\begin_inset Formula $AD^{\omega}$
+\end_inset
+
+ is the result of the maximization of the preference represented by
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+U: & \mathbb{R}_{+}^{L} & \rightarrow & \mathbb{R}\\
+ & x & \mapsto & U(x)\equiv\begin{array}{cc}
+\max & W(u_{1}(y^{1}),\ldots,u_{n}(y^{n}))\\
+\mbox{s.t.} & \{y^{1},\ldots,y^{n}\}\subseteq\mathbb{R}_{+}^{L},\ \sum_{i\in N}y^{i}\leq x
+\end{array}
+\end{array}
+\]
+
+\end_inset
+
+Moreover, the indirect utility function of (5) is the indirect utility function
+ associated with this representation of preferences.
+\end_layout
+
+\begin_layout Proof
+In Excerise 4.D.2 of Mas-Colell, you are asked to establish that 
+\begin_inset Formula $V^{u}(p,w)$
+\end_inset
+
+ does indeed have the properties of an indirect utility function.
+ The argument for the proof then consists of using Roy's identity to derive
+ a Walrasian demand function from 
+\begin_inset Formula $V^{u}(p,w)$
+\end_inset
+
+, which we denote by 
+\begin_inset Formula $x_{R}(p,w)$
+\end_inset
+
+ and then establishing that it actually equals 
+\begin_inset Formula $AD^{\omega}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+We begin by recording the first-order conditions of problem (5) for a given
+ value of 
+\begin_inset Formula $(p,w)$
+\end_inset
+
+.
+ Neglecting boundary solutions, these require that for some 
+\begin_inset Formula $\lambda\geq0$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{equation}
+\lambda=\frac{\partial W}{\partial V_{1}^{u}}\frac{\partial V_{1}^{u}}{\partial w^{1}}=\cdots=\frac{\partial W}{\partial V_{n}^{u}}\frac{\partial V_{n}^{u}}{\partial w^{n}}
+\end{equation}
+
+\end_inset
+
+(For notational convenience, we have omitted the points at which the derivatives
+ are evaluated.) Condition (6) simply says that at a socially optimal wealth
+ distribution, the social utility of an extra unite of wealth is the same
+ irrespective of who gets it.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+By Roy's identity, we have
+\begin_inset Formula 
+\[
+x_{R}(p,w)=-\frac{1}{\frac{\partial V^{u}(p,w)}{\partial w}}\nabla_{p}V^{u}(p,w)
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $V^{u}(p,w)$
+\end_inset
+
+ is the value function of problem (5), we know that 
+\begin_inset Formula $\nicefrac{\partial V^{u}}{\partial w}=\lambda$
+\end_inset
+
+.
+ In addition, for any commodity 
+\begin_inset Formula $l$
+\end_inset
+
+, the chain rule and (6) - or, equivalently, the evelope theorem - give
+ us
+\begin_inset Formula 
+\[
+\frac{\partial V^{u}}{p_{l}}={\displaystyle \sum_{i\in N}}\frac{\partial W}{\partial V_{i}^{u}}\frac{\partial V_{i}^{u}}{\partial p_{l}}+\lambda{\displaystyle \sum_{i\in N}}\frac{\partial w^{i}}{\partial p_{l}}={\displaystyle \sum_{i\in N}}\frac{\partial W}{\partial V_{i}^{u}}\frac{\partial V_{i}^{u}}{\partial p_{l}}
+\]
+
+\end_inset
+
+where the second equality follows because 
+\begin_inset Formula $\sum_{i\in N}w^{i}(p,w)=w$
+\end_inset
+
+ for all 
+\begin_inset Formula $(p,w)$
+\end_inset
+
+ implies that 
+\begin_inset Formula $\sum_{i\in N}(\nicefrac{\partial w^{i}}{\partial p_{l}})=0$
+\end_inset
+
+.
+ Hence, in matrix notation, we have
+\begin_inset Formula 
+\[
+\nabla_{p}V^{u}(p,w)={\displaystyle \sum_{i\in N}}\left(\nicefrac{\partial W}{\partial V_{i}^{u}}\right)\nabla_{p}V_{i}^{u}(p,w^{i}(p,w))
+\]
+
+\end_inset
+
+Finally, using Roy's identity and the first-order condition (6), we get
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{R}(p,w) & = & -\frac{1}{\lambda}{\displaystyle \sum_{i\in N}}\left[\frac{\lambda}{\nicefrac{\partial V_{i}^{u}}{\partial w^{i}}}\right]\nabla_{p}V_{i}^{u}(p,w^{i}(p,w))\\
+ & = & -{\displaystyle \sum_{i\in N}}\left[\frac{1}{\nicefrac{\partial V_{i}^{u}}{\partial w^{i}}}\right]\nabla_{p}V_{i}^{u}(p,w^{i}(p,w))\\
+ & = & {\displaystyle \sum_{i\in N}}x^{i}(p,w^{i}(p,w))=AD^{\omega}
+\end{eqnarray*}
+
+\end_inset
+
+as we wanted to show.
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $(\alpha_{i})_{i\in N}$
+\end_inset
+
+ be a a set of weights such that for each 
+\begin_inset Formula $i\in N$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{i}\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum_{i\in N}\alpha_{i}=1$
+\end_inset
+
+.
+ Suppose that consumers have homothetic preferences and 
+\begin_inset Formula $(u,W)$
+\end_inset
+
+ is a social welfare pair for these preferences such that the utility functions
+ 
+\begin_inset Formula $(u_{i})_{i\in N}$
+\end_inset
+
+ are non-negative homogenous of degree one, and 
+\begin_inset Formula $y\in\mathbb{R}^{N}\mapsto W(y)\equiv\sum_{i\in N}\alpha_{i}\ln(y^{i})$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $w>0$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $\bar{w}=\left(\bar{w}^{i}\right)_{i\in N}$
+\end_inset
+
+ solves
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & W(u_{1}(x^{1}(p,w^{1})),\ldots,u_{n}(x^{n}(p,w^{n}))\\
+\mbox{s.t.} & (w^{i})_{i\in N}\in\mathbb{R}_{+}^{N},\ \sum_{i\in N}w^{i}=w
+\end{eqnarray*}
+
+\end_inset
+
+if and only if it solves
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & \sum_{i\in N}\alpha_{i}\ln(w^{i})\\
+\mbox{s.t.} & (w^{i})_{i\in N}\in\mathbb{R}_{+}^{N},\ \sum_{i\in N}w^{i}=w
+\end{eqnarray*}
+
+\end_inset
+
+Use KT FOC to prove that 
+\begin_inset Formula $\bar{w}=(\alpha_{1}w,\ldots,\alpha_{n}w)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset space \quad{}
+\end_inset
+
+What can you conclude about the welfare information containted in the aggregate
+ demand associated with a proportional welfare distribution rule?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Equipped with Proposition 47, we can now define a 
+\emph on
+normative representative consumer
+\emph default
+.
+ The preferences of this consumer have welfare signficance and the aggregate
+ demand function 
+\begin_inset Formula $AD^{\omega}$
+\end_inset
+
+ can be used to make welfare judments by means of the techniques previously
+ described.
+ In doing so, however, it should never be forgotten that a given wealth
+ distribution rule [the one that solves (5) for the given social welfare
+ function] is being adhered to and that the 
+\begin_inset Quotes eld
+\end_inset
+
+level of wealth
+\begin_inset Quotes erd
+\end_inset
+
+ should always be understood as 
+\begin_inset Quotes eld
+\end_inset
+
+optimally distributed level of wealth.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is important to stress the distinction between the concepts of a positive
+ and a normative representative consumer.
+ It is 
+\emph on
+not
+\emph default
+ true that whenever aggregate demand can be generated by a positive representati
+ve consumer, this representative consumer's preferences have normative content.
+ It may even be the case that a positive representative consumer exits by
+ that there is 
+\emph on
+no
+\emph default
+ social welfare function that leads to a normative representative consumer.
+\end_layout
+
+\begin_layout Subsection*
+3.8.4
+\begin_inset space \quad{}
+\end_inset
+
+Problems
+\end_layout
+
+\begin_layout Problem
+Prove Proposition 37.
+\end_layout
+
+\begin_layout Proof
+The proof can be found in Section 3.8.1.
+\end_layout
+
+\begin_layout Problem
+Assume that 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is a homothetic, monotone, continuous, and strictly convex preference relation.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Prove that the associated demand correspondence is single-valued.
+\end_layout
+
+\begin_layout Enumerate
+Prove that the associated demand function satisfies the uncompensated law
+ of demand.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Assume that 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is a homothetic, monotone, continuous, and strictly convex preference relation.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is strictly convex, then by Proposition 18, 
+\begin_inset Formula $C^{\succsim}$
+\end_inset
+
+ is single-valued.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is monotone, continuous, and strictly convex, then by the Theorem of the
+ Maximum, the associated demand function of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, denoted 
+\begin_inset Formula $x$
+\end_inset
+
+, is differentiable.
+ Thus, since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is homothetic, then by Proposition 42, 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies the uncompensated law of demand.
+\end_layout
+
+\begin_layout Problem
+Consider the preference 
+\begin_inset Formula $\mathbb{R}\times\mathbb{R}_{+}$
+\end_inset
+
+ represented by the following function: for each 
+\begin_inset Formula $(x_{1},x_{2})\in\mathbb{R}\times\mathbb{R}_{+}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+u(x_{1},x_{2})=x_{1}+\varphi(x_{2})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is a continuous real-valued function.
+\end_layout
+
+\begin_layout Problem
+Assume that for each 
+\begin_inset Formula $(p,w)\in\mathbb{R}_{++}^{2}\times\mathbb{R}_{+}$
+\end_inset
+
+ there is a 
+\series bold
+unique
+\series default
+ bundle that maximizes 
+\begin_inset Formula $u$
+\end_inset
+
+ in 
+\begin_inset Formula $B(p,w)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be the demand function associated with the preference represented by 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ For the sake of simplicity, you can normalize prices so the price of the
+ first commodity is always 1.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+State the definition of quasi-linearity with respect to the first commodity
+ (for preferences on 
+\begin_inset Formula $\mathbb{R}\times\mathbb{R}_{+}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+Prove that the preference represented by 
+\begin_inset Formula $u$
+\end_inset
+
+ is quasi-linear.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $(p,w)\in\mathbb{R}_{++}^{2}\times\mathbb{R}_{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $w^{\prime}\in\mathbb{R}_{+}$
+\end_inset
+
+ such that 
+\begin_inset Formula $w^{\prime}>w$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $x_{2}(p,w^{\prime})=x_{2}(p,w)$
+\end_inset
+
+.
+ (Here, a contradiction works fine, i.e., suppose that 
+\begin_inset Formula $x_{2}(p,w^{\prime})\neq x_{2}(p,w)$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+State the Compensated Law of Demand.
+\end_layout
+
+\begin_layout Enumerate
+Does 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfy the Compensated law of Demand? (Here, I am not asking for a proof;
+ you should be able to give a precise answer).
+\end_layout
+
+\begin_layout Enumerate
+State the Uncompensated Law of Demand.
+\end_layout
+
+\begin_layout Enumerate
+Prove that 
+\begin_inset Formula $x$
+\end_inset
+
+ may not satisfy the Uncompensated Law of Demand.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be the demand function associated with the preference represented by 
+\begin_inset Formula $u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+A preference 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is quasi-linear with respect to good one if and only if it satisfies the
+ following two properties:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\forall\ \{x,y\}\subseteq\mathbb{R}\times\mathbb{R}_{+},\ \forall\ \alpha\in\mathbb{R}:x\sim y\implies(x_{1}+\alpha,x_{2})\sim(y+\alpha,y_{2})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall\ x\in\mathbb{R}\times\mathbb{R}_{+},\ \forall\ \alpha\in\mathbb{R}_{++}:(x_{1}+\alpha,x_{2})\succ(x_{1},x_{2})$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Take 
+\begin_inset Formula $\{x,y\}\subseteq\mathbb{R}\times\mathbb{R}_{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $x\sim y$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then 
+\begin_inset Formula $x\sim y\iff u(x)=u(y)$
+\end_inset
+
+.
+ So, we have
+\begin_inset Formula 
+\[
+u(x_{1},x_{2})=x_{1}+\varphi(x_{2})=y_{1}+\varphi(y_{2})=u(y_{1},y_{2})
+\]
+
+\end_inset
+
+If we add 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ to both sides, then
+\begin_inset Formula 
+\begin{eqnarray*}
+(x_{1}+\alpha)+\varphi(x_{2}) & = & (y_{1}+\alpha)+\varphi(y_{2})\\
+u((x_{1}+\alpha),x_{2}) & = & u((y_{1}+\alpha),y_{2})
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then 
+\begin_inset Formula $u((x_{1}+\alpha),x_{2})=u((y_{1}+\alpha),y_{2})\iff(x_{1}+\alpha,x_{2})\sim(y_{1}+\alpha,y_{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Take 
+\begin_inset Formula $x\in\mathbb{R}\times\mathbb{R}_{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\in\mathbb{R}_{++}$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\begin{eqnarray*}
+(x_{1}+\alpha)+\varphi(x_{2}) & > & x_{1}+\varphi(x_{2})\\
+u((x_{1}+\alpha),x_{2}) & > & u(x_{1},x_{2})
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then 
+\begin_inset Formula $u((x_{1}+\alpha),x_{2})>u(x_{1},x_{2})\iff(x_{1}+\alpha,x_{2})\succ(x_{1},x_{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Therefore, the preference represented by 
+\begin_inset Formula $u$
+\end_inset
+
+ is quasi-linear.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $(p,w)\in\mathbb{R}_{++}^{2}\times\mathbb{R}_{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $w^{\prime}\in\mathbb{R}_{+}$
+\end_inset
+
+ such that 
+\begin_inset Formula $w^{\prime}>w$
+\end_inset
+
+.
+ We prove that that 
+\begin_inset Formula $x_{2}(p,w^{\prime})=x_{2}(p,w)$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $c=\frac{w^{\prime}-w}{p_{1}}$
+\end_inset
+
+.
+ We wish to show that 
+\begin_inset Formula $\left(x_{1}(p,w^{\prime}),x_{2}(p,w^{\prime})\right)=\left(x_{1}(p,w)+c,x_{2}(p,w)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+First, we show that 
+\begin_inset Formula $\left(x_{1}(p,w)+c,x_{2}(p,w)\right)\in B(p,w^{\prime})$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+p_{1}x_{1}(p,w)+p_{2}x_{2}(p,w)+p_{1}c=w+w^{\prime}-w=w
+\]
+
+\end_inset
+
+Thus, we have proved our desired result,
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Next, we show that 
+\begin_inset Formula $\left(x_{1}(p,w)+c,x_{2}(p,w)\right)\in C^{\succsim}(p,w^{\prime})$
+\end_inset
+
+.
+ Suppose for contradiction that 
+\begin_inset Formula $\left(x_{1}(p,w)+c,x_{2}(p,w)\right)\notin C^{\succsim}(p,w^{\prime})$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\exists\ (\bar{x}_{1}(p,w^{\prime}),\bar{x}_{2}(p,w^{\prime}))\in B(p,w^{\prime})$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+\left(\bar{x}_{1}(p,w^{\prime}),\bar{x}_{2}(p,w^{\prime})\right)\succ\left(x_{1}(p,w)+c,x_{2}(p,w)\right)
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{x}_{1}(p,w^{\prime})+\varphi(\bar{x}_{2}(p,w^{\prime})) & > & x_{1}(p,w)+c+\varphi(x_{2}(p,w))\\
+\bar{x}_{1}(p,w^{\prime})-c+\varphi(\bar{x}_{2}(p,w^{\prime})) & > & x_{1}(p,w)+\varphi(x_{2}(p,w))\\
+u((\bar{x}_{1}(p,w^{\prime})-c),\bar{x}_{2}(p,w^{\prime})) & > & u(x_{1}(p,w),x_{2}(p,w))
+\end{eqnarray*}
+
+\end_inset
+
+which implies that
+\begin_inset Formula 
+\[
+\left(\bar{x}_{1}(p,w^{\prime})-c,\bar{x}_{2}(p,w^{\prime})\right)\succ\left(x_{1}(p,w),x_{2}(p,w)\right)
+\]
+
+\end_inset
+
+We claim that 
+\begin_inset Formula $\left(\bar{x}_{1}(p,w^{\prime})-c,\bar{x}_{2}(p,w)\right)\in B(p,w)$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+p_{1}\bar{x}_{1}(p,w^{\prime})+p_{2}\bar{x}_{2}(p,w^{\prime})-p_{1}c=w^{\prime}+w-w^{\prime}=w
+\]
+
+\end_inset
+
+But, we have just contradicted that fact that 
+\begin_inset Formula $\left(x_{1}(p,w),x_{2}(p,w)\right)\in C^{\succsim}(p,w)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Thus, 
+\begin_inset Formula $\left(x_{1}(p,w)+c,x_{2}(p,w)\right)\in C^{\succsim}(p,w^{\prime})$
+\end_inset
+
+, and since 
+\begin_inset Formula $x$
+\end_inset
+
+ is single valued, we must have 
+\begin_inset Formula $\left(x_{1}(p,w^{\prime}),x_{2}(p,w^{\prime})\right)=\left(x_{1}(p,w)+c,x_{2}(p,w)\right)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $x_{2}(p,w^{\prime})=x_{2}(p,w)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part D.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+A demand function 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies the Compensated Law of Demand iff 
+\begin_inset Formula $\forall\ \{p,p^{\prime}\}\subseteq\mathbb{R}_{+}^{L},\ \forall\ w\in\mathbb{R}_{+}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\left(p^{\prime}-p\right)\cdot\left(x(p^{\prime},p^{\prime}\cdot x(p,w))-x(p,w)\right)\leq0
+\]
+
+\end_inset
+
+with strict inequality when 
+\begin_inset Formula $x(p^{\prime},p^{\prime}\cdot x(p,w))\neq x(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part E.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $(\mathcal{B}_{++}^{W},C^{\succsim})$
+\end_inset
+
+ be the single-valued choice structure associated with the demand function
+ 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ We know 
+\begin_inset Formula $x$
+\end_inset
+
+ is the 
+\series bold
+unique
+\series default
+ bundle that maximizes 
+\begin_inset Formula $u$
+\end_inset
+
+ in 
+\begin_inset Formula $B(p,w)$
+\end_inset
+
+ for each 
+\begin_inset Formula $(p,w)\in\mathbb{R}_{++}^{2}\times\mathbb{R}_{+}$
+\end_inset
+
+.
+ So, by Proposition 5, 
+\begin_inset Formula $(\mathcal{B}_{++}^{W},C^{\succsim})$
+\end_inset
+
+ satisfies WARP.
+ Since preferences are locally non-satiated, then by Proposition 18, 
+\begin_inset Formula $(\mathcal{B}_{++}^{W},C^{\succsim})$
+\end_inset
+
+ satisfies Walras' law.
+ Thus, by Proposition 11, 
+\begin_inset Formula $(\mathcal{B}_{++}^{W},C^{\succsim})$
+\end_inset
+
+ satisfies WARP if and only if its associated demand funciton 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies the Uncompensated Law of Demand.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part F.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+A demand function 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies the Uncompensated Law of Demand iff 
+\begin_inset Formula $\forall\ \{p,p^{\prime}\}\subseteq\mathbb{R}_{++}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $\forall\ w\in\mathbb{R}_{+}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+(p^{\prime}-p)\cdot\left(x(p^{\prime},w)-x(p,w)\right)\leq0
+\]
+
+\end_inset
+
+with strict inequality when 
+\begin_inset Formula $x(p^{\prime},w)\neq x(p,w)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part G.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+To show that 
+\begin_inset Formula $x$
+\end_inset
+
+ may not satisfy the Uncompensated Law of Demand, we will construct a quasi-line
+ar preference such that the corresponding demand function does not satisfy
+ ULD.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $u(x)=x_{1}+\varphi(x_{2})$
+\end_inset
+
+ where
+\begin_inset Formula 
+\[
+\varphi(x_{2})=\begin{cases}
+1000 & \mbox{if}\ x_{2}=1\\
+0 & \mbox{otherwise}
+\end{cases}
+\]
+
+\end_inset
+
+For the sake of simplicity, we normalize prices so the price of the first
+ commodity is always 1.
+ So, let 
+\begin_inset Formula $p=(1,1)$
+\end_inset
+
+, 
+\begin_inset Formula $p^{\prime}=(1,2)$
+\end_inset
+
+, and 
+\begin_inset Formula $w=2$
+\end_inset
+
+.
+ Maximizing 
+\begin_inset Formula $u(x)$
+\end_inset
+
+ with respect to the given wealth and each set of prices yields 
+\begin_inset Formula $x(p,2)=(1,1)$
+\end_inset
+
+ and 
+\begin_inset Formula $x(p^{\prime},2)=(0,1)$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $x(p,2)\neq x(p^{\prime},2)$
+\end_inset
+
+.
+ Now, since 
+\begin_inset Formula $\Delta p_{1}=0$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray*}
+(p^{\prime}-p)\cdot(x(p^{\prime},2)-x(p,2)) & = & \Delta p_{2}\cdot\Delta x_{2}\\
+ & = & 1\cdot0\\
+ & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+ does not satisfy the uncompensated law of demand.
+\end_layout
+
+\begin_layout Problem
+Construct a strictly convex quasi-linear preference in 
+\begin_inset Formula $\mathbb{R}\times\mathbb{R}_{+}$
+\end_inset
+
+ whose associated demand funciton does not satisfy the ULD.
+\end_layout
+
+\begin_layout Proof
+This problem is equivalent to Part G of Problem 3.
+\end_layout
+
+\begin_layout Problem
+Assume that 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is a Cobb-Douglas preference relation.
+ Provide a direct calculation that shows the associated demand function
+ satisfies the uncompensated law of demand.
+\end_layout
+
+\begin_layout Proof
+Since preferences are Cobb-Douglas, then the demand function associated
+ with these preferences is 
+\begin_inset Formula 
+\[
+x(p,w)=\left[\begin{array}{c}
+\frac{\alpha w}{p_{1}}\\
+\frac{(1-\alpha)w}{p_{2}}
+\end{array}\right]
+\]
+
+\end_inset
+
+Take 
+\begin_inset Formula $\{p,p^{\prime}\}\subseteq\mathbb{R}_{++}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ We prove that
+\begin_inset Formula 
+\[
+(p^{\prime}-p)\cdot(x(p^{\prime},w)-x(p,w))<0
+\]
+
+\end_inset
+
+when 
+\begin_inset Formula $x(p^{\prime},w)\neq x(p,w)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Assume that 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is a Leontief preference relation.
+ Provide a direct calculation that shows the associated demand funciton
+ satisfies the uncompensated law of demand.
+\end_layout
+
+\begin_layout Proof
+Since preferences are Leontief, then the utility function takes the following
+ form
+\begin_inset Formula 
+\[
+u(x_{1},x_{2})\equiv\mbox{min}\{x_{1},x_{2}\}
+\]
+
+\end_inset
+
+Important to note, preferences are monotone and stricly convex, so the demand
+ correspondence is single-valued, and the associated demand function satifies
+ Walras' Law.
+ The demand function is given by:
+\begin_inset Formula 
+\[
+x^{\succsim}(p,w)\equiv\left(\frac{w}{p_{1}+p_{2}},\frac{w}{p_{1}+p_{2}}\right)
+\]
+
+\end_inset
+
+Take 
+\begin_inset Formula $\{p,p^{\prime}\}\subseteq\mathbb{R}_{++}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Now, consider
+\begin_inset Formula 
+\begin{eqnarray*}
+(p^{\prime}-p)\cdot\left[x^{\succsim}(p^{\prime},w)-x^{\succsim}(p,w)\right] & = & (p_{1}^{\prime}-p_{1})\left[\frac{w}{p_{1}^{\prime}+p_{2}^{\prime}}-\frac{w}{p_{1}+p_{2}}\right]+(p_{2}^{\prime}-p_{2})\left[\frac{w}{p_{1}^{\prime}+p_{2}^{\prime}}-\frac{w}{p_{1}+p_{2}}\right]\\
+ & = & \left[\frac{w}{p_{1}^{\prime}+p_{2}^{\prime}}-\frac{w}{p_{1}+p_{2}}\right](p_{1}^{\prime}-p_{1}+p_{2}^{\prime}-p_{2})\\
+ & = & w\left[\frac{p_{1}-p_{1}^{\prime}+p_{2}-p_{2}^{\prime}}{(p_{1}^{\prime}+p_{2}^{\prime})(p_{1}+p_{2})}\right](p_{1}^{\prime}-p_{1}+p_{2}^{\prime}-p_{2})\\
+ & = & -w\frac{(p_{1}+p_{2}-p_{1}^{\prime}-p_{2}^{\prime})^{2}}{(p_{1}^{\prime}+p_{2}^{\prime})(p_{1}+p_{2})}\leq0
+\end{eqnarray*}
+
+\end_inset
+
+with strict inequality if 
+\begin_inset Formula $p_{1}+p_{2}\neq p_{1}^{\prime}+p_{2}^{\prime}\iff x^{\succsim}(p,w)\neq x^{\succsim}(p^{\prime},w)$
+\end_inset
+
+.
+ Thus, the associated demand function of a Leontief preference relation
+ on 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{2}$
+\end_inset
+
+ satisfies the uncompensated law of demand.
+\end_layout
+
+\begin_layout Problem
+(Additional) Let 
+\begin_inset Formula $\omega$
+\end_inset
+
+ be the proportional wealth distribution rule with weights 
+\begin_inset Formula $(\alpha_{i})_{i\in N}$
+\end_inset
+
+.
+ Suppose that individual demand funcitons 
+\begin_inset Formula $(x^{i})_{i\in N}$
+\end_inset
+
+ are the results of the maximizaiton of homothetic preferences.
+ Prove that the Slutsky matrix associated with 
+\begin_inset Formula $AD^{\omega}$
+\end_inset
+
+ evaluated at 
+\begin_inset Formula $(p,\mu)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+, is symmetric and negative semi-definite.
+\end_layout
+
+\begin_layout Proof
+Because this problem is identified as 
+\begin_inset Quotes eld
+\end_inset
+
+Additional,
+\begin_inset Quotes erd
+\end_inset
+
+ it will not be attempted.
+\end_layout
+
+\begin_layout Problem
+This problem is intended to explore how 
+\begin_inset Quotes eld
+\end_inset
+
+fragile
+\begin_inset Quotes erd
+\end_inset
+
+ the Uncompensated Law of Demand is.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be the preference on 
+\begin_inset Formula $\mathbb{R}_{+}^{2}$
+\end_inset
+
+ represented by the utility function
+\begin_inset Formula 
+\[
+u(x_{1},x_{2})\equiv\min\{x_{1},x_{2}\}
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $x^{\succsim}$
+\end_inset
+
+ be the demand function associated with 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+State the Uncompensated Law of Demand.
+\end_layout
+
+\begin_layout Enumerate
+Prove that 
+\begin_inset Formula $x^{\succsim}$
+\end_inset
+
+ satisfies the Uncompensated Law of Demand.
+\end_layout
+
+\begin_layout Enumerate
+Now consider the preference on 
+\begin_inset Formula $\mathbb{R}_{+}^{2}$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\succsim^{m}$
+\end_inset
+
+, represented by the utility function
+\begin_inset Formula 
+\[
+u^{m}(x_{1},x_{2})\equiv\begin{cases}
+\min\{x_{1},x_{2}\} & \mbox{if}\ \min\{x_{1},x_{2}\}\leq1\\
+\min\{x_{1},\frac{1}{m}x_{2}+\frac{m-1}{m}\} & \mbox{if}\ \min\{x_{1},x_{2}\}>1
+\end{cases}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $m\in(0,+\infty)$
+\end_inset
+
+.
+ Prove that for each 
+\begin_inset Formula $m\neq1$
+\end_inset
+
+, the demand function associated with 
+\begin_inset Formula $\succsim^{m}$
+\end_inset
+
+ violates the Uncompensated Law of Demand.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be the preference on 
+\begin_inset Formula $\mathbb{R}_{+}^{2}$
+\end_inset
+
+ represented by the utility function
+\begin_inset Formula 
+\[
+u(x_{1},x_{2})\equiv\min\{x_{1},x_{2}\}
+\]
+
+\end_inset
+
+and let 
+\begin_inset Formula $x^{\succsim}$
+\end_inset
+
+ be the demand function associated with 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+The demand function 
+\begin_inset Formula $x^{\succsim}$
+\end_inset
+
+ satisfies the uncompensated law of demand iff for each pair 
+\begin_inset Formula $\{p,p^{\prime}\}\subseteq\mathbb{R}_{++}^{L}$
+\end_inset
+
+ and each 
+\begin_inset Formula $\mu\in\mathbb{R}_{+}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+(p^{\prime}-p)\cdot\left[x^{\succsim}(p^{\prime},\mu)-x^{\succsim}(p,\mu)\right]\leq0
+\]
+
+\end_inset
+
+with strict inequality when 
+\begin_inset Formula $x^{\succsim}(p^{\prime},\mu)\neq x^{\succsim}(p,\mu)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Since the preferences are Leontief, then they are also monotone and stricly
+ convex, so the demand correspondence is single-valued.
+ In addition, the associated demand function satifies Walras' Law.
+ The demand function is given by:
+\begin_inset Formula 
+\[
+x^{\succsim}(p,w)\equiv\left(\frac{w}{p_{1}+p_{2}},\frac{w}{p_{1}+p_{2}}\right)
+\]
+
+\end_inset
+
+Take 
+\begin_inset Formula $\{p,p^{\prime}\}\subseteq\mathbb{R}_{++}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $w\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ Now, consider
+\begin_inset Formula 
+\begin{eqnarray*}
+(p^{\prime}-p)\cdot\left[x^{\succsim}(p^{\prime},w)-x^{\succsim}(p,w)\right] & = & (p_{1}^{\prime}-p_{1})\left[\frac{w}{p_{1}^{\prime}+p_{2}^{\prime}}-\frac{w}{p_{1}+p_{2}}\right]+(p_{2}^{\prime}-p_{2})\left[\frac{w}{p_{1}^{\prime}+p_{2}^{\prime}}-\frac{w}{p_{1}+p_{2}}\right]\\
+ & = & \left[\frac{w}{p_{1}^{\prime}+p_{2}^{\prime}}-\frac{w}{p_{1}+p_{2}}\right](p_{1}^{\prime}-p_{1}+p_{2}^{\prime}-p_{2})\\
+ & = & w\left[\frac{p_{1}-p_{1}^{\prime}+p_{2}-p_{2}^{\prime}}{(p_{1}^{\prime}+p_{2}^{\prime})(p_{1}+p_{2})}\right](p_{1}^{\prime}-p_{1}+p_{2}^{\prime}-p_{2})\\
+ & = & -w\left[\frac{p_{1}+p_{2}-p_{1}^{\prime}-p_{2}^{\prime}}{(p_{1}^{\prime}+p_{2}^{\prime})(p_{1}+p_{2})}\right]^{2}\leq0
+\end{eqnarray*}
+
+\end_inset
+
+with strict inequality if 
+\begin_inset Formula $p_{1}+p_{2}\neq p_{1}^{\prime}+p_{2}^{\prime}\iff x^{\succsim}(p,w)\neq x^{\succsim}(p^{\prime},w)$
+\end_inset
+
+.
+ Thus, the associated demand function of a Leontief preference relation
+ on 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{2}$
+\end_inset
+
+ satisfies the uncompensated law of demand.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+The demand function associated with 
+\begin_inset Formula $\succsim^{m}$
+\end_inset
+
+ is given by:
+\begin_inset Formula 
+\[
+x(p,w)\equiv\begin{cases}
+\left(\frac{w}{p_{1}+p_{2}},\frac{w}{p_{1}+p_{2}}\right) & \mbox{if}\ w\leq p_{1}+p_{2}\\
+\left(\frac{w+(m-1)p_{2}}{p_{1}+mp_{2}},\frac{mw-(m-1)p_{1}}{p_{1}+mp_{2}}\right) & \mbox{if}\ w>p_{1}+p_{2}
+\end{cases}
+\]
+
+\end_inset
+
+To prove that 
+\begin_inset Formula $x$
+\end_inset
+
+ violates the ULD, we will show that 
+\begin_inset Formula $\Delta p\cdot\Delta x=0$
+\end_inset
+
+ when 
+\begin_inset Formula $\Delta x\neq0$
+\end_inset
+
+ where 
+\begin_inset Formula $\Delta p=p^{\prime}-p$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta x=x(p^{\prime},w)-x(p,w)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+To start, when 
+\begin_inset Formula $w$
+\end_inset
+
+ is large enough, i.e., 
+\begin_inset Formula $w>p_{1}+p_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $w>p_{1}^{\prime}+p_{2}^{\prime}$
+\end_inset
+
+, then 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+ and 
+\begin_inset Formula $x(p^{\prime},w)$
+\end_inset
+
+ should be on the income expansion path which is to the northeast of point
+ 
+\begin_inset Formula $(1,1)$
+\end_inset
+
+.
+ So, for any two points, 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+ and 
+\begin_inset Formula $x(p^{\prime},w)$
+\end_inset
+
+, on that expansion path, we have
+\begin_inset Formula 
+\[
+\frac{\Delta x_{2}}{\Delta x_{1}}=m
+\]
+
+\end_inset
+
+Also, from the optimality condition for preference maximization,
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\Delta p_{1}}{\Delta p_{2}} & = & -\frac{\Delta x_{2}}{\Delta x_{1}}\\
+\frac{\Delta p_{1}}{\Delta p_{2}} & = & -m
+\end{eqnarray*}
+
+\end_inset
+
+Then,
+\begin_inset Formula 
+\begin{eqnarray*}
+\Delta p_{1}\Delta x_{1}+\Delta p_{2}\Delta x_{2} & = & -m\Delta p_{2}\frac{\Delta x_{2}}{m}+\Delta p_{2}\Delta x_{2}\\
+\Delta p_{1}\Delta x_{1}+\Delta p_{2}\Delta x_{2} & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+Now, we need to show 
+\begin_inset Formula $x(p^{\prime},w)\neq x(p,w)$
+\end_inset
+
+, which is equivalent to showing that 
+\begin_inset Formula $x_{1}(p^{\prime},w)\neq x_{1}(p,w)$
+\end_inset
+
+.
+ Note that
+\begin_inset Formula 
+\[
+x_{1}(p,w)=\frac{w+(m-1)p_{2}}{p_{1}+mp_{2}}
+\]
+
+\end_inset
+
+Suppose for contradiction that 
+\begin_inset Formula $x_{1}(p,w)=x_{1}(p^{\prime},w)$
+\end_inset
+
+.
+ Then,
+\begin_inset Formula 
+\[
+\frac{w+(m-1)p_{2}^{\prime}}{p_{1}^{\prime}+mp_{2}^{\prime}}=\frac{w+(m-1)p_{2}}{p_{1}+mp_{2}}\equiv K
+\]
+
+\end_inset
+
+Important to note,
+\begin_inset Formula 
+\[
+\frac{a}{b}=\frac{c}{d}\equiv\frac{a\pm c}{b\pm d}
+\]
+
+\end_inset
+
+as long as 
+\begin_inset Formula $b\pm d\neq0$
+\end_inset
+
+.
+ So, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{(m-1)\Delta p_{2}}{\Delta p_{1}+m\Delta p_{2}} & = & K\\
+(m-1)\Delta p_{2} & = & Km\Delta p_{2}+K\Delta p_{1}\\
+\frac{\Delta p_{1}}{\Delta p_{2}} & = & \frac{(m-1)-Km}{K}\\
+\frac{\Delta p_{1}}{\Delta p_{2}} & = & -m+\frac{m-1}{K}
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\nicefrac{(m-1)}{K}\neq0$
+\end_inset
+
+, then this result contradicts the fact that
+\begin_inset Formula 
+\[
+\frac{\Delta p_{1}}{\Delta p_{2}}=-m
+\]
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $x(p^{\prime},w)\neq x(p,w)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $x$
+\end_inset
+
+ does not satisfy the Uncompensated Law of Demand.
+\end_layout
+
+\begin_layout Remark*
+If Leontief preferences begin at the origin, then the associated demand
+ function satisfies the ULD.
+ If Leontief preferences begin at a different location, then the associated
+ demand function may not satisfy the ULD.
+ Most importantly, the associated demand functions of general Leontief preferenc
+es may not satisfy the ULD.
+\end_layout
+
+\end_body
+\end_document

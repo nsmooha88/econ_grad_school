@@ -1,0 +1,4994 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 3: Consumer Theory
+\end_layout
+
+\begin_layout Standard
+Need to complete: Corollary 5
+\end_layout
+
+\begin_layout Section*
+3.5
+\begin_inset space \quad{}
+\end_inset
+
+Consumer Theory IV: Revealed Preference
+\end_layout
+
+\begin_layout Subsection*
+3.5.8
+\begin_inset space \quad{}
+\end_inset
+
+Expenditure Minimization Problem
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this subsection, we study the following 
+\emph on
+expenditure minimization problem
+\emph default
+ (EMP) for 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+.
+ Also, we implicitly assume that 
+\begin_inset Formula $w>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\forall\ x\in X\equiv\mathbb{R}_{+}^{L}:x\succsim0$
+\end_inset
+
+; these restrictions rule out only uninteresting situaitons.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(81).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ The 
+\series bold
+Expenditure Minimization Problem (EMP)
+\series default
+ associated with 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ at 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is:
+\begin_inset Formula 
+\begin{eqnarray*}
+\min & p\cdot x\\
+\mbox{s.t.} & x\geq0\ \mbox{and}\ x\succsim x^{*}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Whereas the UMP computes the maximal level of utility that can be obtained
+ given wealth 
+\begin_inset Formula $w$
+\end_inset
+
+, the EMP computes the minimal level of wealth required to reach a bundle
+ at least as good as 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+.
+ The EMP is the 
+\begin_inset Quotes eld
+\end_inset
+
+dual
+\begin_inset Quotes erd
+\end_inset
+
+ problem to the UMP.
+ It captures the same aim of efficient use of the consumer's purchasing
+ power while reversing the roles of objective function and constraint.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Geometrically, the optimal consumption bundle of the EMP is the point in
+ the set 
+\begin_inset Formula $\{x\in\mathbb{R}_{+}^{L}:x\succsim x^{*}\}$
+\end_inset
+
+ that lies on the lowest possible budget line associated with the price
+ vector 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(82).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be a set and 
+\begin_inset Formula $f:A\rightarrow\mathbb{R}$
+\end_inset
+
+ a real valued function defined on 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ An element 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ is a 
+\series bold
+minimizer of 
+\begin_inset Formula $f$
+\end_inset
+
+ on 
+\begin_inset Formula $A$
+\end_inset
+
+
+\series default
+ if for each 
+\begin_inset Formula $y\in A$
+\end_inset
+
+, 
+\begin_inset Formula $f(y)\geq f(x)$
+\end_inset
+
+.
+ The set of minimizers of 
+\begin_inset Formula $f$
+\end_inset
+
+ on 
+\begin_inset Formula $A$
+\end_inset
+
+ is denoted 
+\begin_inset Formula $\arg\min_{x\in A}f(x)$
+\end_inset
+
+, or alternatively 
+\begin_inset Formula $\arg\min\left\{ f(x):x\in A\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset space \quad{}
+\end_inset
+
+
+\series default
+As with the UMP, when 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ a solution to the EMP exists under very general conditions.
+ The constraint set merely needs to be nonempty; that is, the upper contour
+ set of 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ needs to be nonempty.
+ From now on, we assume that this is so.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now proceed to study the optimal consumption vector and the value function
+ of the EMP.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(83).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+ represented by a utility function 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ The 
+\series bold
+Hicksian (compensated) demand correspondence
+\series default
+, denoted 
+\begin_inset Formula $h$
+\end_inset
+
+, is defined by:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+h: & \mathbb{R}_{++}^{L}\times\mathbb{R}_{+}^{L} & \rightarrow & \mathbb{\mathbb{R}}\\
+ & (p,x^{*}) & \mapsto & h(p,x^{*})\equiv{\displaystyle \arg\min_{x\geq0,x\succsim x^{*}}}\ p\cdot x
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Proposition 21 describes the formal relationship between the EMP and the
+ UMP.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(21).
+
+\series default
+ 
+\emph on
+Suppose that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is a locally non-satiated and continuous preference relation defined on
+ 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+ .
+ Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+.
+ Then, for each 
+\begin_inset Formula $w>0$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+x^{*}\in C^{\succsim}(p,w)\iff\left[p\cdot x^{*}=w\ \wedge\ x^{*}\in h(p,x^{*})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated and continuous preference relation defined on
+ 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $x^{*}\in C^{\succsim}(p,w)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is locally non-satiated, then Walras' Law holds, and thus, 
+\begin_inset Formula $p\cdot x^{*}=w$
+\end_inset
+
+.
+ We claim that 
+\begin_inset Formula $x^{*}\in h(p,x^{*})$
+\end_inset
+
+.
+ Suppose for contradiction that 
+\begin_inset Formula $x^{*}\notin h(p,x^{*})$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\exists\ x^{\prime}\ge0,\ x^{\prime}\succsim x^{*}:p\cdot x^{\prime}<p\cdot x^{*}=w$
+\end_inset
+
+.
+ This implies that 
+\begin_inset Formula $x^{\prime}\in\mbox{Int}(B(p,w))$
+\end_inset
+
+, which is an open set by definition.
+ Since 
+\begin_inset Formula $\mbox{Int}(B(p,w))$
+\end_inset
+
+ is an open set, then 
+\begin_inset Formula $\exists\ \epsilon>0:B_{\epsilon}^{X}(x^{\prime})\subseteq\mbox{Int}(B(p,w))$
+\end_inset
+
+.
+ By local non-satiation of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $\exists\ y\in B_{\epsilon}^{X}(x^{\prime}):y\succ x^{\prime}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $y\in B_{\epsilon}^{X}(x^{\prime})\subseteq\mbox{Int}(B(p,w))$
+\end_inset
+
+, then 
+\begin_inset Formula $y\in\mbox{Int}(B(p,w))$
+\end_inset
+
+.
+ By transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $y\succ x^{\prime}\succsim x^{*}\implies y\succ x^{*}$
+\end_inset
+
+.
+ So, we have 
+\begin_inset Formula $y\in B(p,w)$
+\end_inset
+
+ and 
+\begin_inset Formula $y\succ x^{*}$
+\end_inset
+
+.
+ However, this contradicts the fact that 
+\begin_inset Formula $x^{*}\in C^{\succsim}(p,w)$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Thus, our claim is true, so 
+\begin_inset Formula $p\cdot x^{*}=w$
+\end_inset
+
+ and 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x^{*}\in h(p,x^{*})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $p\cdot x^{*}=w$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{*}\in h(p,x^{*})$
+\end_inset
+
+.
+ We claim that 
+\begin_inset Formula $x^{*}\in C^{\succsim}(p,w)$
+\end_inset
+
+.
+ Suppose for contradiction that 
+\begin_inset Formula $x^{*}\notin C^{\succsim}(p,w)$
+\end_inset
+
+, so 
+\begin_inset Formula $\exists\ x^{\prime}\in B(p,w):x^{\prime}\succ x^{*}$
+\end_inset
+
+.
+ This implies that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x^{\prime}\in U(\succ,x^{*})$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ By Corollary 1, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous on 
+\begin_inset Formula $X$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\forall\ x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succ,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succ,x)$
+\end_inset
+
+ are open in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $U(\succ,x^{*})$
+\end_inset
+
+ is open, then 
+\begin_inset Formula $\exists\ \alpha\in(0,1):\alpha x^{\prime}\in U(\succ,x^{*})$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $x^{\prime\prime}\equiv\alpha x^{\prime}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\tilde{x}\succ x^{*}$
+\end_inset
+
+.
+ Now, if 
+\begin_inset Formula $x^{\prime}=0$
+\end_inset
+
+, then we have 
+\begin_inset Formula $0\succ x^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $p\cdot0<w=p\cdot x^{*}$
+\end_inset
+
+.
+ However, this contradicts the fact that 
+\begin_inset Formula $x^{*}\in h(p,x^{*})$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ On the other hand, if 
+\begin_inset Formula $x^{\prime}\neq0$
+\end_inset
+
+, then 
+\begin_inset Formula $x^{\prime}\gneq x^{\prime\prime}$
+\end_inset
+
+.
+ So, for 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+, 
+\begin_inset Formula $p\cdot x^{\prime\prime}<p\cdot x^{\prime}$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $x^{\prime\prime}\succ x^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $p\cdot x^{\prime\prime}<p\cdot x^{\prime}\leq w=p\cdot x^{*}$
+\end_inset
+
+.
+ However, this also contradicts the fact that 
+\begin_inset Formula $x^{*}\in h(p,x^{*})$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $x^{*}\in C^{\succsim}(p,w)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+The Expenditure Function
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Given prices 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and required level 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, the value of the EMP is denoted 
+\begin_inset Formula $e(p,x^{*})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(84).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ The 
+\series bold
+expenditure function
+\series default
+, denoted 
+\begin_inset Formula $e$
+\end_inset
+
+, is defined by:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+e: & \mathbb{R}_{++}^{L}\times\mathbb{R}_{+}^{L} & \rightarrow & \mathbb{R}\\
+ & (p,x^{*}) & \mapsto & e(p,x^{*})\equiv{\displaystyle \min_{x\geq0,x\succsim x^{*}}}\ p\cdot x
+\end{array}
+\]
+
+\end_inset
+
+
+\emph default
+The value for any 
+\begin_inset Formula $(p,x^{*})$
+\end_inset
+
+ is simply 
+\begin_inset Formula $p\cdot h(p,x^{*})$
+\end_inset
+
+, where 
+\begin_inset Formula $h(p,x^{*})$
+\end_inset
+
+ is any solution to the EMP.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Proposition 21 allows us to make an important connection between the expenditure
+ function and the indirect utility function developed in Section 3.5.6.
+\end_layout
+
+\begin_layout Corollary*
+
+\series bold
+\shape up
+(5).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated and continuous preference relation on 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{L}$
+\end_inset
+
+ that induces a single valued choice correspondence 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $h$
+\end_inset
+
+ is single valued and for each 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+, each 
+\begin_inset Formula $w>0$
+\end_inset
+
+, and each 
+\begin_inset Formula $x^{*}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $e(p,x^{*})=p\cdot h(p,x^{*})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $e(p,x(p,w))=w$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $h(p,x^{*})=x(p,e(p,x^{*}))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x(p,w)=h(p,x(p,w))$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Will prove.
+\end_layout
+
+\begin_layout Standard
+In particular, for any 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+, 
+\begin_inset Formula $w>0$
+\end_inset
+
+, and 
+\begin_inset Formula $x\succsim0$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{equation}
+e(p,x(p,w))=w\ \mbox{and}\ V^{u}(p,e(p,x(p,w)))=u(x(p,w))
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $x(p,w)\in\arg\max_{x\in B(p,w)}u(x)$
+\end_inset
+
+.
+ These conditions imply that for a fixed price vector 
+\begin_inset Formula $\bar{p}$
+\end_inset
+
+, 
+\begin_inset Formula $e(\bar{p},\cdot)$
+\end_inset
+
+ and 
+\begin_inset Formula $V^{u}(\bar{p},\cdot)$
+\end_inset
+
+ are inverses to one another.
+ There is a direct correspondence between the properties of the expenditure
+ function and the indirect utility function.
+ They both capture the same underlying features of the consumer's choice
+ problem.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The result in Proposition 22 descrives the basic properties of the expenditure
+ function.
+ It parallels Proposition 20's characterization of the properties of the
+ indirect utility function for the UMP.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(22).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated and continuous preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $e$
+\end_inset
+
+ is:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Homogeneous of degree one in 
+\begin_inset Formula $p$
+\end_inset
+
+, i.e., for each 
+\begin_inset Formula $x^{*}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and each 
+\begin_inset Formula $\alpha\in\mathbb{R}_{++}$
+\end_inset
+
+, 
+\begin_inset Formula $e(\alpha p,x^{*})=\alpha e(p,x^{*})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Non-decreasing in each price component.
+\end_layout
+
+\begin_layout Enumerate
+Strictly increasing in 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, i.e., if 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+, then 
+\begin_inset Formula $e(p,x)\geq e(p,y)$
+\end_inset
+
+; if 
+\begin_inset Formula $x\succ y$
+\end_inset
+
+, then 
+\begin_inset Formula $e(p,x)>e(p,y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Concave in 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Continuous in 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated and continuous preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+The constraint set of the EMP is unchanged when prices change.
+ Thus, for any scalar 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+, minimizing 
+\begin_inset Formula $(\alpha p)\cdot x$
+\end_inset
+
+ on this set leads to the same optimal consumption bundles as minimizing
+ 
+\begin_inset Formula $p\cdot x$
+\end_inset
+
+.
+ Letting 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ be optimal in both circumstances, we have 
+\begin_inset Formula $e(\alpha p,x^{*})=\alpha p\cdot x^{*}=\alpha e(p,x^{*})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+To show that 
+\begin_inset Formula $e(p,x)$
+\end_inset
+
+ is non-decreasing in 
+\begin_inset Formula $p_{l}$
+\end_inset
+
+ , suppose that price vectors 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $p$
+\end_inset
+
+ have 
+\begin_inset Formula $p_{l}^{\prime}\geq p_{l}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{k}^{\prime}=p_{k}$
+\end_inset
+
+ for all 
+\begin_inset Formula $k\neq l$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $p^{\prime}\gneq p$
+\end_inset
+
+.
+ We also hold 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ fixed at 
+\begin_inset Formula $\bar{x}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ be an optimizing vector in the EMP for prices 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $e(p^{\prime},\bar{x})=p^{\prime}\cdot x^{\prime}\geq p\cdot x^{\prime}\geq e(p,\bar{x})$
+\end_inset
+
+, where the latter inequality follows from the definition of 
+\begin_inset Formula $e(p,\bar{x})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Assume 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $e(p,x)\geq e(p,y)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x^{*}\in h(p,x)$
+\end_inset
+
+.
+ By definition, 
+\begin_inset Formula $e(p,x)=p\cdot x^{*}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $x^{*}\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{*}\succsim x$
+\end_inset
+
+.
+ By transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $x^{*}\succsim x\succsim y\implies x^{*}\succsim y$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $p\cdot x^{*}\geq e(p,y)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Assume 
+\begin_inset Formula $x\succ y$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $e(p,x)>e(p,y)$
+\end_inset
+
+.
+ Suppose for contradiction 
+\begin_inset Formula $e(p,x)\leq e(p,y)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+ denote optimal consumption bundles for required levels 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+, respectively, where 
+\begin_inset Formula $0<p\cdot x^{*}\leq p\cdot y^{*}$
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+We show that 
+\begin_inset Formula $p\cdot x^{*}>0$
+\end_inset
+
+.
+ Suppose not.
+ Since 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{*}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+, then 
+\begin_inset Formula $p\cdot x^{*}=0$
+\end_inset
+
+, so 
+\begin_inset Formula $x^{*}=0$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x^{*}\in h(p,x)$
+\end_inset
+
+, then 
+\begin_inset Formula $0\succsim x$
+\end_inset
+
+.
+ By transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $0\succsim x\succ y\implies0\succ y$
+\end_inset
+
+.
+ By definition of 
+\begin_inset Formula $e(p,y)$
+\end_inset
+
+, 
+\begin_inset Formula $p\cdot0\geq p\cdot y$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $y=0$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $0\succ0$
+\end_inset
+
+, but this is a contradiction 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ By transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $x^{*}\succsim x\succ y\implies x^{*}\succ y$
+\end_inset
+
+, and thus, 
+\begin_inset Formula $x^{*}\in U(\succ,y)$
+\end_inset
+
+.
+ By Corollary 1, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous on 
+\begin_inset Formula $X$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\forall\ x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succ,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succ,x)$
+\end_inset
+
+ are open in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $U(\succ,y)$
+\end_inset
+
+ is open, then 
+\begin_inset Formula $\exists\ \alpha\in(0,1):\alpha x^{*}\in U(\succ,y)$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $\tilde{x}\equiv\alpha x^{*}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\tilde{x}\succ y$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $p\cdot x^{*}>0$
+\end_inset
+
+ and 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+, then 
+\begin_inset Formula $x^{*}\neq0$
+\end_inset
+
+, and thus, 
+\begin_inset Formula $\tilde{x}\neq0$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $x^{*}\gneq\tilde{x}$
+\end_inset
+
+, so for 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+, 
+\begin_inset Formula $p\cdot\tilde{x}<p\cdot x^{*}$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\tilde{x}\succ y$
+\end_inset
+
+ and 
+\begin_inset Formula $p\cdot\tilde{x}<p\cdot x^{*}\leq p\cdot y^{*}$
+\end_inset
+
+.
+ However, this contradicts the fact that 
+\begin_inset Formula $y^{*}\in h(p,y)$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $e(p,x)>e(p,y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part D.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+We prove that 
+\begin_inset Formula $e$
+\end_inset
+
+ is concave in 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x^{*}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+, 
+\begin_inset Formula $p^{\prime}\gg0$
+\end_inset
+
+, and 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+.
+ We want to show that
+\begin_inset Formula 
+\[
+e(\alpha p+(1-\alpha)p^{\prime},x^{*})\geq\alpha e(p,x^{*})+(1-\alpha)e(p^{\prime},x^{*})
+\]
+
+\end_inset
+
+By definition, 
+\begin_inset Formula $e(\alpha p+(1-\alpha)p^{\prime},x^{*})=(\alpha p+(1-\alpha)p^{\prime})\cdot y$
+\end_inset
+
+ where 
+\begin_inset Formula $y\in h(\alpha p+(1-\alpha)p^{\prime},x^{*})$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $y\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $y\succsim x^{*}$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $e(p,x^{*})\leq p\cdot y$
+\end_inset
+
+ and 
+\begin_inset Formula $e(p^{\prime},x^{*})\leq p^{\prime}\cdot y$
+\end_inset
+
+, so we have
+\begin_inset Formula 
+\[
+\alpha p\cdot y+(1-\alpha)p^{\prime}\cdot y\geq\alpha e(p,x^{*})+(1-\alpha)e(p^{\prime},x^{*})
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\alpha p\cdot y+(1-\alpha)p^{\prime}\cdot y=e(\alpha p+(1-\alpha)p^{\prime},x^{*})$
+\end_inset
+
+, then we have proved our desired result.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part E.
+\end_layout
+
+\begin_layout Proof
+We forgo the proof of continuity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The concavity of 
+\begin_inset Formula $e(p,x^{*})$
+\end_inset
+
+ in 
+\begin_inset Formula $p$
+\end_inset
+
+ for given 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, which is a very important property, is actually fairly intuitive.
+ Suppose that we initially have prices 
+\begin_inset Formula $\bar{p}$
+\end_inset
+
+ and that 
+\begin_inset Formula $\bar{x}$
+\end_inset
+
+ is an optimal consumption vector at these prices in the EMP.
+ If prices change, but we do not let the consumer change her consumption
+ levels from 
+\begin_inset Formula $\bar{x}$
+\end_inset
+
+, then the resulting expenditure will be 
+\begin_inset Formula $p\cdot\bar{x}$
+\end_inset
+
+, which is a 
+\emph on
+linear
+\emph default
+ expression in 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ But when the consumer can adjust her consumption, as in the EMP, her minimized
+ expenditure level can be no greater than this amount.
+\end_layout
+
+\begin_layout Subsubsection*
+The Hicksian (or Compensated) Demand Correspondence
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The set of optimal commodity vectors in the EMP is denoted 
+\begin_inset Formula $h(p,x^{*})\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+, and is known as the 
+\emph on
+Hicksian
+\emph default
+, or 
+\emph on
+compensated
+\emph default
+, 
+\emph on
+demand correspondence
+\emph default
+, or 
+\emph on
+function
+\emph default
+ if single-valued.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Three basic properties of the Hicksian demand are given in Proposition 23,
+ which parallels Proposition 18 for Walrasian demand.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(23).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a continuous and locally non-satiated preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Then, for each 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+, 
+\begin_inset Formula $h$
+\end_inset
+
+ is:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Homogeneous of degree zero in 
+\begin_inset Formula $p$
+\end_inset
+
+, i.e., for each 
+\begin_inset Formula $x^{*}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and each 
+\begin_inset Formula $\alpha\in\mathbb{R}_{++}$
+\end_inset
+
+, 
+\begin_inset Formula $h(\alpha p,x^{*})=h(p,x^{*})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+No excess utility: 
+\begin_inset Formula $\forall\ x\in h(p,x^{*}):x\sim x^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is convex, then 
+\begin_inset Formula $h$
+\end_inset
+
+ is convex-valued; if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is strictly convex, then 
+\begin_inset Formula $h$
+\end_inset
+
+ is single-valued.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a continuous and locally non-satiated preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Homogeneity of degree zero in 
+\begin_inset Formula $p$
+\end_inset
+
+ follows because the optimal vector when minimizing 
+\begin_inset Formula $p\cdot x$
+\end_inset
+
+ subject to 
+\begin_inset Formula $x\succsim x^{*}$
+\end_inset
+
+ is the same as that for minimizing 
+\begin_inset Formula $\alpha p\cdot x$
+\end_inset
+
+ subject to this same constraint, for any scalar 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+This property follows from continuity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ We want to prove that 
+\begin_inset Formula $\forall\ x\in h(p,x^{*}):x\sim x^{*}$
+\end_inset
+
+.
+ Suppose 
+\begin_inset Formula $\exists\ x^{\prime}\in h(p,x^{*}):\neg(x^{\prime}\sim x^{*})$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\neg(x^{\prime}\succsim x^{*})$
+\end_inset
+
+ or 
+\begin_inset Formula $\neg(x^{*}\succsim x)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x^{\prime}\succsim x^{*}$
+\end_inset
+
+ must be true for 
+\begin_inset Formula $x^{\prime}\in h(p,x^{*})$
+\end_inset
+
+, then we have 
+\begin_inset Formula $\neg(x^{*}\succsim x^{\prime})$
+\end_inset
+
+.
+ By definition of 
+\begin_inset Formula $\succ$
+\end_inset
+
+, 
+\begin_inset Formula $\left[x^{\prime}\succsim x^{*}\ \wedge\ \neg(x^{*}\succsim x^{\prime})\right]\iff x^{\prime}\succ x^{*}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $x^{\prime}\in U(\succ,x^{*})$
+\end_inset
+
+.
+ Also, by transitiviy of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $x^{\prime}\succ x^{*}\succsim0\implies x^{\prime}\succ0^{*}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $x^{\prime}\neq0$
+\end_inset
+
+, and since 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+, then 
+\begin_inset Formula $p\cdot x^{\prime}>0$
+\end_inset
+
+.
+ Now, by Corollary 1, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous if and only if 
+\begin_inset Formula $\forall\ x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succ,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succ,x)$
+\end_inset
+
+ are open in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $U(\succ,x^{*})$
+\end_inset
+
+ is open, then 
+\begin_inset Formula $\exists\ \alpha\in(0,1):\alpha x^{\prime}\in U(\succ,x^{*})$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $x^{\prime\prime}\equiv\alpha x^{\prime}$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $x^{\prime\prime}\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{\prime\prime}\succ x^{*}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $x^{\prime}\gneq x^{\prime\prime}$
+\end_inset
+
+, then 
+\begin_inset Formula $p\cdot x^{\prime\prime}<p\cdot x^{\prime}$
+\end_inset
+
+ for 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $x^{\prime\prime}\succ x^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $p\cdot x^{\prime\prime}<p\cdot x^{\prime}$
+\end_inset
+
+.
+ But this contradicts 
+\begin_inset Formula $x^{\prime}\in h(p,x^{*})$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\forall\ x\in h(p,x^{*}):x\sim x^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Assume 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is convex.
+ Take 
+\begin_inset Formula $(p,x^{*})\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $h(p,x^{*})$
+\end_inset
+
+ is convex, i.e., 
+\begin_inset Formula $\forall\ \{x,x^{\prime}\}\subseteq h(p,x^{*}),\ \forall\ \alpha\in[0,1]:\alpha x+(1-\alpha)x^{\prime}\in h(p,x^{*})$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\{x,x^{\prime}\}\subseteq h(p,x^{*})$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $p\cdot x=p\cdot x^{\prime}$
+\end_inset
+
+, 
+\begin_inset Formula $x\succsim x^{*}$
+\end_inset
+
+, and 
+\begin_inset Formula $x^{\prime}\succsim x^{*}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x\succsim x^{*}\ \wedge\ x^{\prime}\succsim x^{*}\implies\{x,x^{\prime}\}\subseteq U(\succsim,x^{*})$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+, and let 
+\begin_inset Formula $x^{\prime\prime}=\alpha x+(1-\alpha)x^{\prime}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is convex, then 
+\begin_inset Formula $U(\succsim,x^{*})$
+\end_inset
+
+ is convex, so 
+\begin_inset Formula $x^{\prime\prime}\in U(\succsim,x^{*})$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $p\cdot x^{\prime\prime}=\alpha p\cdot x+(1-\alpha)p\cdot x^{\prime}=p\cdot x=p\cdot x^{\prime}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $x^{\prime\prime}\in h(p,x^{*})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Assume next that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is strictly convex.
+ Suppose for contradiction that 
+\begin_inset Formula $\exists\ (p,x^{*})\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $h(p,x^{*})$
+\end_inset
+
+ is not single-valued.
+ So, take 
+\begin_inset Formula $\{x,x^{\prime}\}\subseteq h(p,x^{*}):x\neq x^{\prime}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $p\cdot x=p\cdot x^{\prime}$
+\end_inset
+
+, 
+\begin_inset Formula $x\succsim x^{*}$
+\end_inset
+
+, and 
+\begin_inset Formula $x^{\prime}\succsim x^{*}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete, then 
+\begin_inset Formula $x\succsim x^{\prime}$
+\end_inset
+
+ or 
+\begin_inset Formula $x^{\prime}\succsim x$
+\end_inset
+
+.
+ Without loss of generality, let 
+\begin_inset Formula $x\succsim x^{\prime}$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+ and let 
+\begin_inset Formula $x^{\prime\prime}=\alpha x+(1-\alpha)x^{\prime}$
+\end_inset
+
+, where 
+\begin_inset Formula $p\cdot x^{\prime\prime}=p\cdot x=p\cdot x^{\prime}$
+\end_inset
+
+.
+ Now, by strict convexity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $\{x,x^{\prime}\}\subseteq U(\succsim,x^{\prime})\implies x^{\prime\prime}\succ x^{\prime}$
+\end_inset
+
+, and thus, 
+\begin_inset Formula $x^{\prime\prime}\in U(\succ,x^{\prime})$
+\end_inset
+
+.
+ Also, by transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $x^{\prime\prime}\succ x^{\prime}\succsim0\implies x^{\prime\prime}\succ0$
+\end_inset
+
+, so 
+\begin_inset Formula $x^{\prime\prime}\neq0$
+\end_inset
+
+.
+ By Corollary 1, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous if and only if 
+\begin_inset Formula $\forall\ x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succ,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succ,x)$
+\end_inset
+
+ are open.
+ Since 
+\begin_inset Formula $U(\succ,x^{\prime})$
+\end_inset
+
+ is open, then 
+\begin_inset Formula $\exists\ \beta\in(0,1):\beta x^{\prime\prime}\in U(\succ,x^{\prime})$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $\beta x^{\prime\prime}\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta x^{\prime\prime}\succ x^{\prime}$
+\end_inset
+
+.
+ By transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $\beta x^{\prime\prime}\succ x^{\prime}\succsim x^{*}\implies\beta x^{\prime\prime}\succ x^{*}$
+\end_inset
+
+.
+ Also, since 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{\prime\prime}\gneq\beta x^{\prime\prime}$
+\end_inset
+
+, then 
+\begin_inset Formula $p\cdot(\beta x^{\prime\prime})<p\cdot x^{\prime\prime}=p\cdot x^{\prime}$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\beta x^{\prime\prime}\succ x^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $p\cdot\left(\beta x^{\prime\prime}\right)<p\cdot x^{\prime}$
+\end_inset
+
+.
+ But this contradicts 
+\begin_inset Formula $x^{\prime}\in h(p,x^{*})$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $h(p,x^{*})$
+\end_inset
+
+ is single-valued.
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Using Proposition 21, Corollary 5 also related the Hicksian and Walrasian
+ demand correspondences as follows:
+\begin_inset Formula 
+\begin{equation}
+h(p,x^{*})=x(p,e(p,x^{*}))\ \mbox{and}\ x(p,w)=h(p,x(p,w))
+\end{equation}
+
+\end_inset
+
+The first of these relations explains the use of the term 
+\emph on
+compensated demand correspondence
+\emph default
+ to describe 
+\begin_inset Formula $h(p,x^{*})$
+\end_inset
+
+: As prices vary, 
+\begin_inset Formula $h(p,x^{*})$
+\end_inset
+
+ gives precisely the level of demand that would arise if the consumer's
+ wealth were simultaneously adjust to keep her utility level at 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+.
+ This type of wealth compensation is known as 
+\emph on
+Hicksian wealth compensation
+\emph default
+.
+ For example, in 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{2}$
+\end_inset
+
+, let the consumer's initial situation be the price-wealth pair 
+\begin_inset Formula $(p,w)$
+\end_inset
+
+ and then have prices change to 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+, where 
+\begin_inset Formula $p_{1}^{\prime}=p_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{2}^{\prime}>p_{2}$
+\end_inset
+
+.
+ The Hicksian wealth compensation is the amount 
+\begin_inset Formula $\Delta w_{Hicks}=e(p^{\prime},x^{*})-w$
+\end_inset
+
+.
+ Thus, the demand function 
+\begin_inset Formula $h(p,x^{*})$
+\end_inset
+
+ keeps the consumer's utility level fixed as prices change, in contrast
+ with the Walrasian demand function, which keeps money wealth fixed bu allows
+ utility to vary.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As with the value functions of the EMP and UMP, the relations of the corresponde
+nces in Corollary 5 allow us to develop tight linkage between the properties
+ of the Hicksian demand correspondence 
+\begin_inset Formula $h(p,x^{*})$
+\end_inset
+
+ and the Walrasian demand correspondence 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Hicksian Demand and the Compensated Law of Demand
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An important property of Hicksian demand is that it satisfies the 
+\emph on
+compensated law of demand
+\emph default
+: Demand and price move in opposite directions for price changes that are
+ accompanied by Hicksian wealth compensation.
+ In Proposition 24, we prove this fact for the case of single-valued Hicksian
+ demand.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(24).
+
+\series default
+\emph on
+ Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated and continuous preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $h$
+\end_inset
+
+ is single valued, then it satisfies the compensated law of demand.
+ That is, for any two price vectors, 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $p^{\prime}\gg0$
+\end_inset
+
+, and each 
+\begin_inset Formula $x^{*}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\left[p^{\prime}-p\right]\cdot\left[h(p^{\prime},x^{*})-h(p,x^{*})\right]\leq0
+\]
+
+\end_inset
+
+with strict inequality whenever 
+\begin_inset Formula $h(p^{\prime},x^{*})\neq h(p,x^{*})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+For any 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+, consumption bundle 
+\begin_inset Formula $h(p,x^{*})$
+\end_inset
+
+ is optimal in the EMP, and so it achieves a lower expenditure at prices
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ than any other budle that offers a level of at least 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+.
+ Therefore, we have
+\begin_inset Formula 
+\[
+p^{\prime}\cdot h(p^{\prime},x^{*})\leq p^{\prime}\cdot h(p,x^{*})
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+p\cdot h(p,x^{*})\leq p\cdot h(p^{\prime},x^{*})
+\]
+
+\end_inset
+
+Now, consider
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[p^{\prime}-p\right]\cdot\left[h(p^{\prime},x^{*})-h(p,x^{*})\right] & = & p^{\prime}\cdot h(p^{\prime},x^{*})-p^{\prime}h(p,x^{*})-p\cdot h(p^{\prime},x^{*})+p\cdot h(p,x^{*})\\
+ & = & \left[p^{\prime}\cdot h(p^{\prime},x^{*})-p^{\prime}\cdot h(p,x^{*})\right]+\left[p\cdot h(p,x^{*})-p\cdot h(p^{\prime},x^{*})\right]
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $p^{\prime}\cdot h(p^{\prime},x^{*})-p^{\prime}\cdot h(p,x^{*})\leq0$
+\end_inset
+
+ and 
+\begin_inset Formula $p\cdot h(p,x^{*})-p\cdot h(p^{\prime},x^{*})\leq0$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+(p^{\prime}-p)\cdot(h(p^{\prime},x^{*})-h(p,x^{*}))\leq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+One immediate implication of Proposition 24 is that for compensated demand,
+ own-price effects are nonpositive.
+ In particular, if only 
+\begin_inset Formula $p_{l}$
+\end_inset
+
+ changes, Proposition 24 implies that 
+\begin_inset Formula $(p_{l}^{\prime}-p_{l})[h_{l}(p^{\prime},x^{*})-h_{l}(p,x^{*})]\leq0$
+\end_inset
+
+.
+ The comparable statement is 
+\emph on
+not 
+\emph default
+true for Walrasian demand.
+ Walrasian demand need not satisfy the law of demand.
+ For example, the demand for a good can decrease when its price falls.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Here and in preceding subsections, we have derived several basic properties
+ of the Walrasian and Hicksian demand functions, the indirect utility function,
+ and the expenditure functions.
+ We now continue our exploration of results flowing from the UMP and the
+ EMP.
+ The investigation in the next subsections concern three relationships:
+ that between the Hicksian demand function and the expenditure function,
+ that between the Hicksian and Walrasian demand functions, and that between
+ the Walrasian demand function and the indirect utility function.
+\end_layout
+
+\begin_layout Subsubsection*
+Hicksian Demand and the Expenditure Function
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+From knowledge of the Hicksian demand function, the expenditure function
+ readily be calculated as 
+\begin_inset Formula $e(p,x^{*})=p\cdot h(p,x^{*})$
+\end_inset
+
+.
+ The important result shown in Proposition 25 establishes a more significant
+ link between the two concepts that runs in the opposite direction.
+ Given the expenditure function, we can calculate the consumer's Hicksian
+ demand function simply by differentiating.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(25).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated and continuous preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x^{*}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $h(\cdot,x^{*})$
+\end_inset
+
+ is single-valued.
+ Then, 
+\begin_inset Formula $e$
+\end_inset
+
+ is differentiable with respect to prices and for each 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and each 
+\begin_inset Formula $l\in\{1,\ldots,L\}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\frac{\partial e(p,x^{*})}{\partial p_{l}}=h_{l}(p,x^{*})
+\]
+
+\end_inset
+
+or in matrix notation,
+\begin_inset Formula 
+\[
+D_{p}e(p,x^{*})=h(p,x^{*})^{T}
+\]
+
+\end_inset
+
+
+\shape default
+\emph default
+[In alternative gradient notation, this equality is 
+\begin_inset Formula $\nabla_{p}e(p,x^{*})=h(p,x^{*})$
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Proof
+We present two methods to proving this proposition.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Method 1
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $e$
+\end_inset
+
+ is differentiable, then the function 
+\begin_inset Formula $p^{\prime}\in\mathbb{R}_{++}^{L}\mapsto\varphi(p^{\prime})\equiv p^{\prime}\cdot h(p,x^{*})-e(p^{\prime},x^{*})$
+\end_inset
+
+ is differentiable and has minimum at 
+\begin_inset Formula $p^{\prime}=p$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $D_{p}\varphi(p)=h(p,x^{*})^{T}-D_{p}e(p,x^{*})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Method 2
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+The expenditure function is given by
+\begin_inset Formula 
+\[
+e(p,x^{*})={\displaystyle \min_{h\succsim x^{*}}\ p\cdot h\ ={\displaystyle \min_{u(h)\ge u(x^{*})}}\ p\cdot h}
+\]
+
+\end_inset
+
+while the Lagrangian of the expenditure minimization problem is
+\begin_inset Formula 
+\[
+L(p,x^{*},h)=p\cdot h+\lambda(u(h)-u(x^{*}))
+\]
+
+\end_inset
+
+By the Envelope Theorem
+\begin_inset Formula 
+\begin{eqnarray*}
+D_{p}e(p,x^{*}) & = & D_{p}L(p,x^{*},h(p,x^{*}))\\
+D_{p}e(p,x^{*}) & = & h(p,x^{*})^{T}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The idea behind the two proofs is the same: If we are at an optimum in the
+ EMP, the changes in demand caused by price changes have no first-order
+ effect on the consumer's expenditure.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Proposition 26 summarizes several properties of the price derivatives of
+ the Hicksian demand function 
+\begin_inset Formula $D_{p}h(p,x^{*})$
+\end_inset
+
+ that are implied by Proposition 25 [properties (i) to (iii)].
+ It also records one additional fact about these derivatives [property (iv)].
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(26).
+ 
+\series default
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated and continuous preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x^{*}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $h(\cdot,x^{*})$
+\end_inset
+
+ is single-valued and 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+.
+ Then, for each 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $D_{p}h(p,x^{*})=D_{p}^{2}e(p,x^{*})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D_{p}h(p,x^{*})$
+\end_inset
+
+ is symmetric.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D_{p}h(p,x^{*})$
+\end_inset
+
+ is negative semi-definite.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D_{p}h(p,x^{*})p=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+A function is 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ if its first derivatives exist and are continuous functions.
+ Since 
+\begin_inset Formula $h$
+\end_inset
+
+ is 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+, then 
+\begin_inset Formula $e$
+\end_inset
+
+ is 
+\begin_inset Formula $C^{2}$
+\end_inset
+
+.
+ By the definition of the Hessian Matrix,
+\begin_inset Formula 
+\[
+D_{p}^{2}e(p,x^{*})=D_{p}\left[\nabla_{p}e(p,x^{*})\right]
+\]
+
+\end_inset
+
+By Proposition 25, 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\nabla_{p}e(p,x^{*})=h(p,x^{*})$
+\end_inset
+
+, so
+\begin_inset Formula 
+\[
+D_{p}^{2}e(p,x^{*})=D_{p}h(p,x^{*})
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $e(p,x^{*})$
+\end_inset
+
+ is a twice continuously differentiable concave function, then it has a
+ symmetric and negative semi-definite Hessian Matrix.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Finally, for property (d), note that because 
+\begin_inset Formula $h(p,x^{*})$
+\end_inset
+
+ is homogeneous of degree zero in 
+\begin_inset Formula $p$
+\end_inset
+
+, 
+\begin_inset Formula $h(\alpha p,x^{*})-h(p,x^{*})=0$
+\end_inset
+
+ for 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+.
+ Differentiating this expression with respect to 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ yields 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $D_{p}h(\alpha p,x^{*})p=0$
+\end_inset
+
+ by the chain rule.
+ Evaluating at 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+ gives our desired result.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The negative semidefiniteness of 
+\begin_inset Formula $D_{p}h(p,x^{*})$
+\end_inset
+
+ is the differential analog of the compensated law of demand.
+ In particular, the differential version is 
+\begin_inset Formula $dp\cdot dh(p,x^{*})\leq0$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $dh(p,x^{*})=D_{p}h(p,x^{*})dp$
+\end_inset
+
+, substituting gives 
+\begin_inset Formula $dp\cdot D_{p}h(p,x^{*})dp\leq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $dp$
+\end_inset
+
+; therefore, 
+\begin_inset Formula $D_{p}h(p,x^{*})$
+\end_inset
+
+ is negative semidefinite.
+ Note that negative semidefiniteness implies that 
+\begin_inset Formula $\nicefrac{\partial h_{l}(p,x^{*})}{\partial p_{l}}\leq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $l$
+\end_inset
+
+; that is, compensated own-price effects are nonpositive, a conclusion that
+ we have also derived directly from the compensated law of demand.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The symmetry of 
+\begin_inset Formula $D_{p}h(p,x^{*})$
+\end_inset
+
+ is an unexpected property.
+ It implies that compensated price cross-derivatives between any two goods
+ 
+\begin_inset Formula $l$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ must satisfy 
+\begin_inset Formula $\nicefrac{\partial h_{l}(p,x^{*})}{\partial p_{k}}=\nicefrac{\partial h_{k}(p,x^{*})}{\partial p_{l}}$
+\end_inset
+
+.
+ Symmetry is not easy to interpret in plain economic terms.
+ As emphasized by Samuelson (1947), it is a property just beyond what one
+ would derive without the help of mathematics.
+ Once we know that 
+\begin_inset Formula $D_{p}h(p,x^{*})=\nabla_{p}^{2}e(p,x^{*})$
+\end_inset
+
+, the symmetry property reflects the fact that the cross derivatives of
+ a (twice continuously differentiable) function are equal.
+ In intuitive terms, this says that when you climb a mountain, you will
+ cover the same net height regardless of the route.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We define two goods 
+\begin_inset Formula $l$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ to be 
+\emph on
+substitutes
+\emph default
+ at 
+\begin_inset Formula $(p,x^{*})$
+\end_inset
+
+ if 
+\begin_inset Formula $\nicefrac{\partial h_{l}(p,x^{*})}{\partial p_{k}}\geq0$
+\end_inset
+
+ and 
+\emph on
+complements 
+\emph default
+if this derivative is nonpositive [when Walrasian demans have these relationship
+s at 
+\begin_inset Formula $(p,w)$
+\end_inset
+
+, the goods are referred to as 
+\emph on
+gross
+\emph default
+ subsitutues and 
+\emph on
+gross
+\emph default
+ complements at 
+\begin_inset Formula $(p,w)$
+\end_inset
+
+, respectively].
+ Because 
+\begin_inset Formula $\nicefrac{\partial h_{l}(p,x^{*})}{\partial p_{l}}\leq0$
+\end_inset
+
+, property (iv) of Proposition 26 implies that there must be a good 
+\begin_inset Formula $k$
+\end_inset
+
+ for which 
+\begin_inset Formula $\nicefrac{\partial h_{l}(p,x^{*})}{\partial p_{k}}\geq0$
+\end_inset
+
+.
+ Hence, Proposition 26 implies that every good has at least one substitute.
+\end_layout
+
+\begin_layout Subsubsection*
+The Hicksian and Walrasian Demand Functions
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Although the Hicksian demand function is not directly observable (it has
+ the consumer's ideal consumption bundle as an argument), we now show that
+ 
+\begin_inset Formula $D_{p}h(p,x^{*})$
+\end_inset
+
+ can nevertheless be compute from the observable Walrasian demand function
+ 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+ (its arguments are all observable in principle).
+ This important reslut, known as the 
+\emph on
+Slutsky equation
+\emph default
+, means that the properties in Proposition 26 translate into restrictions
+ on the observable Walrasian demand function 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(27) (The Slutsky Equation).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated and continuous preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Suppose that the aossciated choice correspondence is single-valued with
+ demand function 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $x$
+\end_inset
+
+ is 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+.
+ Then, for each 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+, 
+\begin_inset Formula $w>0$
+\end_inset
+
+, and each pair 
+\begin_inset Formula $\{l,k\}\subseteq\{1,\ldots,L\}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\frac{\partial h_{l}(p,x^{*})}{\partial p_{k}}=\frac{\partial x_{l}(p,w)}{\partial p_{k}}+\frac{\partial x_{l}(p,w)}{\partial w}x_{k}(p,w)=S_{lk}(p,w)
+\]
+
+\end_inset
+
+or equivalently, in matrix notation,
+\begin_inset Formula 
+\[
+D_{p}h(p,x^{*})=D_{p}x(p,w)+D_{w}x(p,w)x(p,w)^{T}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x^{*}\equiv x(p,w)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Consider a consumer facing the price-wealth pair 
+\begin_inset Formula $(p,w)$
+\end_inset
+
+.
+ Note that the wealth level must satisfy 
+\begin_inset Formula $w=e(p,x^{*})$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x^{*}\equiv x(p,w)$
+\end_inset
+
+.
+ By Corollary 5, we that 
+\begin_inset Formula $h_{l}(p,x^{*})=x_{l}(p,e(p,x^{*}))$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\[
+\frac{\partial h_{l}(p,x^{*})}{\partial p_{k}}=\frac{\partial x_{l}(p,e(p,x^{*}))}{\partial p_{k}}+\frac{\partial x_{l}(p,e(p,x^{*}))}{\partial w}\frac{\partial e(p,x^{*})}{\partial p_{k}}
+\]
+
+\end_inset
+
+By Proposition 25,
+\begin_inset Formula 
+\[
+\frac{\partial e(p,x^{*})}{\partial p_{k}}=h_{k}(p,x^{*})
+\]
+
+\end_inset
+
+Finally, since 
+\begin_inset Formula $e(p,x^{*})=w$
+\end_inset
+
+ and 
+\begin_inset Formula $h_{k}(p,x^{*})=x_{k}(p,e(p,x^{*}))=x_{k}(p,w)$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\frac{\partial h_{l}(p,x^{*})}{\partial p_{k}}=\frac{\partial x_{l}(p,w)}{\partial p_{k}}+\frac{\partial x_{l}(p,w)}{\partial w}x_{k}(p,w)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Note*
+\begin_inset Formula $S(p,w)=D_{p}h(p,x(p,w))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the Walrasian demand function 
+\begin_inset Formula $x_{l}(p,\bar{w})$
+\end_inset
+
+ and the Hicksian demand function 
+\begin_inset Formula $h_{l}(p,x(\bar{p},\bar{w}))$
+\end_inset
+
+ for good 
+\begin_inset Formula $l$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $p_{l}$
+\end_inset
+
+, holding other prices fixed at 
+\begin_inset Formula $\bar{p}_{-l}$
+\end_inset
+
+.
+ Note that the two demand functions are equal when 
+\begin_inset Formula $p_{l}=\bar{p}_{l}$
+\end_inset
+
+.
+ The Slutsky equation describes the relationship between the slopes of these
+ two functions at price 
+\begin_inset Formula $\bar{p}_{l}$
+\end_inset
+
+.
+ One possibility is that the slope of the Walrasian demand curve at 
+\begin_inset Formula $\bar{p}_{l}$
+\end_inset
+
+ is less negative than the slope of the Hicksian demand curve at that price.
+ From inspection of the Slutsky equation, this corresponds to a situation
+ where good 
+\begin_inset Formula $l$
+\end_inset
+
+ is a normal good at 
+\begin_inset Formula $(\bar{p},\bar{w})$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $p_{l}$
+\end_inset
+
+ increases above 
+\begin_inset Formula $\bar{p}_{l}$
+\end_inset
+
+, we must increase the consumer's wealth if we are to keep her at the same
+ level of utility offered by bundle 
+\begin_inset Formula $\bar{x}^{*}$
+\end_inset
+
+.
+ Therefore, if good 
+\begin_inset Formula $l$
+\end_inset
+
+ is normal, its demand falls by more in the absense of this compensation.
+ The other possibility is when good 
+\begin_inset Formula $l$
+\end_inset
+
+ is an inferior good.
+ In this case, the Walrasian demand curve has a more negative slope than
+ the Hicksian curve.
+\end_layout
+
+\begin_layout Corollary*
+
+\series bold
+\shape up
+(6).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated and continuous preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Suppose that the associated choice correspondence is single-valued with
+ demand function 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $x$
+\end_inset
+
+ is 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+.
+ Then, for each 
+\begin_inset Formula $(p,w)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+, 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ is symmetric.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Corollary 6 is a direct result of Propositions 26 and 27.
+ Proposition 27 implies that the matrix of price derivatives 
+\begin_inset Formula $D_{p}h(p,x^{*})$
+\end_inset
+
+ of the Hicksian demand function is equal to the matrix
+\begin_inset Formula 
+\[
+S(p,w)=\left[\begin{array}{ccc}
+s_{11}(p,w) & \cdots & s_{1L}(p,w)\\
+\vdots & \ddots & \vdots\\
+s_{L1}(p,w) & \cdots & s_{LL}(p,w)
+\end{array}\right]
+\]
+
+\end_inset
+
+with
+\begin_inset Formula 
+\[
+S_{lk}(p,w)=\frac{\partial x_{l}(p,w)}{\partial p_{k}}+\frac{\partial x_{l}(p,w)}{\partial w}x_{k}(p,w)
+\]
+
+\end_inset
+
+This matrix is known as the 
+\emph on
+Slutsky substitution matrix
+\emph default
+.
+ Note, in particular, that 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ is directly computable from knowledge of the (observable) Walrasian demand
+ function 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+.
+ Since Proposition 26 implies that 
+\begin_inset Formula $D_{p}h(p,x^{*})$
+\end_inset
+
+ is symmetric, then 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ is symmetric.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(28).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be an 
+\begin_inset Formula $L\times L$
+\end_inset
+
+ symmetric matrix and suppose that there is 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ such that 
+\begin_inset Formula $Ap=0$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $A$
+\end_inset
+
+ is negative semi-definite if and only if the matrix obtained by deleting
+ the 
+\begin_inset Formula $l$
+\end_inset
+
+-th row and the 
+\begin_inset Formula $l$
+\end_inset
+
+-th column from 
+\begin_inset Formula $A$
+\end_inset
+
+ for some 
+\begin_inset Formula $l\in\{1,\ldots,L\}$
+\end_inset
+
+, is negative semi-definite.
+\end_layout
+
+\begin_layout Proof
+Parallel to Theorem M.D.4 in Mas-Colell (1995).
+\end_layout
+
+\begin_layout Corollary*
+
+\series bold
+\shape up
+(7).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated and continuous preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Suppose that the associated choice correpondence is single-valued and its
+ associated demand function is 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+.
+ Then, for each pair 
+\begin_inset Formula $(p,w)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ is symmetric.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ is negative semi-definite.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S(p,w)p=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The matrix obtained by deleting the 
+\begin_inset Formula $l$
+\end_inset
+
+-th row and the 
+\begin_inset Formula $l$
+\end_inset
+
+-th column from 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ for some 
+\begin_inset Formula $l\in\{1,\ldots,L\}$
+\end_inset
+
+, is negative semi-definite.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Corollary 7 is a direct result of Propositions 26, 27, and 28.
+ Because 
+\begin_inset Formula $S(p,w)=D_{p}h(p,x^{*})$
+\end_inset
+
+, Propositions 26 and 27 imply that when demand is generated from preference
+ maximization, 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ must possess the following three properties: it must be 
+\emph on
+negative semi-definite, symmetric, and satisfy 
+\begin_inset Formula $S(p,w)p=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In Section 3.4, the Slutsky substitution matrix 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ was shown to be the matrix of compensated demand derivatives arising from
+ a different form of wealth compensation, the so-called 
+\emph on
+Slutsky wealth compensation
+\emph default
+.
+ Instead of varying wealth to keep utility fixed, as we do here, Slutsky
+ compensation adjusts wealth so that the initial consumption bundle 
+\begin_inset Formula $\bar{x}$
+\end_inset
+
+ is just affordable at the new prices.
+ Thus, we have the remarkable conclusion that the 
+\emph on
+derivative of the Hicksian demand function
+\emph default
+ 
+\emph on
+is equal to the derivative of this alternative Slutsky compensated demand
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can understand this result as follows: Suppose we are at initial position
+ 
+\begin_inset Formula $(\bar{p},\bar{w})$
+\end_inset
+
+ with 
+\begin_inset Formula $\bar{x}=x(\bar{p},\bar{w})$
+\end_inset
+
+.
+ As we change prices to 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+, we want to change wealth in order to compensate for the wealth effect
+ arising from this price change.
+ In principle, the compensation can be down in two ways.
+ By changing wealth by amount 
+\begin_inset Formula $\Delta w_{Slutsky}=p^{\prime}\cdot x(\bar{p},\bar{w})-\bar{w}$
+\end_inset
+
+, we leave the consumer just able to afford her initial bundle 
+\begin_inset Formula $\bar{x}$
+\end_inset
+
+.
+ Alternatively, we can change wealth by amount 
+\begin_inset Formula $\Delta w_{Hicks}=e(p^{\prime},\bar{x})-\bar{w}$
+\end_inset
+
+ to keep her utility level unchanged.
+ We have 
+\begin_inset Formula $\Delta w_{Hicks}\leq\Delta w_{Slutsky}$
+\end_inset
+
+, and the inequality will, in general, be strict for any discrete change.
+ But because 
+\begin_inset Formula $\nabla_{p}e(\bar{p},\bar{x})=h(\bar{p},\bar{x})=x(\bar{p},\bar{w})$
+\end_inset
+
+, these two compensations are 
+\emph on
+identical
+\emph default
+ for a differential price change starting at 
+\begin_inset Formula $\bar{p}$
+\end_inset
+
+.
+ Intuitively, this is due to the same fact that led to Proposition 25: For
+ a differential change in prices, the total effect on the expenditure required
+ to achieve indifference to bundle 
+\begin_inset Formula $\bar{x}$
+\end_inset
+
+ (the Hicksian compensation level), is simply the direct effect of the price
+ change, assuming that the consumption bundle 
+\begin_inset Formula $\bar{x}$
+\end_inset
+
+ does not change.
+ But this is precisely the calculation done for Slutsky compensation.
+ Hence, the derivatives of the compensated demand functions that arise from
+ these two compensation mechansims are the same.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Furthermore, we can compare the implications of the preference-based approach
+ to consumer demand with those derived using a choice-based approach built
+ on the weak axiom.
+ In the previous section, we concluded that if 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+ satisfies the weak axiom (plus homogeneity of degree zero and Walras' Law),
+ then 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ is negative semi-definite with 
+\begin_inset Formula $S(p,w)p=0$
+\end_inset
+
+.
+ Moreover, we argued that except when 
+\begin_inset Formula $L=2$
+\end_inset
+
+, demand satisfying the weak axiom need not have a symmetric Slutsky substitutio
+n matrix.
+ Therefore, the results here tell us that the restrictions imposed on demand
+ in the preference-based approach are stronger than those arising in the
+ choice-based thoery built on the weak axiom.
+ In fact, it is impossible to find preferences that rationalize demand when
+ the substitution matrix is not symmetric.
+\end_layout
+
+\begin_layout Subsubsection*
+Walrasian Demand and the Indirect Utility Function
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We have seen that the minimizing vector of the EMP, 
+\begin_inset Formula $h(p,x^{*})$
+\end_inset
+
+, is the derivative with respect to 
+\begin_inset Formula $p$
+\end_inset
+
+ of the EMP's value function 
+\begin_inset Formula $e(p,x^{*})$
+\end_inset
+
+.
+ The exactly analogous statement for the UMP does not hold.
+ The Walrasian demand, an ordinal concept, cannot equal the price derivative
+ of the indirect utility function, which is not invariant to increasing
+ transformations of utility.
+ But with a small correciton in which we normalize the derivatives of 
+\begin_inset Formula $V^{u}(p,w)$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $p$
+\end_inset
+
+ by the marginal utility of wealth, it holds true.
+ This proposition called 
+\emph on
+Roy's Identity
+\emph default
+, is the parallel result to Proposition 25 for the demand and value functions
+ of the UMP.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(29) (Roy's Identitiy)
+\series default
+.
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+ represented by a continuously differentiable utility function 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ Assume that the indirect utility function 
+\begin_inset Formula $V^{u}$
+\end_inset
+
+ is differentiable at 
+\begin_inset Formula $(p,w)\in\mathbb{R}_{++}^{L}\times\mathbb{R}_{+}$
+\end_inset
+
+.
+ Then, for each 
+\begin_inset Formula $l\in\{1,\ldots,L\}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+x_{l}(p,w)=-\frac{\frac{\partial V^{u}(p,w)}{\partial p_{l}}}{\frac{\partial V^{u}(p,w)}{\partial w}}
+\]
+
+\end_inset
+
+or in matrix notation
+\begin_inset Formula 
+\[
+x(p,w)=-\frac{1}{\nabla_{w}V^{u}(p,w)}\nabla_{p}V^{u}(p,w)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $x^{*}\equiv x(p,w)$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{u}=u(x^{*})$
+\end_inset
+
+.
+ Observe that for each 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+, 
+\begin_inset Formula $\bar{u}=V^{u}(p,e(p,x^{*}))$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+(Method 1): Applying the chain rule and differentiating with respect to
+ price of commodity 
+\begin_inset Formula $l\in\{1,\ldots,L\}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+0=\frac{\partial V^{u}(p,e(p,x^{*}))}{\partial p_{l}}+\frac{\partial V^{u}(p,e(p,x^{*}))}{\partial w}\frac{\partial e_{l}(p,x^{*})}{\partial p_{l}}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $w=e(p,x^{*})$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\partial e(p,x^{*})}{\partial p_{l}}=h_{l}(p,x^{*})=x_{l}(p,e(p,x^{*}))=x_{l}(p,w)$
+\end_inset
+
+, then rearranging terms we get
+\begin_inset Formula 
+\[
+x_{l}(p,w)=-\frac{\frac{\partial V^{u}(p,w)}{\partial p_{l}}}{\frac{\partial V^{u}(p,w)}{\partial w}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+(Method 2): Assume that 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+ is differentiable and 
+\begin_inset Formula $x(p,w)\gg0$
+\end_inset
+
+.
+ By the chain rule, we can write
+\begin_inset Formula 
+\[
+\frac{\partial V^{u}(p,w)}{\partial p_{l}}={\displaystyle \sum_{k=1}^{L}}\frac{\partial u(x(p,w))}{\partial x_{k}}\frac{\partial x_{k}(p,w)}{\partial p_{l}}
+\]
+
+\end_inset
+
+Substituting for 
+\begin_inset Formula $\nicefrac{\partial u(x(p,w))}{\partial x_{k}}$
+\end_inset
+
+ using the first-order conditions for the UMP, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial V^{u}(p,w)}{\partial p_{l}} & = & {\displaystyle \sum_{k=1}^{L}}\lambda p_{k}\frac{\partial x_{k}(p,w)}{\partial p_{l}}\\
+ & = & \lambda x_{l}(p,w)
+\end{eqnarray*}
+
+\end_inset
+
+since 
+\begin_inset Formula $\sum_{k}p_{k}(\nicefrac{\partial x_{k}(p,w)}{\partial p_{l}})=-x_{l}(p,w)$
+\end_inset
+
+ (Proposition 2.E.2).
+ Finally, we have already argued that 
+\begin_inset Formula $\lambda=\nicefrac{\partial V^{u}(p,w)}{\partial w}$
+\end_inset
+
+; use of this fact yields the result.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Proposition 29 provides a substantial payoff.
+ Walrasian demand is much easier to compute from indirect than from direct
+ utility.
+ To derive 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+ from the indirect utility function, no more than the calculation of derivatives
+ is involved; no system of first-order condition equations needs to be solved.
+ Thus, it may often be more convenient to express tastes in indirect utility
+ form.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now summarize the connections we have made in this section.
+ Starting from a given utility function in the UMP or the EMP, we can derive
+ the optimal consumption bundles 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+ and 
+\begin_inset Formula $h(p,x^{*})$
+\end_inset
+
+ and the value functions 
+\begin_inset Formula $V^{u}(p,w)$
+\end_inset
+
+ and 
+\begin_inset Formula $e(p,x^{*})$
+\end_inset
+
+.
+ In addition, we can go back and forth between the value functions and the
+ demand functions of the two problems using relationships (1) and (2).
+ Finally, we have seen that the demand vector for each problem can be calculated
+ from its value function and the derivatives of the Hicksian demand function
+ can be calculated from the observable Walrasian demand using Slutsky's
+ equation.
+\end_layout
+
+\begin_layout Subsubsection*
+Integrability
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If a continuously differentiable demand function 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+ is generated by rational preferences, then we have seen that it must be
+ homogeneous of degree zero, satisfy Walras' law, and have a substitution
+ matrix 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ that is symmetric and negative semidefinite at all 
+\begin_inset Formula $(p,w)$
+\end_inset
+
+.
+ We now pose the reverse question: 
+\emph on
+If we observe a demand function 
+\begin_inset Formula $x(p,w)$
+\end_inset
+
+ that has these properties, can we find preferences that rationalize 
+\begin_inset Formula $x(\cdot)$
+\end_inset
+
+?
+\emph default
+ The answer is yes; these conditions are difficient for the existence of
+ rational generating preferences.
+ This problem is known as the 
+\emph on
+integrability problem
+\emph default
+.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+(16) (Integrability Theorem).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $(\mathcal{B}^{W},C)$
+\end_inset
+
+ be a single-valued Walrasian choice structure satisfying Walras' law and
+ whose associated demand funciton 
+\begin_inset Formula $x$
+\end_inset
+
+ is differentiable.
+ If the partial derivatives of 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfy some 
+\begin_inset Quotes eld
+\end_inset
+
+technical additional conditions,
+\begin_inset Quotes erd
+\end_inset
+
+ then symmetry and negative semi-definiteness of the Slutsky matrix of 
+\begin_inset Formula $x$
+\end_inset
+
+ at each pair of prices and wealth is sufficient for the existence of a
+ utility funciton 
+\begin_inset Formula $u$
+\end_inset
+
+ such that 
+\begin_inset Formula $C=C^{u}$
+\end_inset
+
+, where 
+\begin_inset Formula $C^{u}$
+\end_inset
+
+ is the choice correspondence associated with the preference represented
+ by 
+\begin_inset Formula $u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+The Integrability Theorem was briefly mentioned in class, but there was
+ no in-depth discussion.
+ Moreover, the proof is technical and beyond the scope of what we learned
+ in class.
+ As a result, the proof will not be presented in these notes.
+ For more information on the Integrability Theorem, see Section 3.H in Mas-Colell
+ (1995).
+\end_layout
+
+\begin_layout Note*
+If 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ is symmetric and 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies WARP and some boundedness conditions, then there exists a utility
+ function 
+\begin_inset Formula $u$
+\end_inset
+
+ such that 
+\begin_inset Formula $C=C^{u}$
+\end_inset
+
+, where 
+\begin_inset Formula $C^{u}$
+\end_inset
+
+ is the choice correspondence associated with the preference represented
+ by 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ 
+\begin_inset Formula $u$
+\end_inset
+
+ rationalizes choice, i.e., the preference, represented by 
+\begin_inset Formula $u$
+\end_inset
+
+, induces the choices 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ This means that the preference represents the choice structure.
+\end_layout
+
+\begin_layout Subsection*
+3.5.9
+\begin_inset space \quad{}
+\end_inset
+
+Problems
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{3}$
+\end_inset
+
+.
+ Suppose that Walrasian demand function 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies Walras' law and is such that
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{1}(p,w) & \equiv & a+b\frac{p_{1}}{p_{3}}+c\frac{p_{2}}{p_{3}}\\
+x_{2}(p,w) & \equiv & d+e\frac{p_{1}}{p_{3}}+f\frac{p_{2}}{p_{3}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calculate 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Prove 
+\begin_inset Formula $x$
+\end_inset
+
+ is homogeneous of degree zero.
+\end_layout
+
+\begin_layout Enumerate
+Calculate the Slutsky matrix at some 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $w>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Provide the restricitons on the demand parameters that are implied by utility
+ maximization.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula $X\equiv\mathbb{R}_{+}^{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Since 
+\begin_inset Formula $x$
+\end_inset
+
+ satisfies Walras' law, then
+\begin_inset Formula 
+\[
+p\cdot x=p_{1}x_{1}(p,w)+p_{2}x_{2}(p,w)+p_{3}x_{3}(p,w)=w
+\]
+
+\end_inset
+
+Since we have the expressions for 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, then we can solve for 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+ using the equation above.
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{3}(p,w) & = & \frac{w}{p_{3}}-\frac{p_{1}}{p_{3}}x_{1}(p,w)-\frac{p_{2}}{p_{3}}x_{2}(p,w)\\
+ & = & \frac{w}{p_{3}}-\frac{p_{1}}{p_{3}}\left(a+b\frac{p_{1}}{p_{3}}+c\frac{p_{2}}{p_{3}}\right)-\frac{p_{2}}{p_{3}}\left(d+e\frac{p_{1}}{p_{3}}+f\frac{p_{2}}{p_{3}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Take 
+\begin_inset Formula $\alpha\in\mathbb{R}_{+}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{gather*}
+x_{1}(\alpha p,\alpha w)=a+b\frac{\alpha p_{1}}{\alpha p_{3}}+c\frac{\alpha p_{2}}{\alpha p_{3}}=a+b\frac{p_{1}}{p_{3}}+c\frac{p_{2}}{p_{3}}=x_{1}(p,w)\\
+x_{2}(\alpha p,\alpha w)=d+e\frac{\alpha p_{1}}{\alpha p_{3}}+f\frac{\alpha p_{2}}{\alpha p_{3}}=d+e\frac{p_{1}}{p_{3}}+f\frac{p_{2}}{p_{3}}=x_{2}(p,w)\\
+x_{3}(\alpha p,\alpha w)=\frac{\alpha w}{\alpha p_{3}}-\frac{\alpha p_{1}}{\alpha p_{3}}\left(a+b\frac{\alpha p_{1}}{\alpha p_{3}}+c\frac{\alpha p_{2}}{\alpha p_{3}}\right)-\frac{\alpha p_{2}}{\alpha p_{3}}\left(d+e\frac{\alpha p_{1}}{\alpha p_{3}}+f\frac{\alpha p_{2}}{\alpha p_{3}}\right)\\
+=\frac{w}{p_{3}}-\frac{p_{1}}{p_{3}}\left(a+b\frac{p_{1}}{p_{3}}+c\frac{p_{2}}{p_{3}}\right)-\frac{p_{2}}{p_{3}}\left(d+e\frac{p_{1}}{p_{3}}+f\frac{p_{2}}{p_{3}}\right)=x_{3}(p,w)
+\end{gather*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $\forall\ \alpha\in\mathbb{R}_{+},\ \forall\ (p,w)\in\mathbb{R}_{+}^{3}\times\mathbb{R}_{+}:x(\alpha p,\alpha w)=x(p,w)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $x$
+\end_inset
+
+ is homogeneous of degree zero.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The 
+\begin_inset Formula $lk$
+\end_inset
+
+ component of the Slutsky matrix associated with 
+\begin_inset Formula $x$
+\end_inset
+
+ at 
+\begin_inset Formula $(p,w)$
+\end_inset
+
+, denoted 
+\begin_inset Formula $S_{lk}(p,w)$
+\end_inset
+
+, is defined by the following equation:
+\begin_inset Formula 
+\[
+S_{lk}(p,w)=\frac{\partial x_{l}(p,w)}{\partial p_{k}}+\frac{\partial x_{l}(p,w)}{\partial w}x_{k}(p,w)
+\]
+
+\end_inset
+
+Take 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $w>0$
+\end_inset
+
+.
+ Using the equation above, we calculate each component of the Slutsky matrix.
+\begin_inset Formula 
+\begin{gather*}
+S_{11}(p,w)=\frac{b}{p_{3}}\\
+S_{12}(p,w)=\frac{c}{p_{3}}\\
+S_{13}(p,w)=-\frac{1}{p_{3}^{2}}\left[bp_{1}+cp_{2}\right]\\
+S_{21}(p,w)=\frac{e}{p_{3}}\\
+S_{22}(p,w)=\frac{f}{p_{3}}\\
+S_{23}(p,w)=-\frac{1}{p_{3}^{2}}\left[ep_{1}+fp_{2}\right]\\
+S_{31}(p,w)=-\frac{1}{p_{3}^{2}}\left[bp_{1}+ep_{2}\right]\\
+S_{32}(p,w)=-\frac{1}{p_{3}^{2}}\left[cp_{1}+fp_{2}\right]\\
+S_{33}(p,w)=\frac{1}{p_{3}^{2}}\left[p_{1}p_{2}(c+e)+\frac{1}{p_{3}}\left(bp_{1}^{2}+fp_{2}^{2}\right)\right]
+\end{gather*}
+
+\end_inset
+
+
+\bar under
+Part D.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Propositions 26 and 27 imply that when demand is generated from preference
+ maximization, 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ must possess the following three properties: it must be 
+\emph on
+negative semi-definite, symmetric, and satisfy 
+\begin_inset Formula $S(p,w)p=0$
+\end_inset
+
+.
+ 
+\emph default
+Now, let us consider the matrix 
+\begin_inset Formula $S_{2}(p,w)$
+\end_inset
+
+, which is obtained by deleting the 2nd row and 2nd column of 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+.
+ By Proposition 28, 
+\begin_inset Formula $S(p,w)$
+\end_inset
+
+ is negative semi-definite if and only if 
+\begin_inset Formula $S_{2}(p,w)$
+\end_inset
+
+ is negative semi-definite.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Because 
+\begin_inset Formula $S_{2}(p,w)$
+\end_inset
+
+ must also be symmetric, we must have
+\begin_inset Formula 
+\[
+S_{12}(p,w)=S_{21}(p,w)\iff\frac{c}{p_{3}}=\frac{e}{p_{3}}\iff c=e
+\]
+
+\end_inset
+
+Note that we obtain the same restriction for 
+\begin_inset Formula $S_{13}(p,w)=S_{31}(p,w)$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{23}(p,w)=S_{32}(p,w)$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $S_{2}(p,w)$
+\end_inset
+
+ is negative semi-definite if and only if 
+\begin_inset Formula $-S_{2}(p,w)$
+\end_inset
+
+ is positive definite.
+ 
+\begin_inset Formula $-S_{2}(p,w)$
+\end_inset
+
+ is positive semi-definite if and only if its principal minors are all non-negat
+ive.
+ Hence, this leads to the following restrictions:
+\begin_inset Formula 
+\begin{gather*}
+\left|-S_{11}(p,w)\right|\geq0\iff-\frac{b}{p_{3}}\geq0\iff b\leq0\\
+\left|-S_{22}(p,w)\right|\geq0\iff-\frac{f}{p_{3}}\geq0\iff f\leq0\\
+\left|-S_{2}(p,w)\right|\geq0\iff\left|\begin{array}{cc}
+-\frac{b}{p_{3}} & -\frac{c}{p_{3}}\\
+-\frac{e}{p_{3}} & -\frac{f}{p_{3}}
+\end{array}\right|\geq0\iff bf-ce\geq0\iff bf\geq ce
+\end{gather*}
+
+\end_inset
+
+Finally, 
+\begin_inset Formula $S(p,w)p=0$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+\frac{b}{p_{3}} & \frac{c}{p_{3}} & -\frac{1}{p_{3}^{2}}\left[bp_{1}+cp_{2}\right]\\
+\frac{e}{p_{3}} & \frac{f}{p_{3}} & -\frac{1}{p_{3}^{2}}\left[ep_{1}+fp_{2}\right]\\
+-\frac{1}{p_{3}^{2}}\left[bp_{1}+ep_{2}\right] & -\frac{1}{p_{3}^{2}}\left[cp_{1}+fp_{2}\right] & \frac{1}{p_{3}^{2}}\left[p_{1}p_{2}(c+e)+\frac{1}{p_{3}}\left(bp_{1}^{2}+fp_{2}^{2}\right)\right]
+\end{array}\right]\left[\begin{array}{c}
+p_{1}\\
+p_{2}\\
+p_{3}
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated continuous preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ (Here, it would suffice to assume that for each 
+\begin_inset Formula $x\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $x\succsim0$
+\end_inset
+
+.) Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+.
+ Prove that the money metric representation of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $p$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Problem
+(Important to note, we are proving the same result as in Problem 11, Section
+ 3.3.3.
+ The only difference is that we now weaken monotonicity to local non-satiation,
+ and add the assumption 
+\begin_inset Formula $\forall\ x\in X\equiv\mathbb{R}_{+}^{L}:x\succsim0$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a locally non-satiated continuous preference relation on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $\forall\ x\in X\equiv\mathbb{R}_{+}^{L}:x\succsim0$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p\in\mbox{\mathbb{R}}_{++}^{L}.$
+\end_inset
+
+ Consider the function 
+\begin_inset Formula $m_{p}$
+\end_inset
+
+ that associates with each 
+\begin_inset Formula $x\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ the value
+\begin_inset Formula 
+\[
+m_{p}(x)\equiv{\displaystyle \min_{z\geq0,z\succsim x}}\ p\cdot z
+\]
+
+\end_inset
+
+ We will prove 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by 
+\begin_inset Formula $m_{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $m_{p}(x)\geq m_{p}(y)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x^{*}\in h(p,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $y^{*}\in h(p,y)$
+\end_inset
+
+.
+ So, we have 
+\begin_inset Formula $m_{p}(x)=p\cdot x^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{p}(y)=p\cdot y^{*}$
+\end_inset
+
+.
+ Now, by transitivity, 
+\begin_inset Formula $x^{*}\succsim x\succsim y\implies x^{*}\succsim y$
+\end_inset
+
+.
+ Thus, by the definition of 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $p\cdot x^{*}\geq p\cdot y^{*}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $m_{p}(x)\geq m_{p}(y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $m_{p}(x)\geq m_{p}(y)$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+.
+ Suppose for contradiction 
+\begin_inset Formula $\neg(x\succsim y)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete, then 
+\begin_inset Formula $y\succsim x$
+\end_inset
+
+.
+ By the definition of 
+\begin_inset Formula $\succ$
+\end_inset
+
+, 
+\begin_inset Formula $\neg(x\succsim y)\ \wedge\ y\succsim x\iff y\succ x$
+\end_inset
+
+.
+ By transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $y\succ x\succsim0\implies y\succ0$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $y\neq0$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x^{*}\in h(p,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $y^{*}\in h(p,y)$
+\end_inset
+
+.
+ By transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $y^{*}\succsim y\succ0\implies y^{*}\succ0$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $y^{*}\neq0$
+\end_inset
+
+.
+ With 
+\begin_inset Formula $m_{p}(x)\geq m_{p}(y)$
+\end_inset
+
+, 
+\begin_inset Formula $p\cdot x^{*}\geq p\cdot y^{*}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $y^{*}\neq0$
+\end_inset
+
+, then 
+\begin_inset Formula $p\cdot y^{*}>0$
+\end_inset
+
+.
+ Now, by Theorem Corollary 1, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous on 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\forall\ x\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $U(\succ,x)$
+\end_inset
+
+ and 
+\begin_inset Formula $L(\succ,x)$
+\end_inset
+
+ are open.
+ Now, by transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, 
+\begin_inset Formula $y^{*}\succsim y\succ x\implies y^{*}\succ x$
+\end_inset
+
+, so 
+\begin_inset Formula $y^{*}\in U(\succ,x)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $U(\succ,x)$
+\end_inset
+
+ is open, then 
+\begin_inset Formula $\exists\ \alpha\in(0,1):\alpha y^{*}\in U(\succ,x)$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $\tilde{y}\equiv\alpha y^{*}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\tilde{y}\in U(\succ,x)\implies\tilde{y}\succ x$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $y\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+, then 
+\begin_inset Formula $\tilde{y}\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $y\gneq\tilde{y}$
+\end_inset
+
+.
+ Finally, since 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+, we have 
+\begin_inset Formula $p\cdot x^{*}\geq p\cdot y^{*}>p\cdot\tilde{y}$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $p\cdot x^{*}>p\cdot\tilde{y}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\tilde{y}\succ x$
+\end_inset
+
+ and 
+\begin_inset Formula $p\cdot x^{*}>p\cdot\tilde{y}$
+\end_inset
+
+.
+ But this contradicts the fact that 
+\begin_inset Formula $x^{*}\in h(p,x)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $x\succsim y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference whose associated demand correspondence
+ is single-valued.
+ Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be the associated demand function.
+ The 
+\series bold
+equivalent variation of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ from 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ to 
+\begin_inset Formula $p^{\prime}\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ at wealth level 
+\begin_inset Formula $w\in\mathbb{R}_{++}$
+\end_inset
+
+
+\series default
+, denoted 
+\begin_inset Formula $EV^{\succsim}(p,p^{\prime},w)$
+\end_inset
+
+ is defined by:
+\begin_inset Formula 
+\[
+EV^{\succsim}(p,p^{\prime},w)\equiv V^{m\left\langle \succsim,p\right\rangle }(p^{\prime},w)-V^{m\left\langle \succsim,p\right\rangle }(p,w)
+\]
+
+\end_inset
+
+The 
+\series bold
+compensating variation of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ from 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ to 
+\begin_inset Formula $p^{\prime}\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ at wealth level 
+\begin_inset Formula $w\in\mathbb{R}_{++}$
+\end_inset
+
+
+\series default
+, denoted 
+\begin_inset Formula $CV^{\succsim}(p,p^{\prime},w)$
+\end_inset
+
+ is defined by:
+\begin_inset Formula 
+\[
+CV^{\succsim}(p,p^{\prime},w)\equiv V^{m\left\langle \succsim,p^{\prime}\right\rangle }(p^{\prime},w)-V^{m\left\langle \succsim,p^{\prime}\right\rangle }(p,w)
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $w>0$
+\end_inset
+
+.
+ Prove that for each 
+\begin_inset Formula $p^{\prime}\gg0$
+\end_inset
+
+, the following three statements are equivalent:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $x(p^{\prime},w)\succsim x(p,w)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $EV^{\succsim}(p,p^{\prime},w)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $CV^{\succsim}(p,p^{\prime},w)\geq0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a monotone and continuous preference whose associated demand correspondence
+ is single-valued.
+ Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be the associated demand function.
+ Let 
+\begin_inset Formula $p\gg0$
+\end_inset
+
+ and 
+\begin_inset Formula $w>0$
+\end_inset
+
+, and take 
+\begin_inset Formula $p^{\prime}\gg0$
+\end_inset
+
+.
+ By Problem 11, Section 3.3.3, since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is a monotone and continuous preference, then the money metric representation
+ of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $p$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(a\Rightarrow b)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $x(p^{\prime},w)\succsim x(p,w)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $m\left\langle \succsim,p\right\rangle $
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then We want to show that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $EV^{\succsim}(p,p^{\prime},w)\ge0$
+\end_inset
+
+.
+ By definition,
+\begin_inset Formula 
+\begin{eqnarray*}
+EV^{\succsim}(p,p^{\prime},w) & \equiv & V^{m\left\langle \succsim,p\right\rangle }(p^{\prime},w)-V^{m\left\langle \succsim,p\right\rangle }(p,w)\\
+ & = & m\left\langle \succsim,p\right\rangle (x(p^{\prime},w))-m\left\langle \succsim,p\right\rangle (x(p,w))\geq0
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $EV^{\succsim}(p,p^{\prime},w)\ge0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(b\Rightarrow c)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $EV^{\succeq}(p,p^{\prime},w)\ge0$
+\end_inset
+
+.
+ By definition, 
+\begin_inset Formula 
+\begin{gather*}
+EV^{\succsim}(p,p^{\prime},w)\ge0\iff m\left\langle \succsim,p\right\rangle (x(p^{\prime},w))-m\left\langle \succsim,p\right\rangle (x(p,w))\geq0\\
+\iff m\left\langle \succsim,p\right\rangle (x(p^{\prime},w))\geq m\left\langle \succsim,p\right\rangle (x(p,w))
+\end{gather*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $m\left\langle \succsim,p\right\rangle $
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then 
+\begin_inset Formula $m\left\langle \succsim,p\right\rangle (x(p^{\prime},w))\geq m\left\langle \succsim,p\right\rangle (x(p,w))\iff x(p^{\prime},w)\succsim x(p,w)$
+\end_inset
+
+.
+ In addition, Also, the money metric representation of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula 
+\begin{gather*}
+x(p^{\prime},w)\succsim x(p,w)\iff m\left\langle \succsim,p^{\prime}\right\rangle (x(p^{\prime},w))\geq m\left\langle \succsim,p^{\prime}\right\rangle (x(p,w))\\
+\iff m\left\langle \succsim,p^{\prime}\right\rangle (x(p^{\prime},w))-m\left\langle \succsim,p^{\prime}\right\rangle (x(p,w))\geq0
+\end{gather*}
+
+\end_inset
+
+We want to show that 
+\begin_inset Formula $CV^{\succsim}(p,p^{\prime},w)\geq0$
+\end_inset
+
+.
+ By definition, 
+\begin_inset Formula 
+\begin{eqnarray*}
+CV^{\succsim}(p,p^{\prime},w) & \equiv & V^{m\left\langle \succeq,p^{\prime}\right\rangle }(p^{\prime},w)-V^{m\left\langle \succeq,p^{\prime}\right\rangle }(p,w)\\
+ & = & m\left\langle \succsim,p^{\prime}\right\rangle (x(p^{\prime},w))-m\left\langle \succsim,p^{\prime}\right\rangle (x(p,w))\geq0
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $CV^{\succsim}(p,p^{\prime},w)\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(c\Rightarrow a)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $CV^{\succsim}(p,p^{\prime},w)\geq0$
+\end_inset
+
+.
+ By definition,
+\begin_inset Formula 
+\begin{gather*}
+CV^{\succsim}(p,p^{\prime},w)\geq0\iff m\left\langle \succsim,p^{\prime}\right\rangle (x(p^{\prime},w))-m\left\langle \succsim,p^{\prime}\right\rangle (x(p,w))\geq0\\
+\iff m\left\langle \succsim,p^{\prime}\right\rangle (x(p^{\prime},w))\geq m\left\langle \succsim,p^{\prime}\right\rangle (x(p,w))
+\end{gather*}
+
+\end_inset
+
+We want to show that 
+\begin_inset Formula $x(p^{\prime},w)\succsim x(p,w)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ the money metric representation of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+m\left\langle \succsim,p^{\prime}\right\rangle (x(p^{\prime},w))\geq m\left\langle \succsim,p^{\prime}\right\rangle (x(p,w))\iff x(p^{\prime},w)\succsim x(p,w)
+\]
+
+\end_inset
+
+Thus, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x(p^{\prime},w)\succsim x(p,w)$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

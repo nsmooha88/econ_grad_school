@@ -1,0 +1,783 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Microeconomic Theory I: Homework 12
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Section 4.4, Problem 9
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $Y\subseteq\mathbb{R}^{L}$
+\end_inset
+
+ be a non-empty, convex, closed production set that satisfies free disposal.
+ Prove that
+\begin_inset Formula 
+\[
+Y=\{y\in\mathbb{R}^{L}:\forall\ p\ge0,p\cdot y\leq\pi^{Y}(p)\}\equiv A
+\]
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Take 
+\begin_inset Formula $\tilde{y}\in Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Want to show
+\emph default
+: 
+\series default
+
+\begin_inset Formula $\tilde{y}\in A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\hat{p}\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider the profit function associated with 
+\begin_inset Formula $Y$
+\end_inset
+
+ evaluated at 
+\begin_inset Formula $\hat{p}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\pi^{Y}(\hat{p})=\max_{y\in Y}\ \hat{p}\cdot y
+\]
+
+\end_inset
+
+Now, define 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\[
+y^{*}\equiv\arg{\displaystyle \max_{y\in Y}\ \hat{p}\cdot y}
+\]
+
+\end_inset
+
+Note, 
+\begin_inset Formula $\pi^{Y}(\hat{p})\equiv\hat{p}\cdot y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\tilde{y}\in Y$
+\end_inset
+
+, then 
+\begin_inset Formula $\hat{p}\cdot\tilde{y}\leq\hat{p}\cdot y^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\tilde{y}\in A$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Take 
+\begin_inset Formula $\tilde{y}\in A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\forall\ p\geq0:p\cdot\tilde{y}\leq\pi^{Y}(p)$
+\end_inset
+
+, where 
+\begin_inset Formula $\pi^{Y}(p)$
+\end_inset
+
+ is the profit function associated with 
+\begin_inset Formula $Y$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\pi^{Y}(p)=\max_{y\in Y}\ p\cdot y
+\]
+
+\end_inset
+
+
+\series bold
+\emph on
+Want to show
+\emph default
+: 
+\series default
+
+\begin_inset Formula $\tilde{y}\in Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose for contradiction 
+\begin_inset Formula $\tilde{y}\notin Y\implies\tilde{y}\in Y^{c}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $Y$
+\end_inset
+
+ is a closed and convex set of 
+\begin_inset Formula $\mathbb{R}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{y}\in Y^{c}\subseteq\mathbb{R}^{L}$
+\end_inset
+
+, then by the Basic Separation Theorem 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\exists\ 0\leq\hat{p}\in\mathbb{R}^{L}\ \wedge\ c\in\mathbb{R}:\left[\forall\ y\in Y:\ \hat{p}\cdot y<c<\hat{p}\cdot\tilde{y}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\forall\ y\in Y:\hat{p}\cdot y<\hat{p}\cdot\tilde{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, define 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\[
+y^{*}\equiv\arg{\displaystyle \max_{y\in Y}\hat{p}\cdot y}
+\]
+
+\end_inset
+
+Note, 
+\begin_inset Formula $\pi^{Y}(\hat{p})\equiv\hat{p}\cdot y^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $y^{*}\in Y$
+\end_inset
+
+, then 
+\begin_inset Formula $\hat{p}\cdot y^{*}<\hat{p}\cdot\tilde{y}\iff\pi^{Y}(\hat{p})<\hat{p}\cdot\tilde{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\implies\exists\ p\geq0:\pi^{Y}(p)<p\cdot\tilde{y}\implies\tilde{y}\notin A\ \ (\rightarrow\leftarrow)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\tilde{y}\in Y$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Q.E.D.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Is it always true that
+\begin_inset Formula 
+\[
+Y=\{y\in\mathbb{R}^{L}:\forall\ p\gg0,p\cdot y\leq\pi^{Y}(p)\}\equiv A
+\]
+
+\end_inset
+
+No, the above equality does not always hold.
+ Below is a counter example.
+\end_layout
+
+\begin_layout Standard
+Take 
+\begin_inset Formula $\hat{p}\in\mathbb{R}_{++}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $z=[0,1]^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Define 
+\begin_inset Formula $Y\equiv\{(y_{1},y_{2})\in\mathbb{R}^{2}:y_{2}\leq0\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note, 
+\begin_inset Formula $z\notin Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\hat{p}_{1}>0$
+\end_inset
+
+, then 
+\begin_inset Formula $\pi^{Y}(\hat{p})=+\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\equiv\{y\in\mathbb{R}^{2}:p\gg0,p\cdot y\leq\pi^{Y}(p)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $\hat{p}\cdot z=\hat{p}_{2}<+\infty\implies z\in A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thefore, 
+\begin_inset Formula $Y\neq A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In general, 
+\begin_inset Formula $Y\subseteq A$
+\end_inset
+
+, but 
+\series bold
+
+\begin_inset Formula $A\nsubseteq Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Would your answer change if 
+\begin_inset Formula $Y$
+\end_inset
+
+ also satisfies no free-lunch?
+\end_layout
+
+\begin_layout Standard
+No, my answer would not change.
+ 
+\end_layout
+
+\begin_layout Standard
+Consider 
+\begin_inset Formula $Y\equiv\{(y_{1},y_{2})\in\mathbb{R}^{2}:\{y_{1}<0,y_{2}>0\}\ \cup\ \{y_{1}\leq0,y_{2}\leq0\}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi^{Y}(\hat{p})=+\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{p}\cdot z=\hat{p}_{2}<+\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $z\in A$
+\end_inset
+
+, but 
+\begin_inset Formula $z\notin Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Additional Problem
+\end_layout
+
+\begin_layout Standard
+Suppose that there are two inputs with prices 
+\begin_inset Formula $(w_{1},w_{2})$
+\end_inset
+
+ and one output with price 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Consider a Cobb-Douglas production function 
+\begin_inset Formula $f:\mathbb{R}_{+}^{2}\rightarrow\mathbb{R},f(z_{1},z_{2})=Az_{1}^{\alpha}z_{2}^{\beta}$
+\end_inset
+
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(a) 
+\begin_inset Formula $Y^{f}=\ ?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Y^{f}=\{(-z,q)\in\mathbb{R}^{3}:(z_{1},z_{2})\in\mathbb{R}_{+}^{2}\ \wedge\ q-Az_{1}^{\alpha}z_{2}^{\beta}\leq0\}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(b) Characterize the combinations of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ for which 
+\begin_inset Formula $Y^{f}$
+\end_inset
+
+ satisfies 
+\begin_inset Formula $NI$
+\end_inset
+
+, 
+\begin_inset Formula $ND$
+\end_inset
+
+, and 
+\begin_inset Formula $CR$
+\end_inset
+
+ of scale.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{c}
+\mbox{If}\ \alpha+\beta>1,\ \mbox{then}\ Y^{f}\ \mbox{satisfies}\ NDS\\
+\mbox{If}\ \alpha+\beta=1,\ \mbox{then}\ Y^{f}\ \mbox{satisfies}\ CRS\\
+\mbox{If}\ \alpha+\beta<1,\ \mbox{then}\ Y^{f}\ \mbox{satisfies}\ NIS
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(c) Calculate the associated supply correspondence, profit function, conditional
+ factor demand correspondence and cost function.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The goal of the firm represented by production set 
+\begin_inset Formula $Y^{f}$
+\end_inset
+
+is to maximize profits.
+ Since the production set 
+\begin_inset Formula $Y$
+\end_inset
+
+ is described by means of a production function 
+\begin_inset Formula $f$
+\end_inset
+
+, the profit maximization problem becomes:
+\begin_inset Formula 
+\[
+\max_{z\in\mathbb{R}_{+}^{2}}L=pAz_{1}^{\alpha}z_{2}^{\beta}-w_{1}z_{1}-w_{2}z_{2}
+\]
+
+\end_inset
+
+The solution of this problem and the maximum profit attained by the firm
+ define the firm's supply correspondence and profit function.
+ We simplify notation and denote 
+\begin_inset Formula $y^{f}$
+\end_inset
+
+and 
+\begin_inset Formula $\Pi^{f}$
+\end_inset
+
+ the supply correspondence and profit functions associated with 
+\begin_inset Formula $Y^{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial L}{\partial z_{1}}=0\iff\alpha pAz_{1}^{\alpha-1}z_{2}^{\beta}-w_{1}=0\iff z_{2}=\left[\frac{w_{1}z_{1}^{1-\alpha}}{\alpha pA}\right]^{\frac{1}{\beta}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial L}{\partial z_{2}}=0\iff\beta pAz_{1}^{\alpha}z_{2}^{\beta-1}-w_{2}=0\iff z_{1}=\left[\frac{w_{2}z_{2}^{1-\beta}}{\beta pA}\right]^{\frac{1}{\alpha}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Substituting 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ into the expression for 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ we obtain:
+\begin_inset Formula 
+\begin{eqnarray*}
+z_{2} & = & \left[\frac{w_{1}\left(\left[\frac{w_{2}z_{2}^{1-\beta}}{\beta pA}\right]^{\frac{1}{\alpha}}\right)^{1-\alpha}}{\alpha pA}\right]^{\frac{1}{\beta}}\\
+z_{2} & = & \left[\frac{w_{1}w_{2}^{\frac{1}{\alpha}-1}z_{2}^{(1-\beta)(\frac{1}{\alpha}-1)}}{\alpha pA}\right]^{\frac{1}{\beta}}\\
+1 & = & \frac{w_{1}^{\frac{1}{\beta}}w_{2}^{\frac{1}{\alpha\beta}-\frac{1}{\beta}}z_{2}^{(\frac{1}{\beta}-1)(\frac{1}{\alpha}-1)-1}}{(\alpha pA)^{\frac{1}{\beta}}}\\
+z_{2} & = & \left[\frac{(\alpha pA)^{\frac{1}{\beta}}}{w_{1}^{\frac{1}{\beta}}w_{2}^{\frac{1}{\alpha\beta}-\frac{1}{\beta}}}\right]^{\frac{1}{\left(\frac{1}{\beta}-1\right)\left(\frac{1}{\alpha}-1\right)-1}}\\
+z_{2} & = & \left[\alpha pAw_{1}^{-1}w_{2}^{1-\frac{1}{\alpha}}\right]^{\frac{1}{\beta\left[\frac{1}{\alpha\beta}-\frac{1}{\alpha}-\frac{1}{\beta}+1-1\right]}}\\
+z_{2}^{*} & = & \left[\alpha pAw_{1}^{-1}w_{2}^{\frac{\alpha-1}{\alpha}}\right]^{\frac{1}{\left(\frac{1}{\alpha}-\frac{\beta}{\alpha}-1\right)}}
+\end{eqnarray*}
+
+\end_inset
+
+By symmetry, we can determine the expression for 
+\begin_inset Formula $z_{1}^{*}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+z_{1}^{*}=\left[\beta pAw_{2}^{-1}w_{1}^{\frac{\beta-1}{\beta}}\right]^{\frac{1}{\left(\frac{1}{\beta}-\frac{\alpha}{\beta}-1\right)}}
+\]
+
+\end_inset
+
+Thus, the conditional factor demand correspondence is given by:
+\begin_inset Formula 
+\[
+z^{f}=\left[\begin{array}{c}
+\left[\beta pAw_{2}^{-1}w_{1}^{\frac{\beta-1}{\beta}}\right]^{\frac{1}{\left(\frac{1}{\beta}-\frac{\alpha}{\beta}-1\right)}}\\
+\left[\alpha pAw_{1}^{-1}w_{2}^{\frac{\alpha-1}{\alpha}}\right]^{\frac{1}{\left(\frac{1}{\alpha}-\frac{\beta}{\alpha}-1\right)}}
+\end{array}\right]
+\]
+
+\end_inset
+
+The cost function is then:
+\begin_inset Formula 
+\[
+c^{f}=w_{1}\left[\beta pAw_{2}^{-1}w_{1}^{\frac{\beta-1}{\beta}}\right]^{\frac{1}{\left(\frac{1}{\beta}-\frac{\alpha}{\beta}-1\right)}}+w_{2}\left[\alpha pAw_{1}^{-1}w_{2}^{\frac{\alpha-1}{\alpha}}\right]^{\frac{1}{\left(\frac{1}{\alpha}-\frac{\beta}{\alpha}-1\right)}}
+\]
+
+\end_inset
+
+To obtain the total output produced, we plug 
+\begin_inset Formula $z_{1}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{2}^{*}$
+\end_inset
+
+ into the production function:
+\begin_inset Formula 
+\[
+q^{*}=A\left[\beta pAw_{2}^{-1}w_{1}^{\frac{\beta-1}{\beta}}\right]^{\frac{\alpha}{\left(\frac{1}{\beta}-\frac{\alpha}{\beta}-1\right)}}\left[\alpha pAw_{1}^{-1}w_{2}^{\frac{\alpha-1}{\alpha}}\right]^{\frac{\beta}{\left(\frac{1}{\alpha}-\frac{\beta}{\alpha}-1\right)}}
+\]
+
+\end_inset
+
+Hence, the supply correspondence is given by:
+\begin_inset Formula 
+\[
+y^{f}(p,w_{1},w_{2})=\left[\begin{array}{c}
+-z_{1}^{*}\\
+-z_{2}^{*}\\
+q^{*}
+\end{array}\right]=\left[\begin{array}{c}
+-\left[\beta pAw_{2}^{-1}w_{1}^{\frac{\beta-1}{\beta}}\right]^{\frac{1}{\left(\frac{1}{\beta}-\frac{\alpha}{\beta}-1\right)}}\\
+-\left[\alpha pAw_{1}^{-1}w_{2}^{\frac{\alpha-1}{\alpha}}\right]^{\frac{1}{\left(\frac{1}{\alpha}-\frac{\beta}{\alpha}-1\right)}}\\
+A\left[\beta pAw_{2}^{-1}w_{1}^{\frac{\beta-1}{\beta}}\right]^{\frac{\alpha}{\left(\frac{1}{\beta}-\frac{\alpha}{\beta}-1\right)}}\left[\alpha pAw_{1}^{-1}w_{2}^{\frac{\alpha-1}{\alpha}}\right]^{\frac{\beta}{\left(\frac{1}{\alpha}-\frac{\beta}{\alpha}-1\right)}}
+\end{array}\right]
+\]
+
+\end_inset
+
+Finally, the profit function is
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi^{f}(p,w_{1},w_{2}) & = & pA\left[\beta pAw_{2}^{-1}w_{1}^{\frac{\beta-1}{\beta}}\right]^{\frac{\alpha}{\left(\frac{1}{\beta}-\frac{\alpha}{\beta}-1\right)}}\left[\alpha pAw_{1}^{-1}w_{2}^{\frac{\alpha-1}{\alpha}}\right]^{\frac{\beta}{\left(\frac{1}{\alpha}-\frac{\beta}{\alpha}-1\right)}}\\
+ &  & -w_{1}\left[\beta pAw_{2}^{-1}w_{1}^{\frac{\beta-1}{\beta}}\right]^{\frac{1}{\left(\frac{1}{\beta}-\frac{\alpha}{\beta}-1\right)}}-w_{2}\left[\alpha pAw_{1}^{-1}w_{2}^{\frac{\alpha-1}{\alpha}}\right]^{\frac{1}{\left(\frac{1}{\alpha}-\frac{\beta}{\alpha}-1\right)}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+(d) Verify Hotteling's Lemma for each 
+\begin_inset Formula $(w_{1},w_{2},p)$
+\end_inset
+
+ where it holds.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,3603 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 4: Production Theory
+\end_layout
+
+\begin_layout Standard
+Need to complete: Proposition 48, Proposition 52, Problem 4, Problem 5,
+ Problem 6, Problem 7, Problem 10.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this chapter we study production theory in a commodity space.
+ First, we develop the mathematical representaiton of produciton units,
+ which we refer simply as firms.
+ Second, we characterize the 
+\begin_inset Quotes eld
+\end_inset
+
+behavior
+\begin_inset Quotes erd
+\end_inset
+
+ of firms whose objective is the maximizaiton of profits.
+\end_layout
+
+\begin_layout Section*
+4.1
+\begin_inset space \quad{}
+\end_inset
+
+Representation of firms
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We study an 
+\begin_inset Formula $L$
+\end_inset
+
+-commodity world.
+ Here, a firm is an economic entity that transforms commodities.
+ We present a firm by means of the collection of bundles in the commodity
+ space that are 
+\begin_inset Quotes eld
+\end_inset
+
+technically feasible
+\begin_inset Quotes erd
+\end_inset
+
+ for it.
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+(13).
+ 
+\series default
+Assume that 
+\begin_inset Formula $L=\left\{ \mbox{oranges, orange juice}\right\} $
+\end_inset
+
+.
+ We denote the generic amount of aranges, in pounds, by 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ and the generic amount of arange juice, in liters, by 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+.
+ A given firm is able to produce from each pound of oranges, half a liter
+ of juice, and cannot produce any oranges from orange juice.
+ Moreover, the firm can dispose of any excess of orange juice.
+ The mathematical representation of this firm is the set
+\begin_inset Formula 
+\[
+Y=\left\{ \left(-z_{1},y_{1}\right)\in\mathbb{R}^{2}:z_{1}\geq0,y_{1}\leq\frac{1}{2}z_{1}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(97).
+
+\series default
+ 
+\emph on
+A 
+\series bold
+production set
+\emph default
+ 
+\series default
+\emph on
+is a subset of 
+\begin_inset Formula $\mathbb{R}^{L}$
+\end_inset
+
+.
+ The generic production set is 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We refer to the elements of 
+\begin_inset Formula $Y$
+\end_inset
+
+ as 
+\series bold
+feasible vectors
+\series default
+ (for 
+\begin_inset Formula $Y$
+\end_inset
+
+).
+ For each 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+, and each 
+\begin_inset Formula $l\in\{1,\ldots,L\}$
+\end_inset
+
+, commodity 
+\begin_inset Formula $l$
+\end_inset
+
+ is an input at 
+\begin_inset Formula $y$
+\end_inset
+
+ whenever 
+\begin_inset Formula $y_{l}<0$
+\end_inset
+
+; symmetrically, it is an output whenever 
+\begin_inset Formula $y_{l}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The following two examples will guid our study of production sets.
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+(14).
+
+\series default
+ (Transformation Function).
+ We define a production set by means of a function that tells us which vectors
+ are feasible.
+ No restriction is imposed on whether a commodity is an input or an output.
+\end_layout
+
+\begin_layout Example*
+Let 
+\begin_inset Formula $F:\mathbb{R}^{L}\rightarrow\mathbb{R}$
+\end_inset
+
+ be a function.
+ The production set associated with 
+\begin_inset Formula $F$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+Y^{F}\equiv\left\{ y\in\mathbb{R}^{L}:F(y)\leq0\right\} 
+\]
+
+\end_inset
+
+We refer to 
+\begin_inset Formula $F$
+\end_inset
+
+ as a 
+\series bold
+transformation function
+\series default
+ and to the set 
+\begin_inset Formula 
+\[
+\partial F\equiv\left\{ y\in\mathbb{R}^{L}:F(y)=0\right\} 
+\]
+
+\end_inset
+
+as the 
+\series bold
+transformation frontier for 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+\begin_inset space \quad{}
+\end_inset
+
+We define the 
+\series bold
+Marginal Rate of Transformation (MRT) of commodity l for commodity k at
+ 
+\begin_inset Formula $y\in\partial F$
+\end_inset
+
+
+\series default
+ as the ratio:
+\begin_inset Formula 
+\[
+MRT_{lk}(y)\equiv\frac{\frac{\partial F}{\partial y_{l}}(y)}{\frac{\partial F}{\partial y_{k}}(y)}=-\frac{\Delta y_{k}}{\Delta y_{l}}
+\]
+
+\end_inset
+
+With 
+\begin_inset Formula $l$
+\end_inset
+
+ on the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis and 
+\begin_inset Formula $k$
+\end_inset
+
+ on the 
+\begin_inset Formula $y$
+\end_inset
+
+-axis, the MRT is a measure of how much the net output of good 
+\begin_inset Formula $k$
+\end_inset
+
+ can decrease if the firm increases the net output of good 
+\begin_inset Formula $l$
+\end_inset
+
+ by one marginal unit.
+ The MRT of commodity 
+\begin_inset Formula $l$
+\end_inset
+
+ for commodity 
+\begin_inset Formula $k$
+\end_inset
+
+ at 
+\begin_inset Formula $y$
+\end_inset
+
+ is the absolute value of the slope of the transformation frontier on the
+ 
+\begin_inset Formula $l-k$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+slide through 
+\begin_inset Formula $y$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ of the consumption space.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The next example focuses on the single-output model.
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+(15).
+
+\series default
+ (Single-output model).
+ We divide the commodity space into inputs and outputs.
+ We define a production set by means of a funciton that tells us the amount
+ of output that can be produced with a given input vector.
+ For simplicity, we restrict to the single-output case.
+\end_layout
+
+\begin_layout Example*
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $f:\mathbb{R}_{+}^{L-1}\rightarrow\mathbb{R}_{+}$
+\end_inset
+
+ be a function.
+ The production set associated with 
+\begin_inset Formula $f$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+Y^{f}\equiv\left\{ (-z,q)\in\mathbb{R}^{L}:z\equiv(z_{1},\ldots,z_{L-1})\in\mathbb{R}_{+}^{L-1}\ \mbox{and}\ q-f(z_{1},\ldots,z_{L-1})=0\right\} 
+\]
+
+\end_inset
+
+We refer to 
+\begin_inset Formula $f$
+\end_inset
+
+ as a 
+\series bold
+production function
+\series default
+ and to the set
+\begin_inset Formula 
+\[
+\partial f\equiv\left\{ (-z,q)\in\mathbb{R}^{L}:z\in\mathbb{R}_{+}^{L-1}\ \mbox{and}\ q-f(z_{1},\ldots,z_{L-1})=0\right\} 
+\]
+
+\end_inset
+
+as the 
+\series bold
+production frontier.
+\end_layout
+
+\begin_layout Example*
+\begin_inset space \quad{}
+\end_inset
+
+We define the 
+\series bold
+Marginal Rate of Technical Substitution (MRTS) of input 
+\begin_inset Formula $l$
+\end_inset
+
+ for input 
+\begin_inset Formula $k$
+\end_inset
+
+ at 
+\begin_inset Formula $z\in\mathbb{R}_{+}^{L-1}$
+\end_inset
+
+
+\series default
+ as the ratio:
+\begin_inset Formula 
+\[
+MRTS_{lk}(z)\equiv\frac{\frac{\partial f}{\partial z_{l}}(z)}{\frac{\partial f}{\partial z_{k}}(z)}=-\frac{\Delta z_{k}}{\Delta z_{l}}
+\]
+
+\end_inset
+
+The single-output model admits an alternative representation of the production
+ set by means of iso-quants.
+ With 
+\begin_inset Formula $l$
+\end_inset
+
+ on the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis and 
+\begin_inset Formula $k$
+\end_inset
+
+ on the 
+\begin_inset Formula $y$
+\end_inset
+
+-axis,, the MRTS measures the amount of input 
+\begin_inset Formula $k$
+\end_inset
+
+ that must be reduced to keep output level 
+\begin_inset Formula $\bar{q}=f(\bar{z})$
+\end_inset
+
+ when the amount of input 
+\begin_inset Formula $l$
+\end_inset
+
+ in increased marginally.
+ The MRTS of input 
+\begin_inset Formula $l$
+\end_inset
+
+ for input 
+\begin_inset Formula $k$
+\end_inset
+
+ at 
+\begin_inset Formula $z$
+\end_inset
+
+ is the absolute value of the slope of the iso-quant at 
+\begin_inset Formula $z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+4.2
+\begin_inset space \quad{}
+\end_inset
+
+Properties of production sets
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $Y\subseteq\mathbb{R}^{L}$
+\end_inset
+
+ be a production set.
+ Then 
+\begin_inset Formula $Y$
+\end_inset
+
+ is (or satisfies):
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Non-empty 
+\series default
+iff 
+\begin_inset Formula $Y\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Closed
+\series default
+ iff 
+\begin_inset Formula $Y$
+\end_inset
+
+ is closed in 
+\begin_inset Formula $\mathbb{R}^{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+No-free-lunch
+\series default
+ iff 
+\begin_inset Formula $\forall\ y\in Y:y\geq0\implies y=0$
+\end_inset
+
+.
+ Alternatively, 
+\begin_inset Formula $Y\cap\mathbb{R}_{+}^{L}\subseteq\{0\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Possibility of inaction
+\series default
+ iff 
+\begin_inset Formula $0\in Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Free-disposal
+\series default
+ iff 
+\begin_inset Formula $\forall\ y\in Y,\ \forall\ x\leq y:x\in Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Irreversible
+\series default
+ iff 
+\begin_inset Formula $\left[y\in Y\ \wedge\ y\neq0\right]\implies-y\notin Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Non-increasing returns to scale (NI)
+\series default
+ iff 
+\begin_inset Formula $\forall\ y\in Y,\ \forall\ \alpha\in[0,1]:\alpha y\in Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Non-decreasing returns to scale (ND)
+\series default
+ iff 
+\begin_inset Formula $\forall\ y\in Y,\ \forall\ \alpha\in[1,+\infty):\alpha y\in Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Constant returns to scale
+\series default
+ 
+\series bold
+(CR)
+\series default
+ iff 
+\begin_inset Formula $Y$
+\end_inset
+
+ satisfies both NI and ND returns to scale.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Additivity
+\series default
+ iff 
+\begin_inset Formula $\forall\ \{y,y^{\prime}\}\subseteq Y:y+y^{\prime}\in Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Convexity 
+\series default
+iff 
+\begin_inset Formula $Y$
+\end_inset
+
+ is convex.
+\end_layout
+
+\begin_layout Example*
+Let 
+\begin_inset Formula $Y\subseteq\mathbb{R}_{-}^{2}\times\mathbb{R}$
+\end_inset
+
+ (single-output model).
+ Let the production be defined as
+\begin_inset Formula 
+\[
+f(z_{1},z_{2})=z_{1}^{\alpha}z_{2}^{\beta}
+\]
+
+\end_inset
+
+If 
+\begin_inset Formula $\alpha+\beta<1$
+\end_inset
+
+, then 
+\begin_inset Formula $Y$
+\end_inset
+
+ satisfies NI returns to scale.
+ If 
+\begin_inset Formula $\alpha+\beta>1$
+\end_inset
+
+, then 
+\begin_inset Formula $Y$
+\end_inset
+
+ satisfies ND returns to scale.
+ If 
+\begin_inset Formula $\alpha+\beta=1$
+\end_inset
+
+, then 
+\begin_inset Formula $Y$
+\end_inset
+
+ satisfies CR to scale.
+ Important to note, if 
+\begin_inset Formula $Y$
+\end_inset
+
+ is convex and 
+\begin_inset Formula $0\in Y$
+\end_inset
+
+, then 
+\begin_inset Formula $Y$
+\end_inset
+
+ satisfies NI returns to scale.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(48).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $Y\subseteq\mathbb{R}^{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose that 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $L=2$
+\end_inset
+
+ and 
+\begin_inset Formula $Y\subseteq\mathbb{R}_{-}\times\mathbb{R}$
+\end_inset
+
+ (single-output model).
+ If 
+\begin_inset Formula $Y$
+\end_inset
+
+ satisfies free-disposal and CR of scale, then 
+\begin_inset Formula $Y$
+\end_inset
+
+ is convex.
+\end_layout
+
+\begin_layout Enumerate
+Suppose that 
+\begin_inset Formula $L=3$
+\end_inset
+
+ and 
+\begin_inset Formula $Y\subseteq\mathbb{R}_{-}^{2}\times\mathbb{R}$
+\end_inset
+
+ (single-output model).
+ Then, free-disposal and CR of scale may not imply that 
+\begin_inset Formula $Y$
+\end_inset
+
+ is convex.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Will prove.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(49).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $Y\subseteq\mathbb{R}^{L}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $Y$
+\end_inset
+
+is additive and satisfies NI returns to scale, then 
+\begin_inset Formula $Y$
+\end_inset
+
+ is a convex cone, i.e., for each pair 
+\begin_inset Formula $\{y,y^{\prime}\}\subseteq Y$
+\end_inset
+
+ and each pair 
+\begin_inset Formula $\{\alpha,\beta\}\in\mathbb{R}_{+}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha y+\beta y^{\prime}\in Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\{y,y^{\prime}\}\subseteq Y$
+\end_inset
+
+ and 
+\begin_inset Formula $\{\alpha,\beta\}\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+, then NI returns to scale imply that 
+\begin_inset Formula $\alpha y\in Y$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\alpha\geq1$
+\end_inset
+
+, let 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ be such that 
+\begin_inset Formula $\frac{\alpha}{n}<1$
+\end_inset
+
+.
+ Then, by NI returns to scale, 
+\begin_inset Formula $\frac{\alpha}{n}y\in Y$
+\end_inset
+
+.
+ By additivity, 
+\begin_inset Formula $\alpha y=\frac{\alpha}{n}y+\cdots+\frac{\alpha}{n}y\in Y$
+\end_inset
+
+.
+ The symmetric argument shows that 
+\begin_inset Formula $\beta y^{\prime}\in Y$
+\end_inset
+
+.
+ By additivy, 
+\begin_inset Formula $\alpha y+\beta y^{\prime}\in Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary*
+
+\series bold
+\shape up
+(11).
+
+\series default
+ Additivity and NI returns to scale imply CR returns to scale and convexity.
+\end_layout
+
+\begin_layout Proof
+This is a direct consequence of the proof and result of Proposition 49.
+\end_layout
+
+\begin_layout Section*
+4.3
+\begin_inset space \quad{}
+\end_inset
+
+Profit maximization
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this seciton we characterize the behavior of a price-taker profit maximizing
+ firm.
+ Consider a firm represented by production set 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ Assume that prices are 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ The profit of firm 
+\begin_inset Formula $Y$
+\end_inset
+
+ when producing at a feasible vector 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+p\cdot y\equiv\sum_{l\in L}p_{l}y_{l}
+\]
+
+\end_inset
+
+A price-taker profit maximizing firm that observed prices 
+\begin_inset Formula $p$
+\end_inset
+
+ solves the 
+\series bold
+Profit Maximization Problem
+\series default
+
+\begin_inset Formula 
+\[
+{\displaystyle \max_{y\in Y}}\ p\cdot y
+\]
+
+\end_inset
+
+The solution of this problem and the maximum profit attained by the firm
+ define the firm's supply correspondence and profit function.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Supply correspondence
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(98).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $Y$
+\end_inset
+
+ be a production set.
+ The 
+\series bold
+supply correspondence associated with 
+\begin_inset Formula $Y$
+\end_inset
+
+ 
+\series default
+is defined by
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+y^{Y}: & \mathbb{R}_{+}^{L} & \rightarrow & \mathbb{R}^{L}\\
+ & p & \mapsto & y^{Y}(p)\equiv\arg{\displaystyle \max_{y\in Y}}\ p\cdot y
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Profit function
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(99).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $Y$
+\end_inset
+
+ be a production set.
+ The 
+\series bold
+profit function associated with 
+\begin_inset Formula $Y$
+\end_inset
+
+
+\series default
+ is defined by:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+\Pi^{Y}: & \mathbb{R}_{+}^{L} & \rightarrow & \mathbb{R}\\
+ & p & \mapsto & \Pi^{Y}(p)\equiv{\displaystyle \max_{y\in Y}}p\cdot y
+\end{array}
+\]
+
+\end_inset
+
+Alternatively, 
+\begin_inset Formula $\Pi^{Y}(p)\equiv p\cdot y^{*}$
+\end_inset
+
+ for some 
+\begin_inset Formula $y^{*}\in y^{Y}(p)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+4.3.1
+\begin_inset space \quad{}
+\end_inset
+
+Profit maximizaiton: Transformation Function model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If production set 
+\begin_inset Formula $Y$
+\end_inset
+
+ is described by means of a transformation function 
+\begin_inset Formula $F$
+\end_inset
+
+, the firm's profit maximizaiton problem becomes
+\begin_inset Formula 
+\[
+{\displaystyle \max_{\{y\in\mathbb{R}^{L}:F(y)\leq0\}}}\ p\cdot y
+\]
+
+\end_inset
+
+We simplify notation and denote 
+\begin_inset Formula $y^{F}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Pi^{F}$
+\end_inset
+
+ the supply correspondence and profit function associated with 
+\begin_inset Formula $Y^{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(50).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $F$
+\end_inset
+
+ be a differentiable transformation function.
+ For each 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ and each pair 
+\begin_inset Formula $\{l,k\}\subseteq\{1,\ldots,L\}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{p_{l}}{p_{k}}=MRT_{lk}(y^{F}(p))
+\]
+
+\end_inset
+
+
+\begin_inset Formula $(p=\lambda DF(y^{Y}(p))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $F$
+\end_inset
+
+ be a differentaible transformation function.
+ Take 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $\{l,k\}\subseteq\{1,\ldots,L\}$
+\end_inset
+
+.
+ The Lagrangian to the profit maximization problem is
+\begin_inset Formula 
+\[
+L=p\cdot y-\lambda(F(y))
+\]
+
+\end_inset
+
+The first-order conditions are given by
+\begin_inset Formula 
+\begin{gather*}
+\frac{\partial L}{\partial y_{l}}=0:p_{l}-\lambda\frac{\partial F(y)}{\partial y_{l}}=0\\
+\frac{\partial L}{\partial y_{k}}=0:p_{k}-\lambda\frac{\partial F(y)}{\partial y_{k}}=0
+\end{gather*}
+
+\end_inset
+
+Thus, we have
+\begin_inset Formula 
+\[
+\frac{p_{l}}{p_{k}}=\frac{\frac{\partial F(y)}{\partial y_{l}}}{\frac{\partial F(y)}{\partial y_{k}}}=MRT_{lk}(y^{F}(p))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+4.3.2
+\begin_inset space \quad{}
+\end_inset
+
+Profit maximization: Production Function model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the production function single-output model we denote input prices by
+ 
+\begin_inset Formula $w\equiv(w_{1},\ldots,w_{L-1})\in\mathbb{R}_{+}^{L-1}$
+\end_inset
+
+ and output price by 
+\begin_inset Formula $p\in\mathbb{R}_{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If the production set 
+\begin_inset Formula $Y$
+\end_inset
+
+ is described by means of a production funciton 
+\begin_inset Formula $f$
+\end_inset
+
+, the firm's profit maximization problem becomes
+\begin_inset Formula 
+\[
+{\displaystyle \max_{z\in\mathbb{R}_{+}^{L-1}}}pf(z)-w\cdot z
+\]
+
+\end_inset
+
+We simplify notation and denote 
+\begin_inset Formula $y^{f}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Pi^{f}$
+\end_inset
+
+ the supply correspondence and profit functions associated with 
+\begin_inset Formula $Y^{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(51).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $f$
+\end_inset
+
+ be a differentiable production function and 
+\begin_inset Formula $Y$
+\end_inset
+
+ its associated production set.
+ For each 
+\begin_inset Formula $w\in\mathbb{R}_{++}^{L-1}$
+\end_inset
+
+, each 
+\begin_inset Formula $p\in\mathbb{R}_{++}$
+\end_inset
+
+, and each pair 
+\begin_inset Formula $\{l,k\}\subseteq\{1,\ldots,L\}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\frac{w_{l}}{w_{k}}=MRTS_{lk}(y^{f}(p))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $f$
+\end_inset
+
+ be a differentiable production function and 
+\begin_inset Formula $Y$
+\end_inset
+
+ its associated production set.
+ Take 
+\begin_inset Formula $w\in\mathbb{R}_{++}^{L-1}$
+\end_inset
+
+, 
+\begin_inset Formula $p\in\mathbb{R}_{++}$
+\end_inset
+
+, and 
+\begin_inset Formula $\{l,k\}\subseteq\{1,\ldots,L\}$
+\end_inset
+
+.
+ The Lagrangian of the profit maximization problem is
+\begin_inset Formula 
+\[
+L=pf(z)-w\cdot z+\lambda z
+\]
+
+\end_inset
+
+The first-order conditions are
+\begin_inset Formula 
+\begin{gather*}
+\frac{\partial L}{\partial z_{l}}=p_{l}\frac{\partial f}{\partial z_{l}}(z)-w_{l}\leq0\ \mbox{with equality if}\ z_{l}>0\\
+\frac{\partial L}{\partial z_{k}}=p_{k}\frac{\partial f}{\partial z_{k}}(z)-w_{k}\leq0\ \mbox{with equality if}\ z_{k}>0
+\end{gather*}
+
+\end_inset
+
+When 
+\begin_inset Formula $z^{*}$
+\end_inset
+
+ is an interior solution, we have
+\begin_inset Formula 
+\[
+\frac{w_{l}}{w_{k}}=\frac{\frac{\partial f}{\partial z_{l}}(z)}{\frac{\partial f}{\partial z_{k}}(z)}=MRTS_{lk}(y^{f}(p))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+4.3.3.
+\begin_inset space \quad{}
+\end_inset
+
+Profit maximization: general model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The following are properties of a supply correspondence and a profit function.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+(52).
+
+\series default
+ Assume that 
+\begin_inset Formula $Y$
+\end_inset
+
+ is non-empty, closed, and satisfies free disposal.
+ Then:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\Pi^{Y}$
+\end_inset
+
+ is homogeneous of degree one.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\Pi^{Y}$
+\end_inset
+
+ is convex.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $Y$
+\end_inset
+
+ is convex, then it can be recovered from 
+\begin_inset Formula $\Pi^{Y}$
+\end_inset
+
+ as follows:
+\begin_inset Formula 
+\[
+Y\equiv\left\{ y\in\mathbb{R}^{L}:\forall\ p\in\mathbb{R}_{+}^{L},\ p\cdot y\leq\Pi^{Y}(p)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $y^{Y}$
+\end_inset
+
+ is homogeneous of degree zero.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $Y$
+\end_inset
+
+ is convex, then 
+\begin_inset Formula $y^{Y}$
+\end_inset
+
+ is convex-valued.
+ If 
+\begin_inset Formula $Y$
+\end_inset
+
+ is strictly convex, i.e., for each pair 
+\begin_inset Formula $\{x,y\}\subseteq Y$
+\end_inset
+
+ and each 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha x+(1-\alpha)y$
+\end_inset
+
+ belongs to the interior of 
+\begin_inset Formula $Y$
+\end_inset
+
+, then 
+\begin_inset Formula $y^{Y}$
+\end_inset
+
+ is single-valued.
+\end_layout
+
+\begin_layout Enumerate
+(Hotteling's Lemma) Let 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\left|y^{Y}(p)\right|=1$
+\end_inset
+
+, then 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ is differentiable for each 
+\begin_inset Formula $l\in\{1,\ldots,L\}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\frac{\partial\Pi^{Y}}{\partial p_{l}}(p)=y_{l}^{Y}(p)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $y^{Y}$
+\end_inset
+
+ is a differentiable function in a neighborhood of 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+, then
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $Dy^{Y}(p)p=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Dy^{Y}(p)$
+\end_inset
+
+ is symmetric and positive semi-definite.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(Law of Supply) For each pair 
+\begin_inset Formula $\{p,p^{\prime}\}\subseteq\mathbb{R}_{+}^{L}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+(p^{\prime}-p)\cdot\left(y^{Y}(p^{\prime})-y^{Y}(p)\right)\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Will prove.
+ Check Mas-Colell Proposition 5.C.1
+\end_layout
+
+\begin_layout Subsection*
+4.4
+\begin_inset space \quad{}
+\end_inset
+
+Problems
+\end_layout
+
+\begin_layout Problem
+Suppose that 
+\begin_inset Formula $f$
+\end_inset
+
+ is the production functions associated with a single-output technology,
+ and let 
+\begin_inset Formula $Y$
+\end_inset
+
+ be the associated production set.
+ Prove that 
+\begin_inset Formula $Y$
+\end_inset
+
+ satisfies Constant Returns to Scale if and only if 
+\begin_inset Formula $f$
+\end_inset
+
+ is homogeneous of degree one.
+ Conclude that in the single-input, single-output case CR implies that 
+\begin_inset Formula $f$
+\end_inset
+
+ is linear.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $f:\mathbb{R}^{L-1}\rightarrow\mathbb{\mathbb{R}}_{+}$
+\end_inset
+
+ be the production function associated with a single-output technology,
+ and let 
+\begin_inset Formula $Y$
+\end_inset
+
+ be the associated
+\begin_inset Formula 
+\[
+Y\equiv\left\{ (-z,q)\in\mathbb{R}^{L}:z\in\mathbb{R}^{L-1}\ \mbox{and}\ q-f(z)\leq0\right\} 
+\]
+
+\end_inset
+
+We prove that
+\begin_inset Formula 
+\[
+\forall\ y\in Y,\ \forall\ z\in\mathbb{R}^{L-1},\ \forall\ \alpha\in\mathbb{R}_{+}:\alpha y\in Y\iff\alpha f(z)=f(\alpha z)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\forall\ y\in Y,\ \forall\ \alpha\in\mathbb{R}_{+}:\alpha y\in Y$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\alpha\in\mathbb{R}_{+},\ z\in\mathbb{R}^{L-1}$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\alpha f(z)=f(\alpha z)$
+\end_inset
+
+.
+ For this 
+\begin_inset Formula $z$
+\end_inset
+
+, let 
+\begin_inset Formula $f(z)=q\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ By definition of the production frontier, 
+\begin_inset Formula $(-z,q)\in\partial f\equiv\left\{ (-z,q)\in\mathbb{R}^{L}:z\in\mathbb{R}^{L-1}\ \mbox{and}\ q-f(z)=0\right\} \subseteq Y$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $Y$
+\end_inset
+
+ satisfies CRS, then 
+\begin_inset Formula $(-\alpha z,\alpha q)\in Y$
+\end_inset
+
+.
+ So, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\alpha q\leq f(\alpha z)$
+\end_inset
+
+, and thus, 
+\begin_inset Formula $q\leq\frac{\tilde{q}}{\alpha}$
+\end_inset
+
+.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ Let 
+\begin_inset Formula $f(\alpha z)=\tilde{q}\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ By definition, 
+\begin_inset Formula $(-\alpha z,\tilde{q})\in Y$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $Y$
+\end_inset
+
+ satisfies CRS, then 
+\begin_inset Formula $\left(-z,\frac{\tilde{q}}{\alpha}\right)\in Y$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\frac{\tilde{q}}{\alpha}\leq f(z)=q$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $q\leq\frac{\tilde{q}}{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $q\geq\frac{\tilde{q}}{a}$
+\end_inset
+
+ imply that 
+\begin_inset Formula $q=\frac{\tilde{q}}{a}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\alpha f(z)=f(\alpha z)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\forall\ \alpha\in\mathbb{R}_{+},\ \forall\ z\in\mathbb{R}^{L-1}:\alpha f(z)=f(\alpha z)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\forall\ \alpha\in\mathbb{R}_{+},\ \forall\ z\in\mathbb{R}^{L-1}:\alpha f(z)=f(\alpha z)$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\in\mathbb{R}_{+}$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\alpha y\in Y$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+ implies that 
+\begin_inset Formula $y=(-z,q)\in\mathbb{R}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $z\in\mathbb{R}^{L-1}$
+\end_inset
+
+ and 
+\begin_inset Formula $q-f(z)\leq0$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $q\leq f(z)$
+\end_inset
+
+, and multiplying both sides by 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ yields 
+\begin_inset Formula $\alpha q\leq\alpha f(z)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is homogeneous of degree one, then 
+\begin_inset Formula $\alpha q\leq f(\alpha z)$
+\end_inset
+
+.
+ By definition, 
+\begin_inset Formula $(-\alpha z,\alpha q)\in Y$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $\alpha(-z,q)\in Y$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\alpha y\in Y$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\forall\ y\in Y,\ \forall\ \alpha\in\mathbb{R}_{+}:\alpha y\in Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark*
+Also, try to prove that for a single-output technology, 
+\begin_inset Formula $Y$
+\end_inset
+
+ is convex if and only if 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ is concave.
+\end_layout
+
+\begin_layout Problem
+Consider the single-input case in which 
+\begin_inset Formula $f$
+\end_inset
+
+ is defined by: for each 
+\begin_inset Formula $z\in\mathbb{R}_{+}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+f(z)\equiv\frac{1}{2}\left(\sqrt{z+1}-1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Graph 
+\begin_inset Formula $Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Graphically show that 
+\begin_inset Formula $Y$
+\end_inset
+
+ is closed and satisfies Non-increasing returns to scale.
+\end_layout
+
+\begin_layout Enumerate
+Graphically show that 
+\begin_inset Formula $Y$
+\end_inset
+
+ is not additive and does not satisfy Non-decreasing returns to scale.
+\end_layout
+
+\begin_layout Enumerate
+Imagine now that it is possible to add any number of production input-output
+ combinations under technology 
+\begin_inset Formula $Y$
+\end_inset
+
+(there is free entry to this market).
+ Denote this new production set by 
+\begin_inset Formula $AY$
+\end_inset
+
+.
+ Formally,
+\begin_inset Formula 
+\[
+AY\equiv\{y_{1}+\cdots+y_{n}:n\in\mathbb{N},\ \forall\ i=1,\ldots,n,\ y_{i}\in Y\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Characterize and graph 
+\begin_inset Formula $AY$
+\end_inset
+
+.
+ Is there a function 
+\begin_inset Formula $f_{A}$
+\end_inset
+
+ such that 
+\begin_inset Formula $AY\equiv\left\{ (-z,q):z\geq0,\ q\leq f_{A}(z)\right\} $
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Is 
+\begin_inset Formula $AY$
+\end_inset
+
+ closed? Is it additive? Does it satisfy Non-Increasing Returns to scale?
+ Does it satisfy Non-Decreasing returns to scale.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Proof
+Graphs will not be provided in the solution to this problem, only descriptions
+ about the procedures.
+ Also, Part A will be skipped.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+The production set associated with the given production function is
+\begin_inset Formula 
+\[
+Y^{f}\equiv\left\{ (-z,q)\in\mathbb{R}^{2}:z\in\mathbb{R}_{+}\ \mbox{and}\ q-f(z)\leq0\right\} 
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $Y^{f}$
+\end_inset
+
+ contains its boundary points, then it is a closed set.
+ 
+\begin_inset Formula $Y^{f}$
+\end_inset
+
+ satisfies non-increasing returns to scale iff 
+\begin_inset Formula $\forall\ y\in Y,\ \forall\ \alpha\in[0,1]:\alpha y\in Y$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+ and 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ By the construction of 
+\begin_inset Formula $f(z)$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha y\in Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part C.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $y=\left[\begin{array}{cc}
+-3 & \frac{1}{2}\end{array}\right]^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{y}=\left[\begin{array}{cc}
+-8 & 1\end{array}\right]^{\prime}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $y+\bar{y}=\left[\begin{array}{cc}
+-11 & 1.5\end{array}\right]\notin Y$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $Y$
+\end_inset
+
+ is not additive.
+ Let 
+\begin_inset Formula $\alpha=2$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\alpha y\notin Y$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $Y$
+\end_inset
+
+ does not satisfy ND returns to scale.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part D, (i)
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Suppose 
+\begin_inset Formula $n$
+\end_inset
+
+ firms enter the market.
+ Then,
+\begin_inset Formula 
+\begin{gather*}
+f_{A}(z)=\frac{n}{2}\left(\sqrt{\frac{z}{n}+1}-1\right)=\frac{\sqrt{\left(\nicefrac{z}{n}\right)+1}-1}{\nicefrac{2}{n}}
+\end{gather*}
+
+\end_inset
+
+As 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+, then by L'Hoptial's rule
+\begin_inset Formula 
+\[
+{\displaystyle \lim_{n\rightarrow\infty}}\frac{\left(-\nicefrac{1}{2}\right)\left(\nicefrac{1}{\sqrt{\left(\nicefrac{z}{n}\right)+1}}\right)\left(\nicefrac{z}{n^{2}}\right)}{\left(-\nicefrac{2}{n^{2}}\right)}={\displaystyle \lim_{n\rightarrow\infty}}\frac{z}{4\sqrt{\left(\nicefrac{z}{n}\right)+1}}=\frac{1}{4}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $f_{A}(z)=\frac{1}{4}z$
+\end_inset
+
+ is only the upper limit and it is not well defined, then there is no function
+ 
+\begin_inset Formula $f_{A}$
+\end_inset
+
+ such that 
+\begin_inset Formula $AY\equiv\left\{ (-z,q):z\geq0,\ q\leq f_{A}(z)\right\} $
+\end_inset
+
+.
+ Important to note, the industry as a whole, i.e., 
+\begin_inset Formula $AY$
+\end_inset
+
+, faces CR to scale due to free entry, but each firm 
+\begin_inset Formula $i$
+\end_inset
+
+ still faces the production technology 
+\begin_inset Formula $f(z)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part D, (ii)
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Since 
+\begin_inset Formula $f_{A}(z)=\frac{1}{4}z$
+\end_inset
+
+ is not part of the set, then 
+\begin_inset Formula $AY$
+\end_inset
+
+ is not closed.
+ Let 
+\begin_inset Formula $\{y,\tilde{y}\}\in AY$
+\end_inset
+
+ such that 
+\begin_inset Formula $y=(-z,q)$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{y}=(-\tilde{z},\tilde{q})$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $q+\tilde{q}<\left(\nicefrac{1}{4}\right)\left(z+\tilde{z}\right)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $y+\tilde{y}\in AY$
+\end_inset
+
+, so 
+\begin_inset Formula $AY$
+\end_inset
+
+ is additive.
+\end_layout
+
+\begin_layout Problem
+Consider a production set 
+\begin_inset Formula $Y\subseteq\mathbb{R}^{L}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\pi^{Y}$
+\end_inset
+
+ be the profit function associated with set 
+\begin_inset Formula $Y$
+\end_inset
+
+, i.e., for each 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\pi^{Y}(p)\equiv{\displaystyle \max_{y\in Y}p\cdot y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Define free disposal and no free lunch.
+ Draw a production set that satisfies these two properties.
+ Illustrate the profit maximization for some price vector 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Is 
+\begin_inset Formula $\pi^{Y}$
+\end_inset
+
+ concanve, convex, or neither of them?
+\end_layout
+
+\begin_layout Enumerate
+Suppose now that a firm with produciton set 
+\begin_inset Formula $Y$
+\end_inset
+
+ may face an uncertain market.
+ The first is an expected profit maximizer and is 
+\series bold
+risk neutral
+\series default
+.
+ There are two markets in which the firm may participate.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Market 1: price is uncertain with some probability distribution.
+\end_layout
+
+\begin_layout Itemize
+Market 2: price is certian; it is exactly the expected price in Market 1.
+\end_layout
+
+\begin_layout Standard
+Prove that the firm always finds particpating in Market 1 as good as participati
+ng in Market 2.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Proof
+Consider a production set 
+\begin_inset Formula $Y\subseteq\mathbb{R}^{L}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\pi^{Y}$
+\end_inset
+
+ be the profit function associated with set 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part A.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $Y$
+\end_inset
+
+ satisfies 
+\series bold
+no-free-lunch
+\series default
+ iff 
+\begin_inset Formula $\forall\ y\in Y:y\geq0\implies y=0$
+\end_inset
+
+.
+ Alternatively, 
+\begin_inset Formula $Y\cap\mathbb{R}_{+}^{L}\subseteq\{0\}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Y$
+\end_inset
+
+ satisfies 
+\series bold
+free disposal 
+\series default
+iff 
+\begin_inset Formula $\forall\ y\in Y,\ \forall\ x\leq y:x\in Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part B.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+\begin_inset space \quad{}
+\end_inset
+
+
+\series default
+We claim that 
+\begin_inset Formula $\pi^{Y}(p)$
+\end_inset
+
+ is convex.
+ Take 
+\begin_inset Formula $\{\hat{p},\tilde{p}\}\in\mathbb{R}_{+}^{L}\ \mbox{and}\ \alpha\in[0,1]$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\hat{y}\equiv\arg{\displaystyle \max_{y\in Y}\hat{p}\cdot}y$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{y}\equiv\arg{\displaystyle \max_{y\in Y}\tilde{p}\cdot y}$
+\end_inset
+
+.
+ Consider 
+\begin_inset Formula $\alpha\hat{p}+(1-\alpha)\tilde{p}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\pi^{Y}(\alpha\hat{p}+(1-\alpha)\tilde{p})=(\alpha\hat{p}+(1-\alpha)\tilde{p})\cdot\bar{y}$
+\end_inset
+
+ where 
+\begin_inset Formula $\bar{y}\equiv\arg{\displaystyle \max_{y\in Y}}(\alpha\hat{p}+(1-\alpha)\tilde{p})\cdot y$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\alpha\hat{p}\cdot\bar{y}+(1-\alpha)\tilde{p}\cdot\bar{y}\leq\alpha\pi^{Y}(\hat{p})+(1-\alpha)\pi^{Y}(\tilde{p})$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\forall\ \{p,p^{\prime}\}\subseteq\mathbb{R}_{+}^{L},\ \forall\ \alpha\in[0,1]:\pi^{Y}(\alpha p+(1-\alpha)p^{\prime})\leq\alpha\pi^{Y}(p)+(1-\alpha)\pi^{Y}(p^{\prime})$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\pi^{Y}(p)$
+\end_inset
+
+ is a convex function.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part C.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Market 1: 
+\begin_inset Formula ${\displaystyle \int}\pi^{Y}(p)dF(p)$
+\end_inset
+
+ for some distribution of random price.
+ Market 2: 
+\begin_inset Formula $\pi^{Y}\left({\displaystyle \int}pdF(p)\right)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\pi^{Y}(p)$
+\end_inset
+
+ is a convex function, then by Jensen's inequality, 
+\begin_inset Formula $\pi^{Y}\left({\displaystyle \int}pdF(p)\right)\leq{\displaystyle \int}\pi^{Y}(p)dF(p)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $C$
+\end_inset
+
+ be a convex and closed set of 
+\begin_inset Formula $\mathbb{R}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $z\in\mathbb{R}^{L}$
+\end_inset
+
+ a vector that is not in 
+\begin_inset Formula $C$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $z\in C^{c}$
+\end_inset
+
+.
+ Prove that ther is a closet vector in 
+\begin_inset Formula $C$
+\end_inset
+
+ to 
+\begin_inset Formula $z$
+\end_inset
+
+, that is, there is 
+\begin_inset Formula $x^{*}\in C$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $x\in C$
+\end_inset
+
+, 
+\begin_inset Formula $\left\Vert z-x^{*}\right\Vert \leq\left\Vert z-x\right\Vert $
+\end_inset
+
+.
+ Hint: the function 
+\begin_inset Formula $f:\mathbb{R}^{L}\rightarrow\mathbb{R}$
+\end_inset
+
+ defined by 
+\begin_inset Formula $x\in\mathbb{R}^{L}\mapsto f(x)\equiv\left\Vert z-x\right\Vert ^{2}$
+\end_inset
+
+ is continuous.
+\end_layout
+
+\begin_layout Proof
+Will prove.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $C$
+\end_inset
+
+ be a convex and closed set of 
+\begin_inset Formula $\mathbb{R}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $z\in\mathbb{R}^{L}$
+\end_inset
+
+ a vector that is not in 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x^{*}\in C$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is such that for each 
+\begin_inset Formula $x\in C$
+\end_inset
+
+, 
+\begin_inset Formula $\left\Vert z-x^{*}\right\Vert \leq\left\Vert z-x\right\Vert $
+\end_inset
+
+ if and only if for each 
+\begin_inset Formula $x\in C$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+(z-x^{*})\cdot(x-x^{*})\leq0
+\]
+
+\end_inset
+
+Moreover, there is a unique closet vector in 
+\begin_inset Formula $C$
+\end_inset
+
+ to 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Do it in two steps.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose that 
+\begin_inset Formula $x^{*}\in C$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $x\in C$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+(z-x^{*})\cdot(x-x^{*})\leq0
+\]
+
+\end_inset
+
+Prove that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is the unique closet element in 
+\begin_inset Formula $C$
+\end_inset
+
+ to 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Do it as follows: prove that the function 
+\begin_inset Formula $f$
+\end_inset
+
+ defined above is strictly convex.
+ Let 
+\begin_inset Formula $x\in\mathbb{R}^{L}$
+\end_inset
+
+ be such that 
+\begin_inset Formula $x\neq x^{*}$
+\end_inset
+
+.
+ Prove, using a Taylor expansion of degree two, that 
+\begin_inset Formula $f(x)>f(x^{*})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Assume that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is a closet element in 
+\begin_inset Formula $C$
+\end_inset
+
+ to 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x\in C$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\varphi:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+ be the function defined by 
+\begin_inset Formula $t\mapsto\varphi(t)\equiv\left\Vert z-(x^{*}+t(x-x^{*}))\right\Vert ^{2}$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is differentiable and that 
+\begin_inset Formula $\varphi^{\prime}(0)\geq0$
+\end_inset
+
+.
+ Conclude that 
+\begin_inset Formula $(z-x^{*})\cdot(x-x^{*})\leq0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Will prove.
+\end_layout
+
+\begin_layout Problem
+(Basic Separation Theorem) Suppose that 
+\begin_inset Formula $C$
+\end_inset
+
+ is a convex and closed set of 
+\begin_inset Formula $\mathbb{R}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $z\in\mathbb{R}^{L}$
+\end_inset
+
+ a vector that is not in 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Prove that there is a non-zero vector 
+\begin_inset Formula $p\in\mathbb{R}^{L}$
+\end_inset
+
+ and a real number 
+\begin_inset Formula $c$
+\end_inset
+
+ such that 
+\begin_inset Formula $p\cdot z>c$
+\end_inset
+
+ and for each 
+\begin_inset Formula $x\in C$
+\end_inset
+
+, 
+\begin_inset Formula $p\cdot x<c$
+\end_inset
+
+.
+ Do it in three steps.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Prove a graphical interpretation of the theorem when 
+\begin_inset Formula $C$
+\end_inset
+
+ is a production set and 
+\begin_inset Formula $z$
+\end_inset
+
+ is a non-feasible point at 
+\begin_inset Formula $C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $x^{*}\in C$
+\end_inset
+
+ be the closet point in 
+\begin_inset Formula $C$
+\end_inset
+
+ to 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p\equiv z-x^{*}$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $p\cdot z>p\cdot x^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+ be such that 
+\begin_inset Formula $p\cdot x^{*}<c<p\cdot z$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $c$
+\end_inset
+
+ have the desired properties.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Will prove.
+\end_layout
+
+\begin_layout Problem
+(Basic Supporting Hyperplane Theorem) Let 
+\begin_inset Formula $C$
+\end_inset
+
+ be a convex set of 
+\begin_inset Formula $\mathbb{R}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ be a boundary point of 
+\begin_inset Formula $C$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $z\in\overline{C}\cap\overline{C^{c}}$
+\end_inset
+
+.
+ (Here if 
+\begin_inset Formula $A$
+\end_inset
+
+ is a set, 
+\begin_inset Formula $\overline{A}$
+\end_inset
+
+ denotes the closure of 
+\begin_inset Formula $A$
+\end_inset
+
+, i.e., the set of all limit points of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ In other words, the set of points, 
+\begin_inset Formula $a$
+\end_inset
+
+ such that there is a sequence in 
+\begin_inset Formula $A$
+\end_inset
+
+ that converges to 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ For instance, the closure of 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ is 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.) Prove that there is a non-zero vector 
+\begin_inset Formula $p\in\mathbb{R}^{L}$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $x\in C$
+\end_inset
+
+, 
+\begin_inset Formula $p\cdot x\leq p\cdot z$
+\end_inset
+
+.
+ Provide a graphical interpretation when 
+\begin_inset Formula $C$
+\end_inset
+
+ is a production set and 
+\begin_inset Formula $z$
+\end_inset
+
+ is a boundary point of 
+\begin_inset Formula $C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Will prove.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $Y\subseteq\mathbb{R}^{L}$
+\end_inset
+
+ be a non-empty convex production set that satisfies free disposal.
+ Let 
+\begin_inset Formula $y$
+\end_inset
+
+ be efficient at 
+\begin_inset Formula $Y$
+\end_inset
+
+, i.e., there is no 
+\begin_inset Formula $y^{\prime}\in Y$
+\end_inset
+
+ such that 
+\begin_inset Formula $y^{\prime}\gneq y$
+\end_inset
+
+.
+ Prove that there is 
+\begin_inset Formula $p\geq0$
+\end_inset
+
+ such that 
+\begin_inset Formula $y$
+\end_inset
+
+ is profit maximizing at 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $Y\subseteq\mathbb{R}^{L}$
+\end_inset
+
+ be a non-empty convex production set that satisfies free disposal.
+ Let 
+\begin_inset Formula $y$
+\end_inset
+
+ be efficient at 
+\begin_inset Formula $Y$
+\end_inset
+
+, i.e., there is no 
+\begin_inset Formula $y^{\prime}\in Y$
+\end_inset
+
+ such that 
+\begin_inset Formula $y^{\prime}\gneq y$
+\end_inset
+
+ We prove that there is 
+\begin_inset Formula $p\geq0$
+\end_inset
+
+ such that 
+\begin_inset Formula $y$
+\end_inset
+
+ is profit maximizing at 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+First, we show that 
+\begin_inset Formula $y$
+\end_inset
+
+ is a boundary point of 
+\begin_inset Formula $Y$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $y\in\overline{Y}\cap\overline{Y^{c}}$
+\end_inset
+
+.
+ Suppose for contradiction that 
+\begin_inset Formula $y\notin\overline{Y}\cap\overline{Y^{c}}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $y\in\mbox{Int}(Y)$
+\end_inset
+
+, which by definition is an open set.
+ So, 
+\begin_inset Formula $\exists\ \epsilon>0$
+\end_inset
+
+ such that 
+\begin_inset Formula $B_{\epsilon}(y)\subseteq\mbox{Int}(Y)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\tau\in\mathbb{R}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ l\in\{1,\ldots,L\}:\tau_{l}=1$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $y^{\prime}=y+\left(\nicefrac{\epsilon}{2}\right)\tau$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $y^{\prime}\in B_{\epsilon}(y)$
+\end_inset
+
+, and thus, 
+\begin_inset Formula $y^{\prime}\in Y$
+\end_inset
+
+.
+ However, 
+\begin_inset Formula $y^{\prime}\geq y$
+\end_inset
+
+, which contradicts the fact that 
+\begin_inset Formula $y$
+\end_inset
+
+ is efficient in 
+\begin_inset Formula $Y$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $y\in\overline{Y}\cap\overline{Y^{c}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Now, by the Basic Supporting Hyperplane Theorem, 
+\begin_inset Formula $\exists\ p\in\mathbb{R}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $p\neq0$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ y^{\prime}\in Y$
+\end_inset
+
+, 
+\begin_inset Formula $p\cdot y^{\prime}\leq p\cdot y$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $\tilde{y}=y-\epsilon v_{l}$
+\end_inset
+
+ for some 
+\begin_inset Formula $l$
+\end_inset
+
+, where 
+\begin_inset Formula $v_{l}\in\mathbb{R}^{L}$
+\end_inset
+
+ that has 1 in the 
+\begin_inset Formula $l$
+\end_inset
+
+-th component and zeros for 
+\begin_inset Formula $k\neq l$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $y\geq\tilde{y}$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ satisfies free disposal, then 
+\begin_inset Formula $\tilde{y}\in Y$
+\end_inset
+
+.
+ As a result, 
+\begin_inset Formula $p\cdot y\geq p\cdot\tilde{y}$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $p\cdot(y-\tilde{y})\geq0$
+\end_inset
+
+.
+ So, we have 
+\begin_inset Formula $p\cdot v_{l}\geq0$
+\end_inset
+
+, and thus, 
+\begin_inset Formula $p_{l}\geq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Therefore, there is 
+\begin_inset Formula $p\geq0$
+\end_inset
+
+ such that 
+\begin_inset Formula $y$
+\end_inset
+
+ is profit maximizing at 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $Y\subseteq\mathbb{R}^{L}$
+\end_inset
+
+ be a non-empty, convex, closed production set that satisfies free disposal.
+ Prove that
+\begin_inset Formula 
+\[
+Y=\left\{ y\in\mathbb{R}^{L}:\forall\ p\geq0,\ p\cdot y\leq\pi^{Y}(p)\right\} 
+\]
+
+\end_inset
+
+Is it always true that
+\begin_inset Formula 
+\[
+Y=\left\{ y\in\mathbb{R}^{L}:\forall\ p\gg0,\ p\cdot y\leq\pi^{Y}(p)\right\} 
+\]
+
+\end_inset
+
+Would your answer change if 
+\begin_inset Formula $Y$
+\end_inset
+
+ also satisfies no-free-lunch?
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $Y\subseteq\mathbb{R}^{L}$
+\end_inset
+
+ be a non-empty, convex, closed production set that satisfies free disposal.
+ We prove that
+\begin_inset Formula 
+\[
+Y=\left\{ y\in\mathbb{R}^{L}:\forall\ p\geq0,\ p\cdot y\leq\pi^{Y}(p)\right\} \equiv A
+\]
+
+\end_inset
+
+by showing 
+\begin_inset Formula $Y\subseteq A$
+\end_inset
+
+ and 
+\begin_inset Formula $A\subseteq Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(Y\subseteq A)$
+\end_inset
+
+ Take 
+\begin_inset Formula $\tilde{y}\in Y$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\tilde{y}\in A$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\hat{p}\geq0$
+\end_inset
+
+.
+ Consider the profit function associated with 
+\begin_inset Formula $Y$
+\end_inset
+
+ evaluated at 
+\begin_inset Formula $\hat{p}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\pi^{Y}(\hat{p})=\max_{y\in Y}\ \hat{p}\cdot y
+\]
+
+\end_inset
+
+Define 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\[
+y^{*}\equiv\arg{\displaystyle \max_{y\in Y}\ \hat{p}\cdot y}
+\]
+
+\end_inset
+
+Important to note, 
+\begin_inset Formula $\pi^{Y}(\hat{p})\equiv\hat{p}\cdot y$
+\end_inset
+
+, Since 
+\begin_inset Formula $\tilde{y}\in Y$
+\end_inset
+
+, then 
+\begin_inset Formula $\hat{p}\cdot\tilde{y}\leq\hat{p}\cdot y^{*}$
+\end_inset
+
+.
+ Thus, by definition, 
+\begin_inset Formula $\tilde{y}\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(A\subseteq Y)$
+\end_inset
+
+ Take 
+\begin_inset Formula $\tilde{y}\in A$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\forall\ p\geq0:p\cdot\tilde{y}\leq\pi^{Y}(p)$
+\end_inset
+
+, where 
+\begin_inset Formula $\pi^{Y}(p)$
+\end_inset
+
+ is the profit function associated with 
+\begin_inset Formula $Y$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\pi^{Y}(p)=\max_{y\in Y}\ p\cdot y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We want to show that 
+\begin_inset Formula $\tilde{y}\in Y$
+\end_inset
+
+.
+ Suppose for contradiction 
+\begin_inset Formula $\tilde{y}\notin Y$
+\end_inset
+
+, which means that 
+\begin_inset Formula $\tilde{y}\in Y^{c}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $Y$
+\end_inset
+
+ is a closed and convex set of 
+\begin_inset Formula $\mathbb{R}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{y}\in Y^{c}\subseteq\mathbb{R}^{L}$
+\end_inset
+
+, then by the Basic Separation Theorem, there exists 
+\begin_inset Formula $\hat{p}\in\mathbb{R}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ y\in Y:\ \hat{p}\cdot y<c<\hat{p}\cdot\tilde{y}$
+\end_inset
+
+.
+ This implies that 
+\begin_inset Formula $\forall\ y\in Y:\hat{p}\cdot y<\hat{p}\cdot\tilde{y}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+We claim that 
+\begin_inset Formula $\hat{p}\geq0$
+\end_inset
+
+.
+ Suppose for contradiction that 
+\begin_inset Formula $\hat{p}_{l}<0$
+\end_inset
+
+ for some 
+\begin_inset Formula $l\in\{1,\ldots,L\}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\bar{y}\in Y$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $\bar{y}_{n}=\bar{y}-nv_{l}$
+\end_inset
+
+, where 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{l}\in\mathbb{R}^{L}$
+\end_inset
+
+ that has 1 in the 
+\begin_inset Formula $l$
+\end_inset
+
+-th component and zeros for 
+\begin_inset Formula $k\neq l$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\forall\ n\in\mathbb{N}:\bar{y}_{n}\leq\bar{y}$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ satisfies free disposal, 
+\begin_inset Formula $ $
+\end_inset
+
+then 
+\begin_inset Formula $\forall\ n\in\mathbb{N}:\bar{y}_{n}\in Y$
+\end_inset
+
+.
+ So, we have 
+\begin_inset Formula $\hat{p}\cdot\bar{y}_{n}=\hat{p}\cdot\bar{y}-n\hat{p}_{l}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\hat{p}_{l}<0$
+\end_inset
+
+, then as 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{p}\cdot\bar{y}_{n}\rightarrow\infty$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\exists\ \check{n}\in\mathbb{N}:\hat{p}\cdot\bar{y}_{\check{n}}>c$
+\end_inset
+
+.
+ But this contradicts the fact that 
+\begin_inset Formula $\forall\ y\in Y:\hat{p}\cdot y<c$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\hat{p}\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Now, define 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\[
+y^{*}\equiv\arg{\displaystyle \max_{y\in Y}\hat{p}\cdot y}
+\]
+
+\end_inset
+
+Important to note, 
+\begin_inset Formula $\pi^{Y}(\hat{p})\equiv\hat{p}\cdot y^{*}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $y^{*}\in Y$
+\end_inset
+
+, then 
+\begin_inset Formula $\hat{p}\cdot y^{*}<\hat{p}\cdot\tilde{y}$
+\end_inset
+
+, which is equivalent to 
+\begin_inset Formula $\pi^{Y}(\hat{p})<\hat{p}\cdot\tilde{y}$
+\end_inset
+
+.
+ However, we have just shown 
+\begin_inset Formula $\exists\ p\geq0:\pi^{Y}(p)<p\cdot\tilde{y}$
+\end_inset
+
+, which means that 
+\begin_inset Formula $\tilde{y}\notin A$
+\end_inset
+
+ 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\tilde{y}\in Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Is it always true that
+\begin_inset Formula 
+\[
+Y=\{y\in\mathbb{R}^{L}:\forall\ p\gg0,p\cdot y\leq\pi^{Y}(p)\}\equiv A
+\]
+
+\end_inset
+
+No, the equality between the two sets does not hold.
+ To explain, here is a counter example.
+ Take 
+\begin_inset Formula $\hat{p}\in\mathbb{R}_{++}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $z=[0,1]^{\prime}$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $Y\equiv\{(y_{1},y_{2})\in\mathbb{R}^{2}:y_{2}\leq0\}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $z\notin Y$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\hat{p}_{1}>0$
+\end_inset
+
+, then 
+\begin_inset Formula $\pi^{Y}(\hat{p})=+\infty$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $A\equiv\{y\in\mathbb{R}^{2}:p\gg0,\ p\cdot y\leq\pi^{Y}(p)\}$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $\hat{p}\cdot z=\hat{p}_{2}<+\infty$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $z\in A$
+\end_inset
+
+.
+ Thefore, 
+\begin_inset Formula $Y\neq A$
+\end_inset
+
+.
+ In general, 
+\begin_inset Formula $Y\subseteq A$
+\end_inset
+
+, but 
+\series bold
+
+\begin_inset Formula $A\nsubseteq Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Would your answer change if 
+\begin_inset Formula $Y$
+\end_inset
+
+ also satisfies no free-lunch? No, my answer would not change.
+ Consider 
+\begin_inset Formula $Y\equiv\{(y_{1},y_{2})\in\mathbb{R}^{2}:(y_{1},y_{2})\in\mathbb{R}_{-}\times\mathbb{R}\}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\hat{p}_{2}>0$
+\end_inset
+
+, then 
+\begin_inset Formula $\pi^{Y}(\hat{p})=+\infty$
+\end_inset
+
+.
+ Also, 
+\begin_inset Formula $\hat{p}\cdot z=\hat{p}_{2}<+\infty$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $z\in A$
+\end_inset
+
+, but 
+\begin_inset Formula $z\notin Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+(Separate problem attached with Micro Homework Assignment 12).
+ Suppose that there are two inputs with prices 
+\begin_inset Formula $(w_{1},w_{2})$
+\end_inset
+
+ and one output with price 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Consider a Cobb-Douglas production function 
+\begin_inset Formula $f:\mathbb{R}_{+}^{2}\rightarrow\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $f(z_{1},z_{2})=Az_{1}^{\alpha}z_{2}^{\beta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Define 
+\begin_inset Formula $Y^{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Characterize the combinations of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ for which 
+\begin_inset Formula $Y^{f}$
+\end_inset
+
+ satisfies NI, ND, and CR of scale.
+\end_layout
+
+\begin_layout Enumerate
+Calculate the associated supply correspondence, profit function, conditional
+ factor demand correspondence, and cost function.
+\end_layout
+
+\begin_layout Enumerate
+Verify Hotteling's Lemma for each 
+\begin_inset Formula $(w_{1},w_{2},p)$
+\end_inset
+
+ where it holds.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Will prove.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,5283 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 6: Preference, utility, and choice when alternatives are uncertain
+ prospects
+\end_layout
+
+\begin_layout Standard
+Need to complete: Problem 5.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We consider agents in a world in which alternatives are 
+\begin_inset Quotes eld
+\end_inset
+
+uncertain prospects.
+\begin_inset Quotes erd
+\end_inset
+
+ An example is an agent who chooses between two lottery tickets that give
+ him/her different payments with different odds.
+ Another example is an agent who decides, when leaving home in the morning,
+ whether to carry an umbrella or not.
+ Carrying the umbrella gives the agent an uncertain level of welfare.
+ If it rains, the umbrella will come in handy and the benefit of not getting
+ wet will compensate the effort of carrying it.
+ If it does not rain, the umbrella will just occupy space in his/her bag
+ without benefit.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In contrast to the theory developed in the previous lectures, here it is
+ not trivial what the set of alternatives is.
+ In abstract choice theory alternatives are elements of a set 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ In consumer theory, alternatives are bundles of goods, i.e., elements of
+ some Euclidean space.
+ What mathematical objects represent uncertain prospects? One has to solve
+ this question before talking about choice and preference over this sort
+ of alternatives.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let us remark that since abstract choice theory is general, then all results
+ in Chapter 2 apply to choice and preference when alternatives are uncertain
+ prospects.
+ Parallel to consumer theory, our objective here is to impose more structure
+ in the model, so we can better characterize the behavior of agents in these
+ uncertain situations.
+\end_layout
+
+\begin_layout Section*
+6.1
+\begin_inset space \quad{}
+\end_inset
+
+The mathematical structure of an uncertain prospect
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The first uncertain prospects that we study are the 
+\begin_inset Quotes eld
+\end_inset
+
+risky prospects.
+\begin_inset Quotes erd
+\end_inset
+
+ We assume that there is a set of possbile outcomes that we denote by 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ This set is different from the set of alternatives.
+ A 
+\series bold
+risky
+\series default
+ 
+\series bold
+prospect
+\series default
+, or an alternative, is a lottery over the outcomes 
+\begin_inset Formula $Z$
+\end_inset
+
+, i.e., a 
+\begin_inset Quotes eld
+\end_inset
+
+probability measure
+\begin_inset Quotes erd
+\end_inset
+
+ or a 
+\begin_inset Quotes eld
+\end_inset
+
+distribution
+\begin_inset Quotes erd
+\end_inset
+
+ on 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ We denote the set of risky prospects over 
+\begin_inset Formula $Z$
+\end_inset
+
+ by 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Risky prospects are a natural and handy representation for many uncertain
+ prospects.
+ These are all the prospects for which it is reasonable that the agent envisions
+ some outcomes happening with some probabilities.
+ For the moment, we will not inquire where these probabilities come from.
+ We will just assume that they exist and that the agent accepts them as
+ true.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The preceding two paragraphs seem to leave open the possibility that some
+ uncertain prospects do not fit into the mathematical structure of a risky
+ prospect.
+ It is not trivial to think about one that does not.
+ Nevertheless, not only are there some, but also they seem to play an important
+ role in agents' behavior.
+ A large part of the modern literature on decision theory has been motivated
+ by the existence of these uncertain prospects that cannot be represented
+ by risky prospects.
+ We will come back to this issue later.
+\end_layout
+
+\begin_layout Subsection*
+6.1.1
+\begin_inset space \quad{}
+\end_inset
+
+Finite set of outcomes
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose that 
+\begin_inset Formula $Z\equiv\{z_{1},\ldots,z_{n}\}$
+\end_inset
+
+ for some 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ A probability measure or distribution on 
+\begin_inset Formula $Z$
+\end_inset
+
+ is a function 
+\begin_inset Formula $\pi:Z\rightarrow[0,1]$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $z\in Z$
+\end_inset
+
+, 
+\begin_inset Formula $\pi(z)\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum_{z\in Z}\pi(z)=1$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\pi$
+\end_inset
+
+ is also known as a 
+\emph on
+simple lottery
+\emph default
+.
+ The set of probability measures on 
+\begin_inset Formula $Z$
+\end_inset
+
+ is 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+.
+ In order to simplify notation, for each 
+\begin_inset Formula $i\in\mathbb{N}$
+\end_inset
+
+, we write 
+\begin_inset Formula $\pi_{i}$
+\end_inset
+
+ instead of 
+\begin_inset Formula $\pi(z_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A risky prospect over a finite set of outcomes can be graphically represented
+ by a rooted tree.
+ Final nodes are assigned to outcomes.
+ The probability of each outcome is the probability with which that final
+ node in the tree is reached.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $Z\equiv\{z_{1},z_{2}\}$
+\end_inset
+
+, one can graphically represent 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ by means of the segment 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.
+ Each point 
+\begin_inset Formula $x\in[0,1]$
+\end_inset
+
+ represents the lottery 
+\begin_inset Formula $\pi_{1}=x$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi_{2}=1-x$
+\end_inset
+
+.
+ Conversely, each lottery 
+\begin_inset Formula $\pi$
+\end_inset
+
+ is represented by the point 
+\begin_inset Formula $\pi_{1}\in[0,1]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Analogously, if 
+\begin_inset Formula $Z\equiv\{z_{1},z_{2},z_{3}\}$
+\end_inset
+
+, one can graphically represent 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ by an equilateral triangle with height 1 and whose vertices are labeled
+ 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $z_{3}$
+\end_inset
+
+.
+ A point 
+\begin_inset Formula $x$
+\end_inset
+
+ in the triangle represents the lottery for which 
+\begin_inset Formula $\pi_{1}$
+\end_inset
+
+ is the distance between 
+\begin_inset Formula $x$
+\end_inset
+
+ and the side that opposes vertex 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\pi_{2}$
+\end_inset
+
+ is the distance between 
+\begin_inset Formula $x$
+\end_inset
+
+ and the side that opposes vertex 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $\pi_{3}$
+\end_inset
+
+ is the distance between 
+\begin_inset Formula $ $
+\end_inset
+
+ and the side that opposes 
+\begin_inset Formula $z_{3}$
+\end_inset
+
+ (the summation of the distances to the sides from each point inside an
+ equilateral triangle is a constant).
+ Conversely, each lottery 
+\begin_inset Formula $\pi$
+\end_inset
+
+ is represented by the point whose distances to the respective sides are
+ 
+\begin_inset Formula $\pi_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\pi_{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $\pi_{3}$
+\end_inset
+
+ (one should be able to prove that given an arbitrary 
+\begin_inset Formula $\pi$
+\end_inset
+
+, there is such a point).
+\end_layout
+
+\begin_layout Note*
+\begin_inset Formula $\Delta(Z)\subseteq\mathbb{R}^{n},$
+\end_inset
+
+ but we can observe 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{n-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(112).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $u:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+.
+ The 
+\series bold
+expected value of 
+\begin_inset Formula $u$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\pi$
+\end_inset
+
+ 
+\series default
+is
+\begin_inset Formula 
+\[
+E_{\pi}u\equiv{\displaystyle \sum_{z\in Z}}u(z)\pi(z)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In a simple lottery, the outcomes that may result are certain.
+ A more general variant of a lottery, known as a 
+\emph on
+compound
+\emph default
+ 
+\emph on
+lottery
+\emph default
+, allows the outcomes of a lottery themselves to be simple lotteries.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(113).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\{\alpha_{k}\}_{k=1}^{K}$
+\end_inset
+
+ be a list of non-negative numbers such that 
+\begin_inset Formula $\sum_{k=1}^{K}\alpha_{k}=1$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\{\pi^{k}\}_{k=1}^{K}$
+\end_inset
+
+ be a list of elements of 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+.
+ The 
+\series bold
+compound lottery of 
+\begin_inset Formula $\{\pi^{k}\}_{k=1}^{K}$
+\end_inset
+
+ with weights 
+\begin_inset Formula $\{\alpha_{i}\}_{k=1}^{K}$
+\end_inset
+
+ 
+\series default
+is the element of 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $\alpha_{1}\pi^{1}+\cdots+\alpha_{K}\pi^{K}$
+\end_inset
+
+, defined as follows.
+ For each 
+\begin_inset Formula $z_{i}\in Z$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\alpha_{1}\pi^{1}+\cdots+\alpha_{K}\pi^{K}(z_{i})\equiv{\displaystyle \sum_{k=1}^{K}}\alpha_{k}\pi^{k}(z_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For any compound lottery 
+\begin_inset Formula $(\pi^{1},\ldots,\pi^{K};\alpha_{1},\ldots,\alpha_{K})$
+\end_inset
+
+, we can calculate a corresponding 
+\emph on
+reduced lottery
+\emph default
+ as the simple lottery 
+\begin_inset Formula $\pi=(\pi_{1},\ldots,\pi_{n})$
+\end_inset
+
+ that generates the same ultimate distribution over outcomes.
+ The value of each 
+\begin_inset Formula $\pi(z_{i})$
+\end_inset
+
+ is obtained by multiplying the probability that each lottery 
+\begin_inset Formula $\pi^{k}$
+\end_inset
+
+ arises, 
+\begin_inset Formula $\alpha_{k}$
+\end_inset
+
+, by the probability 
+\begin_inset Formula $\pi^{k}(z_{i})$
+\end_inset
+
+ that outcome 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ arises in lottery 
+\begin_inset Formula $\pi^{k}$
+\end_inset
+
+, and then adding over 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ That is, the probability of outcome 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ in the reduced lottery is
+\begin_inset Formula 
+\[
+\pi(z_{i})=\alpha_{1}\pi^{1}(z_{i})+\cdots+\alpha_{K}\pi^{K}(z_{i})
+\]
+
+\end_inset
+
+for 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Note that 
+\begin_inset Formula $\sum_{i}\pi(z_{i})=\sum_{k}\alpha_{k}(\sum_{i}\pi^{k}(z_{i}))=\sum_{k}\alpha_{k}=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Therefore, the reduced lottery 
+\begin_inset Formula $\pi$
+\end_inset
+
+ of any compound lottery 
+\begin_inset Formula $(\pi^{1},\ldots,\pi^{K};\alpha_{1},\ldots,\alpha_{K})$
+\end_inset
+
+ can be obtained by vector addition:
+\begin_inset Formula 
+\[
+\pi=\alpha_{1}\pi^{1}+\cdots+\alpha_{K}\pi^{K}\in\Delta(Z)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+6.1.2
+\begin_inset space \quad{}
+\end_inset
+
+Money lotteries
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We also consider the case in which outcomes are real numbers, i.e., 
+\begin_inset Formula $Z\equiv\mathbb{R}$
+\end_inset
+
+.
+ We interpret these outcomes as monetary values.
+ We refer to the probability measures on 
+\begin_inset Formula $Z$
+\end_inset
+
+ as money lotteries.
+ Formally, an element in 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ is a probability measure on the measure space 
+\begin_inset Formula $(\mathbb{R},\mathcal{F})$
+\end_inset
+
+ where 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+ is an appropriate sigma-algebra.
+ In practice, we can make do by representing money lotteries by their cumulative
+ distribution function (c.d.f.), i.e., the function that assigns to each 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+, the probability that the outcome turns out to be less than or equal to
+ 
+\begin_inset Formula $x$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\mbox{Prob}(z\leq x)$
+\end_inset
+
+.
+ The generic c.d.f is denoted by 
+\begin_inset Formula $F\in\Delta(Z)$
+\end_inset
+
+.
+ A c.d.f.
+ 
+\begin_inset Formula $F$
+\end_inset
+
+ admits a denisty function, denoted by 
+\begin_inset Formula $f:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+, if for each 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\mbox{Prob}(z\leq x)=F(x)={\displaystyle \int_{-\infty}^{x}}f(z)dz
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ does not have to exist.
+ The advantage of a formalism based on distribution functions over one based
+ on density functions, however, is that the first is completely general.
+ It does not exclude a priori the possibility of a discrete set of outcomes.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset space \quad{}
+\end_inset
+
+
+\series default
+For a continuous variable, there is an assignment of utility values 
+\begin_inset Formula $u(x)$
+\end_inset
+
+ to nonnegative amounts of money with the proerty that any 
+\begin_inset Formula $F(\cdot)$
+\end_inset
+
+ can be evaluated by a utility function of the following form:
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(114).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $u:\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $F\in\Delta(Z)$
+\end_inset
+
+.
+ The 
+\series bold
+expected value of 
+\begin_inset Formula $u$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $F$
+\end_inset
+
+
+\series default
+ is
+\begin_inset Formula 
+\[
+E_{F}u\equiv{\displaystyle \int_{-\infty}^{+\infty}}u\ dF
+\]
+
+\end_inset
+
+Whenever 
+\begin_inset Formula $F$
+\end_inset
+
+admits a density function 
+\begin_inset Formula $f$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+E_{F}u\equiv{\displaystyle \int_{-\infty}^{+\infty}}u(z)f(z)\ dz
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The utility function 
+\begin_inset Formula $E_{F}u$
+\end_inset
+
+ is the mathematical expectation, over the realizations of 
+\begin_inset Formula $x$
+\end_inset
+
+, of the values of 
+\begin_inset Formula $u(x)$
+\end_inset
+
+.
+ The latter takes the place of the values 
+\begin_inset Formula $(u_{1},\ldots,u_{n})$
+\end_inset
+
+ used in the discrete treatment.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Given a distribution function 
+\begin_inset Formula $F(x)$
+\end_inset
+
+, the expected value of a function 
+\begin_inset Formula $\phi(x)$
+\end_inset
+
+ is given by 
+\begin_inset Formula $\int\phi(x)dF(x)$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $F(\cdot)$
+\end_inset
+
+ has an associated density function 
+\begin_inset Formula $f(x)$
+\end_inset
+
+, this expression is exactly equal to 
+\begin_inset Formula $\int\phi(x)f(x)dx$
+\end_inset
+
+.
+ Note also that for notational simplicity, we do not explicitly write the
+ limits of integration when the integral is over the full range of possible
+ realizations of 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The strength of the expected utility representation is that it preserves
+ the very useful expectation form while making the utility of monetary lotteries
+ sensitive not only to the mean but also to other higher moments of the
+ distribution of the monetary payoffs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is important to distinguish between the utility function 
+\begin_inset Formula $E_{F}u$
+\end_inset
+
+, defined on lotteries, and the utility function 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+ defined on sure amounts of money.
+ For this reason, we call 
+\begin_inset Formula $E_{F}u$
+\end_inset
+
+ the 
+\emph on
+von-Neumann-Morgenstern
+\emph default
+ (
+\emph on
+v.N-M
+\emph default
+) 
+\emph on
+expected utility function
+\emph default
+ and 
+\begin_inset Formula $u(\cdot)$
+\end_inset
+
+ the 
+\emph on
+Bernoulli utility function
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(115).
+ 
+\series default
+\emph on
+The 
+\series bold
+expected value of 
+\begin_inset Formula $F$
+\end_inset
+
+ 
+\series default
+is
+\begin_inset Formula 
+\[
+\mu_{F}\equiv{\displaystyle \int_{-\infty}^{+\infty}}z\ dF
+\]
+
+\end_inset
+
+Whenever 
+\begin_inset Formula $F$
+\end_inset
+
+ admits a density function 
+\begin_inset Formula $f$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\mu_{F}\equiv{\displaystyle \int_{-\infty}^{+\infty}}zf(z)\ dz
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset space \quad{}
+\end_inset
+
+
+\series default
+Note that distribution functions preserve the linear structure of lotteries
+ (as do density functions).
+ For example, the final distribution of money, 
+\begin_inset Formula $F(\cdot)$
+\end_inset
+
+, induced by a compound lottery 
+\begin_inset Formula $(\pi^{1},\ldots,\pi^{K};\alpha_{1},\ldots,\alpha_{K})$
+\end_inset
+
+ is just the weighted average of the distributions induced by each of the
+ lotteries that consitute it: 
+\begin_inset Formula $F(x)=\sum_{k}\alpha_{k}F^{k}(x)$
+\end_inset
+
+, where 
+\begin_inset Formula $F^{k}(\cdot)$
+\end_inset
+
+ is the distribution of the payoff under lottery 
+\begin_inset Formula $\pi^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(116).
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\{\alpha_{k}\}_{k=1}^{K}$
+\end_inset
+
+ be a list of non-negative numbers such that 
+\begin_inset Formula $\sum_{k=1}^{K}\alpha_{k}=1$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\{F^{k}\}_{k=1}^{K}$
+\end_inset
+
+ be a list of elements of 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+.
+ The 
+\series bold
+compound lottery of 
+\begin_inset Formula $\{F^{k}\}_{k=1}^{K}$
+\end_inset
+
+ with weights 
+\begin_inset Formula $\{\alpha_{k}\}_{k=1}^{K}$
+\end_inset
+
+ 
+\series default
+is the element of 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $\alpha_{1}F^{1}+\cdots+\alpha_{K}F^{K}$
+\end_inset
+
+, defined as follows.
+ For each 
+\begin_inset Formula $z\in Z$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\alpha_{1}F^{1}+\cdots+\alpha_{K}F^{K}(z)\equiv{\displaystyle \sum_{k=1}^{K}}\alpha_{k}F^{k}(z)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+6.2
+\begin_inset space \quad{}
+\end_inset
+
+Expected Utility Theory
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Having developed a way to model risky alternatives, we now study the decision
+ maker's preferences over them.
+ The theoretical analysis to follow rest on a basic 
+\emph on
+consequentialist
+\emph default
+ premise: We assume that for any risky alternative, only the reduced lottery
+ over final outcomes is of relevance to the decision maker.
+ Whether the probabilities of various outcomes arise as a result of a simple
+ lottery or of a more complex compound lottery has no significance.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this section, we follow the axiomatic method in the study of agents behavior.
+ This method consists of two steps.
+ The first is to state a 
+\begin_inset Quotes eld
+\end_inset
+
+short
+\begin_inset Quotes erd
+\end_inset
+
+ list of axioms, or 
+\begin_inset Quotes eld
+\end_inset
+
+simple
+\begin_inset Quotes erd
+\end_inset
+
+ principles, that one could expect are satisfied by agents' behavior.
+ The second is to characterize the family of preferences that satisfy the
+ axioms.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the remainder of this section 
+\begin_inset Formula $Z$
+\end_inset
+
+ is a finite set (all results generalize to infinite 
+\begin_inset Formula $Z$
+\end_inset
+
+ with an appropriate extension of the continuity axiom).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Expected Utility Theory, due to John von Neumann and Oscar Morgenstern,
+ is an axiomatic theory that characterizes the preferences on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ that satisfy the following three axioms.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Axiom*
+
+\series bold
+\shape up
+A1.
+ 
+\series default
+\emph on
+
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive.
+\end_layout
+
+\begin_layout Standard
+It should be emphasized that, if anything, the rationality assumption is
+ stronger here than in the theory of choice under certainty discussed in
+ Chapter 2.
+ The more complex the alternatives, the heavier the burden carried by the
+ rationality postulates.
+ In fact, their realism in an uncertainty context has been much debated.
+ However, because we want to concentrate on the properties that are specific
+ to uncertainty, we do not quesiton the rationality assumption further here.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We next introduce two additional assumptions about the decision maker's
+ preferences over lotteries.
+ The most important and controversial is the 
+\emph on
+independence axiom
+\emph default
+.
+ The first, however, is a continuity axiom.
+\end_layout
+
+\begin_layout Axiom*
+
+\series bold
+\emph on
+A2.
+ 
+\series default
+\emph default
+For each tripe 
+\begin_inset Formula $\{\pi,\pi^{\prime},\pi^{\prime\prime}\}\subseteq\Delta(Z)$
+\end_inset
+
+ the sets
+\begin_inset Formula 
+\[
+\{\alpha\in[0,1]:\alpha\pi+(1-\alpha)\pi^{\prime}\succsim\pi^{\prime\prime}\}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\{\alpha\in[0,1]:\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime}\}
+\]
+
+\end_inset
+
+are closed.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset space \quad{}
+\end_inset
+
+
+\series default
+In words, continuity means that small changes in probabilities do not change
+ the nature of the ordering between two lotteries.
+ For example, if a 
+\begin_inset Quotes eld
+\end_inset
+
+beautiful and uneventful trip by car
+\begin_inset Quotes erd
+\end_inset
+
+ is preferred to 
+\begin_inset Quotes eld
+\end_inset
+
+staying home,
+\begin_inset Quotes erd
+\end_inset
+
+ then a mixture of the outcome 
+\begin_inset Quotes eld
+\end_inset
+
+beautiful and uneventful trip by car
+\begin_inset Quotes erd
+\end_inset
+
+ with a sufficiently small but positive probability of 
+\begin_inset Quotes eld
+\end_inset
+
+death by car accident
+\begin_inset Quotes erd
+\end_inset
+
+ is still preferred to 
+\begin_inset Quotes eld
+\end_inset
+
+staying home.
+\begin_inset Quotes erd
+\end_inset
+
+ Continuity therefore rules out the case where the decision maker has lexicograp
+hic (
+\begin_inset Quotes eld
+\end_inset
+
+safety first
+\begin_inset Quotes erd
+\end_inset
+
+) preferences for alternatives with a zero probability of some outcome (in
+ this case, 
+\begin_inset Quotes eld
+\end_inset
+
+death by car accident
+\begin_inset Quotes erd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Our second assumption, the independence axiom, will allow us to impose considera
+bly more structure.
+\end_layout
+
+\begin_layout Axiom*
+
+\series bold
+\shape up
+A3.
+
+\series default
+ 
+\shape default
+For each triple 
+\begin_inset Formula $\{\pi,\pi^{\prime},\pi^{\prime\prime}\}\subseteq\Delta(Z)$
+\end_inset
+
+ and each 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\pi\succsim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In other words, if we mix each of two lotteries with a third one, then the
+ preference ordering of the two resulting mixtures does not depends on (is
+ 
+\emph on
+independent
+\emph default
+ of) the particular third lottery used.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The independence axiom is at the heart of the theory of choice under uncertainty.
+ It is unlike anything encountered in the formal theory of preference-based
+ choice discussed in Chapter 2 or its applications in Chapter 3.
+ This is so precisely because it exploits, in a fundamental manner, the
+ structure of uncertainty present in the model.
+ In the theory of consumer demand, for example, there is no reason to believe
+ that a consumer's preferences over various bundles of goods 1 and 2 should
+ be independent of the quantities of the other goods that he will consumer.
+ In the present context, however, it 
+\emph on
+is
+\emph default
+ natural to think that a decision maker's preference between two lotteries,
+ say 
+\begin_inset Formula $\pi$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi^{\prime}$
+\end_inset
+
+, should determine which of the two he prefers to have as part of a compound
+ lottery 
+\emph on
+regardless
+\emph default
+ of the other possible outcome of this compound, say 
+\begin_inset Formula $\pi^{\prime\prime}$
+\end_inset
+
+.
+ This other outcome 
+\begin_inset Formula $\pi^{\prime\prime}$
+\end_inset
+
+ should be irrelevant to his choice because, in contrast with the consumer
+ context, he does not consumer 
+\begin_inset Formula $\pi$
+\end_inset
+
+ or 
+\begin_inset Formula $\pi^{\prime}$
+\end_inset
+
+ together with 
+\begin_inset Formula $\pi^{\prime\prime}$
+\end_inset
+
+ but, rather, only 
+\emph on
+instead
+\emph default
+ of it (if 
+\begin_inset Formula $\pi$
+\end_inset
+
+ or 
+\begin_inset Formula $\pi^{\prime}$
+\end_inset
+
+ is the realized outcome).
+\end_layout
+
+\begin_layout Lemma*
+
+\series bold
+\shape up
+4.
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ that satisfies A1 and A3.
+ Then, 
+\shape default
+\emph default
+for each triple 
+\begin_inset Formula $\{\pi,\pi^{\prime},\pi^{\prime\prime}\}\subseteq\Delta(Z)$
+\end_inset
+
+ and each 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\pi\succ\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\pi\sim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\sim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ that satisfies A1 and A3.
+ Take 
+\begin_inset Formula $\left\{ \pi,\pi^{\prime},\pi^{\prime\prime}\right\} \subseteq\Delta(Z)$
+\end_inset
+
+ and take 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part 1
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\pi\succ\pi^{\prime}$
+\end_inset
+
+.
+ By the definition of 
+\begin_inset Formula $\succ$
+\end_inset
+
+, this is equivalent to 
+\begin_inset Formula $\pi\succsim\pi^{\prime}\ \wedge\ \neg(\pi^{\prime}\succsim\pi)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A3, then
+\begin_inset Formula 
+\[
+\pi\succsim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}
+\]
+
+\end_inset
+
+ Also,
+\begin_inset Formula 
+\[
+\neg(\pi^{\prime}\succsim\pi)\iff\neg(\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime\prime})
+\]
+
+\end_inset
+
+Now,
+\begin_inset Formula 
+\[
+\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\ \wedge\ \neg(\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime\prime})
+\]
+
+\end_inset
+
+which is equivalent to 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+.
+ By the definition of 
+\begin_inset Formula $\succ$
+\end_inset
+
+, this is equivalent to
+\begin_inset Formula 
+\[
+\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\ \wedge\ \neg(\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime\prime})
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A3, then
+\begin_inset Formula 
+\[
+\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\iff\pi\succsim\pi^{\prime}
+\]
+
+\end_inset
+
+Also,
+\begin_inset Formula 
+\[
+\neg(\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime\prime})\iff\neg(\pi^{\prime}\succsim\pi)
+\]
+
+\end_inset
+
+Now, 
+\begin_inset Formula $\pi\succsim\pi^{\prime}\ \wedge\ \neg(\pi^{\prime}\succsim\pi)$
+\end_inset
+
+, which is equivalent to 
+\begin_inset Formula $\pi\succ\pi^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part 2
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\pi\sim\pi^{\prime}$
+\end_inset
+
+.
+ By the definition of 
+\begin_inset Formula $\sim$
+\end_inset
+
+, this is equivalent to 
+\begin_inset Formula $\pi\succsim\pi^{\prime}\ \wedge\ \pi^{\prime}\succsim\pi$
+\end_inset
+
+.
+ Since 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A3, then
+\begin_inset Formula 
+\[
+\pi\succsim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}
+\]
+
+\end_inset
+
+Also
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+,
+\begin_inset Formula 
+\[
+\pi^{\prime}\succsim\pi\iff\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime\prime}
+\]
+
+\end_inset
+
+Now,
+\begin_inset Formula 
+\[
+\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\ \wedge\ \alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime\prime}
+\]
+
+\end_inset
+
+which is equivalent to 
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime}\sim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime}\sim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+.
+ By the definition of 
+\begin_inset Formula $\sim$
+\end_inset
+
+, this equivalent to 
+\begin_inset Formula 
+\[
+\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\ \wedge\ \alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime\prime}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satsfies A3, then
+\begin_inset Formula 
+\[
+\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\iff\pi\succsim\pi^{\prime}
+\]
+
+\end_inset
+
+Also,
+\begin_inset Formula 
+\[
+\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime\prime}\iff\pi^{\prime}\succsim\pi
+\]
+
+\end_inset
+
+Now, 
+\begin_inset Formula $\pi\succsim\pi^{\prime}\ \wedge\ \mbox{\ensuremath{\pi^{\prime}\succsim\pi}}$
+\end_inset
+
+, which is equivalent to 
+\begin_inset Formula $\pi\sim\pi^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the case where there are only three outcomes.
+ Suppose that we represent the indifference map in the simplex.
+ Assume for simplicity, that we have a conventional map with one-dimensional
+ indifference curves.
+ We argue that as a consequence of the independence axiom, the indifference
+ curves are straight, parallel lines.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Indifference curves are straight lines if, for every pair of lotteries 
+\begin_inset Formula $\{\pi,\pi^{\prime}\}\subseteq\Delta(Z)$
+\end_inset
+
+, we have that 
+\begin_inset Formula $\pi\sim\pi^{\prime}$
+\end_inset
+
+ implies 
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime}\sim\pi$
+\end_inset
+
+ for all 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+.
+ Suppose for contradiction that we have 
+\begin_inset Formula $\pi\sim\pi^{\prime}$
+\end_inset
+
+, but 
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime}\succ\pi$
+\end_inset
+
+.
+ this is equivalent to saying that
+\begin_inset Formula 
+\begin{equation}
+\alpha\pi+(1-\alpha)\pi^{\prime}\succ\alpha\pi+(1-\alpha)\pi
+\end{equation}
+
+\end_inset
+
+But since 
+\begin_inset Formula $\pi\sim\pi^{\prime}$
+\end_inset
+
+, the independence axiom implies that we must have
+\begin_inset Formula 
+\[
+\alpha\pi+(1-\alpha)\pi^{\prime}\sim\alpha\pi+(1-\alpha)\pi
+\]
+
+\end_inset
+
+However, this contradicts expression (1).
+ Thus, we must conclude that indifference curves are straight lines.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Suppose for contradiciton that we have two straight but nonparallel indifference
+ lines.
+ A violation of the independence axiom can be constructed in this case.
+ Take 
+\begin_inset Formula $\{\pi,\pi^{\prime},\pi^{\prime\prime}\}\subseteq\Delta(Z)$
+\end_inset
+
+ and take 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+.
+ Without loss of generality, let 
+\begin_inset Formula $\pi\succsim\pi^{\prime}$
+\end_inset
+
+.
+ Now,
+\begin_inset Formula 
+\[
+\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}
+\]
+
+\end_inset
+
+does not hold for lottery 
+\begin_inset Formula $\pi^{\prime\prime}$
+\end_inset
+
+.
+ But this contradicts the independence axiom.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Therefore, indifference curves must be parallel, straight lines if preferences
+ satisfy the independence axiom.
+\end_layout
+
+\begin_layout Lemma*
+
+\series bold
+\shape up
+5.
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ that satisfies A1 and A3.
+ Then, for each 
+\begin_inset Formula $\{\pi,\pi^{\prime},\pi^{\prime\prime},\pi^{\prime\prime\prime}\}\subseteq\Delta(Z)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\pi\succ\pi^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi^{\prime\prime}\succ\pi^{\prime\prime\prime}$
+\end_inset
+
+, and each 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+, we have that 
+\begin_inset Formula $\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime\prime}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ that satisfies A1 and A3.
+ We want to prove that 
+\begin_inset Formula $\forall\ \{\pi,\pi^{\prime},\pi^{\prime\prime},\pi^{\prime\prime\prime}\}\subseteq\Delta(Z),\ \forall\ \alpha\in[0,1]:[\pi\succ\pi^{\prime}\ \wedge\ \pi^{\prime\prime}\succ\pi^{\prime\prime\prime}]\implies\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime\prime}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Take 
+\begin_inset Formula $\left\{ \pi,\pi^{\prime},\pi^{\prime\prime},\pi^{\prime\prime\prime}\right\} \subseteq\Delta(Z)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\pi\succ\pi^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi^{\prime\prime}\succ\pi^{\prime\prime\prime}$
+\end_inset
+
+ and take 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A1 and A3, then the results of Lemma 4 hold.
+ Thus,
+\begin_inset Formula 
+\[
+\pi\succ\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\pi^{\prime\prime}\succ\pi^{\prime\prime\prime}\iff\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime\prime}
+\]
+
+\end_inset
+
+Now,
+\begin_inset Formula 
+\[
+\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime\prime}
+\]
+
+\end_inset
+
+implies that
+\begin_inset Formula 
+\[
+\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime\prime}
+\]
+
+\end_inset
+
+Now, if 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+, then 
+\begin_inset Formula $\pi^{\prime\prime}\succ\pi^{\prime\prime\prime}$
+\end_inset
+
+, and if 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+, then 
+\begin_inset Formula $\pi\succ\pi^{\prime}$
+\end_inset
+
+.
+ Both of these outcomes hold by our initial assumption.
+ Therefore, 
+\begin_inset Formula $\forall\ \{\pi,\pi^{\prime},\pi^{\prime\prime},\pi^{\prime\prime\prime}\}\subseteq\Delta(Z),\ \forall\ \alpha\in[0,1]:[\pi\succ\pi^{\prime}\ \wedge\ \pi^{\prime\prime}\succ\pi^{\prime\prime\prime}]\implies\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succ\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+58.
+
+\series default
+ 
+\emph on
+Assume that 
+\begin_inset Formula $Z$
+\end_inset
+
+ is a finite set.
+ Let 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ be a binary relation on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ satisfying A1 and A3.
+ Then, there are best and worst lotteries, i.e., 
+\begin_inset Formula $\{\overline{\pi},\underline{\pi}\}\subseteq\Delta(Z)$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\overline{\pi}\succsim\pi\succsim\underline{\pi}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $Z$
+\end_inset
+
+ be a finite set.
+ Assume 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete, transitive, and satisfies the Independence Axiom.
+ We prove that there are best and worst lotteries, i.e., 
+\begin_inset Formula $\{\overline{\pi},\underline{\pi}\}\subseteq\Delta(Z)$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\overline{\pi}\succsim\pi\succsim\underline{\pi}
+\]
+
+\end_inset
+
+For each 
+\begin_inset Formula $z\in Z$
+\end_inset
+
+, let 
+\begin_inset Formula $\delta_{z}$
+\end_inset
+
+ be the probability measure on 
+\begin_inset Formula $Z$
+\end_inset
+
+ that places probability one in outcome 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ We will proceed in four steps:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\{z,z^{\prime}\}\subseteq Z$
+\end_inset
+
+ be such that 
+\begin_inset Formula $\delta_{z}\succsim\delta_{z^{\prime}}$
+\end_inset
+
+.
+ Prove that for each 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\delta_{z}\succsim\alpha\delta_{z}+(1-\alpha)\delta_{z^{\prime}}\succsim\delta_{z^{\prime}}
+\]
+
+\end_inset
+
+ Take 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A3, then we obtain the following results
+\begin_inset Formula 
+\[
+\delta_{z}\succsim\delta_{z^{\prime}}\iff\alpha\delta_{z}+(1-\alpha)\delta_{z}\succsim\alpha\delta_{z}+(1-\alpha)\delta_{z^{\prime}}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\delta_{z}\succsim\delta_{z^{\prime}}\iff\alpha\delta_{z}+(1-\alpha)\delta_{z^{\prime}}\succsim\alpha\delta_{z^{\prime}}+(1-\alpha)\delta_{z^{\prime}}
+\]
+
+\end_inset
+
+So, by transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+\alpha\delta_{z}+(1-\alpha)\delta_{z}\succsim\alpha\delta_{z}+(1-\alpha)\delta_{z^{\prime}}\succsim\alpha\delta_{z^{\prime}}+(1-\alpha)\delta_{z^{\prime}}
+\]
+
+\end_inset
+
+Note, 
+\begin_inset Formula $\delta_{z}\equiv\alpha\delta_{z}+(1-\alpha)\delta_{z}$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta_{z^{\prime}}\equiv\alpha\delta_{z^{\prime}}+(1-\alpha)\delta_{z^{\prime}}$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\[
+\delta_{z}\succsim\alpha\delta_{z}+(1-\alpha)\delta_{z^{\prime}}\succsim\delta_{z^{\prime}}
+\]
+
+\end_inset
+
+Now, if 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+, then 
+\begin_inset Formula $\delta_{z^{\prime}}\succsim\delta_{z^{\prime}}$
+\end_inset
+
+, and if 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+, then 
+\begin_inset Formula $\delta_{z}\succsim\delta_{z}$
+\end_inset
+
+.
+ Both statements hold because 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete.
+ Therefore, 
+\begin_inset Formula $\forall\ \alpha\in[0,1]$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\delta_{z}\succsim\alpha\delta_{z}+(1-\alpha)\delta_{z^{\prime}}\succsim\delta_{z^{\prime}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Prove that it is always possible to enumerate the elements of 
+\begin_inset Formula $Z$
+\end_inset
+
+, say 
+\begin_inset Formula $\left\{ z_{1},\ldots,z_{n}\right\} $
+\end_inset
+
+, in such a way that 
+\begin_inset Formula $\delta_{z_{1}}\succsim\cdots\succsim\delta_{z_{n}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Since 
+\begin_inset Formula $Z$
+\end_inset
+
+ is finite, then we can enumerate its elements, i.e., 
+\begin_inset Formula $Z\equiv\{z_{1},\ldots,z_{n}\}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete, then 
+\begin_inset Formula $\forall\ \left\{ \delta z_{i},\delta z_{j}\right\} \subseteq\Delta(Z)$
+\end_inset
+
+, 
+\begin_inset Formula $\delta_{z_{i}}\succsim\delta_{z_{j}}$
+\end_inset
+
+ or 
+\begin_inset Formula $\delta_{z_{j}}\succsim\delta_{z_{i}}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\delta_{z_{i}}\succsim\delta_{z_{j}}$
+\end_inset
+
+, then list 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ before 
+\begin_inset Formula $z_{j}$
+\end_inset
+
+ in the enumeration of 
+\begin_inset Formula $Z$
+\end_inset
+
+, or vice versa.
+ Thus, 
+\begin_inset Formula $Z=\{z_{1},\ldots,z_{n}\}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\delta_{z_{1}}\succsim\cdots\succsim\delta_{z_{n}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Prove, by induction over 
+\begin_inset Formula $n$
+\end_inset
+
+, that for each 
+\begin_inset Formula $\left(\alpha_{i}\right)_{i=1}^{n}\in\mathbb{R}_{+}^{n}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sum_{i=1}^{n}\alpha_{i}=1$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\delta_{z_{1}}\succsim\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{n}\delta_{z_{n}}\right]\succsim\delta_{z_{n}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\bar under
+Base case:
+\bar default
+ 
+\begin_inset Formula $n=2$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Z=\left\{ z_{1},z_{2}\right\} $
+\end_inset
+
+ such that 
+\begin_inset Formula $\delta_{z_{1}}\succsim\delta_{z_{2}}$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+.
+ From part 1,
+\begin_inset Formula 
+\[
+\delta_{z_{1}}\succsim\delta_{z_{2}}\implies\delta_{z_{1}}\succsim\alpha\delta_{z_{1}}+(1-\alpha)\delta_{z_{2}}\succsim\delta_{z_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+For 
+\begin_inset Formula $n=k$
+\end_inset
+
+, assume 
+\begin_inset Formula $\forall\ \left(\alpha_{i}\right)_{i=1}^{k}\in\mathbb{R}_{+}^{k}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ such that 
+\begin_inset Formula $\sum_{i=1}^{k}\alpha_{i}=1$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\delta_{z_{1}}\succsim\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{k}\delta_{z_{k}}\succsim\delta_{z_{k}}
+\]
+
+\end_inset
+
+We want to show that 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+for 
+\begin_inset Formula $n=k+1$
+\end_inset
+
+, 
+\begin_inset Formula $\forall\ (\beta)_{i=1}^{k+1}\in\mathbb{R}_{+}^{k+1}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sum_{i=1}^{k+1}\beta_{i}=1$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\delta_{z_{1}}\succsim\beta_{1}\delta_{z_{1}}+\ldots+\beta_{k}\delta_{z_{k+1}}\succsim\delta_{z_{k+1}}
+\]
+
+\end_inset
+
+In part 2, it was shown that it is always possible to enumerate the elements
+ of 
+\begin_inset Formula $Z=\{z_{1},\ldots,z_{k+1}\}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\delta_{z_{1}}\succsim\cdots\succsim\delta_{z_{k+1}}$
+\end_inset
+
+.
+ Now, by our inductive assumption,
+\begin_inset Formula 
+\[
+\delta_{z_{1}}\succsim\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{k}\delta_{z_{k}}\right]\succsim\delta_{z_{k}}
+\]
+
+\end_inset
+
+Note, we also know that 
+\begin_inset Formula $\delta_{z_{k}}\succsim\delta_{z_{k+1}}$
+\end_inset
+
+.
+ So, by transitivity of 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+\delta_{z_{1}}\succsim\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{k}\delta_{z_{k}}\right]\succsim\delta_{z_{k+1}}
+\]
+
+\end_inset
+
+ From part 1, 
+\begin_inset Formula $\forall\ \gamma\in[0,1]$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{k}\delta_{z_{k}}\right]\succsim\delta_{z_{k+1}}
+\]
+
+\end_inset
+
+implies that
+\begin_inset Formula 
+\[
+\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{k}\delta_{z_{k}}\right]\succsim\gamma\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{k}\delta_{z_{k}}\right]+\left(1-\gamma\right)\delta_{k+1}\succsim\delta_{k+1}
+\]
+
+\end_inset
+
+Define 
+\begin_inset Formula $\left(\beta_{i}\right)_{i=1}^{k}\equiv\gamma\cdot\alpha_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{k+1}\equiv\left(1-\gamma\right)$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula 
+\[
+\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{k}\delta_{z_{k}}\right]\succsim\left[\beta_{1}\delta_{z_{1}}+\ldots+\beta_{k+1}\delta_{k+1}\right]\succsim\delta_{k+1}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\sum_{i=1}^{k}\alpha_{i}=1$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{k+1}\beta_{i}=\gamma{\displaystyle \sum_{i=1}^{k}\alpha_{i}+\left(1-\gamma\right)=\gamma+\left(1-\gamma\right)=1}}
+\]
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\[
+\delta_{z_{1}}\succsim\left[\beta_{1}\delta_{z_{1}}+\ldots+\beta_{k+1}\delta_{k+1}\right]\succsim\delta_{k+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Conclude that there are best and worst lotteries, i.e., 
+\begin_inset Formula $\overline{\pi}$
+\end_inset
+
+ and 
+\begin_inset Formula $\underline{\pi}$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+ , 
+\begin_inset Formula $\overline{\pi}\succsim\pi\succsim\underline{\pi}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+For 
+\begin_inset Formula $Z=\{z_{1},\ldots,z_{n}\}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\delta_{z_{1}}\succsim\ldots\succsim\delta_{n}$
+\end_inset
+
+, let 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\overline{\pi}\equiv\delta_{z_{1}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\underline{\pi}\equiv\delta_{z_{n}}$
+\end_inset
+
+.
+ Now, from part 3, 
+\begin_inset Formula $\forall\ \left(\alpha_{i}\right)_{i=1}^{n}\in\mathbb{R}_{+}^{n}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sum_{i=1}^{n}\alpha_{i}=1$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\delta_{z_{1}}\succsim\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{n}\delta_{z_{n}}\right]\succsim\delta_{z_{n}}
+\]
+
+\end_inset
+
+Note, 
+\begin_inset Formula $\forall\ \left(\alpha_{i}\right)_{i=1}^{n}\in\mathbb{R}_{+}^{n}:\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{n}\delta_{z_{n}}\right]\in\Delta(Z)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\delta_{z_{i}}\equiv(e_{i})$
+\end_inset
+
+, then 
+\begin_inset Formula $\{\delta_{z_{1}},\ldots,\delta_{z_{n}}\}$
+\end_inset
+
+ forms a basis for 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+.
+ So, any element in 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ can be represented by a linear combination of these vectors.
+ Thus, 
+\begin_inset Formula $\forall\ \pi\in\Delta(Z),\ \exists\ \left(\alpha_{i}\right)_{i=1}^{n}\in\mathbb{R}_{+}^{n}:\pi=\left[\alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{n}\delta_{z_{n}}\right]$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\forall\ \pi\in\Delta(Z),\overline{\pi}\succsim\pi\succsim\underline{\pi}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The 
+\emph on
+expected utility theorem
+\emph default
+ says that the decision maker's preferences over lotteries satisfy the continuit
+y and independence axioms if and only if his preferences are representable
+ by a utility function with the expected utility form.
+ It is the most important result in the theory of choice under uncertainty.
+ 
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+21.
+
+\series default
+ 
+\emph on
+A binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ satisfies A1, A2, A3 if and only if there is an index 
+\begin_inset Formula $u:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the function 
+\begin_inset Formula $U:\Delta(Z)\rightarrow\mathbb{R}$
+\end_inset
+
+ defined by: 
+\begin_inset Formula $\forall\ \pi\in\Delta(Z):U(\pi)\equiv E_{\pi}u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset space \quad{}
+\end_inset
+
+Moreover, 
+\begin_inset Formula $u$
+\end_inset
+
+ is unique up to a positive affine linear transformation, i.e., if there is
+ another function 
+\begin_inset Formula $v:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the function 
+\begin_inset Formula $E_{(\cdot\pi)}v$
+\end_inset
+
+, then there are real numbers 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ such that 
+\begin_inset Formula $a>0$
+\end_inset
+
+ and for each 
+\begin_inset Formula $z\in Z$
+\end_inset
+
+, 
+\begin_inset Formula $u(z)=av(z)+b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We prove both sides of the proof independently.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume a binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ satisfies A1, A2, A3.
+ We want to show that there is an index 
+\begin_inset Formula $u:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the function 
+\begin_inset Formula $U:\Delta(Z)\rightarrow\mathbb{R}$
+\end_inset
+
+ defined by: 
+\begin_inset Formula $\forall\ \pi\in\Delta(Z):U(\pi)\equiv E_{\pi}u$
+\end_inset
+
+.
+ By Proposition 58, there are lotteries 
+\begin_inset Formula $\{\overline{\pi},\underline{\pi}\}\subseteq\Delta(Z)$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\overline{\pi}\succsim\pi\succsim\underline{\pi}
+\]
+
+\end_inset
+
+We can suppose without loss of generality that 
+\begin_inset Formula $\overline{\pi}\succ\underline{\pi}$
+\end_inset
+
+, for otherwise the theorem is trivial.
+ We will proceed in five steps.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Given 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+, we will find a unique 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+\pi\sim\alpha\overline{\pi}+(1-\alpha)\underline{\pi}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Let 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+A\equiv\{\alpha\in[0,1]:\pi\succsim\alpha\overline{\pi}+(1-\alpha)\underline{\pi}\}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+B\equiv\{\alpha\in[0,1]:\alpha\overline{\pi}+(1-\alpha)\underline{\pi}\succsim\pi\}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $0\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $1\in B$
+\end_inset
+
+, then both sets are non-empty.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A2, then both sets are closed.
+ Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A1, then 
+\begin_inset Formula $[0,1]\subseteq A\cup B$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ is connected, then 
+\begin_inset Formula $A\cap B\neq\emptyset$
+\end_inset
+
+.
+ Hence, there is 
+\begin_inset Formula $\alpha\in A\cap B$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\pi\sim\mbox{\alpha}\overline{\pi}+(1-\alpha)\underline{\pi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now prove that if 
+\begin_inset Formula $\pi\sim\alpha\overline{\pi}+(1-\alpha)\underline{\pi}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi\sim\beta\overline{\pi}+(1-\beta)\underline{\pi}$
+\end_inset
+
+, then 
+\begin_inset Formula $\alpha=\beta$
+\end_inset
+
+.
+ This is implied by the following two claims.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset space \quad{}
+\end_inset
+
+Claim 1: 
+\series default
+If 
+\begin_inset Formula $\overline{\pi}\succ\underline{\pi}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+, then 
+\begin_inset Formula $\overline{\pi}\succ\alpha\overline{\pi}+(1-\alpha)\underline{\pi}\succ\underline{\pi}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Suppose 
+\begin_inset Formula $\overline{\pi}\succ\underline{\pi}$
+\end_inset
+
+ and take 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\overline{\pi}\succ\alpha\overline{\pi}+(1-\alpha)\underline{\pi}\succ\underline{\pi}$
+\end_inset
+
+.
+ By Lemma 4, 
+\begin_inset Formula $\alpha\overline{\pi}+(1-\alpha)\overline{\pi}\succ\alpha\overline{\pi}+(1-\alpha)\underline{\pi}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\overline{\pi}+(1-\alpha)\underline{\pi}\succ\alpha\underline{\pi}+(1-\alpha)\underline{\pi}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\overline{\pi}\succ\alpha\overline{\pi}+(1-\alpha)\underline{\pi}\succ\underline{\pi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset space \quad{}
+\end_inset
+
+Claim 2: 
+\series default
+If 
+\begin_inset Formula $\alpha>\beta$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{equation}
+\pi\sim\alpha\overline{\pi}+(1-\alpha)\underline{\pi}\succ\beta\overline{\pi}+(1-\beta)\underline{\pi}\sim\pi
+\end{equation}
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $\alpha>\beta$
+\end_inset
+
+.
+ We want to show that condition (2) holds.
+ Let 
+\begin_inset Formula $\gamma=\frac{\alpha-\beta}{1-\beta}\in(0,1)$
+\end_inset
+
+.
+ By Claim 1, 
+\begin_inset Formula $\overline{\pi}\succ\beta\overline{\pi}+(1-\beta)\underline{\pi}$
+\end_inset
+
+.
+ By Lemma 4,
+\begin_inset Formula 
+\[
+\gamma\overline{\pi}+(1-\gamma)[\beta\overline{\pi}+(1-\beta)\underline{\pi}]\succ\beta\overline{\pi}+(1-\beta)\underline{\pi}
+\]
+
+\end_inset
+
+Now,
+\begin_inset Formula 
+\[
+\gamma\overline{\pi}+(1-\gamma)[\beta\overline{\pi}+(1-\beta)\underline{\pi}]=\alpha\overline{\pi}+(1-\alpha)\underline{\pi}
+\]
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\[
+\alpha\overline{\pi}+(1-\alpha)\underline{\pi}\succ\beta\overline{\pi}+(1-\beta)\underline{\pi}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is transitive by A1, then we have 
+\begin_inset Formula $\pi\succ\pi$
+\end_inset
+
+, but this is a contradiction 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\alpha=\beta$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $U:\Delta(Z)\rightarrow\mathbb{R}$
+\end_inset
+
+ be defined by:
+\begin_inset Formula 
+\[
+\begin{array}{cccl}
+U: & \Delta(Z) & \rightarrow & \mathbb{R}\\
+ & \pi & \mapsto & U(\pi)\equiv\alpha\ \mbox{where}\ \pi\sim\alpha\overline{\pi}+(1-\alpha)\underline{\pi}
+\end{array}
+\]
+
+\end_inset
+
+We prove that 
+\begin_inset Formula $U$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, i.e., for each pair 
+\begin_inset Formula $\{\pi,\pi^{\prime}\}\subseteq\Delta(Z)$
+\end_inset
+
+, 
+\begin_inset Formula $\pi\succsim\pi^{\prime}$
+\end_inset
+
+ if only if 
+\begin_inset Formula $U(\pi)\geq U(\pi^{\prime})$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\pi\succsim\pi^{\prime}$
+\end_inset
+
+.
+ We claim that 
+\begin_inset Formula $U(\pi)\geq U(\pi^{\prime})$
+\end_inset
+
+.
+ Suppose by contradiction that 
+\begin_inset Formula $U(\pi^{\prime})>U(\pi)$
+\end_inset
+
+.
+ By Claim 2,
+\begin_inset Formula 
+\[
+\pi^{\prime}\sim U(\pi^{\prime})\overline{\pi}+(1-U(\pi^{\prime}))\underline{\pi}\succ U(\pi)\overline{\pi}+(1-U(\pi))\underline{\pi}\sim\pi
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is transitive by A1, then 
+\begin_inset Formula $\pi^{\prime}\succ\pi$
+\end_inset
+
+.
+ But this is a contradiction 
+\begin_inset Formula $(\rightarrow\leftarrow)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume 
+\begin_inset Formula $U(\pi)\geq U(\pi^{\prime})$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $U(\pi)=U(\pi^{\prime})$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\pi\sim U(\pi)\overline{\pi}+(1-U(\pi))\underline{\pi}\sim U(\pi^{\prime})\overline{\pi}+(1-U(\pi^{\prime}))\underline{\pi}\sim\pi^{\prime}
+\]
+
+\end_inset
+
+If 
+\begin_inset Formula $U(\pi)>U(\pi^{\prime})$
+\end_inset
+
+, then by Claim 2,
+\begin_inset Formula 
+\[
+\pi\sim U(\pi)\overline{\pi}+(1-U(\pi))\underline{\pi}\succ U(\pi^{\prime})\overline{\pi}+(1-U(\pi^{\prime}))\underline{\pi}\sim\pi^{\prime}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is transitive by A1, then 
+\begin_inset Formula $\pi\succ\pi^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+For each pair of lotteries 
+\begin_inset Formula $\{\pi,\pi^{\prime}\}\subseteq\Delta(Z)$
+\end_inset
+
+ and each 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+U(\alpha\pi+(1-\alpha)\pi^{\prime})=\alpha U(\pi)+(1-\alpha)U(\pi^{\prime})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Take 
+\begin_inset Formula $\{\pi,\pi^{\prime}\}\subseteq\Delta(Z)$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+.
+ By the definition of 
+\begin_inset Formula $U(\cdot)$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{gather*}
+\pi\sim U(\pi)\overline{\pi}+(1-U(\pi))\underline{\pi}\\
+\pi^{\prime}\sim U(\pi^{\prime})\overline{\pi}+(1-U(\pi^{\prime}))\underline{\pi}\\
+\alpha\pi+(1-\alpha)\pi^{\prime}\sim U(\alpha\pi+(1-\alpha)\pi^{\prime})\overline{\pi}+(1-U(\alpha\pi+(1-\alpha)\pi^{\prime}))\underline{\pi}
+\end{gather*}
+
+\end_inset
+
+By Lemma 4,
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha\pi+(1-\alpha)\pi^{\prime} & \sim & \alpha[U(\pi)\overline{\pi}+(1-U(\pi))\underline{\pi}]+(1-\alpha)\pi^{\prime}\\
+ & \sim & \alpha[U(\pi)\overline{\pi}+(1-U(\pi))\underline{\pi}]+(1-\alpha)[U(\pi^{\prime})\overline{\pi}+(1-U(\pi^{\prime}))\underline{\pi}]
+\end{eqnarray*}
+
+\end_inset
+
+After rearranging terms in the expression above, we have
+\begin_inset Formula 
+\[
+\alpha\pi+(1-\alpha)\pi^{\prime}\sim(\alpha U(\pi)+(1-\alpha)U(\pi^{\prime}))\overline{\pi}+(1-(\alpha U(\pi)+(1-\alpha)U(\pi^{\prime})))\underline{\pi}
+\]
+
+\end_inset
+
+Hence,
+\begin_inset Formula 
+\[
+U(\alpha\pi+(1-\alpha)\pi^{\prime})=\alpha U(\pi)+(1-\alpha)U(\pi^{\prime})
+\]
+
+\end_inset
+
+Thus, the expected utility form, 
+\begin_inset Formula $U(\cdot)$
+\end_inset
+
+, is a linear representation, i.e., it is linear in the probabilities.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $u:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ be the index defined by: for each 
+\begin_inset Formula $z\in Z$
+\end_inset
+
+, 
+\begin_inset Formula $u(z)\equiv U(\delta_{z})$
+\end_inset
+
+ where 
+\begin_inset Formula $\delta_{z}$
+\end_inset
+
+ is the lottery that assigns probability one to outcome 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Then, for each 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+U(\pi){\displaystyle \sum_{z\in Z}}u(z)\pi(z)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Take 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+.
+ Consider the set 
+\begin_inset Formula $\left\{ z_{i}\in Z:\pi(z_{i})>0\right\} $
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $m\equiv\left|\left\{ z_{i}\in Z:\pi(z_{i})>0\right\} \right|$
+\end_inset
+
+.
+ We will prove our desired result by induction.
+ 
+\end_layout
+
+\begin_layout Standard
+(i) 
+\bar under
+Base cases:
+\bar default
+ 
+\begin_inset Formula $m=1$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\pi=\delta_{z^{*}}$
+\end_inset
+
+ for some 
+\begin_inset Formula $z^{*}\in Z$
+\end_inset
+
+.
+ So,
+\begin_inset Formula 
+\[
+U(\pi)=U(\delta_{z^{*}})={\displaystyle {\displaystyle \sum_{z\in Z}}\pi(z^{*})u(z^{*})}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m=2$
+\end_inset
+
+.
+ Then, for some 
+\begin_inset Formula $\{z_{i},z_{j}\}\subseteq\Delta(Z)$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+, we have the reduced lottery 
+\begin_inset Formula $\pi=\alpha\delta z_{i}+(1-\alpha)\delta z_{j}$
+\end_inset
+
+ of the compound lottery 
+\begin_inset Formula $(\delta_{z_{i}},\delta_{z_{j}};\alpha,(1-\alpha))$
+\end_inset
+
+.
+ Without loss of generality, let 
+\begin_inset Formula $\alpha=\pi(z_{i})$
+\end_inset
+
+, and 
+\begin_inset Formula $(1-\alpha)=\pi(z_{j})$
+\end_inset
+
+.
+ So, by the result of Step 3, 
+\begin_inset Formula 
+\begin{eqnarray*}
+U(\pi) & = & U\left(\alpha\delta_{z_{i}}+(1-\alpha)\delta_{z_{j}}\right)\\
+ & = & \alpha U(\delta_{z_{i}})+(1-\alpha)U(\delta_{z_{j}})\\
+ & = & \alpha u(z_{i})+(1-\alpha)u(z_{j})\ \ \mbox{by the definition of \ensuremath{u(\cdot)}}\\
+ & = & {\displaystyle \sum_{z\in Z}\pi(z)u(z)}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(ii) Assume that if 
+\begin_inset Formula $m=n$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+U(\pi)={\displaystyle \sum_{z\in Z}u(z)\pi(z)}
+\]
+
+\end_inset
+
+ We want to show that if 
+\begin_inset Formula $m=n+1$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+U(\pi)={\displaystyle \sum_{z\in Z}u(z)\pi(z)}
+\]
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $m=n+1$
+\end_inset
+
+.
+ Without loss of generality, let 
+\begin_inset Formula $\alpha_{i}=\pi(z_{i})$
+\end_inset
+
+.
+ Then, from the compound lottery 
+\begin_inset Formula $(\delta_{z_{1}},\ldots,\delta_{z_{n+1}};\alpha_{1},\ldots,\alpha_{n+1})$
+\end_inset
+
+, we have the following compound lottery
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi & = & \alpha_{1}\delta_{z_{1}}+\ldots+\alpha_{n+1}\delta_{z_{n+1}}\\
+ & = & \alpha_{1}\delta_{z_{1}}+(1-\alpha_{1})\left[\frac{\alpha_{2}}{1-\alpha_{1}}\delta_{z_{2}}+\ldots+\frac{\alpha_{n+1}}{1-\alpha_{1}}\delta_{z_{n+1}}\right]
+\end{eqnarray*}
+
+\end_inset
+
+Now, the linearity of 
+\begin_inset Formula $U(\cdot)$
+\end_inset
+
+ proved in Step 3 yields 
+\begin_inset Formula 
+\begin{eqnarray*}
+U(\pi) & = & \alpha_{1}U(\delta_{z_{1}})+(1-\alpha_{1})U\left[\frac{\alpha_{2}}{1-\alpha_{1}}\delta_{z_{2}}+\ldots+\frac{\alpha_{n+1}}{1-\alpha_{1}}\delta_{z_{n+1}}\right]\\
+ & = & \alpha_{1}U(\delta_{z_{1}})+(1-\alpha_{1})\left[\frac{\alpha_{2}}{1-\alpha_{1}}U\left(\delta_{z_{2}}\right)+\ldots+\frac{\alpha_{n+1}}{1-\alpha_{1}}U\left(\delta_{z_{n+1}}\right)\right]\\
+ & = & \pi(z_{1})u(z_{1})+{\displaystyle \ldots+\pi(z_{n+1})u(z_{n+1})}\ \ \mbox{by the definition of \ensuremath{u(\cdot)}}
+\end{eqnarray*}
+
+\end_inset
+
+Hence, by our inductive assumption, we have
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}\pi(z_{i})u(z_{i})+\pi(z_{n+1})u(z_{n+1})
+\]
+
+\end_inset
+
+and thus,
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{z\in Z}\pi(z)u(z)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $E_{\pi}u\equiv U(\pi)$
+\end_inset
+
+ represent 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ Finally, we prove that 
+\begin_inset Formula $u$
+\end_inset
+
+ is unique up to a positive affine linear transformation, i.e., there is another
+ function 
+\begin_inset Formula $v:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the function 
+\begin_inset Formula $E_{(\cdot\pi)}v$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\exists\ a\in\mathbb{R}_{++},\ \exists\ b\in\mathbb{R},\ \forall\ z\in Z:u(z)=\alpha v(z)+b$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Let 
+\begin_inset Formula $E_{\pi}u\equiv U(\pi)$
+\end_inset
+
+ represent 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $\exists\ a\in\mathbb{R}_{++},\ \exists\ b\in\mathbb{R},\ \forall\ z\in Z:u(z)=av(z)+b$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\exists\ v:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by 
+\begin_inset Formula $E_{(\cdot\pi)}v$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $v(z)=\frac{u(z)-b}{a}$
+\end_inset
+
+.
+ Then, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{\pi}v & = & \sum_{z\in Z}v(z)\pi(z)\\
+ & = & {\displaystyle \sum_{z\in Z}}\left(\frac{u(z)-b}{a}\right)\pi(z)\\
+ & = & \frac{1}{a}\sum_{z\in Z}u(z)\pi(z)-\frac{b}{a}\sum_{z\in Z}\pi(z)\\
+ & = & \frac{1}{a}E_{\pi}u-\frac{b}{a}
+\end{eqnarray*}
+
+\end_inset
+
+Consider the compound lottery 
+\begin_inset Formula $(\pi^{1},\ldots,\pi^{K};\alpha_{1},\ldots,\alpha_{K})$
+\end_inset
+
+ where 
+\begin_inset Formula $\pi^{k}=(\pi_{1}^{k},\ldots,\pi_{n}^{k})$
+\end_inset
+
+.
+ Its reduced lottery is 
+\begin_inset Formula $\pi^{\prime}=\sum_{k}\alpha_{k}\pi^{k}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $E_{\pi}u$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{\pi^{\prime}}v & = & \frac{1}{a}U\left({\displaystyle \sum_{k=1}^{K}}\alpha_{k}\pi^{k}\right)-\frac{b}{a}\\
+ & = & \frac{1}{a}\left[{\displaystyle \sum_{k=1}^{K}}\alpha_{k}U(\pi^{k})\right]-\frac{b}{a}\\
+ & = & {\displaystyle \sum_{k=1}^{K}}\alpha_{k}\left[\frac{1}{a}U(\pi^{k})-\frac{b}{a}\right]\\
+ & = & {\displaystyle \sum_{k=1}^{K}}\alpha_{k}E_{\pi^{k}}v
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $E_{\pi}v$
+\end_inset
+
+ is a linear representation, then it has the expected utility form, so it
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Formula $(\Rightarrow)$
+\end_inset
+
+ Let 
+\begin_inset Formula $E_{\pi}u\equiv U(\pi)$
+\end_inset
+
+ represent 
+\begin_inset Formula $\succsim$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $\exists\ v:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the function 
+\begin_inset Formula $E_{(\cdot\pi)}v$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\exists\ a\in\mathbb{R}_{++},\exists\ b\in\mathbb{R},\forall\ z\in Z:u(z)=av(z)+b$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $\lambda_{\pi}\in[0,1]$
+\end_inset
+
+ by
+\begin_inset Formula 
+\[
+E_{\pi}v=\lambda_{\pi}E_{\overline{\pi}}v+(1-\lambda_{\pi})E_{\underline{\pi}}v
+\]
+
+\end_inset
+
+Solving for 
+\begin_inset Formula $\lambda_{\pi}$
+\end_inset
+
+ we have
+\begin_inset Formula 
+\begin{equation}
+\lambda_{\pi}=\frac{E_{\pi}v-E_{\underline{\pi}}v}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}
+\end{equation}
+
+\end_inset
+
+Since expected utility is a linear representation by Step 3, then 
+\begin_inset Formula $\lambda_{\pi}E_{\overline{\pi}}v+(1-\lambda_{\pi})E_{\underline{\pi}}v=E_{\lambda_{\pi}\overline{\pi}+(1-\lambda_{\pi})\underline{\pi}}v$
+\end_inset
+
+.
+ Since 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $E_{\pi}v$
+\end_inset
+
+ represent the preferences 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then it must be that 
+\begin_inset Formula $\pi\sim\lambda_{\pi}\overline{\pi}+(1-\lambda_{\pi})\underline{\pi}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ But if so, then since 
+\begin_inset Formula $E_{\pi}u$
+\end_inset
+
+ is also linear and represents these same preferences, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{\pi}u & = & E_{\lambda_{\pi}\overline{\pi}+(1-\lambda_{\pi})\underline{\pi}}u\\
+ & = & \lambda_{\pi}E_{\overline{\pi}}u+(1-\lambda_{\pi})E_{\underline{\pi}}u\\
+ & = & \lambda_{\pi}(E_{\overline{\pi}}u-E_{\underline{\pi}}u)+E_{\underline{\pi}}u
+\end{eqnarray*}
+
+\end_inset
+
+Substituting for 
+\begin_inset Formula $\lambda_{\pi}$
+\end_inset
+
+ from equation (3) yields
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{\pi}u & = & \frac{E_{\pi}v-E_{\underline{\pi}}v}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}(E_{\overline{\pi}}u-E_{\underline{\pi}}u)+E_{\underline{\pi}}u\\
+ & = & \frac{E_{\pi}vE_{\overline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}-\frac{E_{\pi}vE_{\underline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}+\frac{E_{\overline{\pi}}vE_{\underline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}-\frac{E_{\underline{\pi}}vE_{\overline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}+\frac{E_{\underline{\pi}}vE_{\underline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}-\frac{E_{\underline{\pi}}vE_{\underline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}\\
+ & = & \left[\frac{E_{\overline{\pi}}u-E_{\underline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}\right]E_{\pi}v+\left[\frac{E_{\overline{\pi}}vE_{\underline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}-\frac{E_{\underline{\pi}}vE_{\overline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}\right]
+\end{eqnarray*}
+
+\end_inset
+
+Define 
+\begin_inset Formula $\alpha\equiv\left[\frac{E_{\overline{\pi}}u-E_{\underline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta\equiv\left[\frac{E_{\overline{\pi}}vE_{\underline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}-\frac{E_{\underline{\pi}}vE_{\overline{\pi}}u}{E_{\overline{\pi}}v-E_{\underline{\pi}}v}\right]$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\overline{\pi}\succ\underline{\pi}$
+\end_inset
+
+, then 
+\begin_inset Formula $E_{\overline{\pi}}u-E_{\underline{\pi}}u>0$
+\end_inset
+
+ and 
+\begin_inset Formula $E_{\overline{\pi}}v-E_{\underline{\pi}}v>0$
+\end_inset
+
+, so 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+.
+ Now,
+\begin_inset Formula 
+\begin{eqnarray*}
+E_{\pi}u & = & \alpha E_{\pi}v+\beta\\
+{\displaystyle \sum_{z\in Z}}u(z)\pi(z) & = & \sum_{z\in Z}\alpha v(z)\pi(z)+\beta\\
+ & = & \sum_{z\in Z}\alpha v(z)\pi(z)+\sum_{z\in Z}\beta\pi(z)\\
+ & = & \sum_{z\in Z}\left[\alpha v(z)+b\right]\pi(z)
+\end{eqnarray*}
+
+\end_inset
+
+Note that 
+\begin_inset Formula $\pi(z)$
+\end_inset
+
+ is the same on both sides for all 
+\begin_inset Formula $z\in Z$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\forall\ z\in Z:u(z)=\left[\alpha v(z)+b\right]$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\exists\ a\in\mathbb{R}_{++},\exists\ b\in\mathbb{R},\forall\ z\in Z:u(z)=av(z)+b$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Proof
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ Assume there is an index 
+\begin_inset Formula $u:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the function 
+\begin_inset Formula $U:\Delta(Z)\rightarrow\mathbb{R}$
+\end_inset
+
+ defined by: 
+\begin_inset Formula $\forall\ \pi\in\Delta(Z):U(\pi)\equiv E_{\pi}u$
+\end_inset
+
+.
+ We prove that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A1, A2, and A3.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete and transitive.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\bar under
+Complete:
+\bar default
+ Take 
+\begin_inset Formula $\{\pi,\pi^{\prime},\pi^{\prime\prime}\}\subseteq\Delta(Z)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $a=U(\pi)$
+\end_inset
+
+ and 
+\begin_inset Formula $b=U(\pi^{\prime})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\left\{ a,b\right\} \subseteq\mathbb{R}$
+\end_inset
+
+, then either 
+\begin_inset Formula $a\geq b$
+\end_inset
+
+ or 
+\begin_inset Formula $b\geq a$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $U(\pi)\geq U(\pi^{\prime})$
+\end_inset
+
+ or 
+\begin_inset Formula $U(\pi^{\prime})\geq U(\pi)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $U$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then 
+\begin_inset Formula $\pi\succsim\pi^{\prime}\ \vee\ \pi^{\prime}\succsim\pi$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\forall\ \left\{ \pi,\pi^{\prime}\right\} \subseteq\Delta(Z):\pi\succsim\pi^{\prime}\ \vee\ \pi^{\prime}\succsim\pi$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Transitive:
+\bar default
+ Take 
+\begin_inset Formula $\{\pi,\pi^{\prime},\pi^{\prime\prime}\}\subseteq\Delta(Z)$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $\pi\succsim\pi^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi^{\prime}\succsim\pi^{\prime\prime}$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\pi\succsim\pi^{\prime\prime}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $U$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then 
+\begin_inset Formula $\pi\succsim\pi^{\prime}\ \wedge\ \pi^{\prime}\succsim\pi^{\prime\prime}\iff U(\pi)\ge U(\pi^{\prime})\ \wedge\ U(\pi^{\prime})\geq U(\pi^{\prime\prime})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\geq$
+\end_inset
+
+ is transitive on the real numbers, then 
+\begin_inset Formula $U(\pi)\ge U(\pi^{\prime})\ \wedge\ U(\pi^{\prime})\geq U(\pi^{\prime\prime})\implies U(\pi)\ge U(\pi^{\prime\prime})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $U$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then 
+\begin_inset Formula $U(\pi)\ge U(\pi^{\prime\prime})\iff\pi\succsim\pi^{\prime\prime}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\forall\ \left\{ \pi,\pi^{\prime},\pi^{\prime\prime}\right\} \subseteq\Delta(Z):\pi\succsim\pi^{\prime}\ \wedge\ \pi^{\prime}\succsim\pi^{\prime\prime}\implies\pi\succsim\pi^{\prime\prime}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is transitive
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Take 
+\begin_inset Formula $\{\pi,\pi^{\prime},\pi^{\prime\prime}\}\subseteq\Delta(Z)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $A\equiv\left\{ \alpha\in[0,1]:\alpha\pi+(1-\alpha)\pi^{\prime}\succsim\pi^{\prime\prime}\right\} $
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $(\alpha_{n})_{n\in\mathbb{N}}\subseteq A:\lim_{n\rightarrow\infty}\alpha_{n}=\alpha$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\alpha\in A$
+\end_inset
+
+.
+ Since 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(\alpha_{n})_{n\in\mathbb{N}}\subseteq A$
+\end_inset
+
+, the
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+n
+\begin_inset Formula 
+\[
+\forall\ n\in\mathbb{N}:\alpha_{n}\pi+(1-\alpha_{n})\pi^{\prime}\succsim\pi^{\prime\prime}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $U$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then the previous statement is equivalent to
+\begin_inset Formula 
+\[
+\forall\ n\in\mathbb{N}:\alpha_{n}E_{\pi}u+(1-\alpha_{n})E_{\pi^{\prime}}u\geq E_{\pi^{\prime\prime}}u
+\]
+
+\end_inset
+
+Since limits preserve weak, then
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \lim_{n\rightarrow\infty}}\left[\alpha_{n}E_{\pi}u+(1-\alpha_{n})E_{\pi^{\prime}}u\right] & \geq & E_{\pi^{\prime\prime}}u\\
+{\displaystyle \lim_{n\rightarrow\infty}}(\alpha_{n})E_{\pi}u+(1-{\displaystyle \lim_{n\rightarrow\infty}}(\alpha_{n}))E_{\pi^{\prime}}u & \geq & E_{\pi^{\prime\prime}}u
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\alpha_{n}=\alpha$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\alpha E_{\pi}u+(1-\alpha)E_{\pi^{\prime}}u\geq E_{\pi^{\prime\prime}}u
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $U$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim$
+\end_inset
+
+, then the previous statement is equivalent to 
+\begin_inset Formula 
+\[
+\alpha\pi+(1-\alpha)\pi^{\prime}\succsim\pi^{\prime\prime}
+\]
+
+\end_inset
+
+This implies that 
+\begin_inset Formula $\alpha\in A$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $A$
+\end_inset
+
+ is a closed set.
+ Applying a symmetric argument, we can show that 
+\begin_inset Formula $B\equiv\left\{ \alpha\in[0,1]:\pi^{\prime\prime}\succsim\alpha\pi+(1-\alpha)\pi^{\prime}\right\} $
+\end_inset
+
+ is also a closed set.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is continuous.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies the Independence Axiom.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Take 
+\begin_inset Formula $\{\pi,\pi^{\prime},\pi^{\prime\prime}\}\subseteq\Delta(Z)$
+\end_inset
+
+ and take 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $\pi\succsim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi\succsim\pi^{\prime} & \iff & U(\pi)\ge U(\pi^{\prime})\ \ \mbox{since \ensuremath{U}represents \ensuremath{\succsim}}\\
+ & \iff & {\displaystyle \sum_{z\in Z}}u(z)\pi(z)\geq{\displaystyle \sum_{z\in Z}}u(z)\pi^{\prime}(z)\ \ \mbox{since}\ U(\pi)\equiv E_{\pi}u\equiv{\displaystyle \sum_{z\in Z}}u(z)\pi(z)\\
+ & \iff & \alpha{\displaystyle \sum_{z\in Z}}u(z)\pi(z)\geq\alpha{\displaystyle \sum_{z\in Z}}u(z)\pi^{\prime}(z)\ \ \mbox{since}\ \alpha\in(0,1)\\
+ & \iff & {\displaystyle \alpha\sum_{z\in Z}}u(z)\pi(z)+(1-\alpha){\displaystyle \sum_{z\in Z}}u(z)\pi^{\prime\prime}(z)\\
+ &  & \geq\alpha{\displaystyle \sum_{z\in Z}}u(z)\pi^{\prime}(z)+(1-\alpha){\displaystyle \sum_{z\in Z}}u(z)\pi^{\prime\prime}(z)\ \ \mbox{since}\ \left[(1-\alpha){\displaystyle \sum_{z\in Z}}u(z)\pi^{\prime\prime}(z)\right]\in\mathbb{R}\\
+ & \iff & \alpha U(\pi)+(1-\alpha)U(\pi^{\prime\prime})\geq\alpha U(\pi^{\prime})+(1-\alpha)U(\pi^{\prime\prime})\ \ \mbox{since}\ U(\pi)\equiv{\displaystyle \sum_{z\in Z}}u(z)\pi(z)\\
+ & \iff & \alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}\ \ \mbox{since \ensuremath{U}represents \ensuremath{\succsim}}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $\forall\ \left\{ \pi,\pi^{\prime},\pi^{\prime\prime}\right\} \subseteq\Delta(Z)\ \wedge\ \forall\ \alpha\in(0,1):\pi\succsim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies the Independence Axiom.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The expected utility property is a 
+\emph on
+cardinal
+\emph default
+ property of utility functions defined on the space of lotteries.
+ In particular, the results in Theorem 21 show that the expect utility form
+ is preserved only by increasing 
+\emph on
+linear
+\emph default
+ transformations.
+ A consequence of this outcome is that for a utility funciton with the expected
+ utility form, differences of utilities have meaning.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A first advantage of the expected utility theorem is technical: It is extremely
+ convenient analytically.
+ This, more than anything else, probably accounts for its pervasive use
+ in economics.
+ It is very easy to work with expected utility and very difficult to do
+ without it.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A second advantage of the theorem is normative: Expected utility may provide
+ a valuable guide to action.
+ People often find it hard to think systematically about risky alternatives.
+ But if an individual believes that his choices should satisfy the axioms
+ on which the theorem is based (notably, the independence axiom), then the
+ theorem can be used as a guide in his decision process.
+\end_layout
+
+\begin_layout Section*
+6.2.1
+\begin_inset space \quad{}
+\end_inset
+
+Problems
+\end_layout
+
+\begin_layout Problem
+Prove Lemmas 4 and 5.
+\end_layout
+
+\begin_layout Proof
+The proof can be found in Section 6.2.
+\end_layout
+
+\begin_layout Problem
+Show that the summation of the distances to the sides from each point in
+ an equilateral triangle is a constant.
+\end_layout
+
+\begin_layout Proof
+A simple lottery can be represented geometrically as a point in the 
+\begin_inset Formula $(N-1)$
+\end_inset
+
+ 
+\emph on
+dimensional simplex
+\emph default
+, 
+\begin_inset Formula $\Delta=\{\pi\in\mathbb{R}_{+}^{n}:\pi(z_{1})+\cdots+\pi(z_{n})=1\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $Z=\{z_{1},z_{2}\}$
+\end_inset
+
+, then one can graphically represent 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ by means of the segment 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.
+ Each point 
+\begin_inset Formula $x\in[0,1]$
+\end_inset
+
+ represents the lottery 
+\begin_inset Formula $\pi_{1}=x$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi_{2}=1-x$
+\end_inset
+
+.
+ Conversely each lottery in 
+\begin_inset Formula $\pi$
+\end_inset
+
+ is represented by the point 
+\begin_inset Formula $\pi_{1}\in[0,1]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Analogously, if 
+\begin_inset Formula $Z=\{z_{1},z_{2},z_{3}\}$
+\end_inset
+
+, then one can graphically represent 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ by an equilateral trianlge with height 1 and whose vertices are labeled
+ 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $z_{3}$
+\end_inset
+
+.
+ A point 
+\begin_inset Formula $x$
+\end_inset
+
+ in the triangle represents the lottery for which 
+\begin_inset Formula $\pi_{1}$
+\end_inset
+
+ is the distance between 
+\begin_inset Formula $x$
+\end_inset
+
+ and the side opposite vertex 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\pi_{2}$
+\end_inset
+
+ is the distance between 
+\begin_inset Formula $x$
+\end_inset
+
+ and the side opposite vertex 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $\pi_{3}$
+\end_inset
+
+ is the distance between 
+\begin_inset Formula $x$
+\end_inset
+
+ and the side opposite vertex 
+\begin_inset Formula $z_{3}$
+\end_inset
+
+.
+ Conversely, each lottery 
+\begin_inset Formula $\pi$
+\end_inset
+
+ is represented by the point whose distances go to the respective sides
+ are 
+\begin_inset Formula $\pi_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\pi_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\pi_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+We now prove that the summation of the distances to the sides from each
+ point inside an equilateral triangle is a constant.
+ Take an arbitrary equilateral triangle 
+\begin_inset Formula $\Delta DEF$
+\end_inset
+
+ with height 
+\begin_inset Formula $H$
+\end_inset
+
+, base 
+\begin_inset Formula $B$
+\end_inset
+
+, and area 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Denote the side from 
+\begin_inset Formula $D$
+\end_inset
+
+ to 
+\begin_inset Formula $E$
+\end_inset
+
+ as 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $E$
+\end_inset
+
+ to 
+\begin_inset Formula $F$
+\end_inset
+
+ as 
+\begin_inset Formula $b_{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $F$
+\end_inset
+
+ to 
+\begin_inset Formula $D$
+\end_inset
+
+ as 
+\begin_inset Formula $b_{3}$
+\end_inset
+
+.
+ In the triangle, pick a point 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ At this point, we can construct three separate triangles within 
+\begin_inset Formula $\Delta DEF$
+\end_inset
+
+.
+ The three triangles are: 
+\begin_inset Formula $\Delta DpE$
+\end_inset
+
+ with base 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ and height 
+\begin_inset Formula $h_{1}$
+\end_inset
+
+; 
+\begin_inset Formula $\Delta EpF$
+\end_inset
+
+ with base 
+\begin_inset Formula $b_{2}$
+\end_inset
+
+ and height 
+\begin_inset Formula $h_{2}$
+\end_inset
+
+; 
+\begin_inset Formula $\Delta FpD$
+\end_inset
+
+ with base 
+\begin_inset Formula $b_{3}$
+\end_inset
+
+ and height 
+\begin_inset Formula $h_{3}$
+\end_inset
+
+.
+ The area of 
+\begin_inset Formula $\Delta DEF$
+\end_inset
+
+ is the sum of the areas of these three triangles
+\begin_inset Formula 
+\[
+A=\frac{1}{2}b_{1}h_{1}+\frac{1}{2}b_{2}h_{2}+\frac{1}{2}b_{3}h_{3}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\Delta DEF$
+\end_inset
+
+ is an equilateral triangle, then 
+\begin_inset Formula $b_{1}=b_{2}=b_{3}=B$
+\end_inset
+
+.
+ Hence, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+A & = & \frac{1}{2}B(h_{1}+h_{2}+h_{3})\\
+A & = & \frac{1}{2}BH
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $(h_{1}+h_{2}+h_{3})=H$
+\end_inset
+
+.
+ Therefore, the summation of the distances to the sides from each point
+ in an equilateral triangle is a constant.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $Z\equiv\left\{ z_{1},z_{2},z_{3}\right\} $
+\end_inset
+
+.
+ Consider the preference represented by the Expected Utility (EU) associated
+ with index 
+\begin_inset Formula $u$
+\end_inset
+
+ defined as follows: 
+\begin_inset Formula $u(z_{1})=1$
+\end_inset
+
+, 
+\begin_inset Formula $u(z_{2})=3$
+\end_inset
+
+, 
+\begin_inset Formula $u(z_{3})=100$
+\end_inset
+
+.
+ Does the EU associated with 
+\begin_inset Formula $100u$
+\end_inset
+
+ respresent the same prefrence.
+ Does the EU associated with 
+\begin_inset Formula $u^{2}$
+\end_inset
+
+ represented the same preference? For each preference, draw indifference
+ sets in the triangle that represents 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ and illustrate your conclusion.
+\end_layout
+
+\begin_layout Proof
+First, we analyze the 
+\begin_inset Formula $EU$
+\end_inset
+
+ associated with 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ In this case, the indifference sets are linear and parallel.
+ Set 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $EU=3$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi(z_{2})=0$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\pi(z_{1})+\pi(z_{3})=1$
+\end_inset
+
+, and
+\begin_inset Formula 
+\begin{gather*}
+EU=\pi(z_{1})+100\pi(z_{3})=3\\
+=1-\pi(z_{3})+100\pi(z_{3})=3\\
+\pi(z_{3})=\frac{2}{99}\\
+\pi(z_{1})=\frac{97}{99}
+\end{gather*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Next, we analyze the 
+\begin_inset Formula $EU$
+\end_inset
+
+ associated with 
+\begin_inset Formula $100u$
+\end_inset
+
+.
+ In this case, the indifference sets are once again linear and parallel.
+ Set 
+\begin_inset Formula $EU=300$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi(z_{2})=0$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\pi(z_{1})+\pi(z_{3})=1$
+\end_inset
+
+, and
+\begin_inset Formula 
+\begin{gather*}
+EU=100\pi(z_{1})+10,000\pi(z_{3})=300\\
+=100(1-\pi(z_{3}))+10,000\pi(z_{3})=300\\
+\pi(z_{3})=\frac{2}{99}\\
+\pi(z_{1})=\frac{97}{99}
+\end{gather*}
+
+\end_inset
+
+Therefore, the 
+\begin_inset Formula $EU$
+\end_inset
+
+ associated with 
+\begin_inset Formula $100u$
+\end_inset
+
+ represents the same preference as the original 
+\begin_inset Formula $EU$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Finally, we analyze the 
+\begin_inset Formula $EU$
+\end_inset
+
+ associated with 
+\begin_inset Formula $u^{2}$
+\end_inset
+
+.
+ Set 
+\begin_inset Formula $EU=9$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi(z_{2})=0$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\pi(z_{1})+\pi(z_{3})=1$
+\end_inset
+
+, and
+\begin_inset Formula 
+\begin{gather*}
+EU=\pi(z_{1})+10,000\pi(z_{3})=9\\
+=(1-\pi(z_{3}))+10,000\pi(z_{3})=9\\
+\pi(z_{3})=\frac{8}{9999}\\
+\pi(z_{1})=\frac{991}{9999}
+\end{gather*}
+
+\end_inset
+
+Therefore, the 
+\begin_inset Formula $EU$
+\end_inset
+
+ associated with 
+\begin_inset Formula $u^{2}$
+\end_inset
+
+ does not represent the same preference as the original 
+\begin_inset Formula $EU$
+\end_inset
+
+.
+ In addition, the indifference sets are no longer linear and parallel.
+\end_layout
+
+\begin_layout Problem
+Prove that if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is an Expected Utility Maximizer, then 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A1, A2, and A3.
+\end_layout
+
+\begin_layout Proof
+This is the 
+\begin_inset Formula $(\Leftarrow)$
+\end_inset
+
+ implication and conclusion for Theorem 2.
+ The proof can be found in Section 6.2.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $Z\equiv\{a,b,c\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Construct a preference on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ satisfying A1 and A2 that does not satisfy A3.
+\end_layout
+
+\begin_layout Enumerate
+Construct a preference on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ satisfying A1 and A3 that does not satisfy A2.
+\end_layout
+
+\begin_layout Enumerate
+Construct a preference on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ satisfying A2 and A3 that does not satisfy A1 (provide only the intuition
+ why A2 is satisfied.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Will prove.
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $Z$
+\end_inset
+
+ be a finite set of prizes and 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ a preference on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+, i.e., the set of lotteries on 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ The generic lottery is denoted 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+.
+ Prove that if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete, transitive, and satisfies IA, then there are best and worst
+ lotteries, i.e., there are 
+\begin_inset Formula $\overline{\pi}$
+\end_inset
+
+, 
+\begin_inset Formula $\underline{\pi}$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $\pi\in\Delta(Z)$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\overline{\pi}\succsim\pi\succsim\underline{\pi}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+This problem is asking us to prove Proposition 58, which has already been
+ completed.
+ The proof can be found in Section 6.2.
+\end_layout
+
+\begin_layout Problem
+Prove Step 4 in the proof of Theorem 21.
+\end_layout
+
+\begin_layout Proof
+Step 4 of Theorem 21 has already been completed.
+ The proof can be found in Section 6.2.
+\end_layout
+
+\begin_layout Problem
+Prove Step 5 in the proof of Theorem 21.
+\end_layout
+
+\begin_layout Proof
+Step 5 of Theorem 21 has already been completed.
+ The proof can be found in Section 6.2.
+\end_layout
+
+\begin_layout Problem
+(Separate problem attached with Micro Homework Assignment 9).
+ Let 
+\begin_inset Formula $Z\equiv\{a,b,c\}$
+\end_inset
+
+ be a set of three prizes.
+ Consider an agent who has complete and transitive preferences on the set
+ of lotteries on 
+\begin_inset Formula $Z$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+.
+ The generic lottery is denoted by 
+\begin_inset Formula $\pi\equiv(\pi_{a},\pi_{b},\pi_{c})$
+\end_inset
+
+ where 
+\begin_inset Formula $\pi_{a}$
+\end_inset
+
+is the probability that the agent receives 
+\begin_inset Formula $a$
+\end_inset
+
+, and so on.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+State the Independence Axiom for a preference on the set of lotteries 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Assume that the agent's preferences are continuous and satisfy the Independence
+ Axiom.
+ Suppose that she selects 
+\begin_inset Formula $\{(1,0,0)\}$
+\end_inset
+
+ as the set of her best choices from the set
+\begin_inset Formula 
+\[
+B_{1}\equiv\left\{ \left(1,0,0\right),\left(0,\frac{1}{2},\frac{1}{2}\right)\right\} 
+\]
+
+\end_inset
+
+What is her best choice from the set
+\begin_inset Formula 
+\[
+B_{2}\equiv\left\{ \left(\alpha,\frac{1-\alpha}{2},\frac{1-\alpha}{2}\right):\alpha\in[0,1]\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Now, suppose that the agent's indifference curves are as shown in the Figure.
+ Is this agent an Expected Utility maximizer?
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula $Z\equiv\{a,b,c\}$
+\end_inset
+
+ be a set of three prizes.
+ Consider an agent who has complete and transitive preferences on the set
+ of lotteries on 
+\begin_inset Formula $Z$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+.
+ The generic lottery is denoted by 
+\begin_inset Formula $\pi\equiv(\pi_{a},\pi_{b},\pi_{c})$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part 1
+\end_layout
+
+\begin_layout Proof
+The Independence Axiom:
+\begin_inset Formula 
+\[
+\forall\ \left\{ \pi,\pi^{\prime},\pi^{\prime\prime}\right\} \subseteq\Delta(Z),\forall\ \alpha\in(0,1):\pi\succsim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\succsim\alpha\pi^{\prime}+(1-\alpha)\pi^{\prime\prime}
+\]
+
+\end_inset
+
+
+\bar under
+Part 2
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Assume that the agent's preferences are continuous and satisfy the Independence
+ Axiom.
+ Suppose that she selects 
+\begin_inset Formula $\{(1,0,0)\}$
+\end_inset
+
+ as the set of her best choices from the set
+\begin_inset Formula 
+\[
+B_{1}\equiv\left\{ \left(1,0,0\right),\left(0,\frac{1}{2},\frac{1}{2}\right)\right\} 
+\]
+
+\end_inset
+
+This implies that 
+\begin_inset Formula $\left(1,0,0\right)\succsim\left(0,\frac{1}{2},\frac{1}{2}\right)$
+\end_inset
+
+.
+ By the Independence Axiom, 
+\begin_inset Formula $\forall\ \alpha(0,1)$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\left(1,0,0\right)\succsim\left(0,\frac{1}{2},\frac{1}{2}\right)\iff\alpha\left(1,0,0\right)+(1-\alpha)(1,0,0)\succsim\alpha\left(1,0,0\right)+(1-\alpha)\left(0,\frac{1}{2},\frac{1}{2}\right)
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\left(1,0,0\right)\succsim\left(0,\frac{1}{2},\frac{1}{2}\right)\iff\alpha\left(1,0,0\right)+(1-\alpha)\left(0,\frac{1}{2},\frac{1}{2}\right)\succsim\alpha\left(0,\frac{1}{2},\frac{1}{2}\right)+(1-\alpha)\left(0,\frac{1}{2},\frac{1}{2}\right)
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $\alpha\left(1,0,0\right)+(1-\alpha)(1,0,0)\equiv(1,0,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\left(0,\frac{1}{2},\frac{1}{2}\right)+(1-\alpha)\left(0,\frac{1}{2},\frac{1}{2}\right)\equiv\left(0,\frac{1}{2},\frac{1}{2}\right)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\forall\ \alpha\in(0,1)$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+(1,0,0)\succsim\alpha\left(1,0,0\right)+(1-\alpha)\left(0,\frac{1}{2},\frac{1}{2}\right)\succsim\left(0,\frac{1}{2},\frac{1}{2}\right)
+\]
+
+\end_inset
+
+Now, if 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+, then 
+\begin_inset Formula $(1,0,0)\succsim\left(1,0,0\right)$
+\end_inset
+
+, and if 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+, then 
+\begin_inset Formula $\left(0,\frac{1}{2},\frac{1}{2}\right)\succsim\left(0,\frac{1}{2},\frac{1}{2}\right)$
+\end_inset
+
+.
+ Both of these statements hold since 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is complete.
+ Thus, since the agent's preferences are continuous, then 
+\begin_inset Formula $\forall\ \alpha\in[0,1]:(1,0,0)\succsim\left(\alpha,\frac{1-\alpha}{2},\frac{1-\alpha}{2}\right)\succsim\left(0,\frac{1}{2},\frac{1}{2}\right)$
+\end_inset
+
+.
+ Therefore, the agent's best choice from the set 
+\begin_inset Formula $B_{2}$
+\end_inset
+
+ is 
+\begin_inset Formula $(1,0,0)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\bar under
+Part 3
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+By Theorem 21, A binary relation 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ on 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+ satisfies A1, A2, A3 if and only if there is an index 
+\begin_inset Formula $u:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ is represented by the function 
+\begin_inset Formula $U:\Delta(Z)\rightarrow\mathbb{R}$
+\end_inset
+
+ defined by: 
+\begin_inset Formula $\forall\ \pi\in\Delta(Z):U(\pi)\equiv E_{\pi}u$
+\end_inset
+
+.
+ Now, if 
+\begin_inset Formula $\succsim$
+\end_inset
+
+ satisfies A1 (completeness and transitivity) and A3 (Independence Axiom),
+ then as a result of Lemma 4, 
+\begin_inset Formula $\forall\ \{\pi,\pi^{\prime},\pi^{\prime\prime}\}\subseteq\Delta(Z),\forall\ \alpha\in[0,1]:\pi\sim\pi^{\prime}\iff\alpha\pi+(1-\alpha)\pi^{\prime\prime}\sim\alpha\pi^{\prime}(1-\alpha)\pi^{\prime\prime}$
+\end_inset
+
+.
+ This consequence implies that indfference curves are parallel to one another.
+ Moreover, when 
+\begin_inset Formula $|Z|=3$
+\end_inset
+
+, indifference curves are straight lines: 
+\begin_inset Formula $\forall\ \{\pi,\pi^{\prime}\}\subseteq\Delta(Z),\ \forall\ \alpha[0,1],\pi\sim\pi^{\prime}\iff\pi\sim\alpha\pi+(1-\alpha)\pi^{\prime}\sim\pi^{\prime}$
+\end_inset
+
+.
+ From the Figure, the indifference curves cross outside the set, 
+\begin_inset Formula $\Delta(Z)$
+\end_inset
+
+.
+ Thus, the Independence Axiom is violated.
+ Hence, the agent's preference relation cannot be represented by an Expected
+ Utility function.
+ Therefore, the agent is not an Expected Utility maximizer.
+\end_layout
+
+\begin_layout Section*
+6.3
+\begin_inset space \quad{}
+\end_inset
+
+Subjective Expected Utility Theory
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Primitives of the model:
+\end_layout
+
+\begin_layout Enumerate
+Set of prices 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+State space 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Set of all simple acts 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+, i.e., functions
+\begin_inset Formula 
+\[
+\begin{array}{cccc}
+f: & \Omega & \rightarrow & Z\\
+ & \omega & \mapsto & f(\omega)
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Binary relation on 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Subjective Expected Utility Theory answers the fundamental question: when
+ does an agent have a probability distribution over states and makes decisions
+ using Expected Utility with respect to that probability measure?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The answer is axiomatic.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+(22).
+
+\series default
+ A binary relation on 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+ satisfies P1-P6 if and only if there is a convex-ranged proability measure
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ on 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ and a function 
+\begin_inset Formula $u:Z\rightarrow\mathbb{R}$
+\end_inset
+
+ non constant, such that the binary relation is represented by the funciton
+ that associates with each 
+\begin_inset Formula $f\in\mathcal{F}$
+\end_inset
+
+ the value
+\begin_inset Formula 
+\[
+U(f)\equiv{\displaystyle \int_{\Omega}u(f(\omega))dp(\omega)}
+\]
+
+\end_inset
+
+Moreover, if 
+\begin_inset Formula $(q,v)$
+\end_inset
+
+ is another such representing pair, then 
+\begin_inset Formula $p=q$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ is a positive affine linear transformation of 
+\begin_inset Formula $u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+This theorem was briefly mentioned in class, but there was no in-depth discussio
+n.
+ Moreover, the proof is technical and beyond the scope of what we learned
+ in class.
+ As a result, the proof will not be presented in these notes.
+\end_layout
+
+\begin_layout Standard
+Do people always act as if they assigned probabilities to uncertain outcomes?
+ The example illustrated in Figure 6.3, known as Ellberg Paradox, suggest
+ the opposite.
+\end_layout
+
+\end_body
+\end_document
