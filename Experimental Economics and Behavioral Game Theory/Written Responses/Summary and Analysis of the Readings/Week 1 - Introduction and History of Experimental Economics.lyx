@@ -1,0 +1,218 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Introduction and History of Experimental Economics
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+August 29, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The First Welfare Theorem, which is often associated with Adam Smith's Invisible
+ Hand Theorem, is one of the most important results in economics.
+ With relatively few assumptions, it claims that any competitive equilibrium
+ allocation is Pareto efficient.
+ Moreover, the existence of a competitive equilibrium for general production
+ economics was proved in Debreu (1959).
+ However, there is debate between economists over the conditions necessary
+ for the actual attainment of a competitive equilibrium.
+ The primary assumptions for perfectly competitive markets are: (1) every
+ participant is a price-taker; (2) there is perfect information.
+ While many economists believe these conjectures are imperative for a competitiv
+e equlibrium, there are still others who argue that the propositions still
+ hold even when the assumptions are relaxed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The three assigned papers all dealt with experiments on competitive market
+ behavior.
+ The authors were interested in analyzing the predictive power of the theories
+ within the labratory environment.
+ So, the experiments developed served to check the robustness of the competitive
+ market model.
+ Simple labratory markets were created, each with its own unique set of
+ trading rules.
+ In most of the experiments, private single unit values and costs were randomly
+ assigned to dozens of participants, who acted as buyers and sellers over
+ a single commodity.
+ The primary goal of the experiments was to test and measure the effect
+ of different forms of market organization on the efficiency, performance,
+ convergance pattern, and equilibrium level of prices (Plott and Smith,
+ 1978).
+ In addition, the authors hoped to discover empirical regularities in order
+ to provide a foundation for more formal development of theory.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Chamberlin (1948) allowed time for buyers and sellers to interact with one
+ another in order to search for a partner, so they could reach a contract
+ over the single commodity.
+ This pure exchange market was only operated for a single trading period.
+ The experiment was conducted a total of forty-six times, and the average
+ price was higher than the equilibrium price seven times and lower thirty-nine
+ times.
+ Even though the artificial market contained 
+\begin_inset Quotes eld
+\end_inset
+
+imperfections,
+\begin_inset Quotes erd
+\end_inset
+
+ which are often overlooked in the theoretical model, the results still
+ lead Chamberlin to question the reasoning that prices converge to the equilibri
+um in a competitive market.
+ On the other hand, when smaller submarkets were analyzed, the results coincided
+ with the predictions of the model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Then, Smith (1962) presented a different version of the experiment conducted
+ by Chamberlin.
+ Smith used a double-auction mechanism, instead of bilateral search, in
+ which buyers and sellers make public bids.
+ The trading took place over several periods while the value and cost assignment
+s were usually held constant.
+ About different 10 tests were run, each a unique variation of the original
+ setup.
+ It was discovered that in almost all cases, the average actual price quickly
+ converged to the equilibrium value.
+ Finally, Smith was able to construct an empirical model of the data, in
+ which he formulated the 
+\begin_inset Quotes eld
+\end_inset
+
+excess-rent hypothesis.
+\begin_inset Quotes erd
+\end_inset
+
+ The assertion is that prices in competitive markets tend to rise and fall
+ in proportion to the total excess rent corresponding to any transaction
+ price.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Finally, Plott and Smith (1978) examined two separate experiments with the
+ goal of rebuffing certain claims made in Williams (1973).
+ In his experiment, Williams ran a discriminative posted-price institution
+ in order to analyze the one-sided studies presented in Smith (1962), who
+ ran a compeititve oral-price auction.
+ Evidently, Williams obtained results that were the exact opposite of those
+ reported by Smith.
+ However, Plott and Smith argued that the reason for the discrepancy lies
+ in the distinct theoretical predictions between a discriminative and competitiv
+e sealed-bid auction.
+ After running the two separate experiments, Plott and Smith were able to
+ verify the hypothesized differences in experimental results.
+\end_layout
+
+\end_body
+\end_document

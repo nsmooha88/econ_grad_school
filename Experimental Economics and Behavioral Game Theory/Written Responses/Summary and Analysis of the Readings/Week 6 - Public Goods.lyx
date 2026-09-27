@@ -1,0 +1,185 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Public Goods
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+October 1, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Environments with public goods provide a multitude of experimental opportunities
+ for researchers interested in the inherent theoretical challenges.
+ Environments with public goods present serious problems since many factors
+ interact with each other in unknown ways.
+ Some of the central questions about the functions of society are raised
+ due to the presence of public goods.
+ Economists, sociologists, and political scientists have all attempted to
+ answer a fundamental quandry concerning the nature of human interaction:
+ are people selfish or cooperative? Research on the voluntary provision
+ of public goods has yet to answer this simple question, but it does provide
+ the basis for conducting unique and thought provoking experiments.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Some of the major findings associated with voluntary contribution mechansims
+ have been: subjects contribute to the public good in one shot trials; contribut
+ions decline with repetition; face to face communication or outright punishment
+ improves the rate of contribution.
+ Fehr and Gatcher (2000) provide evidence that the existence of punishment
+ opportunities causes a large rise in average contribution.
+ In fact, when a specific group of cohorts interacts for multiple periods,
+ full cooperation emerges as the dominant behavior standard.
+ Still, other studies have found that people even cooperate under less stringent
+ conditions.
+ For example, Andreoni (1995) finds that putting a positive frame on the
+ public goods game results in an increase in the contribution level.
+ Andreoni postulates that people may be motivated by the 
+\begin_inset Quotes eld
+\end_inset
+
+warm glow
+\begin_inset Quotes erd
+\end_inset
+
+ of altruism.
+ However, Ashley, Ball, and Eckel (2010) help to distinguish alternative
+ motives for giving, including altruism, warm glow, reciprocity, and inequality
+ aversion, using data from two previous public goods experiments.
+ They conclude that while individuals may contribute to the public good,
+ they will adjust their contributions downward if their previous contribution
+ was above the group average.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Despite all of these findings, there are still many issues that still need
+ to be addressed.
+ Which mechanism provides the most effective way to increase voluntary contribut
+ions? For instance, which method leads to faster convergence towards full
+ cooperation, communication between people or the possible threat of punishment?
+ Even though punishment increases voluntary contributions, it seems impractical
+ to apply this method to the real world.
+ It seems unreasonable to constantly threaten and coerce people to contribute
+ when they have no desire to do so.
+ Moreover, I do not find the results in Ashley, Ball, and Eckel (2010) incredibl
+y revealing.
+ In my opinion, I believe people will contribute more when there is a possibilit
+y they can receive recognition or positive feedback for their good deeds.
+ Just a simple display of gratitude or praise could inspire people to contribute
+ more than what they originally intended.
+ It is not the 
+\begin_inset Quotes eld
+\end_inset
+
+warm glow
+\begin_inset Quotes erd
+\end_inset
+
+ of doing good deeds that motivates people, but rather the desire to be
+ recognized and appreciated.
+\end_layout
+
+\end_body
+\end_document

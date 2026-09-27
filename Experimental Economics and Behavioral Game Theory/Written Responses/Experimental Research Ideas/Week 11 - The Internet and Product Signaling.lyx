@@ -1,0 +1,291 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+The Internet and Product Signaling
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+November 7, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Experimental economists have always been fascinated with the recognized
+ problems that arise due asymmetric information, most notably moral hazard.
+ Within the framework of industrial organization, moral hazard occurs when
+ both sellers' costs and buyers' values depend on product quality.
+ The sellers know the quality of their product, while the quality cannot
+ be directly observed by buyers.
+ One possible solution to this problem involves signaling.
+ In fact, there have been many papers analyzing the possible equilibria
+ that may arise when signaling is an option.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+However, I do not believe their framwork can be readily applied to today's
+ modern market institutions that have arisen due to the widespread use of
+ the Internet.
+ Today, individuals can leave a product review after purchasing an item,
+ and this has an effect on future sales of the good.
+ Then, future potential buyers of goods over the Internet are able to discern
+ some of the information concerning the product's quality through these
+ user reviews.
+ Yet, they are limited in their ability to gather all relevant information
+ since they unable to physcially examine the product or have face-to-face
+ communication with the seller.
+ The seller, on the other hand, can invest in the quality of the product,
+ but he will be unable to relay a perfect signal to the buyer about the
+ product due to the same reasons mentioned previously.
+ Because of these issues, will sellers even attempt to invest in the quality
+ of their products, and how will they change theire prices in the presence
+ of online reviews?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In fact, Amazon has a relatively unknown program known as 
+\begin_inset Quotes eld
+\end_inset
+
+Vine
+\begin_inset Quotes erd
+\end_inset
+
+ in which they send free items to a select group of people in exchange for
+ reviews of the selected products.
+ These individuals are required to submit a review online, whether it be
+ positive or negative, on all the products they receive.
+ Some experts claim that the reviews from Vine participants could be positively
+ biased since they may be more inclined to leave encouraging feedback after
+ receiving the product for free.
+ Yet, Amazon claims that reviews from Vine participants are actually more
+ negative, on average.
+ Why does Amazon send out free products just to obtain a few extra reviews?
+ Well, according to the Amazon marketing department, even negatively reviewed
+ items still sell better than items with no reviews.
+ In order to answer some of the previously mentioned questions, I propose
+ the following experimental design that models some of the major characteristics
+ associated with Internet purchases, as well as Amazon's Vine program.
+ The description below is associated with the controlled portion of the
+ experiment.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+I will recruit a group of 25 individuals to participate in the experiment.
+ Five subjects will be randomly chosen to be the sellers of similar goods,
+ while the rest of the individuals will act as buyers of these goods.
+ A particular trading period will involve buyers and sellers interacting
+ for five continuous minutes.
+ Prior to the start of each trading period, buyers and sellers will all
+ be assigned a randomy determined ID number, so they can be better identified
+ during trading.
+ These ID numbers will change at the start of each new trading period in
+ order to maintain seller anonymity and prevent reputation building.
+ Furthermore, sellers will decide how many units of quality to add to their
+ products, along with the asking price, before trading begins.
+ Note that these units of goods are identical in all characteristics except
+ the quality and price at which they sell.
+ Buyers will possess the same linear utility function, and they will receive
+ increased levels of utility from goods with a higher quality level.
+ Also, buyers will be given the same budget of 
+\begin_inset Quotes eld
+\end_inset
+
+experimental tokens.
+\begin_inset Quotes erd
+\end_inset
+
+ Finally, all five sellers will face the same constant marginal cost schedule
+ to add additional units of quality to their goods, yet their decision in
+ product quality will not be directly observed by buyers.
+ Note that the profit sellers receive for a good will be equal to the price
+ of the good minus their quality expenditure.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Moving on, while trading will remain continuous, the six minute trading
+ period will be divided into 6 distinct one minute sessions.
+ To elaborate, sellers will only be given five units of the good to sell
+ at each one minute interval.
+ These units will have the same level of quality that sellers chose before
+ trading began, but sellers will have the opportunity to adjust their prices
+ after each one minute interval.
+ Also, the budget of buyers will be replinshed at each new one minute interval.
+ The buyers will not be obligated to purchase any goods because they will
+ receive a very small level of utility from retaining their tokens.
+ Yet, they will receive far higher levels of utility by purchasing high
+ quality goods.
+ The compensation buyers receive will be based on the difference in the
+ value they obtain from the good minus the price they pay.
+ Now, after each purchase, buyers will have the option to leave a review.
+ In the review, the buyers will identify the seller using the ID number,
+ and they will rank the good based on scale of 1 to 5 with 5 being the highest
+ rating.
+ However, there will be a fixed marginal cost that buyers must pay in order
+ to leave a review.
+ This information will be continuously updated, so as trading continues,
+ buyers will be able to see the average rating of a seller before purchasing
+ a good.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The treatment of this experiment will follow the same basic design as described
+ above, with a few distinct additions to capture the effect of Amazon's
+ Vine program.
+ At each one minute interval, one buyer and one seller is chosen at random
+ in which a seller will give one unit of his good to the buyer free of charge.
+ The buyer will receive utility from this good as he normally would, but
+ he will be obligated to leave a review for the seller and pay the fee to
+ do so.
+ Eventually, I would like sellers and buyers to elect whether or not they
+ wish to participate in the experimental Vine program at all, but in order
+ to simplify the experiment and associated analysis, I will begin with a
+ random selection.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+With my experiment, I can analyze both buyer and seller behavior.
+ On the seller side, I hope to examine the impact of peer reviews on sellers
+ quality selection and pricing behavior.
+ Will there be any pooling or separating equilibria that arise in terms
+ of quality and price? How will the introduction of the Vine program affect
+ their decisions? On the buyers side, I hope to examine the impact of peer
+ reviews on their buying decisions.
+ Will reviewed goods, even those with a negative review, sell better than
+ goods with no reviews? Will buyers even choose to pay a fee in order to
+ leave a review? 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+One of the potential setbacks arising from this experimental design is that
+ the associated theory necessary to make predictions will probably be incredibly
+ complicated.
+ To alleviate this problem, I suggest a few changes that can be made to
+ the design.
+ First, I can discretize the sellers choice set by having them select a
+ predetermine number of price and quality bundles to better distinguish
+ equilibria, as opposed to them choosing from a continuous set.
+ Second, I can limit the number of sellers to two in order to easily study
+ the simple duopoly case of this experiment.
+ Finally, I can have sellers only choose one determinant, either price or
+ quality, and then randomize the other variable.
+ Any other suggestions for simplication will be greatly appreciated.
+\end_layout
+
+\end_body
+\end_document

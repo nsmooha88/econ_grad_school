@@ -1,0 +1,1126 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Game Theory: A Summary of Academic Papers
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+October 8, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+At its core, economics is the study of how economic agents behave, interact,
+ and make decisions in the presence of scarce resources.
+ Game theory is a methodology used to study strategic decision making and
+ the interactions between agents in strategic situations.
+ The payoffs of agents in noncooperative game theory depend not only on
+ their own actions, but also on the actions of other agents, which means
+ the beliefs of players are endogendous.
+ Remember, in a Nash equilibrim, each player formulates optimal strategies
+ assuming that the other players will also be utilizing optimal strategies.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, the techniques of game theory can be applied in a wide variety of contexts,
+ and they have become pervasive in economic research.
+ However, these devices often conflict in determining reasonable equilibria
+ for economic games, and they offer differerent positive explanations concerning
+ observed behavior.
+ Thus, game theory offers a wide variety of opportunities for experimental
+ research, especially for the purpose of evaluating predictions against
+ alternative theories.
+ In this summary, I cover the problems associated with asymmetric information,
+ a popular topic of game theory, within the context of industrial organization.
+ I also provide an expository on some conerning 
+\begin_inset Quotes eld
+\end_inset
+
+signaling,
+\begin_inset Quotes erd
+\end_inset
+
+ which is often a solution to the problems cause by asymmetric information.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Industrial organization has always been a popular field to conduct experimental
+ research.
+ As experimental economics has progressed, so has the complexity of the
+ markets studied in the lab.
+ Some of the areas of interest include: product quality, asymmetric information,
+ and market failures.
+ Moral hazard is a major problem that arises due to the presence of asymmetric
+ information within a market.
+ For clarification, moral hazard is simply identified as a situation in
+ which one agent decides on how much risk to take, while another agents
+ bears some, or even all, of the negative consequences of those risky choices.
+ In the context of industrial organization, moral hazard occurs when both
+ sellers' costs and buyers' values depend on product quality.
+ The sellers know the quality of their products, while the quality cannot
+ be directly observed by buyers.
+ One possible solution to the problems of moral hazard and asymmetric informatio
+n involves simple, indirect communication between agents, also known as
+ 
+\begin_inset Quotes eld
+\end_inset
+
+signals.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Signaling Game: Miller and Plott (1985)
+\end_layout
+
+\begin_layout Subsection*
+Experimental Design
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Miller and Plott (1985) designed and conducted an experiment in which sellers
+ were allowed to invest in costly, observable signals.
+ To elaborate, sellers possessed products that were exogenously designated
+ as either grade 
+\begin_inset Quotes eld
+\end_inset
+
+regular
+\begin_inset Quotes erd
+\end_inset
+
+ or grade 
+\begin_inset Quotes eld
+\end_inset
+
+super.
+\begin_inset Quotes erd
+\end_inset
+
+ Buyers had higher value for products graded as super, but the grade could
+ not be observed prior to purchase.
+ Sellers could add units of quality, which were also valued by buyers, and
+ these added quality units could be observed prior to purchase.
+ The cost of adding quality to supers was lower than the cost of adding
+ quality to regulars.
+ Due to these conditions, the possibility of signaling existed in all of
+ the constructed eleven markets.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In several experiments, subjects had experience since they participated
+ in earlier series, while the same set of subjects were used in experiments
+ 11 and 12.
+ Markets proceeded in a sequence of periods, and in each period, sellers
+ had only two units of the same grade to sell.
+ For different periods, sellers were randomly assigned the type of grades
+ they would be selling with half the sellers designated as supers and half
+ as regulars.
+ Sellers could add quality to a unit at a cost which depended upon the grade
+ of the unit.
+ In all experiments, the sellers of regular grades faced a constant marginal
+ cost of $.15 to add quality.
+ For supers, the marginal cost of adding quality was $.07 in only three experimen
+ts and $.02 in the remaining ones.
+ All buyers had the same redemption schedules, which depended on both the
+ grade and quality of the unit purchased.
+ Important to note, the difference in value for buyers between supers and
+ regulars was held constant at $2.00.
+ Also, buyers received a bonus if at least one unit was purchased.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Except for changing the grades of sellers, the trading periods for a given
+ market were identical.
+ Bids and offers were announced verbally and written on a chalkboard, and
+ they remained until accepted or cancelled.
+ Acceptances could be made at any time, but sellers were required to cancel
+ offers when they had no more units.
+ Information about agreed upon contracts was recorded on a second contract
+ and carried on for as many periods as possible.
+ Thus, subjects always had access to information from previous periods.
+\end_layout
+
+\begin_layout Subsection*
+Models to be Evaluated
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Several different models and their respective predictions were examined
+ using this experiment.
+ A brief description of each model is provided below.
+ Note that all models predicted the quality of regulars would be the same,
+ and that the quality of all supers would be the same.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+The Full Information Model
+\emph default
+: Markets behave as if buyers are fully informed about which sellers have
+ regulars and which have supers.
+ This could arise becase sellers want to establish a 
+\begin_inset Quotes eld
+\end_inset
+
+reputation of honesty
+\begin_inset Quotes erd
+\end_inset
+
+ due to the game being repeated over multiple periods.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+The Naive Model
+\emph default
+: Buyers may never realize that the quality of the unit conveys information
+ about its underlying type.
+ Consequently, they would treat the purchase of a good as a lottery between
+ the value of a regular and the value of a super at a given level of quantity.
+ The subjective probabilities are determined by rational expectations.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+The Pure Pooling Model
+\emph default
+: Sellers of regulars and supers purchase an identical level of quality
+ because they believe buyers will accept nothing other than this particular
+ quality.
+ Thus, buyers are unable to distinguish between the two grades because the
+ prices are also identical, so they treat a purchase as a lottery.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Partial Pooling Model
+\emph default
+: Only regular units trade at a low quality, while both grades are traded
+ at a higher quality in a 
+\begin_inset Quotes eld
+\end_inset
+
+mix
+\begin_inset Quotes erd
+\end_inset
+
+ of grades.
+ The two qualities trade at different prices.
+ The holders of regulars are indifferent between selling at the two grades,
+ while the holders of supers may sell all units at the higher quality.
+ Prices should increase to the demand price, which reflects uncertainty.
+ Probabilities are updated based on rational expectations.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Most Efficient Signaling Equilibrium and Rothschild-Stiglitz
+\emph default
+: Buyers are aware of the relationship between quality and grade, so when
+ they observe the quality, they know the grade for certain.
+ Sellers have no incentive to change the quality they offer given the grade.
+ The most efficient signaling equilibrium is the list of prices and qualities
+ that maximizes total surplus.
+ Rothschild and Stiglistz, on the other hand, suggest that certain conditions
+ are necessary for an equilibrium to be achieved.
+ Sellers may prefer a pooling equilibrium to a most efficient signaling
+ equilibrium and thereby have an incentive to pool.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Inefficient Signaling Equilibria
+\emph default
+: The inefficient signaling equilibria are solutions to the necessary conditions
+ of the most efficient signaling equilibrium with the efficient solution
+ removed.
+\end_layout
+
+\begin_layout Subsection*
+Experimental Results
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In order to evaluate the results of the experiments, time series statistics
+ of all periods were implemented, and three primary aspects were considered.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Excess value
+\emph default
+: The amount paid over the unit's value in case the unit is a regular.
+ So, excess value is a reflection of the buyer's confidence that the unit
+ is a super.
+ It is the maximum possible loss the buyer can face by purchasing a unit
+ of certain quality.
+\end_layout
+
+\begin_layout Itemize
+Quality of the unit.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Opportunity cost
+\emph default
+: The opportunity cost that holders of a certain grade experienced because
+ they did not sell their units in the price and quality range in which the
+ other grade was trading.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The major conclusion from the paper is that signaling is a real phenomenon.
+ When the marginal cost of signaling was relatively low, quality separation
+ occured, and there was no evidence of pooling.
+ However, it should be noted that two markets with low marginal costs of
+ signaling failed to produce signaling.
+ This result implies that quality separation of grades is not a sufficient
+ condition for the presence of signaling.
+ Next, three of the six markets that produced signaling are statistically
+ within $.05 of the predicted equilibria in the last two periods.
+ While the other three markets that produced signaling did not reach the
+ equilibrium, two of the markets were still converging to some signaling
+ equilibrium.
+ Now, for three of the signaling markets, the perfect information model
+ and the efficient signaling equilibrium were rejected in favor of the inefficie
+nt equilibrium model.
+ Yet, it was conjectured that two of the experiments were converging to
+ the most efficient signaling equilibrium.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Moving on, when the marginal cost of signaling was relatively high, quality
+ separation occured infrequently and aspects of pooling were observed.
+ One experiment was an excellent candidate for the pooling equilibrium model.
+ The pooling equilibrium model was rejected for two experiments, but they
+ both had elements of the partial pooling equilibrium behavior.
+ Consequently, it was unclear to the authors whether the pooling behavior
+ involved the type of cycling suggested by the Rothschild-Stiglitz equilibrium.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Finally, the authors provided several conjectures concerning the dynamics
+ of the signaling equilibrium models based on the observed data.
+ It should be noted that quality is not the only possible signal within
+ a given market.
+ Note that any market which enables face-to-face interaction allows for
+ the possibility of reputation development among sellers.
+ So, the application of signaling equilibrium models is dependent upon the
+ market because the institutional environment affects the nature and identificat
+ion of the signal.
+\end_layout
+
+\begin_layout Section*
+Bargaining Game: Radner and Schotter (1989)
+\end_layout
+
+\begin_layout Subsection*
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Researchers conducting bargaining experiments often focus on the relative
+ roles played by strategic considerations implied by game-theoretic models.
+ A main concern among empirical investigators of barganing is the nonnegligible
+ frequency of disagreements and costly delays, even when mutually profitable
+ agreements are available.
+ The game-theoretic models used to explain these disagreements and delays
+ impose the feature of incomplete information.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+In these modles, bargainers are uncertain about some important features
+ of one anothers' situations, which, if known, would influence the distribution
+ of profits between the parties
+\begin_inset Quotes erd
+\end_inset
+
+ (Kagel and Roth, 1995).
+\end_layout
+
+\begin_layout Subsection*
+The Bargaining Mechansim
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Radner and Schotter (1989) presented results from eight different experiments
+ that were constructed to test the theoretical and empirical properties
+ of the sealed-bid bargaining mechanism.
+ To elaborate, consider a situation in which a potential buyer and seller
+ are bargaining over the terms of a possible trade of a single object.
+ The buyer holds a private valuation for the object, and the seller incurs
+ a private cost only if the object is traded.
+ The sealed-bid mechanism works as follows: the buyer and seller simultaneously
+ submit individual bids.
+ If the buyer's bid is greater than or equal to the seller's bid, then trade
+ takes place, and the buyer pays the seller a price equal to the average
+ of the two bids.
+ If the buyer's bid is less than the seller's bid, then no trade takes place.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The buyer only observes his value, so his bidding strategy is a function
+ that determines his bid for each possible value that he may have.
+ The seller only observes his cost, so his bidding strategy is a function
+ that determines his bid for each possible cost that he may incur.
+ If a trades takes place, then the buyer's profit is his value for the good
+ minus its price, and the seller's profit is the price of the good minus
+ his cost incurred from trading.
+ In the model, it is assumed that both parties are risk-neutral, expected
+ utility (profit) maximizers.
+ Thus, the characteristics just described determine a noncooperative game.
+ An equilibrium of the game is a pair of strategies such that neither player
+ can increase his expected utility (profit) by unilaterally changing his
+ strategy.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, in a previous paper, it was shown that if the buyer's value and the
+ seller's cost are uniformly distributed over the closed interval [0,100],
+ then there exists a pair of linear bidding strategies that together form
+ an equilibrium of the sealed-bid mechanism game.
+ In fact, this equilibrium has very strong welfare properties.
+ However, the sealed-bid mechansim has an abundance of equilibria, some
+ of which may be entirely worthless in terms of efficiency.
+ On the whole, the authors hoped to answer several questions concerning
+ the mechansim and its strategies using the results of their experiments:
+\end_layout
+
+\begin_layout Itemize
+Did buyers and sellers employ linear strategies? If so, did they use the
+ ones predicted by the equilibrium?
+\end_layout
+
+\begin_layout Itemize
+How well did the mechanism perform and what accounts for this?
+\end_layout
+
+\begin_layout Itemize
+Does the bidding behavior of subjects change as the number of rounds in
+ the experiment increases?
+\end_layout
+
+\begin_layout Subsection*
+Experimental Design
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Each buyer and seller drew 15 envelopes, which contained a number inside,
+ from a pile of 500.
+ The numbers were randomly generated from a commonly known probability distribut
+ion.
+ After observing and recording the realization in the envelope, subjects
+ wrote their bids on pieces of paper, which were then collected.
+ These bids were then randomly sorted into pairs, each containing the bid
+ of one buyer and one seller.
+ Then, the bids were compared, and prices and payoffs were determined according
+ to the rules of the sealed-bid mechanism.
+ In almost all experiments, only information about the price and trade results
+ of a subject's own transaction were revealed.
+ In subsequent rounds, subjects were paired against the same member.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The authors ran eight separate experiments with eight different groups of
+ about 20 subjects.
+ Below is a descriptive list that provides the unique detail associated
+ with each experiment.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Experiment 1
+\emph default
+: This was a baseline that employed a uniform prior distribution for both
+ buyers and sellers.
+ Its linear equilibrium is identical to the equilibrium mentioned in the
+ previous section.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Experiment 2
+\emph default
+: Identical to experiment 1 except price information concerning all pairs
+ was written on a blackboard after each round.
+ This was done to foster learning without increasing the number of rounds.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Experiment 3
+\emph default
+: This experiment had a different set of price and trade rules compared
+ to the previous two.
+ The rules were changed so that a buyer's bid needed to exceed a seller's
+ bid by 25 or more in order for a trade to occur.
+ If a trade was made, the price was 
+\begin_inset Formula $\nicefrac{(v+c+50)}{3}$
+\end_inset
+
+.
+ This experiment was constructed to test the Revelation Principle.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Experiment 4
+\emph default
+: This experiment is equivalent to a mechanism in which the buyer makes
+ a take-it-or-leave-it bid to the seller, who merely accepts it or rejects
+ it.
+ This experiment was employed to test the robustness of the sealed-bid mechanism
+ to changes in its price-formation rule.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Experiment 5
+\emph default
+: This experiment ran the baseline experiment with nonuniform but symmetric
+ prior distributions.
+ An equilibrium with linear strategies also existed for these prior distribution
+s.
+ The authors ran this experiment in an attempt to increase the probability
+ of trade, and hence the experience of subjects, without increasing the
+ number of rounds.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Experiment 6
+\emph default
+: This experiment is identical to experiment 5 except that the number of
+ rounds was increased to 40 instead of 15.
+ The authors wished to test if the behavior of subjects changed as the number
+ of rounds increased.
+ They also wanted to see if learning could increase the goodness of fit
+ between the observed and predicted behavior.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Experiment 7
+\emph default
+: Face-to-face bargaining was used as opposed to the sealed-bid mechanism.
+ This experiment wished to compare the results of the sealed-bid mechanism
+ with another commonly used bargaining alternative.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Experiment 8
+\emph default
+: Subjects played for points, which were transformed into probabilities
+ of winning a fixed lottery prize, in order to induce risk-neutrality.
+\end_layout
+
+\begin_layout Subsection*
+Experimental Results
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Since the authors were concered about a direct test of the sealed-bid mechansim,
+ they primarily focused on the results of Experiments 1, 2, and 5, while
+ the results of Experiments 6 and 7 were analyzed separately.
+ Experiments 3, 4, and 8 confound the data since they introduced different
+ price formations and/or trading rules.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In general, it appears that the bidding strategies employed by both buyers
+ and sellers were close to linear when the underlying probability distributions
+ in the experiment were uniform.
+ Figures representing the bid-value relationship lend credence to this conjectur
+e.
+ The authors performed more rigorous tests for linearity by running various
+ regressions on the possible structure of the bidding functions for each
+ buyer and seller in all experiments but one.
+\begin_inset Formula 
+\begin{gather*}
+v=\alpha+\beta_{1}V+\beta_{2}V^{2}+\beta_{3}V^{3}+u_{b}\\
+c=\alpha+\beta_{1}C+\beta_{2}C^{2}+\beta_{3}C^{3}+u_{s}
+\end{gather*}
+
+\end_inset
+
+They ran an F-test on the results to test the null hypothesis that the coefficie
+nts of 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{3}$
+\end_inset
+
+ were both zero in each regression.
+ None of the regressions demonstrated a significant difference from zero
+ at the 99% confidence level.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+However, when the probability distributions were not uniform, the results
+ suggested that step-function equilibria began to emerge.
+ This conjecture was reinforced when the pattern was even more pronounced
+ as the number of rounds increased from 15 to 40.
+ Thus, it seems as though the underlying prior distribution influences the
+ type of equilibrium that may arise from a sealed-bid mechansim.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Next, tests were constructed in order to determine if subjects behaved according
+ to the predictions of the theory and employed the equilibrium bid functions.
+ The data of buyers and sellers were pooled in each experiment, and pooled
+ regressions were run on the observations below and above the critical kink
+ in the equilibrium bid function.
+ The results support the hypothesis that bidding behavior for both buyers
+ and sellers is different on either side of the kink point.
+ Moreover, sellers bid with a 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ that was not statistically different from the predicted coefficient.
+ Buyers, on the other hand, did not shave their bids by the amount predicted,
+ so their bids were too high.
+ Finally, subjects bid their respective value or cost when the linear equilibriu
+m predicts they should.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The performance of the sealed-bid mechanism was another important topic
+ of focus.
+ In later rounds of the experiments, subjects increased the number of successful
+ trades.
+ In fact, the number of successful trades was close to the figure predicted
+ by the linear equilibrium model.
+ Furthermore, subjects were able to capture over 90% of the gains from trade
+ expected from the linear equilibrium, which only achieves second-best gains,
+ and over 85% of the gains in terms of the first-best gains from trade.
+\end_layout
+
+\begin_layout Section*
+Cournot Game: Rassenti, Reynolds, Smith, and Szidarovszky (2000)
+\end_layout
+
+\begin_layout Subsection*
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Cournot competition is a popular economic model that is primarily applied
+ in the field of industrial organization.
+ The Cournot game is used to describe an industry structure in which sellers
+ compete on the amount of output they will produce.
+ Companies select output quantities simultaneously and independently of
+ each other, which, in turn, determines the market price of all units sold.
+ The Cournot model provides an intriguing set of equilibrium and convergence
+ predictions.
+ While there is a unique pure strategy Nash equilibrium for the static Cournot
+ game, behavior may not converge to this Nash equilibrium with repeated
+ play.
+ Convergence depends on the learning or adjustment process utilized by subjects.
+ Rassenti, Reynolds, Smith, and Szidarovszky (2000) designed a series of
+ experiments in order to analyze the convergance to equilibrium behavior
+ under the backdrop of the Cournot oligopoly model of output choice.
+\end_layout
+
+\begin_layout Subsection*
+Experimental Design
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The experimental design offered the opportunity to distinguish between competing
+ theories of learning or adjustment.
+ A fixed group of five subjects, each taking on the role of a seller, participat
+ed in an experiment that was ran for a total of 75 trading periods.
+ At the beginning of each trading period, each subject simultaneously chose
+ a quantity of output to sell, which was inputted to a computer.
+ The market price was determined by an inverse demand function, which was
+ public information.
+ In a new experiment, each subject was assigned a different marginal cost
+ of output that was designated as private information, so no information
+ was provided about the marginal costs of other subjects.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A subject's payoff at the end of a trading period was equal to the output
+ chosen by the subject times the difference between the market price and
+ his marginal cost.
+ Note that payoff conditions remained constant during the repeated trials
+ within an experiment.
+ Also, while subjects were given an equal amount of starting capital, going
+ bankrupt was a legitimate outcome for sellers since negative payoffs in
+ a trading period were possible.
+ Due to the experimental conditions just described, the private payoffs
+ were asymmetric, so there were no symmetric Nash equilibria.
+ Above all, the private payoff condition prevented subjects from computing
+ noncooperative Nash equilibrium and joint profit maximizing outputs and
+ playing the corresponding strategies.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+At the end of a trading period, subjects observed the market price of output,
+ the output of their rivals, and their own payoff.
+ The computer screen listed up to eight periods of market outcomes.
+ The amount of information provided about the choices of rivals was a treatment
+ variable.
+ In one group of experiments (type 1), subjects observed the choices of
+ each one of their rivals, while in another group (type 2), subjects only
+ observed the total output chosen by their rivals.
+ Remember, the choices of a subject's rivals entered into his payoff function
+ only through the total output chosen by the rivals.
+ So, most of the learning and decision adjusment processes proposed for
+ this Cournot oligopoly environment depended only on aggregate output of
+ rivals in previous periods.
+ Yet, the provision of information about individual choices of rivals may
+ have influenced the learning process.
+ Thus, the authors hypothesized that the experiments which contributed the
+ additional information would yield higher outputs than the other experiments.
+\end_layout
+
+\begin_layout Subsection*
+Possible Adjustment Processes
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As subjects gained experience making decisions and observed the strategies
+ of rival subjects, it was conjectured that they may learn more about the
+ market environment and adjust their behavior accordingly.
+ A number of decision adaptations processes have been proposed in the literature
+ on learning and convergence in games.
+ The authors focused on several of these processes in the context of the
+ Cournot experiment enviornment.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Best response dynamic
+\emph default
+: Each subject sets his current output equal to the best (i.e., current period
+ payoff maximizing) response to the last period outputs of his rivals.
+ However, this process does not yield convergence to the Nash equilibrium
+ for the experimental environment.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Partial adjustment to best response
+\emph default
+: A simple linear specification of this process would be a weighted average
+ of a subject's last period output and the subject's best response to rival's
+ last period output.
+ Convergence to the Nash equilibrium arises if subjects have a common value
+ for the adjustment parameter and this parameter is between 1/3 and 1.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Fictitious play
+\emph default
+: It is assumed that each subject chooses current output to maximize their
+ expected payoff, where the choices of rivals are assumed to be drawn from
+ the empirical frequency distribution of past their past choices.
+ THis is equivalent to having each player choose output in the current period
+ as a best response to historical average outputs of rival players.
+ This process triggers a stable output path that converges to the static
+ Nash equilibrium.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Adaptive learning
+\emph default
+: The player eventually chooses only strategies that can be justified in
+ terms of the past play of his rivals.
+ The strategy choices of a player are eventually in a set of undominated
+ strategies, given some restriction on the set of rivals' strategies.
+ If all players adopt the adaptive learning sequence and the sequence converges,
+ then the convergent point must be a Nash equilibrium.
+\end_layout
+
+\begin_layout Subsection*
+Experimental Results
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The authors ran five experiments for each of the three different experiment
+ types.
+ Two of the experiment types altered the amount of information given to
+ subjects concerning rivals' choices, and they were already touched upon
+ in a prior subsection.
+ The third type of experiment consisted of 15 rounds in which a different
+ set of marginal cost and exchange rate parameters were used instead of
+ the usual parameters employed by other trading periods.
+ Also, subjects were able to observe the past choices of individual rivals
+ in this type of experiment.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Time series plots for total output reveal that there is considerable intertempor
+al variation in total output within each experiment, which ocassionally
+ persists for the duration of each experiment.
+ Yet, the variability in total output does decrease over time.
+ Total outputs, taken as an average across experiments for each type of
+ experiment, are slightly higher than the Nash equilibrium prediction.
+ This result leads to the conclusion that treatment conditions did not have
+ a significant effect on total output levels.
+ For most experiments, the actual movement of total ouput over time appears
+ to be inconsistent with both the best response dynamic and fictitious play.
+ Finally, there is no evidence of tacit collusion due to repeated plays
+ of the game.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+According to the Nash equlibrium prediction, marginal costs and output are
+ inversely related.
+ This means that output should fall as marginal costs increase.
+ However, average output per seller fails to conform to this pattern.
+ So, observed behavior for individual subject sellers does not converge
+ to the static Nash equilibrium predictions for individual output choices.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In order to obtain more information about individual behavior, the authors
+ formulate and estimated a possible linear decision rule utilized by each
+ subject.
+ This linear decision rule is assumed to be determined by lagged and twiced
+ lagged sum of rival's outputs and lagged own output choice.
+ Since individual output was nonstationary for many subjects, first-differences
+ were taken in order to estimate the decision rule.
+ After four separate and distinct tests of hypotheses, estimation results
+ signify the failure of individual outputs to converge to Nash equilibria
+ outputs, but the source of the failure is unknown.
+ In fact, one-third of subjects fail to respond to changes in rivals' outputs.
+ Any convergent adjustment process requires subjects to take their rivals'
+ actions into account when choosing their own output.
+ However, there is a possibility that the authors fail to detect a response
+ to rivals' output changes because the decision rule they estimate may be
+ misspecified.
+ Some subjects may use a nonlinear decision rule and/or different lag structures
+ for rivals' output.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-6"
+
+\end_inset
+
+Davis, Douglas D., and Charles A.
+ Holt.
+ 
+\bar under
+Experimental Economics
+\bar default
+.
+ New Jersey: Princeton University Press, 1993.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-10"
+
+\end_inset
+
+Kagel, John H., and Alvin E.
+ Roth.
+ 
+\bar under
+The Handbook of Experimental Economics
+\bar default
+.
+ New Jersey: Princeton University Press, 1995.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-9"
+
+\end_inset
+
+Miller, Ross M.
+ and Charles R.
+ Plott (1985) 
+\begin_inset Quotes eld
+\end_inset
+
+Product Quality Signaling in Experimental Markets,
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Econometrica
+\emph default
+, 53(4): 837-872.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-7"
+
+\end_inset
+
+Radner, Roy and Andrew Schotter (1989) 
+\begin_inset Quotes eld
+\end_inset
+
+The Sealed-Bid Mechanism: An Experimental Study,
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Journal of Economic Theory
+\emph default
+, 48(1): 179-220.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-8"
+
+\end_inset
+
+Rassenti, Stephen, Stanley S.
+ Reynolds, Vernon L.
+ Smith, and Ferenc Szidarovszky (2000) 
+\begin_inset Quotes eld
+\end_inset
+
+Adaptation and convergence of behavior in repeated exerpiment Cournot games,
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Journal of Economic
+\emph default
+ 
+\emph on
+Behavior & Organization
+\emph default
+, 41(2): 117-146.
+\end_layout
+
+\end_body
+\end_document

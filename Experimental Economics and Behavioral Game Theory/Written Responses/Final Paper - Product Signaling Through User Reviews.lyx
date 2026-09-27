@@ -1,0 +1,1574 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing double
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Product Signaling Through User Reviews
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+December 3, 2013
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Standard
+The first World Wide Web server and browser opened for commerical use in
+ 1991.
+ Thereafter, a number of technological innovations have emerged, including
+ the first online shopping system.
+ Online shopping is a form of electronic commerce which affords consumers
+ the ability to purchase goods and services from a firm over the Internet.
+ Today, the Internet is populated by a growing number of U.S.-based online
+ retail stores.
+ Using figures from a variety of sources, including data from the U.S.
+ Census Bureau, the Singapore-based company ReferralCandy determined that
+ there are now 102,728 e-commerce retailers in the United States that are
+ generating at least $12,000 per year in revenue (Belicove, 2013).
+ In fact, the three largest online retailing corporations, Alibaba, Amazon.com,
+ and eBay, accumulated over $3 billion dollars of revenue in 2013, while
+ e-commerce business-to-consumer product sales totaled $142.5 billion, representi
+ng about 8% of retail product sales in the U.S.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The emergence of this hot new industry affords economists the opportunity
+ to conduct truly innovative research within the field of industrial organizatio
+n.
+ Due to the extensive use of game theory in industrial organizaiton, experimenta
+l economics has been especially keen on formulating experimental designs
+ associated with market structure, firm objectives, industry studies, etc.
+ As experimental economics has progressed, so has the complexity of the
+ markets studied in the lab.
+ Some of the primary areas of interest include: product quality, asymmetric
+ information, and market failures.
+ Moral hazard is a special case of information asymmetry that is especially
+ concerning to economists because it often leads to market failures.
+ Note that different kinds of moral hazard can arise with asymmetric information
+, and there are various situations when it transpires.
+ For instance, moral hazard comes about when the party with more information
+ about its intentions has an incentive to behave inappropriately from the
+ perspective of the party with less information.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+In the context of industrial organization, consider the following standard
+ example of asymmetric information: sellers know the quality of their products,
+ while the quality cannot directly be observed by buyers.
+ Furthermore, the costs of sellers and the utility of buyers depend on the
+ quality of the product, which is another common occurence.
+ The moral hazard that arises in this situation is caused be the inability
+ of buyers to perceive the characteristics of sellers.
+ One possible solution to the problems of moral hazard involves simple,
+ indirect communication from one set of agents to the other.
+ Sellers are allowed to invest in costly, observable 
+\begin_inset Quotes eld
+\end_inset
+
+signals
+\begin_inset Quotes erd
+\end_inset
+
+ that are delivered to the buyers.
+ To clarify, the seller observes his own type, which the buyer cannot discern,
+ and he chooses to send a signal to the buyer based on his type.
+ Once the buyer receives the signal, he decides whether or not to purchase
+ from the seller.
+ With face-to-face transactions, these signals can include physical advertisemen
+ts (billboards, signs, etc.), inspection of merchandise before purchase,
+ discussion and bargaining with clerks, etc.
+ Economic experiments evaluating asymmetric information often try to determine
+ the different equilibria that can arise and under what conditions when
+ signaling is allowed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Online businesses, however, have eliminated the need for physical stores,
+ so they operate exclusively over the Internet.
+ Customers are attracted to online shopping because of convenience, quick
+ comparisons, broad product selection, and competitive prices.
+ Consumers find a product of interest by either visting the website of a
+ retailer directly, or by searching for a group of vendors that sell a certain
+ item.
+ Though, online shopping still has some notable disadvantages.
+ Product delivery and security of personal information are two primary concerns,
+ and returning or exchanging an item can be incredibly cumbersome.
+ Above all, consumers are at a higher risk of fraud by shopping online.
+ To elaborate, buyers are limited in their ability to gather all of the
+ relevant information about a good since they are unable to inspect it or
+ have face-to-face communication with a seller.
+ Consequently, sellers are no longer required to relay any type of signal
+ to buyers.
+ While sellers can still invest in whatever product quality they see fit,
+ they now have the incenive to produce lower quality goods.
+ This scenario is a prime example of another type of moral hazard that arises
+ with asymmetric information.
+ It comes about because buyers are unable to directly observe the actions
+ of sellers.
+ To sum up, the problems of moral hazard are inherent in most Internet market
+ institutions, but product signaling is unable to alleviate the market failures
+ associated with these issues.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Yet, there still may be a way to overcome the drawback of moral hazard.
+ Sellers no longer need to send signals to buyers prior to a transaction.
+ Instead, buyers can leave reviews on a product for other consumers to see.
+ In fact, many online stores allow customers to comment on and/or rate their
+ items.
+ One of the great benefits of online shopping is the ability to read product
+ reviews, written either by experts or fellow online shoppers.
+ Through online user reviews, potential buyers of goods over the Internet
+ are able to discern some of the information concerning the quality of a
+ product.
+ Moreover, these user reviews give customers the option of shopping for
+ different purchases from all over the world without having to depend on
+ local retailers.
+ In addition to online reviews, peer recommendations on online shopping
+ pages or social media can also influence future purchases of a good.
+ The Neilson Company conducted a survey in March 2010 to determine the impact
+ of user reviews on online shopping.
+ According to the research, reviews play an important role in influencing
+ consumers who tend to make purchases online.
+ Most online shoppers indicate that they must first consult online reviews
+ before buying an item.
+\end_layout
+
+\begin_layout Section*
+Literature Review
+\end_layout
+
+\begin_layout Subsection*
+Market Failure and Signaling
+\end_layout
+
+\begin_layout Standard
+One of the most important areas of economic research is concerned with the
+ identification of the different causes of market failures.
+ As stated previously, the problems of moral hazard that arise with asymmetric
+ information often cause market failures.
+ So, many economic experiments are structured to allow the possibility of
+ market failure in order determine the circumstances and structures needed
+ to establish efficient efficient outcomes.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Lynch, Miller, Plott, and Porter (1986) conducted sesssions in which sellers
+ would first choose two quality levels.
+ Both sellers' costs and buyers' values depended on quality, which was unable
+ to be directly observed by the buyers.
+ Also, the high quality 
+\begin_inset Quotes eld
+\end_inset
+
+supers
+\begin_inset Quotes erd
+\end_inset
+
+ yielded a greater surplus of value over cost than the lower-quality 
+\begin_inset Quotes eld
+\end_inset
+
+regulars.
+\begin_inset Quotes erd
+\end_inset
+
+ Products were sold in a variation of an oral double auction.
+ Forcing sellers to advertise the true quality of the product lead to an
+ efficient provision of the high-quality product.
+ Yet, removing sellers' identities and providing only post-purchase quality
+ information led to inefficient 
+\begin_inset Quotes eld
+\end_inset
+
+lemons
+\begin_inset Quotes erd
+\end_inset
+
+ outcomes in which low-quality products were produced and sold at correspondingl
+y low prices.
+ When sellers' identities were observed, the overall proportion of efficient,
+ high-quality units sold increased.
+ Efficiency was also increased by giving sellers the opportunity to offer
+ a warranty.
+ These results suggest that the development of reputations, and remvoing
+ some of the risk on the side of buyers, are important factors that could
+ lead to efficient outcomes.
+ Moreover, Holt and Sherman (1990) observed lemons outcomes in posted-offer
+ auctions with a large number of quality 
+\begin_inset Quotes eld
+\end_inset
+
+grades.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Still, allowing sellers to invest in costly, observable signals could help
+ alleviate the problems of moral hazard.
+ If the cost of signaling is lower for a high-quality product, then it is
+ often the case that there is a separating equilibrium in which the buyers
+ can infer the unobserved quality from equilibrium signals.
+ Miller and Plott (1985) designed and conducted an experiment with these
+ features.
+ To elaborate, sellers possessed products that were exogenously designated
+ as either grade 
+\begin_inset Quotes eld
+\end_inset
+
+regular
+\begin_inset Quotes erd
+\end_inset
+
+ or grade 
+\begin_inset Quotes eld
+\end_inset
+
+super.
+\begin_inset Quotes erd
+\end_inset
+
+ Buyers had higher value for products graded as super, but the grade could
+ not be observed prior to purchase.
+ Sellers could add units of quality, which were also valued by buyers, and
+ these added quality units could be observed prior to purchase.
+ The cost of adding quality to supers was lower than the cost of adding
+ quality to regulars.
+ Due to these conditions, the possibility of signaling existed in all of
+ the constructed eleven markets.
+ The authors attempted to examine several different models and equilibria
+ predictions using the experiment.
+ According to the results, signaling was a real phenomenon.
+ When the marginal cost of signaling was relatively low, quality separation
+ occured, and there was no evidence of pooling.
+ Quality separation occured infrequently and aspects of pooling were observed
+ when the marginal cost of signaling was relatively high.
+\end_layout
+
+\begin_layout Subsection*
+User Reviews
+\end_layout
+
+\begin_layout Standard
+Most of the research concerning user reviews are empirical studies, yet
+ few economic papers exist in the literature.
+ Instead, the impact of user reviews is often analyzed through the persepectives
+ of marketing, management, and business.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+One of the major questions researchers wish to answer is: do online reviews
+ really matter? Duan, Gu, and Whinston (2008) attempted to answer this very
+ question by examining both the persuasive effect and the awareness effect
+ of online user reviews on movies' daily box office performance.
+ After accounting for endogeneity, their results show that the rating of
+ online user reviews has no significant impact on movies' box office revenues.
+ This indicates that online user reviews may have little persuasive effect
+ on consumer purchase decisions.
+ Yet, the value of online posting significantly influence box office sales,
+ suggesting the importance of an awareness effect.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Hu, Liu, and Zhang (2008) also studies the effect of online reviews on sales
+ by considering both quantitative and qualitative aspects of online reviews.
+ The authors adopt a portfolio approach to assess the effectiveness of online
+ reviews using transactions cost economics and uncertainty theories.
+ The results show that consumers pay attention to both review scores and
+ contexual information, such as the reviewer's reputation.
+ Also, consumers can distinguish the difference in value between favorable
+ and unfavorable reviews, and they respond accordingly.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Kim and Gupta (2011) investigated the effects of expression in online word-of-mo
+uth (eWOM).
+ The authors conducted two experiments to study how consumers interpret
+ emotional expressions in line user reviews and the subsequent impact on
+ their product evaluations.
+ Apparently, negative emotional expressions in a negative review decrease
+ the reviews' informative value, and make subsequent product evaluations
+ less negative, because consumers believe the reviewer has irrational dispositio
+ns.
+ On the other hand, postive emotional expression in a positive review do
+ not significantly influence consumers' product evaluations even though
+ positive emotions are attributed to the product.
+\end_layout
+
+\begin_layout Subsection*
+Contribution to Existing Literatue
+\end_layout
+
+\begin_layout Standard
+From the descriptions above, one can see that a large amount of the recent
+ research on online reviews has focused on measuring the effect user reviews
+ has on product sales.
+ Even more studies than the ones just mentioned have been dedicated to assessing
+ this relationship.
+ There have also been papers dedicated to understanding the motivation of
+ consumers to post online reviews in general (Hennig-Thurau et al., 2004;
+ Dellarocas & Narayan, 2006).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+This will be one of the first experiments to analyze the effect of user
+ reviews on market outcomes.
+ It adds to the existing literature by measuring the impact user reviews
+ have on market efficiency.
+ Also, it will be one of the first 
+\begin_inset Quotes eld
+\end_inset
+
+signaling
+\begin_inset Quotes erd
+\end_inset
+
+ experiments attempting to solve the problems of moral hazard through buyer
+ controlled signals, as opposed to signals sent by sellers.
+ The goal of the experiment is to assess the impact user reviews have on
+ sellers' behavior.
+ In the presence of online reviews, will sellers adjust their behavior according
+ly? Will sellers even attempt to invest in the quality of their products,
+ and how will they adjust their prices? Above all, do user reviews alleviate
+ the inefficiencies caused by moral hazard? 
+\end_layout
+
+\begin_layout Section*
+Experimental Design
+\end_layout
+
+\begin_layout Standard
+In order to answer the proposed questions, I have constructed the following
+ experimental design that models some of the major characteristics associated
+ with online shopping.
+ The experiment will be constructed using the following 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ factorial design:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No Cost
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Low Cost
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No Reviews
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Moral Hazard, Market Failure
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reviews
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Market Success
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Market Failure
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The low cost dimension refers to the price buyers must pay in order to leave
+ a review.
+ The treatment variable is whether or not buyers are able to leave a review
+ or not.
+ Each cell of the table above will consist of two dimensions, denoted as
+ 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+ for simplicitly.
+ The 
+\begin_inset Formula $i$
+\end_inset
+
+ dimension corresponds to a set of 
+\begin_inset Formula $j$
+\end_inset
+
+ market periods, while the 
+\begin_inset Formula $j$
+\end_inset
+
+ dimension corresponds to an individual market period run within a given
+ 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ For each cell of the experiment, 
+\begin_inset Formula $i=10$
+\end_inset
+
+ and 
+\begin_inset Formula $j\geq5$
+\end_inset
+
+.
+ So, within each set 
+\begin_inset Formula $i$
+\end_inset
+
+, the individual market periods will be 
+\begin_inset Quotes eld
+\end_inset
+
+infinitely repeated
+\begin_inset Quotes erd
+\end_inset
+
+ after five have already been completed, with probability 
+\begin_inset Formula $p=\nicefrac{3}{5}$
+\end_inset
+
+ of another market period occuring.
+ In addition, a different cohort of 30 individuals will be recruited to
+ participate for each cell.
+ Of the subject who attend, half will be randomly chosen to be the sellers
+ of similar goods, while the rest of the individuals will act as buyers
+ of these goods.
+ Prior to the start of each individual market period 
+\begin_inset Formula $j$
+\end_inset
+
+, buyers and sellers will all be assigned a randomly determined ID number,
+ so they can be better identified during trading.
+ These ID numbers will change at the start of each new market period 
+\begin_inset Formula $j$
+\end_inset
+
+ in order to maintain seller anonymity and prevent reputation building.
+ Thus, no information is carried over from earlier periods to later ones.
+ The description below is associated with the controlled portion of the
+ experiment.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+At the start of each new 
+\begin_inset Formula $j$
+\end_inset
+
+, before any trading begins, sellers must decide whether they wish to produce
+ low quality or high quality products.
+ Their decision in product quality will not be directly observed by buyers.
+ Furthermore, sellers will decide whether to charge a high price or a low
+ price for their goods.
+ So, they will have the opportunity to adjust both the level of quality
+ and the prices at the start of each new market period 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ Note that the units of goods sold by the sellers are identical in all character
+istics except the quality and price at which they sell.
+ Moving on, all sellers will face the same constant marginal cost schedule
+ in regards to the type of quality they have chosen, and the units sold
+ by the sellers will be 
+\begin_inset Quotes eld
+\end_inset
+
+made to order.
+\begin_inset Quotes erd
+\end_inset
+
+ Hence, sellers will only be responsible to pay for the production of a
+ good.
+ The marginal cost for a low quality good will be 
+\begin_inset Formula $MC_{L}=2$
+\end_inset
+
+, and the marginal cost for a high quality good will be 
+\begin_inset Formula $MC_{H}=6$
+\end_inset
+
+.
+ The low asking price will be 
+\begin_inset Formula $P_{L}=2$
+\end_inset
+
+, and the high asking price will be 
+\begin_inset Formula $P_{H}=10$
+\end_inset
+
+.
+ As usual, the profit that sellers receive for a good will be equal to the
+ price of the good minus the marginal cost.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+A particular trading period 
+\begin_inset Formula $j$
+\end_inset
+
+ will involve buyers and sellers interacting.
+ The sellers will post their asking prices, and the buyers choose who to
+ engage in a trade.
+ Buyers can buy any number of units from a given seller, yet they will still
+ face a budget constraint.
+ So, buyers will be given the same fixed budget of 
+\begin_inset Quotes eld
+\end_inset
+
+experimental tokens,
+\begin_inset Quotes erd
+\end_inset
+
+ which will be replinished for each new trading period 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ Even though buyers will not be obligated to purchase any goods, they will
+ receive no additional utility from retaining any of their tokens.
+ Moreover, buyers will possess the same constant utility function, and they
+ will receive a higher level of utility from higher quality goods.
+ The utility buyers receive from a high quality good is 
+\begin_inset Formula $U_{H}=14$
+\end_inset
+
+, and the utility they receive from a low quality good is 
+\begin_inset Formula $U_{L}=4$
+\end_inset
+
+.
+ Finally, the compensation buyers receive will be based on the difference
+ in the utilty they obtain from the good minus the price they pay.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Now, the treatment of this experiment will follow the same basic design
+ as described above, with a few distinct differences.
+ The treatment will allow buyers the opportunity to leave reviews for other
+ buyers to see in subsequent trading periods.
+ To elaborate, after all trading has concluded for a given market period
+ 
+\begin_inset Formula $j$
+\end_inset
+
+, buyers will have the option to leave a review for the different units
+ of goods they bought.
+ In a review, the buyers can identify the seller they purchased from by
+ using the designated ID number, and they will indicate whether they were
+ 
+\begin_inset Quotes eld
+\end_inset
+
+satisfied
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+unsatisfied
+\begin_inset Quotes erd
+\end_inset
+
+ with their purchase.
+ Despite the IDs being randomized for each new 
+\begin_inset Formula $j$
+\end_inset
+
+, all of the reviews that sellers receive within a given set of trading
+ periods 
+\begin_inset Formula $i$
+\end_inset
+
+ will be maininted and carried over for each 
+\begin_inset Formula $j$
+\end_inset
+
+ market period.
+ The reviews attached to a seller will reset after each new set of market
+ periods 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ As stated previously, there will be no cost to leave a review for one cell
+ of the experiment, while the other cell will have a relatively low marginal
+ cost to do so.
+ The fixed marginal cost that buyers must pay in order to leave a review
+ will be 
+\begin_inset Formula $R=3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Theoretical Predictions
+\end_layout
+
+\begin_layout Subsection*
+No Reviews
+\end_layout
+
+\begin_layout Standard
+To determine a reasonable Nash equilibrium of this 
+\begin_inset Formula $n$
+\end_inset
+
+-person, 
+\begin_inset Quotes eld
+\end_inset
+
+infinitely repeated
+\begin_inset Quotes erd
+\end_inset
+
+ game, first focus on the simple 2-person, single period scenario.
+ An explanation of the extensive form representation is as follows: the
+ seller makes the first two moves of the game by choosing quality and price,
+ then the buyer decides whether to purchase a single unit from the seller.
+ Note that the buyer is able to observe the price of a good, yet he is unable
+ to determine its quality.
+ By solving this game using backward induction, we can determine that the
+ pure-strategy, subgame-perfect Nash equilibrium.
+ Before trading begins, suppose the seller is set on always charging a high
+ price.
+ The subsequent subgame is a simultaneous form game that has one pure strategy
+ Nash equilibrium: the sellers will produce low quality goods, while the
+ buyers will not buy.
+ Next, suppose the seller is set on always charging a low price.
+ The subsequent simultaneous form subgame also has one pure strategy Nash
+ equilibrium: the seller will produce low quality goods, and the buyers
+ will purchase them.
+ Thus, the seller will choose to produce low quality goods and sell them
+ at low prices, and the buyer will elect to purchase the goods.
+ This outcome leads to a mutual payoff of 2 for both agents.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+From this simple example, we can now extend the analysis to the 
+\begin_inset Formula $n$
+\end_inset
+
+-person, 
+\begin_inset Quotes eld
+\end_inset
+
+infinitely repeated
+\begin_inset Quotes erd
+\end_inset
+
+ game.
+ It is evident that the buyers have only one strategy that is dependent
+ on the strategy of the seller.
+ If the buyers see a high price, then they will never enter into a trade;
+ if the buyers see a low price, then they will purchase a good.
+ Due to this strategy function, the sellers now only have two strategies
+ to consider.
+ The sellers can either choose to sell low quality goods at low prices,
+ or they can choose to sell low quality goods at high prices.
+ This set of strategies constitute a Nash equilibrium because none of the
+ agents have an incentive to deviate.
+ To see this, suppose one buyer deviates from the given strategy, while
+ the rest of the agents remain fixed.
+ If the buyer chooses to purchase a good after seeing a high price, then
+ the sellers have an incentive to produce a low quality good, which would
+ be detrimental to the buyer.
+ If the buyer elects not to purchase a good after seeing a low price, then
+ he does not experience any gains from trade, but he good have done so if
+ did purchase from a seller.
+ So, this individual buyer has no incentive to change the given strategy,
+ and thus, none of the buyers do.
+ Now, let us consider the case when one seller chooses to deviate, while
+ the rest of the agents remain fixed.
+ If the seller charges a high price at all, then none of the buyers will
+ purchase from him.
+ Though, the seller will still choose to produce a low quality good, in
+ case one of the buyer makes an error.
+ The seller would have been better off producing a low quaility good and
+ charging a low price in order to extract some gains from trade.
+ Note that the seller will never choose to produce a high quality good at
+ a low price because he will lose money as a result.
+ So, this individual seller has no incentive to change the given strategy,
+ and thus, none of the sellers do.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Finally, the outcome of the infinitely repeated game matches that of the
+ stage game.
+ This is because buyers are unable to dinstinghish the quality of the goods
+ available simply by the price.
+ Also, there are so many sellers present in the market that the buyers have
+ no way of identifying all of the sellers who participate in fraud.
+ Lastly, if a buyer is defrauded by a seller, he has no way of identifying
+ this seller in the next period, and he has no way of relaying his experience
+ to the other buyers.
+ Consequently, the buyers have no way of punishing sellers for devious behavior,
+ and the Nash equilibrium will persist in all periods.
+\end_layout
+
+\begin_layout Subsection*
+Reviews, No Cost
+\end_layout
+
+\begin_layout Standard
+As one can tell, the 
+\begin_inset Quotes eld
+\end_inset
+
+no reviews
+\begin_inset Quotes erd
+\end_inset
+
+ treatment does not lead to the most efficient outcome.
+ Obviously, it would be more beneficial for both parties if high quality
+ goods were sold at high prices, as opposed to the inefficient alternative.
+ So, is there any solution that would lead to the most efficient outcome?
+ With reviews, the buyers are able to induce sellers to produce high quality
+ goods, which could then be sold at high prices.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The reviews allow buyers to relay information to one another about the types
+ of goods being sold by any particular seller.
+ This information can then be used by others in later periods as a potential
+ signal concerning the type of goods available.
+ Let buyers adopt the following grim trigger strategy by using the review
+ mechansim: (a) Purchase goods at high prices from sellers with strictly
+ positive reviews, while continuing to leave positive reviews for sellers.
+ Maintain this strategy as long as the quality of the goods purchased remains
+ high; (b) If a seller elects to sell a low quality good at a high price,
+ then leave a negative review for all buyers to see in the next trading
+ period.
+ All buyers will subsequently avoid purchasing goods from any seller who
+ has at least one negative review.
+ With so many sellers in the market and only a limited budget, the buyers
+ are able to adopt this grim trigger strategy without any serious reprecussions
+ to their overall utility.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+This particular minmax strategy is an example of one strategy profile that
+ is not a Nash equilibrium of the stage game, but it allows buyers a way
+ to punish deviators.
+ The minimum discount factor 
+\begin_inset Formula $\delta$
+\end_inset
+
+ that is required to induce all the sellers to sell high quality goods at
+ high prices in every trading period (i.e., subgame) is:
+\begin_inset Formula 
+\begin{eqnarray*}
+4{\displaystyle \sum_{t=0}^{\infty}}\delta^{t} & \geq & 10\\
+\frac{4}{1-\delta} & \geq & 10\\
+4 & \geq & 10-10\delta\\
+10\delta & \geq & 6\\
+\delta & \geq & \frac{3}{5}
+\end{eqnarray*}
+
+\end_inset
+
+According to the Folk Theorem, the minmax strategy profile with 
+\begin_inset Formula $\delta\geq\nicefrac{3}{5}$
+\end_inset
+
+ is a Nash equilibrium of the infinitely repeated game.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The only question left to answer is whether or not buyer will actually leave
+ reviews after purchasing an item.
+ Well, online product reviews can be represented as a public good.
+ It costs time and effect for individuals to leave a review, but their benefit
+ extends to the entire society.
+ Economic theory predicts that when people share the obligation to provide
+ a public good, it tends to be undersupplied.
+ Yet, a fair amount of literature in behavioral and experimental economics
+ attepts to explain the reasons for public good contribution, for instance:
+ Becker (1974); Bernheim (1986); Andreoni (1989); Andreoni (1990).
+ From this research, several motives for contributing to public goods have
+ been suggested an evaluated in an extensive set of public goods experiments,
+ such as altruism, warm glow, reciprocity, and inequality aversion.
+ The motive for giving that is best applied to the online review scenario
+ would be warm glow, which implies that individuals care only about their
+ own level of contributions and are unresponsive to changes in others' contribut
+ions.
+ However, the goal of this experiment is not to provide explanations for
+ why consumers leave product reviews.
+ For more information on public goods experiments, the literature provides
+ several insights that applies to the context of online product reviews.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Reviews, Low Cost
+\end_layout
+
+\begin_layout Standard
+In this treatment, there is now a cost of 
+\begin_inset Formula $R=3$
+\end_inset
+
+ in order for consumers to leave a review.
+ This cost represents the 
+\begin_inset Quotes eld
+\end_inset
+
+time and effort
+\begin_inset Quotes erd
+\end_inset
+
+ people expend to write and post a review on a website.
+ As one can see, the cost is high enough such that it offsets the additional
+ gains buyers receive from purchasing high quality, high priced items.
+ So, buyers no longer have any incentive to leave a review.
+ Consequently, the previously described trigger strategy breaks down, and
+ the inefficient outcome of the 
+\begin_inset Quotes eld
+\end_inset
+
+no reviews
+\begin_inset Quotes erd
+\end_inset
+
+ treatment arises once again.
+ In fact, buyers are better off purchasing low quality, low priced goods
+ instead of high quality, high priced goods and paying to leave a review.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+So, is there a way to alleviate the problems caused by 
+\begin_inset Quotes eld
+\end_inset
+
+costly
+\begin_inset Quotes erd
+\end_inset
+
+ reviews in order to revert back to the efficient outcome? Well, Amazon
+ has a relatively unknown program known as 
+\begin_inset Quotes eld
+\end_inset
+
+Vine
+\begin_inset Quotes erd
+\end_inset
+
+ in which they send free items to a select group of people in exchange for
+ reviews of the selected products.
+ These individuals are required to submit a review online, whether it be
+ positive or negative, on all the products they receive.
+ Some experts claim that the reviews from Vine participants could be positively
+ biased since they may be more inclined to leave encouraging feedback after
+ receiving the product for free.
+ Yet, Amazon claims that reviews from Vine participants are actually more
+ negative, on average.
+ Why does Amazon send out free products just to obtain a few extra reviews?
+ According to the Amazon marketing department, even negatively reviewed
+ items still sell better than items with no reviews.
+ Thus, the Vine program is a possible solution to overcome the inherent
+ costs of leaving a review online.
+ Additional research and experiments are needed to verify this assumption.
+\end_layout
+
+\begin_layout Section*
+Analysis Expectations
+\end_layout
+
+\begin_layout Standard
+With my experiment, I can analyze both buyer and seller behavior.
+ On the seller side, I hope to examine the impact of peer reviews on sellers
+ quality selection and pricing behavior.
+ Will there be any convergence to symmetric equilibria in terms of quality
+ and price? How will the introduction of user reviews affect their decisions?
+ Will sellers eventually start to converge to the same quality level? On
+ the buyer's side, I hope to examine the impact of peer reviews on their
+ buying decisions.
+ Will reviewed goods, even those with a negative review, sell better than
+ goods with no reviews? Will buyers even choose to pay a fee in order to
+ leave a review?
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+Andreoni, J.
+ (1989).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Giving with Impure Altruism: Applications to Charity and Ricardian Equivalence.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Journal of Political Economy
+\emph default
+ 97 (6): 1447-1458.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+Andreoni, J.
+ (1990).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Impure Altruism and Donations to Public Goods: A Theory of Warm-glow Giving.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+The Economic Journal
+\emph default
+ 100: 464-477.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-5"
+
+\end_inset
+
+Ashley, R., S.
+ Ball and C.
+ Eckel (2010).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Motives for Giving: A Reanalysis of Two Classic Public Goods Experiments.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Southern Economic Journal
+\emph default
+ 77(1): 15-26.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+Becker, G.
+ S.
+ (1974).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+A Theory of Social Interactions.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Journal of Political Economy
+\emph default
+ 82: 1063-1093.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-14"
+
+\end_inset
+
+Belicove, Mikal E.
+ (2013, September 18) 
+\begin_inset Quotes eld
+\end_inset
+
+How Many U.S.-Based online Retail Stores Are On The Internet?
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Forbes
+\emph default
+.
+ Retrieved from http://www.forbes.com.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+Bernheim, B.D.
+ (1986).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+On the Voluntary and Involuntary Provision of Public Goods.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+American Economic Review
+\emph default
+ 76(4): 789-793.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-7"
+
+\end_inset
+
+Dellarocas, C.
+ and Narayan, R.
+ (2006).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+What motivates consumers to review a product online? A study of the product-spec
+ific antecedents of online movie reviews.
+\begin_inset Quotes erd
+\end_inset
+
+ In 
+\emph on
+Proceedings of the Internatical Conference on Web Information Systems Engineerin
+g (WISE'06)
+\emph default
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-8"
+
+\end_inset
+
+Duan, W., B.
+ Gu and A.
+ B.
+ Whinston (2008).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Do online reviews matter? - An empirical investigation of panel data.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Decision Support Systems 
+\emph default
+45: 1007-1016.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-6"
+
+\end_inset
+
+Henning-Thurau T., Gwinner K.
+ P., Walsh G., Gemler D.
+ D.
+ (2004).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Electronic Word-of-Mouth via Consumer-Opinion Platforms: What Motivates
+ Consumers to Articulate Themselves on the Internet?
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Journal of Interactive Marketing
+\emph default
+ 18 (1): 38-52.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-13"
+
+\end_inset
+
+Holt, Charles A., and Roger Sherman (1990).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Advertising and product quality in posted-offer experiments.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Economic Inquiry
+\emph default
+ 28: 39-56.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-11"
+
+\end_inset
+
+Hu, N., L.
+ Liu and J.
+ J.
+ Zhang (2008).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Do online reviews affect product sales? The role of reviewer characteristics
+ and temporal effects.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Inf Technol Manage
+\emph default
+ 9: 201-214.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-9"
+
+\end_inset
+
+Kim, J.
+ and Gupta, P.
+ (2012).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Emotional expressions in online user revies: How they influence consumers'
+ product evaluations.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Journal of Business Research 
+\emph default
+66: 985-992.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-10"
+
+\end_inset
+
+Lynch M., R.
+ M.
+ Miller, C.
+ R.
+ Plott, and R.
+ Porter (1986).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Product quality, consumer information and 'lemons' in experimental markets.
+\begin_inset Quotes erd
+\end_inset
+
+ In 
+\emph on
+Empirical approaches to consumer protection economics
+\emph default
+, P.
+ M.
+ Ippolito and D.
+ T.
+ Scheffman, editors, Washington D.C.: FTC Bureau of Economics.
+ 251-306.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-12"
+
+\end_inset
+
+Mill, Ross M., and Charles R.
+ Plott.
+ (1985).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Product quality signaling in experimental markets.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Econometrica
+\emph default
+ 53: 837-872.
+\end_layout
+
+\end_body
+\end_document

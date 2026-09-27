@@ -1,0 +1,219 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Does Trading From an 
+\begin_inset Quotes eld
+\end_inset
+
+Equal
+\begin_inset Quotes erd
+\end_inset
+
+ Position Lead to a 
+\begin_inset Quotes eld
+\end_inset
+
+Fair
+\begin_inset Quotes erd
+\end_inset
+
+ Allocation of Resources?
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+September 3, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In economics, the concept of Pareto efficiecy gives a noteworthy criterion
+ concerning how goods in an economy should be allocated efficiently.
+ However, it does not address any issues about income distribution, nor
+ does it give any 
+\begin_inset Quotes eld
+\end_inset
+
+equity
+\begin_inset Quotes erd
+\end_inset
+
+ implicaiton.
+ Instead, general equilibrium theory provides separate characteristics for
+ the notion of 
+\begin_inset Quotes eld
+\end_inset
+
+fairness.
+\begin_inset Quotes erd
+\end_inset
+
+ An allocation is said to be fair if it is both Pareto optimal and envy-free,
+ i.e., no one envies anyone else.
+ According to the theory, if all individuals' begin trading from an 
+\begin_inset Quotes eld
+\end_inset
+
+equal
+\begin_inset Quotes erd
+\end_inset
+
+ position, then this will result in a 
+\begin_inset Quotes eld
+\end_inset
+
+fair
+\begin_inset Quotes erd
+\end_inset
+
+ allocaiton.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The type of experiment I would like to design is a theory test for this
+ specific result.
+ The experiments discussed in class thus far have only been concerned with
+ the achievement of the predicted competitive equilibrium, along with the
+ Pareto efficiency implications, using a few market institutions.
+ Consequently, the main focus variable in my experiment will remain the
+ specific market institution being implemented, and it will also act as
+ the only treatment variable.
+ The double-auction, posted-offer, and bilateral bargaining arrangements
+ will be the three separate treatments to be tested.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For now, the same economic environment will be controlled throughout the
+ experiment.
+ It will be a pure-exchange economy with four goods and twenty-four agents,
+ so each agent can act as both a buyer and a seller.
+ The preferences of the agents, which are derived from the twenty-four different
+ possible rankings of the goods, will be private information and randomly
+ assigned to control for important nuisances, such as personal tastes and
+ attitudes, while all agents will receive equal endowments of all the goods.
+ The agents will be instructed to obtain an allocation of goods that most
+ closely resembles their given preferences, and each agent will be given
+ monetary rewards based on how well their allocations match their preferences.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Since all agents are endowed with the same number of goods, the theory implies
+ that agents will trade to a 
+\begin_inset Quotes eld
+\end_inset
+
+fair
+\begin_inset Quotes erd
+\end_inset
+
+ allocation.
+ Changing the market institution in each session of the experiment allows
+ me to test which arrangement best leads to a fair allocation of goods.
+\end_layout
+
+\end_body
+\end_document

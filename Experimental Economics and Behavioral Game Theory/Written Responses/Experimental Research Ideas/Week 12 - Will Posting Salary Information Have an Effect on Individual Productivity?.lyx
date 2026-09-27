@@ -1,0 +1,206 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Will Posting Salary Information Have an Effect on Individual Productivity?
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+November 21, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For many individuals, the topic of yearly salary is taboo.
+ Proper social etiquette dictates that asking about a person's salary is
+ off-limits because such personal information should be kept private.
+ A majority of private companies in the United States follow this norm,
+ yet they have different reasons for doing so.
+ They believe that posting salary information may cause problems in the
+ workplace.
+ The posting of salaries could cause strife between the upper echelon of
+ earners and those individuals earning a substantial amount less.
+ Yet, not only could conflicts arise, but it may give their employees the
+ wrong incentives.
+ For example, employee A is making $45,000 per year with no opportunity
+ for a raise or advancement in the near future, while a comparable associate,
+ employee B, is making $47,000 per year.
+ If employee A obtains the information concerning the differences in salaries,
+ then he may have an incentive to reduce his productivity and effort to
+ a level which prevents him from getting fired and/or reprimanded by his
+ superiors.
+ At the same time, employee B is also conscious of the difference, so he
+ does just enough work to set him apart from employee A, and nothing else.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+However, there are still many companies who are electing to eliminate the
+ moratorium on salary disclosure.
+ First off, employees talk with one another, so salary information is not
+ totally private.
+ By making this information readily available, it facilitates a level of
+ trust between employees.
+ Furthermore, keep salaries private perpetuates unfair salaries, which could
+ be detrimental for employees and the organization.
+ If salaries are kept completely private, then employees feelings of 
+\begin_inset Quotes eld
+\end_inset
+
+unfairness
+\begin_inset Quotes erd
+\end_inset
+
+ are unable to be addressed directly.
+ Finally, companies claim that releasing salary information increases the
+ transparency of the company to customers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+With my experiment, I hope to discern if there is any change in behavior
+ if people can compare how much they earn relative to their counterparts.
+ In the controlled experiment, subjects will first be required to complete
+ a series of simple math problems.
+ The payout they receive will be influenced by their performance, as well
+ the performance of the other subjects participating in the experiment.
+ So, subjects will be ranked based on their performance on the math problems,
+ and then they will be compensated accordingly.
+ Note that subjects will be made aware of this payment setup.
+ Moreover, personal earnings and productivity information will be the only
+ information relayed to the subjects after the first round of math problems
+ have been completed.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+After the subjects have been ranked, they will continue to participate in
+ several more rounds of math problems.
+ Subjects will be paid after each completed round, yet they will only be
+ able to receive an amount of compensation equal to their initial payout.
+ Also, in order to receive payment at all, they still must complete a minimum
+ number of problems, which will be determined based on their past performance.
+ The only incentive subjects have for performing more math problems each
+ round is the knowledge that they may be able to increase their compensation
+ if they show significant improvement in later rounds.
+ A later round will be randomly chosen in order to reassess subjects and
+ readjust their salary schedules accordingly.
+ Let it be known that subjects will be made aware of all of this information.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, the treatment experiment will utilize an entirely different set of
+ cohorts, and it will run in the exact same manner as what was just described
+ for the controlled experiment.
+ The only differnce is that after the first round of math problems, subjects
+ will be given the list of rankings and the earnings of their counterparts.
+ Will the incentives of subjects change when this new set of information
+ is introduced? Will subjects adjust their behavior after they have learned
+ the earnings of their peers?
+\end_layout
+
+\end_body
+\end_document

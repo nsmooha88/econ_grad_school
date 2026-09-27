@@ -1,0 +1,193 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Behavioral Finance
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+October 31, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+According to conventional financial and economic theory, agents are rational
+ utility or wealth maximizers.
+ However, there are many instances where emotion and psychology influence
+ the decisions individuals, causing them to behave in unpredictable or irrationa
+l ways.
+ Behavioral finance is an emerging area of study that seeks to combine psycholog
+ical theory with economics and finance in order to explain why people make
+ irrational financial decisions.
+ Many of the assigned papers dealt with the some of the underlying reasons
+ and biases that cause some people to behave irrationally and often against
+ their best interests.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A primary example of irrational behavior is when investors believe they
+ can predict future trends and reversals using past information, even though
+ the sequences they are predicting are random walks, so past outcomes provide
+ no information about future outcomes.
+ Bloomfield and Hales (2002) conducted experiments to test the model proposed
+ by Barberis et al.
+ (1998) in which investors underreact to invidual earnings surprises on
+ average, but overreact to long-term trends in earnings.
+ The two experiments they constructed strongly support the existence of
+ regime-shifting beliefs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The type of information investors receive can also influence their behavior.
+ With the rise of the Internet, investors today can now quickly acquire
+ a large amount of financial information.
+ However, more information does not necessarily lead to more knowledge.
+ Kirchler, Maciejovsky, and Weber (2005) investigate the impact of irrelevant
+ information on trading behavior.
+ The information was symmetrically provided in either a positive or negative
+ frame, and it was irrelevant to the decision.
+ The authors find that while trading prices and volume remained unaffected,
+ there was a particular change in trading pattern.
+ Also, the experiment provided support for the disposition effect.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There are other significant factors that could influence individual portfolio
+ allocations.
+ Bias is one factor that could negatively impact the decisions of financial
+ investors.
+ Biais and Weber (2009) formulate a theoretical model and experiment to
+ study the effect hindsight bias has on risk pereption and investment performanc
+e.
+ Note that hindsight-biased agents fail to update their prior beliefs after
+ observing new information.
+ The authors find that hindsight bias reduced volatility estimates, and
+ biased agents have lower performance.
+ Fellner (2009), on the other hand, primarily focuses on the illusion of
+ control.
+ Participants in the experiment demonstrate illusion of control when they
+ are in charge of the chance move.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+All of the papers previously mentioned are concerned with individual psychologic
+al behaviors.
+ However, none of them focus on psychological behaviors which could be influence
+d by group dynamics.
+ For example, what are the effects of group decision making on financial
+ decision? Also, how do peer effects and group communication impact individual
+ financial decision making? I believe that group biases could have a significant
+ effect on financial decisions, which deviate from rational behavior.
+ Moreover, does a person's educational or work background have a noteworthy
+ effect on financial behavior? Would professional financial investors make
+ better decisions than individuals with an extensive math and/or statistical
+ background?
+\end_layout
+
+\end_body
+\end_document

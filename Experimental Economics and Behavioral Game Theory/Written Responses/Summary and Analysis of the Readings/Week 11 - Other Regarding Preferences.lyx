@@ -1,0 +1,185 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Other Regarding Preferences
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+November 7, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In microeconomic theory, we are concerned with the set of assumptions related
+ to individual preferences and the ordering of alternatives based on the
+ degree of utility they provide.
+ When rational agents maximize their preferences, this results in an optimal
+ choice.
+ This theory of choice serves as a background for demand analysis.
+ However, economists have tried to gain insight into situations and behaviors
+ that imply people are not acting self-interested.
+ Today, researchers have begun to develop formal models of social preferences
+ that assume people are self-interested, but are also concerned about the
+ payoffs of others.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Fehr and Scmidt (1999) analyzed theories of fairness, competition, and cooperati
+on.
+ The authors attempted to explain why people exploit bargaining power in
+ compeititve markets, but not in bilateral bargaining situations.
+ They also wished to answer why cooperation is still maintained even when
+ punishment is costly in voluntary cooperation games with free-riding opportunit
+ies.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Andreoni and Miller (2002) ran experiments in order to test the consistency
+ of preferences for altruism.
+ The authors wanted to see if the phenomena of altruism and fairness could
+ be explained through a well-haved preference ordering.
+ They applied the axioms of revealed preference to the altruistic actions
+ of subjects.
+ If the subjects satisfied the axioms, such as GARP, then it is implied
+ that a utility function generated the choices.
+ In the experiment, subjects were offered several opportunities to share
+ suprlus with an anonymous subject, while the costs and income of sharing
+ varies across decisions.
+ Charness and Rabin (2002), on the other hand, try to create a new, more
+ complicated model that better explains the patterns of nonself-interested
+ behavior.
+ They fit the evidence they obtained to a simple model in which the existing
+ models reported in previous findings become special cases.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Engelmann and Strobel (2004) used smple one-shot distribution experiments
+ to compare the relative importance of efficiency concerns, maximin preferences,
+ and inequality aversion.
+ In addition, they studied and compared the performance of two competing
+ theories on fariness.
+ The authors find that efficiency concerns and maximin preferences are important
+ in simple distribution experiments.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Finally, Fisman, Kariv, and Markovits (2007) advance the research on individual
+ preferences for giving, especially in regards to the results presented
+ in Andreoni and Miller (2002).
+ As in the earlier paper, the authors tested for consistency with utility
+ maximization using revealed preference axioms.
+ Then, in order to distinguish between preferences for giving and social
+ preferences, the authors run three-person dictator games that vary the
+ prices of giving.
+ Finally, the authors have subjects face step-shaped budget sets in order
+ to study decisions that are compatible with less well-behaved cases.
+\end_layout
+
+\end_body
+\end_document

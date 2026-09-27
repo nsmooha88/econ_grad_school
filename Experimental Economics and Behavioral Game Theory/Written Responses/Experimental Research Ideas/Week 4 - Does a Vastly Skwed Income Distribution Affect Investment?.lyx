@@ -1,0 +1,228 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Does a Vastly Skewed Income Distribution Affect Investment?
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+September 17, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Economists at the University of Oxford and the University of California,
+ Berkley, claim that the income disparity in the US between the top 1% earners
+ and the rest of the country is the highest it has been since the 1920s.
+ At this time, the bottom 40% of Americans barely retain any of the country's
+ wealth, while just the top 1% has more of the country's wealth than 9 out
+ of 10 Americans believe the top 20% should have.
+ In another study, it has been suggested that the US experienced such expansive
+ economic growth following WWII because the Pareto like distribution of
+ income during that time was more evenly centered, unlike today with it
+ being incredibly skewed to the right.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Note that the CDF of a Pareto random variable with parameters 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{m}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+F_{x}(x)=\mbox{Pr}(X\leq x)=\begin{cases}
+1-\left(\frac{x_{m}}{x}\right)^{a} & \mbox{for}\ x\geq x_{m}\\
+0 & \mbox{for}\ x<x_{m}
+\end{cases}
+\]
+
+\end_inset
+
+and the PDF is
+\begin_inset Formula 
+\[
+f_{x}(x)=\begin{cases}
+a\frac{x_{m}^{a}}{x^{a+1}} & \mbox{for}\ x\geq x_{m}\\
+0 & \mbox{for}\ x<x_{m}
+\end{cases}
+\]
+
+\end_inset
+
+The Pareto type distribution is characterized by a scale parameter 
+\begin_inset Formula $x_{m}$
+\end_inset
+
+ and a shape parameter 
+\begin_inset Formula $a$
+\end_inset
+
+, which is known as the Pareto index.
+ In my experiment, I hope to test the effect this distribution has on investment
+ within a market.
+ From expected utility theory, an agent becomes less averse to multiplicative
+ risk as his wealth increases.
+ Today, a good majority of the population has a reduced amount of wealth,
+ which causes them to be more risk averse.
+ This reduces the amount of money they invest.
+ Even though the top 1% have had their wealth increase, the law of diminishing
+ marginal utility will eventually take hold causing them to consume their
+ wealth as opposed to investing it.
+ Therefore, it is my belief that as the income distribution becomes more
+ skewed, the total amount of investment will decrease.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, the two treatment variables are 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{m}$
+\end_inset
+
+, which will each take on three possible values: H(igh), M(edium), and L(ow).
+ In the resulting 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ factorial design, each one of the nine treatments is employed in the same
+ number 5 of trials.
+ As a result, 45 trials are required to replicate the design 5 times.
+ I will randomly assign the nine treatments in random order to the five
+ trials in each replication.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A trial will be referred to as a 
+\begin_inset Quotes eld
+\end_inset
+
+session,
+\begin_inset Quotes erd
+\end_inset
+
+ in which the same set of cohorts are employed.
+ Every treatment consists of an identical setup: thirty cohorts are given
+ an amount of wealth drawn from the Pareto distribution corresponding to
+ the treatment.
+ To reduce the payment amount, cohorts will be given lab francs, which they
+ can convert to dollars at the end of a session.
+ After wealth is distributed, all cohorts will be given the same randomly
+ drawn price.
+ Then, they will have the opportunity to invest their wealth in order to
+ produce a common good, which can then be sold at the given price.
+ The amount of the good that is produced will be random, with higher investments
+ increasing the probability of obtaining a greater amount of the good.
+\end_layout
+
+\end_body
+\end_document

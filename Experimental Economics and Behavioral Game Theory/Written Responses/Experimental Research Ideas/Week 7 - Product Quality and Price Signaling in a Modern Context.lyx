@@ -1,0 +1,353 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Product Quality and Price Signaling in a Modern Context
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+October 8, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Experimental economists have always been fascinated with the recognized
+ problems that arise due asymmetric information, most notably moral hazard.
+ Within the framework of industrial organization, moral hazard occurs when
+ both sellers' costs and buyers' values depend on product quality.
+ The sellers know the quality of their product, while the quality cannot
+ be directly observed by buyers.
+ One possible solution to this problem involves signaling.
+ Miller and Plott (1985) designed and conducted an experiment in which sellers
+ were allowed to invest in costly, observable signals.
+ However, I do not believe their framwork can be readily applied to today's
+ modern market institutions that have arisen due to the widespread use of
+ the Internet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To elaborate, buyers of goods over the Internet are able to discern some
+ of the information concerning the product's quality through user reviews
+ and namebrand recognition.
+ Yet, they are limited in their ability to gather all relevant information
+ since they unable to physcially examine the product or have face-to-face
+ communication with the seller.
+ The seller, on the other hand, can invest in the quality of the product,
+ but he will be unable to relay a perfect signal to the buyer about the
+ product due to the same reasons mentioned previously.
+ Because of these issues, will sellers even attempt to signal the quality
+ of their products to buyers, or will they just simply advertise their price
+ instead?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In order to answer this question, I propose the following experimental design.
+ Sellers possess products that are exogenously given the identification
+ of 
+\begin_inset Quotes eld
+\end_inset
+
+name-brand
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+generic,
+\begin_inset Quotes erd
+\end_inset
+
+ which will be known to the buyers.
+ Sellers can add units of quality to their goods, which is valued by the
+ buyers, but this increase in quality is not directly observed by the buyers.
+ Note that there is no initial difference in quality between the two types
+ of goods, yet sellers having the 
+\begin_inset Quotes eld
+\end_inset
+
+name-brand
+\begin_inset Quotes erd
+\end_inset
+
+ good will have a slightly lower marginal cost of adding units of quality
+ to their product.
+ In addition, buyers will possess a slightly higher value for products designate
+d as 
+\begin_inset Quotes eld
+\end_inset
+
+name-brand.
+\begin_inset Quotes erd
+\end_inset
+
+ Yet, buyers will have an increasing valuation for higher quality products,
+ thus allowing generic brands to readily compete with their name-brand counterpa
+rts.
+ Due to the conditions just described, the possibility of signaling exists
+ in the constructed markets, even though buyers can identify the two different
+ kinds of goods.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, like Miller and Plot (1985), a particular market experiment will proceed
+ in a sequence of periods, and in each period, sellers will have only two
+ units of the same grade to sell.
+ For different periods, sellers will be randomly assigned the type of grades
+ they would be selling with half the sellers assigned to sell 
+\begin_inset Quotes eld
+\end_inset
+
+name-brand
+\begin_inset Quotes erd
+\end_inset
+
+ goods, and the other half required to sell the 
+\begin_inset Quotes eld
+\end_inset
+
+generic
+\begin_inset Quotes erd
+\end_inset
+
+ goods.
+ As has been stated, sellers can add quality to a unit at a cost which depends
+ upon the type of unit they are selling.
+ The marginal cost will reman constant for the 
+\begin_inset Quotes eld
+\end_inset
+
+generis
+\begin_inset Quotes erd
+\end_inset
+
+ type, while the marginal cost will change for the 
+\begin_inset Quotes eld
+\end_inset
+
+name-brand
+\begin_inset Quotes erd
+\end_inset
+
+ good in different market experiments.
+ Finally, all buyers have the same redemption schedules, which depend on
+ both the kind and quality of the unit purchased; the difference in value
+ between 
+\begin_inset Quotes eld
+\end_inset
+
+name-brand
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+generic
+\begin_inset Quotes erd
+\end_inset
+
+ goods will be held constant.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+However, there will still be some key differences between my design and
+ the one utilized by Miller and Plot (1985).
+ To elaborate, the quality of a product cannot be directly observed by buyers.
+ Instead, sellers and buyers will be made aware that a signal of the product's
+ quality will be drawn from some fixed distribution, which will be unknown
+ to the two groups of subjects.
+ As sellers add more units of quality to their products, then the probability
+ of relaying a positive signal to the buyers will increase.
+ In addition, the trading rules differ between the two designs.
+ Sellers are allowed to set their own prices, but the buyers will be the
+ only ones allowed to initiate communication in order to solicit price informati
+on.
+ The only way sellers can relay their prices to all of the buyers is to
+ pay for a signal that does so.
+ The price of this signal will be the same for both 
+\begin_inset Quotes eld
+\end_inset
+
+name-brand
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+generic
+\begin_inset Quotes erd
+\end_inset
+
+ goods, and it will change between different market experiments.
+ Buyers will inform the proper sellers of their intent to purchase one unit
+ or both, contracts are finalized, and payoffs will be calculated.
+ The prices of transactions and the actual quality of the goods will be
+ made public in order for sellers to build some semblance of a reputation
+ with buyers.
+ To sum up, the sequence of steps for a given period is:
+\end_layout
+
+\begin_layout Enumerate
+Sellers are exogenously assigned the type of good they will be selling,
+ which will be known to the buyers
+\end_layout
+
+\begin_layout Enumerate
+Sellers submit how much units of quality to add to their products.
+\end_layout
+
+\begin_layout Enumerate
+Sellers decide on the prices at which to sell their goods.
+\end_layout
+
+\begin_layout Enumerate
+Sellers are able to purchase a pricing signal in order to relay their prices
+ to all of the buyers.
+\end_layout
+
+\begin_layout Enumerate
+Buyers now have the opportunity to solicit pricing information from the
+ remaining sellers.
+\end_layout
+
+\begin_layout Enumerate
+Buyers obtain the exogenously determined random signals concerning the quality
+ of the products for sale.
+\end_layout
+
+\begin_layout Enumerate
+Buyers make their purchasing decisions, inform the sellers, and transactions
+ are finalized.
+\end_layout
+
+\begin_layout Enumerate
+After payoffs are calculated, information about the different transactions
+ that occured during the most recent period is given to both buyers and
+ sellers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+With this experimental design, I wish to determine if sellers will actually
+ add quality to their products, even if the signal is not perfect, or will
+ they just pay for the pricing signal instead.
+ In addition, under what conditions will pooling or separating equilibria
+ arise, and which kind will be more prevelant? I also wish to analyze different
+ models and their respective predictions, such as pure and partial pooling,
+ and the most efficient and inefficient signaling.
+\end_layout
+
+\end_body
+\end_document

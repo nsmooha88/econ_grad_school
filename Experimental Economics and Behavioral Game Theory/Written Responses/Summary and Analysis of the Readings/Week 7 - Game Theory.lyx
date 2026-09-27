@@ -1,0 +1,195 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Game Theory
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+October 8, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Game theory is a methodology used to study strategic decision making and
+ the interactions between agents in strategic situations.
+ The payoffs of agents in noncooperative game theory depend not only on
+ their own actions, but also on the actions of other agents, which means
+ the beliefs of players are endogendous.
+ The techniques of game theory can be applied in a wide variety of contexts,
+ and they have become pervasive in economic research.
+ However, these devices often conflict in determining reasonable equilibria
+ for economic games, and they offer differerent positive explanations concerning
+ observed behavior.
+ Thus, game theory offers a wide variety of opportunities for experimental
+ research, especially for the purpose of evaluating predictions against
+ alternative theories.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Van Huyck, Battalio, and Beil (1990) is a prime example of running experiments
+ in order to analyze the different predictions offered by competing equilibrium
+ models.
+ They tend to focus on the tools offered by deductive equilibrium methods,
+ such as Rational Expectations or Bayesian Nash Equilibrium.
+ The researchers study a class of tacit pure coordination games with multiple
+ equilibria.
+ The experiments provide evidence on how human subjects make decisions under
+ conditions of strategic uncertainty.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Another area of study that has been a chief concern to both game theorists
+ and experimentalists is markets with asymmetric information, especially
+ those that give rise to the problem of moral hazard.
+ A situation in which moral hazard occurs is when both sellers' costs and
+ buyers' values depend on product quality.
+ The sellers know the quality of their product, while the quality cannot
+ be directly observed by buyers.
+ Forsythe, Isaac, and Palfrey (1989) present results from experiments that
+ examine this situation.
+ In their design, sellers had the opportunity to voluntarily reveal information
+ concerning the quality of the item, or they could decide to 
+\begin_inset Quotes eld
+\end_inset
+
+blind bid
+\begin_inset Quotes erd
+\end_inset
+
+ the item.
+ A good predictor of behavior in these markets is a sequential equilibrium
+ model where buyers 
+\begin_inset Quotes eld
+\end_inset
+
+assume the worst.
+\begin_inset Quotes erd
+\end_inset
+
+ While allocations were ex post efficient, it took some time for the equilibrium
+ to be achieved.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For dynamic games, backwards induction is the primary method used to determine
+ reasonable Nash equilibria, also known as subgame perfect Nash equilibria.
+ However, the centipede game is a significant example of the possible paradoxes
+ that could arise when applying backwards induction.
+ Palacious-Huerta and Volij (2009) conduct both field and labatory experiments
+ of the centipede game with chess players and students in order to investigate
+ the assumption of common knowledge of rationality, which, in turn, implies
+ the backward induction outcome.
+ In both the field and in the lab, outcomes are close to the subgame-perfect
+ equilibrium prediciton when chess players play against one another.
+ Also, when students play against chess players, outcomes are much closer
+ to the subgame-perfect equilibrium than when students play against other
+ students.
+ These findings solidify the theory that the predictive power of subgame-perfect
+ equilibrium hinges mainly on knowledge of players' rationalisty.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,163 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Experimental Methods I
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+September 3, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The three readings provided background information and examples concerning
+ economic behavior and experimental methods.
+ The common theme among all of the texts was the importance of a solid experimen
+tal design.
+ Two of the most significant aspects to consider when constructing an experiment
+ are: identifying the focus variables of interest and the nuisance variables
+ that could affect the outcome of results; selecting the proper treatment
+ variables and those you wish to control by holding constant.
+ Some of the efficient designs described were: randomization, random block,
+ crossover, dual trial, and factorial design.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Chapter 9 of Davis and Holt added the very helpful discussion of the relationshi
+p among theoretical, experimental, and natural economic experiments.
+ Accordingly, an experimental design should coincide with the particular
+ test the researcher is considering, whether it be a theory, component,
+ or stress test, or a search for empirical regularities.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+No matter the type of experiment, almost all of them employ the use of human
+ subjects, which leads to a unique set of problems when collecting and analyzing
+ data.
+ So, it is necessary for researchers to maintain an acceptable level of
+ control over the economic environments, institutions, etc.
+ Above all, it is critical that particpants receive salient rewards that
+ depend on their actions.
+ In addition, changes in subjects' incentives and utility should predominantly
+ come from the corresponding reward structure.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Finally, it is imperative for researchers to hone their data analysis skills,
+ so they can make the proper statistical inferences in regards to their
+ hypotheses.
+ Experimental data should be evaluated using two approaches.
+ Qualitative methods, which primarily employ graphs and summary statistics,
+ are intended to give an overview of the data.
+ On the other, qualitative tools, such as inferential statistics, give answers
+ to specific questions.
+ Remember to utilize the correct statistical inference test depending on
+ the kind of data that is collected.
+\end_layout
+
+\end_body
+\end_document

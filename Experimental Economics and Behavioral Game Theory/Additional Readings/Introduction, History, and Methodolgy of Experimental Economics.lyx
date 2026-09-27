@@ -1,0 +1,624 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Introduction, History, and Methodology of Experimental Economics
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An 
+\series bold
+\emph on
+experiment
+\series default
+\emph default
+ is a scientific procedure undertaken to make a discovery, test a hypothesis,
+ or demonstrate a known fact.
+ But why are experiments necessary? In order to have theory, you need to
+ refine said theory with data.
+ So, it becomes useful and relevant to run experiments in order to test
+ theories.
+ Important to note, an experiment does not have to test a naturally occuring
+ process.
+ Yet, all experiments should try to use real stimuli and actual incentives
+ whenever possible.
+\end_layout
+
+\begin_layout Section*
+
+\series bold
+Types of Experiments
+\end_layout
+
+\begin_layout Itemize
+Theory falsification
+\end_layout
+
+\begin_layout Itemize
+Stress test 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Does a model work in the harshest conditions?
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Theory competition: you have two conflicting theories, which one is better
+ at prediction?
+\end_layout
+
+\begin_layout Itemize
+Model robustness check
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Whispering in the ear of princes
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Will a certain policy work? 
+\end_layout
+
+\begin_layout Itemize
+Can inform regulators of proper use
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Discovering empirical regularities 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Looking for a theory
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Measurement of something difficult to measure in the field (not as common)
+\end_layout
+
+\begin_layout Itemize
+Simulation (also rarely done): 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Simulate a naturally occuring process 
+\end_layout
+
+\begin_layout Itemize
+This is more useful if theory is available
+\end_layout
+
+\end_deeper
+\begin_layout Remark*
+It depends on the context, but there usually is a bias towards negating
+ theory.
+ However, it has become common for papers to have a combination of providing
+ positive and negative results concerning a theory.
+\end_layout
+
+\begin_layout Section*
+Purpose of Experiments
+\end_layout
+
+\begin_layout Subsection*
+
+\series bold
+Friedman and Sunder (1994)
+\end_layout
+
+\begin_layout Itemize
+Whispering in the ear of princes
+\end_layout
+
+\begin_layout Itemize
+Discovering empirical regularities
+\end_layout
+
+\begin_layout Itemize
+Direct test of theory
+\end_layout
+
+\begin_layout Remark*
+Pedagogical
+\end_layout
+
+\begin_layout Subsection*
+
+\series bold
+Davis and Holt (1993)
+\end_layout
+
+\begin_layout Itemize
+Tests of behavioral hypothesis
+\end_layout
+
+\begin_layout Itemize
+Stress test theory
+\end_layout
+
+\begin_layout Itemize
+Searching for empirical results
+\end_layout
+
+\begin_layout Subsection*
+
+\series bold
+Kasel and Roth (1995) and Roth (1982)
+\end_layout
+
+\begin_layout Itemize
+Speaking to theorists
+\end_layout
+
+\begin_layout Itemize
+Searching for facts
+\end_layout
+
+\begin_layout Itemize
+Searching for meaning
+\end_layout
+
+\begin_layout Itemize
+Whispering in the ears of princes
+\end_layout
+
+\begin_layout Subsection*
+
+\series bold
+Plott (1982)
+\end_layout
+
+\begin_layout Itemize
+Model rejection
+\end_layout
+
+\begin_layout Itemize
+Theory competition
+\end_layout
+
+\begin_layout Itemize
+Model robustness
+\end_layout
+
+\begin_layout Itemize
+Measurement
+\end_layout
+
+\begin_layout Itemize
+Simulation
+\end_layout
+
+\begin_layout Subsection*
+Davis and Holt
+\end_layout
+
+\begin_layout Itemize
+Provides a nice diagram of institutional complexity versus environmental
+ complexity.
+ 
+\end_layout
+
+\begin_layout Itemize
+Different types of tests:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Theory 
+\end_layout
+
+\begin_layout Itemize
+Component 
+\end_layout
+
+\begin_layout Itemize
+Stress 
+\end_layout
+
+\begin_layout Itemize
+Field 
+\end_layout
+
+\begin_layout Itemize
+Search for empirical regularities 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Start with a theory test.
+ If it fails, move to a component test.
+ If it succeeds, move to a stress test.
+ 
+\end_layout
+
+\begin_layout Itemize
+Why might you conduct a theory test? We are not testing the structural assumptio
+ns of the theory, but the behavior and institutional assumption, which are
+ not usually explictly discusses by theory.
+ 
+\end_layout
+
+\begin_layout Section*
+Types of Data
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Happenstance
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Experiment
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Field
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rate of inflation in US
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Income Maintenance Experiments
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Labratory
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Discovery of Penicillin
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Labratory Asset Market
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Parallelism
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A major criticsim of experiments is that results will not hold in the 
+\begin_inset Quotes eld
+\end_inset
+
+real world
+\begin_inset Quotes erd
+\end_inset
+
+ for a variety of reasons.
+ For example:
+\end_layout
+
+\begin_layout Itemize
+Participants in the lab think differently than subjects in the real world.
+\end_layout
+
+\begin_layout Itemize
+High stakes aren't present in the lab, and they often can make things worse.
+\end_layout
+
+\begin_layout Itemize
+The results in a labratory are 
+\begin_inset Quotes eld
+\end_inset
+
+artificial
+\begin_inset Quotes erd
+\end_inset
+
+ compared to the real world.
+ However, this critique can be made against any experimental method.
+\end_layout
+
+\begin_layout Itemize
+Naturally occuring processes don't often occur in the lab, but this is often
+ a claim for more reasearch in general.
+\end_layout
+
+\begin_layout Itemize
+The lab results obtained under one set of arbitrary parameters may not hold
+ for another set of arbitrary parameters.
+\end_layout
+
+\begin_layout Standard
+An important response to this criticsim is that experiments test theories,
+ and theories should hold in the field.
+\end_layout
+
+\begin_layout Section*
+Designing Experiments
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Should one undertake a lab experiment or a field experiment? Well, there
+ is trade-off of the realism found in the field versus the abstraction of
+ the theory when deciding what kind of experiment to pursue.
+ Neither of these extremes should be aimed for while you are designing an
+ experiment.
+ Instead, focus on the question you wish to answer, and then determine how
+ you will try to answer it.
+ Design experiments with an eye towards data and the analysis techniques
+ you wish to employ.
+ How will you generate data that will easily be converted into results?
+ Remember to use non-parametris statistical tests over parametric tests.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Also, saliency is incredibly important.
+ The payoffs subjects receive should be based on the decisions they make.
+ Between-subject design may be cleaner than within-subject design.
+ Pay subjects with an amount of cash that is higher than their opportunity
+ costs.
+ Students are good learners with lower opportunity costs.
+ Create complete and unbiased instructions that are easy to understand.
+ Run pilot experiments to test for any irregularities.
+ Do not deceive or lie.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Agents determine messages under environments (utility, technology, endowments)
+ and institutional rules determine outcomes.
+ You can vary the institution and compare outcomes, or vice versa.
+ Identify the differences between economic institutions and environments.
+ Experiments can vary either of these aspects and hold the other constant.
+\end_layout
+
+\begin_layout Subsection*
+Additional Suggestions
+\end_layout
+
+\begin_layout Itemize
+Instead of a 
+\begin_inset Quotes eld
+\end_inset
+
+latin square,
+\begin_inset Quotes erd
+\end_inset
+
+ try to limit the amount of treatments you are testing.
+\end_layout
+
+\begin_layout Itemize
+One must take into account the fact that subjects can learn from trial to
+ trial.
+\end_layout
+
+\begin_layout Itemize
+Know your subject pool.
+ You can manipulate your subjects innate idiosyncrasies by using specific
+ wording in the project outline your subjects read before the experiment.
+\end_layout
+
+\begin_layout Itemize
+Widely separate the treatment levels to make the effects and outcomes clear.
+\end_layout
+
+\begin_layout Itemize
+If certain nuisance variables pose significant problem, then you can treat
+ them as treatment variables.
+\end_layout
+
+\begin_layout Itemize
+Four Phases to Conducting Experiments 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Preliminary phase
+\end_layout
+
+\begin_layout Itemize
+Pilot experiment
+\end_layout
+
+\begin_layout Itemize
+Implementation of actual experiment
+\end_layout
+
+\begin_layout Itemize
+Follow up experiments (50% - 75% of your budget should try to be reserved
+ for this stage)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+It is difficult to induce risk neutrality.
+ So, it is easier to run an experiment assuming risk neutrality, then estimate
+ the level of risk aversion to see how it would have affected the data and
+ outcomes.
+\end_layout
+
+\end_body
+\end_document

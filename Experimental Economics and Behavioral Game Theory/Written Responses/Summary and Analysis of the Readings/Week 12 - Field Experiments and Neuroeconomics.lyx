@@ -1,0 +1,167 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Special Topics: Field Experiments/Neuroeconomics
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+November 14, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Increasingly, economists have turned to experiments in order to understand
+ human behavior.
+ The readings this week specifically cover two special topics associated
+ with experimental economics: field experiments and neuroeconomics.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Field experiments are becoming a popular approach to explore economic phenomena.
+ Field experiments use randomization, but do so in naturally-ocurring settings.
+ These type of experiments incorporate a mixture of control and realism,
+ so they provide a bridge between laboratory and naturally-occurring data.
+ Levitt and List (2009) present an overview of modern field experiments
+ and their usage in economics.
+ In their study, they discuss some of the first field-experiments, as well
+ as some large-scale social experiments.
+ Then, they provide a description of the current field experiments seen
+ today.
+ Finally, the authors offer a conjecture of where the frontier of field
+ experiments will soon be headed.
+ Charness and Gneezy (2009) is a prime example of what a proper field experiment
+ entails.
+ The authors wish to see if incentives are an effective strategy in encouraging
+ the development of good habits.
+ They do this by analyzing the post-intervention effects of paying people
+ to attend a gym a number of times during one month.
+ In two studies, they find an increase in attendance after intervention
+ relative to the respective control groups.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Neuroeconomics research requires curiosity in not only economics, but also
+ neurobiology.
+ It combines research methods from neurobiology, experimental and behavioral
+ economics, and cognititive and social psychology.
+ Neuroeconomics seeks to explain how economic behavior can shape our understandi
+ng of the brain.
+ With new neuroscientific discoveries, new economics models can be formed,
+ or existing theories can be improved.
+ Bechara et al.
+ (1997) and Plassmann et al.
+ (2008) are two examples of neuroeconomic research.
+ Bechara et al.
+ (1997) sought out to determine whether overt reasoning is preceded by a
+ nonconscious response.
+ They found that normal individuals began to choose advantageously before
+ they realized which strategy worked best.
+ Plassman et al.
+ (2008) studied the neural mechanisms through which marketing affects decisions
+ made by individuals.
+ They showed that marketing actions, especially changes in price, can affect
+ neural representations of experienced pleasantness
+\end_layout
+
+\end_body
+\end_document

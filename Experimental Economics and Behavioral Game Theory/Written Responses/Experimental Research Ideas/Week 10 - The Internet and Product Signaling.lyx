@@ -1,0 +1,481 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+The Internet and Product Signaling
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+October 31, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Experimental economists have always been fascinated with the recognized
+ problems that arise due asymmetric information, most notably moral hazard.
+ Within the framework of industrial organization, moral hazard occurs when
+ both sellers' costs and buyers' values depend on product quality.
+ The sellers know the quality of their product, while the quality cannot
+ be directly observed by buyers.
+ One possible solution to this problem involves signaling.
+ In fact, there have been many papers analyzing the possible equilibria
+ that may arise when signaling is an option.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+However, I do not believe their framwork can be readily applied to today's
+ modern market institutions that have arisen due to the widespread use of
+ the Internet.
+ Today, buyers are able to leave a product review after purchasing an item,
+ and this has an effect on future sales of the good.
+ In fact, Amazon has a relatively unknown program known as 
+\begin_inset Quotes eld
+\end_inset
+
+Vine
+\begin_inset Quotes erd
+\end_inset
+
+ in which they send free items to a select group of people in exchange for
+ reviews of the selected products.
+ These individuals are required to submit a review online, whether it be
+ positive or negative, on all the products they receive.
+ Some experts claim that the reviews from Vine participants could be positively
+ biased since they may be more inclined to leave encouraging feedback after
+ receiving the product for free.
+ Yet, Amazon claims that reviews from Vine participants are actually more
+ negative, on average.
+ Why does Amazon send out free products just to obtain a few extra reviews?
+ Well, according to the Amazon marketing department, even negatively reviewed
+ items still sell better than items with no reviews.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, buyers of goods over the Internet are able to discern some of the informati
+on concerning the product's quality through user reviews and namebrand recogniti
+on.
+ Yet, they are limited in their ability to gather all relevant information
+ since they unable to physcially examine the product or have face-to-face
+ communication with the seller.
+ The seller, on the other hand, can invest in the quality of the product,
+ but he will be unable to relay a perfect signal to the buyer about the
+ product due to the same reasons mentioned previously.
+ Because of these issues, will sellers even attempt to invest in the quality
+ of their products, or will they instead primarily rely on the recognition
+ of their brand?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In order to answer this question, I propose the following experimental design
+ that borrows some characteristics from Miller and Plot (1985), but still
+ differs significantly from their construction.
+ Sellers possess products that are exogenously given the identification
+ of 
+\begin_inset Quotes eld
+\end_inset
+
+name-brand
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+generic,
+\begin_inset Quotes erd
+\end_inset
+
+ which will be known to the buyers.
+ Sellers can add units of quality to their goods, which is valued by the
+ buyers, but this increase in quality is not directly observed by the buyers
+ either.
+ There is no initial difference in quality between the two types of goods,
+ yet sellers having the 
+\begin_inset Quotes eld
+\end_inset
+
+name-brand
+\begin_inset Quotes erd
+\end_inset
+
+ good will have a slightly lower marginal cost of adding units of quality
+ to their product.
+ In addition, buyers will possess a slightly higher value for products designate
+d as 
+\begin_inset Quotes eld
+\end_inset
+
+name-brand.
+\begin_inset Quotes erd
+\end_inset
+
+ Yet, buyers will have increasing valuation for higher quality products,
+ thus allowing generic brands to readily compete with their name-brand counterpa
+rts.
+ Finally, all buyers will have the same redemption schedule, which will
+ depend on both the kind and quality of the unit purchased, and the difference
+ in value between 
+\begin_inset Quotes eld
+\end_inset
+
+name-brand
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+generic
+\begin_inset Quotes erd
+\end_inset
+
+ goods will be held constant.
+ Due to the conditions just described, the possibility of signaling exists
+ in the constructed markets, even though buyers can identify the two different
+ kinds of goods.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Furthermore, there will be also be two exogeneously determined buying groups.
+ One buyer group will be designated as the 
+\begin_inset Quotes eld
+\end_inset
+
+reviewers,
+\begin_inset Quotes erd
+\end_inset
+
+ while the other group will be those 
+\begin_inset Quotes eld
+\end_inset
+
+reading reviews.
+\begin_inset Quotes erd
+\end_inset
+
+ Now, a particular market experiment will proceed in a sequence of sets
+ of two distinguishable trading periods.
+ In the first trading period, sellers will interact with the 
+\begin_inset Quotes eld
+\end_inset
+
+reviewers,
+\begin_inset Quotes erd
+\end_inset
+
+ who will have the ability to leave a review about the seller and the product
+ they purchased once trading concludes.
+ In this period, sellers can add quality to a particular unit at a cost
+ which depends upon the type of unit they are selling.
+ Note that the marginal cost will remain constant for the 
+\begin_inset Quotes eld
+\end_inset
+
+generic
+\begin_inset Quotes erd
+\end_inset
+
+ type, while the marginal cost will change for the 
+\begin_inset Quotes eld
+\end_inset
+
+name-brand
+\begin_inset Quotes erd
+\end_inset
+
+ good in different market experiments.
+ In the second trading period, each seller will be given two more units
+ to sell, which will be at the same level of quality they had purchased
+ in the previous period.
+ The same group of sellers now interact with the new group of buyers, who
+ are able to read reviews left by the first group of buyers.
+ Finally, in order to facilitate a double auction trading mechansim in both
+ periods, both buyers and sellers will be given an unique identification
+ number at the start of each set of two trading periods.
+ To sum up, the set of two trading periods will consist of the following
+ two parts:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Period 1
+\end_layout
+
+\begin_layout Enumerate
+Sellers are exogenously assigned the type of good they will be selling,
+ which will be known to the buyers.
+\end_layout
+
+\begin_layout Enumerate
+Buyers are exogenously designated as 
+\begin_inset Quotes eld
+\end_inset
+
+reviewers
+\begin_inset Quotes erd
+\end_inset
+
+ or those 
+\begin_inset Quotes eld
+\end_inset
+
+reading reviews.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Both buyers and sellers are given a unique identification number.
+\end_layout
+
+\begin_layout Enumerate
+Sellers submit how many units of quality to add to their two products.
+\end_layout
+
+\begin_layout Enumerate
+Trading proceeds according to a double auction mechansim.
+ Sellers identify their identification number, the type of good they are
+ selling (
+\begin_inset Quotes eld
+\end_inset
+
+name-brand
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+generic
+\begin_inset Quotes erd
+\end_inset
+
+), the number of goods they wish to sell (1 or 2), and the price at which
+ they are willing to accept.
+ Buyers identify their identification number, the type of good they wish
+ to purchase, the number of units they wish to purchase, and the price they
+ are willing to pay.
+\end_layout
+
+\begin_layout Enumerate
+After trading concludes, buyers are given the identification numbers of
+ the seller associated with the goods they purchased.
+ Then, buyers have the opportunity to leave reviews based on the seller
+ they purchased from and the quality of the product they purchased.
+ So, in a review, buyers are permitted to identify sellers by their identificait
+on number.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Period 2
+\end_layout
+
+\begin_layout Enumerate
+The same two groups of sellers now interact with the other group of buyers,
+ those who can read the reviews left by the previous group.
+\end_layout
+
+\begin_layout Enumerate
+Before trading commences, the new group of buyers are able to read reviews
+ left by the previous group.
+\end_layout
+
+\begin_layout Enumerate
+Trading proceeds in the same manner implemented in the previous period.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Important to note, the design described above is associated with the main
+ treament of the experiment.
+ The control will consist of the same basic design, except that buyers will
+ not be separated into two separate groups, and they will not be given the
+ option of reviewing a product.
+ Instead, buyers will now be able to discern both the kind of good they
+ are purchasing, as well as the quality of the good.
+ So, during the double auction mechanism, the sellers will be required to
+ announce the units of quality of each of their goods, and the buyers will
+ announce the units of quality they would like to purchase.
+ Using the treatment design I have described, I want to see if there will
+ be any changes in quality investment by sellers or the price at which goods
+ sell at if buyers are given the option to leave reviews.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Moreove, I can include variations to the main treatment design in order
+ to add more structure and real-world complexity to the experiment, as well
+ as answer other interesting questions associated with product reviews and
+ purchasing goods using the Internet.
+ For example:
+\end_layout
+
+\begin_layout Itemize
+Control: In the second trading period, sellers are unable to add additional
+ units of quality to their two goods; Treatment: Prior to the second trading
+ period, sellers are able to read one randomly selected review left by a
+ buyer.
+ They can then add additional units of quality to their products in the
+ second period.
+\end_layout
+
+\begin_layout Itemize
+Control: All buyers in the first trading period are required to leave some
+ type of review of all the products they purchase; Treament: Buyers in the
+ first period are no longer required to leave a review.
+ Instead, there is now a small cost that buyers have to pay in order to
+ leave a review.
+\end_layout
+
+\begin_layout Itemize
+Control: All buyers in the first trading period are required to leave some
+ type of review of all the products they purchase; Treatment: Buyers in
+ the first period are no longer required to leave a review.
+ Instead, sellers can now give away any of their unsold units to buyers
+ in exchange for a review after trading concludes.
+ If a buyer receives a 
+\begin_inset Quotes eld
+\end_inset
+
+free
+\begin_inset Quotes erd
+\end_inset
+
+ unit from a seller, then they will be required to leave a review.
+\end_layout
+
+\begin_layout Itemize
+Control: The identifaction number of sellers change for each new set of
+ two trading periods; Treatment: Sellers maintain the same identifcation
+ number throughout the sequence of sets of two trading periods.
+\end_layout
+
+\begin_layout Standard
+The possible designs listed above are just variations of the main designed
+ I have described in the majority of this proposal, and they do not have
+ to be incorporated into the experiment if I so choose.
+ I have only mentioned them to identify other possible designs that could
+ be implemented in order to answer additional questions associated with
+ the topic of product reviews and Internet purchases.
+\end_layout
+
+\end_body
+\end_document

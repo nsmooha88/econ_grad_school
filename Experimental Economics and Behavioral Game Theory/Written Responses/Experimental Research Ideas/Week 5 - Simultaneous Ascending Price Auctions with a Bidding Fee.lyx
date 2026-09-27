@@ -1,0 +1,225 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Simultaneous Ascending Price Auctions with a Bidding Fee
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+September 24, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The Internet has always been a signifcant tool for establishing markets
+ and mechanisms in which buyers and sellers can exchange goods.
+ In fact, auctions have become a popular mechanism to exchange items over
+ the Internet.
+ Over the last several years, there has been a rise in popularity for 
+\begin_inset Quotes eld
+\end_inset
+
+penny auction
+\begin_inset Quotes erd
+\end_inset
+
+ sites, such as Beezid, Quibids, Madbids, etc.
+ With penny auctions, the house auctions a popular and/or expensive item
+ starting at $0.00.
+ In order to bid on an item, participants need bids, which can be purchased
+ from the house.
+ Usually, a pack of 100 bids costs about $50, so every bid placed costs
+ $.50.
+ Each time a bid is placed the price of the item goes up by $0.01.
+ The auction usually has a lifespan of about 10 to 20 seconds.
+ If any bid is placed during this time, the timer will reset.
+ The person who submits the last bid wins the item.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In my experiment, I wish to test the possibility of the 
+\begin_inset Quotes eld
+\end_inset
+
+winner's curse,
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+buyer's fever
+\begin_inset Quotes erd
+\end_inset
+
+ in this situation, depending on the number of bidders participating in
+ the auction, as well as their experience.
+ Buyer's fever is a phenomenon in which buyer's submit bid's that are greater
+ than an item's true value.
+ In the context of the auctions I will be studying, it occurs when the total
+ cost of the bids placed by a buyer exceeds the item's value.
+ I believe that an increase in the number of bidders will produce more aggressiv
+e bidding.
+ However, experienced bidders will show sensitivity to the strategic considerati
+ons of the auction.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Subjects will be recruited for one-hour sessions consisting of a series
+ of auction periods in which a single unit of a commodity will be sold each
+ period.
+ To keep payout amounts reasonable, a conversion rate of 1 cent for every
+ 2 francs will be instituted.
+ Now, in order to participate in the auctions, subjects will be given starting
+ balances of 200 francs.
+ Before an auction period begins, the value of the item, 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, is drawn randomly from a uniform distribution, and then a public information
+ signal affiliated with the actual value of the item to be sold will be
+ announced.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Soon after, subjects will have the opportunity to purchase bids where a
+ pack of 100 bids costs 50 francs.
+ Note that bids not used in the current period can be carried over to future
+ periods.
+ Then, the actual value of the good is revealed, and the auction begins.
+ The initial price of the good is $0.00, and the price goes up by $0.01 each
+ time a bid is placed.
+ The auction will have a lifespan of 20 second, but the timer will reset
+ if any bid is placed.
+ The person who submits the last bid when time expires wins the item.
+ Profits and and bid purchases are added to the initial balance.
+ If a subject's balance becomes negative, the he is no longer permitted
+ to bid.
+ He will be paid a participation fee, and will be free to leave the experiment.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To study the effects of planned variations in the number of bidders, I will
+ employ the within-subjects design used by Kagel and Levin (1986) in which
+ a set number of active bidders rotates between a larger set of total bidders.
+ In each session, I will have a total of 21 subjects who will be randomly
+ divided into two groups, one consisting of 7 bidders and the other consisting
+ of 14.
+ Four active bidders will rotate between the 7 total bidders in the first
+ group, and eight active bidders will rotate between the 14 total bidders
+ of the second group.
+ Finally, for the last few sessions of the experiment, I will randomly recruit
+ subjects who did not go bankrupt in the earlier sessions in order to study
+ the experience factor.
+\end_layout
+
+\end_body
+\end_document

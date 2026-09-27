@@ -1,0 +1,229 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Eliciting Individual Preferences
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+October 22, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Like the week before, the set of readings this week focused on individual
+ preferences.
+ Two of the papers, Hoffman 
+\emph on
+et al
+\emph default
+.
+ (1994) and List (2007), were concerned with the notion of 
+\begin_inset Quotes eld
+\end_inset
+
+fairness.
+\begin_inset Quotes erd
+\end_inset
+
+ The three remaining papers, Holt and Laury (2002); Dave, Eckel, and Johnson
+ (2010); and Andreoni and Sprenger (2012) conducted experiments in order
+ to elicit risk preferences and estimate risk aversion parameters.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Previous research on ulitmatum and dictator games have found that first
+ movers in such games tend to offer more than noncooperative game theory
+ predicts.
+ Hoffman 
+\emph on
+et al.
+ 
+\emph default
+(1994) researched different variations of these games and found that when
+ the right to be the first mover is 
+\begin_inset Quotes eld
+\end_inset
+
+earned,
+\begin_inset Quotes erd
+\end_inset
+
+ then first movers behave in a more self-regarding manner.
+ In addition, self-regarding offers increased in dictator double blind experimen
+ts.
+ Moreover, List (2007) found that when the action set allows for the dictator
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+take
+\begin_inset Quotes erd
+\end_inset
+
+ money from the other player, fewer agents are willing to transfer money.
+ In this setup, the first movers may believe that by simply electing not
+ to take money is a form of 
+\begin_inset Quotes eld
+\end_inset
+
+fairness.
+\begin_inset Quotes erd
+\end_inset
+
+ These experiments raise fundamental questions regarding the nature and
+ origins of 
+\begin_inset Quotes eld
+\end_inset
+
+fairness.
+\begin_inset Quotes erd
+\end_inset
+
+ Do people actually behave in a fair and caring manner, or are they more
+ concerned with how others perceive them? Are they truly giving out of the
+ goodness of their heart, or are they just attempting to satisfy some well-estab
+lished social norm? Further research is needed in order to test whether
+ or not honesty and sharing are best, rational policies in close-knit communitie
+s.
+ Do we still observe altruistic and fair behavior when no prior social relations
+hip has been established?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The three other papers mentioned attempted to measure an agent's preference
+ for risk and the risk aversion parameter associated with his/her utility
+ function.
+ Holt and Laury (2002) wanted to measure the degree of risk aversion over
+ a wide range of payoffs.
+ Depending on the level of the stakes, they believed a utility function
+ exhibiting increasing relative risk aversion, but decreasing absolute risk
+ aversion may offer better predicitons.
+ Dave, Eckel, and Johnson (2010) estimated the risk aversion parameter for
+ different categories of subjects using two distinct elicitation methods.
+ They found that using the simpler method to elicit risk preferences for
+ individuals with low math skills providing better predictions than the
+ more complicated method.
+ Finally, Andreoni and Sprenger (2012) estimated time preferences from convext
+ budget sets.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In regards to risk aversion, many of the papers I have read do not address
+ the fact that risk preferences may change depending on the situation.
+ While risk elicitation methods may be able to determine my general preferences
+ and tendencies towards risk, they are unable to account for every possible
+ scenario or change.
+ In fact, many psychological studies have shown that people are more risky
+ when they have an optimistic demeanor, as opposed to a pessimisstic one.
+ Individuals with a more negative outlook on life tend to exhibit higher
+ levels of risk aversion.
+ Furthermore, an agent's preferences towards risk will change depending
+ on the situation or the choices available.
+ How can we can account for these ever changing attitudes toward risk?
+\end_layout
+
+\end_body
+\end_document

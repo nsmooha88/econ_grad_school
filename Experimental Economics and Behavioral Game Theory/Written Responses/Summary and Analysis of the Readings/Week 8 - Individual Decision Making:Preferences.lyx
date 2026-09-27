@@ -1,0 +1,212 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Individual Decision Making/Preferences
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+October 15, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Individual decision making has always been at the heart of economic study.
+ In fact, economics is a social science primarily dedicated to the analysis
+ of how economic agents respond to incentives and make decisions in a world
+ with scarce resources.
+ Many early models utilized weak and genral assumptions about agent rationality
+ that enabled economists to generate strong market level results.
+ Recently, however, models have become increasingly sophisticated as the
+ issues of risk, uncertainty, and strategic decision making are taken into
+ account, which leads to stronger assumptions concerning agent rationality.
+ Consequently, it is more now more likely individual agents violate models
+ due to the additional, stricter assumptions.
+ Thus, experimental studies of individual decision making seem to focus
+ on how and why models are violated, along with the important implications
+ that arise.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Kahneman and Tversky (1979) offered a critique of expected utility theory
+ as a descriptive model of decision making under risk.
+ The authors analyzed a series of responses to hypothetical choice problems,
+ and they found numerous inconsistencies with the three axioms of expected
+ utility theory.
+ In particular, people underweight outcomes that are merely probably as
+ opposed to outcomes that happen with certainty.
+ Also, people disregard the common aspects of different lotteries.
+ To account for the several discrepancies their surveys revealed, the authors
+ present an alternative model, known as prospect theory.
+ In this model, value is assigned to gains and losses rather than to final
+ assets.
+ Moreover, probabilities are replaced by decision weights.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Kahneman, Knetsch, and Thaler (1990) looked to understand why measures of
+ willingness to accept greatly exceed measures of willingness to pay, contrary
+ to theoretical predictions.
+ They also analyzed the predictions of the Coase theorem.
+ In order to do this, they compared a series of market experiments for mugs
+ against a controlled market for 
+\begin_inset Quotes eld
+\end_inset
+
+induced-value
+\begin_inset Quotes erd
+\end_inset
+
+ tokens.
+ According to the theory, both markets should have produced identical results.
+ However, in the markets for mugs an evident 
+\begin_inset Quotes eld
+\end_inset
+
+endowment effect
+\begin_inset Quotes erd
+\end_inset
+
+ persists even in market settings with opportunities to learn.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Andersen, Harrison, Lau, and Rustrom (2008) designed experiments in order
+ to evalue the relationship between risk and time preferences.
+ Many models using dynamic expected utility functions assume agents are
+ risk-neutral, and then discount rates are estimated.
+ Yet, joint elicitation of risk and time preferences results in significantly
+ lower discount rates than separate elicitation of discount rates.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The experiments conducted by Brown, Chua, Camerer (2009) were used to assess
+ the two explanations for undersaving in lifecycle models: bounded rationality,
+ and a preference for immediacy.
+ It was found that subjects saved too little initially, but learned to save
+ optimally after repeated lifecycles.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is evident from the above descriptions about the assigned papers that
+ many of them have the same goals in mind: discern how and why models are
+ not always applicable in the real world.
+ These experiments tend to focus on the different assumptions that individuals
+ may violate.
+ Fewer experiments are constructed in order to explain the way people formulate
+ their preferences, or how they make decisions.
+ What motivates people to respond to positive and/or negative incentives?
+ These are some of the areas that are ripe with opportunities for additional
+ research and experimentation.
+\end_layout
+
+\end_body
+\end_document

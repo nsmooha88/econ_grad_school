@@ -1,0 +1,234 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Is Positive Or Negative Feedback More Effective?
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+October 1, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Environments with public goods provide a multitude of experimental opportunities
+ for researchers interested in the associated theoretical challenges and
+ problems.
+ Economists, sociologists, and political scientists have all attempted to
+ answer a fundamental question concerning the nature of human interaction:
+ are people selfish or cooperative? Research on the volutary provision of
+ public goods must come to grips with this simple but still unanswered question.
+ A reasonable reading of the literature on voluntary contributions will
+ lead one to conclude some of the major findings are: face to face communication
+ improves the rate of contribution, as well as the threat of possible punishment.
+ However, which method is more effective in improving the rate of contribution
+ to a public good? Also, if given the choice, would people choose to communicate
+, or would they just immediately dole out punishment?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+My experiment mirrors the design of Fehr and Gachter (2000).
+ The design consists of a public good experiment six treatment conditions.
+ Yet, in this experiment, individuals have the opportunity to communicate
+ with one another.
+ There is a 
+\begin_inset Quotes eld
+\end_inset
+
+Stranger
+\begin_inset Quotes erd
+\end_inset
+
+-treatment with and without punishment and/or communication opportunities,
+ and there is a 
+\begin_inset Quotes eld
+\end_inset
+
+Partner
+\begin_inset Quotes erd
+\end_inset
+
+-treatment with and without punishment and/or communication opportunities.
+ Under the 
+\begin_inset Quotes eld
+\end_inset
+
+Stranger
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+Partner
+\begin_inset Quotes erd
+\end_inset
+
+ treatments, I will analyze each of the following: (1) cohorts will have
+ no opportunity to punish or communicate; (2) cohorts are allowed to communicate
+ and punish; (3) cohorts must choose to either punish or communicate, but
+ they cannot do both.
+ In the Partner-treatment the same group of subjects plays a finitely repeated
+ public goods game for several periods, so the group composition does not
+ change across periods.
+ On the other hand, all of the cohorts in the the Stranger-treatment will
+ be randomly partitioned into smaller groups in each of the periods.
+ Important to note, while the notion of the 
+\begin_inset Quotes eld
+\end_inset
+
+Stranger
+\begin_inset Quotes erd
+\end_inset
+
+-treatment seems counter-intuitive in the presence of communication opportunitie
+s, the treatment itself is just meant to emphasize that cohorts are only
+ interacting for one period, as opposed to several periods.
+ The treatment with and without punishment and/or communication serves as
+ a control for the other two treatments.
+ Also, as Fehr and Cachter (2000) point out, the Partner-treatmnet allows
+ the opportunity to make within-subject comparisons as well as across-subject
+ comparisons.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As has been stated previously, the payoffs, parameters and information condition
+s closely mirror Fehr and Gachter (2000).
+ However, there are still some distinct differences.
+ When subjects are able to both communicate and punish, there will be two
+ additional stages along with the simultaneous contribution decision in
+ each period.
+ In this treatment, subjects are able to communicate with one another in
+ the first stage for a designated amount of time.
+ After communication ends, the typical public goods game is conducted.
+ Then, subjects are given the opportunity to simultaneously punish each
+ other in the third stage after they are informed about the individual contribut
+ions of the other group members.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The treatment in which subjects are able to choose between communication
+ is slightly more complicated.
+ At first, subjects will be randomly assigned punishment or communication,
+ and they will continue this process for a few periods until they are required
+ to switch.
+ Once all of the subjects have experienced punishment and communication,
+ they will then be allowed to make the decision on their own.
+ Before the public goods game starts, the subjects will be required to choose
+ between punishment and communication.
+ Those choosing to communicate will be allowed to send messages to their
+ other members of their group prior to the game beginning, even the ones
+ who did not choose to communicate.
+ However, the individuals who declined to communicate will be unable to
+ send responses, they can only receive messages.
+ Then, the public goods game proceeds as normal.
+ Finally, the people who chose punishment will be allowed to punish the
+ other other members of their group, and this process will proceed as described
+ before
+\end_layout
+
+\end_body
+\end_document

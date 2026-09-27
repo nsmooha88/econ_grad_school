@@ -1,0 +1,334 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Do Price Freezes or Subsidies Lead to Increased Enrollment?
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Date
+September 10, 2013
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+According to the US News, 80% of the fastest growing occupations in the
+ United States depend on the mastery of mathematics and scientific knowledge
+ and skills.
+ However, there has been a signficant shortage of qualified graduates with
+ the necessary skills to occupy these positions.
+ To address the issue, Florida Governor Rick Scott recently suggested that
+ students majoring in science, technology, engineering, and math (STEM)
+ programs be offered lower tuition than those studying in the liberal arts
+ or social sciences.
+ However, individuals associated with the liberal arts and social sciences
+ have began protesting the possible measure claiming that tuition disparity
+ is unjust.
+ Instead, they suggest offering students in STEM majors additional financial
+ aid subsidies to encourage enrollment in these programs, while preventing
+ tuition hikes for a large group of students.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+While this is a clear debate over public policy, an appropriate experiment
+ could provide a basis for an informed discussion concerning which policy
+ is more effective in achieving the intended outcome.
+ The experiment I have in mind consists of three stages with each being
+ a simple representation of a far more complicated process found in the
+ real world.
+\end_layout
+
+\begin_layout Itemize
+Stage 1: Subjects are given a fixed endowment.
+ They are given the option to choose between completing a series of math
+ problems, consisting of the four main operations of arithmetic, or a series
+ of 
+\begin_inset Quotes eld
+\end_inset
+
+sliding
+\begin_inset Quotes erd
+\end_inset
+
+ games.
+ To participate in either task, the subjects must pay a fixed price, which
+ will be altered by the experimenter.
+\end_layout
+
+\begin_layout Itemize
+Stage 2: In a preset amount of time, subjects will try to complete as many
+ problems as possible for their chosen task.
+ There will be a total of 50 sliders and 25 math problems.
+ The subjects will be told that their performance on these tasks will affect
+ the parameters of the lottery they receive in the next stage.
+\end_layout
+
+\begin_layout Itemize
+Stage 3: The subjects who chose the math problems will each receive a specific
+ lottery based on their performance in the previous stage
+\begin_inset Formula 
+\[
+L_{M}\sim U[a,b]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $a=\mbox{\# of correct problems}$
+\end_inset
+
+ and 
+\begin_inset Formula $b=a+25$
+\end_inset
+
+.
+ A random number will be drawn from this distribution, and this will be
+ the amount of compensation they receive.
+ The same setup applies to those subjects who chose the sliding games, but
+ their lotteries have a slightly difference construction
+\begin_inset Formula 
+\[
+L_{S}\sim U\left[c,d\right]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $c=\frac{\mbox{\# of properly completed sliders}}{2}-5$
+\end_inset
+
+ and 
+\begin_inset Formula $d=\mbox{\# of properly completed sliders}-10$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It is important to note that all subjects will be explained the entire setup
+ of the experiment so as to make the most informed decision possible in
+ the first stage.
+ The treatment variable of this experiment is the listed prices of the two
+ tasks in the first stage.
+ The first treatment of the experiment, acting as the control, will have
+ subjects choosing between the two tasks when prices are equal.
+ In the next treatment, the price of the math problems remains the same,
+ while the price of the sliders has increased.
+ Finally, the last treatment will offer a slight variation of the previous
+ two.
+ While the displayed prices of the two tasks will remain equal, the subjects
+ will be informed that if they choose to participate in the math problems,
+ they will be granted a small subsidy in addition to the compensation they
+ receive at the end of each trial.
+ A session will consist of running all three treatments with the same subjects.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The question we are trying to answer is this: Does a price freeze or a subsidy
+ encourage more individuals to choose the math problems? The theory predicts
+ that both designs will lead to the same outcome.
+ To illustrate this result, let 
+\begin_inset Formula $V_{S}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{M}$
+\end_inset
+
+ denote the total value subjects place on the sliding games and math problems,
+ respectively.
+ Note that these values incorporate the unknown compensation that subjects
+ receive as well as the effort they must expend to participate in either
+ task.
+ Thus, 
+\begin_inset Formula $V_{S}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{M}$
+\end_inset
+
+ are both random variables, and we assume they are both distributed normally
+ with respective means 
+\begin_inset Formula $\mu_{S}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu_{M}$
+\end_inset
+
+ and common variance 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+.
+ As a result,
+\begin_inset Formula 
+\[
+V_{S}-V_{M}\sim N(\mu_{S}-\mu_{M},2\sigma^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, the ex-ante expected payoff of subject 
+\begin_inset Formula $i$
+\end_inset
+
+ as a function of his chosen task is
+\begin_inset Formula 
+\begin{eqnarray*}
+\Pi_{i}(M) & = & V_{M}-P_{M}\\
+\Pi_{i}(S) & = & V_{S}-P_{S}
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $P_{M}$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{S}$
+\end_inset
+
+ are the given participation payments.
+ We can now determine the probability of person 
+\begin_inset Formula $i$
+\end_inset
+
+ choosing the math problems,
+\begin_inset Formula 
+\begin{eqnarray*}
+Pr_{i}(M) & = & P(\Pi_{i}(M)>\Pi_{i}(S))\\
+ & = & P(V_{M}-P_{M}>V_{S}-P_{S})\\
+ & = & P(P_{S}-P_{M}>V_{S}-V_{M})\\
+ & = & P(V_{S}-V_{M}<P_{S}-P_{M})\\
+ & = & P\left(\frac{V_{S}-V_{M}-\mu_{S}+\mu_{M}}{\sqrt{2}\sigma}<\frac{P_{S}-P_{M}-\mu_{S}+\mu_{M}}{\sqrt{2}\sigma}\right)\\
+ & = & \Phi\left(\frac{P_{S}-P_{M}-\mu_{S}+\mu_{M}}{\sqrt{2}\sigma}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Therefore, the probability of choosing the math problems should only depend
+ on the prices of the two tasks.
+ If the price freeze and subsidy both lead to the same inherent price difference
+ between the two tasks, then there should be no distinct change in the probabili
+ty of a subject choosing the math problems.
+ However, I believe there will be a greater response to the subsidy then
+ the price freeze.
+ In my opinion, the prospect of guaranteed additional compensation provides
+ a better incentive of choosing the math problems then raising the price
+ of the sliding games.
+\end_layout
+
+\end_body
+\end_document
