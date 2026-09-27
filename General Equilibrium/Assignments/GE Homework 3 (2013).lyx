@@ -1,0 +1,2059 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+General Equilibrium: Homework 3
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Problem
+Consider a pure exchange economy with 2 commodities and 2 agents 
+\begin_inset Formula $X_{i}=\mathbb{R}_{+}^{2}$
+\end_inset
+
+ , 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+.
+ Total resources are given by 
+\begin_inset Formula $(w^{m},w^{b})$
+\end_inset
+
+.
+ The first commodity is 
+\begin_inset Quotes eld
+\end_inset
+
+music
+\begin_inset Quotes erd
+\end_inset
+
+ and the second commodity is 
+\begin_inset Quotes eld
+\end_inset
+
+bread.
+\begin_inset Quotes erd
+\end_inset
+
+ Each agent's utility funciton is given as
+\begin_inset Formula 
+\[
+u_{1}(m_{1},b_{1})=m_{1}^{\nicefrac{3}{5}}b_{1}^{\nicefrac{2}{5}}-k_{1}\ \mbox{and}\ u_{2}(m_{2},b_{2})=m_{2}^{\nicefrac{3}{5}}b_{2}^{\nicefrac{2}{5}}-k_{2}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ represents the consumption time of music by agents 1 and 2, respectively,
+ 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{2}$
+\end_inset
+
+ represent the quantity of bread consumed by agents 1 and 2, respectively,
+ and 
+\begin_inset Formula $k_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{2}$
+\end_inset
+
+ are given constants.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What is the set of Pareto efficient points?
+\end_layout
+
+\begin_layout Enumerate
+Suppose the initial endowment for the first agent is 
+\begin_inset Formula $w_{1}=(\nicefrac{3}{2},\nicefrac{1}{2})$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}=(\nicefrac{1}{2},\nicefrac{3}{2})$
+\end_inset
+
+.
+ Compute the competitive equilibrium.
+\end_layout
+
+\begin_layout Enumerate
+Check whether or not the answer of part b are Pareto efficient.
+\end_layout
+
+\begin_layout Enumerate
+Suppose that each agent's utility function is changed as follows:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+\hat{u}_{1}(m_{1},m_{2},b_{1})=m_{1}^{\nicefrac{3}{5}}b_{1}^{\nicefrac{2}{5}}-m_{2}\ \mbox{and}\ \hat{u}_{2}(m_{1}m_{2},b_{2})=m_{2}^{\nicefrac{3}{5}}b_{2}^{\nicefrac{2}{5}}-m_{1}
+\]
+
+\end_inset
+
+One interpretation of the above utility function is that the consumption
+ of 
+\begin_inset Quotes eld
+\end_inset
+
+music
+\begin_inset Quotes erd
+\end_inset
+
+ by yourself increases your satisfaction, but someone else's consumption
+ of 
+\begin_inset Quotes eld
+\end_inset
+
+music
+\begin_inset Quotes erd
+\end_inset
+
+ decreases your satisfaction.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What is the critical level of total music endowment 
+\begin_inset Formula $\bar{w}^{m}$
+\end_inset
+
+ beyond which any balanced allocation is Pareto inefficient?
+\end_layout
+
+\begin_layout Enumerate
+What is the set of interior Pareto efficient points? (You need to give the
+ set of Pareto efficient allocations for two cases: 
+\begin_inset Formula $w^{m}\leq\bar{w}^{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $w^{m}>\bar{w}^{m}$
+\end_inset
+
+.) Compare this answer with part a.
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $w_{1}=(\nicefrac{3}{2},\nicefrac{1}{2})$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}=(\nicefrac{1}{2},\nicefrac{3}{2})$
+\end_inset
+
+.
+ Compute the competitive equilibrium.
+ Is this Pareto efficient?
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+An allocation is Pareto efficient if it is feasible and there is no other
+ feasible allocation such that one person would be better off and all other
+ persons are not worse off.
+ Since 
+\begin_inset Formula $u_{i}(x_{i})$
+\end_inset
+
+ is differentiable and quasi-concave, then a necessary and sufficient condition
+ for the interior points to be Parteo optimal (PO) is that 
+\begin_inset Formula $MRS_{m_{1},b_{1}}=MRS_{m_{2},b_{2}}$
+\end_inset
+
+.
+ Let us find each agent's MRS.
+\begin_inset Formula 
+\begin{eqnarray*}
+MRS_{m_{1},b_{1}} & = & \frac{\frac{3}{5}m_{1}^{-\nicefrac{2}{5}}b_{1}^{\nicefrac{2}{5}}}{\frac{2}{5}m_{1}^{\nicefrac{3}{5}}b_{1}^{-\nicefrac{3}{5}}}=\frac{3}{2}\frac{b_{1}}{m_{1}}\\
+MRS_{m_{2},b_{2}} & = & \frac{\frac{3}{5}m_{2}^{-\nicefrac{2}{5}}b_{2}^{\nicefrac{2}{5}}}{\frac{2}{5}m_{2}^{\nicefrac{3}{5}}b_{2}^{-\nicefrac{3}{5}}}=\frac{3}{2}\frac{b_{2}}{m_{2}}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the set of interior PO allocations is
+\begin_inset Formula 
+\[
+PO_{a}=\left\{ (x_{1},x_{2})\in X_{1}\times X_{2}:x_{1}+x_{2}=(w^{m},w^{b})^{\prime},\frac{b_{1}}{m_{1}}=\frac{b_{2}}{m_{2}}\right\} 
+\]
+
+\end_inset
+
+Now, consider the case when 
+\begin_inset Formula $m_{1}=0$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $u_{1A}(0,b_{1})=-k_{1}=u_{1B}(0,0)$
+\end_inset
+
+, so 
+\begin_inset Formula $\neg(b_{1}>0)$
+\end_inset
+
+ and 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $u_{2B}>u_{2A}$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\left[(0,0),(w_{m},w_{b})\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[(w_{m},w_{b}),(0,0)\right]$
+\end_inset
+
+ are also Pareto optimal.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $p=\frac{p_{b}}{p_{m}}$
+\end_inset
+
+.
+ Since each agent's preferences are monotone, then they are locally non-satiatie
+d.
+ So, the budget constraint holds with equality for both consumers, and thus,
+ Walras's Law holds.
+ Also, since both agents have Cobb-Douglas utility functions, then their
+ respective demand curves are
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{1}(p) & = & \left(\begin{array}{c}
+\frac{9}{10}+\frac{3}{10}p\\
+\frac{3}{5p}+\frac{1}{5}
+\end{array}\right)\\
+x_{2}(p) & = & \left(\begin{array}{c}
+\frac{3}{10}+\frac{9}{10}p\\
+\frac{1}{5p}+\frac{3}{5}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+To find the competitive equilibrium, we must find all 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{2}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\hat{z}(p)=\hat{x}(p)-\hat{w}=0$
+\end_inset
+
+.
+ Also, by Walras' Law, it is enough to show only one market clearing for
+ 
+\begin_inset Formula $L=2$
+\end_inset
+
+.
+ Let us consider the market for music.
+ By the market clearing condition, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{9}{10}+\frac{3}{10}p+\frac{3}{10}+\frac{9}{10}p & = & 2\\
+p & = & \frac{2}{3}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, a competitive equilibrium is given by:
+\begin_inset Formula 
+\[
+[x_{1}^{*}.x_{2}^{*},p^{*}]=\left[\left(\begin{array}{c}
+\nicefrac{11}{10}\\
+\nicefrac{11}{10}
+\end{array}\right),\left(\begin{array}{c}
+\nicefrac{9}{10}\\
+\nicefrac{9}{10}
+\end{array}\right),\left(\begin{array}{c}
+1\\
+\nicefrac{2}{3}
+\end{array}\right)\right]
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+Since preferences are locally non-satiated, then by the First Fundamental
+ Theorem of Welfare Economics, the competitive equilibrium allocation 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is Pareto efficient.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part d, Section 1
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $\frac{\partial u_{1}}{\partial m_{1}}\frac{\partial u_{2}}{\partial m_{2}}<\frac{\partial u_{1}}{m_{2}}\frac{\partial u_{2}}{m_{1}}$
+\end_inset
+
+ for any allocations that satisfy 
+\begin_inset Formula $m_{1}+m_{2}=w^{m}$
+\end_inset
+
+, 
+\begin_inset Formula $b_{1}+b_{2}=w^{b}$
+\end_inset
+
+, and 
+\begin_inset Formula $SMRS_{1}=SMRS_{2}$
+\end_inset
+
+, the social marginal rates of substitution must be negative.
+ Hence, the allocation will not be Pareto efficient.
+ By the SMRS equality condition, we have
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\frac{\partial u_{1}}{\partial m_{1}}}{\frac{\partial u_{1}}{\partial b_{1}}}+\frac{\frac{\partial u_{2}}{\partial m_{1}}}{\frac{\partial u_{2}}{\partial b_{2}}} & = & \frac{\frac{\partial u_{2}}{\partial m_{2}}}{\frac{\partial u_{2}}{\partial b_{2}}}+\frac{\frac{\partial u_{1}}{\partial m_{2}}}{\frac{\partial u_{1}}{\partial b_{1}}}\nonumber \\
+\frac{3}{2}\frac{b_{1}}{m_{1}}-\frac{5}{2}m_{2}^{-\nicefrac{3}{5}}b_{2}^{\nicefrac{3}{5}} & = & \frac{3}{2}\frac{b_{2}}{m_{2}}-\frac{5}{2}m_{1}^{-\nicefrac{3}{5}}b_{1}^{\nicefrac{3}{5}}\nonumber \\
+\frac{3}{2}\frac{b_{1}}{m_{1}}+\frac{5}{2}\left(\frac{b_{1}}{m_{1}}\right)^{\nicefrac{3}{5}} & = & \frac{3}{2}\frac{b_{2}}{m_{2}}+\frac{5}{2}\left(\frac{b_{2}}{m_{2}}\right)^{\nicefrac{3}{5}}
+\end{eqnarray}
+
+\end_inset
+
+and thus
+\begin_inset Formula 
+\begin{equation}
+\frac{b_{1}}{m_{1}}=\frac{b_{2}}{m_{2}}
+\end{equation}
+
+\end_inset
+
+Let 
+\begin_inset Formula $\bar{w}^{m}\equiv m_{1}+m_{2}$
+\end_inset
+
+.
+ Substituting 
+\begin_inset Formula $m_{1}+m_{2}=\bar{w}^{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{1}+b_{2}=w^{b}$
+\end_inset
+
+ into the equation (2), we have
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{b_{1}}{m_{1}} & = & \frac{(w^{b}-b_{1})}{(\bar{w}^{m}-m_{1})}\nonumber \\
+\frac{b_{1}}{m_{1}} & = & \frac{w^{b}}{\bar{w}^{m}}
+\end{eqnarray}
+
+\end_inset
+
+Then, by (2) and (3), we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial u_{1}}{\partial m_{1}}\frac{\partial u_{2}}{\partial m_{2}} & = & \frac{9}{25}\left(\frac{b_{1}}{m_{1}}\right)^{\nicefrac{2}{5}}\left(\frac{b_{2}}{m_{2}}\right)^{\nicefrac{2}{5}}\\
+ & = & \frac{9}{25}\left(\frac{w^{b}}{\bar{w}^{m}}\right)^{\nicefrac{4}{5}}
+\end{eqnarray*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\frac{\partial u_{1}}{m_{2}}\frac{\partial u_{2}}{m_{1}}=1
+\]
+
+\end_inset
+
+Setting joint marginal benefit equal to joint marginal cost, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial u_{1}}{\partial m_{1}}\frac{\partial u_{2}}{\partial m_{2}} & = & \frac{\partial u_{1}}{\partial m_{2}}\frac{\partial u_{2}}{\partial m_{1}}\\
+\frac{9}{25}\left(\frac{w^{b}}{\bar{w}^{m}}\right)^{\nicefrac{4}{5}} & = & 1\\
+\bar{w}^{m} & = & \left(\frac{9}{25}\right)^{\nicefrac{5}{4}}w^{b}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $\bar{w}^{m}=\left(\frac{9}{25}\right)^{\nicefrac{5}{4}}w^{b}$
+\end_inset
+
+ is the critical point that makes 
+\begin_inset Formula $\frac{\partial u_{1}}{\partial m_{1}}\frac{\partial u_{2}}{\partial m_{2}}-\frac{\partial u_{1}}{m_{2}}\frac{\partial u_{2}}{m_{1}}=0$
+\end_inset
+
+, or equivalently 
+\begin_inset Formula $\frac{\frac{\partial u_{1}}{\partial m_{1}}}{\frac{\partial u_{1}}{\partial b_{1}}}+\frac{\frac{\partial u_{2}}{\partial m_{1}}}{\frac{\partial u_{2}}{\partial b_{2}}}=\frac{\frac{\partial u_{2}}{\partial m_{2}}}{\frac{\partial u_{2}}{\partial b_{2}}}+\frac{\frac{\partial u_{1}}{\partial m_{2}}}{\frac{\partial u_{1}}{\partial b_{1}}}=0$
+\end_inset
+
+.
+ Therefore, if 
+\begin_inset Formula $\bar{w}^{m}>\left(\frac{9}{25}\right)^{\nicefrac{5}{4}}w^{b}$
+\end_inset
+
+, then 
+\begin_inset Formula $\frac{\partial u_{1}}{\partial m_{1}}\frac{\partial u_{2}}{\partial m_{2}}-\frac{\partial u_{1}}{m_{2}}\frac{\partial u_{2}}{m_{1}}<0$
+\end_inset
+
+, and any balanced allocation is Pareto inefficient.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part d, Section 2
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Case:
+\emph default
+ 
+\begin_inset Formula $w^{m}\leq\bar{w}^{m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $w^{m}<\bar{w}^{m}$
+\end_inset
+
+, then 
+\begin_inset Formula $\frac{\partial u_{1}}{\partial m_{1}}\frac{\partial u_{2}}{\partial m_{2}}-\frac{\partial u_{1}}{m_{2}}\frac{\partial u_{2}}{m_{1}}>0$
+\end_inset
+
+, and by Proposition 11.2.1, no Pareto optimal allocation requires destruction.
+ If 
+\begin_inset Formula $w^{m}=\bar{w}^{m}$
+\end_inset
+
+, then any allocation that satisfies the SMRS equality condition and the
+ balanced conditions 
+\begin_inset Formula $m_{1}+m_{2}=w^{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{1}+b_{2}=w^{b}$
+\end_inset
+
+ also satisfies 
+\begin_inset Formula $\frac{\partial u_{1}}{\partial m_{1}}\frac{\partial u_{2}}{\partial m_{2}}\geq\frac{\partial u_{1}}{m_{2}}\frac{\partial u_{2}}{m_{1}}$
+\end_inset
+
+, and thus it is a Pareto efficient allocation with no destruction.
+ Therefore, the set of interior Pareto efficient points is
+\begin_inset Formula 
+\[
+PO_{d}=\left\{ (x_{1},x_{2})\in X_{1}\times X_{2}:x_{1}+x_{2}=(w^{m},w^{b})^{\prime},\ \frac{b_{1}}{m_{1}}=\frac{b_{2}}{m_{2}}\right\} 
+\]
+
+\end_inset
+
+Note, this set is essentially equal to the set of Pareto optimal allocations
+ given in part a, i.e., 
+\begin_inset Formula $PO_{a}=PO_{d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Case: 
+\begin_inset Formula $w^{m}>\bar{w}^{m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $w^{m}>\bar{w}^{m}$
+\end_inset
+
+, then 
+\begin_inset Formula $\frac{\partial u_{1}}{\partial m_{1}}\frac{\partial u_{2}}{\partial m_{2}}-\frac{\partial u_{1}}{m_{2}}\frac{\partial u_{2}}{m_{1}}<0$
+\end_inset
+
+, and by Proposition 11.2.1, there is destruction in any Pareto efficient
+ allocation.
+ Therefore, the set of interior Pareto efficient points is
+\begin_inset Formula 
+\[
+PO_{d}=\left\{ (x_{1},x_{2})\in X_{1}\times X_{2}:\frac{b_{1}}{m_{1}}=\frac{b_{2}}{m_{2}},b_{1}+b_{2}=w^{b},m_{1}+m_{2}=w^{m}-D=\bar{w}^{m}\right\} 
+\]
+
+\end_inset
+
+where D is the amount of 
+\begin_inset Formula $w^{m}$
+\end_inset
+
+destroyed to achieve Pareto efficiency.
+\end_layout
+
+\begin_layout Standard
+Note that the set of Pareto optimal allocations has reduced compared to
+ the set given in part a, i.e., 
+\begin_inset Formula $PO_{d}\subseteq PO_{a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part d, Section 3
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $w_{1}=(\nicefrac{3}{2},\nicefrac{1}{2})$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}=(\nicefrac{1}{2},\nicefrac{3}{2})$
+\end_inset
+
+, then 
+\begin_inset Formula $w^{m}=2=w^{b}$
+\end_inset
+
+, and the competitive equilibrium will be the same as in part b.
+ However, 
+\begin_inset Formula $w^{m}=2>\left(\frac{9}{25}\right)^{\nicefrac{5}{4}}(2)=\bar{w}^{m}$
+\end_inset
+
+.
+ Thus, the competitive equilibrium allocation is not Pareto efficient unless
+ some music is taken away from the total endowment.
+\end_layout
+
+\begin_layout Problem
+Suppose that at fixed input prices of 
+\begin_inset Formula $\bar{w}$
+\end_inset
+
+, a firm produces output with the differentiable and stricly convex cost
+ function 
+\begin_inset Formula $c(q,h)$
+\end_inset
+
+, where 
+\begin_inset Formula $q\geq0$
+\end_inset
+
+, is its output level (whose price is 
+\begin_inset Formula $p>0$
+\end_inset
+
+) and 
+\begin_inset Formula $h$
+\end_inset
+
+ is the level of a negative externality generated by the firm.
+ The externality affects a single consumer, whose derived utility funciton
+ takes the form 
+\begin_inset Formula $\psi(h)+w$
+\end_inset
+
+.
+ The actions of the firm and consumer do not affect any market prices.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Derive the first-order condition for the firm's choice of 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Derive the first-order conditions characterizing the Pareto optimal levels
+ of 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose that the government taxes the firm's output level.
+ Show that this cannot restore efficiency.
+ Show that a direct tax on the externality can restore efficiency.
+\end_layout
+
+\begin_layout Enumerate
+Show, however, that in the limiting case where 
+\begin_inset Formula $h$
+\end_inset
+
+ is necessarily produced in fixed proportions with 
+\begin_inset Formula $q$
+\end_inset
+
+, so that 
+\begin_inset Formula $h(q)=\alpha q$
+\end_inset
+
+ for some 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+, a tax on the firm's output can restore efficiency.
+ What is the efficiency-restoring tax?
+\end_layout
+
+\end_deeper
+\begin_layout Note*
+The solution can be found in Chapter 11 of Mas-Colell.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+The firm will choose its output level of 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+ to maximize its profit function
+\begin_inset Formula 
+\[
+\max_{q,h}\ pq-c(q,h)
+\]
+
+\end_inset
+
+Taking partial derivatives, we derive the first-order conditions for the
+ firm's choice of 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+c_{q}(q,h) & = & p\\
+c_{h}(q,h) & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+To find the Pareto optimal levels of 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+, we wish to maximize the utilitarian social welfare function
+\begin_inset Formula 
+\[
+\max_{q,h}\ pq-c(q,h)+\psi(h)+w
+\]
+
+\end_inset
+
+Since utility and profit are quasi-linear, then the weights placed on the
+ consumer and the producer are equal to 1.
+ Taking partial derivatives, we derive the first-order conditions for the
+ Pareto optimal levels of 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+c_{q}(q,h) & = & p\\
+c_{h}(q,h) & = & \psi^{\prime}(h)
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the set of Pareto optimal levels of 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+PO=\left\{ (q,h)\in\mathbb{R}_{+}^{2}:p=c_{q}(q,h),c_{h}(q,h)=\psi^{\prime}(h)\right\} 
+\]
+
+\end_inset
+
+Therefore, the amount of 
+\begin_inset Formula $h$
+\end_inset
+
+ the firm chooses to produce is not Pareto optimal.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ The government taxes the firm's output level
+\end_layout
+
+\begin_layout Standard
+The firm will choose its output level of 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+ to maximize its profit function
+\begin_inset Formula 
+\[
+\max_{q,h}\ (p-t)q-c(q,h)
+\]
+
+\end_inset
+
+Taking partial derivatives, we derive the first-order conditions for the
+ firm's choice of 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+c_{q}(q,h) & = & p-t\\
+c_{h}(q,h) & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+The first-order condition for 
+\begin_inset Formula $h$
+\end_inset
+
+ is still the same as in part a.
+ Thus, government taxes on the firm's output level will not restore efficiency.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ The government issues a direct tax on the externality
+\end_layout
+
+\begin_layout Standard
+The firm will choose its output level of 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+ to maximize its profit function
+\begin_inset Formula 
+\[
+\max_{q,h}\ pq-c(q,h)-ht
+\]
+
+\end_inset
+
+Taking partial derivatives, we derive the first-order conditions for the
+ firm's choice of 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+c_{q}(q,h) & = & p\\
+-c_{h}(q,h) & = & t
+\end{eqnarray*}
+
+\end_inset
+
+From part b, we found that 
+\begin_inset Formula $c_{h}(q,h)=\psi^{\prime}(h)$
+\end_inset
+
+ is a necessary condition to achieve the Pareto optimal level of 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ Thus, if 
+\begin_inset Formula $t=-\psi^{\prime}(h)$
+\end_inset
+
+, then efficiency is restored.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part d.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $h(q)=\alpha q$
+\end_inset
+
+ for some 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+.
+ To find the Pareto optimal level of 
+\begin_inset Formula $q$
+\end_inset
+
+, we wish to maximize the new utilitarian social welfare function
+\begin_inset Formula 
+\[
+\max_{q}\ pq-c(q,\alpha q)+\psi(\alpha q)+w
+\]
+
+\end_inset
+
+Since utility and profit are quasi-linear, then the weights placed on the
+ consumer and the producer are equal to 1.
+ Taking the derivative of the function, we derive the first-order condition
+ for the Pareto optimal level of 
+\begin_inset Formula $q$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+p-c_{q}(q,\alpha q)-\alpha c_{h}(q,\alpha q)+\alpha\psi^{\prime}(\alpha q)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose the government decides to levy a tax on the firm's output.
+ So, the firm will choose its output level of 
+\begin_inset Formula $q$
+\end_inset
+
+ to maximize its profit function:
+\begin_inset Formula 
+\[
+\max_{q}\ (p-t)q-c(q,\alpha q)
+\]
+
+\end_inset
+
+Taking the derivative of the function with respect to 
+\begin_inset Formula $q$
+\end_inset
+
+, we derive the first-order condition for the firm's choice of 
+\begin_inset Formula $q$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+p-t-c_{q}(q,\alpha q)-\alpha c_{h}(q,\alpha q) & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+In order to achieve the socially optimal level of 
+\begin_inset Formula $q$
+\end_inset
+
+, we want to make the first-order condition of the firm the same as the
+ first-order condition of the social welfare function.
+ When this happens, the firm will internalize the externality and choose
+ the socially optimal level of 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ Thus, the efficiency-restoring tax is 
+\begin_inset Formula $t=-\alpha\psi^{\prime}(\alpha q)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Lake Ec can be freely accessed by fishermen.
+ The cost of sending a boat out on the lake is 
+\begin_inset Formula $r>0$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $b$
+\end_inset
+
+ boats are sent out onto the lake, 
+\begin_inset Formula $f(b)$
+\end_inset
+
+ fish are caught in total (so each boat catches 
+\begin_inset Formula $\nicefrac{f(b)}{b}$
+\end_inset
+
+ fish), where 
+\begin_inset Formula $f^{\prime}(b)>0$
+\end_inset
+
+ and 
+\begin_inset Formula $f^{\prime\prime}(b)<0$
+\end_inset
+
+ at all 
+\begin_inset Formula $b\geq0$
+\end_inset
+
+.
+ The price of fish is 
+\begin_inset Formula $p>0$
+\end_inset
+
+, which is unaffected by the level of catch from Lake Ec.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Characterize the equilibrium number of boats that are sent out on the lake.
+\end_layout
+
+\begin_layout Enumerate
+Characterize the optimal number of boats that should be sent out on the
+ lake.
+ Compare this with your answer in part a.
+\end_layout
+
+\begin_layout Enumerate
+What pre-boat fishing tax would restore efficiency?
+\end_layout
+
+\begin_layout Enumerate
+Suppose that the lake is instead owned by a signle individual who can choose
+ how many boats to send out.
+ What level would this owner choose?
+\end_layout
+
+\end_deeper
+\begin_layout Note*
+The solution can be found in Chapter 11 of Mas-Colell.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+Let us consider the choice of an individual fisherman of whether or not
+ to take his boat out to go fishing.
+ The fisherman wishes to maximize his payoff function
+\begin_inset Formula 
+\[
+\max_{x}\ x\left(p\frac{f(b)}{b}-r\right)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $b$
+\end_inset
+
+ is the number of boats sent out onto the lake, but it is fixed for an individua
+l fisherman.
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ represents the fisherman's choice function and is defined as follows
+\begin_inset Formula 
+\[
+x=\begin{cases}
+1 & \mbox{if}\ p\frac{f(b)}{b}>r\\
+0 & \mbox{otherwise}
+\end{cases}
+\]
+
+\end_inset
+
+If 
+\begin_inset Formula $p\frac{f(b)}{b}>r$
+\end_inset
+
+, then every fisherman will choose to go fishing, and eventually 
+\begin_inset Formula $p\frac{f(b)}{b}-r<0$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $p\frac{f(b)}{b}<r$
+\end_inset
+
+, then no fishermen will go onto the lake.
+ Thus, equilibrium occurs when
+\begin_inset Formula 
+\begin{equation}
+p\frac{f(b)}{b}=r
+\end{equation}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+The socially optimal number of boats that should be sent out on the lake
+ will maximize the collective payoffs of all the fishermen
+\begin_inset Formula 
+\[
+\max_{b}\ pf(b)-rb
+\]
+
+\end_inset
+
+Taking the derivative of the function with respect to 
+\begin_inset Formula $b$
+\end_inset
+
+, we derive the first-order condition for the optimal number of boats
+\begin_inset Formula 
+\begin{equation}
+pf^{\prime}(b^{*})=r
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $b^{*}$
+\end_inset
+
+ is the number of boats that satisfies this first-order condition.
+ In part a, the number of boats on the lake will be too large from a social
+ point of view because an individual fisherman only takes account of his
+ own payoff.
+ He ignores the fact that as the number of boats sent out onto the lake
+ increases beyond a critical level 
+\begin_inset Formula $\bar{b}$
+\end_inset
+
+, the amount of fish he catches will decrease due to decreasing marginal
+ returns of 
+\begin_inset Formula $f(b)$
+\end_inset
+
+.
+ In part b, we find the optimal number of boats by maximizing the social
+ profit of the fishermen.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+If a pre-boat fishing tax is levied on the fishermen, then by equation (4),
+ the new equilibrium condition becomes
+\begin_inset Formula 
+\begin{eqnarray}
+p\frac{f(b)}{b} & = & r+t\nonumber \\
+r & = & p\frac{f(b)}{b}-t
+\end{eqnarray}
+
+\end_inset
+
+So, by equations (5) and (6), we have
+\begin_inset Formula 
+\begin{eqnarray}
+pf^{\prime}(b^{*}) & = & p\frac{f(b)}{b}-t\nonumber \\
+t & = & p\frac{f(b)}{b}-pf^{\prime}(b^{*})
+\end{eqnarray}
+
+\end_inset
+
+Thus, the 
+\begin_inset Formula $t$
+\end_inset
+
+ given by equation (7) is the pre-boat tax that would restore efficiency.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part d.
+\end_layout
+
+\begin_layout Standard
+If the lake is owned by a single individual, then his decision concerning
+ the number of boats to send out mirrors the problem presented in part b.
+ Thus, he will choose the socially optimal level of boats, 
+\begin_inset Formula $b^{*}$
+\end_inset
+
+, to send out onto the lake.
+\end_layout
+
+\begin_layout Problem
+Let there be 
+\begin_inset Formula $n$
+\end_inset
+
+ individuals who consume one private good 
+\begin_inset Formula $x$
+\end_inset
+
+ and one public good 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Each individual 
+\begin_inset Formula $i$
+\end_inset
+
+ is endowed with 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ units of private good.
+ There are no initial endowments for the public good, but the public good
+ can be produced form the private good, according to a production technology
+\begin_inset Formula 
+\[
+y=\frac{1}{q}v
+\]
+
+\end_inset
+
+The utility function of individual 
+\begin_inset Formula $i$
+\end_inset
+
+ is denoted by 
+\begin_inset Formula $u_{i}(x_{i},y)$
+\end_inset
+
+ which is continuously differentiable satisfies
+\begin_inset Formula 
+\[
+\frac{\partial u_{i}}{\partial x_{i}}>0\ \ \forall\ i=1,2,\ldots,n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Define the Lindahl equilibrium and Pareto efficiency for this economy.
+\end_layout
+
+\begin_layout Enumerate
+For interior Pareto efficiency, is it necessary that all individuals have
+ the same marginal rate of substitution, i.e., that 
+\begin_inset Formula 
+\[
+\frac{\frac{\partial u_{1}}{y_{1}}}{\frac{\partial u_{1}}{\partial x_{1}}}=\frac{\frac{\partial u_{2}}{y_{2}}}{\frac{\partial u_{2}}{\partial x_{2}}}=\cdots=\frac{\frac{\partial u_{n}}{y_{n}}}{\frac{\partial u_{n}}{\partial x_{n}}}
+\]
+
+\end_inset
+
+If yes, give proof.
+ If not, give a counter example.
+\end_layout
+
+\begin_layout Enumerate
+Suppose the utility functions are of the quasi-linear form 
+\begin_inset Formula $u_{i}=x_{i}+v_{i}(y)$
+\end_inset
+
+ with 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ stricly increasing, strictly concave, and continuously differentiable.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+At interior Pareto efficient solutions 
+\begin_inset Formula $(x_{1}^{*},x_{2}^{*},\ldots,x_{n}^{*},y)$
+\end_inset
+
+, does the optimal amount of 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+ of public good vary depending on 
+\begin_inset Formula $(x_{1}^{*},x_{2}^{*},\ldots,x_{n}^{*})$
+\end_inset
+
+? Why or why not?
+\end_layout
+
+\begin_layout Enumerate
+Is the answer to the previous question different when quasi-linearity is
+ not assumed? Why or why not?
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $n=2,w_{1}=5,w_{2}=4$
+\end_inset
+
+, the production function is 
+\begin_inset Formula $y=\frac{1}{2}v$
+\end_inset
+
+, and the utility functions are
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{1} & = & x_{1}+\alpha\ln y\\
+u_{2} & = & x_{2}+\beta\ln y
+\end{eqnarray*}
+
+\end_inset
+
+Find the Lindahl equilibrium for this economy.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(Lindahl Equilibrium, one private good and one public good) 
+\series default
+An allocation 
+\begin_inset Formula $(x^{*},y^{*})\in\mathbb{R}^{n+1}$
+\end_inset
+
+ is a Lindahl equilibrium if it is feasible and there exists a personalized
+ price vectors 
+\begin_inset Formula $q_{i}^{*}\in\mathbb{R}_{+}$
+\end_inset
+
+, one for each individual 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+, such that
+\end_layout
+
+\begin_layout Definition*
+(i) 
+\begin_inset Formula $x_{i}^{*}+q_{i}^{*}y^{*}\leq w_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+(ii) 
+\begin_inset Formula $(x_{i},y)\succ_{i}(x_{i}^{*},y^{*})$
+\end_inset
+
+ implies 
+\begin_inset Formula $x_{i}+q_{i}^{*}y>w_{i}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition*
+(iii) 
+\begin_inset Formula $\sum_{i=1}^{n}q_{i}^{*}=q^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+We call 
+\begin_inset Formula $(x^{*},y^{*},q_{1}^{*},\ldots,q_{n}^{*})$
+\end_inset
+
+ a Lindahl Equilibrium.
+\end_layout
+
+\begin_layout Standard
+An allocation 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ is 
+\emph on
+Pareto efficient
+\emph default
+ for a public goods economy 
+\begin_inset Formula $e$
+\end_inset
+
+ if it is feasible and there is no other feasible allocation 
+\begin_inset Formula $(x^{\prime},y^{\prime})$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ i\in N:(x_{i}^{\prime},y^{\prime})\succsim_{i}(x_{i},y)$
+\end_inset
+
+ and 
+\begin_inset Formula $\exists\ k:(x_{k}^{\prime},y^{\prime})\succ_{k}(x_{k},y)$
+\end_inset
+
+.
+ The conditions for Pareto efficiency are given by the feasibility constraints
+ and the Lindahl-Samuelson condition
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{i=1}^{n}\frac{\frac{\partial u_{i}}{\partial y}}{\frac{\partial u_{i}}{\partial x_{i}}} & = & \frac{1}{f^{\prime}(v)}\\
+\sum_{i=1}^{n}x_{i}+v & \leq & \sum_{i=1}^{n}w_{i}\\
+y & = & f(v)
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+For interior Pareto efficiency, it is not necessary that all individuals
+ have the same marginal rate of substitution
+\end_layout
+
+\begin_layout Standard
+For example, let 
+\begin_inset Formula $n=2,L=1,K=1$
+\end_inset
+
+.
+ Let each agent have the following utility function, 
+\begin_inset Formula $u_{i}=x_{i}y$
+\end_inset
+
+, and let the production function for the public good be 
+\begin_inset Formula $y=\frac{v}{q}$
+\end_inset
+
+.
+ Suppose 
+\begin_inset Formula $x_{1}\neq x_{2}$
+\end_inset
+
+.
+ So, we have
+\begin_inset Formula 
+\[
+MRS_{yx_{1}}=\frac{x_{1}}{y}\neq\frac{x_{2}}{y}=MRS_{yx_{2}}
+\]
+
+\end_inset
+
+However, we can still have Pareto optimality.
+ By the Lindahl-Samuelson condition, we have
+\begin_inset Formula 
+\[
+\frac{x_{1}}{y}+\frac{x_{2}}{y}=q
+\]
+
+\end_inset
+
+and from the production function for 
+\begin_inset Formula $y$
+\end_inset
+
+ we get
+\begin_inset Formula 
+\[
+x_{1}+x_{2}=v
+\]
+
+\end_inset
+
+By the feasibility constraint, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{1}+x_{2}+v & = & w_{1}+w_{2}\\
+v & = & \frac{w_{1}+w_{2}}{2}
+\end{eqnarray*}
+
+\end_inset
+
+which implies that 
+\begin_inset Formula 
+\[
+x_{1}+x_{2}=\frac{w_{1}+w_{2}}{2}
+\]
+
+\end_inset
+
+Thus, the allocation
+\begin_inset Formula 
+\[
+[x_{1}^{*},x_{2}^{*},y^{*}]=\left[\frac{3}{8}(w_{1}+w_{2}),\frac{1}{8}(w_{1}+w_{2}),\frac{w_{1}+w_{2}}{2q}\right]
+\]
+
+\end_inset
+
+is Pareto optimal, but the marginal rate of substitution of the agents is
+ not equal.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c, Section 1
+\end_layout
+
+\begin_layout Standard
+In the case of quasi-linear functions,
+\begin_inset Formula 
+\[
+u_{i}(x_{i},y)=x_{i}+v_{i}(y)
+\]
+
+\end_inset
+
+the Lindahl-Samuelson condition becomes
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}u_{i}^{\prime}(y)=\frac{1}{f^{\prime}(v)}\equiv c^{\prime}(y)
+\]
+
+\end_inset
+
+and thus 
+\begin_inset Formula $y$
+\end_inset
+
+ is uniquely determined.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c, Section 2
+\end_layout
+
+\begin_layout Standard
+The answer to the previous question will be different when quai-linearity
+ is not assumed.
+ In general, the marginal willingness-to-pay for a public good depends on
+ the amount of private goods consumed, and therefore, the efficient level
+ of 
+\begin_inset Formula $y$
+\end_inset
+
+ depends on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ This result is characterized by the Lindahl-Samuelson condition
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}\frac{\frac{\partial u_{i}}{\partial y}}{\frac{\partial u_{i}}{\partial x_{i}}}=\frac{1}{f^{\prime}(v)}
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part c, Section 3
+\end_layout
+
+\begin_layout Standard
+In a Lindahl equilibrium, each agent is assigned a specific 
+\begin_inset Quotes eld
+\end_inset
+
+personalized price,
+\begin_inset Quotes erd
+\end_inset
+
+ i.e., 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+, for the public good.
+ For simplicity, we normalize the price of the private good to one.
+ 
+\end_layout
+
+\begin_layout Standard
+Agent 1 wishes to maximize his utility
+\begin_inset Formula 
+\[
+u_{1}=x_{1}+\alpha\ln y
+\]
+
+\end_inset
+
+subject to his budget constraint
+\begin_inset Formula 
+\[
+x_{1}+q_{1}y=5
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $y=\frac{1}{2}v$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After substituting 
+\begin_inset Formula $x_{1}=5-q_{1}y$
+\end_inset
+
+ into the utility function, we take the derivative of the function with
+ respect to 
+\begin_inset Formula $y$
+\end_inset
+
+ to derive the first-order condition
+\begin_inset Formula 
+\begin{eqnarray*}
+-q_{1}+\frac{\alpha}{y} & = & 0\\
+y & = & \frac{\alpha}{q_{1}}
+\end{eqnarray*}
+
+\end_inset
+
+So, when 
+\begin_inset Formula $\alpha<5$
+\end_inset
+
+, the demand functions for 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ are given by
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{1} & = & 5-\alpha\\
+y_{1} & = & \frac{\alpha}{q_{1}}
+\end{eqnarray*}
+
+\end_inset
+
+Agent 2 wishes to maximize his utility
+\begin_inset Formula 
+\[
+u_{2}=x_{2}+\beta\ln y
+\]
+
+\end_inset
+
+subject to his budget constraint
+\begin_inset Formula 
+\[
+x_{2}+q_{2}y=4
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $y=\frac{1}{2}v$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After substituting 
+\begin_inset Formula $x_{2}=4-q_{2}y$
+\end_inset
+
+ into the utility function, we take the derivative of the function with
+ respect to 
+\begin_inset Formula $y$
+\end_inset
+
+ to derive the first order condition
+\begin_inset Formula 
+\begin{eqnarray*}
+-q_{2}+\frac{\beta}{y} & = & 0\\
+y & = & \frac{\beta}{q_{2}}
+\end{eqnarray*}
+
+\end_inset
+
+So, when 
+\begin_inset Formula $\beta<4$
+\end_inset
+
+, the demand function for 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ are given by
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{2} & = & 4-\beta\\
+y_{2} & = & \frac{\beta}{q_{2}}
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $y_{1}=y_{2}=y^{*}$
+\end_inset
+
+ at the equilibrium, we have
+\begin_inset Formula 
+\begin{eqnarray}
+q_{1}y^{*} & = & \alpha\\
+q_{2}y^{*} & = & \beta
+\end{eqnarray}
+
+\end_inset
+
+Taking summation we have
+\begin_inset Formula 
+\[
+qy^{*}=\alpha+\beta
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $q=q_{1}+q_{2}$
+\end_inset
+
+.
+ Then, we have
+\begin_inset Formula 
+\[
+y^{*}=\frac{\alpha+\beta}{q}
+\]
+
+\end_inset
+
+By equation (8) and (9), we have
+\begin_inset Formula 
+\begin{eqnarray*}
+q_{1} & = & q\frac{\alpha}{\alpha+\beta}\\
+q_{2} & = & q\frac{\beta}{\alpha+\beta}
+\end{eqnarray*}
+
+\end_inset
+
+Note, we have the case of a public economy with one private good and one
+ public good where 
+\begin_inset Formula $y=\frac{1}{q}v=\frac{1}{2}v$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $q=2$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\[
+y^{*}=\frac{\alpha+\beta}{2}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{eqnarray*}
+q_{1} & = & 2\frac{\alpha}{\alpha+\beta}\\
+q_{2} & = & 2\frac{\beta}{\alpha+\beta}
+\end{eqnarray*}
+
+\end_inset
+
+Now, when 
+\begin_inset Formula $\alpha\geq5$
+\end_inset
+
+, we have 
+\begin_inset Formula $x_{1}=0$
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+y_{1}=\frac{5}{q_{1}}
+\]
+
+\end_inset
+
+In addition, when 
+\begin_inset Formula $\alpha\geq4$
+\end_inset
+
+, we have 
+\begin_inset Formula $x_{2}=0$
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+y_{2}=\frac{4}{q_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, the set of Lindahl equilibria for this economy is 
+\begin_inset Formula $\left(\left[z_{1}^{*},z_{2}^{*},p^{*},q_{1}^{*},q_{2}^{*}\right]\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\alpha<5,\ \beta<4$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\left(\begin{array}{c}
+5-\alpha\\
+\frac{\alpha+\beta}{2}
+\end{array}\right),\left(\begin{array}{c}
+4-\beta\\
+\frac{\alpha+\beta}{2}
+\end{array}\right),1,2\frac{\alpha}{\alpha+\beta},2\frac{\beta}{\alpha+\beta}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\alpha\geq5,\ \beta<4$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\left(\begin{array}{c}
+0\\
+\frac{5+\beta}{2}
+\end{array}\right),\left(\begin{array}{c}
+4-\beta\\
+\frac{5+\beta}{2}
+\end{array}\right),1,2\frac{5}{5+\beta},2\frac{\beta}{5+\beta}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\alpha<5,\ \beta\geq4$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\left(\begin{array}{c}
+5-\alpha\\
+\frac{\alpha+4}{2}
+\end{array}\right),\left(\begin{array}{c}
+0\\
+\frac{\alpha+4}{2}
+\end{array}\right),1,2\frac{\alpha}{\alpha+4},2\frac{4}{\alpha+4}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\alpha\geq5,\ \beta\geq4$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\left(\begin{array}{c}
+0\\
+\frac{9}{2}
+\end{array}\right),\left(\begin{array}{c}
+0\\
+\frac{9}{2}
+\end{array}\right),1,2\frac{5}{9},2\frac{4}{9}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

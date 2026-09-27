@@ -1,0 +1,1949 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+General Equilibrium: Homework 1 (2012)
+\end_layout
+
+\begin_layout Problem
+Consider a pure exchange economy with indivisibilities in consumption.
+ Suppose that there are 
+\begin_inset Formula $n$
+\end_inset
+
+ traders (indexed by subscripts 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+) and each trader 
+\begin_inset Formula $i$
+\end_inset
+
+ has a consumption set 
+\begin_inset Formula $X_{i}=\mathbb{N}_{+}^{L}$
+\end_inset
+
+, where 
+\begin_inset Formula $x_{il}$
+\end_inset
+
+ is an integer for each 
+\begin_inset Formula $l=1,\ldots,l$
+\end_inset
+
+, an intial endowment vector 
+\begin_inset Formula $w_{i}\in X_{i}$
+\end_inset
+
+ with 
+\begin_inset Formula $w_{i}\gg0$
+\end_inset
+
+, and preferences 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+, which are asusmed to be complete preorders on 
+\begin_inset Formula $X_{i}\ \forall\ i$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Give some examples of commodities that are likely to be available or consumed
+ in integer amounts.
+\end_layout
+
+\begin_layout Enumerate
+True or false and explain why: For this ecnomy, the asusmption that preferences
+ are continuous is innocuous.
+\end_layout
+
+\begin_layout Enumerate
+Define monotonicity and strict monotonicity of preferences for this economy.
+\end_layout
+
+\begin_layout Enumerate
+Can you define convexity of preferences for this economy? Either state a
+ definition or explain why a definition cannot be given.
+\end_layout
+
+\begin_layout Enumerate
+Is it reasonable to assume, in this economy, that preferences are locally
+ non-satiated?
+\end_layout
+
+\begin_layout Enumerate
+Does such an economy (assuming that preferences satisfy as many of the above
+ properties as possible) necessarily have a competitive equilibrium? Explain
+ why or why not?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+Phone, car, laptop, etc.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+For this economy, the asusmption that preferences are continuous is innocuous.
+ This is because every subset of 
+\begin_inset Formula $X_{i}\times X_{i}$
+\end_inset
+
+ is closed, so preferences are trivially continuous.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+Strict monotonicity: 
+\begin_inset Formula $\forall\ \{x_{i},x_{i}^{\prime}\}\subseteq X_{i}:x_{i}\gneq x_{i}^{\prime}\implies x_{i}\succ_{i}x_{i}^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Monotonicity: 
+\begin_inset Formula $\forall\ \{x_{i},x_{i}^{\prime}\}\subseteq X_{i}:x_{i}\gg x_{i}^{\prime}\implies x_{i}\succ_{i}x_{i}^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part d.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ is indivisible, then 
+\begin_inset Formula $\forall x_{i}\in X_{i},\forall\ \lambda\in(0,1):\lambda x_{i}\notin X_{i}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\forall\ \{x_{i},x_{i}^{\prime}\}\subseteq X_{I},\forall\ \lambda\in(0,1):\lambda x_{i}+(1-\lambda)x_{i}^{\prime}\notin X_{i}$
+\end_inset
+
+.
+ Thus, a definition of convexity cannot be given because goods are indivisible.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part e.
+\end_layout
+
+\begin_layout Standard
+In this economy, it is not reasonable to assume that preferences are locally
+ non-satiated because 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ is indivisible.
+ To elaborate, 
+\begin_inset Formula $\forall\ x_{i}\in X_{i}$
+\end_inset
+
+ and any neighborhood 
+\begin_inset Formula $N(x_{i})$
+\end_inset
+
+, where 
+\begin_inset Formula $\forall\ \epsilon>0:N(x_{i})=\{x_{i}^{\prime}\in X_{i}:|x_{i}-x_{i}^{\prime}|<\epsilon\}$
+\end_inset
+
+, there may not exist 
+\begin_inset Formula $x_{i}^{\prime}\in N(x_{i}):x_{i}^{\prime}\succ_{i}x_{i}$
+\end_inset
+
+ for some 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+.
+ For example, if 
+\begin_inset Formula $\epsilon=\nicefrac{1}{2}$
+\end_inset
+
+, then 
+\begin_inset Formula $N(x_{i})=\{x_{i}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}\nsucc_{i}x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part f.
+\end_layout
+
+\begin_layout Standard
+Suppose 
+\begin_inset Formula $N=L=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w_{i1}=w_{i2}=1$
+\end_inset
+
+, so 
+\begin_inset Formula $\hat{w}=(2,2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{1}(x_{11},x_{12})=x_{11}^{2}+2x_{12}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{2}(x_{21},x_{22})=x_{21}^{2}+2x_{22}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Preferences are continuous and strictly monotone.
+ Let 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Note, 
+\begin_inset Formula $\forall\ i=1,2:u_{i}(0,2)>u_{i}(2,0)>u_{i}(1,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $p_{1}\geq p_{2}$
+\end_inset
+
+, then 
+\begin_inset Formula $x_{12}(p)=x_{22}(p)\geq2$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\hat{z}_{2}(p)=\hat{x}_{2}(p)-\hat{w}_{2}>2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $p_{1}<p_{2}$
+\end_inset
+
+, then 
+\begin_inset Formula $x_{11}(p)=x_{21}(p)\geq2$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\hat{z}_{i}(p)=\hat{x}_{1}(p)-\hat{w}_{1}>2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $\nexists\ p\in\mathbb{R}_{+}^{2}:\hat{z}(p)\leq0$
+\end_inset
+
+.
+ Therefore, such an economy does not necessarily have a competitive equilibrium.
+\end_layout
+
+\begin_layout Problem
+Consider a pure exchange economy with two persons and two commodities.
+ The consumption spaces are given by 
+\begin_inset Formula $X_{i}=\mathbb{R}_{+}^{2}$
+\end_inset
+
+.
+ Consumer 1 has a utility function 
+\begin_inset Formula $u_{1}:\mathbb{R}_{+}^{2}\rightarrow\mathbb{R}$
+\end_inset
+
+ given by
+\begin_inset Formula 
+\[
+u_{1}(x_{1},y_{1})=x_{1}+2y_{1}
+\]
+
+\end_inset
+
+and consumer 2's prefernces are lexicographic, with 
+\begin_inset Formula $x$
+\end_inset
+
+ as the primary commodity, over the set of bundles 
+\begin_inset Formula $(x_{2},y_{2})$
+\end_inset
+
+.
+ Let each consumer's initial endowment be 
+\begin_inset Formula $w_{i}=\left(1,\nicefrac{1}{2}\right)$
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Draw an Edgeworth Box for this economy.
+ Be sure to indicate endowments for each consumer, preferences for each
+ consumer, and directions of increase preference for each.
+\end_layout
+
+\begin_layout Enumerate
+Find the demand function for each consumer.
+\end_layout
+
+\begin_layout Enumerate
+Draw each consumer's offer curve in the Edgeworth box diagram.
+\end_layout
+
+\begin_layout Enumerate
+Find the competitive equilibrium if any.
+ If not, consider the reason why.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $p\equiv\frac{p_{y}}{p_{x}}$
+\end_inset
+
+.
+ Since each agent's preferences are strictly monotone, then they are locally
+ non-satiatied.
+ So, the budget constraint holds with equality for both consumers, and thus,
+ Walras's Law holds.
+ We derive an agent's demand function by maximizing his utility over his
+ budget set.
+\end_layout
+
+\begin_layout Standard
+The maximizaiton problem for agent 1 is
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & u_{1}(x_{1},y_{1})=x_{1}+2y_{1}\\
+\mbox{s.t.} & x_{1}+py_{1}=1+\frac{p}{2}
+\end{eqnarray*}
+
+\end_inset
+
+The demand function for agent 1 is given by
+\begin_inset Formula 
+\[
+x_{1}(p)=\begin{cases}
+\left(\begin{array}{c}
+0\\
+\frac{1}{p}+\frac{1}{2}
+\end{array}\right) & \mbox{if}\ p<2\\
+\left(\begin{array}{c}
+x_{1}\\
+\frac{1}{2}+\frac{1-x_{1}}{p}
+\end{array}\right),x_{1}\in[0,1] & \mbox{if}\ p=2\\
+\left(\begin{array}{c}
+1\\
+0
+\end{array}\right) & \mbox{if}\ p>2
+\end{cases}
+\]
+
+\end_inset
+
+The maximizaiton problem for agent is
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & \succsim_{2,lex}\\
+\mbox{s.t.} & x_{2}+py_{2}=1+\frac{p}{2}
+\end{eqnarray*}
+
+\end_inset
+
+Since agent 2's preferences are lexicographic, with 
+\begin_inset Formula $x$
+\end_inset
+
+ being the primary commodity, he will spend all of his wealth on the first
+ good.
+ So, the demand function for agent 2 is given by
+\begin_inset Formula 
+\[
+x_{2}(p)=\left(\begin{array}{c}
+1+\frac{p}{2}\\
+0
+\end{array}\right)\ p>0
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+By Walras' Law, it is enough to show only one market clearing for 
+\begin_inset Formula $L=2$
+\end_inset
+
+.
+ Let us consider the various cases for 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p<2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}(p)=\left(\begin{array}{cc}
+0 & \frac{1}{p}+\frac{1}{2}\end{array}\right)^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}(p)=\left(\begin{array}{cc}
+1+\frac{p}{2} & 0\end{array}\right)^{\prime}$
+\end_inset
+
+.
+ Let us consider the market for good 2.
+ By the market clearing condition, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{p}+\frac{1}{2} & = & 1\\
+p & = & 2
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the competitive equilibrium is given by
+\begin_inset Formula 
+\[
+\left[x_{1}^{*},x_{2}^{*},p^{*}\right]=\left[\left(\begin{array}{c}
+0\\
+1
+\end{array}\right),\left(\begin{array}{c}
+2\\
+0
+\end{array}\right),\left(\begin{array}{c}
+1\\
+2
+\end{array}\right)\right]
+\]
+
+\end_inset
+
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Unless 
+\begin_inset Formula $x_{1}=0$
+\end_inset
+
+, then 
+\begin_inset Formula $\hat{x}_{1}(2)>\hat{w}_{1}$
+\end_inset
+
+.
+ Thus, a competitive equilibrium fails to exist for this case.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\bar default
+ 
+\begin_inset Formula $p>2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{x}_{1}(p)>\hat{w}_{1}$
+\end_inset
+
+.
+ Thus, a competitive equilibrium fails to exist for this case.
+\end_layout
+
+\begin_layout Problem
+Consider an exchange economy with two commodities and two consumers.
+ The utility funcitons 
+\begin_inset Formula $u_{i}:\mathbb{R}_{+}^{2}\rightarrow\mathbb{R}$
+\end_inset
+
+ are given by
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{1}(x_{11},x_{12}) & = & \left[x_{11}{}^{-2}+\left(\frac{12}{37}\right)^{3}x_{12}{}^{-2}\right]^{\nicefrac{1}{2}}\\
+u_{2}(x_{21},x_{22}) & = & \left[\left(\frac{12}{37}\right)^{3}x_{21}{}^{-2}+x_{22}{}^{-2}\right]^{\nicefrac{1}{2}}
+\end{eqnarray*}
+
+\end_inset
+
+The endowments are 
+\begin_inset Formula $w_{1}=(1,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}=(0,1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute the aggregate excess demand funciton of this economy.
+\end_layout
+
+\begin_layout Enumerate
+Verify that there are multiple equilibria.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $p\equiv\frac{p_{y}}{p_{x}}$
+\end_inset
+
+ and 
+\begin_inset Formula $k\equiv\frac{12}{37}$
+\end_inset
+
+.
+ Since each agent's preferences are strictly monotone, then they are locally
+ non-satiatied.
+ So, the budget constraint holds with equality for both consumers, and thus,
+ Walras's Law holds.
+ To compute the aggregate excess demand function, we must first obtain each
+ agent's individual demand function.
+ We derive an agent's demand function by maximizing his utility over his
+ budget set.
+ Finally, since a monotonic transformation on utility represents the same
+ preferences, we will consider the functions 
+\begin_inset Formula $(u_{i}(\cdot))^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The maximizaiton problem for agent 1 is
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & (u_{1}(x_{11},x_{12}))^{2}=x_{11}{}^{-2}+k^{3}x_{12}{}^{-2}\\
+\mbox{s.t.} & x_{11}+px_{12}=1
+\end{eqnarray*}
+
+\end_inset
+
+The Lagrangian is
+\begin_inset Formula 
+\[
+L=x_{11}^{-2}+k^{3}x_{12}^{-2}+\lambda(1-x_{11}-px_{12})
+\]
+
+\end_inset
+
+After calculating the partial derivatives, we obtain the following first-order
+ conditions
+\begin_inset Formula 
+\begin{eqnarray*}
+-2x_{11}^{-3} & = & \lambda\\
+-2k^{3}x_{12}^{-3}p^{-1} & = & \lambda
+\end{eqnarray*}
+
+\end_inset
+
+From the two equations above, as well as the budget constraint, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+-2x_{11}^{-3} & = & -2k^{3}x_{12}^{-3}p^{-1}\\
+kx_{11} & = & x_{12}p^{\nicefrac{1}{3}}\\
+k(1-px_{12}) & = & x_{12}p^{\nicefrac{1}{3}}\\
+x_{12} & = & \frac{k}{p^{\nicefrac{1}{3}}+kp}\\
+x_{11} & = & \frac{p^{\nicefrac{1}{3}}}{p^{\nicefrac{1}{3}}+kp}
+\end{eqnarray*}
+
+\end_inset
+
+The maximization problem for agent 2 is
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & (u_{2}(x_{21},x_{22}))^{2}=k^{3}x_{21}{}^{-2}+x_{22}{}^{-2}\\
+\mbox{s.t.} & x_{21}+px_{22}=p
+\end{eqnarray*}
+
+\end_inset
+
+The Lagrangian is
+\begin_inset Formula 
+\[
+L=k^{3}x_{21}{}^{-2}+x_{22}^{-2}+\lambda(p-x_{21}-px_{22})
+\]
+
+\end_inset
+
+After calculating the partial derivatives, we obtian the following first-order
+ conditions
+\begin_inset Formula 
+\begin{eqnarray*}
+-2k^{3}x_{21}^{-3} & = & \lambda\\
+-2x_{22}^{-3}p^{-1} & = & \lambda
+\end{eqnarray*}
+
+\end_inset
+
+From the two equations above, as well as the budget constraints, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+-2k^{3}x_{21}^{-3} & = & -2x_{22}^{-3}p^{-1}\\
+x_{21} & = & kx_{22}p^{\nicefrac{1}{3}}\\
+(p-px_{22}) & = & kx_{22}p^{\nicefrac{1}{3}}\\
+x_{22} & = & \frac{p}{kp^{\nicefrac{1}{3}}+p}\\
+x_{21} & = & \frac{kp^{\nicefrac{4}{3}}}{kp^{\nicefrac{1}{3}}+p}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the aggregate excess demand functions are given by
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{z}_{1}(p) & = & \frac{p^{\nicefrac{1}{3}}}{p^{\nicefrac{1}{3}}+kp}+\frac{kp^{\nicefrac{4}{3}}}{kp^{\nicefrac{1}{3}}+p}-1\\
+\hat{z}_{2}(p) & = & \frac{k}{p^{\nicefrac{1}{3}}+kp}+\frac{p}{kp^{\nicefrac{1}{3}}+p}-1
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+By Walras' Law, it is enough to show only one market clearing for 
+\begin_inset Formula $L=2$
+\end_inset
+
+.
+ Let us consider the parket for the second good.
+ By the market clearing condition, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{k}{p^{\nicefrac{1}{3}}+kp}+\frac{p}{kp^{\nicefrac{1}{3}}+p} & = & 1\\
+\frac{k(kp^{\nicefrac{1}{3}}+p)}{(p^{\nicefrac{1}{3}}+kp)(kp^{\nicefrac{1}{3}}+p)}+\frac{p(p^{\nicefrac{1}{3}}+kp)}{(p^{\nicefrac{1}{3}}+kp)(kp^{\nicefrac{1}{3}}+p)} & = & 1\\
+\frac{k^{2}p^{\nicefrac{1}{3}}+kp+p^{\nicefrac{4}{3}}+kp^{2}}{kp^{\nicefrac{2}{3}}+p^{\nicefrac{4}{3}}+k^{2}p^{\nicefrac{4}{3}}+kp^{2}} & = & 1\\
+k^{2}p^{\nicefrac{1}{3}}+kp+p^{\nicefrac{4}{3}}+kp^{2} & = & kp^{\nicefrac{2}{3}}+p^{\nicefrac{4}{3}}+k^{2}p^{\nicefrac{4}{3}}+kp^{2}\\
+kp^{\nicefrac{1}{3}}+p & = & p^{\nicefrac{2}{3}}+kp^{\nicefrac{4}{3}}
+\end{eqnarray*}
+
+\end_inset
+
+Let 
+\begin_inset Formula $m\equiv p^{\nicefrac{1}{3}}$
+\end_inset
+
+.
+ Then, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+km+m^{3} & = & m^{2}+km^{4}\\
+km^{3}-m^{2}+m^{2}-k & = & 0\\
+(m-1)(12m^{2}+37m-37) & = & 0\\
+m & \in & \left\{ 1,\frac{3}{4},\frac{4}{3}\right\} 
+\end{eqnarray*}
+
+\end_inset
+
+Therefore, 
+\begin_inset Formula $p\in\left\{ 1,\frac{27}{64},\frac{64}{27}\right\} $
+\end_inset
+
+, so multiple equilibria exist.
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula $X_{1}=X_{2}=\mathbb{R}_{+}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $w_{1}=w_{2}=\left(2,2\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula $u_{1}(x_{11},x_{12})=\min\left\{ 2x_{11},3(x_{12}-3)\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula $u_{2}(x_{21},x_{22})=\min\left\{ 3(x_{21}-3),2x_{22}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calculare demand functions of agents 1 and 2.
+\end_layout
+
+\begin_layout Enumerate
+Draw an Edgeworth Box and offere curves.
+\end_layout
+
+\begin_layout Enumerate
+Find all the competitive equilbrium.
+ Is it unique?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $p\equiv\frac{p_{2}}{p_{1}}$
+\end_inset
+
+.
+ Since each agent's preferences are monotone, then they are locally non-satiatie
+d.
+ So, the budget constraint holds with equality for both consumers, and thus,
+ Walras's Law holds.
+ To calculate the demand function of an agent, we must maximize his utility
+ function subject to his budget constraint.
+ In this situation, we must consider the boundary cases when one of the
+ prices equals zero, as well as the interior case when both prices are positive.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p_{1}>0,p_{2}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & u_{1}(x_{11},x_{12})=\min\left\{ 2x_{11},3(x_{12}-3)\right\} \\
+\mbox{s.t.} & x_{11}+px_{12}=2+2p
+\end{eqnarray*}
+
+\end_inset
+
+From the budget constraint, we have an expression for 
+\begin_inset Formula $x_{11}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x_{11}=2+2p-px_{12}
+\]
+
+\end_inset
+
+which we plug into the utility function and solve for 
+\begin_inset Formula $x_{12}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+4+4p-2px_{12} & = & 3x_{12}-9\\
+(2p+3)x_{12} & = & 13+4p\\
+x_{12} & = & \frac{13+4p}{2p+3}
+\end{eqnarray*}
+
+\end_inset
+
+Finally, we solve for 
+\begin_inset Formula $x_{11}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+2x_{11} & = & \frac{39+12p}{2p+3}-\left(\frac{18p+27}{2p+3}\right)\\
+2x_{11} & = & \frac{12-6p}{2p+3}\\
+x_{11} & = & \frac{6-3p}{2p+3}
+\end{eqnarray*}
+
+\end_inset
+
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p_{1}>0,p_{2}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From the budget constraint, we get 
+\begin_inset Formula $x_{11}=2$
+\end_inset
+
+.
+ Plugging this amount for 
+\begin_inset Formula $x_{11}$
+\end_inset
+
+ into the utility funciton we have
+\begin_inset Formula 
+\begin{eqnarray*}
+4 & = & 3x_{12}-9\\
+x_{12} & = & \frac{13}{3}
+\end{eqnarray*}
+
+\end_inset
+
+So, agent 1 can only purchase 2 units of good 1, and to maximize his utility,
+ he will demand at least 
+\begin_inset Formula $\frac{13}{3}$
+\end_inset
+
+ units of good 2.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p_{1}=0,p_{2}>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From the budget constraint, we get
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{2}x_{12} & = & 2p_{2}\\
+x_{12} & = & 2
+\end{eqnarray*}
+
+\end_inset
+
+Plugging this amount for 
+\begin_inset Formula $x_{12}$
+\end_inset
+
+ into the utility function we have
+\begin_inset Formula 
+\begin{eqnarray*}
+2x_{11} & = & 6-9\\
+x_{11} & = & -\frac{3}{2}\ \mbox{(not possible)}
+\end{eqnarray*}
+
+\end_inset
+
+So, agent 1 can only purchase 2 units of good 2, and since 
+\begin_inset Formula $p_{1}=0$
+\end_inset
+
+, he demands any positive amount of good 1.
+\end_layout
+
+\begin_layout Standard
+Thus, the demand function for agent 1 is given by
+\begin_inset Formula 
+\[
+x_{1}(p)=\begin{cases}
+\left(\begin{array}{c}
+\frac{6-3p}{2p+3}\\
+\frac{13+4p}{2p+3}
+\end{array}\right) & \mbox{if}\ 0<p<2\\
+\left(\begin{array}{c}
+0\\
+\frac{2}{p}+2
+\end{array}\right) & \mbox{if}\ p\geq2\\
+\left(\begin{array}{c}
+2\\
+t
+\end{array}\right),t\geq\frac{13}{3} & \mbox{if}\ p_{1}>0,p_{2}=0\\
+\left(\begin{array}{c}
+t\\
+2
+\end{array}\right),t\geq0 & \mbox{if}\ p_{1}=0,p_{2}>0
+\end{cases}
+\]
+
+\end_inset
+
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p_{1}>0,p_{2}>0$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & u_{2}(x_{21},x_{22})=\min\left\{ 3(x_{21}-3),2x_{22}\right\} \\
+\mbox{s.t.} & x_{21}+px_{22}=2+2p
+\end{eqnarray*}
+
+\end_inset
+
+From the budget constraint, we have an expression for 
+\begin_inset Formula $x_{21}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x_{21}=2+2p-px_{22}
+\]
+
+\end_inset
+
+which we plug into the utility function and solve for 
+\begin_inset Formula $x_{22}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+3(2+2p-px_{22})-9 & = & 2x_{22}\\
+-3+6p-3px_{22} & = & 2x_{22}\\
+(3p+2)x_{22} & = & (6p-3)\\
+x_{22} & = & \frac{6p-3}{3p+2}
+\end{eqnarray*}
+
+\end_inset
+
+Finally, we solve for 
+\begin_inset Formula $x_{21}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+3x_{21}-9 & = & \frac{12p-6}{3p+2}\\
+3x_{21} & = & \frac{12p-6}{3p+2}+\frac{27p+18}{3p+2}\\
+x_{21} & = & \frac{13p+4}{3p+2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p_{1}>0,p_{2}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From the budget constraint, we have 
+\begin_inset Formula $x_{21}=2$
+\end_inset
+
+.
+ Plugging this amount for 
+\begin_inset Formula $x_{21}$
+\end_inset
+
+ into the utility function we have
+\begin_inset Formula 
+\begin{eqnarray*}
+-3 & = & 2x_{22}\\
+x_{22} & = & -\frac{3}{2}\ \mbox{(not possible)}
+\end{eqnarray*}
+
+\end_inset
+
+So, agent 1 can only purchase 2 units of good 1, and since 
+\begin_inset Formula $p_{2}=0$
+\end_inset
+
+, he demands any positive amount of good 2.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p_{1}=0,p_{2}>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From the budget constraint, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{2}x_{22} & = & 2p_{2}\\
+x_{22} & = & 2
+\end{eqnarray*}
+
+\end_inset
+
+Plugging this amount for 
+\begin_inset Formula $x_{22}$
+\end_inset
+
+ into the utility function we have
+\begin_inset Formula 
+\begin{eqnarray*}
+3x_{21}-9 & = & 4\\
+x_{21} & = & \frac{13}{3}
+\end{eqnarray*}
+
+\end_inset
+
+So, agent 1 can only purchase 2 units of good 1, and to maximize his utility,
+ he will demand at least 
+\begin_inset Formula $\frac{13}{3}$
+\end_inset
+
+ units of good 2.
+\end_layout
+
+\begin_layout Standard
+Thus, the demand function for agent 2 is given by
+\begin_inset Formula 
+\[
+x_{2}(p)=\begin{cases}
+\left(\begin{array}{c}
+2+2p\\
+0
+\end{array}\right) & 0<p\leq\frac{1}{2}\\
+\left(\begin{array}{c}
+\frac{13p+4}{3p+2}\\
+\frac{6p-3}{3p+2}
+\end{array}\right) & \mbox{if}\ p>\frac{1}{2}\\
+\left(\begin{array}{c}
+2\\
+c
+\end{array}\right),c\geq0 & \mbox{if}\ p_{1}>0,p_{2}=0\\
+\left(\begin{array}{c}
+c\\
+2
+\end{array}\right),c\geq\frac{13}{3} & \mbox{if}\ p_{1}=0,p_{2}>0
+\end{cases}
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+To find the competitive equilibrium, we must find all 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{2}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\hat{z}(p)=\hat{x}(p)-\hat{w}=0$
+\end_inset
+
+.
+ By Walras' Law, it is enough to show only one market clearing for 
+\begin_inset Formula $L=2$
+\end_inset
+
+.
+ We now analyze the various cases for 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p_{1}>0,p_{2}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}(p)=\left(\begin{array}{cc}
+2 & t\end{array}\right)^{\prime},t\geq\frac{13}{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}(p)=\left(\begin{array}{cc}
+2 & c\end{array}\right)^{\prime},c\geq0$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\hat{z}_{2}(p)=t+c-4>0$
+\end_inset
+
+.
+ Thus, a competitive equilibrium fails to exist in this case.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p_{1}=0,p_{2}>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}(p)=\left(\begin{array}{cc}
+t & 2\end{array}\right)^{\prime},t\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}(p)=\left(\begin{array}{cc}
+c & 2\end{array}\right)^{\prime},c\ge\frac{13}{3}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\hat{z}_{1}(p)=t+c-4>0$
+\end_inset
+
+.
+ Thus, a competitive equilibrium fails to exist in this case.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p\leq\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}(p)=\left(\begin{array}{cc}
+\frac{6-3p}{2p+3} & \frac{13+4p}{2p+3}\end{array}\right)^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}(p)=\left(\begin{array}{cc}
+2+2p & 0\end{array}\right)^{\prime}$
+\end_inset
+
+.
+ Let us consider the market for good 2.
+ By the market clearing condition, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{13+4p}{2p+3} & = & 4\\
+13+4p & = & 8p+12\\
+4p & = & 1\\
+p & = & \frac{1}{4}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, a competitive equilibrium is given by
+\begin_inset Formula 
+\[
+\left[x_{1}^{*},x_{2}^{*},p^{*}\right]=\left[\left(\begin{array}{c}
+1.5\\
+4
+\end{array}\right),\left(\begin{array}{c}
+2.5\\
+0
+\end{array}\right),\left(\begin{array}{c}
+1\\
+\frac{1}{4}
+\end{array}\right)\right]
+\]
+
+\end_inset
+
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $\frac{1}{2}<p<2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}(p)=\left(\begin{array}{cc}
+\frac{6-3p}{2p+3} & \frac{13+4p}{2p+3}\end{array}\right)^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}(p)=\left(\begin{array}{cc}
+\frac{13p+4}{3p+2} & \frac{6p-3}{3p+2}\end{array}\right)^{\prime}$
+\end_inset
+
+.
+ Let us consider the market for good 2.
+ By the market clearing condition, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{13+4p}{2p+3}+\frac{6p-3}{3p+2} & = & 4\\
+\frac{(13+4p)(3p+2)+(6p-3)(2p+3)}{(2p+3)(3p+2)} & = & 4\\
+39p+26+12p^{2}+8p+12p^{2}+18p-6p-9 & = & 24p^{2}+16p+36p+24\\
+24p^{2}+59p+17 & = & 24p^{2}+52p+24\\
+7p & = & 7\\
+p & = & 1
+\end{eqnarray*}
+
+\end_inset
+
+Thus, a competitive equilibrium is given by
+\begin_inset Formula 
+\[
+\left[x_{1}^{*},x_{2}^{*},p^{*}\right]=\left[\left(\begin{array}{c}
+\nicefrac{3}{5}\\
+\nicefrac{17}{5}
+\end{array}\right),\left(\begin{array}{c}
+\nicefrac{17}{5}\\
+\nicefrac{3}{5}
+\end{array}\right),\left(\begin{array}{c}
+1\\
+1
+\end{array}\right)\right]
+\]
+
+\end_inset
+
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p\geq2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}(p)=\left(\begin{array}{cc}
+0 & \frac{2}{p}+2\end{array}\right)^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}(p)=\left(\begin{array}{cc}
+\frac{13p+4}{3p+2} & \frac{6p-3}{3p+2}\end{array}\right)^{\prime}$
+\end_inset
+
+.
+ Let us consider the market for good 1.
+ By the market clearing condition, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{13p+4}{3p+2} & = & 4\\
+13p+4 & = & 12p+8\\
+p & = & 4
+\end{eqnarray*}
+
+\end_inset
+
+Thus, a competitive equilibrium is given by
+\begin_inset Formula 
+\[
+\left[x_{1}^{*},x_{2}^{*},p^{*}\right]=\left[\left(\begin{array}{c}
+0\\
+2.5
+\end{array}\right),\left(\begin{array}{c}
+4\\
+1.5
+\end{array}\right),\left(\begin{array}{c}
+1\\
+4
+\end{array}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Consider a pure exchange economy with 
+\begin_inset Formula $n=2$
+\end_inset
+
+, 
+\begin_inset Formula $L=3$
+\end_inset
+
+,
+\begin_inset Formula $X_{i}=\mathbb{R}_{+}^{2}$
+\end_inset
+
+.
+ Suppose the consumers have utility functions given by
+\begin_inset Formula 
+\begin{gather*}
+u_{1}(x_{11},x_{12},x_{13})=\min\left\{ x_{11},x_{12},x_{13}\right\} ;\ w_{1}=\left(1,1,1\right)\\
+u_{2}(x_{21},x_{22},x_{23})=\left(x_{21}\cdot x_{22}\cdot x_{23}\right)^{\nicefrac{1}{3}};\ w_{2}=\left(1,1,1\right)
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Derive aggregate excess demand functions for the three commodities.
+\end_layout
+
+\begin_layout Enumerate
+Find a competitive equilibrium allocation and price, and prove that it is
+ unique.
+\end_layout
+
+\begin_layout Enumerate
+Is the equilibrium you found in part b globally stable? Why?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $p\equiv\frac{p_{2}}{p_{1}}$
+\end_inset
+
+ and 
+\begin_inset Formula $p^{\prime}\equiv\frac{p_{3}}{p_{1}}$
+\end_inset
+
+.
+ Since each agent's preferences are monotone, then they are locally non-satiatie
+d.
+ So, the budget constraint holds with equality for both consumers, and thus,
+ Walras's Law holds.
+ To derive the aggregate excess demand functions, we must first calculate
+ the demand function of both agents by maximizing each one's utility function
+ subject to his budget constraint.
+\end_layout
+
+\begin_layout Standard
+The maximization problem for agent 1 is
+\begin_inset Formula 
+\begin{gather*}
+\max\ u_{1}(x_{11},x_{12},x_{13})=\min\left\{ x_{11},x_{12},x_{13}\right\} \\
+\mbox{s.t.}\ \ \ x_{11}+px_{12}+p^{\prime}x_{13}=1+p+p^{\prime}
+\end{gather*}
+
+\end_inset
+
+From the utility function and the budget constraint, we have 
+\begin_inset Formula $x_{11}=x_{12}=x_{13}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For agent 2, any monotonic transformation of 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ still represents his preferences.
+ So, we will consider the function 
+\begin_inset Formula $(u_{2}(\cdot))^{3}$
+\end_inset
+
+.
+ The maximization problem for agent 2 is
+\begin_inset Formula 
+\begin{gather*}
+\max\ u_{2}(x_{21},x_{22},x_{23})=x_{21}\cdot x_{22}\cdot x_{23}\\
+\mbox{s.t.}\ \ \ x_{21}+px_{22}+p^{\prime}x_{23}=1+p+p^{\prime}
+\end{gather*}
+
+\end_inset
+
+The Lagrangian is given by
+\begin_inset Formula 
+\[
+L=x_{21}\cdot x_{22}\cdot x_{23}+\lambda(1+p+p^{\prime}-x_{21}-px_{22}-p^{\prime}x_{23})
+\]
+
+\end_inset
+
+After calculating partial derivatives, we have the following first-order
+ conditions
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial L}{\partial x_{21}}=0 & \iff & x_{22}x_{23}=\lambda\\
+\frac{\partial L}{\partial x_{22}}=0 & \iff & \frac{x_{21}x_{23}}{p}=\lambda\\
+\frac{\partial L}{\partial x_{23}}=0 & \iff & \frac{x_{21}x_{22}}{p^{\prime}}=\lambda
+\end{eqnarray*}
+
+\end_inset
+
+Setting these equations equal to one another, we obtain
+\begin_inset Formula 
+\begin{gather*}
+x_{22}x_{23}=\frac{x_{21}x_{23}}{p}=\frac{x_{21}x_{22}}{p^{\prime}}\\
+\frac{1}{x_{21}}=\frac{1}{px_{22}}=\frac{1}{p^{\prime}x_{23}}\\
+x_{21}=px_{22}=p^{\prime}x_{23}
+\end{gather*}
+
+\end_inset
+
+From the equation above and the budget constraint, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{21}+p\left(\frac{x_{21}}{p}\right)+p^{\prime}\left(\frac{x_{21}}{p^{\prime}}\right) & = & 1+p+p^{\prime}\\
+x_{21} & = & \frac{1}{3}\left(1+p+p^{\prime}\right)\\
+x_{22} & = & \frac{1}{3p}\left(1+p+p^{\prime}\right)\\
+x_{23} & = & \frac{1}{3p^{\prime}}\left(1+p+p^{\prime}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the aggregate demand functions for the three commodities are
+\begin_inset Formula 
+\begin{gather*}
+\hat{z}_{1}=\hat{x}_{1}-\hat{w}_{1}=\frac{1}{3}\left(1+p+p^{\prime}\right)-1\\
+\hat{z}_{2}=\hat{x}_{2}-\hat{w}_{2}=\frac{1}{3p}\left(1+p+p^{\prime}\right)-1\\
+\hat{z}_{3}=\hat{x}_{3}-\hat{w}_{3}=\frac{1}{3p^{\prime}}\left(1+p+p^{\prime}\right)-1
+\end{gather*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+To find the competitive equilibrium, we must find all 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{3}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\hat{z}(p)=\hat{x}(p)-\hat{w}=0$
+\end_inset
+
+.
+ By Walras' Law, it is enough to show only two markets clearing for 
+\begin_inset Formula $L=3$
+\end_inset
+
+.
+ Let us consider the markets for good 1 and 2, respectively.
+ By the market clearing conditions, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{3}\left(1+p+p^{\prime}\right) & = & 1\\
+p & = & 2-p^{\prime}\\
+\frac{1}{3p}\left(1+p+p^{\prime}\right) & = & 1\\
+p & = & \frac{1+p^{\prime}}{2}
+\end{eqnarray*}
+
+\end_inset
+
+Setting the two equations for 
+\begin_inset Formula $p$
+\end_inset
+
+ equal to one another we have
+\begin_inset Formula 
+\begin{eqnarray*}
+2-p^{\prime} & = & \frac{1+p^{\prime}}{2}\\
+4-2p^{\prime} & = & 1+p^{\prime}\\
+p^{\prime} & = & 1\\
+p & = & 1
+\end{eqnarray*}
+
+\end_inset
+
+Thus, a competitive equilibrium is given by
+\begin_inset Formula 
+\[
+\left[x_{1}^{*},x_{2}^{*},p^{*}\right]=\left[\left(\begin{array}{c}
+1\\
+1\\
+1
+\end{array}\right),\left(\begin{array}{c}
+1\\
+1\\
+1
+\end{array}\right),\left(\begin{array}{c}
+1\\
+1\\
+1
+\end{array}\right)\right]
+\]
+
+\end_inset
+
+From the aggregate demand functions, it is evident that if 
+\begin_inset Formula $p^{l}=0$
+\end_inset
+
+, then 
+\begin_inset Formula $\hat{z}^{l}(p^{*})>0$
+\end_inset
+
+ for 
+\begin_inset Formula $l=1,2,3$
+\end_inset
+
+.
+ So, all goods are desirable.
+ In addition, 
+\begin_inset Formula $\frac{\partial\hat{z}^{h}}{\partial p^{l}}>0$
+\end_inset
+
+ for 
+\begin_inset Formula $l\neq h$
+\end_inset
+
+.
+ Hence, all goods are gross substitutes.
+ Finally, note that Walras' Law holds.
+ Therefore, by Theorem 7.5.1, 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is a unique competitive equilibrium price vector.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+Since Walras' Law holds and all goods are desirable and gross substitutes
+ for all prices, then by Theorem 7.6.3, the competitive equilibrium is globally
+ stable.
+\end_layout
+
+\begin_layout Problem
+Consider an economy with two firms and two consumers.
+ Firm 1 is entirely owned by consumer 1.
+ It produces guns form oil via the production function 
+\begin_inset Formula $g=2x$
+\end_inset
+
+.
+ Firm 2 is entirely owned by consumer 2; it produces butter form oil via
+ production function 
+\begin_inset Formula $b=3x$
+\end_inset
+
+.
+ Each consumer owns 10 units of oil.
+ Consumer 1's utility function is 
+\begin_inset Formula $u(g,b)=g^{0.4}b^{0.6}$
+\end_inset
+
+ and consumer 2's utility function is 
+\begin_inset Formula $u(g,b)=10+0.5\ln g+0.5\ln b$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find the market clearing prices for guns, butter, and oil.
+\end_layout
+
+\begin_layout Enumerate
+How many guns and how much butter does each consumer consume?
+\end_layout
+
+\begin_layout Enumerate
+How much oil does each firm use?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+First, let us normalize the price of oil to 1.
+ So, 
+\begin_inset Formula $p_{g}\equiv\frac{p_{g}}{p_{o}}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{b}\equiv\frac{p_{b}}{p_{o}}$
+\end_inset
+
+.
+ Since both firms exhibit constant returns to scale, then the profit for
+ each firm will be zero in equilibrium.
+ Thus, 
+\begin_inset Formula $p_{g}=\frac{1}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{b}=\frac{1}{3}$
+\end_inset
+
+.
+ Therefore, the market clearing prices for guns, butter, and oil are
+\begin_inset Formula 
+\[
+\left(p_{o}^{*},p_{g}^{*},p_{b}^{*}\right)^{\prime}=\left(1,\frac{1}{2},\frac{1}{3}\right)^{\prime}
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+To find out how much of each commodity the agents consume, we must derive
+ their demand functions.
+ Since each agent's preferences are monotone, then they are locally non-satiatie
+d.
+ So, the budget constraint holds with equality for both consumers, and thus,
+ Walras's Law holds.
+ Since both agents have Cobb-Douglas preferences, then their demand functions
+ are
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{1}(p) & = & \left(\begin{array}{c}
+\frac{4}{p_{g}}\\
+\frac{6}{p_{b}}
+\end{array}\right)\\
+x_{2}(p) & = & \left(\begin{array}{c}
+\frac{5}{p_{g}}\\
+\frac{5}{p_{b}}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Thus, given the prices found in part a, 
+\begin_inset Formula $g_{1}=8$
+\end_inset
+
+, 
+\begin_inset Formula $b_{1}=18$
+\end_inset
+
+, 
+\begin_inset Formula $g_{2}=10$
+\end_inset
+
+, 
+\begin_inset Formula $b_{2}=15$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+From the market clear conditions, we have 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mbox{Firm 1}:\ 8+10 & = & 2x\\
+x & = & 9\\
+\mbox{Firm 2:}\ 18+15 & = & 3x\\
+x & = & 11
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the total amount of oil used is 20, which is equal to the total units
+ available in the economy.
+\end_layout
+
+\end_body
+\end_document

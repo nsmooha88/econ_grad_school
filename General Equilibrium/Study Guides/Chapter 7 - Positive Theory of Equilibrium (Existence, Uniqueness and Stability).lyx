@@ -1,0 +1,6389 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 7
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Part*
+Positive Theory of Equilibrium: Existence, Uniqueness, and Stability
+\end_layout
+
+\begin_layout Section*
+7.1
+\begin_inset space \quad{}
+\end_inset
+
+Introduction
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\shape up
+Brouwer's Fixed Point Theorem.
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a non-empty, compact, and convex subset of 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+.
+ If a function 
+\begin_inset Formula $f:X\rightarrow X$
+\end_inset
+
+ is continuous on 
+\begin_inset Formula $X$
+\end_inset
+
+, then 
+\begin_inset Formula $f$
+\end_inset
+
+ has a fixed point, i.e., there is a point 
+\begin_inset Formula $x^{*}\in X$
+\end_inset
+
+ such that 
+\begin_inset Formula $f(x^{*})=x^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Kakutani's Fixed Point Theorem.
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a non-empty, compact, and convex subset of 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+.
+ If a correspondence 
+\begin_inset Formula $F:X\rightarrow2^{X}$
+\end_inset
+
+ is an upper hemi-continuous correspondence with non-empty compact and convex
+ values on 
+\begin_inset Formula $X$
+\end_inset
+
+, then 
+\begin_inset Formula $F$
+\end_inset
+
+ has a fixed point, i.e., there is a point 
+\begin_inset Formula $x^{*}\in X$
+\end_inset
+
+ such that 
+\begin_inset Formula $x^{*}\in F(x^{*})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+FKKM Theorem.
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $Y$
+\end_inset
+
+ be a convex set and 
+\begin_inset Formula $\emptyset\nsubseteq X\subseteq Y$
+\end_inset
+
+.
+ Suppose 
+\begin_inset Formula $F:X\rightarrow2^{Y}$
+\end_inset
+
+ is a correspondence such that
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 
+\emph on
+is closed for all 
+\begin_inset Formula $x\in X$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $F(x_{0})$
+\end_inset
+
+ 
+\emph on
+is compact for some 
+\begin_inset Formula $x_{0}\in X$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $F$
+\end_inset
+
+ 
+\emph on
+is FS-convex, i.e., for any 
+\begin_inset Formula $x_{1},\ldots,x_{m}\in X$
+\end_inset
+
+ and its convex combination 
+\begin_inset Formula $x_{\lambda}=\sum_{i=1}^{m}\lambda_{i}x_{i}$
+\end_inset
+
+, we have 
+\begin_inset Formula $x_{\lambda}\in\cup_{i=1}^{m}F(x_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Then, 
+\begin_inset Formula $\cap_{x\in X}F(x)\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+7.2
+\begin_inset space \quad{}
+\end_inset
+
+The Structure of the General Equilibrium Model
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A 
+\emph on
+general equilibrium
+\emph default
+ is defined as a state where the aggregate demand does not excess the aggregate
+ supply for all markets.
+ Thus, equilibrium prices are endogenously determined.
+ The general equilibrium approach has to central features:
+\end_layout
+
+\begin_layout Itemize
+It views the economy as a closed and inter-related system in which we must
+ simultaneously determine the equilibrium values of all variables of interest
+ (i.e., consider all markets together).
+\end_layout
+
+\begin_layout Itemize
+It aims at reducing the set of variables taken as exogenous to a small number
+ of physical realities.
+\end_layout
+
+\begin_layout Standard
+We use the general equilibrium approach to predict the final consumption
+ and production in the market mechansim.
+\end_layout
+
+\begin_layout Subsection*
+7.2.1
+\begin_inset space \quad{}
+\end_inset
+
+Economic Environments
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The fundamentals of the economy are economic institutional environments
+ that are exogenously given and characterized by the following terms:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n:$
+\end_inset
+
+ the number of consumers
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $N=\{1,\ldots,n\}:$
+\end_inset
+
+ the set of consumers
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $J:$
+\end_inset
+
+ the number of producers (firms)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L:$
+\end_inset
+
+ the number of (private) goods
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X_{i}\subseteq\mathbb{R}^{L}:$
+\end_inset
+
+ the consumption space of consumer 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+, which specifies the boundary of consumptions, collection of all individually
+ feasible consumption of consumer 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Some components of an element may be negative such as labor supply
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succsim_{i}:$
+\end_inset
+
+ Preference ordering (or 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ if a utility function exists) of consumer 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Remark:
+\series default
+\emph default
+ 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is a preference ordering if it is reflexive (
+\begin_inset Formula $x_{i}\succsim_{i}x_{i}$
+\end_inset
+
+), transitive (
+\begin_inset Formula $x_{i}\succsim_{i}x_{i}^{\prime}$
+\end_inset
+
+ and 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x_{i}^{\prime}\succsim_{i}x_{i}^{\prime\prime}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ implies 
+\begin_inset Formula $x_{i}\succsim_{i}x_{i}^{\prime\prime}$
+\end_inset
+
+), and complete (for any pair 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}^{\prime}$
+\end_inset
+
+, either 
+\begin_inset Formula $x_{i}\succsim_{i}x_{i}^{\prime}$
+\end_inset
+
+ or 
+\begin_inset Formula $x_{i}^{\prime}\succsim_{i}x_{i}$
+\end_inset
+
+ or both).
+ It can be shown that it can be represented by a continuous utility funciton
+ if 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is continuous.
+ The existence of general equilibrium can be obtained even when preferences
+ are weakened to be non-complete or non-transitive.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w_{i}\in X_{i}:$
+\end_inset
+
+ initial endowment vector of consumer 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $e_{i}=(X_{i},\succsim_{i},w_{i}):$
+\end_inset
+
+ the characteristics of consumer 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Y_{j}:$
+\end_inset
+
+ production possibility set of firm 
+\begin_inset Formula $j=1,2,\ldots,J$
+\end_inset
+
+, which is the characteristic of producer 
+\begin_inset Formula $j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y_{j}\in Y_{j}:$
+\end_inset
+
+ a production plan, 
+\begin_inset Formula $y_{jl}>0$
+\end_inset
+
+ means 
+\begin_inset Formula $y_{jl}$
+\end_inset
+
+ is output and 
+\begin_inset Formula $y_{jl}<0$
+\end_inset
+
+ means 
+\begin_inset Formula $y_{jl}$
+\end_inset
+
+ is input.
+ Most elements of 
+\begin_inset Formula $y_{j}$
+\end_inset
+
+ for a firm are zero.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Remark:
+\series default
+ 
+\emph default
+Recall that there can be three types of returns about production scales:
+ non-increasing returns to scale (i.e., 
+\begin_inset Formula $y_{j}\in Y_{j}$
+\end_inset
+
+ implies that 
+\begin_inset Formula $\alpha y_{j}\in Y_{j}$
+\end_inset
+
+ for all 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+), non-decreasing returns to scale (i.e., 
+\begin_inset Formula $y_{j}\in Y_{j}$
+\end_inset
+
+ implies that 
+\begin_inset Formula $\alpha y_{j}\in Y_{j}$
+\end_inset
+
+ for all 
+\begin_inset Formula $\alpha\geq1$
+\end_inset
+
+), and constant returns to scale (i.e., 
+\begin_inset Formula $y_{j}\in Y_{j}$
+\end_inset
+
+ implies that 
+\begin_inset Formula $\alpha y_{j}\in Y_{j}$
+\end_inset
+
+ for all 
+\begin_inset Formula $\alpha\geq0$
+\end_inset
+
+).
+ In other words, non-increasing returns to scale implies any feasible input-outp
+ut vector can be scaled down; non-decreasing returns to scale implies any
+ feasible input-output vector can be scaled up, and constant returns to
+ scale implies the production set is the conjuntion of non-increasing and
+ non-decreasing returns.
+ With non-decreasing returns to scale, firms' profits are infinite, so we
+ will avoid this case in the model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $e=\left(\left\{ X_{i},\succsim_{i},w_{i}\right\} ,\left\{ Y_{j}\right\} \right):$
+\end_inset
+
+ an economy, or also called an economic environment.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X=X_{1}\times\cdots\times X_{n}:$
+\end_inset
+
+ consumption space
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Y=Y_{1}\times\cdots\times Y_{J}:$
+\end_inset
+
+ production space
+\end_layout
+
+\begin_layout Subsection*
+7.2.2
+\begin_inset space \quad{}
+\end_inset
+
+Institutional Arrangement: Private Market Mechanism
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p=(p_{1},\ldots,p_{L})^{\prime}\in\mathbb{R}_{+}^{L}:$
+\end_inset
+
+ a price vector
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p\cdot x_{i}:$
+\end_inset
+
+ the expenditure of consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p\cdot y_{j}:$
+\end_inset
+
+ the profit of firm 
+\begin_inset Formula $j$
+\end_inset
+
+ for 
+\begin_inset Formula $j=1,\ldots,J$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p\cdot w_{i}:$
+\end_inset
+
+ the value of endowments of consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\theta_{ij}\in\mathbb{R}_{+}:$
+\end_inset
+
+ the profit share of consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ from firm 
+\begin_inset Formula $j$
+\end_inset
+
+, which specifies ownership (property rights) structures, so that 
+\begin_inset Formula $\sum_{i=1}^{n}\theta_{ij}=1$
+\end_inset
+
+ for 
+\begin_inset Formula $j=1,\ldots,J$
+\end_inset
+
+, and 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+, consumer 
+\begin_inset Formula $i's$
+\end_inset
+
+ budget constraint is given by
+\begin_inset Formula 
+\begin{equation}
+p\cdot x_{i}\leq p\cdot w_{i}+{\displaystyle \sum_{j=1}^{J}}\theta_{ij}p\cdot y_{j}
+\end{equation}
+
+\end_inset
+
+and the budget set is given by
+\begin_inset Formula 
+\begin{equation}
+B_{i}(p)=\left\{ x_{i}\in X_{i}:p\cdot x_{i}\leq p\cdot w_{i}+{\displaystyle \sum_{j=1}^{J}}\theta_{ij}p\cdot y_{j}\right\} 
+\end{equation}
+
+\end_inset
+
+A private ownership economy then is referred to
+\begin_inset Formula 
+\begin{equation}
+e=\left(e_{1},\ldots,e_{n},\left\{ Y_{j}\right\} _{j=1}^{J},\left\{ \theta_{ij}\right\} \right)
+\end{equation}
+
+\end_inset
+
+The set of all such private ownership economies are denoted by 
+\begin_inset Formula $E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+7.2.3
+\begin_inset space \quad{}
+\end_inset
+
+Individual Behavior Assumptions
+\end_layout
+
+\begin_layout Enumerate
+Perfect competitive markets: Every player is a price-taker.
+\end_layout
+
+\begin_layout Enumerate
+Utility maximization: Every consumer maximizes his preferences subject to
+ 
+\begin_inset Formula $B_{i}(p)$
+\end_inset
+
+.
+ That is,
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \max_{x_{i}}}\ u_{i}(x_{i})
+\end{equation}
+
+\end_inset
+
+subject to
+\begin_inset Formula 
+\begin{equation}
+p\cdot x_{i}\leq p\cdot w_{i}+{\displaystyle \sum_{j=1}^{J}}\theta_{ij}p\cdot y_{j}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Profit maximization: Every firm maximizes its profit in 
+\begin_inset Formula $Y_{j}$
+\end_inset
+
+.
+ That is,
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \max_{y_{j}\in Y_{j}}}\ p\cdot y_{j}
+\end{equation}
+
+\end_inset
+
+for 
+\begin_inset Formula $j=1,\ldots,J$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+7.2.4
+\begin_inset space \quad{}
+\end_inset
+
+Competitive Equilibrium
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Before defining the notion of competitive equilibrium, we first give some
+ information on allocations, which identify the set of possible outcomes
+ in economy 
+\begin_inset Formula $e$
+\end_inset
+
+.
+ For notational convenience, 
+\begin_inset Formula $\hat{a}$
+\end_inset
+
+ will be used throughout the notes to denote the sum of vectors 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\hat{a}=\sum a_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An 
+\series bold
+\emph on
+allocation
+\series default
+\emph default
+ 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ is a specification of a consumption vector 
+\begin_inset Formula $x=(x_{1},\ldots,x_{n})^{\prime}\in X$
+\end_inset
+
+ and production vector 
+\begin_inset Formula $y=(y_{1},\ldots y_{J})^{\prime}\in Y$
+\end_inset
+
+.
+ An allocation is 
+\series bold
+\emph on
+individually feasible
+\series default
+\emph default
+ if 
+\begin_inset Formula $x_{i}\in X_{i}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i\in N$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{j}\in Y_{j}$
+\end_inset
+
+ for all 
+\begin_inset Formula $j=1,\ldots,J$
+\end_inset
+
+.
+ An allocation is 
+\series bold
+\emph on
+weakly balanced
+\series default
+\emph default
+ if
+\begin_inset Formula 
+\begin{equation}
+\hat{x}\leq\hat{y}+\hat{w}
+\end{equation}
+
+\end_inset
+
+or specifically
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{i=1}^{n}}x_{i}\leq{\displaystyle \sum_{j=1}^{j}}y_{j}+{\displaystyle \sum_{i=1}^{n}}w_{i}
+\end{equation}
+
+\end_inset
+
+When inequality holds with equality, the allocation is called a 
+\series bold
+\emph on
+balanced
+\series default
+\emph default
+ or 
+\series bold
+\emph on
+attainable
+\series default
+\emph default
+ allocation, i.e., aggregate demand equals aggregate supply.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An allocation 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ is 
+\series bold
+\emph on
+feasible
+\series default
+\emph default
+ if it is both individually feasible and (weakly) balanced.
+ Thus, an economic allocation is feasible if the total amount of each good
+ consumed does not exceed the total amount available from both the initial
+ endowment and production.
+ Denote the set of all feasible allocations by 
+\begin_inset Formula $A=\left\{ (x,y)\in X\times Y:\hat{x}\leq\hat{y}+\hat{w}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now define the notion of competitive equilibrium.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+7.2.1 (Competitive Equilibrium or also called Walrasian Equilibrium).
+ 
+\series default
+Given a private ownership economy, 
+\begin_inset Formula $e=(e_{1},\ldots,e_{n},\{Y_{j}\},\{\theta_{ij}\})$
+\end_inset
+
+, an allocation 
+\begin_inset Formula $(x,y)\in X\times Y$
+\end_inset
+
+ and a price vector 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ constitutes a competitive equilibrium if the following conditions are satisfied
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Utility maximization: 
+\begin_inset Formula $\forall\ i\in N,\exists\ x_{i}\in B_{i}(p),\forall\ x_{i}^{\prime}\in B_{i}(p):x_{i}\succsim x_{i}^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Profit maximization: 
+\begin_inset Formula $\forall\ j,\ \exists\ y_{j}\in Y_{j},\forall\ y_{j}^{\prime}\in Y_{j}:p\cdot y_{j}\geq p\cdot y_{j}^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Market clearing condition: 
+\begin_inset Formula $\hat{x}\leq\hat{w}+\hat{y}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Note*
+To find a CE in a production economy, follow the following steps: (1) profit
+ maximization; (2) utility maximization; (3) market clearing condition.
+\end_layout
+
+\begin_layout Standard
+Denote
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x_{i}(p)=\left\{ x_{i}\in B_{i}(p):\forall\ x_{i}^{\prime}\in B_{i}(p),\ x_{i}\succsim_{i}x_{i}^{\prime}\right\} :$
+\end_inset
+
+ the demand correspondence of consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ under utility maximization; it is called the demand function of consumer
+ 
+\begin_inset Formula $i$
+\end_inset
+
+ if it is a single-valued funciton.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y_{j}(p)=\left\{ y_{j}\in Y_{j}:\forall\ y_{j}^{\prime}\in Y_{j},\ p\cdot y_{j}\geq p\cdot y_{j}^{\prime}\right\} :$
+\end_inset
+
+ the supply correspondence of the firm 
+\begin_inset Formula $j$
+\end_inset
+
+; it is called the supply function of firm 
+\begin_inset Formula $j$
+\end_inset
+
+ if it is a single-valued function.
+\end_layout
+
+\begin_layout Standard
+So, we can define the following
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\hat{x}(p)=\sum_{i=1}^{n}x_{i}(p):$
+\end_inset
+
+ the aggregate demand correpondence
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\hat{y}(p)=\sum_{j=1}^{J}y_{j}(p):$
+\end_inset
+
+ the aggregate supply correspondence
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\hat{z}(p)=\hat{x}(p)-\hat{w}-\hat{y}(p):$
+\end_inset
+
+ the aggregate excess demand correspondence
+\end_layout
+
+\begin_layout Standard
+If we have correspondences, we just add the sets together, i.e., 
+\begin_inset Formula $X+Y=\left\{ x+y:x\in X\ \wedge\ y\in Y\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An equivalent definition of a competitive equilibrium is that a price vector
+ 
+\begin_inset Formula $p^{*}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ is a competitive equilibrium price vector if there exists 
+\begin_inset Formula $\hat{z}\in\hat{z}(p^{*})$
+\end_inset
+
+ such that 
+\begin_inset Formula $\hat{z}\leq0$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ is single-valued, then 
+\begin_inset Formula $\hat{z}(p^{*})\leq0$
+\end_inset
+
+ is a comeptitive equilibrium.
+ Note, competitive equilibria can still exist if 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ is a correspondence instead of a function.
+ If we do not assume the production possibility sets satisfy free disposal,
+ then 
+\begin_inset Formula $\hat{x}=\hat{y}+\hat{w}\iff\hat{z}(p)=0$
+\end_inset
+
+ and the budget constraint holds with equality for all 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+7.3
+\begin_inset space \quad{}
+\end_inset
+
+Examples of GE Models: Graphical Treatment
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In most economies, there are three types of economic activities: produciton,
+ consumption, and exchanges.
+ Before formally stating the existence results on competitive equilibrium,
+ we will first give two simple examples of general equilibrium models: exchange
+ economies and a production economy with only one consumer and one firm.
+ These examples introduce some of the questions, concepts, and common techniques
+ that will occupy us for the rest of this part.
+ Remember, absolute prices do not matter, only relative prices matter, i.e.,
+ the ratio of prices 
+\begin_inset Formula $\nicefrac{p_{1}}{p_{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+7.3.1
+\begin_inset space \quad{}
+\end_inset
+
+Pure Exchange Economies
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A pure exchange economy is an economy in which there is no production.
+ This is a special case of a general economy.
+ In this case, economic activies only consist of trading and consumption.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The aggregate excess demand correspondence becomes 
+\begin_inset Formula $\hat{z}(p)=\hat{x}(p)-\hat{w}$
+\end_inset
+
+ so that we can define the individual excess demand by 
+\begin_inset Formula $z_{i}(p)=x_{i}(p)-w_{i}$
+\end_inset
+
+ for this special case.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The simplest exchange economy with the possibility of mutual benefit exchange
+ is the two-good and two-consumer exchange economy.
+ Note that the point denoted by 
+\begin_inset Formula $w$
+\end_inset
+
+ in the Edgeworth Box can be used to represent the initial endowments of
+ two people.
+\end_layout
+
+\begin_layout Subsubsection*
+Edgeworth Box
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider an excahnge economy with two goods 
+\begin_inset Formula $(x_{1},x_{2})$
+\end_inset
+
+ and two persons.
+ The total endowment is 
+\begin_inset Formula $\hat{w}=w_{1}+w_{2}$
+\end_inset
+
+.
+ For example, if 
+\begin_inset Formula $w_{1}=(1,2)$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}=(3,1)$
+\end_inset
+
+, then the total endowment is 
+\begin_inset Formula $\hat{w}=(4,3)$
+\end_inset
+
+.
+ Note that the point, denoted by 
+\begin_inset Formula $w$
+\end_inset
+
+ in the Edgeworth Box, can be used to represent the initial endowments of
+ two persons.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The advantage of the Edgeworth Box is that it gives all the possible (balanced)
+ trading points.
+ That is,
+\begin_inset Formula 
+\[
+x_{1}+x_{2}=w_{1}+w_{2}
+\]
+
+\end_inset
+
+for all points 
+\begin_inset Formula $x=(x_{1},x_{2})$
+\end_inset
+
+ in the box, where 
+\begin_inset Formula $x_{1}=(x_{11},x_{12})$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}=(x_{21},x_{22})$
+\end_inset
+
+.
+ Thus, every point in the Edgeworth Box stands for an attainable allocation
+ so that 
+\begin_inset Formula $x_{1}+x_{2}=w_{1}+w_{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The shaded lens (portion) of the box represents all the trading points that
+ make both persons better off.
+ Beyond the box, any point is not feasible.
+ In the box, one person's budget line is also the budget line of the other
+ person.
+ They share the same budget line in the box.
+ In the interior equilibrium case, two indifference curves are tangent to
+ each other at a point that is on the budget line so that the marginal rates
+ of substitutions for the two persons are the same and equal to the price
+ ratio, and aggregate demand equals aggregate supply.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A competitive equilibrium may still exist even if two persons' indifference
+ curves are not tangent.
+ In this case, there is no tangent point as long as the slopes of the indifferen
+ce curves of the two persons are not the same.
+ Even so, there sill exists a competitive equilibrium.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\series bold
+\emph on
+Offer curve:
+\series default
+\emph default
+ The locus of the optimal consumptions for the two goods when price varies.
+ Note that it consists of tangent points of the indifference curves and
+ budget lines when price varies.
+ The intersection of the two offer curves of the consumers can be used to
+ check if there is a competitive equilibrium.
+ One intersection of two consumers' offer curves is always given at the
+ endowment 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ If there is another intersection of two consumers' offer curves rather
+ than the one at the endowment 
+\begin_inset Formula $w$
+\end_inset
+
+, the intersection point must be the competitive equilibrium.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Note that a preference relation 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is convex if 
+\begin_inset Formula $x\succ_{i}x^{\prime}$
+\end_inset
+
+ implies 
+\begin_inset Formula $tx_{i}+(1-t)x_{i}^{\prime}\succ x_{i}^{\prime}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in(0,1)$
+\end_inset
+
+ and for all 
+\begin_inset Formula $x_{i},x_{i}^{\prime}\in X_{i}$
+\end_inset
+
+.
+ A preference relation 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ has a satiation point 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ if 
+\begin_inset Formula $x_{i}\succsim x_{i}^{\prime}$
+\end_inset
+
+ for all 
+\begin_inset Formula $x_{i}^{\prime}\in X_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Cases in which there may be no Walrasian Equiliria
+\end_layout
+
+\begin_layout Case
+Indifference curves are not convex.
+ If the two offer curves are not intersected except for at the endowment
+ points, then there may not exist a competitive equilibrium.
+ This may be true when preferences are not convex.
+\end_layout
+
+\begin_layout Case
+The initial endowment may not be an interior point of the consumption space.
+ Consider an exchange economy in which one person's indifference curves
+ put no values on one commodity, like when agent 2's indifference curves
+ are vertical lines so that 
+\begin_inset Formula $u_{2}(x_{21},x_{22})=x_{21}$
+\end_inset
+
+.
+ Agent 1's utility function is a regular one, which is given by a quasi-linear
+ utility function, 
+\begin_inset Formula $u_{1}=(x_{11},x_{12})=\sqrt{x_{11}}+x_{12}$
+\end_inset
+
+.
+ The initial endowments are given by 
+\begin_inset Formula $w_{1}=(1,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}=(0,1)$
+\end_inset
+
+.
+ There is no competitive equilibrium.
+ Why? There are two cases to be considered.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $p_{1}=0$
+\end_inset
+
+ or 
+\begin_inset Formula $p_{2}=0$
+\end_inset
+
+.
+ Agent 1 would demand infinite amount of the good whose price is zero.
+ Thus, there is no competitive equilibrium.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $p_{1}>0$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{2}>0$
+\end_inset
+
+.
+ Agent 2's demand for good 1 is 
+\begin_inset Formula $x_{21}=1$
+\end_inset
+
+, and agent 1 would demand a positive quantity of good 1 because of the
+ quasi-linear utility function.
+\begin_inset Formula 
+\[
+\frac{MU_{1}}{p_{1}}=\frac{MU_{2}}{p_{2}}\iff\frac{1}{2p_{1}\sqrt{x_{1}}}=\frac{1}{p_{2}}
+\]
+
+\end_inset
+
+ If 
+\begin_inset Formula $x_{1}\approx0$
+\end_inset
+
+, then the left-hand side approaches infinity, and the left-hand side is
+ greater than the right-hand side.
+ So, to obtain equality, we must have 
+\begin_inset Formula $x_{1}>0$
+\end_inset
+
+.
+ As such, the aggregate demand for good 1 is greater than 1, i.e., 
+\begin_inset Formula $x_{11}(p)+x_{21}(p)=\hat{x}_{1}(p)>\hat{w}_{1}$
+\end_inset
+
+, which violates the feasibility conditions.
+ Thus, no competitive equilibrium exists.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+7.3.2
+\begin_inset space \quad{}
+\end_inset
+
+The One-Consumer and One-Produce Economy
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, we introduce the possibility of production.
+ We analyze the simplest possible setting in which there are only two price-taki
+ng economic agents.
+ The two agents are one producer so that 
+\begin_inset Formula $J=1$
+\end_inset
+
+ and one consumer so that 
+\begin_inset Formula $n=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta=1$
+\end_inset
+
+.
+ There are also two goods: labor (leisure) and the consumption good produced
+ by the firm.
+ 
+\begin_inset Formula $w=(\bar{L},0)$
+\end_inset
+
+ is the consumer's endowment, where 
+\begin_inset Formula $\bar{L}$
+\end_inset
+
+ denotes the total units of leisure time.
+ We also have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(z):$
+\end_inset
+
+ the production funciton is strictly increasing, concave, and differentiable,
+ where 
+\begin_inset Formula $z$
+\end_inset
+
+ is labor input.
+ To have an interior solution, we assume 
+\begin_inset Formula $f$
+\end_inset
+
+ satisfies the Inada conditions 
+\begin_inset Formula $\lim_{z\rightarrow0}f^{\prime}(z)=+\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $\lim_{z\rightarrow+\infty}f^{\prime}(z)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Note*
+We need the production function to be concave, not quasi-concave.
+ For example, if 
+\begin_inset Formula $f(z)=z^{2},\ z\geq0$
+\end_inset
+
+, then we have a quasi-concave function, but it is also convex.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(p,\omega):$
+\end_inset
+
+ the price vector of the consumption good and labor.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u(x_{1},x_{2}):$
+\end_inset
+
+ is the utility function which is quasi-concave, increasing, and differentiable.
+ To have an interior solution, we assume 
+\begin_inset Formula $u$
+\end_inset
+
+ satisfies the Inada conditions 
+\begin_inset Formula $\lim_{x_{i}\rightarrow0}\frac{\partial u}{\partial x_{i}}(x_{i})=+\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $\lim_{x_{i}\rightarrow+\infty}\frac{\partial u}{\partial x_{i}}(x_{i})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $q(p,\omega):$
+\end_inset
+
+ the profit maximizing output for the consumption good
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $z(p,\omega):$
+\end_inset
+
+ the profit maximizing input for the labor
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\pi(p,\omega):$
+\end_inset
+
+ the profit maximizing funciton
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The firm's problem is to choose the labor 
+\begin_inset Formula $z$
+\end_inset
+
+ so as to solve
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \max_{z\geq0}}\ pf(z)-\omega z
+\end{equation}
+
+\end_inset
+
+The first-order condition is given by
+\begin_inset Formula 
+\begin{gather}
+pf^{\prime}(z)=\omega\nonumber \\
+\implies f^{\prime}(z)=\frac{\omega}{p}
+\end{gather}
+
+\end_inset
+
+which means the marginal rate of technical substitution of labor for the
+ consumption good equals the price ratio of the labor input and the consumption
+ good output (i.e., 
+\begin_inset Formula $MRTS_{z,q}=\nicefrac{\omega}{p}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The consumer's problem is to choose the leisure time and the consumption
+ for the good so as to solve
+\begin_inset Formula 
+\[
+{\displaystyle \max_{x_{1},x_{2}}}\ u(x_{1},x_{2})
+\]
+
+\end_inset
+
+subject to
+\begin_inset Formula 
+\[
+px_{2}\leq\omega(\bar{L}-x_{1})+\pi(p,\omega)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ is leisure and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ is the consumption good.
+ The first-order condition is given by
+\begin_inset Formula 
+\begin{equation}
+\frac{\frac{\partial u}{\partial x_{1}}}{\frac{\partial u}{\partial x_{2}}}=\frac{\omega}{p}
+\end{equation}
+
+\end_inset
+
+which means the marginal rate of substitution of leisure for the consumption
+ good 
+\begin_inset Formula $q$
+\end_inset
+
+ equals the price ratio of the leisure and consumption good (i.e., 
+\begin_inset Formula $MRS_{x_{1},x_{2}}=\nicefrac{\omega}{p}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+By (10) and (11)
+\begin_inset Formula 
+\begin{equation}
+MRS_{x_{1},x_{2}}=\frac{\omega}{p}=MRTS_{z,q}
+\end{equation}
+
+\end_inset
+
+A competitive equilibrium for this economy involves a price vector 
+\begin_inset Formula $(p^{*},\omega^{*})$
+\end_inset
+
+ at which
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{2}(p^{*},\omega^{*}) & = & q(p^{*},\omega^{*})\\
+x_{1}(p^{*},\omega^{*})+z(p^{*},\omega^{*}) & = & \bar{L}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the aggregate demand for the two goods equals the aggregate supply
+ for the two goods.
+\end_layout
+
+\begin_layout Section*
+7.4
+\begin_inset space \quad{}
+\end_inset
+
+The Existence of Competitive Equilibrium
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The proof of the existence of a competitive equilibrium is generally considered
+ one of the most important and robust results of economic theory.
+ In this section, we will examine the existence of competitive equilibrium
+ for the three cases: (1) the single-valued aggregate excess demand function;
+ (2) the aggregate excess demand correspondence; (3) a general class of
+ private ownership production economies.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this section we will examine the existence of competitive equilibrium
+ for the three cases: (1) the single-valued aggregate excess demand function;
+ (2) the aggregate excess demand correspondence; (3) a general class of
+ private ownership production economies.
+ The first two cases are based on excess deman instead of underlying preference
+ orderings and consumption and produciton sets.
+ There are many ways to prove the existence of general equilibrium.
+ For instance, one can use the Brouwer fixed point theorem approach, KKM
+ lemma approach, and abstract economy approach to show the existence of
+ competitive equilibrium for these three cases.
+\end_layout
+
+\begin_layout Subsection*
+7.4.1
+\begin_inset space \quad{}
+\end_inset
+
+The Existence of CE for Aggregate Excess Demand Functions
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The simplest case for the existence of a competitive equilibrium is the
+ one when the aggregate excess demand correspondence is a single-valued
+ function.
+ Note that, when preference orderings and production sets are both strictly
+ convex, we obtain excess demand functions rather than correspondences.
+ Also, if preferences are strictly monotone, then 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ is not well-defined when 
+\begin_inset Formula $p=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A very important property of the aggregate excess demand function 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ is Walras' law, which can take one of the following three forms:
+\end_layout
+
+\begin_layout Enumerate
+The strong form of Walras' law is given by
+\begin_inset Formula 
+\[
+\forall\ p\in\mathbb{R}_{+}^{L}:p\cdot\hat{z}(p)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The weak form of Walras' law is given by
+\begin_inset Formula 
+\[
+\forall\ p\in\mathbb{R}_{+}^{L}:p\cdot\hat{z}(p)\leq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The interior form of Walras' Law is given by
+\begin_inset Formula 
+\[
+\forall\ p\in\mathbb{R}_{++}^{L}:p\cdot\hat{z}(p)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Another important property of the aggregate excess demand funciton is homogeneit
+y of 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+.
+ It is homogeneous of degree zero in price, i.e., 
+\begin_inset Formula $\forall\ \lambda>0:\hat{z}(\lambda p)=\hat{z}(p)$
+\end_inset
+
+.
+ Important to note, if 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is a preference ordering, locally non-satiated, and continuous, then 
+\begin_inset Formula $x_{i}(p)$
+\end_inset
+
+ is homogenous of degree zero.
+ Also, if 
+\begin_inset Formula $Y_{j}$
+\end_inset
+
+ is non-empty, closed, and satisfies free disposal, then 
+\begin_inset Formula $y_{j}(p)$
+\end_inset
+
+ is homogenous of degree zero.
+ Normally, we assume 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ is always homogenous of degree zero.
+ From this property, we can normalize prices.
+ For example, we can normalize a price vector as follows:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $p_{l}^{\prime}=\nicefrac{p_{l}}{p_{1}},\ l=1,\ldots,L$
+\end_inset
+
+.
+ Here, good 1 is known as the numeraire, i.e., its price has been normalized
+ to 1.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $p_{l}^{\prime}=\nicefrac{p_{l}}{\sum_{l=1}^{L}}p_{l}$
+\end_inset
+
+.
+ This normalization is often used in proofs of existence of CE.
+\end_layout
+
+\begin_layout Standard
+Thus, without loss of generality, we can restrict our attention to the unit
+ simplex:
+\begin_inset Formula 
+\[
+S^{L-1}=\left\{ p^{\prime}\in\mathbb{R}_{+}^{L}:{\displaystyle \sum_{l=1}^{L}}p_{l}^{\prime}=1\right\} \subseteq\mathbb{R}_{+}^{L}
+\]
+
+\end_inset
+
+which is a non-empty and compact set.
+ Note, the second normalization can be used in the construction of this
+ set 
+\begin_inset Formula $(p^{\prime}\in S^{L-1})$
+\end_inset
+
+, but not the first.
+ Remember, that the unit simplex is always 1 degree less than 
+\begin_inset Formula $\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+ So, in 
+\begin_inset Formula $\mathbb{R}_{+}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $S^{L-1}$
+\end_inset
+
+ is a line, and in 
+\begin_inset Formula $\mathbb{R}_{+}^{3}$
+\end_inset
+
+, 
+\begin_inset Formula $S^{L-1}$
+\end_inset
+
+ is a plane.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+7.4.1 (Existence Theorem I).
+
+\series default
+ 
+\emph on
+For a private ownership economy 
+\begin_inset Formula $e=(\{X_{i},w_{i},\succsim_{i}\},\{Y_{j}\},\{\theta_{ij}\})$
+\end_inset
+
+, if 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ is a homogeneous of degree zero and continuous function, and satisfies
+ the strong Walras' Law, then there exists a competitive equilibrium, i.e.,
+ there is 
+\begin_inset Formula $p^{*}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\hat{z}(p)\leq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Note*
+For this Theorem, preferences can't be strictly monotone.
+\end_layout
+
+\begin_layout Proof
+Define a continuous function 
+\begin_inset Formula $g:S^{L-1}\rightarrow S^{L-1}$
+\end_inset
+
+ by
+\begin_inset Formula 
+\begin{equation}
+p_{l}=g_{l}(p)=\frac{p_{l}+\max\{0,\hat{z}_{l}(p)\}}{\sum_{k=1}^{L}\left[p_{k}+\max\{0,\hat{z}_{k}(p)\}\right]}=\frac{p_{l}+\max\{0,\hat{z}_{l}(p)\}}{1+\sum_{k=1}^{L}\max\{0,\hat{z}_{k}(p)\}}
+\end{equation}
+
+\end_inset
+
+for 
+\begin_inset Formula $l=1,\ldots,L$
+\end_inset
+
+.
+ First, we have constructed a mechanism to increase the price of good 
+\begin_inset Formula $l$
+\end_inset
+
+ when there is a shortage of the respective good (i.e., 
+\begin_inset Formula $\hat{z}_{l}(p)>0$
+\end_inset
+
+).
+ The numerator performs this task, while the denominator normalizes the
+ price.
+ Second, note that 
+\begin_inset Formula $g$
+\end_inset
+
+ is a continuous function since 
+\begin_inset Formula $\max\{f(x),h(x)\}$
+\end_inset
+
+ is a continuous function when 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $h(x)$
+\end_inset
+
+ are continuous.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+By Brouwer's Fixed Point Theorem, there exists a price vector 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ such that 
+\begin_inset Formula $g(p^{*})=p^{*}$
+\end_inset
+
+, i.e.,
+\begin_inset Formula 
+\begin{equation}
+p_{l}^{*}=\frac{p_{l}^{*}+\max\{0,\hat{z}_{l}(p^{*})\}}{1+\sum_{k=1}^{L}\max\{0,\hat{z}_{k}(p^{*})\}},\ l=1,\ldots,L
+\end{equation}
+
+\end_inset
+
+We want to show that 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+is in fact a competitive equilibrium price vector.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Cross multiplying 
+\begin_inset Formula $1+\sum_{k=1}^{L}\max\{0,\hat{z}_{k}(p^{*})\}$
+\end_inset
+
+ on both sides of (14), we have
+\begin_inset Formula 
+\begin{equation}
+p_{l}^{*}\sum_{k=1}^{L}\max\{0,\hat{z}_{k}(p^{*})\}=\max\{0,\hat{z}_{l}(p^{*})\}
+\end{equation}
+
+\end_inset
+
+Then, multiplying equation (15) by 
+\begin_inset Formula $\hat{z}_{l}(p^{*})$
+\end_inset
+
+ and taking summation, we have
+\begin_inset Formula 
+\begin{equation}
+\left[{\displaystyle \sum_{l=1}^{L}}p_{l}^{*}\hat{z}_{l}(p^{*})\right]\left[{\displaystyle \sum_{l=1}^{L}}\max\left\{ 0,\hat{z}_{l}(p^{*})\right\} \right]={\displaystyle \sum_{l=1}^{L}}\hat{z}_{l}(p^{*})\max\left\{ 0,\hat{z}_{l}(p^{*})\right\} 
+\end{equation}
+
+\end_inset
+
+Then, by the strong Walras' Law, we have
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{l=1}^{L}}\hat{z}_{l}(p^{*})\max\left\{ 0,\hat{z}_{l}(p^{*})\right\} =0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Therefore, each term of the summation is either zero or 
+\begin_inset Formula $(\hat{z}_{l}(p^{*}))^{2}>0$
+\end_inset
+
+.
+ Thus, to have the summation be equal to zero, we must have each term be
+ zero.
+ That is, 
+\begin_inset Formula $\hat{z}_{l}(p^{*})\leq0$
+\end_inset
+
+ for 
+\begin_inset Formula $l=1,\ldots,L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Note*
+\begin_inset Formula $\hat{z}(p):S^{L-1}\rightarrow\mathbb{R}^{L}$
+\end_inset
+
+ is a vector of 
+\begin_inset Formula $L$
+\end_inset
+
+ goods, and 
+\begin_inset Formula $p\cdot\hat{z}(p)$
+\end_inset
+
+ is a scalar.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 7.4.1.
+
+\series default
+ Do not confuse competitive equilibrium of an aggregate excess demand function
+ with the strong Walras' Law.
+ Even though Walras' Law holds, we may not have 
+\begin_inset Formula $\hat{z}(p)\leq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Also, if 
+\begin_inset Formula $\hat{z}(p^{*})\leq0$
+\end_inset
+
+ for some 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is a comeptitive equilibrium price vector, the strong Walras' Law may not
+ hold unless some types of monotonicty are imposed, such as local non-satiation.
+\end_layout
+
+\begin_layout Note*
+Strong Walras' Law does not imply a competitive equilibrium, and a competitive
+ equilibrium does not imply Strong Walras' Law.
+\end_layout
+
+\begin_layout Fact
+
+\series bold
+\shape up
+(Free goods).
+ 
+\series default
+\emph on
+Under the strong Walras' Law, if 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is a competitive equilibrium price vector and 
+\begin_inset Formula $\hat{z}_{l}(p^{*})<0$
+\end_inset
+
+, then 
+\begin_inset Formula $p_{l}^{*}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Suppose not.
+ Then, 
+\begin_inset Formula $p_{l}^{*}>0$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $p_{l}\cdot\hat{z}_{l}(p^{*})<0$
+\end_inset
+
+, and thus, 
+\begin_inset Formula $p\cdot\hat{z}(p^{*})<0$
+\end_inset
+
+.
+ However, this contradicts strong Walras' Law.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Note.
+ (Desirable goods).
+
+\series default
+ 
+\emph on
+If 
+\begin_inset Formula $p_{l}=0$
+\end_inset
+
+, then 
+\begin_inset Formula $\hat{z}_{l}(p^{*})>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Fact
+
+\series bold
+\shape up
+(Equality of demand and supply).
+
+\series default
+\emph on
+ If all goods are desirable and 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is a competitive equilibrium price vector, then 
+\begin_inset Formula $\hat{z}(p^{*})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Suppose not.
+ Then, we have 
+\begin_inset Formula $\hat{z}_{l}(p^{*})<0$
+\end_inset
+
+ for some 
+\begin_inset Formula $l$
+\end_inset
+
+.
+ By the free goods condition, 
+\begin_inset Formula $p_{l}^{*}=0$
+\end_inset
+
+.
+ However, since all goods are desirable, then 
+\begin_inset Formula $\hat{z}_{l}(p^{*})>0,$
+\end_inset
+
+ which contradicts 
+\begin_inset Formula $\hat{z}_{l}(p^{*})<0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 7.4.2.
+ 
+\series default
+By the strong Walras' Law, if 
+\begin_inset Formula $p>0$
+\end_inset
+
+ and 
+\begin_inset Formula $L-1$
+\end_inset
+
+ markets are in equilibrium, then the 
+\begin_inset Formula $L$
+\end_inset
+
+-th market is also in the equilibrium.
+ Thus, because of the strong Walras' Law, to verify that a price vector
+ 
+\begin_inset Formula $p>0$
+\end_inset
+
+ clears all markets, it suffices to check that it clears all markets but
+ one.
+\end_layout
+
+\begin_layout Note*
+There are many different people in the economy with varying preferences,
+ so we want to make the existence theorems of CE's as general as possible
+ by weakening the conditions.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+7.4.2 (Existence Theorem I').
+
+\series default
+ 
+\emph on
+For a private ownership economy 
+\begin_inset Formula $e=(\{X_{i},w_{i},\succsim_{i}\},\{Y_{j}\},\{\theta_{ij}\})$
+\end_inset
+
+, if the aggregate excess demand function 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ is a lower semi-continuous function and satisfies strong or weak Walras'
+ Law, then there exists a competitive equilibrium, i.e., there is 
+\begin_inset Formula $p^{*}\in S^{L-1}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\hat{z}(p^{*})\leq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Note*
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ is homogenous of degree zero.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $S\equiv S^{L-1}$
+\end_inset
+
+.
+ Define a correspondence 
+\begin_inset Formula $F:S\rightarrow2^{S}$
+\end_inset
+
+ by
+\begin_inset Formula 
+\[
+\forall\ p\in S:F(p)=\left\{ q\in S:p\cdot\hat{z}(q)\leq0\right\} 
+\]
+
+\end_inset
+
+Before we begin, notice that we have constructed a set of prices such that
+ quantities chosen at the new prices, 
+\begin_inset Formula $q$
+\end_inset
+
+, are still affordable under the old prices, 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+First, note that for each 
+\begin_inset Formula $p\in S$
+\end_inset
+
+, 
+\begin_inset Formula $F(p)$
+\end_inset
+
+ is nonempty since 
+\begin_inset Formula $p\in F(p)$
+\end_inset
+
+ by strong or weak Walras' Law.
+ Since 
+\begin_inset Formula $p\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{z}(\cdot)$
+\end_inset
+
+ is lower semi-continuous, then the function defined by 
+\begin_inset Formula $\phi(p,q)\equiv p\cdot\hat{z}(q)=\sum_{l=1}^{L}p_{l}\hat{z}_{l}(q)$
+\end_inset
+
+ is lower semi-continuous in 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ Hence, the set 
+\begin_inset Formula $F(p)$
+\end_inset
+
+ is closed for all 
+\begin_inset Formula $p\in S$
+\end_inset
+
+.
+ Also, since 
+\begin_inset Formula $F(p)\subseteq S$
+\end_inset
+
+ and 
+\begin_inset Formula $S$
+\end_inset
+
+ is bounded, then 
+\begin_inset Formula $F(p)$
+\end_inset
+
+ is compact for all 
+\begin_inset Formula $p\in S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+We now prove 
+\begin_inset Formula $F$
+\end_inset
+
+ is FS-convex.
+ Suppose for contradiction that there are some 
+\begin_inset Formula $\{p_{1},\ldots,p_{m}\}\subseteq S$
+\end_inset
+
+ and some convex combination 
+\begin_inset Formula $p_{\lambda}=\sum_{t=1}^{m}\lambda_{t}p_{t}$
+\end_inset
+
+ such that 
+\begin_inset Formula $p_{\lambda}\notin\cup_{t=1}^{m}F(p_{t})$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $p_{\lambda}\notin F(p_{t})$
+\end_inset
+
+ for all 
+\begin_inset Formula $t=1,\ldots,m$
+\end_inset
+
+.
+ This implies that 
+\begin_inset Formula $p_{t}\cdot\hat{z}(p_{\lambda})>0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t=1,\ldots,m$
+\end_inset
+
+, so 
+\begin_inset Formula $\lambda_{t}p_{t}\cdot\hat{z}(p_{\lambda})>0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t=1,\ldots,m$
+\end_inset
+
+.
+ Consequently, 
+\begin_inset Formula $\sum_{t=1}^{m}\lambda_{t}p_{t}\hat{z}(p_{\lambda})=p_{\lambda}\cdot\hat{z}(p_{\lambda})>0$
+\end_inset
+
+, which contradicts the fact that 
+\begin_inset Formula $\hat{z}$
+\end_inset
+
+ satisfies strong or weak Walras' Law.
+ Thus, 
+\begin_inset Formula $F$
+\end_inset
+
+ must be FS-convex.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Therefore, by the KKM Lemma, we have
+\begin_inset Formula 
+\[
+\cap_{p\in S}F(p)\neq\emptyset
+\]
+
+\end_inset
+
+Then, there exists a 
+\begin_inset Formula $p^{*}\in S$
+\end_inset
+
+ such that 
+\begin_inset Formula $p^{*}\in\cap_{p\in S}F(p)$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $p^{*}\in F(p)$
+\end_inset
+
+ for all 
+\begin_inset Formula $p\in S$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $p\cdot\hat{z}(p^{*})\leq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $p\in S$
+\end_inset
+
+.
+ Now, let 
+\begin_inset Formula $p_{1}=(1,0,\ldots,0)^{\prime},\ p_{2}=(0,1,0,\ldots,0)^{\prime},\ \ldots,\ \mbox{and}\ p_{L}=(0,\ldots,0,1)^{\prime}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $p_{l}\in S$
+\end_inset
+
+, and thus, 
+\begin_inset Formula $p_{l}\cdot\hat{z}(p^{*})=\hat{z}_{l}(p^{*})\leq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $l=1,\ldots,L$
+\end_inset
+
+.
+ Thus, we have 
+\begin_inset Formula $\hat{z}(p^{*})\leq0$
+\end_inset
+
+, which means 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is a competitive equilibrium price vector.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The two theorems above assume that the excess demand function is well defined
+ for all prices in the closed unit simplex 
+\begin_inset Formula $S^{L-1}$
+\end_inset
+
+, including zero prices.
+ When preferences are stricly monotone, excess demand functions are not
+ well defined on the boundary of 
+\begin_inset Formula $S^{L-1}$
+\end_inset
+
+ so that the above existence theorems cannot be applied.
+ Then, we need an existence theorem for strictly positive prices, which
+ is given below.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+7.4.4 (Existence Theorem I''').
+
+\series default
+ 
+\emph on
+For a prive ownership economy 
+\begin_inset Formula $e=(\{X_{i},w_{i},\succsim_{i}\},\{Y_{j}\},\{\theta_{ij}\})$
+\end_inset
+
+, suppose the aggregate excess demand function 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ is defined for all strictly positive price vectors 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+, and satisfies the following conditions
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\hat{z}(\cdot)$
+\end_inset
+
+ is continuous;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\hat{z}(\cdot)$
+\end_inset
+
+ is homogeneous of degree zero;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall\ p\in\mathbb{R}_{++}^{L}:p\cdot\hat{z}(p)=0$
+\end_inset
+
+ (interior Walras' Law);
+\end_layout
+
+\begin_layout Enumerate
+There is an 
+\begin_inset Formula $s>0$
+\end_inset
+
+ such that 
+\begin_inset Formula $\hat{z}_{l}(p)>-s$
+\end_inset
+
+ for every commodity 
+\begin_inset Formula $l$
+\end_inset
+
+ and all 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ 
+\begin_inset Formula $(\hat{z}_{l}(p)\ \mbox{is bounded from below})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $p_{k}\rightarrow p$
+\end_inset
+
+, where 
+\begin_inset Formula $p\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{l}=0$
+\end_inset
+
+ for some 
+\begin_inset Formula $l$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\max\{\hat{z}_{1}(p_{k}),\ldots,\hat{z}_{L}(p_{k})\}\rightarrow\infty
+\]
+
+\end_inset
+
+
+\begin_inset Formula $ $
+\end_inset
+
+(The sequence of maximums diverges to infinity, not necessarily a particular
+ sequence 
+\begin_inset Formula $\hat{z}_{l}(p_{k})$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\{\hat{z}_{l}(p_{k})\}_{k=1}^{\infty}$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Theorem*
+Then there is 
+\begin_inset Formula $p^{*}\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+ such that 
+\begin_inset Formula $z(p^{*})=0$
+\end_inset
+
+, and thus 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is a competitive equilibrium.
+\end_layout
+
+\begin_layout Note*
+We are going to prove that when 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+, then if 
+\begin_inset Formula $p_{l}\rightarrow0$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{z}_{l}(p)\rightarrow\infty$
+\end_inset
+
+, i.e., all goods are desirable.
+ This theorem can be applied when preferences are strictly monotone.
+\end_layout
+
+\begin_layout Proof
+Because of homogeneity of degree zero, we can restrict our search for an
+ equilibrium in the unit simplex 
+\begin_inset Formula $S\equiv S^{L-1}$
+\end_inset
+
+.
+ Denote its interior by 
+\begin_inset Formula $\mbox{int}(S)$
+\end_inset
+
+.
+ We want to construct a correspondence 
+\begin_inset Formula $F$
+\end_inset
+
+ from 
+\begin_inset Formula $S$
+\end_inset
+
+ to 
+\begin_inset Formula $S$
+\end_inset
+
+ such that any fixed point 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ of 
+\begin_inset Formula $F$
+\end_inset
+
+ is a competitive equilibrium, i.e., 
+\begin_inset Formula $p^{*}\in F(p^{*})$
+\end_inset
+
+ implies 
+\begin_inset Formula $\hat{z}(p^{*})=0$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\hat{z}(p)\neq0$
+\end_inset
+
+ for 
+\begin_inset Formula $p\in\mbox{int}(S)$
+\end_inset
+
+, then by Walras' Law, we have 
+\begin_inset Formula $\hat{z}_{l}(p)<0$
+\end_inset
+
+ for some 
+\begin_inset Formula $l$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{z}_{l^{\prime}}(p)>0$
+\end_inset
+
+ for some 
+\begin_inset Formula $l^{\prime}\neq l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+To start, define a correspondence 
+\begin_inset Formula $F:S\rightarrow2^{S}$
+\end_inset
+
+ by
+\begin_inset Formula 
+\[
+F(p)=\begin{cases}
+\{q\in S:\forall\ q^{\prime}\in S,\ q\cdot\hat{z}(p)\geq q^{\prime}\cdot\hat{z}(p)\} & \mbox{if}\ p\in\mbox{int}(S)\\
+\{q\in S:q\cdot p=0\} & \mbox{if \ensuremath{p}\ is on the boundary}
+\end{cases}
+\]
+
+\end_inset
+
+Note, for 
+\begin_inset Formula $p\in\mbox{int}(S)$
+\end_inset
+
+, 
+\begin_inset Formula $F(\cdot)$
+\end_inset
+
+ means that, given the current 
+\begin_inset Quotes eld
+\end_inset
+
+proposal
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $p\in\mbox{int}(S)$
+\end_inset
+
+, the 
+\begin_inset Quotes eld
+\end_inset
+
+counterproposal
+\begin_inset Quotes erd
+\end_inset
+
+ assigned by the correspondence 
+\begin_inset Formula $F(\cdot)$
+\end_inset
+
+ is any price vector 
+\begin_inset Formula $q$
+\end_inset
+
+ that maximizes the values of the aggregate excess demand vector among the
+ permissible price vectors in 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Here, 
+\begin_inset Formula $F(\cdot)$
+\end_inset
+
+ can be thought of as a rule that adjusts current prices in a direction
+ that eliminates the largest, but not all of the excess demand.
+ The correspondence 
+\begin_inset Formula $F(\cdot)$
+\end_inset
+
+ assigns the highest prices to the commodities that are most in excess demand.
+ In particular, we have
+\begin_inset Formula 
+\[
+F(p)=\left\{ q\in S:q_{l}=0\ \mbox{if}\ \hat{z}_{l}(p_{k})<\max\{\hat{z}_{1}(p_{k}),\ldots,\hat{z}_{L}(p_{k})\}\right\} 
+\]
+
+\end_inset
+
+Observe that if 
+\begin_inset Formula $\hat{z}(p)\neq0$
+\end_inset
+
+ for 
+\begin_inset Formula $p\in\mbox{int}(S)$
+\end_inset
+
+, then because of the interior Walras' law we have 
+\begin_inset Formula $\hat{z}_{l}(p)<0$
+\end_inset
+
+ for some 
+\begin_inset Formula $l$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{z}_{l^{\prime}}(p)>0$
+\end_inset
+
+ for some 
+\begin_inset Formula $l^{\prime}\neq l$
+\end_inset
+
+.
+ Thus, for such a 
+\begin_inset Formula $p$
+\end_inset
+
+, any 
+\begin_inset Formula $q\in F(p)$
+\end_inset
+
+ has 
+\begin_inset Formula $q_{l}=0$
+\end_inset
+
+ for some 
+\begin_inset Formula $l$
+\end_inset
+
+ (to maximize the values of excess demand vectors).
+ Therefore, if 
+\begin_inset Formula $\hat{z}(p)\neq0$
+\end_inset
+
+, then 
+\begin_inset Formula $F(p)\subseteq\mbox{Boundary(}S)=S\backslash\mbox{Int}(S)$
+\end_inset
+
+.
+ In contrast, if 
+\begin_inset Formula $\hat{z}(p)=0$
+\end_inset
+
+, then 
+\begin_inset Formula $F(p)=S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Next, we want to show that the correpondence 
+\begin_inset Formula $F$
+\end_inset
+
+ is an upper hemi-continuous correspondence with non-empty, convex, and
+ compact values.
+ First, 
+\begin_inset Formula $S^{L-1}$
+\end_inset
+
+ is compact by definition and 
+\begin_inset Formula $\hat{z}(p)\cdot q$
+\end_inset
+
+ is a continuous linear function.
+ Remember, a continuous function reaches its maximum on a compact set.
+ Also, note that 
+\begin_inset Formula $F$
+\end_inset
+
+ is the set of maximals of 
+\begin_inset Formula $\hat{z}(p)\cdot q$
+\end_inset
+
+.
+ Finally, the set of maximals is a compact set, and since 
+\begin_inset Formula $\hat{z}(p)\cdot q$
+\end_inset
+
+ is a linear function, its set of maximals is convex.
+ Thus, 
+\begin_inset Formula $F$
+\end_inset
+
+ is compact and convex.
+ By Weierstrass's Theorem, each continuous function on a compact set has
+ a maximizer.
+ When 
+\begin_inset Formula $p\in\mbox{Int}(S)$
+\end_inset
+
+, 
+\begin_inset Formula $F(p)$
+\end_inset
+
+ is non-empty since any price vector 
+\begin_inset Formula $q$
+\end_inset
+
+ that maximizes the value of 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ is in 
+\begin_inset Formula $F(p)$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $p$
+\end_inset
+
+ is on the boundary of 
+\begin_inset Formula $S$
+\end_inset
+
+, 
+\begin_inset Formula $p_{l}=0$
+\end_inset
+
+ for at least some good 
+\begin_inset Formula $l$
+\end_inset
+
+, so there exists a 
+\begin_inset Formula $q\in S$
+\end_inset
+
+ such that 
+\begin_inset Formula $q\cdot p=0$
+\end_inset
+
+, which also implies 
+\begin_inset Formula $F(p)$
+\end_inset
+
+ is also non-empty.
+ Moreover, since 
+\begin_inset Formula $q\cdot\hat{z}(p)$
+\end_inset
+
+ is a linear function and 
+\begin_inset Formula $F(p)$
+\end_inset
+
+ is defined to be the set of maximals of 
+\begin_inset Formula $q\cdot\hat{z}(p)$
+\end_inset
+
+, then 
+\begin_inset Formula $F(p)$
+\end_inset
+
+ is compact and convex-valued.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Now, we show the correspondence 
+\begin_inset Formula $F$
+\end_inset
+
+ is upper hemi-continuous, or equivalently, it has closed graphs, i.e., for
+ any sequences 
+\begin_inset Formula $p_{t}\rightarrow p$
+\end_inset
+
+ and 
+\begin_inset Formula $q_{t}\rightarrow q$
+\end_inset
+
+ with 
+\begin_inset Formula $q_{t}\in F(p_{t})$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+, we have 
+\begin_inset Formula $q\in F(p)$
+\end_inset
+
+.
+ There are two cases to consider.
+\end_layout
+
+\begin_deeper
+\begin_layout Case
+\begin_inset Formula $p\in\mbox{int}(S)$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $p_{k}\in\mbox{int}(S)$
+\end_inset
+
+ for 
+\begin_inset Formula $k$
+\end_inset
+
+ sufficiently large.
+ From 
+\begin_inset Formula $q_{k}\cdot\hat{z}(p_{k})\geq q^{\prime}\cdot\hat{z}(p_{k})$
+\end_inset
+
+ for all 
+\begin_inset Formula $q^{\prime}\in S$
+\end_inset
+
+ and the continuity of 
+\begin_inset Formula $\hat{z}(\cdot)$
+\end_inset
+
+, we get 
+\begin_inset Formula $q\cdot\hat{z}(p)\geq q^{\prime}\cdot\hat{z}(p)$
+\end_inset
+
+ for all 
+\begin_inset Formula $q^{\prime}\in S$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $q\in F(p)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $p$
+\end_inset
+
+ is a boundary point of 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Take any 
+\begin_inset Formula $l$
+\end_inset
+
+ with 
+\begin_inset Formula $p_{l}>0$
+\end_inset
+
+.
+ We want to show that for 
+\begin_inset Formula $k$
+\end_inset
+
+ sufficiently large, we have 
+\begin_inset Formula $q_{lk}=0$
+\end_inset
+
+.
+ Therefore, it must be that 
+\begin_inset Formula $q_{l}=0$
+\end_inset
+
+; from this, 
+\begin_inset Formula $q\in F(p)$
+\end_inset
+
+ follows.
+ Take a sequence 
+\begin_inset Formula $p_{k}$
+\end_inset
+
+ such that 
+\begin_inset Formula $p_{lk}\rightarrow p_{l}>0$
+\end_inset
+
+ as 
+\begin_inset Formula $k\rightarrow\infty$
+\end_inset
+
+.
+ Then, for all 
+\begin_inset Formula $\delta>0$
+\end_inset
+
+, there exists 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $k\geq N$
+\end_inset
+
+, 
+\begin_inset Formula $p_{lk}\in B_{\delta}(p_{l})$
+\end_inset
+
+.
+ This implies that there exists 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ such that 
+\begin_inset Formula $p_{lk}>\epsilon$
+\end_inset
+
+ for 
+\begin_inset Formula $k$
+\end_inset
+
+ sufficiently large.
+ Moreover, if 
+\begin_inset Formula $p_{k}$
+\end_inset
+
+ is on the boundary of 
+\begin_inset Formula $S$
+\end_inset
+
+, then 
+\begin_inset Formula $q_{lk}=0$
+\end_inset
+
+ by the definition of 
+\begin_inset Formula $F(p_{k})$
+\end_inset
+
+.
+ Instead, if 
+\begin_inset Formula $p_{k}\in\mbox{Int}(S)$
+\end_inset
+
+, then by conditions (iv) and (v), we must have
+\begin_inset Formula 
+\[
+\hat{z}_{l}(p_{k})<\max\left\{ \hat{z}_{1}(p_{k}),\ldots,\hat{z}_{L}(p_{k})\right\} \rightarrow\infty
+\]
+
+\end_inset
+
+for 
+\begin_inset Formula $k$
+\end_inset
+
+ sufficiently large.
+ Therefore, 
+\begin_inset Formula $q_{lk}=0$
+\end_inset
+
+ by the definition of 
+\begin_inset Formula $F(p_{k})$
+\end_inset
+
+, 
+\begin_inset Formula $p_{k}\in\mbox{int}(S)$
+\end_inset
+
+.
+ Before proving the inequality above, note that some prices go to zero as
+ 
+\begin_inset Formula $k\rightarrow\infty$
+\end_inset
+
+ because 
+\begin_inset Formula $p$
+\end_inset
+
+ is a boundary point of 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Consequently, the sequence of maximums on the right-hand side of the expression
+ approaches infinity as 
+\begin_inset Formula $k\rightarrow\infty$
+\end_inset
+
+ by condition (v).
+ The left-hand side hand, on the other hand, is bounded from above.
+ Now, since 
+\begin_inset Formula $p_{lk}>\epsilon$
+\end_inset
+
+ for 
+\begin_inset Formula $k$
+\end_inset
+
+ sufficiently large, then if the left-hand side is positive, we have 
+\begin_inset Formula 
+\[
+\epsilon\hat{z}_{l}(\hat{p}_{k})\leq p_{lk}\hat{z}_{l}(p_{k})\iff\hat{z}_{l}(p_{k})\leq\frac{1}{\epsilon}p_{lk}\hat{z}_{l}(p_{k})
+\]
+
+\end_inset
+
+By the interior Walras' Law, 
+\begin_inset Formula $p_{k}\cdot\hat{z}(p_{k})=0$
+\end_inset
+
+, and so 
+\begin_inset Formula $\sum_{l=1}^{L}p_{lk}\hat{z}_{l}(p_{k})=0$
+\end_inset
+
+.
+ This implies that 
+\begin_inset Formula $p_{lk}\hat{z}_{l}(p_{k})=-\sum_{l^{\prime}\neq l}p_{l^{\prime}k}\hat{z}_{l}(p_{k})$
+\end_inset
+
+.
+ As a result,
+\begin_inset Formula 
+\[
+\frac{1}{\epsilon}p_{lk}\hat{z}_{l}(p_{k})=-\frac{1}{\epsilon}{\displaystyle \sum_{l^{\prime}\neq l}}p_{l^{\prime}k}\hat{z}_{l^{\prime}}(p_{k})
+\]
+
+\end_inset
+
+Finally, by condition (iv), there exists 
+\begin_inset Formula $s>0$
+\end_inset
+
+ such that 
+\begin_inset Formula $\hat{z}_{l}(p)>-s\iff-\hat{z}_{l}(p)<s$
+\end_inset
+
+ for all 
+\begin_inset Formula $l$
+\end_inset
+
+ and for all 
+\begin_inset Formula $p\in S$
+\end_inset
+
+.
+ Hence,
+\begin_inset Formula 
+\[
+-\frac{1}{\epsilon}{\displaystyle \sum_{l^{\prime}\neq l}}p_{l^{\prime}k}\hat{z}_{l^{\prime}}(p_{k})<\frac{s}{\epsilon}\sum_{l^{\prime}\neq l}p_{l^{\prime}k}<\frac{s}{\epsilon}
+\]
+
+\end_inset
+
+since 
+\begin_inset Formula $\sum_{l^{\prime}\neq l}p_{l^{\prime}k}<1$
+\end_inset
+
+.
+ Also, note that 
+\begin_inset Formula $s$
+\end_inset
+
+ is the bound in excess supply given by condition (iv).
+ Thus, the sequence of 
+\begin_inset Formula $\hat{z}_{l}(p_{k})$
+\end_inset
+
+ is bounded from above, and it is less than the sequence of of maximums,
+ which approaches infinity.
+ In summary, for 
+\begin_inset Formula $p_{k}$
+\end_inset
+
+ close enough to the boundary of 
+\begin_inset Formula $S$
+\end_inset
+
+, the maximal demand corresponds to some of the commoditites whose price
+ is close to zero.
+ Therefore, we conclude that, for large 
+\begin_inset Formula $k$
+\end_inset
+
+, any 
+\begin_inset Formula $q_{k}\in F(p_{k})$
+\end_inset
+
+ will put nonzero weight only on commodities whose prices approach zero
+ and zero weight on all commodities whose prices don't approach zero.
+ This guarantees that 
+\begin_inset Formula $q\cdot p=0$
+\end_inset
+
+ and so 
+\begin_inset Formula $q\in F(p)$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $F$
+\end_inset
+
+ must be upper hemi-continuous.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Thus, the correspondence 
+\begin_inset Formula $F$
+\end_inset
+
+ is an upper hemi-continuous correspondence with nonempty, convex, and compact
+ values.
+ Therefore, by Kakutani's Fixed Point Theorem, we conclude that there is
+ 
+\begin_inset Formula $p^{*}\in S$
+\end_inset
+
+ such that 
+\begin_inset Formula $p^{*}\in F(p^{*})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Finally, we show that any fixed point 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ of 
+\begin_inset Formula $F$
+\end_inset
+
+ is a competitive equilibrium.
+ Suppose that 
+\begin_inset Formula $p^{*}\in F(p^{*})$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ cannot be a boundary point of 
+\begin_inset Formula $S$
+\end_inset
+
+ because 
+\begin_inset Formula $p\cdot p>0$
+\end_inset
+
+ and 
+\begin_inset Formula $p\cdot q=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $q\in F(p)$
+\end_inset
+
+ cannot occur simultaneously, so 
+\begin_inset Formula $p^{*}\in\mbox{int}(S)$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\hat{z}(p^{*})\neq0$
+\end_inset
+
+, then 
+\begin_inset Formula $\hat{z}_{l}(p^{*})<0$
+\end_inset
+
+ for 
+\begin_inset Formula $l$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{z}_{k}(p^{*})>0$
+\end_inset
+
+ for 
+\begin_inset Formula $k$
+\end_inset
+
+ by the interior Walras' Law.
+ Thus, for such a 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+, any 
+\begin_inset Formula $q^{*}\in F(p^{*})$
+\end_inset
+
+ must have 
+\begin_inset Formula $q_{l}^{*}=0$
+\end_inset
+
+ because 
+\begin_inset Formula $q^{*}$
+\end_inset
+
+ is the maximum of the function 
+\begin_inset Formula $q\cdot\hat{z}(p^{*})$
+\end_inset
+
+, which means 
+\begin_inset Formula $F(p^{*})$
+\end_inset
+
+ is a subset of boundary points of 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ But, 
+\begin_inset Formula $p^{*}\in F(p^{*})$
+\end_inset
+
+ and 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is not in the boundary of 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Therefore, if 
+\begin_inset Formula $p^{*}\in F(p^{*})$
+\end_inset
+
+, we must have 
+\begin_inset Formula $\hat{z}(p^{*})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Conditions for Walras' Law to be true
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+From the above theorems, Walras' Law is important to prove the existence
+ of a competitive equilibrium.
+ Under which conditions is Walras' Law held?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When each consumer's budget constraint holds with equality:
+\begin_inset Formula 
+\[
+p\cdot x_{i}(p)=p\cdot w_{i}+{\displaystyle \sum_{j=1}^{J}}\theta_{ij}p\cdot y_{j}(p)
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $i$
+\end_inset
+
+ we have
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \sum_{i=1}^{n}}p\cdot x_{i}(p) & = & {\displaystyle \sum_{i=1}^{n}}p\cdot w_{i}+{\displaystyle \sum_{i=1}^{n}}{\displaystyle \sum_{j=1}^{J}}\theta_{ij}p\cdot y_{j}(p)\\
+ & = & {\displaystyle \sum_{i=1}^{n}}p\cdot w_{i}+{\displaystyle \sum_{j=1}^{J}}p\cdot y_{j}(p)
+\end{eqnarray*}
+
+\end_inset
+
+which implies that
+\begin_inset Formula 
+\begin{equation}
+p\cdot\left[{\displaystyle \sum_{i=1}^{n}}x_{i}(p)-{\displaystyle \sum_{i=1}^{n}}w_{i}+{\displaystyle \sum_{j=1}^{J}}y_{j}(p)\right]=0
+\end{equation}
+
+\end_inset
+
+so that
+\begin_inset Formula 
+\begin{equation}
+p\cdot\hat{z}(p)=0
+\end{equation}
+
+\end_inset
+
+Thus, as long as the individual constraints hold with equality, Walras'
+ Law must hold.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The above existence theorems on competitive equilibrium are based on the
+ assumptions that the aggregate excess demand correspondence is single-valued
+ and satisfies Walras' Law.
+ The questions are under what conditions on economic environments a budget
+ constraint holds with equality, and the aggregate excess demand correspondence
+ is single-valued or convex-valued? The following various types of monotonicitie
+s and convexities of preferences with the first one strongest and the last
+ one weakest may be used to answer these questions.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Types of monotonicity conditions
+\end_layout
+
+\begin_layout Enumerate
+Strict monotonicity: For any two consumption market bundles 
+\begin_inset Formula $(x\geq x^{\prime})$
+\end_inset
+
+ with 
+\begin_inset Formula $x\neq x^{\prime}$
+\end_inset
+
+ implies 
+\begin_inset Formula $x\succ_{i}x^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Monotonicity: 
+\begin_inset Formula $x>x^{\prime}$
+\end_inset
+
+ implies that 
+\begin_inset Formula $x\succ_{i}x^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Local non-satiation: For any point 
+\begin_inset Formula $x$
+\end_inset
+
+ and any neighborhood, 
+\begin_inset Formula $N(x)$
+\end_inset
+
+, there is 
+\begin_inset Formula $x^{\prime}\in N(x)$
+\end_inset
+
+ such that 
+\begin_inset Formula $x^{\prime}\succ_{i}x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Non-satiation: For any 
+\begin_inset Formula $x$
+\end_inset
+
+, there exists 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x^{\prime}\succ_{i}x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 7.4.4.
+
+\series default
+ Monotonicity of preferences can be interpreted as individuals' desires
+ for goods: the more, the better.
+ Local non-satiation means individuals' desires are unlimited.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Types of convexities
+\end_layout
+
+\begin_layout Enumerate
+Strict convexity: For any 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ with 
+\begin_inset Formula $x\succsim_{i}x^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x\neq x^{\prime}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{\lambda}\equiv\lambda x+(1-\lambda)x^{\prime}\succ_{i}x^{\prime}$
+\end_inset
+
+ for 
+\begin_inset Formula $\lambda\in(0,1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Convexity: If 
+\begin_inset Formula $x\succ_{i}x^{\prime}$
+\end_inset
+
+, then 
+\begin_inset Formula $x_{\lambda}\equiv\lambda x+(1-\lambda)x^{\prime}\succ_{i}x^{\prime}$
+\end_inset
+
+ for 
+\begin_inset Formula $\lambda\in(0,1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Weak convexity: If 
+\begin_inset Formula $x\succsim_{i}x^{\prime}$
+\end_inset
+
+, then 
+\begin_inset Formula $x_{\lambda}\succsim_{i}x^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The above conditions are ordered by increasing weakness, i.e., each of the
+ above condition implies the next one, the converse may not be true by examining
+ thick indifference curves and linear indifference curves, strictly convex
+ indifference curves as showed in figures.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 7.4.5.
+ 
+\series default
+The convexity of preferences implies that people want to diversify their
+ consumptions and thus, convexity can be viewed as the formal expression
+ of a basic measure of economic markets for diversification.
+ Note that the strict convexity of 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is equivalent to the strict quasi-concavity of utility functions 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+.
+ It also implies the convential diminishing marginal rates of substitution
+ (MRS).
+ Weak convexity of 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is equivalent to the quasi-concavity of utility funcitons 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+.
+ Also, notice that the continuity of 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is a sufficient condition for the continuous utility representations, i.e.,
+ it guarantees the existence of a continuous utility function 
+\begin_inset Formula $u_{i}(\cdot)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 7.4.6.
+
+\series default
+ Under the convexity of preferences 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+, non-satiation implies local non-satiation.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ satisfies convexity and non-satiation.
+ Take 
+\begin_inset Formula $x\in X_{i}$
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $\epsilon\in\mathbb{R}_{++}$
+\end_inset
+
+.
+ By non-satiation, 
+\begin_inset Formula $\exists\ x^{\prime}\in X_{i}:x^{\prime}\succ_{i}x$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x_{\lambda}\equiv\lambda x^{\prime}+(1-\lambda)x$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda\in(0,1)$
+\end_inset
+
+.
+ By convexity, 
+\begin_inset Formula $\forall\ \lambda\in(0,1):x_{\lambda}\succ_{i}x$
+\end_inset
+
+.
+ Also, 
+\begin_inset Formula $\exists\ \lambda\in(0,1):x_{\lambda}\in B_{\epsilon}(x)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ satisfies local non-satiation.
+\end_layout
+
+\begin_layout Note*
+Strong or Interior Walras' Law holds depending on whether or not the aggregate
+ excess deman is well defined under one of the two forms, and the additional
+ given assumptions.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+7.4.1.
+ 
+\series default
+\emph on
+Under local non-satiation, we have the budget constraint holds with equality,
+ and thus Walras' Law holds.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ satisfies local non-satiation.
+ Let 
+\begin_inset Formula $x_{i}(p)$
+\end_inset
+
+ be agent 
+\begin_inset Formula $i$
+\end_inset
+
+'s demand correspondence under utility maximization.
+ Let 
+\begin_inset Formula $y_{j}(p)$
+\end_inset
+
+ be firm 
+\begin_inset Formula $j$
+\end_inset
+
+'s supply correspondence under profit maximization.
+ First, we claim that the budget constraint holds with equality.
+ Suppose for contradiction that it does not, then 
+\begin_inset Formula $\forall\ x\in x_{i}(p):x\in\mbox{Int}(B_{i}(p))$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\mbox{Int}(B_{i}(p))$
+\end_inset
+
+ is an open set, then 
+\begin_inset Formula $\exists\ \epsilon>0:B_{\epsilon}(x)\subseteq\mbox{Int}(B_{i}(p))$
+\end_inset
+
+.
+ By local non-satiation, 
+\begin_inset Formula $\exists\ x^{\prime}\in B_{\epsilon}(x):x^{\prime}\succ_{i}x$
+\end_inset
+
+.
+ However, this contradicts the fact that 
+\begin_inset Formula $x\in x_{i}(p)$
+\end_inset
+
+.
+ Thus, for all 
+\begin_inset Formula $i$
+\end_inset
+
+, the budget constraint holds with equality.
+ Now, summing over 
+\begin_inset Formula $i$
+\end_inset
+
+ we have
+\begin_inset Formula 
+\begin{gather*}
+{\displaystyle \sum_{i=1}^{N}p\cdot x_{i}(p)=\sum_{i=1}^{N}p\cdot w_{i}+\sum_{i=1}^{N}\sum_{j=1}^{J}\theta_{ij}p\cdot y_{j}(p)}\\
+p\cdot\left[\sum_{i=1}^{N}x_{i}(p)-\sum_{i=1}^{N}w_{i}-\sum_{j=1}^{J}y_{j}(p)\right]=0\\
+p\cdot\hat{z}(p)=0
+\end{gather*}
+
+\end_inset
+
+Therefore, Walras' Law holds.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+7.4.2.
+
+\series default
+ 
+\emph on
+Under the strict convexity of 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}(p)$
+\end_inset
+
+ becomes a (single-valued) function.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ satisfies strict convexity.
+ We want to show that 
+\begin_inset Formula $x_{i}(p)$
+\end_inset
+
+ is single-valued.
+ Suppose for contradiction that it is not.
+ Then, 
+\begin_inset Formula $\exists\ \{x,x^{\prime}\}\subseteq x_{i}(p):x\neq x^{\prime}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $x\sim x^{\prime}$
+\end_inset
+
+, which is equivalent to 
+\begin_inset Formula $x\succsim_{i}x^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{\prime}\succsim_{i}x$
+\end_inset
+
+.
+ Without loss of generality, consider 
+\begin_inset Formula $x\succsim_{i}x^{\prime}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $x_{\lambda}\equiv\lambda x+(1-\lambda)x^{\prime}$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda\in(0,1)$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $x_{\lambda}\in B_{i}(p)$
+\end_inset
+
+ because
+\begin_inset Formula 
+\begin{eqnarray*}
+p\cdot\lambda x+p\cdot(1-\lambda)x^{\prime} & \leq & p\cdot\lambda\left[w_{i}+\sum_{j\in J}\theta_{ij}y_{j}(p)\right]+p\cdot(1-\lambda)\left[w_{i}+\sum_{j\in J}\theta_{ij}y_{j}(p)\right]\\
+ & = & p\cdot\lambda w_{i}+\lambda\sum_{j\in J}\theta_{ij}p\cdot y_{j}(p)+p\cdot w_{i}+\sum_{j\in J}\theta_{ij}p\cdot y_{j}(p)-p\cdot\lambda w_{i}-\lambda\sum_{j\in J}\theta_{ij}p\cdot y_{j}(p)\\
+ & = & p\cdot w_{i}+\sum_{j=1}^{J}\theta_{ij}p\cdot y_{j}(p)
+\end{eqnarray*}
+
+\end_inset
+
+ Finally, by strict convexity, 
+\begin_inset Formula $\forall\ \lambda\in(0,1):x_{\lambda}\succ_{i}x^{\prime}$
+\end_inset
+
+.
+ However, this contradicts the fact that 
+\begin_inset Formula $x^{\prime}\in x_{i}(p)$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $x_{i}(p)$
+\end_inset
+
+ is single-valued.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+7.4.3.
+ 
+\series default
+\emph on
+Under the weak convexity of preferences, the demand correspondence 
+\begin_inset Formula $x_{i}(p)$
+\end_inset
+
+ is convex-valued.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ satisfies weak convexity.
+ We want to show that 
+\begin_inset Formula $x_{i}(p)$
+\end_inset
+
+ is convex-valued.
+ Take 
+\begin_inset Formula $\{x,x^{\prime}\}\subseteq x_{i}(p)$
+\end_inset
+
+.
+ Then, by definition, 
+\begin_inset Formula $x\succsim_{i}x^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{\prime}\succsim_{i}x$
+\end_inset
+
+.
+ Let us consider 
+\begin_inset Formula $x\succsim_{i}x^{\prime}$
+\end_inset
+
+.
+ Define 
+\begin_inset Formula $x_{\lambda}\equiv\lambda x+(1-\lambda)x^{\prime},\ \lambda\in(0,1)$
+\end_inset
+
+.
+ Now, because 
+\begin_inset Formula $p\cdot\lambda x+p\cdot(1-\lambda)x^{\prime}\leq p\cdot w_{i}+p\cdot\sum_{j\in J}\theta_{ij}y_{j}(p)$
+\end_inset
+
+, 
+\begin_inset Formula $x_{\lambda}\in B_{i}(p)$
+\end_inset
+
+.
+ By weak convexity, 
+\begin_inset Formula $x_{\lambda}\succsim_{i}x^{\prime}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $x_{\lambda}\in x_{i}(p)$
+\end_inset
+
+, and thus, 
+\begin_inset Formula $x_{i}(p)$
+\end_inset
+
+ is convex-valued.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+7.4.4.
+ 
+\series default
+\emph on
+If 
+\begin_inset Formula $Y_{j}$
+\end_inset
+
+ is compact (i.e., closed and bounded) and strictly covex, then the supply
+ correspondence 
+\begin_inset Formula $y_{j}(p)$
+\end_inset
+
+ is a well defined single-valued and continuous function.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $Y_{j}$
+\end_inset
+
+ is compact.
+ By the maximum theorem, we know that 
+\begin_inset Formula $y_{j}(p)$
+\end_inset
+
+ is a non-empty valued upper hemi-continuous correspondence by the compactness
+ of 
+\begin_inset Formula $Y_{j}$
+\end_inset
+
+ (by noting that 
+\begin_inset Formula $0\in Y_{j}$
+\end_inset
+
+) for all 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Now, we show it is single-valued.
+ Suppose that it is not.
+ Then, 
+\begin_inset Formula $y_{j1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{j2}$
+\end_inset
+
+ are two profit maxizing production plans for 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+, and thus 
+\begin_inset Formula $p\cdot y_{j1}=p\cdot y_{j2}$
+\end_inset
+
+.
+ By the strict convexity of 
+\begin_inset Formula $Y_{j}$
+\end_inset
+
+, we have that 
+\begin_inset Formula $\forall\ \lambda\in(0,1):\lambda y_{j1}+(1-\lambda)y_{j2}\in\mbox{Int}(Y_{j})$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\exists\ t>1:t\left[\lambda y_{j1}+(1-\lambda)y_{j2}\right]\in\mbox{Int}(Y_{j})$
+\end_inset
+
+.
+ However, 
+\begin_inset Formula $t\left[\lambda p\cdot y_{j1}+(1-\lambda)p\cdot y_{j2}\right]=tp\cdot y_{j1}>p\cdot y_{j1}$
+\end_inset
+
+, which contradicts the fact that 
+\begin_inset Formula $y_{j1}$
+\end_inset
+
+ is a profit maximizing production plan.
+ Thus, 
+\begin_inset Formula $y_{j}(p)$
+\end_inset
+
+ is a single-valued function.
+ Therefore, by the upper hemi-continuity of 
+\begin_inset Formula $y_{j}(p)$
+\end_inset
+
+, we know it is a single-valued and continuous funciton.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+7.4.5.
+
+\emph on
+ 
+\series default
+If 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is continuous, strictly convex, locally non-satiated, and 
+\begin_inset Formula $w_{i}>0$
+\end_inset
+
+, then 
+\begin_inset Formula $x_{i}(p)$
+\end_inset
+
+ is a continuous single-valued function and satisfies the budget constraint
+ with equality for all 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+.
+ Consequently, Walras' Law is satisfied for all 
+\begin_inset Formula $p\in\mathbb{R}_{++}^{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Note*
+The proposition may not hold for 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is continuous, strictly convex, and locally non-satiated.
+ First, note that since 
+\begin_inset Formula $w_{i}>0$
+\end_inset
+
+, then one can show that the budget constrained set 
+\begin_inset Formula $B_{i}(p)$
+\end_inset
+
+ is a continuous correspondence with non-empty and compact values and 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is continuous.
+ Then, by the maximum theorem, we know the demand correspondence 
+\begin_inset Formula $x_{i}(p)$
+\end_inset
+
+ is upper hemi-continuous.
+ Futhermore, by the strict convexity of preferences, it is single-valued
+ and continuous.
+ Finally, by local non-satiation, we know the budget constraint holds with
+ equality, and thus, Walras' Law is satisfied.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Important to note, there is no utility function representation when preferences
+ are lexicographic.
+ Also, 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ are continuous if the upper contour set 
+\begin_inset Formula $U_{w}(x_{i})\equiv\left\{ x_{i}^{\prime}\in X_{i}:x_{i}^{\prime}\succsim x_{i}\right\} $
+\end_inset
+
+ and the lower contour set 
+\begin_inset Formula $L_{w}(x_{i})\equiv\left\{ x_{i}^{\prime}\in X_{i}:x_{i}\succsim x_{i}^{\prime}\right\} $
+\end_inset
+
+ are closed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+From the above propositions, we can have the following existence theorem
+ that provides sufficient conditions directly based on the fundamentals
+ of the economy by applying the Existence Theorem I''' above.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+7.4.6.
+ 
+\series default
+\emph on
+For a private ownership economy 
+\begin_inset Formula $e=(\{X_{i},w_{i},\succsim_{i}\},\{Y_{j}\},\{\theta_{ij}\})$
+\end_inset
+
+.
+ there exists a competitive equilibrium if the following conditions hold
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $X_{i}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ are continuous, strictly convex, and strictly monotonic;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\hat{w}>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Y_{j}$
+\end_inset
+
+ are compact, strictly convex, 
+\begin_inset Formula $0\in Y_{j}$
+\end_inset
+
+; 
+\begin_inset Formula $j=1,\ldots J$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Important to note, we assume strict monotonicity, instead of a weaker condition,
+ to guarantee the aggregate excess demand function is continuous.
+ Then, by the assumptions imposed, we know that 
+\begin_inset Formula $x_{i}(p)$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{j}(p)$
+\end_inset
+
+ are continuous, single-valued, and homogenous of degree zero.
+ Thus, the aggregate excess demand function is continuous, single-valued,
+ and homogenous of degree zero.
+ Also, by the strict monotonicity of preferences, 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ satisfies interior Walras' Law, i.e., 
+\begin_inset Formula $\forall\ p\in\mathbb{R}_{++}^{L}:p\cdot\hat{z}(p)=0$
+\end_inset
+
+.
+ Now, we only need to show that conditions (iv) and (v) of Theorem I'''
+ are satisfied.
+ The bound in (iv) follows from the non-negativity of demand (i.e., the fact
+ that 
+\begin_inset Formula $X_{i}=\mathbb{R}_{+}^{L}$
+\end_inset
+
+) and bounded production sets.
+ These conditions imply that a consumer's total net supply to the market
+ of any good 
+\begin_inset Formula $l$
+\end_inset
+
+ can be no greater than the sum of his initial endowment and upper bound
+ of production sets.
+ Finally, we show that condition (v) is satisfied.
+ As some prices go to zero, a consumer whose wealth tends to a strictly
+ positive limit (note that, because 
+\begin_inset Formula $p\cdot\hat{w}>0$
+\end_inset
+
+, there must be at least one such consumer) and who has strict monotonicity
+ of preferences will demand an increasingly large amount of some of the
+ commodities whose prices go to zero.
+ Therefore, by Theorem I''', there is a competitive equilibrium.
+\end_layout
+
+\begin_layout Subsubsection*
+Examples of Computing CE
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+7.4.1.
+
+\series default
+ Consider an exchange economy with two consumers and two goods with
+\begin_inset Formula 
+\begin{gather}
+u_{1}(x_{1})=x_{11}^{a}x_{12}^{1-a},\ 0<a<1;\ w_{1}=(1,0)\\
+u_{2}(x_{2})=x_{21}^{a}x_{22}^{1-a},\ 0<b<1;\ w_{2}=(1,0)
+\end{gather}
+
+\end_inset
+
+Let 
+\begin_inset Formula $p=\nicefrac{p_{2}}{p_{1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+\begin_inset space \quad{}
+\end_inset
+
+Consumer 1's problem is to solve
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \max_{x_{1}}}\ u_{1}(x_{1})
+\end{equation}
+
+\end_inset
+
+subject to
+\begin_inset Formula 
+\begin{equation}
+x_{11}+px_{12}=1
+\end{equation}
+
+\end_inset
+
+Since utility functions are Cobb-Douglas types of functions, the solution
+ is then given by
+\begin_inset Formula 
+\begin{eqnarray}
+x_{11}(p) & = & a\\
+x_{12}(p) & = & \frac{1-a}{p}
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Consumer 2's problem is to solve
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \max_{x_{2}}}\ u_{2}(x_{2})
+\end{equation}
+
+\end_inset
+
+subject to
+\begin_inset Formula 
+\begin{equation}
+x_{21}+px_{22}=p
+\end{equation}
+
+\end_inset
+
+The solution is given by
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{21}(p) & = & bp\\
+x_{22}(p) & = & (1-b)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+By the market clearing condition,
+\begin_inset Formula 
+\begin{equation}
+x_{11}(p)+x_{21}(p)=1\iff a+bp=1
+\end{equation}
+
+\end_inset
+
+and thus the competitive equilibrium is given by
+\begin_inset Formula 
+\[
+p=\frac{p_{2}}{p_{1}}=\frac{1-a}{b}
+\]
+
+\end_inset
+
+This is true because, by Walras' Law, for 
+\begin_inset Formula $L=2$
+\end_inset
+
+, it is enough to show only one market clearing.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 7.4.7.
+ 
+\series default
+Since the Cobb-Douglas utility function is widely used as an example of
+ utility funcitons that have nice properties such as strict monotonicity
+ on 
+\begin_inset Formula $\mathbb{R}_{++}^{L}$
+\end_inset
+
+, continuity, and strict quasi-concavity, it is useful to remember the functiona
+l form of the dmean function derived from the Cobb-Douglas utility functions.
+ It may be remarked that we can easily derive the demand function for the
+ general function: 
+\begin_inset Formula 
+\[
+u_{i}(x_{i})=x_{i1}^{\alpha}x_{i2}^{\beta};\alpha>0,\beta>0
+\]
+
+\end_inset
+
+by the suitable monotonic transformation.
+ Indeed, since utility functions are invariant to monotonic transformations,
+ we can rewrite the utility funciton as 
+\begin_inset Formula 
+\begin{equation}
+\left[x_{i1}^{\alpha}x_{i2}^{\beta}\right]^{\frac{1}{\alpha+\beta}}=x_{i1}^{\frac{\alpha}{\alpha+\beta}}x_{i2}^{\frac{\beta}{\alpha+\beta}}
+\end{equation}
+
+\end_inset
+
+so that we have 
+\begin_inset Formula 
+\begin{equation}
+x_{i1}(p)=\frac{\frac{\alpha}{\alpha+\beta}I}{p_{1}}
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+x_{i2}(p)=\frac{\frac{\beta}{\alpha+\beta}I}{p_{2}}
+\end{equation}
+
+\end_inset
+
+when the budget line is given by
+\begin_inset Formula 
+\begin{equation}
+p_{1}x_{i1}+p_{2}x_{i2}=I
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+7.4.2.
+ 
+\series default
+Consider an exchange economy with two consumers and two goods with
+\begin_inset Formula 
+\begin{gather}
+u_{1}(x_{1})=x_{11}^{a}x_{12}^{1-a},\ 0<a<1;\ w_{1}=(1,0)\\
+u_{2}(x_{2})=\min\{x_{21},bx_{22}\},\ b>0;\ w_{2}=(0,1)
+\end{gather}
+
+\end_inset
+
+Let 
+\begin_inset Formula $p=\nicefrac{p_{2}}{p_{1}}$
+\end_inset
+
+.
+ Important to note, if 
+\begin_inset Formula $w_{il}=0$
+\end_inset
+
+ for some 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $l$
+\end_inset
+
+, then a competitive equilibrium may not exist.
+ However, in this example, a competitive equilibrium still exists under
+ certain conditions.
+\end_layout
+
+\begin_layout Example*
+\begin_inset space \quad{}
+\end_inset
+
+For consumer 1, we have already obtained
+\begin_inset Formula 
+\begin{equation}
+x_{11}(p)=a
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+x_{12}(p)=\frac{1-a}{p}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+For consumer 2, his problem is to solve
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \max_{x_{2}}}\ u_{2}(x_{2})
+\end{equation}
+
+\end_inset
+
+subject to
+\begin_inset Formula 
+\begin{equation}
+x_{21}+px_{22}=p
+\end{equation}
+
+\end_inset
+
+At the optimal consumption, we have
+\begin_inset Formula 
+\begin{equation}
+x_{21}=bx_{22}
+\end{equation}
+
+\end_inset
+
+By substituting the solution into the budget equation, we have
+\begin_inset Formula 
+\begin{equation}
+bx_{22}+px_{22}=p
+\end{equation}
+
+\end_inset
+
+and thus
+\begin_inset Formula 
+\begin{equation}
+x_{22}(p)=\frac{p}{b+p}
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+x_{21}(p)=\frac{bp}{b+p}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Then, by 
+\begin_inset Formula $x_{11}(p)+x_{21}(p)=1$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{equation}
+a+\frac{bp}{b+p}=1
+\end{equation}
+
+\end_inset
+
+or
+\begin_inset Formula 
+\begin{equation}
+(1-a)(b+p)=bp
+\end{equation}
+
+\end_inset
+
+so that
+\begin_inset Formula 
+\begin{equation}
+(a+b-1)p=b(1-a)
+\end{equation}
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\[
+p^{*}=\frac{b(1-a)}{a+b-1}
+\]
+
+\end_inset
+
+To make 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ be a competitive equilibrium price, we need to assume 
+\begin_inset Formula $a+b>1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Note*
+A necessary condition for 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ to be a CE is for 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ to be non-negative, i.e., 
+\begin_inset Formula $p^{*}\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+7.4.2
+\begin_inset space \quad{}
+\end_inset
+
+The Existence of CE for Aggregate Excess Demand Correspondences
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When preferences and/or production sets are not strictly convex, the demand
+ correspondences and/or supply correspondences may not be single-valued,
+ and consequently, the aggregate excess demand correspondence may not be
+ single-valued.
+ As a result, one cannot use the above existence results to argue the existence
+ of competitive equilibrium.
+ Nevertheless, by using the KKM lemma, we can still prove the existence
+ of competitive equilibrim when the aggregate excess demand correspondence
+ satisfies certain conditions.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+7.4.7 (Existence Theorem II).
+
+\series default
+ 
+\emph on
+For a private ownership economy 
+\begin_inset Formula $e=(\{X_{i},w_{i},\succsim_{i}\},\{Y_{j}\},\{\theta_{ij}\})$
+\end_inset
+
+, if 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ is a non-empty, convex, and compact-valued upper hemi-continuous correspondence
+ and satisfies Walras' Law, then there exists a competitive equilibrium,
+ i.e., there is a price vector 
+\begin_inset Formula $p^{*}\in S\equiv S^{L-1}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\hat{z}(p^{*})\cap\{-\mathbb{R}_{+}^{L}\}\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Note*
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ is homogenous of degree zero.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $S\equiv S^{L-1}$
+\end_inset
+
+.
+ Define a correspondence 
+\begin_inset Formula $F:S\rightarrow2^{S}$
+\end_inset
+
+ by,
+\begin_inset Formula 
+\[
+F(p)=\left\{ q\in S:p\cdot\hat{z}\leq0\ \mbox{for some}\ \hat{z}\in\hat{z}(q)\right\} 
+\]
+
+\end_inset
+
+In this setup, 
+\begin_inset Formula $F(p)$
+\end_inset
+
+ is the set of new prices 
+\begin_inset Formula $q$
+\end_inset
+
+ such that at least one consumption bundle chosen at 
+\begin_inset Formula $q$
+\end_inset
+
+ is still affordable under the old prices 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Now, 
+\begin_inset Formula $F(p)^{c}=\left\{ q\in S:p\cdot\hat{z}(q)\subseteq\mathbb{R}_{++}\right\} $
+\end_inset
+
+.
+ Take 
+\begin_inset Formula $q\in F(p)^{c}$
+\end_inset
+
+, then 
+\begin_inset Formula $p\cdot\hat{z}(q)\subseteq\mathbb{R}_{++}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\mathbb{R}_{++}$
+\end_inset
+
+ is open, then there is an open set 
+\begin_inset Formula $O$
+\end_inset
+
+ such that 
+\begin_inset Formula $p\cdot\hat{z}(q)\subseteq O\subseteq\mathbb{R}_{++}$
+\end_inset
+
+.
+ By the upper hemi-continuity of 
+\begin_inset Formula $p\cdot\hat{z}(q)$
+\end_inset
+
+, there is an open set 
+\begin_inset Formula $N(q)$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $x\in N(q)$
+\end_inset
+
+, 
+\begin_inset Formula $p\cdot\hat{z}(x)\subseteq O\subseteq\mathbb{R}_{++}$
+\end_inset
+
+.
+ So, for all 
+\begin_inset Formula $x\in N(q)$
+\end_inset
+
+, 
+\begin_inset Formula $x\in F(p)^{c}$
+\end_inset
+
+, and hence, 
+\begin_inset Formula $N(q)\subseteq F(p)^{c}$
+\end_inset
+
+.
+ Thus, for all 
+\begin_inset Formula $q\in F(p)^{c}$
+\end_inset
+
+, there is an open set 
+\begin_inset Formula $N(q)$
+\end_inset
+
+ such that 
+\begin_inset Formula $N(q)\subseteq F(p)^{c}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $F(p)^{c}$
+\end_inset
+
+ is open, and equivalently, 
+\begin_inset Formula $F(p)$
+\end_inset
+
+ is closed.
+ Also, since 
+\begin_inset Formula $F(p)\subseteq S$
+\end_inset
+
+ and 
+\begin_inset Formula $S$
+\end_inset
+
+ is bounded, then 
+\begin_inset Formula $F(p)$
+\end_inset
+
+ is compact for all 
+\begin_inset Formula $p\in S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Next, we prove 
+\begin_inset Formula $F$
+\end_inset
+
+ is FS-covex.
+ Suppose for contradiction that there are some 
+\begin_inset Formula $\{p_{1},\ldots,p_{m}\}\subseteq S$
+\end_inset
+
+ and some convex combination 
+\begin_inset Formula $p_{\lambda}=\sum_{t=1}^{m}\lambda_{t}p_{t}$
+\end_inset
+
+ such that 
+\begin_inset Formula $p_{\lambda}\notin\cup_{t=1}^{m}F(p_{t})$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $p_{\lambda}\notin F(p_{t})$
+\end_inset
+
+ for all 
+\begin_inset Formula $t=1,\ldots,m$
+\end_inset
+
+.
+ Thus, for all 
+\begin_inset Formula $\hat{z}\in\hat{z}(p_{\lambda})$
+\end_inset
+
+, we have 
+\begin_inset Formula $p_{t}\cdot\hat{z}>0$
+\end_inset
+
+ for 
+\begin_inset Formula $t=1,\ldots,m$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\sum_{t=1}^{m}\lambda_{t}p_{t}\hat{z}=p_{\lambda}\cdot\hat{z}>0$
+\end_inset
+
+, which contradicts the fact that 
+\begin_inset Formula $\hat{z}$
+\end_inset
+
+ satisfies Walras' Law.
+ So, 
+\begin_inset Formula $F$
+\end_inset
+
+ must be FS-convex.
+ Therefore, by the KKM Lemma, we have
+\begin_inset Formula 
+\[
+\cap_{p\in S}F(p)\neq\emptyset
+\]
+
+\end_inset
+
+So, there exists a 
+\begin_inset Formula $p^{*}\in S$
+\end_inset
+
+ such that 
+\begin_inset Formula $p^{*}\in\cap_{p\in S}F(p)$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $p^{*}\in F(p)$
+\end_inset
+
+ for all 
+\begin_inset Formula $p\in S$
+\end_inset
+
+.
+ Thus, for each 
+\begin_inset Formula $p\in S$
+\end_inset
+
+, there is 
+\begin_inset Formula $\hat{z}_{p}\in\hat{z}(p^{*})$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+p\cdot\hat{z}_{p}\leq0
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Finally, we prove 
+\begin_inset Formula $\hat{z}(p^{*})\cap\left\{ -\mathbb{R}_{+}^{L}\right\} \neq\emptyset$
+\end_inset
+
+.
+ Suppose for contradiction that this is not true.
+ Since 
+\begin_inset Formula $\hat{z}(p^{*})$
+\end_inset
+
+ is convex and compact and 
+\begin_inset Formula $-\mathbb{R}_{+}^{L}$
+\end_inset
+
+ is convex and closed, then by the Separating Hyperplane Theorem, there
+ is 
+\begin_inset Formula $p\in\mathbb{R}^{L}$
+\end_inset
+
+ with 
+\begin_inset Formula $p\neq0$
+\end_inset
+
+ and a value 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+p\cdot\left(-\mathbb{R}_{+}^{L}\right)<c<p\cdot\hat{z}(p^{*})
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\left(-\mathbb{R}_{+}^{L}\right)$
+\end_inset
+
+ is a cone, which includes the zero vector, we must have 
+\begin_inset Formula $c>0$
+\end_inset
+
+ and 
+\begin_inset Formula $p\cdot\left(-\mathbb{R}_{+}^{L}\right)\leq0$
+\end_inset
+
+.
+ So, we have 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $0<c<p\cdot\hat{z}(p^{*})$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{z}(p^{*})\cap\left\{ -\mathbb{R}_{+}^{L}\right\} =\emptyset$
+\end_inset
+
+, and 
+\begin_inset Formula $p\neq0$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $p\cdot\hat{z}(p^{*})>0$
+\end_inset
+
+ for some 
+\begin_inset Formula $p$
+\end_inset
+
+, which contradicts Walras' Law.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Similarly, we have the following existence theorem that provides sufficient
+ conditions directly based on economic environments by apply the Existence
+ Theorem II above.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+7.4.8.
+ 
+\series default
+\emph on
+For a private ownership economy 
+\begin_inset Formula $e=(\{X_{i},w_{i},\succsim_{i}\},\{Y_{j}\},\{\theta_{ij}\})$
+\end_inset
+
+, there exists a competitive equilibrium if the following conditions hold
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $X_{i}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ are continuous, weakly convex, and strictly monotone (strict monotonicity
+ can't be weakened or a CE may not exist);
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\hat{w}>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Y_{j}$
+\end_inset
+
+ are closed, covex, and 
+\begin_inset Formula $0\in Y_{j}$
+\end_inset
+
+; 
+\begin_inset Formula $j=1,2,\ldots,J$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Note*
+The proof of this Theorem 7.4.8 is more technical than the one for Theorem
+ 7.4.6.
+\end_layout
+
+\begin_layout Subsection*
+7.4.3
+\begin_inset space \quad{}
+\end_inset
+
+The Existence of CE for General Production Economies
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For a general private ownership production economy
+\begin_inset Formula 
+\begin{equation}
+e=(\{X_{i},w_{i},\succsim_{i}\},\{Y_{j}\},\{\theta_{ij}\})
+\end{equation}
+
+\end_inset
+
+recall that a competitive equilibrium consists of a feasible allocation
+ 
+\begin_inset Formula $(x^{*},y^{*})$
+\end_inset
+
+ and a price vector 
+\begin_inset Formula $p^{*}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\begin{gather*}
+(i)\ x_{i}^{*}\in D_{i}(p^{*})\equiv x_{i}(p^{*})\ \ \mbox{(utility maximization)}\\
+(ii)\ y_{j}^{*}\in S_{j}(p^{*})\equiv y_{j}(p^{*})\ \ \mbox{(profit maximization)}
+\end{gather*}
+
+\end_inset
+
+We now state the following existence theorem for general production economies
+ without proof since it is very complicated.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+7.4.9 (Existence Theorem III, Debreu (1959)).
+ 
+\series default
+\emph on
+A competitive equilibrium for the private-ownership economy 
+\begin_inset Formula $e$
+\end_inset
+
+ exists if the following conditions are satisfied
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ is closed, convex, and bounded from below;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ are non-satiated;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ are continuous;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ are convex;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $w_{i}\in\mbox{Int}(X_{i})$
+\end_inset
+
+ (Can't be weakened.
+ If it is, the we won't have a general result, but a CE could still exist);
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Y_{j}$
+\end_inset
+
+ are closed and convex (continuity and no IRS);
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $0\in Y_{j}$
+\end_inset
+
+ (possibility of inaction);
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Y_{j}\cap\{-Y_{j}\}=\{0\}$
+\end_inset
+
+ (Irreversibility);
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{-\mathbb{R}_{+}^{L}\}\subseteq Y_{j}$
+\end_inset
+
+ (free disposal).
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+7.5
+\begin_inset space \quad{}
+\end_inset
+
+The Uniqueness of Competitive Equilibria
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+So, we now know that a Walrasian equilibrium will exist under some regularity
+ conditions.
+ We worry next about the other extreme possibility: for a given economy,
+ there are many equilibria so that we do not know what is the outcome of
+ the market process.
+ We can easily give examples in which there are multiple competitive equilibrium
+ price vectors.
+ When is there only one normalized price vector that clears all markets?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The free goods case is not of great interest here, so we will rule it out
+ by means of the desirability assumption so that every equilibrium price
+ of each good must by strictly positive.
+ We want to also assume the continuous differentiability of the aggregate
+ excess demand function.
+ The reason is fairly clear; if indifference curves have kinks in them,
+ we can find whole ranges of prices that are market equilibria.
+ Not only are the equilibria not unique, they are not even locally unique.
+ Thus, we answer this question while only considering the case of 
+\begin_inset Formula $p^{*}>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ differentiable.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+7.5.1.
+ 
+\series default
+\emph on
+Suppose all goods are desirable and gross substitutes for all prices (i.e.,
+ 
+\begin_inset Formula $\frac{\partial z_{h}(p)}{\partial p_{l}}>0,l\neq h$
+\end_inset
+
+).
+ If 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is a competitive equilibrium price vector and Walras' Law holds, then it
+ is the unique competitive equilibrium price vector.
+\end_layout
+
+\begin_layout Note*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{\partial z_{h}(p)}{\partial p_{l}}>0,l\neq h$
+\end_inset
+
+ means that if we increase the price of good 
+\begin_inset Formula $l$
+\end_inset
+
+, we increase the demand for other goods.
+\end_layout
+
+\begin_layout Proof
+Since all goods are desirable, then 
+\begin_inset Formula $p^{*}>0$
+\end_inset
+
+.
+ Suppose 
+\begin_inset Formula $p$
+\end_inset
+
+ is another competitive equilibrium price vector that is not proportional
+ to 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\forall\ \alpha\in\mathbb{R}_{+}:p\neq\alpha p^{*}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $m=\max\frac{p_{l}}{p_{l}^{*}}=\frac{p_{k}}{p_{k}^{*}}$
+\end_inset
+
+ for some 
+\begin_inset Formula $k$
+\end_inset
+
+ (at least one 
+\begin_inset Formula $k$
+\end_inset
+
+ satisfies this, but there can be more).
+ In this setup, good 
+\begin_inset Formula $k$
+\end_inset
+
+ becomes the most relatively expensive good at prices 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Since all goods are desirable, then, by the definition of a competitive
+ equilibrium, 
+\begin_inset Formula $\hat{z}(p^{*})=\hat{z}(p)=0$
+\end_inset
+
+.
+ By homogeneity of degree zero, we know that 
+\begin_inset Formula $\hat{z}(p^{*})=\hat{z}(mp^{*})=0$
+\end_inset
+
+.
+ Also, we know that 
+\begin_inset Formula $m=\frac{p_{k}}{p_{k}^{*}}\geq\frac{p_{l}}{p_{l}^{*}}$
+\end_inset
+
+ for all 
+\begin_inset Formula $l$
+\end_inset
+
+ and 
+\begin_inset Formula $m>\frac{p_{h}}{p_{h}^{*}}$
+\end_inset
+
+ for some 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ Note that if 
+\begin_inset Formula $mp_{h}^{*}=p_{h}$
+\end_inset
+
+, then 
+\begin_inset Formula $p\neq\alpha p^{*}$
+\end_inset
+
+ does not hold.
+ So, we have 
+\begin_inset Formula $mp_{l}^{*}\geq p_{l}$
+\end_inset
+
+ for all 
+\begin_inset Formula $l$
+\end_inset
+
+ and 
+\begin_inset Formula $mp_{h}^{*}>p_{h}$
+\end_inset
+
+ for some 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ Now, if the price of good 
+\begin_inset Formula $k$
+\end_inset
+
+ stays the same when prices change from 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ to 
+\begin_inset Formula $p$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $p_{k}^{*}=p_{k}$
+\end_inset
+
+, then 
+\begin_inset Formula $m=1$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $p_{l}^{*}\geq p_{l}$
+\end_inset
+
+ for all 
+\begin_inset Formula $l$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{h}^{*}>p_{h}$
+\end_inset
+
+ for some 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ This means that when the price of good 
+\begin_inset Formula $k$
+\end_inset
+
+ is fixed, the prices of the other goods are down.
+ As a result, we must have the demand for good 
+\begin_inset Formula $k$
+\end_inset
+
+ go down by gross substitutes.
+ Hence, we have 
+\begin_inset Formula $\hat{z}_{k}(p)<0$
+\end_inset
+
+, which implies 
+\begin_inset Formula $p_{k}=0$
+\end_inset
+
+ by Walras' Law.
+ However, we cannot have free goods, and this contradicts 
+\begin_inset Formula $\hat{z}(p)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If the aggregate demand function satisfies the Weak Axiom of Revealed Preference
+ (WARP), and Walras' Law holds, then the competitive equilibrium is unique.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+The Weak Axiom of Revealed Preference (WARP of the aggregate excess demand
+ function): 
+\series default
+
+\begin_inset Formula $\forall\ \{p,p^{\prime}\}\subseteq\mathbb{R}_{+}^{L}:p\cdot\hat{z}(p)\geq p\cdot\hat{z}(p^{\prime})\implies p^{\prime}\cdot\hat{z}(p)>p^{\prime}\cdot\hat{z}(p^{\prime})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+WARP implies that, if 
+\begin_inset Formula $\hat{z}(p^{\prime})$
+\end_inset
+
+ could have been bought at 
+\begin_inset Formula $p$
+\end_inset
+
+ where 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ was bought (so that 
+\begin_inset Formula $\hat{z}(p)\succ\hat{z}(p^{\prime})$
+\end_inset
+
+ since 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ is the optimal choice), then at price 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ is outside the budget constraint (otherwise it contradicts the fact that
+ 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ is the optimal choice).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+WARP is a weaker restriction than the continuous concave utility funciton.
+ However, the restriction on the aggregate excess demand function is not
+ as weak as it may seem.
+ Even though two individuals may satisfy the individual WARP, the aggregate
+ excess demand function may not satisfy the aggregate WARP.
+\end_layout
+
+\begin_layout Lemma*
+
+\series bold
+\shape up
+7.5.1.
+ 
+\series default
+\emph on
+Under the assumptions of Strong Walras' Law and WARP, we have 
+\begin_inset Formula $p^{*}\cdot\hat{z}(p)>0$
+\end_inset
+
+ for all 
+\begin_inset Formula $p\neq kp^{*}$
+\end_inset
+
+ where 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is a competitive equilibrium.
+\end_layout
+
+\begin_layout Note*
+In this setup, quantities chosen at prices 
+\begin_inset Formula $p$
+\end_inset
+
+ are not affordable under the CE prices, 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is a competitive equilibrium.
+ Then, 
+\begin_inset Formula $\hat{z}(p^{*})\leq0$
+\end_inset
+
+.
+ By Walras' Law, 
+\begin_inset Formula $p\cdot\hat{z}(p)=0$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+, 
+\begin_inset Formula $p\cdot\hat{z}(p^{*})\leq0$
+\end_inset
+
+.
+ So, we have 
+\begin_inset Formula $p\cdot\hat{z}(p)\geq p\cdot\hat{z}(p^{*})$
+\end_inset
+
+.
+ Thus, by WARP, 
+\begin_inset Formula $p^{*}\cdot\hat{z}(p)>p^{*}\cdot\hat{z}(p^{*})=0$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $p^{*}\cdot\hat{z}(p)>0$
+\end_inset
+
+ for all 
+\begin_inset Formula $p\neq kp^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+7.5.2.
+ 
+\series default
+\emph on
+Under the assumptions of Walras' Law and WARP of the aggregate excess demand
+ function, the competitive equilibrium is unique.
+\end_layout
+
+\begin_layout Proof
+By Lemma 7.5.1, 
+\begin_inset Formula $\forall\ p\neq kp^{*}:p^{*}\cdot\hat{z}(p)>0$
+\end_inset
+
+, which means at least for some 
+\begin_inset Formula $l$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{z}_{l}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+7.6
+\begin_inset space \quad{}
+\end_inset
+
+Stability of Competitive Equilibrium
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The concept of competitive equilibrium is a stationary concept.
+ However, it has given no guarantee that the economy will actually operate
+ at the equilibrium point, or an economy may deviate from an equilibrium
+ due to economic shocks.
+ What forces exist that might tend to move prices to a market-clearing price?
+ This is a topic about the stability on the price adjustment mechanism.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A paradoxical relationship between the idea of competition and price adjustment
+ is that: if all agents take prices as given, how can prices move? To solve
+ this paradox, one introduces a 
+\begin_inset Quotes eld
+\end_inset
+
+Walrasian auctioneer
+\begin_inset Quotes erd
+\end_inset
+
+ whose sole funciton is to seek for the market clearing prices.
+ The Walrasian auctioneer is supposed to call the prices and change the
+ price mechanically responding to the aggregate excess demand until the
+ market clears.
+ Such a process is called a Tatonnement adjustment process.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset space \quad{}
+\end_inset
+
+
+\series default
+A 
+\series bold
+Tatonnement Adjustment Process
+\series default
+ is defined, according to the laws of demand and supply, by
+\begin_inset Formula 
+\begin{equation}
+\frac{dp_{l}}{dt}=G_{l}(\hat{z}_{l}(p)),\ l=1,\ldots,L
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $G_{l}$
+\end_inset
+
+ is a sign-preserving function of 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $G_{l}(x)>0$
+\end_inset
+
+ if 
+\begin_inset Formula $x>0$
+\end_inset
+
+, 
+\begin_inset Formula $G_{l}(x)=0$
+\end_inset
+
+ if 
+\begin_inset Formula $x=0$
+\end_inset
+
+, and 
+\begin_inset Formula $G_{l}(x)<0$
+\end_inset
+
+ if 
+\begin_inset Formula $x<0$
+\end_inset
+
+.
+ The above equation implies that when the aggregate excess demand is positive,
+ we have a shortage and thus price should go up by the laws of demand and
+ supply.
+\end_layout
+
+\begin_layout Note*
+\begin_inset Formula $p(t)$
+\end_inset
+
+: prices change over time; 
+\begin_inset Formula $p$
+\end_inset
+
+ is a function of 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As a special case of, 
+\begin_inset Formula $G_{l}$
+\end_inset
+
+ can be an identical mapping such that
+\begin_inset Formula 
+\begin{eqnarray}
+\dot{p}_{l} & = & \hat{z}_{l}(p)\\
+\dot{p} & = & \hat{z}(p)
+\end{eqnarray}
+
+\end_inset
+
+Under Walras' Law,
+\begin_inset Formula 
+\[
+\frac{d}{dt}(p^{\prime}p)=\frac{d}{dt}\left[\sum_{l=1}^{L}p_{l}^{2}\right]=2\sum_{l=1}^{L}p_{l}\cdot\frac{dp_{l}}{dt}=2p^{\prime}\cdot\dot{p}=p\cdot\hat{z}(p)=0
+\]
+
+\end_inset
+
+which means that the sum of squares of the prices remain constrant as the
+ price adjusts.
+ So, the ratios of the prices change, but the length of the price vector
+ does not.
+ This is another price normalization.
+ The path of the prices are resticted on the surface of a 
+\begin_inset Formula $k$
+\end_inset
+
+-dimensional sphere.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+7.6.1.
+
+\series default
+ An equilibrium price 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is globally stable if
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is the unique competitive equilibrium,
+\end_layout
+
+\begin_layout Enumerate
+for all 
+\begin_inset Formula $p_{o}$
+\end_inset
+
+ there exits a unique price path 
+\begin_inset Formula $p=\phi(t,p_{o})$
+\end_inset
+
+ for 
+\begin_inset Formula $0\leq t<\infty$
+\end_inset
+
+ such that 
+\begin_inset Formula ${\displaystyle \lim_{t\rightarrow\infty}}\phi(t,p_{o})=p^{*}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+We also define what it means for 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ to be locally stable.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+7.6.2.
+
+\series default
+ An equilibrium price 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is locally stable if there is 
+\begin_inset Formula $\delta>0$
+\end_inset
+
+ and a unique price path 
+\begin_inset Formula $p=\phi(t,p_{o})$
+\end_inset
+
+ such that 
+\begin_inset Formula ${\displaystyle \lim_{t\rightarrow\infty}}\phi(t,p_{o})=p^{*}$
+\end_inset
+
+ whenever 
+\begin_inset Formula $|p^{*}-p_{o}|<\delta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The local stability of a competitive equilibrium can be easily obtained
+ from the standard result on the local stability of a differentiate equation.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+7.6.1.
+
+\series default
+ 
+\emph on
+A competitive equilibrium price 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is locally stable if the Jacobian matrix defined by
+\begin_inset Formula 
+\[
+A=\left[\frac{\partial\hat{z}_{l}(p)}{\partial p_{k}}\right]
+\]
+
+\end_inset
+
+has all real negative characteristic roots.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The global stability result can be obtained by Liaponov's Theorem
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Liaponov function.
+ 
+\series default
+A function 
+\begin_inset Formula $V$
+\end_inset
+
+ is said to be a Liaponov function for the differentiate equation system
+ 
+\begin_inset Formula $\dot{x}=f(x)$
+\end_inset
+
+ (differential equation) with 
+\begin_inset Formula $f(x^{*})=0$
+\end_inset
+
+ (stationary point) if
+\end_layout
+
+\begin_layout Enumerate
+There is a unique 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ such that 
+\begin_inset Formula $V(x^{*})=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $V(x)>0$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\neq x^{*}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\frac{dV(x)}{dt}<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+7.6.2 (Liaponov's Theorem).
+
+\series default
+ 
+\emph on
+If there exists a Liaponov function for 
+\begin_inset Formula $\dot{x}=f(x)$
+\end_inset
+
+, then the unique stationary point 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is globablly stable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Debreu (1974) has shown essentially that any continuous function which satisfies
+ Walras' Law is an aggregate demand function for some economy.
+ Thus, utility maximization places no restriction on aggregate behavior.
+ Thus, to get global stability, one has to make some additional assumptions
+ such as gross substitutability and WARP for aggregate demand functions.
+\end_layout
+
+\begin_layout Lemma*
+
+\series bold
+\shape up
+7.6.1.
+
+\series default
+ 
+\emph on
+Under the assumptions of Walraws' Law, desirability, and gross substitutes,
+ we have 
+\begin_inset Formula $p^{*}\cdot\hat{z}(p)>0$
+\end_inset
+
+ for all 
+\begin_inset Formula $p\neq kp^{*}$
+\end_inset
+
+ where 
+\begin_inset Formula $p^{*}>0$
+\end_inset
+
+ is a competitive equilibrium.
+\end_layout
+
+\begin_layout Note*
+Quantities chosen at the new prices, 
+\begin_inset Formula $p$
+\end_inset
+
+, are not affordable under the CE prices, 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+The general proof of this lemma can be seen in Arrow and Hahn, 1971, page
+ 224.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+7.6.3 (Arrow-Block-Hurwicz).
+
+\series default
+ 
+\emph on
+Under the assumption of Walras' Law, if all goods are desirable and 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ satisfies gross substitutability, or if 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ satisfies WARP, then the competitive equilibrium price is globally stable.
+\end_layout
+
+\begin_layout Proof
+Define a Liaponov function by
+\begin_inset Formula 
+\[
+V(p)=\sum_{l=1}^{L}(p_{l}(t)-p_{l}^{*})^{2}=(p-p^{*})\cdot(p-p^{*})
+\]
+
+\end_inset
+
+By desirability and gross substitutability or WARP of the aggregate excess
+ demand function, the competitive price vector 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is unique.
+ So, there is a unique 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ such that 
+\begin_inset Formula $V(p^{*})=0$
+\end_inset
+
+.
+ In addition, 
+\begin_inset Formula $V(p)>0$
+\end_inset
+
+ for all 
+\begin_inset Formula $p\neq p^{*}$
+\end_inset
+
+.
+ We now show that 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is globally stable.
+ Since 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{dV}{dt} & = & 2\sum_{l=1}^{L}(p_{l}(t)-p_{l}^{*})\frac{dp_{l}(t)}{dt}\\
+ & = & 2\sum_{l=1}^{L}(p_{l}(t)-p_{l}^{*})\hat{z}_{l}(p)\\
+ & = & 2(p-p^{*})\cdot\hat{z}(p)\\
+ & = & 2\left[p\cdot\hat{z}(p)-p^{*}\cdot\hat{z}(p)\right]\\
+ & = & -2p^{*}\cdot\hat{z}(p)<0
+\end{eqnarray*}
+
+\end_inset
+
+by Walras' Law and Lemma 7.5.1 and 7.6.1 for 
+\begin_inset Formula $p\neq kp^{*}$
+\end_inset
+
+.
+ Thus, we have found a Liaponov function for the differentiate equation
+ system 
+\begin_inset Formula $\dot{p}=\hat{z}(p)$
+\end_inset
+
+ with 
+\begin_inset Formula $\hat{z}(p^{*})=0$
+\end_inset
+
+.
+ Therefore,
+\shape up
+ 
+\shape default
+the unique stationary point 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is globablly stable by Liaponov's Theorem.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The above theorem establishes the global stability of a competitive equilibrium
+ under Walras' Law and WARP, or under Walras' law, homogeneity, desirability,
+ and gross substitutability.
+ It is natural to ask how far we can relax these assumptions, in particular,
+ gross substitutability.
+ Since many goods are complementary goods, can the global stability of a
+ competitive equilibrium also hold for complementary goods? Scarf (1961)
+ has constructed examples that show that a competitive equilibrim may not
+ be globally stable in the presence of complementary goods.
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+7.6.1 (Scarf's Counterexample on Global Instability).
+
+\series default
+ Consider a pure exchange economy with three consumers and three commodities.
+ Suppose consumers' endowments are given by 
+\begin_inset Formula $w_{1}=(1,0,0)$
+\end_inset
+
+, 
+\begin_inset Formula $w_{2}=(0,1,0)$
+\end_inset
+
+, and 
+\begin_inset Formula $w_{3}=(0,0,1)$
+\end_inset
+
+, and their utility functions given by
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{1}(x_{1}) & = & \min\{x_{11},x_{12}\}\\
+u_{2}(x_{2}) & = & \min\{x_{22},x_{23}\}\\
+u_{3}(x_{3}) & = & \min\{x_{31},x_{33}\}
+\end{eqnarray*}
+
+\end_inset
+
+Then, the aggregate excess demand function is given by
+\begin_inset Formula 
+\begin{eqnarray}
+\hat{z}_{1}(p) & = & -\frac{p_{2}}{p_{1}+p_{2}}+\frac{p_{3}}{p_{1}+p_{3}}\\
+\hat{z}_{2}(p) & = & -\frac{p_{3}}{p_{2}+p_{3}}+\frac{p_{1}}{p_{1}+p_{2}}\\
+\hat{z}_{3}(p) & = & -\frac{p_{1}}{p_{1}+p_{3}}+\frac{p_{2}}{p_{2}+p_{3}}
+\end{eqnarray}
+
+\end_inset
+
+ from which the only possible competitive equilibrium price system is given
+ by 
+\begin_inset Formula $p_{1}^{*}=p_{2}^{*}=p_{3}^{*}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+\begin_inset space \quad{}
+\end_inset
+
+Next, the dynamic adjustment equation is given by
+\begin_inset Formula 
+\[
+\dot{p}=\hat{z}(p)
+\]
+
+\end_inset
+
+By Walras' Law, we know that 
+\begin_inset Formula $||p(t)||=\mbox{constant}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ This means that the length of the prices doesn't change.
+ Now, we want to show that 
+\begin_inset Formula ${\displaystyle \prod_{l=1}^{3}}p_{l}(t)=\mbox{constant}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Indeed,
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{d}{dt}\left(\prod_{l=1}^{3}p(t)\right) & = & \dot{p}_{1}p_{2}p_{3}+p_{1}\dot{p}_{2}p_{3}+p_{1}p_{2}\dot{p}_{3}\\
+ & = & \hat{z}_{1}p_{2}p_{3}+p_{1}\hat{z}_{2}p_{3}+p_{1}p_{2}\hat{z}_{3}=0
+\end{eqnarray*}
+
+\end_inset
+
+Now, we show that the dynamic process is not globally stable.
+ First choose the initial prices 
+\begin_inset Formula $p_{l}(0)$
+\end_inset
+
+ such that 
+\begin_inset Formula ${\displaystyle \sum_{l=1}^{3}}\left[p_{l}(0)\right]^{2}=3$
+\end_inset
+
+ and 
+\begin_inset Formula ${\displaystyle \prod_{l=1}^{3}}p_{l}(0)\neq1$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula ${\displaystyle \sum_{l=1}^{3}}\left[p_{l}(t)\right]^{2}=3$
+\end_inset
+
+ and 
+\begin_inset Formula ${\displaystyle \prod_{l=1}^{3}}p_{l}(t)\neq1$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula ${\displaystyle \sum_{l=1}^{3}}\left[p_{l}(t)\right]^{2}=3$
+\end_inset
+
+ and the only possible equilibrium prices are 
+\begin_inset Formula $p_{1}^{*}=p_{2}^{*}=p_{3}^{*}=1$
+\end_inset
+
+, the solution of the above system of differential equations cannot converge
+ to the equilibrium price 
+\begin_inset Formula $p^{*}=(1,1,1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+\begin_inset space \quad{}
+\end_inset
+
+In this example, we may note the following facts: (i) there is no substitution
+ effect; (ii) the indifference curve is not strictly convex; (iii) the indiffere
+nce curve has a kink and hence is not differentiable.
+ Scarf (1961) also provided the examples of instability in which the substitutio
+n effect is present for the case of Giffen's goods.
+ Thus, Scarf's examples indicate that instability may occur in a wide variety
+ of cases.
+\end_layout
+
+\end_body
+\end_document

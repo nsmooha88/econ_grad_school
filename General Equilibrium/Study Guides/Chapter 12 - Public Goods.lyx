@@ -1,0 +1,1607 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 12
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Part*
+Public Goods
+\end_layout
+
+\begin_layout Section*
+12.1
+\begin_inset space \quad{}
+\end_inset
+
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A 
+\emph on
+pure public good
+\emph default
+ is a good in which consuming one unit of the good by an individual in no
+ way prevents others form consuming the same unit of of the good.
+ Thus, the good is nonexcludable and non-rival.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A good is 
+\emph on
+excludable
+\emph default
+ if people can be exlduded form consuming it.
+ A good is 
+\emph on
+non-rival
+\emph default
+ if one person's consumption does not reduce the amount available to other
+ consumers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\emph on
+Examples of public goods
+\emph default
+: street lights, policemen, fire protection, highway system, national defense,
+ public parks, etc.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\emph on
+Local public goods
+\emph default
+: when there is a location restriction for the service of a public good.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Even if the competitive market is an efficient social institution for allocating
+ private goods in an efficient manner, it turns out that a private market
+ is not a very good mechanism for allocating public goods.
+\end_layout
+
+\begin_layout Section*
+12.2
+\begin_inset space \quad{}
+\end_inset
+
+Notations and Basic Settings
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The general setting of a public goods economy includes consumers, producers,
+ private goods, and public goods.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n$
+\end_inset
+
+ : the number of consumers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L$
+\end_inset
+
+ : the number of private goods.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $K$
+\end_inset
+
+ : the number of public goods.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Z_{i}\subseteq\mathbb{R}_{+}^{L}\times\mathbb{R}_{+}^{K}$
+\end_inset
+
+ : the consumption space of consumer 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Z\subseteq\mathbb{R}_{+}^{nL}\times\mathbb{R}_{+}^{K}$
+\end_inset
+
+ : consumption space.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{i}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ : a consumption of private goods by consumer 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y\in\mathbb{R}_{+}^{K}$
+\end_inset
+
+ : a consumption/production of public goods.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w_{i}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ : the initial endowment of private goods for consumer 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ For simplicity, it is assumed that there is no public goods endowment,
+ but they can be produced from private goods by a firm.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ : the private goods input.
+ For simplicity, assume there is only one firm to produce the public goods.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f:\mathbb{R}_{+}^{L}\rightarrow\mathbb{R}_{+}^{K}$
+\end_inset
+
+ : production funciton with 
+\begin_inset Formula $y=f(v)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\theta_{i}$
+\end_inset
+
+ : the profit share of consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ from the production.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(x_{i},y)\in Z_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(x,y)=(x_{1},\ldots,x_{n},y)\in Z$
+\end_inset
+
+ : an allocation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ (or 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ if it exists) is a preference ordering.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $e_{i}=(Z_{i},\succsim_{i},w_{i},\theta_{i})$
+\end_inset
+
+ : the characteristic of consumer 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $e=(e_{1},\ldots,e_{n},f)$
+\end_inset
+
+ : a public goods economy.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An allocation 
+\begin_inset Formula $z\equiv(x,y)$
+\end_inset
+
+ is feasible if 
+\begin_inset Formula 
+\begin{equation}
+\sum_{i=1}^{n}x_{i}+v\leq\sum_{i=1}^{n}w_{i}
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+y=f(v)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An allocation 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ is 
+\emph on
+Pareto efficient
+\emph default
+ for a public goods economy 
+\begin_inset Formula $e$
+\end_inset
+
+ if it is feasible and there is no other feasible allocation 
+\begin_inset Formula $(x^{\prime},y^{\prime})$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ i\in N:(x_{i}^{\prime},y^{\prime})\succsim_{i}(x_{i},y)$
+\end_inset
+
+ and 
+\begin_inset Formula $\exists\ k:(x_{k}^{\prime},y^{\prime})\succ_{k}(x_{k},y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+An allocation 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ is 
+\emph on
+weakly Pareto efficient
+\emph default
+ for the public goods economy 
+\begin_inset Formula $e$
+\end_inset
+
+ if it is feasible and there is no other feasible allocation 
+\begin_inset Formula $(x^{\prime},y^{\prime})$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ i\in N:(x_{i}^{\prime},y)\succ_{i}(x_{i},y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 12.2.1.
+
+\series default
+ Unlike private goods economies, even though under the assumptions of continuity
+ and strict monotonicity, a weakly Pareto efficient allocation may not be
+ Pareto efficient for the public goods economies.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+12.2.1.
+
+\series default
+ 
+\emph on
+For the public goods economies, a weakly Pareto efficient allocation may
+ not be Pareto efficient even if preferences satisfy strict monotonicity
+ and continuity.
+\end_layout
+
+\begin_layout Proof
+The proof is by way of an example.
+ Consider an economy with 
+\begin_inset Formula $(n,L,K)=(3,1,1)$
+\end_inset
+
+, constant returns in producing 
+\begin_inset Formula $y$
+\end_inset
+
+ from 
+\begin_inset Formula $x$
+\end_inset
+
+ (the input-output coefficient normalized to one), and the following endowments
+ and utility funcitons: 
+\begin_inset Formula $w_{1}=w_{2}=w_{3}=1$
+\end_inset
+
+, 
+\begin_inset Formula $u_{1}(x_{1},y)=x_{1}+y$
+\end_inset
+
+, and 
+\begin_inset Formula $u_{i}(x_{i},y)=x_{i}+2y$
+\end_inset
+
+ for 
+\begin_inset Formula $i=2,3$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $z=(x_{1},x_{2},x_{3},y)=(0.5,0,0,2.5)$
+\end_inset
+
+ is weakly Pareto efficient but not Pareto efficient because 
+\begin_inset Formula $z^{\prime}=(x^{\prime},y^{\prime})=(0,0,0,3)$
+\end_inset
+
+ Pareto-dominates 
+\begin_inset Formula $z$
+\end_inset
+
+ by consumers 2 and 3.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+However, under an additional condition of strict convexity, they are equivalent
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+12.2.2.
+
+\series default
+ 
+\emph on
+For the public goods economies, if preferences satisfy strict convexity,
+ strict monotonicity, and continuity, and the production function is strictly
+ increasing and concave, then weak Pareto efficiency implies Pareto efficiency.
+\end_layout
+
+\begin_layout Proof
+Assume preferences satisfy strict monotonicity, strict convexity, and continuity.
+ Also, assume the production function is strictly increasing and concave.
+ Let 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ be a weakly Pareto efficient allocation.
+ Suppose for contradiction it is not Pareto efficient.
+ Then, there exists a feasible allocation 
+\begin_inset Formula $(x^{\prime},y^{\prime})$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ i\in N:(x_{i}^{\prime},y^{\prime})\succsim_{i}(x_{i},y)$
+\end_inset
+
+ and 
+\begin_inset Formula $\exists\ k\in N:(x_{k}^{\prime},y^{\prime})\succ_{k}(x_{k},y)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $z_{i\lambda}\equiv\lambda(x_{i}^{\prime},y^{\prime})+(1-\lambda)(x_{i},y),\ \lambda\in(0,1)$
+\end_inset
+
+.
+ By strict convexity of preferences, we have
+\begin_inset Formula 
+\[
+\forall\ i\in N:z_{i\lambda}\succ_{i}(x_{i},y)
+\]
+
+\end_inset
+
+Now, we will show that 
+\begin_inset Formula $z_{i\lambda}$
+\end_inset
+
+ is feasible.
+ Since both allocations are feasible, then
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{i=1}^{n}x_{i}+v & \leq & \sum_{i=1}^{n}w_{i}\\
+\sum_{i=1}^{n}x_{i}^{\prime}+v^{\prime} & \leq & \sum_{i=1}^{n}w_{i}
+\end{eqnarray*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{eqnarray*}
+f(v) & = & y\\
+f(v^{\prime}) & = & y^{\prime}
+\end{eqnarray*}
+
+\end_inset
+
+Taking a linear combination of the two equations above for 
+\begin_inset Formula $\lambda\in(0,1)$
+\end_inset
+
+ we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\lambda\sum_{i=1}^{n}x_{i}^{\prime}+\lambda v^{\prime}+(1-\lambda)\sum_{i=1}^{n}x_{i}+(1-\lambda)v & = & \lambda\sum_{i=1}^{n}w_{i}+(1-\lambda)\sum_{i=1}^{n}w_{i}\\
+\lambda\sum_{i=1}^{n}x_{i}^{\prime}+\lambda v^{\prime}+(1-\lambda)\sum_{i=1}^{n}x_{i}+(1-\lambda)v & = & w_{i}
+\end{eqnarray*}
+
+\end_inset
+
+Since the production function is concave, then
+\begin_inset Formula 
+\begin{eqnarray*}
+f(\lambda v^{\prime}+(1-\lambda)v) & \geq & \lambda f(v^{\prime})+(1-\lambda)f(v)\\
+ & = & \lambda y^{\prime}+(1-\lambda)y
+\end{eqnarray*}
+
+\end_inset
+
+So, 
+\begin_inset Formula $z_{i\lambda}$
+\end_inset
+
+ is a feasible allocation.
+ Thus, we have a feasible allocation 
+\begin_inset Formula $z_{i\lambda}$
+\end_inset
+
+ that is a strong Pareto improvement of 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+, i.e., all the consumers are made better off.
+ However, this contradicts the fact that 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ is weakly Pareto efficient.
+\end_layout
+
+\begin_layout Section*
+12.3
+\begin_inset space \quad{}
+\end_inset
+
+Discrete Public Goods
+\end_layout
+
+\begin_layout Subsection*
+12.3.1
+\begin_inset space \quad{}
+\end_inset
+
+Efficient Provision of Public Goods
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For simplicity, consider a public good economy with 
+\begin_inset Formula $n$
+\end_inset
+
+ consumers and two goods: one private good and one public good.
+ Let 
+\begin_inset Formula $g_{i}$
+\end_inset
+
+ be the contribution made by consumer 
+\begin_inset Formula $i$
+\end_inset
+
+, so that
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{i}+g_{i} & = & w_{i}\\
+{\displaystyle \sum_{i=1}^{n}}g_{i} & = & v
+\end{eqnarray*}
+
+\end_inset
+
+Assume 
+\begin_inset Formula $u_{i}(x_{i},y)$
+\end_inset
+
+ is strictly monotonic increasing and continuous.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $c$
+\end_inset
+
+ be the cost of producing the public project so that the production technology
+ is given by
+\begin_inset Formula 
+\[
+y=\begin{cases}
+1 & \mbox{if}\ \sum_{i=1}^{n}g_{i}\geq c\\
+0 & \mbox{otherwise}
+\end{cases}
+\]
+
+\end_inset
+
+We want to know under what conditions providing the public good will Pareto
+ dominate not producing it, i.e., there exists 
+\begin_inset Formula $(g_{1},\ldots,g_{n})$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sum_{i=1}^{n}g_{i}\geq c$
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+\forall\ i\in N:u_{i}(w_{i}-g_{i},1)>u_{i}(w_{i},0)
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ be the maximum willingness-to-pay (reservation price) of consumer 
+\begin_inset Formula $i$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ must satisfy
+\begin_inset Formula 
+\begin{equation}
+u_{i}(w_{i}-r_{i},1)=u_{i}(w_{i},0)
+\end{equation}
+
+\end_inset
+
+If producing the public project Pareto dominates not producing the public
+ project, we have
+\begin_inset Formula 
+\begin{equation}
+\forall\ i\in N:u_{i}(w_{i}-g_{i},1)>u_{i}(w_{i},0)=u_{i}(w_{i}-r_{i},1)
+\end{equation}
+
+\end_inset
+
+By monotonicity of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{equation}
+\forall\ i\in N:w_{i}-g_{i}>w_{i}-r_{i}
+\end{equation}
+
+\end_inset
+
+Then, we have
+\begin_inset Formula 
+\begin{equation}
+r_{i}>g_{i}
+\end{equation}
+
+\end_inset
+
+and thus,
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{i=1}^{n}}r_{i}>{\displaystyle \sum_{i=1}^{n}}g_{i}\geq c
+\end{equation}
+
+\end_inset
+
+That is, the sum of the willingness-to-pay for the public good must exceed
+ the cost of providing it.
+ This condition is necessary.
+ In fact, this condition is also sufficient.
+ In summary, we have the following proposition.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+12.3.1.
+
+\series default
+ 
+\emph on
+Providing a public good Pareto dominates not producing the public good if
+ and only if 
+\begin_inset Formula $\sum_{i=1}^{n}r_{i}>\sum_{i=1}^{n}g_{i}\geq c$
+\end_inset
+
+, where 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ is defined to be the maximum willingness-to-pay (reservation price) of
+ consumer 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+12.3.2
+\begin_inset space \quad{}
+\end_inset
+
+Free-Rider Problem
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+How effective is a private market at providing public goods? The answer
+ as shown below is that we cannot expect that purely independent decision
+ will necessarily result in an efficient amount of the public good being
+ produce.
+ To see this, suppose
+\begin_inset Formula 
+\begin{eqnarray*}
+r_{i} & = & 100,\ i=1,2\\
+c & = & 150\ \mbox{(total cost)}\\
+g_{i} & = & \begin{cases}
+75 & \mbox{if both agents make contributions}\\
+150 & \mbox{if only agent \ensuremath{i}\ makes a contribution}
+\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+Each person decides independently whether or not to buy the public good.
+ As a result, each one has an incentive to be a free-rider on the other.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Note that the net payoffs are defined by 
+\begin_inset Formula $r_{i}-g_{i}$
+\end_inset
+
+.
+ Thus, it is given by 
+\begin_inset Formula $100-75=25$
+\end_inset
+
+ when both consumers are willing to produce the public project, and 
+\begin_inset Formula $100-150=-50$
+\end_inset
+
+ when only one person wants to buy, but the other person does not.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This is the prisoner's dilemma.
+ The dominant strategy equilibrium in this game is (doesn't buy, doesn't
+ buy).
+ Thus, no body wants to share the cost of producing the public project,
+ but wants to free-ride on the other consumer.
+ As a result, the public good is not provided at all even though it would
+ be efficient to do so.
+ Therefore, voluntary contribution is general does not result in the efficient
+ level of the public good.
+\end_layout
+
+\begin_layout Subsection*
+12.3.3
+\begin_inset space \quad{}
+\end_inset
+
+Voting for a Discrete Public Good
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The amount of a public good is often determined by voting.
+ Will this generally result in an efficient provision? The answer is no.
+ Voting does not result in efficient provision.
+ Consider the following example.
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+12.3.1.
+
+\series default
+ 
+\begin_inset Formula 
+\begin{gather*}
+c=99\\
+r_{1}=90,\ r_{2}=30,\ r_{3}=30
+\end{gather*}
+
+\end_inset
+
+Clearly, 
+\begin_inset Formula $r_{1}+r_{2}+r_{3}>c$
+\end_inset
+
+ and 
+\begin_inset Formula $g_{i}=\nicefrac{99}{3}=33$
+\end_inset
+
+.
+ So, the efficient provision of the public good should be yes.
+ However, under the majority rule, only consumer 1 votes 
+\begin_inset Quotes eld
+\end_inset
+
+yes
+\begin_inset Quotes erd
+\end_inset
+
+ since she receives a positive net benefit if the good is provided.
+ The 2nd and 3rd persons vote 
+\begin_inset Quotes eld
+\end_inset
+
+no
+\begin_inset Quotes erd
+\end_inset
+
+ to produce the public good, and therefore, the public good will not be
+ provided so that we have inefficient provision of the public good.
+ The problem with the majority rule is that it only measures the net benefit
+ for the public good, whereas the efficient condition requires a comparison
+ of willingness-to-pay.
+\end_layout
+
+\begin_layout Section*
+12.4
+\begin_inset space \quad{}
+\end_inset
+
+Continuous Public Goods
+\end_layout
+
+\begin_layout Subsection*
+12.4.1
+\begin_inset space \quad{}
+\end_inset
+
+Efficient Provision of Public Goods
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Again, for simplicity, we assume there is only one public good and one private
+ good that may be regarded as money, and 
+\begin_inset Formula $y=f(v)$
+\end_inset
+
+.
+ The welfare maximization approach shows that Pareto efficient allocations
+ can be characterized by
+\begin_inset Formula 
+\begin{eqnarray*}
+\max_{(x,y)} & {\displaystyle \sum_{i=1}^{n}}\alpha_{i}u_{i}(x_{i},y)\\
+\mbox{s.t.} & {\displaystyle \sum_{i=1}^{n}}x_{i}+v\leq{\displaystyle \sum_{i=1}^{n}}w_{i}\\
+ & y=f(v)
+\end{eqnarray*}
+
+\end_inset
+
+Define the Lagrangian function
+\begin_inset Formula 
+\begin{equation}
+L=\sum_{i=1}^{n}\alpha_{i}u_{i}(x_{i},y)+\lambda\left({\displaystyle \sum_{i=1}^{n}}w_{i}-{\displaystyle \sum_{i=1}^{n}}x_{i}-v\right)+\mu\left(f(v)-y\right)
+\end{equation}
+
+\end_inset
+
+When 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is strictly quasi-concave and differentiable and 
+\begin_inset Formula $f(v)$
+\end_inset
+
+ is concave and differentiable, the set of interior Pareto optimal allocations
+ are characterized by the first order conditions:
+\begin_inset Formula 
+\begin{gather}
+\frac{\partial L}{\partial x_{i}}=0:\alpha_{i}\frac{\partial u_{i}}{\partial x_{i}}=\lambda\\
+\frac{\partial L}{\partial v}=0:\mu f^{\prime}(v)=\lambda\\
+\frac{\partial L}{\partial y}=0:{\displaystyle \sum_{i=1}^{n}}\alpha_{i}\frac{\partial u_{i}}{\partial y}=\mu
+\end{gather}
+
+\end_inset
+
+By equations (9) and (10)
+\begin_inset Formula 
+\begin{equation}
+\frac{\alpha_{i}}{\mu}=\frac{f^{\prime}(v)}{\frac{\partial u_{i}}{\partial x_{i}}}
+\end{equation}
+
+\end_inset
+
+Substituting (12) into (11),
+\begin_inset Formula 
+\begin{gather}
+{\displaystyle \sum_{i=1}^{n}\frac{f^{\prime}(v)}{\frac{\partial u_{i}}{\partial x_{i}}}\frac{\partial u_{i}}{\partial y}=1}\nonumber \\
+{\displaystyle \sum_{i=1}^{n}}\frac{\frac{\partial u_{i}}{\partial y}}{\frac{\partial u_{i}}{\partial x_{i}}}=\frac{1}{f^{\prime}(v)}
+\end{gather}
+
+\end_inset
+
+Thus, we obtain the well known Lindahl-Samuelson condition.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In conclusion, the conditions for Pareto efficiency are given by
+\begin_inset Formula 
+\begin{gather}
+\left\{ \begin{array}{c}
+{\displaystyle \sum_{i=1}^{n}}MRS_{yx_{i}}=\frac{1}{f^{\prime}(v)}\\
+{\displaystyle \sum_{i=1}^{n}}x_{i}+v\leq{\displaystyle \sum_{i=1}^{n}}w_{i}\\
+y=f(v)
+\end{array}\right.
+\end{gather}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+12.4.1.
+\series default
+
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{i} & = & \alpha_{i}\ln y+\ln x_{i}\\
+y & = & v
+\end{eqnarray*}
+
+\end_inset
+
+the Lindahl-Samuelson condition is
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{i=1}^{n}}\frac{\frac{\partial u_{i}}{\partial y}}{\frac{\partial u_{i}}{\partial x_{i}}}=1
+\end{equation}
+
+\end_inset
+
+and so,
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{i=1}^{n}}\frac{\frac{\alpha_{i}}{y}}{\frac{1}{x_{i}}}={\displaystyle \sum_{i=1}^{n}}\frac{\alpha_{i}x_{i}}{y}=1\implies{\displaystyle \sum_{i=1}^{n}}\alpha_{i}x_{i}=y
+\end{equation}
+
+\end_inset
+
+which implies the level of the public good is not uniquely determined.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In general, the marginal willingness-to-pay for a public good depends on
+ the amount of private goods consumption.
+ Therefore, the efficient level of 
+\begin_inset Formula $y$
+\end_inset
+
+ depends on 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ However, in the case of quasi-linear utility functions
+\begin_inset Formula 
+\begin{equation}
+u_{i}(x_{i},y)=x_{i}+u_{i}(y)
+\end{equation}
+
+\end_inset
+
+the Lindahl-Samuelson condition becomes
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{i=1}^{n}}u_{i}^{\prime}(y)=\frac{1}{f^{\prime}(v)}\equiv c^{\prime}(y)
+\end{equation}
+
+\end_inset
+
+so 
+\begin_inset Formula $y$
+\end_inset
+
+ is uniquely determined.
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+12.4.2.
+\series default
+
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{i} & = & \alpha_{i}\ln y+x_{i}\\
+y & = & v
+\end{eqnarray*}
+
+\end_inset
+
+the Lindahl-Samuelson condition is
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{i=1}^{n}}\frac{\frac{\partial u_{i}}{\partial y}}{\frac{\partial u_{i}}{\partial x_{i}}}=1
+\end{equation}
+
+\end_inset
+
+and so
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \sum_{i=1}^{n}}\frac{\alpha_{i}}{y}=1\implies{\displaystyle \sum_{i=1}^{n}}\alpha_{i}=y
+\end{equation}
+
+\end_inset
+
+which implies the level of the public good is uniquely determined.
+\end_layout
+
+\begin_layout Subsection*
+12.4.2
+\begin_inset space \quad{}
+\end_inset
+
+Lindahl Equilibrium
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We have given the conditions for Pareto efficiency in the presence of public
+ goods.
+ The next problem is how to achieve a Pareto efficient allocation in a decentral
+ized way.
+ In private-goods-only economies, any competitive equilibrium is Pareto
+ optimal.
+ However, with public goods, a competitive mechansim does not help.
+ For instance, if we tried the competitive solution with a public good and
+ two consumers, the utility maximization would equalize the MRS and the
+ relative price, i.e.,
+\begin_inset Formula 
+\[
+MRS_{yx}^{A}=MRS_{yx}^{B}=\frac{p_{y}}{p_{x}}
+\]
+
+\end_inset
+
+This is an immediate violation to the Samuelson-Lindahl optimal condition.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Lindahl suggested to use a tax method to provide a public good.
+ Each person is assigned a specific 
+\begin_inset Quotes eld
+\end_inset
+
+personalized price
+\begin_inset Quotes erd
+\end_inset
+
+ for the public good.
+ The Lindahl solution is a way to mimic the competitive solution in the
+ presence of public goods.
+ Suppose we devise a mechanism to allocate the production cost of a public
+ good between consumers, then we can achieve the Samuelson-Lindahl condition.
+ To this end, we apply different prices of a public good to differenct consumers.
+ The idea of the Lindahl solution is that the consumption level of a public
+ good is the same to all consumers, but the price of the public good is
+ personalized among consumers in the way that the price ratio of two goods
+ for each person equal the marginal rates of substitutions of two goods.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider a public goods economy 
+\begin_inset Formula $e$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{i}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ (private goods) and 
+\begin_inset Formula $y\in\mathbb{R}_{+}^{K}$
+\end_inset
+
+ (public goods).
+ For simplicity, we assume CRS for 
+\begin_inset Formula $y=f(v)$
+\end_inset
+
+.
+ A feasible allocation is given by
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{n}}x_{i}+v\leq{\displaystyle \sum_{i=1}^{n}}w_{i}
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $q_{i}\in\mathbb{R}_{+}^{K}$
+\end_inset
+
+ be the personalized price vector of consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ for consuming the public goods.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $q=\sum_{i=1}^{n}q_{i}$
+\end_inset
+
+ be the market price vector of 
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ be the price vector of private goods
+\end_layout
+
+\begin_layout Standard
+The profit is define as 
+\begin_inset Formula $\pi=qy-pv$
+\end_inset
+
+ with 
+\begin_inset Formula $y=f(v)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+12.4.1 (Lindahl Equilibrium Allocation).
+
+\series default
+ An allocation 
+\begin_inset Formula $(x^{*},y^{*})\in\mathbb{R}_{+}^{nL+K}$
+\end_inset
+
+ is a Lindahl equilibrium allocation if it is feasible and there exists
+ a price vector 
+\begin_inset Formula $p^{*}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and personalized price vectors 
+\begin_inset Formula $q_{i}^{*}\in\mathbb{R}_{+}^{K}$
+\end_inset
+
+, one for each individual 
+\begin_inset Formula $i$
+\end_inset
+
+, such that
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $p^{*}x_{i}^{*}+q_{i}^{*}y^{*}\leq p^{*}w_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(x_{i},y)\succ_{i}(x_{i}^{*},y^{*})\implies p^{*}x_{i}+q_{i}^{*}y>p^{*}w_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $q^{*}y^{*}-p^{*}v^{*}=0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Definition*
+where 
+\begin_inset Formula $v^{*}=\sum_{i=1}^{n}w_{i}-\sum_{i=1}^{n}x_{i}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $q=\sum_{i=1}^{n}q_{i}^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 12.4.1.
+
+\series default
+ We call 
+\begin_inset Formula $(x^{*},y^{*},p^{*},q_{1}^{*},\ldots,q_{n}^{*})$
+\end_inset
+
+ a Lindahl equilibrium.
+ Because of CRS, the maximum profit is zero at the Lindahl equilibrium.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Similarly, we have the following First Fundamental Theorem of Welfare Economics
+ for public goods economies.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+12.4.1.
+ 
+\series default
+\emph on
+Every Lindahl equilibrium allocation 
+\begin_inset Formula $(x^{*},y^{*})$
+\end_inset
+
+ with price system 
+\begin_inset Formula $(p^{*},q_{1}^{*},\ldots,q_{n}^{*})$
+\end_inset
+
+ is weakly Pareto efficient, and further, under local non-satiation, it
+ is Pareto efficient.
+\end_layout
+
+\begin_layout Proof
+Because the first part is simple, we only prove the second part.
+ Suppose for contradiction that 
+\begin_inset Formula $(x^{*},y^{*})$
+\end_inset
+
+ is not Pareto effiicient.
+ Then, there exists a feasible allocation 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\begin{gather*}
+\forall\ i\in N:(x_{i},y)\succsim_{i}(x_{i}^{*},y^{*})\\
+\exists\ k\in N:(x_{k},y)\succ_{k}(x_{k}^{*},y)
+\end{gather*}
+
+\end_inset
+
+By local non-satiation, 
+\begin_inset Formula $\forall\ i\in N:p^{*}x_{i}+q_{i}^{*}y\geq p^{*}w_{i}$
+\end_inset
+
+, and by the definition of a Lindahl Equilibrium, 
+\begin_inset Formula $\exists\ k\in N:p^{*}x_{k}+q_{k}^{*}y>p^{*}w_{i}$
+\end_inset
+
+.
+ Summing over all the agents we have
+\begin_inset Formula 
+\begin{gather*}
+{\displaystyle \sum_{i=1}^{n}p^{*}x_{i}+{\displaystyle \sum_{i=1}^{n}}q_{i}^{*}y>{\displaystyle \sum_{i=1}^{n}}p^{*}w_{i}}\\
+\sum_{i=1}^{n}p^{*}x_{i}+q^{*}y>{\displaystyle \sum_{i=1}^{n}}p^{*}w_{i}
+\end{gather*}
+
+\end_inset
+
+By profit maximization, 
+\begin_inset Formula $q^{*}y-p^{*}v\leq q^{*}y^{*}-p^{*}v^{*}=0\implies q^{*}y\leq p^{*}v$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\[
+{\displaystyle p^{*}\left[\sum_{i=1}^{n}x_{i}+v-{\displaystyle \sum_{i=1}^{n}}w_{i}\right]>0}
+\]
+
+\end_inset
+
+However, this contradicts the fact that 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ is feasible.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For a public economy with one private good and one public good 
+\begin_inset Formula $y=\frac{1}{q}v$
+\end_inset
+
+, the definition of a Lindahl equilibrium becomes much simpler.
+ An allocation 
+\begin_inset Formula $(x^{*},y^{*})$
+\end_inset
+
+ is a Lindahl equilibrium allocation if 
+\begin_inset Formula $(x^{*},y^{*})$
+\end_inset
+
+ is feasible, i.e., 
+\begin_inset Formula $\sum_{i=1}^{n}x_{i}^{*}+q^{*}y^{*}\leq\sum_{i=1}^{n}w_{i}$
+\end_inset
+
+, and there exists 
+\begin_inset Formula $q_{i}^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+, such that
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x_{i}^{*}+q_{i}^{*}y\leq w_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(x_{i},y)\succ_{i}(x_{i}^{*},y^{*})\implies x_{i}+q_{i}^{*}y>w_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{i=1}^{n}q_{i}^{*}=q^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In fact, the feasibility condition is automatically satisfied when the budget
+ constraints given by (i) are satisfied.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If 
+\begin_inset Formula $(x^{*},y^{*})$
+\end_inset
+
+ is an interior Lindahl equilibrium allocation, then from utility maximization,
+ we can have the first-order condition:
+\begin_inset Formula 
+\[
+\frac{\frac{\partial u_{i}}{\partial y}}{\frac{\partial u_{i}}{\partial x_{i}}}=q_{i}
+\]
+
+\end_inset
+
+which means the Lindahl-Samuelson condition holds
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{n}}MRS_{yx_{i}}=q
+\]
+
+\end_inset
+
+which is the necessary condition for Pareto efficiency.
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+12.4.3.
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{i}(x_{i},y) & = & x_{i}^{\alpha_{i}}y^{(1-\alpha_{i})};\ 0<\alpha_{i}<1\\
+y & = & \frac{1}{q}v
+\end{eqnarray*}
+
+\end_inset
+
+
+\series default
+The budget constraint is 
+\begin_inset Formula 
+\[
+x_{i}+q_{i}y=w_{i}
+\]
+
+\end_inset
+
+For each 
+\begin_inset Formula $i$
+\end_inset
+
+, the demand functions for 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ are given by
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{i} & = & \alpha_{i}w_{i}\\
+y_{i} & = & \frac{(1-\alpha_{i})w_{i}}{q_{i}}
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $y_{1}=\cdots=y_{n}=y^{*}$
+\end_inset
+
+ at equilibrium, then we have
+\begin_inset Formula 
+\[
+q_{i}y^{*}=(1-\alpha_{i})w_{i}
+\]
+
+\end_inset
+
+Summing over 
+\begin_inset Formula $i$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+qy^{*}={\displaystyle \sum_{i=1}^{n}}(1-\alpha_{i})w_{i}
+\]
+
+\end_inset
+
+So, we have
+\begin_inset Formula 
+\[
+y^{*}=\frac{\sum_{i=1}^{n}(1-\alpha_{i})w_{i}}{q}
+\]
+
+\end_inset
+
+and thus,
+\begin_inset Formula 
+\[
+q_{i}=\frac{(1-\alpha_{i})w_{i}}{y^{*}}=\frac{q(1-\alpha_{i})w_{i}}{\sum_{i=1}^{n}(1-\alpha_{i})w_{i}}
+\]
+
+\end_inset
+
+If we want to find a Lindahl equilibrium, we must know the preferences or
+ MRS of each consumer.
+\end_layout
+
+\begin_layout Subsection*
+12.4.3
+\begin_inset space \quad{}
+\end_inset
+
+Free Rider Problem
+\end_layout
+
+\end_body
+\end_document

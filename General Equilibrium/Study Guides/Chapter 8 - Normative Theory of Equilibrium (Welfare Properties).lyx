@@ -1,0 +1,2823 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 8
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Part*
+Normative Theory of Equilibrium: Welfare Properties
+\end_layout
+
+\begin_layout Section*
+8.1
+\begin_inset space \quad{}
+\end_inset
+
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In the preceding chapter, we studied the conditions which would guarantee
+ the existence, uniqueness, and stability of competitive equilibrium.
+ In this chapter, we will study the welfare properties of competitive equilibriu
+m.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Economists are interested not only in describing the world of the market
+ economy, but also in evaluating it.
+ Does a competitive market do a 
+\begin_inset Quotes eld
+\end_inset
+
+good
+\begin_inset Quotes erd
+\end_inset
+
+ job in allocating resources? Adam Smith's 
+\begin_inset Quotes eld
+\end_inset
+
+invisible hand
+\begin_inset Quotes erd
+\end_inset
+
+ says that market economy is efficient.
+ Then, in what sense and under what conditions is a market efficient? The
+ concept of efficiency is related to a concern with the well-being of those
+ in the economy.
+ The normative analysis can not only help us understand what advantage the
+ market mechanism has, it can also help us to evaluate an economic system
+ used in the real world.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Economic efficiency consists of three requirements:
+\end_layout
+
+\begin_layout Enumerate
+Exchange efficiency: goods are traded efficiently so that no further mutual
+ beneficial trade can be obtained.
+\end_layout
+
+\begin_layout Enumerate
+Production efficiency: there is no waste of resources in producing goods.
+\end_layout
+
+\begin_layout Enumerate
+Product mix efficiency, i.e., the mix of goods produced by the economy reflects
+ the preferences of those in the economy.
+\end_layout
+
+\begin_layout Section*
+8.2
+\begin_inset space \quad{}
+\end_inset
+
+Pareto Efficiency of Allocation
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When economists take about the efficiency of allocating resources, it means
+ Pareto efficiency.
+ It provides a minimum criterion for efficiency of using resources.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Under the market institution, we want to know what is the relationship between
+ a market equilibrium and Pareto efficiency.
+ There are two basic questions: (1) If a market (not necessarily competitive)
+ equilibrium exists, is it Pareto efficient? (2) Can any Pareto efficient
+ allocaiton be obtianed through the market mechanism by redistributing endowment
+s?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The concept of Pareto efficiency is not just to study the efficiency of
+ a market economy, but it also can be used to study the efficiency of any
+ economic system.
+ First, let us define the notion of Pareto improvement.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+8.2.1 (Pareto Improvement).
+ 
+\series default
+An allocation can have a Pareto improvement if it is feasible and there
+ is another feasible allocation such that one person would be better off
+ and all other persons are not worse off.
+ An allocation can have a strict Pareto improvement if it is feasible and
+ there is another feasible allocaiton such that all persons are better off.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When economists talk about the efficiency of allocation of resources, it
+ means Pareto efficiency.
+ It provides a minimum criterion for efficiency of using resources.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+8.2.2 (Pareto Efficiency, also called Pareto Optimality).
+
+\series default
+ An allocation is Pareto efficient or Pareto optimal (PO) if it is feasible
+ and there is no Pareto improvement, that is, if there is no other feasible
+ allocation such that one person would be better off and all other persons
+ are not worse off.
+\end_layout
+
+\begin_layout Definition*
+More precisely, for exchange economies, a feasible allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ is Pareto optimal if there is no other allocation 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{n}}x_{i}^{\prime}\leq{\displaystyle \sum_{i=1}^{n}}w_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall\ i:x_{i}^{\prime}\succsim_{i}x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\exists\ k:x_{k}^{\prime}\succ_{k}x_{k}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Definition*
+For a production economy, 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ is Pareto optimal if and only if:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\hat{x}\leq\hat{y}+\hat{w}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+There is no feasible allocation 
+\begin_inset Formula $(x^{\prime},y^{\prime})$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\begin{gather*}
+\forall\ i:x_{i}^{\prime}\succsim_{i}x_{i}\\
+\exists\ k:x_{k}^{\prime}\succ_{k}x_{k}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+A weaker concept about economic efficiency is the so-called weak Pareto
+ efficiency.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+8.2.3 (Weak Pareto Efficiency).
+
+\series default
+ An allocation is weakly Pareto efficient if it is feasible and there is
+ no strict Pareto improvement, that is, if there is no other feasible allocation
+ such that all persons are better off.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 8.2.1.
+
+\series default
+ Some textbooks have used weak Pareto optimality as the definition of Pareto
+ optimality.
+ Under which conditions are they equivalent? It is clear that Pareto efficiency
+ implies weak Pareto efficiency.
+ But the coverse may not be true.
+ However, under the continuity and strict monotonicity of preferences, the
+ converse is true.
+\end_layout
+
+\begin_layout Note*
+\begin_inset Formula $PI(x)=\{x^{\prime}|\ \forall\ i\in N:x_{i}^{\prime}\succsim x_{i},\ \exists\ j\in N:x_{j}^{\prime}\succ_{j}x_{j}\}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ is a Pareto optimal if 
+\begin_inset Formula $PI(x)=\emptyset$
+\end_inset
+
+.
+ 
+\begin_inset Formula $SPI(x)=\{x^{\prime}|\ \forall\ i\in N:x_{i}^{\prime}\succ_{i}x_{i}\}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ is weakly Pareto optimal if 
+\begin_inset Formula $SPI(x)=\emptyset$
+\end_inset
+
+.
+ Pareto optimality implies weak Pareto optimality, but in general, weak
+ Pareto optimality does not imply Pareto optimality.
+ 
+\begin_inset Formula $\neg(\forall\ i\in N:x_{i}^{\prime}\succ_{i}x_{i})$
+\end_inset
+
+ is weaker than 
+\begin_inset Formula $\neg(\forall\ i\in N:x_{i}^{\prime}\succsim x_{i},\ \exists\ j\in N:x_{j}^{\prime}\succ_{j}x_{j})$
+\end_inset
+
+.
+ Not satisfying a strong condition is weaker than not satisfying a weak
+ condition.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+8.2.1.
+ 
+\series default
+\emph on
+Under the continuity and strict monotonicity of preferences, weak Pareto
+ efficiency implies Pareto efficiency.
+\end_layout
+
+\begin_layout Proof
+Suppose for contradiction that 
+\begin_inset Formula $x$
+\end_inset
+
+ is weakly Pareto efficient, but not Pareto efficient.
+ Then, there exists a feasible allocation 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ i:x_{i}^{\prime}\succsim_{i}x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\exists\ k:x_{k}^{\prime}\succ_{k}x_{k}$
+\end_inset
+
+.
+ Define the allocation 
+\begin_inset Formula $\bar{x}$
+\end_inset
+
+ as follows
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{x}_{k} & = & (1-\theta)x_{k}^{\prime}\\
+\bar{x}_{i} & = & x_{i}^{\prime}+\frac{\theta}{n-1}x_{k}^{\prime};\ i\neq k
+\end{eqnarray*}
+
+\end_inset
+
+Then, we have
+\begin_inset Formula 
+\begin{eqnarray}
+\bar{x}_{k}+\sum_{i\neq k}\bar{x}_{i} & = & (1-\theta)x_{k}^{\prime}+\sum_{i\neq k}\left(x_{i}^{\prime}+\frac{\theta}{n-1}x_{k}^{\prime}\right)\\
+ & = & (1-\theta)x_{k}^{\prime}+{\displaystyle \sum_{i\neq k}}x_{i}^{\prime}+\frac{\theta}{(n-1)}{\displaystyle \sum_{i\neq k}}x_{k}^{\prime}\nonumber \\
+ & = & x_{k}^{\prime}-\theta x_{k}^{\prime}+{\displaystyle \sum_{i\neq k}}x_{i}^{\prime}+\frac{\theta}{(n-1)}(n-1)x_{k}^{\prime}\nonumber \\
+ & = & \sum_{i=1}^{n}x_{i}^{\prime}\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+which means 
+\begin_inset Formula $\bar{x}$
+\end_inset
+
+ is feasible.
+ By continuity of preferences 
+\begin_inset Formula $\bar{x}_{k}=(1-\theta)x_{k}^{\prime}\succ_{k}x_{k}$
+\end_inset
+
+ when 
+\begin_inset Formula $\theta\approx0$
+\end_inset
+
+.
+ By strict monotonicity, 
+\begin_inset Formula $\bar{x}_{i}\gneq x_{i}^{\prime}\implies\bar{x}_{i}\succ_{i}x_{i}^{\prime}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i\neq k$
+\end_inset
+
+.
+ By transitivity, 
+\begin_inset Formula $\bar{x}_{i}\succ_{i}x_{i}^{\prime}\ \wedge\ x_{i}^{\prime}\succsim_{i}x_{i}\implies\bar{x}_{i}\succ_{i}x_{i}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i\neq k$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\bar{x}$
+\end_inset
+
+ is a strict Pareto improvement of 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ However, this contradicts the fact that 
+\begin_inset Formula $x$
+\end_inset
+
+ is weakly Pareto optimal.
+ Therefore, we must have every weak Pareto efficient allocation is Pareto
+ efficient under the monotonicity and continuity of preferences.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 8.2.2.
+
+\series default
+ The trick of taking a little from one person and then equally distributing
+ it to the others, so it will make every one better off, is a useful one.
+ We will use the same trick to prove the Second Theorem of Welfare Economics.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 8.2.3.
+
+\series default
+ The above proposition also depends on an implicit assumption that the goods
+ under consideration are all private goods.
+ Tian (Economics Letters, 1988) showed by example that if goods are public
+ goods, we may now not have such equivalence between Pareto efficiency and
+ weak Pareto efficiency under the monotonicity and continuity of preferences.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 8.2.4.
+
+\series default
+ 
+\emph on
+Equity
+\emph default
+ and 
+\emph on
+Pareto efficiency
+\emph default
+ are two different concepts.
+ The points like 
+\begin_inset Formula $O_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $O_{B}$
+\end_inset
+
+ are Pareto optimal points, but these are extremely unequal.
+ To make an allocation be relatively equitable and also efficient, government
+ needs to implement some institutional arrangements such as taxes and/or
+ subsidies to balance between equity and efficiency, but this is a value
+ judgement and policy issue.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 8.2.5.
+
+\series default
+ The set of Pareto efficient allocations is given by the contract curve.
+ We will show that when Pareto efficient points are given by tangent points
+ of two persons' indifferences curves, it should satisfy the following condition
+s:
+\begin_inset Formula 
+\[
+-\frac{dx_{A2}}{dx_{A1}}=MRS_{x_{1},x_{2}}^{A}=\frac{MU_{x_{1}}^{A}}{MU_{x_{2}}^{A}}=\frac{MU_{x_{1}}^{B}}{MU_{x_{2}}^{B}}=MRS_{x_{1},x_{2}}^{B}=-\frac{dx_{B2}}{dx_{B1}}
+\]
+
+\end_inset
+
+When indifference curves of two agents are never tangent, we have the following
+ cases.
+\end_layout
+
+\begin_layout Case
+Suppose 
+\begin_inset Formula $n=2=L$
+\end_inset
+
+.
+ For linear indifference curves with non-zero (negative) slope, indifference
+ curves of agents may not be tangent.
+ When indifference curves are linear and Person B's indifference curves
+ are steeper, i.e., 
+\begin_inset Formula $MRS_{x_{1},x_{2}}^{A}<MRS_{x_{1},x_{2}}^{B}$
+\end_inset
+
+, then the set of Pareto efficient allocations is given by the upper and
+ left edges of the Edgeworth box.
+ When indifference curves are linear and Person A's indifferences curves
+ are steeper, i.e., 
+\begin_inset Formula $MRS_{x_{1},x_{2}}^{A}>MRS_{x_{1},x_{2}}^{B}$
+\end_inset
+
+, then the set of Pareto efficient allocations is given by the lower and
+ right edges of the Edgeworth box.
+\end_layout
+
+\begin_layout Case
+Suppose that indifference curves are given by
+\begin_inset Formula 
+\[
+u_{A}(x_{A})=x_{A2}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+u_{B}(x_{B})=x_{B1}
+\]
+
+\end_inset
+
+So, both individuals only care about one commodity.
+ Then, the only Pareto efficient allocation is the upper left corner point
+ of the Edgeworth Box.
+ However, the set of weakly Pareto efficient points is given by the upper
+ and left borders of the box.
+ Notice that utility functions in this example are continuous and monotonic,
+ but a weak Pareto efficient allocation may not be Pareto efficient.
+ This example shows that strict monotonicity cannot be replaced by monotonicity
+ for the equivalence of Pareto efficiency and weak Pareto efficiency.
+\end_layout
+
+\begin_layout Case
+Now suppose that indifference curves are perfect complementary.
+ Then, utility functions are given by
+\begin_inset Formula 
+\[
+u_{A}(x_{A})=\min\{ax_{A1},bx_{A2}\}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+u_{B}(x_{B})=\min\{cx_{B1},dx_{B2}\}
+\]
+
+\end_inset
+
+A special case is the one where 
+\begin_inset Formula $a=b=c=d=1$
+\end_inset
+
+.
+ Then, the set of Pareto optimal allocaitons is the are given by points
+ between two 
+\begin_inset Formula $45^{\circ}$
+\end_inset
+
+ lines.
+\end_layout
+
+\begin_layout Case
+One person's indifference curves are 
+\begin_inset Quotes eld
+\end_inset
+
+thick.
+\begin_inset Quotes erd
+\end_inset
+
+ In this case, a weak Pareto efficient allocation may not be Pareto efficient.
+\end_layout
+
+\begin_layout Section*
+8.3
+\begin_inset space \quad{}
+\end_inset
+
+The First Fundamental Theorem of Welfare Economics
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+There is a well-known theorem, in fact, one of the most important theorems
+ in Economics, which characterizes a desirable nature of the competitive
+ market institution.
+ It claims that every competitive equilibrium allocation is Pareto efficient.
+ A remarkable part of this theorem is that the theorem requires few assumpeitons
+, much fewer than those for the existence of competitive equilibrium.
+ Some implicit assumptions in this section are that preferences are orderings,
+ goods are divisible, and there are no public goods or externalities.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+8.3.1 (The First Fundamental Theorem of Welfare Economics).
+
+\series default
+ 
+\emph on
+If 
+\begin_inset Formula $(x,y,p)$
+\end_inset
+
+ is a competitive equilibrium, then 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ is weakly Pareto efficient, and further under local non-satiation, it is
+ Pareto efficient.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $(x,y,p)$
+\end_inset
+
+ is a competitive equilibrium.
+ Suppose for contradiction 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ is not weakly Pareto optimal.
+ Then, there exists a feasible allocation 
+\begin_inset Formula $(x^{\prime},y^{\prime})$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ i\in N:x_{i}^{\prime}\succ_{i}x_{i}$
+\end_inset
+
+.
+ By utility maximization, we must have 
+\begin_inset Formula $\forall\ i\in N:p\cdot x_{i}^{\prime}>p\cdot w_{i}+{\displaystyle \sum_{j=1}^{J}}\theta_{ij}p\cdot y_{j}$
+\end_inset
+
+.
+ Taking summation we have
+\begin_inset Formula 
+\[
+\sum_{i=1}^{N}p\cdot x_{i}^{\prime}>\sum_{i=1}^{N}p\cdot w_{i}+\sum_{i=1}^{N}\sum_{j=1}^{J}\theta_{ij}p\cdot y_{j}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $y_{j}$
+\end_inset
+
+ is a profit maximizing vector, then 
+\begin_inset Formula $p\cdot y_{j}\geq p\cdot y_{j}^{\prime}$
+\end_inset
+
+.
+ So, we have
+\begin_inset Formula 
+\begin{gather}
+\sum_{i=1}^{N}p\cdot x_{i}^{\prime}>\sum_{i=1}^{N}p\cdot w_{i}+\sum_{j=1}^{J}p\cdot y_{j}^{\prime}\\
+p\cdot\left[\sum_{i=1}^{N}x_{i}^{\prime}-\sum_{i=1}^{N}w_{i}-\sum_{j=1}^{J}y_{j}^{\prime}\right]>0
+\end{gather}
+
+\end_inset
+
+However, this contradicts the fact that 
+\begin_inset Formula $(x^{\prime},y^{\prime})$
+\end_inset
+
+ is feasible.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+To show Pareto efficiency, suppose 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ is not Pareto optimal.
+ Then, there exists a feasible allocation 
+\begin_inset Formula $(x^{\prime},y^{\prime})$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ i\in N:x_{i}^{\prime}\succsim_{i}x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\exists\ k\in N:x_{k}^{\prime}\succ_{k}x_{k}$
+\end_inset
+
+.
+ We claim that by local non-satiation, 
+\begin_inset Formula $\forall\ i\in N:p\cdot x_{i}^{\prime}\geq p\cdot w_{i}+\sum_{j=1}^{J}\theta_{ij}p\cdot y_{j}$
+\end_inset
+
+.
+ Suppose the claim is not true.
+ Then, 
+\begin_inset Formula $\exists\ i\in N:p\cdot x_{i}^{\prime}<p\cdot w_{i}+\sum_{j=1}^{J}\theta_{ij}p\cdot y_{j}$
+\end_inset
+
+.
+ This means that 
+\begin_inset Formula $x_{i}^{\prime}\in\mbox{Int}(B_{i}(p))$
+\end_inset
+
+, which is an open set by definition.
+ So, 
+\begin_inset Formula $\exists\ \epsilon>0:O_{\epsilon}(x_{i}^{\prime})\subseteq B_{i}(p)$
+\end_inset
+
+.
+ By local non-satiation, 
+\begin_inset Formula $\exists\ x_{i}^{\prime\prime}\in O_{\epsilon}(x_{i})\subseteq B_{i}(p):x_{i}^{\prime\prime}\succ_{i}x_{i}^{\prime}$
+\end_inset
+
+.
+ By transitivity, 
+\begin_inset Formula $x_{i}^{\prime\prime}\succ_{i}x_{i}^{\prime}\succsim x_{i}$
+\end_inset
+
+ implies that 
+\begin_inset Formula $x_{i}^{\prime\prime}\succ_{i}x_{i}$
+\end_inset
+
+.
+ But, this contradicts the fact that 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ maximizes agent 
+\begin_inset Formula $i$
+\end_inset
+
+'s utility.
+ Hence, the claim is true.
+ Moving on, by utility maximization, 
+\begin_inset Formula $p\cdot x_{k}^{\prime}>p\cdot w_{k}+\sum_{j=1}^{J}\theta_{kj}p\cdot y_{k}$
+\end_inset
+
+.
+ Taking summation, we have
+\begin_inset Formula 
+\[
+\sum_{i=1}^{N}p\cdot x_{i}^{\prime}>\sum_{i=1}^{N}p\cdot w_{i}+\sum_{i=1}^{N}\sum_{j=1}^{J}\theta_{ij}p\cdot y_{j}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $y_{j}$
+\end_inset
+
+ is a profit maximizing vector, then then 
+\begin_inset Formula $p\cdot y_{j}\geq p\cdot y_{j}^{\prime}$
+\end_inset
+
+.
+ So, we have
+\begin_inset Formula 
+\begin{eqnarray}
+\sum_{i=1}^{N}p\cdot x_{i}^{\prime} & > & \sum_{i=1}^{N}p\cdot w_{i}+\sum_{j=1}^{J}p\cdot y_{j}\geq\sum_{i=1}^{N}p\cdot w_{i}+\sum_{j=1}^{J}p\cdot y_{j}^{\prime}\\
+\sum_{i=1}^{N}p\cdot x_{i}^{\prime} & > & \sum_{i=1}^{N}p\cdot w_{i}+\sum_{j=1}^{J}p\cdot y_{j}^{\prime}\\
+p\cdot\left[\sum_{i=1}^{N}x_{i}^{\prime}-\sum_{i=1}^{N}w_{i}-\sum_{j=1}^{J}y_{j}^{\prime}\right] & > & 0\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+However, this contradicts the fact that 
+\begin_inset Formula $(x^{\prime},y^{\prime})$
+\end_inset
+
+ is feasible.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 8.3.1.
+ 
+\series default
+If the local non-satiation condition is not satisfied, a competitive equilibrium
+ allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ may not be Pareto optimal, say, for the case of thick indifference curves.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 8.3.2.
+
+\series default
+ Note that neither convexity of preferences nor convexity of production
+ set is assumed in the theorem.
+ The conditions required for Pareto efficiency of competitive equilibrium
+ is much weaker than the conditions for the existence of competitive equilibrium.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 8.3.3.
+
+\series default
+ If goods are indivisible, then a competitive equilibrium allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ may not be Pareto optimal.
+ Hence, the divisibility condition cannot be dropped for the First Fundamental
+ Welfare Theorem to be true.
+\end_layout
+
+\begin_layout Section*
+8.4
+\begin_inset space \quad{}
+\end_inset
+
+Calculations of Pareto Optimum by First-Order Conditions
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The first-order conditions for Pareto efficiency are a bit harder to formulate
+ However, the following trick is very useful.
+\end_layout
+
+\begin_layout Subsection*
+8.4.1
+\begin_inset space \quad{}
+\end_inset
+
+Exchange Economies
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+8.4.1.
+
+\series default
+ 
+\emph on
+A feasible allocation 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+is Pareto efficient if and only if 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+solves the following problem for all 
+\begin_inset Formula $i=1,2,\ldots,n$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{gather*}
+\max_{x}\ u_{i}(x_{i})\\
+\mbox{s.t.}\ \sum x_{k}\leq\sum w_{k}\\
+u_{k}(x_{k})\geq u_{k}(x_{k}^{*})\ \mbox{for}\ k\neq i
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Suppose 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ solves all the maximization problems, but 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is not Pareto efficient.
+ Then, there exists an allocation such that at least one person is better
+ off, but no one else is worse off.
+ But, 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ doesn't solve one of the maximization problems, which is a contradiction.
+ Suppose 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is Pareto efficient, but it does not solve one of the maximization problems.
+ Let 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ solve that problem.
+ Then 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ makes one of the agents better off without making anyone else worse off,
+ which contradicts the fact that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is Pareto efficient.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If utility functions 
+\begin_inset Formula $u_{i}(x_{i})$
+\end_inset
+
+ are differentiable, then we can define the Lagrangian funciton to get the
+ optimal solution to the above problem:
+\begin_inset Formula 
+\[
+L=u_{i}(x_{i})+q(\hat{w}-\hat{x})+\sum_{k\neq i}t_{k}(u_{k}(x_{k})-u_{k}(x_{k}^{*}))
+\]
+
+\end_inset
+
+The first-order conditions are given by
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial L}{\partial x_{il}} & = & \frac{\partial u_{i}(x_{i})}{\partial x_{il}}-q_{l}\leq0\ \mbox{with equality if \ensuremath{x_{il}>0;}}\ l=1,\ldots,L,\ i=1,\ldots,n\\
+\frac{\partial L}{\partial x_{kl}} & = & t_{k}\frac{\partial u_{k}(x_{k})}{\partial x_{kl}}-q_{l}\leq0\ \mbox{with equality if \ensuremath{x_{kl}>0;}}\ l=1,\ldots,L,\ k\neq i
+\end{eqnarray}
+
+\end_inset
+
+If 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is an interor solution, then by (6) we have
+\begin_inset Formula 
+\begin{equation}
+\frac{\frac{\partial u_{i}(x_{i})}{\partial x_{il}}}{\frac{\partial u_{i}(x_{i})}{\partial x_{ih}}}=\frac{q_{l}}{q_{h}}=MRS_{x_{il},x_{ih}}
+\end{equation}
+
+\end_inset
+
+and by (7) we have
+\begin_inset Formula 
+\begin{equation}
+\frac{\frac{\partial u_{k}(x_{k})}{\partial x_{kl}}}{\frac{\partial u_{k}(x_{k})}{\partial x_{kh}}}=\frac{q_{l}}{q_{h}}=MRS_{x_{kl},x_{kh}}
+\end{equation}
+
+\end_inset
+
+Thus, we have 
+\begin_inset Formula 
+\begin{equation}
+MRS_{x_{1l},x_{1h}}=\cdots=MRS_{x_{nl},x_{nh}};\ l=1,\ldots,L,\ h=1,\ldots,L
+\end{equation}
+
+\end_inset
+
+which are necessary conditions for the interior solutions to be Pareto efficient
+, which means that the MRS of any two goods are all equal for all agents.
+ They become sufficient conditions when utility functions 
+\begin_inset Formula $u_{i}(x_{i})$
+\end_inset
+
+ are differentiable and quasi-concave.
+\end_layout
+
+\begin_layout Subsection*
+8.4.2
+\begin_inset space \quad{}
+\end_inset
+
+Production Economies
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For simplicity, we assume there is only one firm.
+ Let 
+\begin_inset Formula $T(y)\leq0$
+\end_inset
+
+ be the transformation frontier.
+ Similarly, we can prove the following proposition.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+8.4.2.
+
+\series default
+ 
+\emph on
+A feasible allocation 
+\begin_inset Formula $(x^{*},y^{*})$
+\end_inset
+
+ is Pareto efficient if and only if 
+\begin_inset Formula $(x^{*},y^{*})$
+\end_inset
+
+ solves the folowing problem for all 
+\begin_inset Formula $i=1,2,\ldots,n$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{gather*}
+\max_{x}\ u_{i}(x_{i})\\
+\mbox{s.t.}\ \sum_{k\in N}x_{k}=\sum_{k\in N}w_{k}+y\\
+u_{k}(x_{k})\geq u_{k}(x_{k}^{*})\ \mbox{for}\ k\neq i\\
+T(y)\leq0
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+If utility functions 
+\begin_inset Formula $u_{i}(x_{i})$
+\end_inset
+
+ are differenetiable and 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is an interior solution, then we can define the Lagrangian function
+\begin_inset Formula 
+\[
+L=u_{i}(x_{i})-\lambda T(\hat{x}-\hat{w})+\sum_{k\neq i}t_{k}\left[u_{k}(x_{k})-u_{k}(x_{k}^{*})\right]
+\]
+
+\end_inset
+
+The first-order conditions are given by
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial L}{\partial x_{il}} & = & \frac{\partial u_{i}(x_{i})}{\partial x_{il}}-\lambda_{}\frac{\partial T(y)}{\partial y_{l}}\leq0\ \mbox{with equality if \ensuremath{x_{il}>0;}}\ l=1,\ldots,L,\ i=1,\ldots,n\\
+\frac{\partial L}{\partial x_{kl}} & = & t_{k}\frac{\partial u_{k}(x_{k})}{\partial x_{kl}}-\lambda\frac{\partial T(y)}{\partial y_{l}}\leq0\ \mbox{with equality if \ensuremath{x_{kl}>0;}}\ l=1,\ldots,L,\ k\neq i
+\end{eqnarray}
+
+\end_inset
+
+If 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is an interior solution, then by (11) we have
+\begin_inset Formula 
+\begin{equation}
+\frac{\frac{\partial u_{i}(x_{i})}{\partial x_{il}}}{\frac{\partial u_{i}(x_{i})}{\partial x_{ih}}}=\frac{\frac{\partial T(y)}{\partial y_{l}}}{\frac{\partial T(y)}{\partial y_{h}}}
+\end{equation}
+
+\end_inset
+
+and by (12) we have
+\begin_inset Formula 
+\begin{equation}
+\frac{\frac{\partial u_{k}(x_{k})}{\partial x_{kl}}}{\frac{\partial u_{k}(x_{k})}{\partial x_{kh}}}=\frac{\frac{\partial T(y)}{\partial y_{l}}}{\frac{\partial T(y)}{\partial y_{h}}}
+\end{equation}
+
+\end_inset
+
+Thus, we have
+\begin_inset Formula 
+\begin{equation}
+MRS_{x_{1l},x_{1h}}=\cdots=MRS_{x_{nl},x_{nh}}=MRTS_{y_{l},y_{h}};\ l=1,\ldots,L,\ h=1,\ldots,L
+\end{equation}
+
+\end_inset
+
+which are the necessary conditions for the interior solutions to be Pareto
+ efficient, which means that the MRS of any two goods for all agents equals
+ the MRTS.
+ They become sufficient conditions when utility functions 
+\begin_inset Formula $u_{i}(x_{i})$
+\end_inset
+
+ are differentiable and quasi-concave and the production functions are concave.
+\end_layout
+
+\begin_layout Section*
+8.5
+\begin_inset space \quad{}
+\end_inset
+
+The Second Fundamental Theorem of Welfare Economics
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, we can assert a converse of the First Fundamental Theorem of Welfare
+ Economics.
+ The Second Fundamental Theorem of Welfare Economics gives conditions under
+ which every Pareto optimum allocation can be 
+\begin_inset Quotes eld
+\end_inset
+
+supported
+\begin_inset Quotes erd
+\end_inset
+
+ by a competitive equilibrium through a redistribution of endowments so
+ that one does not need to seek any alternative economic institution to
+ reach Pareto efficient allocations.
+ Under its assumptions, it tells us that any desired Pareto optimal allocation
+ can be achieved as a market-based equilibrium with transfers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We first define the competitive equilibrium with transfer payments (also
+ called an equilibrium relative to a price system), that is, a competitive
+ equilibrium is established after transferring some of the initial endowments
+ between agents.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+8.5.1 (Competitive Equilibrium with Transfer Payments).
+
+\series default
+ For an economy, 
+\begin_inset Formula $e=(e_{1},\ldots,e_{n},\{Y_{j}\})$
+\end_inset
+
+, 
+\begin_inset Formula $(x,y,p)\in X\times Y\times\mathbb{R}_{+}^{L}$
+\end_inset
+
+ is a competitive equilibrium with transfer payment if
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $x_{i}\succsim_{i}x_{i}^{\prime}$
+\end_inset
+
+ for all 
+\begin_inset Formula $x_{i}^{\prime}\in\left\{ x_{i}^{\prime}\in X_{i}:p\cdot x_{i}^{\prime}\leq p\cdot x_{i}\right\} $
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+ (utility maximization)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $p\cdot y_{j}\geq p\cdot y_{j}^{\prime}$
+\end_inset
+
+ for 
+\begin_inset Formula $y_{j}^{\prime}\in Y_{j}$
+\end_inset
+
+ (profit maximization)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\hat{x}\leq\hat{w}+\hat{y}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+Remark 8.5.1.
+
+\series default
+ An equilibrium with transfer payments is different from a comeptitive equilibri
+um with respect to a budget constrained utility maximization that uses a
+ value calculated from the initial endowment.
+ An equilibrium with transfer payments is defined without reference to the
+ distribution of initial endowment, given the total amount.
+\end_layout
+
+\begin_layout Note*
+Transfer payments occur before the agent compete and/or trade in the market.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 8.5.2.
+
+\series default
+ If condition (i) above is replaced by
+\begin_inset Formula 
+\[
+\mbox{(i')}\ x_{i}^{\prime}\succ_{i}x_{i}\ \mbox{implies that}\ p\cdot x_{i}^{\prime}\geq p\cdot x_{i}\ \mbox{for}\ i=1,\ldots,n
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula $(x,y,p)\in X\times Y\times\mathbb{R}_{+}^{L}$
+\end_inset
+
+ is called a price quasi-equilibrium with transfer payment.
+ It may be remarked that, if 
+\begin_inset Formula $\hat{w}>0$
+\end_inset
+
+ and preferences are continuous and locally non-satiated, then any price
+ quasi-equilibrium with transfers in which 
+\begin_inset Formula $x_{i}>0$
+\end_inset
+
+ is a price equilibrium with transfers.
+ Furthermore, if preferences are strictly monotone, then we must have 
+\begin_inset Formula $p>0$
+\end_inset
+
+ in any price quasi-equilibrium with transfers.
+ For the proofs, see Mas-Colell, Whinston, and Green (1995).
+\end_layout
+
+\begin_layout Note*
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is a vector of vectors; it is an allocation.
+ 
+\begin_inset Formula $\hat{x}^{*}$
+\end_inset
+
+ represents aggregate demand, it is a vector of numbers.
+ Note that 
+\begin_inset Formula $\hat{x}^{*}=\sum_{i\in N}\ x_{i}^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+8.5.1 (The Second Fundamental Theorem of Welfare Economics).
+
+\series default
+ 
+\emph on
+Suppose 
+\begin_inset Formula $(x^{*},y^{*})$
+\end_inset
+
+ with 
+\begin_inset Formula $x^{*}>0$
+\end_inset
+
+ is Pareto optimal, suppose 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ are continuous, convex, and strictly monotonic, and suppose that 
+\begin_inset Formula $Y_{j}$
+\end_inset
+
+ are closed and convex.
+ Then, there is a price vector 
+\begin_inset Formula $p\geq0$
+\end_inset
+
+ such that 
+\begin_inset Formula $(x^{*},y^{*},p)$
+\end_inset
+
+ is a comeptitive equilibrium with transfer payments, i.e.,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+if 
+\begin_inset Formula $x_{i}^{\prime}\succ_{i}x_{i}^{*}$
+\end_inset
+
+, then 
+\begin_inset Formula $p\cdot x_{i}^{\prime}>p\cdot x_{i}^{*}$
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+ (
+\begin_inset Formula $x_{i}^{\prime}$
+\end_inset
+
+ is not feasible for agent 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ This property is equivalent to (i) in Definition 8.5.1)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $p\cdot y_{j}^{*}\geq p\cdot y_{j}^{\prime}$
+\end_inset
+
+ for all 
+\begin_inset Formula $y_{j}^{\prime}\in Y_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $j=1,\ldots,J$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula 
+\begin{equation}
+P(x_{i}^{*})=\left\{ x_{i}\in X_{i}:x_{i}\succ_{i}x_{i}^{*}\right\} 
+\end{equation}
+
+\end_inset
+
+be the strict upper contour set of 
+\begin_inset Formula $x_{i}^{*}$
+\end_inset
+
+, and let
+\begin_inset Formula 
+\begin{equation}
+P(x^{*})={\displaystyle \sum_{i=1}^{n}}P(x_{i}^{*})
+\end{equation}
+
+\end_inset
+
+be the summation of the strict upper contour sets of all the agents.
+ By the convexity of 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+, we know that 
+\begin_inset Formula $P(x_{i}^{*})$
+\end_inset
+
+ are all convex sets, so 
+\begin_inset Formula $P(x^{*})$
+\end_inset
+
+ is also a convex set.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $W=\left\{ \hat{w}\right\} +\sum_{j=1}^{J}Y_{j}$
+\end_inset
+
+ which is closed and convex.
+ Then, by Pareto optimality of 
+\begin_inset Formula $(x^{*},y^{*})$
+\end_inset
+
+, 
+\begin_inset Formula $W\cap P(x^{*})=\emptyset$
+\end_inset
+
+.
+ Hence, by the Separating Hyperplane Theorem, there is a 
+\begin_inset Formula $p\neq0$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\begin{equation}
+\forall\ \hat{x}\in P(x^{*}),\ \forall\ \hat{\sigma}\in W:p\cdot\hat{x}\geq p\cdot\hat{\sigma}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Now, we show that 
+\begin_inset Formula $p$
+\end_inset
+
+ is a competitive equilibrium price vector by the following four steps.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+We want to show that 
+\begin_inset Formula $p\geq0$
+\end_inset
+
+.
+ To see this, let 
+\begin_inset Formula $e_{l}=(0,\ldots,0,1,0,\ldots,0)$
+\end_inset
+
+ with the 
+\begin_inset Formula $l$
+\end_inset
+
+-th component one and other places zero.
+ Let
+\begin_inset Formula 
+\[
+\hat{x}=\hat{\sigma}+e_{l}\ \mbox{for some}\ \hat{\sigma}\in W
+\]
+
+\end_inset
+
+ By strict monotonicity and redistribution of 
+\begin_inset Formula $e_{l}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{x}=\hat{\sigma}+e_{l}\in P(x^{*})$
+\end_inset
+
+.
+ Thus, by (18), we have
+\begin_inset Formula 
+\begin{equation}
+p\cdot\left(\hat{\sigma}+e_{l}\right)\geq p\cdot\hat{\sigma}
+\end{equation}
+
+\end_inset
+
+and therefore
+\begin_inset Formula 
+\begin{equation}
+p\cdot e_{l}\geq0
+\end{equation}
+
+\end_inset
+
+which means
+\begin_inset Formula 
+\begin{equation}
+p_{l}\geq0,\ l=1,\ldots,L
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+We want to show that 
+\begin_inset Formula $\forall\ y_{j}\in Y_{j},\ \forall\ j=1,\ldots,J:p\cdot y_{j}^{*}\geq p\cdot y_{j}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\hat{x}^{*}=\hat{w}+\hat{y}^{*}$
+\end_inset
+
+, then 
+\begin_inset Formula $p\cdot\hat{x}^{*}=p\cdot(\hat{w}+\hat{y}^{*})$
+\end_inset
+
+, and 
+\begin_inset Formula $p\cdot\hat{w}=p\cdot\hat{x}^{*}-p\cdot\hat{y}^{*}$
+\end_inset
+
+.
+ Also, by (18), 
+\begin_inset Formula $p\cdot\hat{x}\geq p\cdot(\hat{w}+\hat{y})$
+\end_inset
+
+, where 
+\begin_inset Formula $\left(\hat{w}+\hat{y}\right)\in W$
+\end_inset
+
+.
+ Thus, we have
+\begin_inset Formula 
+\[
+p\cdot(\hat{x}-\hat{x}^{*})\geq p\cdot(\hat{y}-\hat{y}^{*})
+\]
+
+\end_inset
+
+Letting 
+\begin_inset Formula $\hat{x}\rightarrow\hat{x}^{*}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+p(\hat{y}-\hat{y}^{*})\leq0
+\]
+
+\end_inset
+
+Letting 
+\begin_inset Formula $y_{k}=y_{k}^{*}$
+\end_inset
+
+ for 
+\begin_inset Formula $k\neq j$
+\end_inset
+
+, we have, from the equation above,
+\begin_inset Formula 
+\[
+\forall\ y_{j}\in Y_{j}:p\cdot y_{j}^{*}\geq p\cdot y_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+We want to show that
+\begin_inset Formula 
+\begin{equation}
+\forall\ i=1,\ldots,n:x_{i}\succ_{i}x_{i}^{*}\implies p\cdot x_{i}\geq p\cdot x_{i}^{*}
+\end{equation}
+
+\end_inset
+
+To see this, take 
+\begin_inset Formula $i\in N$
+\end_inset
+
+ such that 
+\begin_inset Formula $x_{i}\succ_{i}x_{i}^{*}$
+\end_inset
+
+, and let
+\begin_inset Formula 
+\begin{gather*}
+x_{i}^{\prime}=(1-\theta)x_{i},\ 0<\theta<1\\
+x_{k}^{\prime}=x_{k}^{*}+\frac{\theta}{n-1}x_{i}\ \mbox{for}\ k\neq i
+\end{gather*}
+
+\end_inset
+
+Then, by continuity of and strict monotonicity of preferences, we have
+\begin_inset Formula 
+\[
+\forall\ i\in N:x_{i}^{\prime}\succ_{i}x_{i}^{*}
+\]
+
+\end_inset
+
+ for 
+\begin_inset Formula $\theta$
+\end_inset
+
+ sufficiently small.
+ Thus,
+\begin_inset Formula 
+\begin{equation}
+\hat{x}^{\prime}\in P(x^{*})
+\end{equation}
+
+\end_inset
+
+Note that 
+\begin_inset Formula $\hat{x}^{*}=\hat{w}+\hat{y}^{*}$
+\end_inset
+
+, where 
+\begin_inset Formula $\left(\hat{w}+\hat{y}^{*}\right)\in W$
+\end_inset
+
+.
+ So, by (18), 
+\begin_inset Formula $p\cdot\hat{x}^{\prime}\geq p\cdot(\hat{w}+\hat{y}^{*})=p\cdot\hat{x}^{*}$
+\end_inset
+
+.
+ Now,
+\begin_inset Formula 
+\begin{eqnarray}
+p\cdot\hat{x}^{\prime} & = & p\cdot\left(x_{i}^{\prime}+{\displaystyle \sum_{k\ne i}}x_{k}^{\prime}\right)\nonumber \\
+ & = & p\cdot\left[(1-\theta)x_{i}+{\displaystyle \sum_{k\neq i}}\left(x_{k}^{*}+\frac{\theta}{n-1}x_{i}\right)\right]\nonumber \\
+ & = & p\cdot\left[x_{i}+{\displaystyle \sum_{k\neq i}}x_{k}^{*}\right]\nonumber \\
+ & \geq & p\cdot\hat{x}^{*}=p\cdot{\displaystyle \sum_{k=1}^{n}}x_{k}^{*}
+\end{eqnarray}
+
+\end_inset
+
+Therefore,
+\begin_inset Formula 
+\begin{equation}
+p\cdot x_{i}\geq p\cdot x_{i}^{*}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+We want to show that 
+\begin_inset Formula $\forall\ i=1,\ldots,n:x_{i}\succ_{i}x_{i}^{*}\implies p\cdot x_{i}>p\cdot x_{i}^{*}$
+\end_inset
+
+.
+ To show this, take 
+\begin_inset Formula $i\in N$
+\end_inset
+
+ such that 
+\begin_inset Formula $x_{i}\succ_{i}x_{i}^{*}$
+\end_inset
+
+.
+ From Step 3, we know that 
+\begin_inset Formula $p\cdot x_{i}\geq p\cdot x_{i}^{*}$
+\end_inset
+
+, so suppose for contradiction that
+\begin_inset Formula 
+\begin{equation}
+p\cdot x_{i}=p\cdot x_{i}^{*}
+\end{equation}
+
+\end_inset
+
+Since 
+\begin_inset Formula $x_{i}\succ_{i}x_{i}^{*}$
+\end_inset
+
+, then by the continuity of preferences, 
+\begin_inset Formula $\lambda x_{i}\succ_{i}x_{i}^{*}$
+\end_inset
+
+ for 
+\begin_inset Formula $0<\lambda<1$
+\end_inset
+
+ and when 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is sufficiently close to one.
+ By Step 3, we know 
+\begin_inset Formula $p\cdot\lambda x_{i}\geq p\cdot x_{i}^{*}=p\cdot x_{i}$
+\end_inset
+
+.
+ This implies that 
+\begin_inset Formula $\lambda\geq1$
+\end_inset
+
+ by 
+\begin_inset Formula $p\cdot x_{i}=p\cdot x_{i}^{*}>0$
+\end_inset
+
+.
+ However, this contradicts the fact that 
+\begin_inset Formula $\lambda<1$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $p\cdot x_{i}>p\cdot x_{i}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+Remark 8.5.3.
+
+\series default
+ When 
+\begin_inset Formula $\hat{w}>0$
+\end_inset
+
+, the strict monotonicity condition of preferences can be weakened to local
+ non-satiation.
+ Also, Mas-Colell, Whinston, and Green (1995) use the price quasi-equilibrium
+ concept to present a version of the Second Fundamental Theorem of Welfare
+ Economics under much weaker conditions, which only requires the convexities
+ of preferences and production possibilities and local non-satiation of
+ preferences.
+ For the discussion, see Mas-Colell, Whinston, and Green (1995).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For exchange economies, the competitive equilibrium with transfers is the
+ same as a regular competitive equilibrium when 
+\begin_inset Formula $w_{i}=x_{i}^{*}$
+\end_inset
+
+.
+ As a corollary, we have
+\end_layout
+
+\begin_layout Corollary*
+
+\series bold
+\shape up
+8.5.1.
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $x^{*}>0$
+\end_inset
+
+ be Pareto optimal and suppose 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ are continuous, convex, and strictly monotonic.
+ Then, 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is a competitive equilibrium for the initial endowment 
+\begin_inset Formula $w_{i}=x_{i}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Note*
+Agents don't change their allocations if they start out with what they would
+ have chosen optimally.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 8.5.4.
+ 
+\series default
+Corollary 8.5.1 states that agents will not change their allocaitons if they
+ start out with what they would have chosen optimally.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 8.5.5.
+
+\series default
+ If 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ can be represented by a concave and differentiable utility function, then
+ the proof of the Second Fundamental Theorem of Welfare Economics can be
+ much simpler.
+ A sufficient condition for concavitiy is that the Hessian matrix is negative
+ definite.
+ Also, note that monotonic transformations do not change preferences, so
+ we may be able to transform a quasi-concave utility function to a concave
+ utility function.
+ For example,
+\begin_inset Formula 
+\[
+u(x,y)=xy
+\]
+
+\end_inset
+
+is quasi-concave, but we can use a monotonic transformation to obtain
+\begin_inset Formula 
+\[
+u^{\frac{1}{2}}(x,y)=x^{\frac{1}{2}}y^{\frac{1}{2}}
+\]
+
+\end_inset
+
+which is concave.
+\end_layout
+
+\begin_layout Subsection*
+Differentiation Version of the Second Fundamental Theorem of Welfare Economics
+ for Exchange Economies
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $x^{*}>0$
+\end_inset
+
+ is Pareto Optimal, then we have
+\begin_inset Formula 
+\begin{equation}
+\nabla u_{i}(x_{i}^{*})=q,\ i=1,\ldots,n
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\nabla u_{i}(x_{i}^{*})$
+\end_inset
+
+ is the MU of agent 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+ is known as the 
+\begin_inset Quotes eld
+\end_inset
+
+shadow price.
+\begin_inset Quotes erd
+\end_inset
+
+ Important to note, this is the first-order necessary condition for a Pareto
+ optimal allocation.
+ We want to show that 
+\begin_inset Formula $q$
+\end_inset
+
+ is a competitive equilibrium price vector.
+ To do so, we only need to show that each consumer maximizes his utility
+ subject to 
+\begin_inset Formula $B(q)=\left\{ x_{i}\in X_{i}:q\cdot x_{i}\leq q\cdot x_{i}^{*}\right\} $
+\end_inset
+
+.
+ Indeed, by the concavity of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{u_{i}(x_{i})-u_{i}(x_{i}^{*})}{x_{i}-x_{i}^{*}} & \leq & \nabla u_{i}(x_{i}^{*})\\
+u_{i}(x_{i}) & \leq & u(x_{i}^{*})+\nabla u_{i}(x_{i}^{*})(x_{i}-x_{i}^{*})\nonumber \\
+ & = & u(x_{i}^{*})+q(x_{i}-x_{i}^{*})\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+Since each consumer maximizes his utility subject to his budget constraint,
+ then it must be true that
+\begin_inset Formula 
+\begin{eqnarray*}
+q\cdot x_{i} & \leq & q\cdot x_{i}^{*}\\
+q\cdot(x_{i}-x_{i}^{*}) & \leq & 0
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula 
+\[
+u_{i}(x_{i})\leq u_{i}(x_{i}^{*})+q(x_{i}-x_{i}^{*})\leq u_{i}(x_{i}^{*})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+8.6
+\begin_inset space \quad{}
+\end_inset
+
+Non-Convex Production Technologies and Marginal Cost Pricing
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Convex production sets is an indispensable assumption for the second welfare
+ theorem.
+ When there are non-convex produciton technologies, the allocation 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ maximizes the welfare of the consumer, but for the only value of relative
+ prices that could support 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ as a utility-maximizing bundle, the firm does not maximize profits event
+ locally.
+ In contrast, the first welfare theorem remains applicable even in the presence
+ of non-convexities.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As stated previously, the second welfare theorm runs into difficulties in
+ the presence of non-convex production sets (here, we do not quesiton the
+ assumption of convexity on the consumption side).
+ In the first place, large non-convexities caused by the presence of fixed
+ costs or extensive increasing returns leads to a world in which there are
+ a small number of large firms.
+ Consequently, the assumption of price taking becomes less plausible.
+ Yet, even if price taking can somehow be relied on, it may still be impossible
+ to support a given Pareto optimal allocation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Although non-convexities may prevent us from supporting the Pareto optimal
+ production allocation as a profit-maximizing choice, under the differentiabilit
+y assumptions on pricing rules of firms, we can use the first-order necessary
+ conditions derived there to formulate a weaker result that parallels the
+ Second Welfare Theorem.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+8.6.1 (The Second Welfare Theorem for Non-Convex Production Sets).
+
+\series default
+ 
+\emph on
+Suppose that firm j's transformation function 
+\begin_inset Formula $T_{j}(y)$
+\end_inset
+
+ is smooth, and all consumers have continuous, monotonic, and convex preferences.
+ If 
+\begin_inset Formula $(x^{*},y^{*})$
+\end_inset
+
+ is Pareto optimal, then there exists a price vector 
+\begin_inset Formula $p$
+\end_inset
+
+ and wealth levels 
+\begin_inset Formula $(I_{1},\ldots,I_{n})$
+\end_inset
+
+ with 
+\begin_inset Formula $\sum_{i}I_{i}=p\cdot\sum_{i}w_{i}+\sum_{j}p\cdot y_{j}^{*}$
+\end_inset
+
+ such that:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+For any firm 
+\begin_inset Formula $j$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+p=\gamma_{j}\nabla T_{j}(y^{*})\ \mbox{for some}\ \gamma_{j}>0
+\]
+
+\end_inset
+
+(Price is proportional to MC; 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+ is a function of 
+\begin_inset Formula $p$
+\end_inset
+
+; this a firm's choice function not a way to find 
+\begin_inset Formula $p$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+For any 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}^{*}$
+\end_inset
+
+ is maximal for 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ in the budget set
+\begin_inset Formula 
+\[
+\left\{ x_{i}\in X_{i}:p\cdot x_{i}\le I_{i}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{i}x_{i}^{*}=\sum_{i}w_{i}+\sum_{j}y_{j}^{*}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The type of equilibrium represented by conditions (i) to (iii) of the above
+ theorem is called a 
+\series bold
+\emph on
+marginal cost price equilibrium with transfers
+\series default
+\emph default
+.
+ The motivation for this terminology comes from the one-output, one-input
+ case.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Condition (i) also implies that
+\begin_inset Formula 
+\begin{equation}
+\frac{p_{l}}{p_{k}}=\frac{\frac{\partial T_{1}(y)}{\partial y_{l}}}{\frac{\partial T_{1}(y)}{\partial y_{k}}}=\cdots=\frac{\frac{\partial T_{J}(y)}{\partial y_{l}}}{\frac{\partial T_{J}(y)}{\partial y_{k}}}
+\end{equation}
+
+\end_inset
+
+and thus, the marginal rates of technical substitutions, MRTS, of two goods
+ are equal for all firms.
+ Note, condition (i) is necessary, but not sufficient, for profit maximization,
+ and it does not imply that the 
+\begin_inset Formula $(y_{1}^{*},\ldots,y_{J}^{*})$
+\end_inset
+
+ are profit-maximizing production plans for price-taking firms.
+ The condition only says that small changes in production plans have no
+ first-order effect on profit.
+ However, small changes may still have positive second-order effects, and,
+ at any rate, large changes may increase profits.
+ Thus, to achieve allocation 
+\begin_inset Formula $(x^{*},y^{*})$
+\end_inset
+
+, it may be required that a regulatory agency prevent the managers of non-convex
+ firms from attempting to maximize profits at the given prices 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+It should be noted that the converse result to the above theorem, which
+ would assert that every marginal cost price equilibrium 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is Pareto optimal, is not true.
+ Informally, this occurs because marginal cost pricing neglects second-order
+ conditions and it may therefore happen that, at allocation 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, the second-order conditions for the social utility maximizaiton problem
+ are not satisfied.
+ A marginal cost pricing equilibrium need not be a Pareto optimal allocation.
+ As a result, satisfaction of the first-order marginal optimality conditions
+ does not ensure that the allocation is Pareto optimal.
+\end_layout
+
+\begin_layout Note*
+A marginal cost price equilibrium is not a competitive equilibrium.
+ This is because condition (i) is necessary, but not sufficient, for profit
+ maximization.
+ When production sets are conve, then a MCPE and a CE are equivalent.
+\end_layout
+
+\begin_layout Section*
+8.7
+\begin_inset space \quad{}
+\end_inset
+
+Pareto Optimality and Social Welfare Maximization
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Pareto efficiency is only concerned with efficiency of allocations, but
+ it has nothing to say about the distribution of welfare.
+ Even if we agree with Pareto optimality, we still do not know which one
+ we should be at.
+ One way to solve the problem is to assume the existence of a social welfare
+ function.
+ Define a social welfare function 
+\begin_inset Formula $W:X\rightarrow\mathbb{R}$
+\end_inset
+
+ by 
+\begin_inset Formula $W(u_{1}(x_{1}),\ldots,u_{n}(x_{n}))$
+\end_inset
+
+ where we assume that 
+\begin_inset Formula $W(\cdot)$
+\end_inset
+
+ is monotone increasing.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Utilitarian Social Welfare Function
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+8.7.1.
+
+\series default
+ The utilitarian social welfare function is given by
+\begin_inset Formula 
+\[
+W(u_{1},\ldots,u_{n})={\displaystyle \sum_{i=1}^{n}}a_{i}u_{i}(x_{i})
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula $\sum a_{i}=1$
+\end_inset
+
+, 
+\begin_inset Formula $a_{i}\geq0$
+\end_inset
+
+.
+ Note that this is just a weighted average of utilities.
+ Under a utilitarian rule, social states are ranked according to the linear
+ sum of utilities.
+ The utilitarian form is by far the most common and widely applied social
+ welfare function in Economics.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Rawlsian Social Welfare Function
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+8.7.2.
+
+\series default
+ The Rawlsian social welfare function is defined by
+\begin_inset Formula 
+\[
+W(\cdot)=\min\{u_{1}(x_{1}),\ldots,u_{n}(x_{n})\}
+\]
+
+\end_inset
+
+So, the utility function is not strictly monotonic increasing.
+ The Rawlsian form gives priority to the interests of the worst off members,
+ and it is used in the ethical system proposed by Rawls (1971).
+\end_layout
+
+\begin_layout Subsection*
+8.7.1
+\begin_inset space \quad{}
+\end_inset
+
+Social Welfare Maximization for Exchange Economies
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We suppose that a society should operate at a point that maximizes social
+ welfare; that is, we should choose an allocation 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ solves
+\begin_inset Formula 
+\[
+\max\ W(u_{1}(x_{1}),\ldots,u_{n}(x_{n}))
+\]
+
+\end_inset
+
+subject to
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}x_{i}\leq\sum_{i=1}^{n}w_{i}
+\]
+
+\end_inset
+
+How do the allocations that maximize this welfare funciton compare to Pareto
+ efficient allocations? The following is a trivial consequence if the strict
+ monotonicity assumption is imposed.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+8.7.1.
+
+\series default
+ 
+\emph on
+Under strict monotonicity of the social welfare function, 
+\begin_inset Formula $W(\cdot)$
+\end_inset
+
+, if 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+maximizes a social welfare function, then 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ must be Pareto optimal.
+\end_layout
+
+\begin_layout Note*
+In general, the set of 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ that maximizes a strictly monotone social welfare function, 
+\begin_inset Formula $W(\cdot)$
+\end_inset
+
+, is a subset of the set of Pareto optimal allocations.
+ 
+\begin_inset Formula $W(\cdot)$
+\end_inset
+
+ can take a variety of forms.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ maximizes a social welfare function.
+ Suppose for contradiction that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is not Pareto optimal.
+ Then, there is another feasible allocation 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ i\in N:u_{i}(x_{i}^{\prime})\geq u_{i}(x_{i}^{*})$
+\end_inset
+
+ and 
+\begin_inset Formula $\exists\ k:u_{k}(x_{k}^{\prime})>u_{k}(x_{k}^{*})$
+\end_inset
+
+.
+ Then, by strict monotonicity of 
+\begin_inset Formula $W(\cdot)$
+\end_inset
+
+, 
+\begin_inset Formula $W(u_{1}(x_{1}^{\prime}),\ldots,u_{n}(x_{n}^{\prime}))>W(u_{1}(x_{1}^{*}),\ldots,u_{n}(x_{n}^{*}))$
+\end_inset
+
+.
+ However, this contradicts the fact that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ maximizes the social welfare function.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+8.7.2.
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $x^{*}>0$
+\end_inset
+
+ be a Pareto optimal allocation.
+ Suppose 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is concave, differentiable, and strictly monotonic.
+ Then, there exists some choice of weights 
+\begin_inset Formula $\alpha_{i}^{*}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ maximizes the welfare function
+\begin_inset Formula 
+\begin{equation}
+W(u_{1},\ldots,u_{n})=\sum_{i=1}^{n}\alpha_{i}u_{i}(x_{i})
+\end{equation}
+
+\end_inset
+
+Furthermore, 
+\begin_inset Formula $\alpha_{i}^{*}=\frac{1}{\lambda_{i}}$
+\end_inset
+
+ with 
+\begin_inset Formula $\lambda_{i}=\frac{\partial V_{i}(p,I_{i})}{\partial I_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is Pareto optimal, then by the Second Fundamental Theorem of Welfare Economics,
+ it is a competitive equilibrium with 
+\begin_inset Formula $w_{i}=x_{i}^{*}$
+\end_inset
+
+.
+ Hence, the first-order condition of the utility maximization problem tells
+ us that at an interior optimum
+\begin_inset Formula 
+\begin{equation}
+\nabla u_{i}(x_{i}^{*})=\lambda_{i}p
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $p$
+\end_inset
+
+ is a competitive equilibrium price vector and 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+ is the Lagrange multiplier of consumer 
+\begin_inset Formula $i$
+\end_inset
+
+'s budget constraint.
+ Also, 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+ represents the marginal change in consumer 
+\begin_inset Formula $i$
+\end_inset
+
+'s utility arising from a marginal increase in consumer 
+\begin_inset Formula $i$
+\end_inset
+
+'s wealth, i.e.,
+\begin_inset Formula 
+\[
+\lambda_{i}=\frac{\partial V_{i}(p,I_{i})}{\partial I_{i}}
+\]
+
+\end_inset
+
+which is referred to as consumer 
+\begin_inset Formula $i$
+\end_inset
+
+'s marginal utility of wealth.
+ Important to note, 
+\begin_inset Formula $V_{i}$
+\end_inset
+
+ is the indirect utility function of consumer 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Now, for the welfare maximization problem,
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & {\displaystyle \sum_{i=1}^{n}}\alpha_{i}u_{i}(x_{i})\\
+\mbox{s.t.} & \sum x_{i}\leq\sum w_{i}
+\end{eqnarray*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ is concave, then 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ solves the problem if the first-order condition
+\begin_inset Formula 
+\begin{equation}
+\alpha_{i}\nabla u_{i}(x_{i})=q;\ i=1,\ldots,n
+\end{equation}
+
+\end_inset
+
+is satisfied for some 
+\begin_inset Formula $q$
+\end_inset
+
+, which is the lagrange multiplier of the constraint.
+ Thus, if we let 
+\begin_inset Formula $p=q$
+\end_inset
+
+, then 
+\begin_inset Formula $\alpha_{i}^{*}=\frac{1}{\lambda_{i}}$
+\end_inset
+
+.
+ We know 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ also maximizes the welfare function 
+\begin_inset Formula $\sum_{i=1}^{n}\alpha_{i}^{*}u_{i}(x_{i}^{\prime})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Thus, the price is the Lagrangian multiples of the welfare maximization,
+ and this measures the marginal social value of the goods.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 8.7.1.
+ 
+\series default
+To find the set of Pareto optimal allocations, we can use Proposition 8.7.2
+ or Propositions 8.4.1/8.4.2.
+ These methods are all equivalent since they lead to the same first-order
+ conditions.
+\end_layout
+
+\begin_layout Subsection*
+8.7.2
+\begin_inset space \quad{}
+\end_inset
+
+Welfare Maximization in Production Economy
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Define a choice set by the transformation function
+\begin_inset Formula 
+\[
+T(\hat{x})=0,\ \hat{x}={\displaystyle \sum_{i=1}^{n}}x_{i}
+\]
+
+\end_inset
+
+The social wefare maximization problem for the production economy is
+\begin_inset Formula 
+\begin{equation}
+\max\ W(u_{1}(x_{i}),\ldots,u_{n}(x_{n}))
+\end{equation}
+
+\end_inset
+
+subject to
+\begin_inset Formula 
+\[
+T(\hat{x})=0
+\]
+
+\end_inset
+
+Define the Lagrangian function
+\begin_inset Formula 
+\begin{equation}
+L=W(u_{1}(x_{i}),\ldots,u_{n}(x_{n}))-\lambda T(\hat{x})
+\end{equation}
+
+\end_inset
+
+Then, the first-order condition is given by
+\begin_inset Formula 
+\begin{equation}
+W^{\prime}(\cdot)\frac{\partial u_{i}(x_{i})}{\partial x_{il}}-\lambda\frac{\partial T(\hat{x})}{\partial x_{il}}\leq0\ \mbox{with equality if}\ x_{il}>0
+\end{equation}
+
+\end_inset
+
+and thus, when 
+\begin_inset Formula $x$
+\end_inset
+
+ is an interior point, we have
+\begin_inset Formula 
+\begin{equation}
+\frac{\frac{\partial u_{i}(x_{i})}{\partial x_{il}}}{\frac{\partial u_{i}(x_{i})}{\partial x_{ik}}}=\frac{\frac{\partial T(\hat{x})}{\partial x_{l}}}{\frac{\partial T(\hat{x})}{\partial x_{k}}}
+\end{equation}
+
+\end_inset
+
+That is,
+\begin_inset Formula 
+\begin{equation}
+MRS_{x_{il},x_{ik}}=MRTS_{x_{l},x_{k}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The conditions characterizing welfare maximization require that the marginal
+ rate of substitution between each pair of commodities must be equal to
+ the marginal rate of transformation between the two commodities for all
+ agents.
+\end_layout
+
+\begin_layout Section*
+8.8
+\begin_inset space \quad{}
+\end_inset
+
+Political Overtones
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+By the First Fundamental Theorem of Welfare Economics, implication is that
+ what the government should do is to secure the competitive environment
+ in an economy and give people full economic freedom.
+ So, there should be no subsidizing, no price floor, no price ceiling, stop
+ rent control, no regulations, and lift the tax and the import-export barriers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Even if we want to reach a preferred Pareto optimal outcome which may be
+ different from a competitive equilibrium from a given endowment, you might
+ do so by adjusting the initial endowment but not disturbing prices, imposing
+ taxes or regulations.
+ That is, if a derive Pareto optimal is not 
+\begin_inset Quotes eld
+\end_inset
+
+fair,
+\begin_inset Quotes erd
+\end_inset
+
+ al the government has to do is to make a lump-sum transfer payment to the
+ poor first, keeping the competitive environments intact.
+ We can adjust initial endowments to obtain a desired competitive equilibrium
+ by the Second Fundamental Theorem of Welfare Economics.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Of course, when we reach the above conclusions, you should note that there
+ are conditions on the results.
+ In many cases, we have market failures, in the sense that either a competitive
+ equilibrium does not exist or a competitive equilibrium may not be Pareto
+ optimal so that the First or Second Theorem of Welfare Economics cannot
+ be applied.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The conditions for the existence of a competitive equilibrium are: (i) convexity
+ (diversification of consumption and no IRS), (ii) monotonicity (self-interest),
+ (iii) continuity, (iv) divisibility, (v) perfect competition, (vi) complete
+ information, etc.
+ If these conditions are not satisfied, we may not obtain the existence
+ of a competitive equilibrium.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The conditions for the first fundamental Theorem of Welfare Economics are:
+ (i) local non-satiation (unlimited desirability), (ii) divisibility, (iii)
+ no externalities, (iv) perfect competition, (v) complete information, etc.
+ if these conditions are not satisfied, we may not guarantee that every
+ competitive equilibrium allocation is Pareto efficient.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The conditions for the Second Fundamental Theorem of Welfare Economics are:
+ (i) the convexity of preferences and production sets, (ii) monotonicity
+ (self-interest), (iii) continuity, (iv) divisibility, (v) perfect competition,
+ (vi) complete information, etc.
+ If these conditions are not satisfied, we may not guarantee every Pareto
+ efficient allocation can be supported by a competitive equilibrium with
+ transfers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Thus, as a general notice, before making an economic statement, one should
+ pay attention to the assumptions which are implicitly and/or explicitly
+ involved.
+ As for a conclusion from the general equilibrium theory, one should notice
+ conditions such as divisibility, no externalities, no increasing returns
+ to scale, perfect competition, complete information.
+ If these assumptions are relaxed, a competitive equilibrium may not exist
+ or may not be Pareto efficient, or a Pareto efficient allocation may not
+ be supported by a competitive equilibrium with transfer payments.
+ Only in this case of a market failure, we may adopt another economic institutio
+n.
+\end_layout
+
+\end_body
+\end_document

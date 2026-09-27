@@ -1,0 +1,2366 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+General Equilibrium: Homework 2 (2012)
+\end_layout
+
+\begin_layout Problem
+Consider an economy with two goods 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ and an arbitrary number of agents.
+ Assume preferences are stricly increasing in each good.
+ Consider two cases:
+\end_layout
+
+\begin_layout Problem
+(a) 
+\begin_inset Formula $x$
+\end_inset
+
+ is perfectly divisible but 
+\begin_inset Formula $y$
+\end_inset
+
+ comes only in integer units.
+\end_layout
+
+\begin_layout Problem
+(b) Both 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ come only in integer units.
+\end_layout
+
+\begin_layout Problem
+(Answer separetly for case (a) and case (b)).
+\end_layout
+
+\begin_layout Problem
+Could we have a competitive equilibrium allocation that is not Pareto optimal?
+\end_layout
+
+\begin_layout Problem
+If your answer is 
+\begin_inset Quotes eld
+\end_inset
+
+yes,
+\begin_inset Quotes erd
+\end_inset
+
+ give an example with a competitive equilibrium allocation that is not Pareto
+ optimal.
+ (Justify both facts: (i) that the allocation in your example is a competitive
+ equilibrium allocation, and (ii) that it is not Pareto optimal.)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+Suppose 
+\begin_inset Formula $x$
+\end_inset
+
+ is perfectly divisible, but 
+\begin_inset Formula $y$
+\end_inset
+
+ comes only in integer units.
+ In this case, local non-satiation still holds for each agent
+\end_layout
+
+\begin_layout Proof
+Take an agent 
+\begin_inset Formula $i\in N$
+\end_inset
+
+ and assume 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is strictly increasing in each good.
+ Take 
+\begin_inset Formula $(x_{i},y_{i})\in\mathbb{R}_{+}\times\mathbb{Z}_{+}$
+\end_inset
+
+ and take 
+\begin_inset Formula $\epsilon\in\mathbb{R}_{++}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $(\tilde{x}_{i},y_{i})\equiv(x_{i}+\nicefrac{\epsilon}{2},y_{i})$
+\end_inset
+
+.
+ Note, 
+\begin_inset Formula $(\tilde{x}_{i},y_{i})\in B_{\epsilon}((x_{i},y_{i}))$
+\end_inset
+
+ and 
+\begin_inset Formula $(\tilde{x}_{i},y_{i})\gneq(x_{i},y_{i})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is strictly increasing in each good, then 
+\begin_inset Formula $(\tilde{x}_{i},y_{i})\gneq(x_{i},y_{i})\implies(\tilde{x}_{i},y_{i})\succ_{i}(x_{i},y_{i})$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is locally non-satiated.
+\end_layout
+
+\begin_layout Standard
+Since local non-satiation still holds, then by the First Fundamental Theorem
+ of Welfare Economics, if 
+\begin_inset Formula $(x,p)$
+\end_inset
+
+ is a competitive equilibrium, then it is Pareto efficient.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $(x,y,p)$
+\end_inset
+
+ is a competitive equilibrium.
+ Suppose 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ is not Pareto optimal.
+ Then, there exists a feasible allocation 
+\begin_inset Formula $(x^{\prime},y^{\prime})$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ i:(x_{i}^{\prime},y_{i}^{\prime})\succsim(x_{i},y_{i})$
+\end_inset
+
+ and 
+\begin_inset Formula $\exists\ k:(x_{k}^{\prime},y_{k}^{\prime})\succ_{k}(x_{k},y_{k})$
+\end_inset
+
+.
+ By local non-satiation, we have
+\begin_inset Formula 
+\[
+(p_{x},p_{y})\cdot(x_{i}^{\prime},y_{i}^{\prime})\geq(p_{x},p_{y})\cdot(w_{x},w_{y})\ \forall\ i
+\]
+
+\end_inset
+
+and by 
+\begin_inset Formula $(x_{k}^{\prime},y_{k}^{\prime})\succ_{k}(x_{k},y_{k})$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+(p_{x},p_{y})\cdot(x_{k}^{\prime},y_{k}^{\prime})>(p_{x},p_{y})\cdot(w_{x},w_{y})
+\]
+
+\end_inset
+
+Thus,
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{i=1}^{N}}(p_{x},p_{y})\cdot(x_{i}^{\prime},y_{i}^{\prime})>{\displaystyle \sum_{i=1}^{N}}(p_{x},p_{y})\cdot(w_{x},w_{y})
+\]
+
+\end_inset
+
+This contradicts the fact that 
+\begin_inset Formula $(x^{\prime},y^{\prime})$
+\end_inset
+
+ is feasible.
+ Therefore, 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ is Pareto optimal.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+Next, suppose that both 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ can only be consumed in integer units.
+ In this case, there may be a competitive equilibrium that is not Pareto
+ optimal.
+\end_layout
+
+\begin_layout Standard
+For example, suppose that:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\omega_{x1}=\omega_{x2}=\omega_{y1}=\omega_{y2}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p_{x}=2$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{y}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{1}(x_{1},y_{1})=x_{1}+y_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{2}(x_{1},y_{1})=10x_{1}+y_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(1,1)\in\begin{array}[t]{rl}
+\textrm{argmax} & u_{1}(x_{1},y_{1})\\
+\textrm{s.t.} & 2x_{1}+y_{1}\leq3
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(1,1)\in\begin{array}[t]{rl}
+\textrm{argmax} & u_{2}(x_{2},y_{2})\\
+\textrm{s.t.} & 2x_{1}+y_{1}\leq3
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(1,1)+(1,1)=(2,2)=(\hat{\omega}_{x},\hat{\omega}_{y})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+So, we have a competitive equilibrium at 
+\begin_inset Formula $x_{1}=x_{2}=y_{1}=y_{2}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+However, we also have:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{1}(0,2)=u_{1}(1,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{2}(2,0)>u_{2}(1,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(2,0)+(0,2)=(2,2)=(\hat{\omega}_{x},\hat{\omega}_{y})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, the aforementioned competitive equilibrium is not Pareto optimal.
+\end_layout
+
+\begin_layout Problem
+Consider a two-person, two-commodity economy with
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula $X_{i}=\left\{ x_{i}\in\mathbb{R}_{+}^{2}:x_{i1}+x_{i2}\geq1\right\} ,\ i=1,2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula $w_{1}=(1,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}=(1,2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula $u_{1}=x_{11}+2x_{12}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{2}=\ln x_{21}+\ln x_{22}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Draw the Edgeworth Box with the consumption set, indifference curves, and
+ the initial endowment point clearly marked.
+\end_layout
+
+\begin_layout Enumerate
+Calculate the demand functions for agents 1 and 2.
+\end_layout
+
+\begin_layout Enumerate
+Find the set of Pareto optimal allocations and draw them in the Edgeworth
+ Box.
+\end_layout
+
+\begin_layout Enumerate
+Does a competitive equilibrium exist? If so, is it Pareto optimal? If not,
+ which of the standard assumptions for the existence theorem is violated?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $p\equiv\frac{p_{2}}{p_{1}}$
+\end_inset
+
+.
+ Since each agent's preferences are monotone, then they are locally non-satiatie
+d.
+ So, the budget constraint holds with equality for both consumers, and thus,
+ Walras's Law holds.
+ To calculate the demand function of an agent, we maximize utility function
+ subject to his budget constraint.
+\end_layout
+
+\begin_layout Standard
+The maximization problem for agent 1 is
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & u_{1}=x_{11}+2x_{12}\\
+\mbox{s.t.} & x_{11}+px_{12}=1
+\end{eqnarray*}
+
+\end_inset
+
+Since the agent's utility funciton is linear, then, taking into account
+ the binding constraint on the consumption set, his demand function is given
+ by
+\begin_inset Formula 
+\[
+x_{1}(p)=\begin{cases}
+\left(\begin{array}{c}
+0\\
+\frac{1}{p}
+\end{array}\right) & \mbox{if}\ p<2\\
+\left(\begin{array}{c}
+x_{11}\\
+\frac{1}{2}-\frac{x_{11}}{2}
+\end{array}\right),\ x_{11}\in\left[0,1\right] & \mbox{if}\ p=2\\
+\left(\begin{array}{c}
+1\\
+0
+\end{array}\right) & \mbox{if}\ p>2
+\end{cases}
+\]
+
+\end_inset
+
+For agent 2, any monotonic transformation of 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ still represents his preferences.
+ So, we will consider the function 
+\begin_inset Formula $\left(e^{\frac{1}{2}u_{2}(\cdot)}\right)$
+\end_inset
+
+.
+ So, the maximization problem for agent 2 is 
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & u_{2}=x_{21}^{\nicefrac{1}{2}}x_{22}^{\nicefrac{1}{2}}\\
+\mbox{s.t.} & x_{21}+px_{22}=1+2p
+\end{eqnarray*}
+
+\end_inset
+
+Since the agent's utility funciton is Cobb-Douglas, then his demand function
+ is given by
+\begin_inset Formula 
+\[
+x_{2}(p)=\left(\begin{array}{c}
+\frac{1}{2}+p\\
+\frac{1}{2p}+1
+\end{array}\right)
+\]
+
+\end_inset
+
+Note, in this situation, the constraint on the consumption set is not binding.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $u_{i}(x_{i})$
+\end_inset
+
+ is differentiable and quasi-concave, then a necessary and sufficient condition
+ for the feasible interior points to be Parteo optimal (PO) is that 
+\begin_inset Formula $MRS_{x_{11,}x_{12}}=MRS_{x_{21},x_{22}}$
+\end_inset
+
+.
+ Note, 
+\begin_inset Formula $MRS_{x_{11},x_{12}}=\frac{1}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $MRS_{x_{21},x_{22}}=\frac{x_{22}}{x_{21}}$
+\end_inset
+
+.
+ Thus, the set of interior Pareto optimal points is given by
+\begin_inset Formula 
+\[
+P0=\left\{ (x_{1},x_{2})\in X_{1}\times X_{2}:x_{1}+x_{2}=(2,2)^{\prime}\ \wedge\ 2x_{22}=x_{21}\right\} 
+\]
+
+\end_inset
+
+To find the boundary Pareto optima, we concentrate on the area where each
+ agent has the highest utility.
+ We can also find the extreme Pareto optima by solving the Lagrangian with
+ proper constraints.
+ 
+\end_layout
+
+\begin_layout Standard
+Suppose that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x_{21}+x_{22}=1$
+\end_inset
+
+, 
+\begin_inset Formula $\dfrac{x_{22}}{x_{21}}\leq\dfrac{1}{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $x_{1}+x_{2}=(2,2)^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this case, we have
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+MRS_{x_{11},x_{12}}=\dfrac{1}{2}\geq\dfrac{x_{22}}{x_{21}}=MRS_{x_{21},x_{22}}
+\]
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+Hence, our restriction on the consumption set prevents a Pareto improvement
+ in this case.
+\end_layout
+
+\begin_layout Standard
+Similarly, suppose that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x_{11}+x_{12}=1$
+\end_inset
+
+, 
+\begin_inset Formula $\dfrac{x_{22}}{x_{21}}\leq\dfrac{1}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{1}+x_{2}=(2,2)^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this case, we have
+\begin_inset Formula 
+\[
+MRS_{x_{11},x_{12}}=\dfrac{1}{2}\geq\dfrac{x_{22}}{x_{21}}=MRS_{x_{21},x_{22}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence, our restriction on the consumption set prevents a Pareto improvement
+ in this case.
+\end_layout
+
+\begin_layout Standard
+A good way to think about the boundary solutions for the Pareto optima is
+ that the boundary is tangential to the indifference curves of agent 2 and/or
+ the boundary intersects the indifference curves of agent 1.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part d.
+\end_layout
+
+\begin_layout Standard
+To find the competitive equilibrium, we must find all 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{2}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\hat{z}(p)=\hat{x}(p)-\hat{w}=0$
+\end_inset
+
+.
+ By Walras' Law, it is enough to show only one markets clearing for 
+\begin_inset Formula $L=2$
+\end_inset
+
+.
+ Let us consider the two cases for 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p<2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}(p)=\left(\begin{array}{cc}
+0 & \frac{1}{p}\end{array}\right)^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}(p)=\left(\begin{array}{cc}
+\frac{1}{2}+p & \frac{1}{2p}+1\end{array}\right)^{\prime}$
+\end_inset
+
+.
+ Let us consider the market for good 1.
+ By the market clearing condition, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{2}+p & = & 2\\
+p & = & \frac{3}{2}
+\end{eqnarray*}
+
+\end_inset
+
+Even though a competitive equilibrium price vector exists, the allocation
+ is not feasible since 
+\begin_inset Formula $x_{11}+x_{12}<1$
+\end_inset
+
+.
+ Thus, no competitive equilibrium exist in this case.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $x_{1}(p)=\left(\begin{array}{cc}
+x_{11} & \frac{1}{2}-\frac{x_{11}}{2}\end{array}\right)^{\prime},\ x_{11}\in[0,1]$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}(p)=\left(\begin{array}{cc}
+\frac{1}{2}+p & \frac{1}{2p}+1\end{array}\right)^{\prime}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\hat{x}_{1}(p)>\hat{w}$
+\end_inset
+
+, then no competitive equilibrium exists in this case.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p>2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}(p)=\left(\begin{array}{cc}
+1 & 0\end{array}\right)^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}(p)=\left(\begin{array}{cc}
+\frac{1}{2}+p & \frac{1}{2p}+1\end{array}\right)^{\prime}$
+\end_inset
+
+.
+ Let us consider the market for good 2.
+ By the market clearing condition, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{2p}+1 & = & 2\\
+2p & = & 1\\
+p & = & \frac{1}{2}
+\end{eqnarray*}
+
+\end_inset
+
+Note, 
+\begin_inset Formula $p$
+\end_inset
+
+ does not fall in the required interval.
+ Thus, a competitive equilibrium fails to exist in this case.
+\end_layout
+
+\begin_layout Standard
+Therefore, a competitive equilibrium fails to exist at all prices.
+ Since 
+\begin_inset Formula $w_{1}\notin\mbox{Int}(X_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{z}(p)$
+\end_inset
+
+ is discontinuous 
+\begin_inset Formula $(x_{1}(p)$
+\end_inset
+
+ is discontinuous in the interval 
+\begin_inset Formula $1<p<2)$
+\end_inset
+
+, then a competitive equilibrium is not required to exist.
+\end_layout
+
+\begin_layout Problem
+Consider a pure-exchange economy with 
+\begin_inset Formula $n=2$
+\end_inset
+
+, 
+\begin_inset Formula $X_{A}=X_{B}=\mathbb{R}_{+}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $w_{A}=(4,0)$
+\end_inset
+
+, 
+\begin_inset Formula $w_{B}=(2,8)$
+\end_inset
+
+.
+ Suppose the consumers have the following utility funcitons:
+\begin_inset Formula 
+\[
+u_{A}(x_{A1},x_{A2})=x_{A1}+2x_{A2}\ \mbox{and}\ u_{B}(x_{B1},x_{B2})=2x_{B1}+x_{B2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Draw the Edgeworth Box with indifference curves and the initial endowment
+ point clearly marked.
+\end_layout
+
+\begin_layout Enumerate
+Find the set of Pareto efficient allocations in the Edgeworth Box.
+\end_layout
+
+\begin_layout Enumerate
+Find the demand functions of the two agents.
+\end_layout
+
+\begin_layout Enumerate
+Draw the offere curves in the Edgeworth Box.
+\end_layout
+
+\begin_layout Enumerate
+Find all the Walrasian equilibria.
+ Is it unique?
+\end_layout
+
+\begin_layout Enumerate
+Find the set of core allocations in the Edgeworth Box.
+\end_layout
+
+\begin_layout Enumerate
+Find the set of fair allocations in the Edgewroth Box.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $u_{i}(x_{i})$
+\end_inset
+
+ is differentiable and quasi-concave, then a necessary and sufficient condition
+ for the feasible interior points to be Parteo optimal (PO) is that 
+\begin_inset Formula $MRS_{x_{11,}x_{12}}=MRS_{x_{21},x_{22}}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $MRS_{x_{A1,}x_{A2}}=\frac{1}{2}\neq2=MRS_{x_{B1},x_{B2}}$
+\end_inset
+
+, then there are no interior PO points.
+ However, because indifference curves are linear and agent 
+\begin_inset Formula $B$
+\end_inset
+
+'s indifference curves are steeper, i.e., 
+\begin_inset Formula $MRS_{A}<MRS_{B}$
+\end_inset
+
+, then the set of Pareto efficient allocations is given by the upper and
+ left edges of the Edgeworth box.
+ Thus,
+\begin_inset Formula 
+\[
+PO=\{(x_{A},x_{B})\in X_{A}\times X_{B}:x_{A1}x_{B2}=0\ \wedge\ x_{A}+x_{B}=(6,8)\}
+\]
+
+\end_inset
+
+is the set of Pareto optimal allocations.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+To calculate the demand functions, we must maximize the utility function
+ of each consumer with respect to his budget constraint.
+ Since each agent's preferences are monotone, then they are locally non-satiatie
+d, and thus, Walras' Law holds.
+ Let 
+\begin_inset Formula $p=\frac{p_{2}}{p_{1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The constrained utility maximization problem for agent 
+\begin_inset Formula $A$
+\end_inset
+
+ is given by:
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & u_{A}(x_{A1},x_{A2})=x_{A1}+2x_{A2}\\
+\mbox{s.t} & x_{A1}+px_{A2}=4
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, the demand function for agent 
+\begin_inset Formula $A$
+\end_inset
+
+ is:
+\begin_inset Formula 
+\[
+x_{A}(p)=\begin{cases}
+\left(\begin{array}{c}
+0\\
+\frac{4}{p}
+\end{array}\right) & \mbox{if}\ p<2\\
+\left(\begin{array}{c}
+x_{A1}\\
+2-\frac{x_{A1}}{2}
+\end{array}\right),x_{A1}\in\left[0,4\right] & \mbox{if}\ p=2\\
+\left(\begin{array}{c}
+4\\
+0
+\end{array}\right) & \mbox{if}\ p>2
+\end{cases}
+\]
+
+\end_inset
+
+The constrained utility maximization problem for agent 
+\begin_inset Formula $B$
+\end_inset
+
+ is given by:
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & u_{B}(x_{B1},x_{B2})=2x_{B1}+x_{B2}\\
+\mbox{s.t.} & x_{B1}+px_{B2}=2+8p
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the demand function for agent 
+\begin_inset Formula $B$
+\end_inset
+
+ is:
+\begin_inset Formula 
+\[
+x_{B}(p)=\begin{cases}
+\left(\begin{array}{c}
+0\\
+\frac{2}{p}+8
+\end{array}\right) & \mbox{if}\ p<\frac{1}{2}\\
+\left(\begin{array}{c}
+x_{B1}\\
+12-2x_{B1}
+\end{array}\right),x_{B1}\in\left[0,6\right] & \mbox{if}\ p=\frac{1}{2}\\
+\left(\begin{array}{c}
+2+8p\\
+0
+\end{array}\right) & \mbox{if}\ p>\frac{1}{2}
+\end{cases}
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part d.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part e.
+\end_layout
+
+\begin_layout Standard
+To find the competitive equilibrium, we must find all 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{2}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\hat{z}(p)=\hat{x}(p)-\hat{w}=0$
+\end_inset
+
+.
+ By Walras' Law, it is enough to show only one markets clearing for 
+\begin_inset Formula $L=2$
+\end_inset
+
+.
+ Let us consider the various cases for 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p<\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{A}(p)=\left(\begin{array}{cc}
+0 & \frac{4}{p}\end{array}\right)^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{B}(p)=\left(\begin{array}{cc}
+0 & \frac{2}{p}+8\end{array}\right)^{\prime}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\hat{z}_{2}(p)=\hat{x}_{2}(p)-\hat{w}_{2}>0$
+\end_inset
+
+.
+ Thus, a competitive equilibrium fails to exist in this case.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p=\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{A}(p)=\left(\begin{array}{cc}
+0 & 8\end{array}\right)^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{B}(p)=\left(\begin{array}{cc}
+x_{B1} & 12-2x_{B1}\end{array}\right)^{\prime},x_{B1}\in[0,6]$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $x_{B1}=6$
+\end_inset
+
+, then 
+\begin_inset Formula $\hat{z}(p)=\hat{x}(p)-\hat{w}=0$
+\end_inset
+
+.
+ Thus, a competitive equilibrium is given by
+\begin_inset Formula 
+\[
+\left[x_{A}^{*},x_{B}^{*},p^{*}\right]=\left[\left(\begin{array}{c}
+0\\
+8
+\end{array}\right),\left(\begin{array}{c}
+6\\
+0
+\end{array}\right),\left(\begin{array}{c}
+1\\
+\nicefrac{1}{2}
+\end{array}\right)\right]
+\]
+
+\end_inset
+
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $\frac{1}{2}<p<2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{A}=\left(\begin{array}{cc}
+0 & \frac{4}{p}\end{array}\right)^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{B}=\left(\begin{array}{cc}
+2+8p & 0\end{array}\right)^{\prime}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\hat{z}_{1}(p)=\hat{x}_{1}(p)-\hat{w}_{1}>0$
+\end_inset
+
+.
+ Thus, a competitive equilibrium fails to exist in this case.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{A}=\left(\begin{array}{cc}
+x_{A1} & 2-\frac{x_{A1}}{2}\end{array}\right)^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{B}=\left(\begin{array}{cc}
+16 & 0\end{array}\right)^{\prime}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\hat{z}_{1}(p)=\hat{x}_{1}(p)-\hat{w}_{1}>0$
+\end_inset
+
+.
+ Thus, a competitive equilibrium fails to exist in this case.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p>2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{A}(p)=\left(\begin{array}{cc}
+4 & 0\end{array}\right)^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{B}=\left(\begin{array}{cc}
+2+8p & 0\end{array}\right)^{\prime}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\hat{z}_{1}(p)=\hat{x}_{1}(p)-\hat{w}_{1}>0$
+\end_inset
+
+.
+ Thus, a competitive equilibrium fails to exist in this case.
+\end_layout
+
+\begin_layout Standard
+From the aggregate demand functions, it is evident that if 
+\begin_inset Formula $p^{l}=0$
+\end_inset
+
+, then 
+\begin_inset Formula $\hat{z}^{l}(p^{*})>0$
+\end_inset
+
+ for 
+\begin_inset Formula $l=1,2,$
+\end_inset
+
+.
+ So, all goods are desirable.
+ In addition, 
+\begin_inset Formula $\frac{\partial\hat{z}^{h}}{\partial p^{l}}>0$
+\end_inset
+
+ for 
+\begin_inset Formula $l\neq h$
+\end_inset
+
+.
+ Hence, all goods are gross substitutes.
+ Finally, note that Walras' Law holds.
+ Therefore, by Theorem 7.5.1, 
+\begin_inset Formula $p^{*}$
+\end_inset
+
+ is a unique competitive equilibrium price vector.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part f.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $n=2$
+\end_inset
+
+ and the preference relations are weakly monotonic, then an allocation is
+ in the core if and only if it is Pareto optimal (PO) and individually rational
+ (IR).
+ We have already found the set of PO allocations, so let us now characterize
+ the set of IR allocations.
+ An allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ is individually rational if 
+\begin_inset Formula $\forall\ i:x_{i}\succsim_{i}w_{i}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u_{i}(\cdot)$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+, then an allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ is IR if 
+\begin_inset Formula $x_{A1}+2x_{A2}\geq4$
+\end_inset
+
+ and 
+\begin_inset Formula $2x_{B1}+x_{B2}\geq12$
+\end_inset
+
+.
+ Thus, the set of core allocations is given by
+\begin_inset Formula 
+\[
+PO\cap IR=\{(x_{A},x_{B})\in X_{A}\times X_{B}:x_{A}+x_{B}=(6,8),x_{A1}x_{B2}=0,x_{A1}+2x_{A2}\geq4,2x_{B1}+x_{B2}\geq12\}
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part g.
+\end_layout
+
+\begin_layout Standard
+An allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ is said to be fair if it is both Pareto optimal and equitable.
+ We have already found the set of PO allocations, so let us now characterize
+ the set of IR allocations.
+ An allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ is equitable if 
+\begin_inset Formula $\forall\ i\in N,\forall\ k\in N:x_{i}\succsim_{i}x_{k}$
+\end_inset
+
+.
+ So, equitable allocations must satisfy
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{A1}+2x_{A2} & \geq & x_{B1}+2x_{B2}\\
+x_{A1}+2x_{A2} & \geq & (6-x_{A1})+2(8-x_{A2})\\
+x_{A1}+2x_{A2} & \geq & 11
+\end{eqnarray*}
+
+\end_inset
+
+ and
+\begin_inset Formula 
+\begin{eqnarray*}
+2x_{B1}+x_{B2} & \geq & 2x_{A1}+x_{A2}\\
+2x_{B1}+x_{B2} & \geq & 2(6-x_{B1})+(8-x_{B2})\\
+2x_{B1}+x_{B2} & \geq & 10
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the set of fair allocations is given by
+\begin_inset Formula 
+\[
+F=\left\{ (x_{A},x_{B})\in X_{A}\times X_{B}:x_{A}+x_{B}=(6,8),x_{A1}x_{B2}=0,x_{A1}+2x_{A2}\geq11,2x_{B1}+x_{B2}\geq10\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Consider a two-agent, two-good exchange economy, in which the agents' consumptio
+n set are 
+\begin_inset Formula $X_{1}=X_{2}=\mathbb{R}_{++}^{2}$
+\end_inset
+
+ and their endowments are 
+\begin_inset Formula $w_{1}=(2,1)$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}=(1,2)$
+\end_inset
+
+.
+ Let the utility funcitons of the two agents be
+\begin_inset Formula 
+\[
+u_{1}(x_{1},y_{1})=\ln x_{1}+\ln y_{1}\ \mbox{and}\ u_{2}(x_{2},y_{2})=\ln x_{2}+\alpha\ln y_{2}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha\in(0,\infty)$
+\end_inset
+
+ is a parameter.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Give a formula of the form 
+\begin_inset Formula $y_{1}=f(x_{1},\alpha)$
+\end_inset
+
+ characterizing the set of Pareto optimal allocations for arbitrary 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+On a clearly labeled Edgeworth Box diagram, show the Pareto optimal set
+ for 
+\begin_inset Formula $\alpha=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+For the particular parameter value 
+\begin_inset Formula $\alpha=2$
+\end_inset
+
+, is the case that 
+\begin_inset Formula $x_{1}\geq y_{1}$
+\end_inset
+
+ at all points 
+\begin_inset Formula $(x_{1},y_{1}),(x_{2},y_{2})$
+\end_inset
+
+ in the core? Illustrate your answer with a clearly labeled Edgeworth Box.
+\end_layout
+
+\begin_layout Enumerate
+For which values of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is the initial endowment a competitive equilibrium?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $u_{i}(x_{i}),i=1,2$
+\end_inset
+
+ are differentiable and quasi-concave, then a necessary and sufficient condition
+ for the feasible interior points to be Parteo optimal (PO) is that 
+\begin_inset Formula $MRS_{x_{11,}x_{12}}=MRS_{x_{21},x_{22}}$
+\end_inset
+
+.
+ Note, 
+\begin_inset Formula $MRS_{1}=\frac{y_{1}}{x_{1}}$
+\end_inset
+
+ and 
+\begin_inset Formula $MRS_{2}=\frac{y_{2}}{\alpha x_{2}}$
+\end_inset
+
+.
+ Setting these two equations equal to one another we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{y_{1}}{x_{1}} & = & \frac{y_{2}}{\alpha x_{2}}\\
+\alpha y_{1}(3-x_{1}) & = & x_{1}(3-y_{1})\\
+3\alpha y_{1}-\alpha x_{1}y_{1}+x_{1}y_{1} & = & 3x_{1}\\
+y_{1}=f(x_{1},\alpha) & = & \frac{3x_{1}}{(x_{1}-\alpha x_{1}+3\alpha)}
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $\alpha=2$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+y_{1}=f(x_{1},2)=\frac{3x_{1}}{(6-x_{1})}
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+To see if 
+\begin_inset Formula $x_{1}\geq y_{1}$
+\end_inset
+
+ at all points 
+\begin_inset Formula $(x_{1},y_{1}),(x_{2},y_{2})$
+\end_inset
+
+ in the core, we consider
+\begin_inset Formula 
+\begin{eqnarray*}
+0 & \geq & x_{1}(x_{1}-3)\ \mbox{for}\ x_{1}\in(0,3)\\
+0 & \geq & x_{1}^{2}-3x_{1}\\
+6x_{1}-x_{1}^{2} & \geq & 3x_{1}\\
+x_{1} & \geq & \frac{3x_{1}}{(6-x_{1})}=y_{1}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $x_{1}\geq y_{1}$
+\end_inset
+
+ for all PO allocations, i.e., the entire set of Pareto optimal allocations
+ is below the line 
+\begin_inset Formula $y_{1}=x_{1}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $n=2$
+\end_inset
+
+ and the preference relations are weakly monotonic, then an allocation is
+ in the core if and only if it is Pareto optimal (PO) and individually rational
+ (IR).
+ So, the set of core allocations is a subset of the set of Pareto optimal
+ allocations, i.e., 
+\begin_inset Formula $Core=PO\cap IR\subseteq PO$
+\end_inset
+
+.
+ Therefore, at all points in the core, 
+\begin_inset Formula $x_{1}\geq y_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part d.
+\end_layout
+
+\begin_layout Standard
+Since preferences are monotone, then they are locally non-satiated.
+ Suppose that 
+\begin_inset Formula $\omega$
+\end_inset
+
+ is a competitive equilibrium for some value of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\omega$
+\end_inset
+
+ is a competitive equilibrium, then by the First Fundamental Theorem of
+ Welfare Economics, it must be Pareto optimal.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $w_{1}=(2,1)$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}=(1,2)$
+\end_inset
+
+, then by our previous results, we have 
+\begin_inset Formula $\dfrac{1}{2}=\dfrac{2}{\alpha}$
+\end_inset
+
+.
+ Solving for 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, we obtain 
+\begin_inset Formula $\alpha=4$
+\end_inset
+
+.
+ Hence, we obtain an competive equilibrium at 
+\begin_inset Formula $w$
+\end_inset
+
+ by setting the price vector equal to 
+\begin_inset Formula $(1,2)$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha=4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+There are two consumers with the following characteristics: 
+\begin_inset Formula $X_{i}=\mathbb{R}_{++}^{2}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{gather*}
+u_{1}(x_{1},y_{1})=e^{x_{1}}y_{1};\ w_{1}=(5,1)\\
+u_{2}(x_{2},y_{2})=e^{x_{2}}y_{2}^{2};\ w_{2}=(1,3)
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find the equation for the contract curve in this economy, and carefully
+ sketch it in the Edgeworth box.
+\end_layout
+
+\begin_layout Enumerate
+Find a fair allocation of goods to consumers in this economy.
+\end_layout
+
+\begin_layout Enumerate
+Now suppose that the economy is replicated three times.
+ Find a fair allocation of goods to consumers in this new economy.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $u_{i}(x_{i}),i=1,2$
+\end_inset
+
+ are differentiable and quasi-concave, then a necessary and sufficient condition
+ for the feasible interior points to be Parteo optimal (PO) is that 
+\begin_inset Formula $MRS_{x_{1,}y_{1}}=MRS_{x_{2},y_{2}}$
+\end_inset
+
+.
+ Note, 
+\begin_inset Formula $MRS_{1}=y_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $MRS_{2}=\frac{y_{2}}{2}$
+\end_inset
+
+.
+ Setting these two equations equal to one another we have
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{1} & = & \frac{y_{2}}{2}\\
+2y_{1} & = & (4-y_{1})\\
+y_{1} & = & \frac{4}{3}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the set of Pareto optimal allocations is given by:
+\begin_inset Formula 
+\[
+PO=\left\{ (a_{1},a_{2})\in X_{1}\times X_{2}:a_{1}+a_{2}=(6,4)\ \wedge\ y_{1}=\frac{4}{3}\right\} 
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+An allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ is said to be fair if it is both Pareto optimal and equitable.
+ We have already found the set of PO allocations, so let us now characterize
+ the set of IR allocations.
+ An allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ is equitable if 
+\begin_inset Formula $\forall\ i\in N,\forall\ k\in N:x_{i}\succsim_{i}x_{k}$
+\end_inset
+
+.
+ So, equitable allocations must satisfy
+\begin_inset Formula 
+\begin{eqnarray*}
+e^{x_{1}}y_{1} & \geq & e^{x_{2}}y_{2}\\
+e^{x_{1}}\frac{4}{3} & \geq & e^{(6-x_{1})}\frac{8}{3}\\
+e^{2x_{1}} & \geq & 2e^{6}\\
+2x_{1} & \geq & 6+\ln2\\
+x_{1} & \geq & \frac{6+\ln2}{2}
+\end{eqnarray*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{eqnarray*}
+e^{x_{2}}y_{2}^{2} & \geq & e^{x_{1}}y_{1}^{2}\\
+e^{(6-x_{1})}\frac{64}{9} & \geq & e^{x_{1}}\frac{16}{9}\\
+4e^{6} & \geq & e^{2x_{1}}\\
+\frac{6+\ln4}{2} & \geq & x_{1}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the set of fair allocations is given by
+\begin_inset Formula 
+\[
+F=\left\{ (a_{1},a_{2})\in X_{1}\times X_{2}:a_{1}+a_{2}=(6,4),y_{1}=\frac{4}{3},3+\frac{1}{2}\ln2\leq x_{1}\leq3+\ln2\right\} 
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+Now, suppose the economy is replicated three times.
+ In this case, there are three of each type of agent for a total of six
+ agents.
+ Recall that an allocation is said to be fair if it is both equitable and
+ Pareto optimal.
+ Important to note, every replication of an envy free allocation must be
+ envy free.
+ Similarly, every replication of a Pareto optimal allocation must be Pareto
+ optimal.
+ Accordingly, by our previous result, we know that the following is a fair
+ allocation in the replicated economy:
+\begin_inset Formula 
+\begin{gather*}
+x_{1}^{A}=x_{1}^{B}=x_{1}^{C}=3+\log(2)\\
+y_{1}^{A}=y_{1}^{B}=y_{1}^{C}=\dfrac{4}{3}\\
+x_{2}^{A}=x_{2}^{B}=x_{2}^{C}=3-\log(2)\\
+y_{2}^{A}=y_{2}^{B}=y_{2}^{C}=\dfrac{8}{3}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Let 
+\begin_inset Formula $R$
+\end_inset
+
+ be a rule for making social choices.
+ Let there be three people in society, 
+\begin_inset Formula $\{1,2,3\}$
+\end_inset
+
+, three alternatives, 
+\begin_inset Formula $\{x,y,z\}$
+\end_inset
+
+, and 
+\begin_inset Formula $P_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $I_{i}$
+\end_inset
+
+ denote strict preference and indifference for individual 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Let the domain of 
+\begin_inset Formula $R$
+\end_inset
+
+ be unrestricted and let 
+\begin_inset Formula $R$
+\end_inset
+
+ be given as follows:
+\end_layout
+
+\begin_layout Problem
+(i) If majority voting results in a transitive social ordering with a unique
+ best alternative, take the best alternative to be the social choice.
+\end_layout
+
+\begin_layout Problem
+(ii) If majority voting results in a transitive social ordering without
+ a unique best alternative, break ties according to 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $x$
+\end_inset
+
+ is better than 
+\begin_inset Formula $y$
+\end_inset
+
+ is better than 
+\begin_inset Formula $z$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+(iii) If majority voting does not result in a transitive social ordering,
+ then let 
+\begin_inset Formula $x$
+\end_inset
+
+ bet the social choice.
+\end_layout
+
+\begin_layout Problem
+(iii) Consider the following profiles:
+\begin_inset Formula 
+\begin{gather*}
+\mbox{Person 1:}\ xP_{1}yP_{1}z\\
+\mbox{Person 2:}\ yP_{2}zP_{2}x\\
+\mbox{Person 3:}\ zP_{3}xP_{3}y
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Which of the alternatives is ranked socially best by 
+\begin_inset Formula $R$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Does 
+\begin_inset Formula $R$
+\end_inset
+
+ satisfy the Pareto property? Prove or disprove.
+\end_layout
+
+\begin_layout Enumerate
+Prove that 
+\begin_inset Formula $R$
+\end_inset
+
+ is nondictatorial.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $xFy$
+\end_inset
+
+ by social preference.
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+, 
+\begin_inset Formula $yFz$
+\end_inset
+
+ by social preference.
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $z$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $zFx$
+\end_inset
+
+ by social preference.
+\end_layout
+
+\begin_layout Standard
+Through majority voting, 
+\begin_inset Formula $xFy,yFz,zFx$
+\end_inset
+
+.
+ So, majority voting does not result in a transitive social ordering.
+ Thus, 
+\begin_inset Formula $x$
+\end_inset
+
+ is the social choice according to 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+First, let us define what it means for one alternative to dominate another:
+ 
+\begin_inset Formula $\forall\ \{a,b\}\in X,$
+\end_inset
+
+ 
+\begin_inset Formula $b$
+\end_inset
+
+ dominates 
+\begin_inset Formula $a$
+\end_inset
+
+ if 
+\begin_inset Formula $\forall\ i\in N:b\succ_{i}a$
+\end_inset
+
+.
+ Now, let us define the Pareto Principle for a social choice function: A
+ social choice funciton 
+\begin_inset Formula $f:\mathcal{P}\rightarrow X$
+\end_inset
+
+ satisfies the Pareto Principle if 
+\begin_inset Formula $\neg(\exists\ P\in\mathcal{P},\ \exists\ d\in X:d\ \mbox{dominates}\ f(P))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim*
+\begin_inset Formula $R$
+\end_inset
+
+ satisfies the Pareto Property
+\end_layout
+
+\begin_layout Proof
+We will consider the preference ordering profile 
+\begin_inset Formula $P=(P_{1},P_{2},P_{3})$
+\end_inset
+
+ given by (iii) of the problem description.
+\end_layout
+
+\begin_layout Proof
+
+\emph on
+\bar under
+Case i:
+\end_layout
+
+\begin_layout Proof
+For majority voting to result in a transitive social ordering with a unique
+ best alternative, 
+\begin_inset Formula $R(P)$
+\end_inset
+
+ must be the alternative preferred by the majority of agents.
+ Thus, 
+\begin_inset Formula $\nexists\ d\in X:d\ \mbox{dominates}\ R(P)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\emph on
+\bar under
+Case ii:
+\end_layout
+
+\begin_layout Proof
+Majority voting results in a transitive social ordering without a unique
+ best alternative, so we break ties accorind to 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $x$
+\end_inset
+
+ is better than 
+\begin_inset Formula $y$
+\end_inset
+
+ is better than 
+\begin_inset Formula $z$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Case: 
+\begin_inset Formula $x\sim y\succ z,R(P)=x$
+\end_inset
+
+.
+ There must be at least one agent where 
+\begin_inset Formula $x\succ z$
+\end_inset
+
+, and at least one where 
+\begin_inset Formula $x\succ y$
+\end_inset
+
+ or 
+\begin_inset Formula $x\sim y$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\nexists\ d\in X:d\ \mbox{dominates}\ R(P)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Case: 
+\begin_inset Formula $y\sim z\succ x,R(P)=y$
+\end_inset
+
+.
+ Same explanation as before.
+\end_layout
+
+\begin_layout Proof
+Case: 
+\begin_inset Formula $x\sim y\sim z,R(P)=x$
+\end_inset
+
+.
+ For all agents, 
+\begin_inset Formula $x\sim y\sim z$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\nexists\ d\in X:d\ \mbox{dominates}\ R(p)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\emph on
+\bar under
+Case iii:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x\succ y\succ z\succ x,R(P)=x$
+\end_inset
+
+.
+ There must be at least one agent where 
+\begin_inset Formula $x$
+\end_inset
+
+ is his most preferred alternative.
+ Thus, 
+\begin_inset Formula $\nexists\ d\in X:d\ \mbox{dominates}\ R(P)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Hence, 
+\begin_inset Formula $\nexists\ d\in X:d\ \mbox{dominates}\ R(P)=x$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $R$
+\end_inset
+
+ satisfies the Pareto principle.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $C(P_{i})$
+\end_inset
+
+ denote the choice set of agent 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R$
+\end_inset
+
+ is dictatorial if 
+\begin_inset Formula $\exists\ i\in N,\forall\ P\in\mathcal{P}:R(P)=C(P_{i})\in X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R$
+\end_inset
+
+ is nondictatorial if 
+\begin_inset Formula $\forall\ i\in N,\exists\ P\in\mathcal{P}:R(P)\neq C(P_{i})$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $R$
+\end_inset
+
+ is nondictatorial.
+ Take 
+\begin_inset Formula $i\in N=\{1,2,3\}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $P$
+\end_inset
+
+ be defined as the two remaining agents having the same preferences, and
+ these preferences are opposite of agent 
+\begin_inset Formula $i$
+\end_inset
+
+'s.
+ Now, majority voting will result in a transitive social ordering with a
+ unique best alternative.
+ Accorind to 
+\begin_inset Formula $R$
+\end_inset
+
+, this alternative will be the social choice.
+ However, this alternative would not have been chosen by agent 
+\begin_inset Formula $i$
+\end_inset
+
+ since it is his least preferred option.
+ Thus, 
+\begin_inset Formula $R(P)\neq C(P_{i})$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $R$
+\end_inset
+
+ is nondictatorial.
+\end_layout
+
+\end_body
+\end_document

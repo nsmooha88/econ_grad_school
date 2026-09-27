@@ -1,0 +1,2000 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+General Equilibrium: Homework 2
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Problem
+Consider a pure-exchange economy with two consumers, 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, and with two commodities, 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{A} & = & \min[x_{A1},x_{A2}],\ \omega_{A}=(3,0)\\
+u_{B} & = & \min[x_{B1},x_{B2}],\ \omega_{B}=(0,3)
+\end{eqnarray*}
+
+\end_inset
+
+Both consumption sets 
+\begin_inset Formula $X_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{B}$
+\end_inset
+
+ consists of integer points in 
+\begin_inset Formula $\mathbb{R}_{+}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Show that 
+\begin_inset Formula $p=(p^{1},p^{2})$
+\end_inset
+
+ with 
+\begin_inset Formula $p^{1}=p^{2}$
+\end_inset
+
+ is a competitive equilibrium price.
+ Calculate all competitive equilibrium allocations associated with this
+ price vector.
+\end_layout
+
+\begin_layout Enumerate
+Show whether (each of) the competitive equilibria is a (regular) Pareto
+ optimum.
+\end_layout
+
+\begin_layout Enumerate
+State the First Theorem of Welfare Economics.
+ Discuss how the results of part b conform with or vilate the First Theorem.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+
+\series default
+\bar default
+ 
+\end_layout
+
+\begin_layout Standard
+To find al the competitive equilibrium allocations, we must maximize the
+ utility function of each consumer with respect to his budget constraint,
+ and then verify the market clearing condition.
+ Since each agent's preferences are monotone, then they are locally non-satiatie
+d, and thus, Walras' Law holds.
+ Let 
+\begin_inset Formula $p=p_{1}=p_{2}$
+\end_inset
+
+.
+ Now, both consumer's have identical maximization problems, so let us formulate
+ the problem using a representative agent.
+\end_layout
+
+\begin_layout Standard
+Utility maximization for the representative agent:
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & u_{i}=\min[x_{i1},x_{i2}]\\
+\mbox{s.t.} & px_{A1}+px_{A2}=3p
+\end{eqnarray*}
+
+\end_inset
+
+Using the budget constraint, we obtain an expression for 
+\begin_inset Formula $x_{i1}$
+\end_inset
+
+, which we then plug into the utility function:
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{i1} & = & 3-x_{i2}\\
+3-x_{i2} & = & x_{i2}\\
+x_{i2} & = & \frac{3}{2}
+\end{eqnarray*}
+
+\end_inset
+
+Since the consumption set for both agents consists of integer points, then
+ 
+\begin_inset Formula $x_{i2}=2$
+\end_inset
+
+ or 
+\begin_inset Formula $x_{i2}=1$
+\end_inset
+
+.
+ Thus, for the price vector with 
+\begin_inset Formula $p_{1}=p_{2}$
+\end_inset
+
+, we have several competitive equilibria:
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\{ \left[x_{1}^{*},x_{2}^{*},p^{*}\right]\right\}  & = & \left\{ \left[\left(\begin{array}{c}
+2\\
+1
+\end{array}\right),\left(\begin{array}{c}
+1\\
+2
+\end{array}\right),\left(\begin{array}{c}
+1\\
+1
+\end{array}\right)\right],\left[\left(\begin{array}{c}
+1\\
+2
+\end{array}\right),\left(\begin{array}{c}
+2\\
+1
+\end{array}\right),\left(\begin{array}{c}
+1\\
+1
+\end{array}\right)\right],\right.\\
+ &  & \left[\left(\begin{array}{c}
+2\\
+1
+\end{array}\right),\left(\begin{array}{c}
+1\\
+1
+\end{array}\right),\left(\begin{array}{c}
+1\\
+1
+\end{array}\right)\right],\left[\left(\begin{array}{c}
+1\\
+2
+\end{array}\right),\left(\begin{array}{c}
+1\\
+1
+\end{array}\right),\left(\begin{array}{c}
+1\\
+1
+\end{array}\right)\right],\\
+ &  & \left[\left(\begin{array}{c}
+1\\
+1
+\end{array}\right),\left(\begin{array}{c}
+2\\
+1
+\end{array}\right),\left(\begin{array}{c}
+1\\
+1
+\end{array}\right)\right],\left[\left(\begin{array}{c}
+1\\
+1
+\end{array}\right),\left(\begin{array}{c}
+1\\
+2
+\end{array}\right),\left(\begin{array}{c}
+1\\
+1
+\end{array}\right)\right],\\
+ &  & \left.\left[\left(\begin{array}{c}
+1\\
+1
+\end{array}\right),\left(\begin{array}{c}
+1\\
+1
+\end{array}\right),\left(\begin{array}{c}
+1\\
+1
+\end{array}\right)\right]\right\} 
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+Consider the freasible allocation
+\begin_inset Formula 
+\[
+x^{\prime}=\left[\left(\begin{array}{c}
+2\\
+2
+\end{array}\right),\left(\begin{array}{c}
+1\\
+1
+\end{array}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ represents a Pareto improvement over all the competitive equilibrium allocation
+s since agent 
+\begin_inset Formula $A$
+\end_inset
+
+ is made better off without making agent 
+\begin_inset Formula $B$
+\end_inset
+
+ worse off.
+ Therefore, none of the competitive equilibria are Pareto optimal.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Theorem*
+
+\emph on
+(The First Fundamental Theorem of Welfare Economics) 
+\emph default
+If 
+\begin_inset Formula $(x,p)$
+\end_inset
+
+ is a comeptitive equilibrium, then 
+\begin_inset Formula $x$
+\end_inset
+
+ is weakly Pareto efficient, and further under local non-satiation, it is
+ Pareto efficient.
+\end_layout
+
+\begin_layout Standard
+Note, one needs to pay attention to all of the assumptions, both implicit
+ and/or explicit.
+ The conditions for the theorem are: (i) local non-satiation; (ii) divisibilty;
+ (iii) no externalitites; (iv) perfect competition; (v) complete information;
+ etc.
+ In this case, the problem outline clearly restricts the divisibilty of
+ commoditites in the consumption set.
+ Thus, a competitive equilibrium may not be Pareto efficient.
+\end_layout
+
+\begin_layout Problem
+In a pure exchange economy, consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ 
+\emph on
+envies
+\emph default
+ consumer 
+\begin_inset Formula $j$
+\end_inset
+
+ if 
+\begin_inset Formula $x_{j}\succ_{i}x_{i}$
+\end_inset
+
+.
+ An allocation is called 
+\emph on
+envy free
+\emph default
+ if 
+\begin_inset Formula $x_{i}\succsim_{i}x_{j}$
+\end_inset
+
+ for every 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ An allocation is called 
+\emph on
+fair
+\emph default
+ if it is envy free and Pareto efficient.
+ In the following, assume that all consumption sets are equal to 
+\begin_inset Formula $\mathbb{R}_{+}^{n}$
+\end_inset
+
+, where 
+\begin_inset Formula $n$
+\end_inset
+
+ is the number of commodities.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Prove that envy free allocations always exist.
+\end_layout
+
+\begin_layout Enumerate
+Prove, in an Edgeworth box for 
+\begin_inset Formula $n=2$
+\end_inset
+
+, that envy free allocations need not be fair.
+\end_layout
+
+\begin_layout Enumerate
+Assume that preferences are represented by utility functions that are continuous
+, stricly increasing, and stricly quasi-concave.
+ Prove that every exchange economy with a strictly positive aggregate endowment
+ vector has at least one fair allocation.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+
+\series default
+\bar default
+ 
+\end_layout
+
+\begin_layout Standard
+Let all agents have equal endowments, i.e., for any two agents 
+\begin_inset Formula $\{i,j\}\subseteq N$
+\end_inset
+
+, 
+\begin_inset Formula $\omega_{i}=\omega_{j}$
+\end_inset
+
+.
+ We will prove that if 
+\begin_inset Formula $(x^{*},p^{*})$
+\end_inset
+
+ constitutes a competitive equilibrium for a pure exchange economy, then
+ 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is envy-free.
+\end_layout
+
+\begin_layout Proof
+Assume that all agents have equal endowments, i.e., for any two agents 
+\begin_inset Formula $\{i,j\}\subseteq N$
+\end_inset
+
+, 
+\begin_inset Formula $\omega_{i}=\omega_{j}$
+\end_inset
+
+.
+ Also, assume that 
+\begin_inset Formula $(x^{*},p^{*})$
+\end_inset
+
+ constitutes a competitive equilibrium for a pure exchange economy.
+ We want to show that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is envy free, i.e., 
+\begin_inset Formula $\forall\ \{i,j\}\subseteq N:x_{i}^{*}\succsim x_{j}^{*}$
+\end_inset
+
+.
+ Suppose for contradiction that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is not envy free.
+ Then 
+\begin_inset Formula $\exists\ \{i,j\}\subseteq N:x_{j}^{*}\succ x_{i}^{*}$
+\end_inset
+
+.
+ Note, the budget set for agent 
+\begin_inset Formula $j$
+\end_inset
+
+ is 
+\begin_inset Formula $B_{j}(p)=\{x_{j}\in X_{j}:px_{j}\leq p\omega_{j}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{j}^{*}\in B_{j}(p)$
+\end_inset
+
+.
+ Now, since 
+\begin_inset Formula $\omega_{j}=\omega_{i}$
+\end_inset
+
+, then 
+\begin_inset Formula $B_{j}(p)=B_{i}(p)$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $x_{j}^{*}\in B_{i}(p)$
+\end_inset
+
+.
+ However, this contradicts the fact that 
+\begin_inset Formula $x_{i}^{*}$
+\end_inset
+
+ maximizes agent 
+\begin_inset Formula $i$
+\end_inset
+
+'s utility, i.e., 
+\begin_inset Formula $x_{i}^{*}\in x_{i}^{\succsim}(p)$
+\end_inset
+
+ .
+ Therefore, 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is envy free.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Proof
+Assume that preferences are represented by utility functions that are continuous
+, stricly increasing, and stricly quasi-concave.
+ Then, preferences are continuous, stricly monotone, and stricly convex.
+ Take a pure exchange economy 
+\begin_inset Formula $e=\left(\{X_{i},\succsim_{i},\omega_{i}\}_{i\in N}\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $X_{i}\in\mathbb{R}_{+}^{L}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\omega}={\displaystyle \sum_{i=1}^{n}}\omega_{i}>0$
+\end_inset
+
+.
+ We want to show that this economy has at least one fair allocation.
+ Since we are dealing with optimality concepts, initial endowments can be
+ redistributed among agents in a society.
+ So, we redistribute individual endowments so that all agents have an equal
+ share of each commodity.
+ Let 
+\begin_inset Formula $\omega_{i}=\overline{\omega}=\frac{\hat{\omega}}{n}\ \forall\ i\in N$
+\end_inset
+
+.
+ By Theorem 7.4.6, there exists a competitive equilibrium 
+\begin_inset Formula $(x^{*},p^{*})$
+\end_inset
+
+.
+ Now, at this point, all individuals' income is the same, i.e., 
+\begin_inset Formula $p^{*}\omega_{1}=\cdots=p^{*}\omega_{n}$
+\end_inset
+
+.
+ Thus, by Theorem 9.3.1, 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is a stricly fair allocation.
+\end_layout
+
+\begin_layout Problem
+Consider a pure exchange economy with 
+\begin_inset Formula $n=2$
+\end_inset
+
+, 
+\begin_inset Formula $X_{A}=X_{B}=\mathbb{R}_{+}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\omega_{A}=(1,0)$
+\end_inset
+
+, 
+\begin_inset Formula $\omega_{B}=(0,1)$
+\end_inset
+
+.
+ Suppose the consumers have the following utility functions:
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{A}(x_{A1},x_{A2}) & = & x_{A1}+2x_{A2}\\
+u_{B}(x_{B1},x_{B2}) & = & 2x_{B1}+x_{B2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Draw offer curves in the Edgeworth Box.
+\end_layout
+
+\begin_layout Enumerate
+Find the set of Pareto optimal allocation and draw them in the Edgeworth
+ Box.
+\end_layout
+
+\begin_layout Enumerate
+Calculate the competitive equilibrium with the price of good 1 is equal
+ to 1.
+\end_layout
+
+\begin_layout Enumerate
+Calculate the set of positive welfare weights 
+\begin_inset Formula $(\alpha_{A},\alpha_{B})$
+\end_inset
+
+, such that the equilibrium allocation maximizes the welfare function 
+\begin_inset Formula 
+\[
+\alpha_{A}u_{A}(x_{A1},x_{A2})+\alpha_{B}u_{B}(x_{B1},x_{B2})
+\]
+
+\end_inset
+
+among all feasible allocations 
+\begin_inset Formula $(x_{A1},x_{A2},x_{B1},x_{B2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $W$
+\end_inset
+
+ be the welfare function defined by the equation
+\begin_inset Formula 
+\[
+W(\hat{\omega}_{1},\hat{\omega}_{2})={\displaystyle \max_{\{x_{A},x_{B}\}}u_{A}(x_{A1},x_{A2})+u_{B}(x_{B1},x_{B2})}
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula $x_{A}+x_{B}\leq(\hat{\omega}_{1},\hat{\omega}_{2})$
+\end_inset
+
+, 
+\begin_inset Formula $x_{A},x_{B}\in\mathbb{R}_{+}^{2}$
+\end_inset
+
+.
+ What are 
+\begin_inset Formula $\frac{\partial W(1,1)}{\partial\hat{\omega}_{1}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\partial W(1,1)}{\partial\hat{\omega}_{2}}$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+
+\series default
+\bar default
+ 
+\end_layout
+
+\begin_layout Standard
+To find offer curves, we must maximize the utility function of each consumer
+ with respect to his budget constraint.
+ Since each agent's preferences are monotone, then they are locally non-satiatie
+d, and thus, Walras' Law holds.
+ Let 
+\begin_inset Formula $p=\frac{p_{2}}{p_{1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The constrained utility maximization problem for agent 
+\begin_inset Formula $A$
+\end_inset
+
+ is given by:
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & u_{A}(x_{A1},x_{A2})=x_{A1}+2x_{A2}\\
+\mbox{s.t} & x_{A1}+px_{A2}=1
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, the demand function for agent 
+\begin_inset Formula $A$
+\end_inset
+
+ is:
+\begin_inset Formula 
+\[
+x_{A}(p)=\begin{cases}
+\left(\begin{array}{c}
+0\\
+\frac{1}{p}
+\end{array}\right) & \mbox{if}\ p<2\\
+\left(\begin{array}{c}
+x_{A1}\\
+\frac{1}{2}-\frac{x_{A1}}{2}
+\end{array}\right),x_{A1}\in\left[0,1\right] & \mbox{if}\ p=2\\
+\left(\begin{array}{c}
+1\\
+0
+\end{array}\right) & \mbox{if}\ p>2
+\end{cases}
+\]
+
+\end_inset
+
+The constrained utility maximization problem for agent 
+\begin_inset Formula $B$
+\end_inset
+
+ is given by:
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & u_{B}(x_{B1},x_{B2})=2x_{B1}+x_{B2}\\
+\mbox{s.t.} & x_{B1}+px_{B2}=p
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the demand function for agent 
+\begin_inset Formula $B$
+\end_inset
+
+ is:
+\begin_inset Formula 
+\[
+x_{B}(p)=\begin{cases}
+\left(\begin{array}{c}
+0\\
+1
+\end{array}\right) & \mbox{if}\ p<\frac{1}{2}\\
+\left(\begin{array}{c}
+x_{B1}\\
+1-2x_{B1}
+\end{array}\right),x_{B1}\in\left[0,\frac{1}{2}\right] & \mbox{if}\ p=\frac{1}{2}\\
+\left(\begin{array}{c}
+p\\
+0
+\end{array}\right) & \mbox{if}\ p>\frac{1}{2}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $u_{i}(x_{i})$
+\end_inset
+
+ is differentiable and quasi-concave, then a necessary and sufficient condition
+ for the interior points to be Parteo optimal (PO) is that 
+\begin_inset Formula $MRS_{x_{A1,}x_{A2}}=MRS_{x_{B1},x_{B2}}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $MRS_{x_{A1,}x_{A2}}=\frac{1}{2}\neq2=MRS_{x_{B1},x_{B2}}$
+\end_inset
+
+, then there are no interior PO points.
+ However, because indifference curves are linear and agent 
+\begin_inset Formula $B$
+\end_inset
+
+'s indifference curves are steeper, i.e., 
+\begin_inset Formula $MRS_{A}<MRS_{B}$
+\end_inset
+
+, then the set of Pareto efficient allocations is given by the upper and
+ left edges of the Edgeworth box.
+ Thus,
+\begin_inset Formula 
+\[
+PO=\{(x_{A},x_{B})\in X_{A}\times X_{B}:x_{A1}x_{B2}=0\ \wedge\ x_{A}+x_{B}=(1,1)\}
+\]
+
+\end_inset
+
+is the set of Pareto optimal allocations.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+In part a, we found the demand function for each agent after normalizing
+ the prices by setting the price of good 1 equal to 1.
+ To find the competitive equilibrium, we must find all 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{2}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\hat{z}(p)=\hat{x}(p)-\hat{w}=0$
+\end_inset
+
+.
+ By Walras' Law, it is enough to show only one markets clearing for 
+\begin_inset Formula $L=2$
+\end_inset
+
+.
+ Let us consider the two cases for 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Now, we will consider the various cases given by the functions to determine
+ the competitive equilibrium.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p<\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{A}(p)=\left(\begin{array}{cc}
+0 & \frac{1}{p}\end{array}\right)^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{B}(p)=\left(\begin{array}{cc}
+0 & 1\end{array}\right)^{\prime}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\hat{x}_{2}(p)>\hat{\omega}_{2}$
+\end_inset
+
+.
+ Thus, a competitive equilibrium fails to exist for this case.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p=\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{A}(p)=\left(\begin{array}{cc}
+0 & 2\end{array}\right)^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{B}(p)=\left(\begin{array}{cc}
+x_{B1} & 1-2x_{B1}\end{array}\right)^{\prime}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{B1}\in\left[0,\frac{1}{2}\right]$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\hat{x}_{2}(p)>\hat{\omega}_{2}$
+\end_inset
+
+.
+ Thus, a competitive equilibrium fails to exist for this case.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $\frac{1}{2}<p<2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{A}(p)=\left(\begin{array}{cc}
+0 & \frac{1}{p}\end{array}\right)^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{B}(p)=\left(\begin{array}{cc}
+p & 0\end{array}\right)$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $p=1$
+\end_inset
+
+, then 
+\begin_inset Formula $\hat{x}=\hat{\omega}$
+\end_inset
+
+.
+ Thus, a competitive equilibrium is given by:
+\begin_inset Formula 
+\[
+\left[x_{A}^{*},x_{B}^{*},p^{*}\right]=\left[\left(\begin{array}{c}
+0\\
+1
+\end{array}\right),\left(\begin{array}{c}
+1\\
+0
+\end{array}\right),\left(\begin{array}{c}
+1\\
+1
+\end{array}\right)\right]
+\]
+
+\end_inset
+
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{A}(p)=\left(\begin{array}{cc}
+x_{A1} & \frac{1}{2}-\frac{x_{A1}}{2}\end{array}\right)^{\prime}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{A1}\in\left[0,2\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{B}(p)=\left(\begin{array}{cc}
+2 & 0\end{array}\right)$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\hat{x}_{1}(p)>\hat{\omega}_{1}$
+\end_inset
+
+.
+ Thus, a competitive equilibrium fails to exist for this case.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case:
+\emph default
+\bar default
+ 
+\begin_inset Formula $p>2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{A}(p)=\left(\begin{array}{cc}
+1 & 0\end{array}\right)^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{B}(p)=\left(\begin{array}{cc}
+p & 0\end{array}\right)^{\prime}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\hat{x}_{1}(p)>\hat{\omega}_{1}$
+\end_inset
+
+.
+ Thus, a competitive equilibrium fails to exist for this case.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part d.
+\end_layout
+
+\begin_layout Standard
+Since preferences are locally non-satiated, then by the First Fundamental
+ Theorem of Welfare Economics, the competitive equilibrium allocation given
+ in part c, 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, is Pareto optimal.
+ Since both agent's utility functions are linear, then they are also concave,
+ differentiable, and stricly monotone.
+ So, by Proposition 8.7.2, there exists some choice of weights 
+\begin_inset Formula $\alpha_{i}^{*}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ maximizes the social welfare function:
+\begin_inset Formula 
+\[
+W(x_{A},x_{B})=\alpha_{A}(x_{A1}+2x_{A2})+\alpha_{B}(2x_{B1}+x_{B2})
+\]
+
+\end_inset
+
+Feasibility and local non-satiation imply
+\begin_inset Formula 
+\begin{flalign*}
+x_{A1}+x_{B1} & =1\implies x_{B1}=1-x_{A1}\\
+x_{A2}+x_{B2} & =1\implies x_{B2}=1-x_{A2}
+\end{flalign*}
+
+\end_inset
+
+Also, since 
+\begin_inset Formula $0\leq x_{Ai}\leq1,\ i=1,2$
+\end_inset
+
+, then we have
+\begin_inset Formula 
+\begin{eqnarray*}
+W(x_{A},x_{B}) & = & \alpha_{A}(x_{A1}+2x_{A2})+\alpha_{B}(2-2x_{A1}+1-x_{A2})\\
+W(x_{A},x_{B}) & = & \alpha_{A}x_{A1}+2\alpha_{A}x_{A2}+2\alpha_{B}-2\alpha_{B}x_{A1}+\alpha_{B}-\alpha_{B}x_{A2}\\
+W(x_{A},x_{B}) & = & x_{A1}(\alpha_{A}-2\alpha_{B})+x_{A2}(2\alpha_{A}-\alpha_{B})+3\alpha_{B}\geq0
+\end{eqnarray*}
+
+\end_inset
+
+So, the competitive equilibrium allocation will be chosen when 
+\begin_inset Formula $\alpha_{A}-2\alpha_{B}\leq0\iff\alpha_{A}\leq2\alpha_{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $2\alpha_{A}-\alpha_{B}\geq0\iff\alpha_{A}\geq\frac{\alpha_{B}}{2}$
+\end_inset
+
+.
+ Therefore, we must have
+\begin_inset Formula 
+\[
+\frac{\alpha_{B}}{2}\leq\alpha_{A}\leq2\alpha_{B}
+\]
+
+\end_inset
+
+ 
+\series bold
+\bar under
+Part e.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $W$
+\end_inset
+
+ be the welfare function defined by the equation
+\begin_inset Formula 
+\[
+W(\hat{\omega}_{1},\hat{\omega}_{2})={\displaystyle \max_{\{x_{A},x_{B}\}}u_{A}(x_{A1},x_{A2})+u_{B}(x_{B1},x_{B2})}
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula $x_{A}+x_{B}\leq(\hat{\omega}_{1},\hat{\omega}_{2})$
+\end_inset
+
+, 
+\begin_inset Formula $x_{A},x_{B}\in\mathbb{R}_{+}^{2}$
+\end_inset
+
+.
+ Note, the right hand side of this equation is maximized at the competitive
+ equilibrium allocation 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, i.e., when 
+\begin_inset Formula $x_{A1}=0=x_{B2}$
+\end_inset
+
+.
+ Also, since preferences are locally non-satiated, the feasibility constraints
+ hold with equality.
+ Thus, the welfare function can be rewritten as
+\begin_inset Formula 
+\[
+W(\hat{\omega}_{1},\hat{\omega}_{2})=2x_{A2}+2x_{B1}
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula $x_{A2}=\hat{\omega}_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{B1}=\hat{\omega}_{1}$
+\end_inset
+
+.
+ We substitute these constraints into the welfare function to obtain
+\begin_inset Formula 
+\[
+W(\hat{\omega}_{1},\hat{\omega}_{2})=2\hat{\omega}_{2}+2\hat{\omega}_{1}
+\]
+
+\end_inset
+
+Therefore, the partial derivatives of 
+\begin_inset Formula $W$
+\end_inset
+
+evaluated at 
+\begin_inset Formula $(1,1)$
+\end_inset
+
+ are:
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial W(1,1)}{\partial\hat{\omega}_{1}} & = & 2\\
+\frac{\partial W(1,1)}{\partial\hat{\omega}_{2}} & = & 2
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+(Cornwall) In an economy with two types of consumers, each type has the
+ respective utility function and endowments:
+\begin_inset Formula 
+\[
+u_{1}(x_{1},y_{1})=x_{1}y_{1}\ \mbox{and}\ \omega_{1}=(8,2)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+u_{2}(x_{2},y_{2})=x_{2}y_{2}\ \mbox{and}\ \omega_{2}=(2,8)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Draw an Edgeworth Box for this economy when there is one consumer of each
+ type.
+\end_layout
+
+\begin_layout Enumerate
+Characterize as precisely as possible the set of allocations that are in
+ the core of this two-consumer economy.
+\end_layout
+
+\begin_layout Enumerate
+Show that the allocation giving 
+\begin_inset Formula $(x_{1},y_{1})=(4,4)$
+\end_inset
+
+ and 
+\begin_inset Formula $(x_{2},y_{2})=(6,6)$
+\end_inset
+
+ is in the core.
+\end_layout
+
+\begin_layout Enumerate
+Now replicate this economy once so there are two consumers of each type,
+ for a total of four consumers in the economy.
+ Show that the double copy of the previous allocation is 
+\emph on
+not
+\emph default
+ in the core of the replicated economy.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+To simplfy notation, let 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ represent the consumption vector for agent 
+\begin_inset Formula $i$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $z_{i}\equiv(x_{i},y_{i})^{\prime}$
+\end_inset
+
+, so a specific allocation is represented by 
+\begin_inset Formula $z\equiv\left[(x_{1},y_{1}),(x_{2},y_{2})\right]$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $n=2$
+\end_inset
+
+ and the preference relations are monotonic, then an allocation is in the
+ core if and only if it is Pareto optimal (PO) and individually rational
+ (IR).
+ 
+\end_layout
+
+\begin_layout Standard
+First, let us characterize the set of PO allocations.
+ Important to note, 
+\begin_inset Formula $u_{i}(\cdot)$
+\end_inset
+
+ are differentiable and quasi-concave.
+ So, an allocation is PO if it is feasible, and a necessary and sufficient
+ condition for interior points is that 
+\begin_inset Formula $MRS_{x_{1},y_{1}}=MRS_{x_{2},y_{2}}$
+\end_inset
+
+.
+ Thus, the set of interior PO allocations is
+\begin_inset Formula 
+\[
+PO=\left\{ (z_{1},z_{2})\in X_{1}\times X_{2}:z_{1}+z_{2}\leq(10,10)^{\prime}\ \wedge\ \frac{y_{1}}{x_{1}}=\frac{y_{2}}{x_{2}}\right\} 
+\]
+
+\end_inset
+
+Next, let us characterize the set of IR allocations.
+ An allocation 
+\begin_inset Formula $z$
+\end_inset
+
+ is individually rational if 
+\begin_inset Formula $\forall\ i\in N:z_{i}\succsim_{i}\omega_{i}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u_{i}(\cdot)$
+\end_inset
+
+ represents 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+, then an allocation 
+\begin_inset Formula $z$
+\end_inset
+
+ is IR if 
+\begin_inset Formula $x_{1}y_{1}\geq16$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}y_{2}\geq16$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus, the set of core allocations is
+\begin_inset Formula 
+\[
+PO\cap IR=\left\{ (z_{1},z_{2})\in X_{1}\times X_{2}:z_{1}+z_{2}\leq(10,10)^{\prime},\frac{y_{1}}{x_{1}}=\frac{y_{2}}{x_{2}},x_{1}y_{1}\geq16,x_{2}y_{2}\geq16\right\} 
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+Here, we have an allocation 
+\begin_inset Formula $z$
+\end_inset
+
+ giving 
+\begin_inset Formula $(x_{1},y_{1})=(4,4)$
+\end_inset
+
+ and 
+\begin_inset Formula $(x_{2},y_{2})=(6,6)$
+\end_inset
+
+.
+ Let us verify that 
+\begin_inset Formula $z$
+\end_inset
+
+ is in the core.
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\begin{array}{c}
+4\\
+4
+\end{array}\right)+\left(\begin{array}{c}
+6\\
+6
+\end{array}\right) & = & \left(\begin{array}{c}
+10\\
+10
+\end{array}\right)\\
+\frac{4}{4} & = & \frac{6}{6}\\
+4\cdot4 & = & 16\\
+6\cdot6 & = & 32
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the allocation 
+\begin_inset Formula $z$
+\end_inset
+
+ is in the core.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part d.
+\end_layout
+
+\begin_layout Standard
+Now, replicate this economy so there are two consumers of each type, for
+ a total of four consumers in the economy.
+ We now have consumer 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ of the first agent type, and consumer 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ of the second agent type.
+ The endowments of each agent are
+\begin_inset Formula 
+\[
+\omega_{1A}=\left(\begin{array}{c}
+8\\
+2
+\end{array}\right),\omega_{1B}=\left(\begin{array}{c}
+8\\
+2
+\end{array}\right),\omega_{2A}=\left(\begin{array}{c}
+2\\
+8
+\end{array}\right),\omega_{2B}=\left(\begin{array}{c}
+2\\
+8
+\end{array}\right)
+\]
+
+\end_inset
+
+while the double copy of the previous allocation, 
+\begin_inset Formula $z$
+\end_inset
+
+, is
+\begin_inset Formula 
+\[
+z_{1A}=\left(\begin{array}{c}
+4\\
+4
+\end{array}\right),z_{1B}=\left(\begin{array}{c}
+4\\
+4
+\end{array}\right),z_{2A}\left(\begin{array}{c}
+6\\
+6
+\end{array}\right),z_{2B}=\left(\begin{array}{c}
+6\\
+6
+\end{array}\right)
+\]
+
+\end_inset
+
+Note, a feasible allocation 
+\begin_inset Formula $z$
+\end_inset
+
+ is said to have the core property if it cannot be improved upon for any
+ coalition, i.e., if 
+\begin_inset Formula $z$
+\end_inset
+
+ has no blocking coalitions.
+ So, let agents 1A, 1B, and 2A form a coalition 
+\begin_inset Formula $S$
+\end_inset
+
+ with their own endowments.
+ Now, within this coalition, consider the allocation 
+\begin_inset Formula $z^{\prime}$
+\end_inset
+
+ where
+\begin_inset Formula 
+\[
+z_{1A}^{\prime}=\left(\begin{array}{c}
+6\\
+3
+\end{array}\right),z_{1B}^{\prime}=\left(\begin{array}{c}
+6\\
+3
+\end{array}\right),z_{2A}^{\prime}=\left(\begin{array}{c}
+6\\
+6
+\end{array}\right)
+\]
+
+\end_inset
+
+The allocation 
+\begin_inset Formula $z^{\prime}$
+\end_inset
+
+ represents a Pareto improvement for the allocation since
+\begin_inset Formula 
+\[
+\sum_{i\in S}z_{i}^{\prime}=\left(\begin{array}{c}
+18\\
+12
+\end{array}\right)=\sum_{i\in S}\omega_{i}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{1A}(6,3) & > & u_{1A}(4,4)\\
+u_{1B}(6,3) & > & u_{1B}(4,4)\\
+u_{2A}(6,6) & = & u_{2A}(6,6)
+\end{eqnarray*}
+
+\end_inset
+
+Thus, there exists a blocking coalition to the original allocation 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $z$
+\end_inset
+
+ is not in the core of the replicated economy.
+\end_layout
+
+\begin_layout Problem
+Consider a society consisting of 25 individuals.
+ The society has four political parties called A, B, C, and D.
+ The preferences of the individuals in the society are:
+\end_layout
+
+\begin_layout Problem
+9 people rank parties in the following order: A first, B second, C third,
+ and D fourth.
+\end_layout
+
+\begin_layout Problem
+5 people rank parties in the following order: B first, A second, C third,
+ and D fourth.
+\end_layout
+
+\begin_layout Problem
+1 person ranks parties in the following order: C first, B second, D third,
+ and A fourth.
+\end_layout
+
+\begin_layout Problem
+10 people rank parties in the following order: D first, C second, B third,
+ and A fourth.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Are these preferences single peaked?
+\end_layout
+
+\begin_layout Enumerate
+Is there a Condorcet winner? Find the Condorcet winner or prove that it
+ does not exist.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+First, let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a set containing the four political parties, i.e., 
+\begin_inset Formula $X\equiv\{A,B,C,D\}$
+\end_inset
+
+.
+ Next, we define a binary relation 
+\begin_inset Formula $\geq$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+ such that 
+\begin_inset Formula $A\geq B\geq C\geq D$
+\end_inset
+
+.
+ This binary relation is a linear order since it is reflexive, transitive,
+ and total.
+ Now, 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is said to be 
+\emph on
+single-peaked
+\emph default
+ with respect to the linear order 
+\begin_inset Formula $\geq$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+ if there is an alternative 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is increasing with respect 
+\begin_inset Formula $\geq$
+\end_inset
+
+ on the lower contour set 
+\begin_inset Formula $L(x)=\{y\in X:y\leq x\}$
+\end_inset
+
+ and decreasing with respect to 
+\begin_inset Formula $\geq$
+\end_inset
+
+ on the upper contour set 
+\begin_inset Formula $U(x)=\{y\in X:y\geq x\}$
+\end_inset
+
+.
+ We want to see if the preferences of the individuals in the society are
+ single-peaked.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Group 1:
+\emph default
+\bar default
+ Consider 
+\begin_inset Formula $A\in X$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $A\succ_{1}B\succ_{1}C\succ_{1}D$
+\end_inset
+
+, then preferences are increasing with respect to 
+\begin_inset Formula $\geq$
+\end_inset
+
+ on the lower contour set 
+\begin_inset Formula $L(A)=\{A,B,C,D\}$
+\end_inset
+
+.
+ Preferences are neither increasing nor decreasing on the upper contour
+ set 
+\begin_inset Formula $U(A)=A$
+\end_inset
+
+ since 
+\begin_inset Formula $A$
+\end_inset
+
+ is the peak of satisfaction.
+ Thus, group 1's preferences are single-peaked.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Group 2:
+\emph default
+\bar default
+ Consider 
+\begin_inset Formula $B\in X$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $B\succ_{2}C\succ_{2}D$
+\end_inset
+
+, then preferences are increasing with respect to 
+\begin_inset Formula $\geq$
+\end_inset
+
+ on the lower contour set 
+\begin_inset Formula $L(B)=\{B,C,D\}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $B\succ_{2}A$
+\end_inset
+
+, then preferences are decreasing with respect to 
+\begin_inset Formula $\geq$
+\end_inset
+
+ on the upper contour set 
+\begin_inset Formula $U(B)=\{A,B\}$
+\end_inset
+
+.
+ Thus, group 2's preferences are single-peaked, and 
+\begin_inset Formula $B$
+\end_inset
+
+ is group 2's peak.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Group 3:
+\emph default
+\bar default
+ Consider 
+\begin_inset Formula $C\in X$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $C\succ_{3}D$
+\end_inset
+
+, then preferences are increasing with respect to 
+\begin_inset Formula $\geq$
+\end_inset
+
+ on the lower contour set 
+\begin_inset Formula $L(C)=\{C,D\}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $C\succ_{3}B\succ_{3}A$
+\end_inset
+
+, then preferences are decreasing with respect to 
+\begin_inset Formula $\geq$
+\end_inset
+
+ on the upper contour set 
+\begin_inset Formula $U(C)=\{A,B,C\}$
+\end_inset
+
+.
+ Thus, group 3's preferences are single-peaked, and 
+\begin_inset Formula $C$
+\end_inset
+
+ is group 3's peak.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Group 4:
+\emph default
+\bar default
+ Consider 
+\begin_inset Formula $D\in X$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $D\succ_{4}C\succ_{4}B\succ_{4}A$
+\end_inset
+
+, then preferences are increasing with respect to 
+\begin_inset Formula $\geq$
+\end_inset
+
+ on the lower contour set 
+\begin_inset Formula $L(D)=\{D\}$
+\end_inset
+
+, and they are decreasing with respect to 
+\begin_inset Formula $\geq$
+\end_inset
+
+ on the upper contour set 
+\begin_inset Formula $U(D)=\{A,B,C,D\}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $ $
+\end_inset
+
+group 4's preferences are single-peaked, and 
+\begin_inset Formula $D$
+\end_inset
+
+ is group 4's peak.
+\end_layout
+
+\begin_layout Standard
+So, the preferences of all four groups are single-peaked.
+ Therefore, all individuals in the society have single-peaked preferences
+ with respect to the linear order 
+\begin_inset Formula $\geq$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+Given the preference profile above, let 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ be the maximal alternative for 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\geq$
+\end_inset
+
+ is a linear order on 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is single-peaked 
+\begin_inset Formula $\forall\ i\in N$
+\end_inset
+
+, then by Proposition 9.4.1, the majority rule 
+\begin_inset Formula $\tilde{F}(\succsim)$
+\end_inset
+
+ is aggregatable:
+\begin_inset Formula 
+\[
+x_{h}\ \tilde{F}(\succsim)\ y,\ \ \forall\ y\in X
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{h}$
+\end_inset
+
+ is the peak of the median agent.
+ So, the peak of the median agent is socially optimal by majority voting,
+ and any alternative having this property is called a Condorcet winner.
+ Now, agent 
+\begin_inset Formula $h\in N$
+\end_inset
+
+ is a median agent for the given preference profile if 
+\begin_inset Formula $|\{i\in N:x_{i}\geq x_{h}\}|\geq\frac{N}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $|\{i\in N:x_{h}\geq x_{i}\}|\geq\frac{N}{2}$
+\end_inset
+
+.
+ An agent from group 2 will be the median voter since 
+\begin_inset Formula $|\{i\in N:x_{i}\geq B\}|=14\geq\frac{25}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $|\{i\in N:B\geq x_{i}\}|=16\geq\frac{25}{2}$
+\end_inset
+
+.
+ Therefore, alternative 
+\begin_inset Formula $B$
+\end_inset
+
+ is the Condorcet winner.
+\end_layout
+
+\end_body
+\end_document

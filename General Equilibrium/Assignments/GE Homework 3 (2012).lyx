@@ -1,0 +1,2624 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+General Equilibrium: Homework 3 (2012)
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Problem
+Consider a pure exchange economy with 2 commodities and 2 agents 
+\begin_inset Formula $X_{i}=\mathbb{R}_{+}^{2}$
+\end_inset
+
+ , 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+.
+ Total resources are given by 
+\begin_inset Formula $(w^{m},w^{b})$
+\end_inset
+
+.
+ The first commodity is 
+\begin_inset Quotes eld
+\end_inset
+
+music
+\begin_inset Quotes erd
+\end_inset
+
+ and the second commodity is 
+\begin_inset Quotes eld
+\end_inset
+
+bread.
+\begin_inset Quotes erd
+\end_inset
+
+ Each agent's utility funciton is given as
+\begin_inset Formula 
+\[
+u_{1}(m_{1},b_{1})=m_{1}^{\nicefrac{3}{5}}b_{1}^{\nicefrac{2}{5}}-k_{1}\ \mbox{and}\ u_{2}(m_{2},b_{2})=m_{2}^{\nicefrac{3}{5}}b_{2}^{\nicefrac{2}{5}}-k_{2}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ represents the consumption time of music by agents 1 and 2, respectively,
+ 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{2}$
+\end_inset
+
+ represent the quantity of bread consumed by agents 1 and 2, respectively,
+ and 
+\begin_inset Formula $k_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{2}$
+\end_inset
+
+ are given constants.
+\end_layout
+
+\begin_layout Enumerate
+What is the set of Pareto efficient points?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose the initial endowment for the first agent is 
+\begin_inset Formula $w_{1}=(\nicefrac{3}{2},\nicefrac{1}{2})$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}=(\nicefrac{1}{2},\nicefrac{3}{2})$
+\end_inset
+
+.
+ Compute the competitive equilibrium.
+\end_layout
+
+\begin_layout Enumerate
+Check whether or not the answer of part b are Pareto efficient.
+\end_layout
+
+\begin_layout Enumerate
+Suppose that each agent's utility function is changed as follows:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+\hat{u}_{1}(m_{1},m_{2},b_{1})=m_{1}^{\nicefrac{3}{5}}b_{1}^{\nicefrac{2}{5}}-m_{2}\ \mbox{and}\ \hat{u}_{2}(m_{1}m_{2},b_{2})=m_{2}^{\nicefrac{3}{5}}b_{2}^{\nicefrac{2}{5}}-m_{1}
+\]
+
+\end_inset
+
+One interpretation of the above utility function is that the consumption
+ of 
+\begin_inset Quotes eld
+\end_inset
+
+music
+\begin_inset Quotes erd
+\end_inset
+
+ by yourself increases your satisfaction, but someone else's consumption
+ of 
+\begin_inset Quotes eld
+\end_inset
+
+music
+\begin_inset Quotes erd
+\end_inset
+
+ decreases your satisfaction.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What is the critical level of total music endowment 
+\begin_inset Formula $\bar{w}^{m}$
+\end_inset
+
+ beyond which any balanced allocation is Pareto inefficient?
+\end_layout
+
+\begin_layout Enumerate
+What is the set of interior Pareto efficient points? (You need to give the
+ set of Pareto efficient allocations for two cases: 
+\begin_inset Formula $w^{m}\leq\bar{w}^{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $w^{m}>\bar{w}^{m}$
+\end_inset
+
+.) Compare this answer with part a.
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $w_{1}=(\nicefrac{3}{2},\nicefrac{1}{2})$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}=(\nicefrac{1}{2},\nicefrac{3}{2})$
+\end_inset
+
+.
+ Compute the competitive equilibrium.
+ Is this Pareto efficient?
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+An allocation is Pareto efficient if it is feasible and there is no other
+ feasible allocation such that one person would be better off and all other
+ persons are not worse off.
+ Since 
+\begin_inset Formula $u_{i}(x_{i})$
+\end_inset
+
+ is differentiable and quasi-concave, then a necessary and sufficient condition
+ for the interior points to be Parteo optimal (PO) is that 
+\begin_inset Formula $MRS_{m_{1},b_{1}}=MRS_{m_{2},b_{2}}$
+\end_inset
+
+.
+ Let us find each agent's MRS.
+\begin_inset Formula 
+\begin{eqnarray*}
+MRS_{m_{1},b_{1}} & = & \frac{\frac{3}{5}m_{1}^{-\nicefrac{2}{5}}b_{1}^{\nicefrac{2}{5}}}{\frac{2}{5}m_{1}^{\nicefrac{3}{5}}b_{1}^{-\nicefrac{3}{5}}}=\frac{3}{2}\frac{b_{1}}{m_{1}}\\
+MRS_{m_{2},b_{2}} & = & \frac{\frac{3}{5}m_{2}^{-\nicefrac{2}{5}}b_{2}^{\nicefrac{2}{5}}}{\frac{2}{5}m_{2}^{\nicefrac{3}{5}}b_{2}^{-\nicefrac{3}{5}}}=\frac{3}{2}\frac{b_{2}}{m_{2}}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the set of interior PO allocations is
+\begin_inset Formula 
+\[
+PO_{a}=\left\{ (x_{1},x_{2})\in X_{1}\times X_{2}:x_{1}+x_{2}\leq(w^{m},w^{b})^{\prime},\frac{b_{1}}{m_{1}}=\frac{b_{2}}{m_{2}}\right\} 
+\]
+
+\end_inset
+
+Now, consider the case when 
+\begin_inset Formula $m_{1}=0$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $u_{1A}(0,b_{1})=k_{1}=u_{1B}(0,0)$
+\end_inset
+
+, so 
+\begin_inset Formula $\neg(b_{1}>0)$
+\end_inset
+
+ and 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $u_{2B}>u_{2A}$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\left[(0,0),(w_{m},w_{b})\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[(w_{m},w_{b}),(0,0)\right]$
+\end_inset
+
+ are also Pareto optimal.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $p=\frac{p_{b}}{p_{m}}$
+\end_inset
+
+.
+ Since each agent's preferences are monotone, then they are locally non-satiatie
+d.
+ So, the budget constraint holds with equality for both consumers, and thus,
+ Walras's Law holds.
+ Also, since both agents have Cobb-Douglas utility functions, then their
+ respective demand curves are
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{1}(p) & = & \left(\begin{array}{c}
+\frac{9}{10}+\frac{3}{10}p\\
+\frac{3}{5p}+\frac{1}{5}
+\end{array}\right)\\
+x_{2}(p) & = & \left(\begin{array}{c}
+\frac{3}{10}+\frac{9}{10}p\\
+\frac{1}{5p}+\frac{3}{5}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+To find the competitive equilibrium, we must find all 
+\begin_inset Formula $p\in\mathbb{R}_{+}^{2}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\hat{z}(p)=\hat{x}(p)-\hat{w}=0$
+\end_inset
+
+.
+ Also, by Walras' Law, it is enough to show only one market clearing for
+ 
+\begin_inset Formula $L=2$
+\end_inset
+
+.
+ Let us consider the market for music.
+ By the market clearing condition, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{9}{10}+\frac{3}{10}p+\frac{3}{10}+\frac{9}{10}p & = & 2\\
+p & = & \frac{2}{3}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, a competitive equilibrium is given by:
+\begin_inset Formula 
+\[
+[x_{1}^{*}.x_{2}^{*},p^{*}]=\left[\left(\begin{array}{c}
+\nicefrac{11}{10}\\
+\nicefrac{11}{10}
+\end{array}\right),\left(\begin{array}{c}
+\nicefrac{9}{10}\\
+\nicefrac{9}{10}
+\end{array}\right),\left(\begin{array}{c}
+1\\
+\nicefrac{2}{3}
+\end{array}\right)\right]
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+Since preferences are locally non-satiated, then by the First Fundamental
+ Theorem of Welfare Economics, the competitive equilibrium allocation 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is Pareto efficient.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part d, Section 1
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $\frac{\partial u_{1}}{\partial m_{1}}\frac{\partial u_{2}}{\partial m_{2}}<\frac{\partial u_{1}}{m_{2}}\frac{\partial u_{2}}{m_{1}}$
+\end_inset
+
+ for any allocations that satisfy 
+\begin_inset Formula $m_{1}+m_{2}=w^{m}$
+\end_inset
+
+, 
+\begin_inset Formula $b_{1}+b_{2}=w^{b}$
+\end_inset
+
+, and 
+\begin_inset Formula $SMRS_{1}=SMRS_{2}$
+\end_inset
+
+, the social marginal rates of substitution must be negative.
+ Hence, the allocation will not be Pareto efficient.
+ By the SMRS equality condition, we have
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\frac{\partial u_{1}}{\partial m_{1}}}{\frac{\partial u_{1}}{\partial b_{1}}}+\frac{\frac{\partial u_{2}}{\partial m_{1}}}{\frac{\partial u_{2}}{\partial b_{2}}} & = & \frac{\frac{\partial u_{2}}{\partial m_{2}}}{\frac{\partial u_{2}}{\partial b_{2}}}+\frac{\frac{\partial u_{1}}{\partial m_{2}}}{\frac{\partial u_{1}}{\partial b_{1}}}\nonumber \\
+\frac{3}{2}\frac{b_{1}}{m_{1}}-\frac{5}{2}m_{2}^{-\nicefrac{3}{5}}b_{2}^{\nicefrac{3}{5}} & = & \frac{3}{2}\frac{b_{2}}{m_{2}}-\frac{5}{2}m_{1}^{-\nicefrac{3}{5}}b_{1}^{\nicefrac{3}{5}}\nonumber \\
+\frac{3}{2}\frac{b_{1}}{m_{1}}+\frac{5}{2}\left(\frac{b_{1}}{m_{1}}\right)^{\nicefrac{3}{5}} & = & \frac{3}{2}\frac{b_{2}}{m_{2}}+\frac{5}{2}\left(\frac{b_{2}}{m_{2}}\right)^{\nicefrac{3}{5}}
+\end{eqnarray}
+
+\end_inset
+
+and thus
+\begin_inset Formula 
+\begin{equation}
+\frac{b_{1}}{m_{1}}=\frac{b_{2}}{m_{2}}
+\end{equation}
+
+\end_inset
+
+Let 
+\begin_inset Formula $\bar{w}^{m}\equiv m_{1}+m_{2}$
+\end_inset
+
+.
+ Substituting 
+\begin_inset Formula $m_{1}+m_{2}=\bar{w}^{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{1}+b_{2}=w^{b}$
+\end_inset
+
+ into the equation (2), we have
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{b_{1}}{m_{1}} & = & \frac{(w^{b}-b_{1})}{(\bar{w}^{m}-m_{1})}\nonumber \\
+\frac{b_{1}}{m_{1}} & = & \frac{w^{b}}{\bar{w}^{m}}
+\end{eqnarray}
+
+\end_inset
+
+Then, by (2) and (3), we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial u_{1}}{\partial m_{1}}\frac{\partial u_{2}}{\partial m_{2}} & = & \frac{9}{25}\left(\frac{b_{1}}{m_{1}}\right)^{\nicefrac{2}{5}}\left(\frac{b_{2}}{m_{2}}\right)^{\nicefrac{2}{5}}\\
+ & = & \frac{9}{25}\left(\frac{w^{b}}{\bar{w}^{m}}\right)^{\nicefrac{4}{5}}
+\end{eqnarray*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\frac{\partial u_{1}}{m_{2}}\frac{\partial u_{2}}{m_{1}}=1
+\]
+
+\end_inset
+
+Setting joint marginal benefit equal to joint marginal cost, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial u_{1}}{\partial m_{1}}\frac{\partial u_{2}}{\partial m_{2}} & = & \frac{\partial u_{1}}{m_{2}}\frac{\partial u_{2}}{m_{1}}\\
+\frac{9}{25}\left(\frac{w^{b}}{\bar{w}^{m}}\right)^{\nicefrac{4}{5}} & = & 1\\
+\bar{w}^{m} & = & \left(\frac{9}{25}\right)^{\nicefrac{5}{4}}w^{b}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $\bar{w}^{m}=\left(\frac{9}{25}\right)^{\nicefrac{5}{4}}w^{b}$
+\end_inset
+
+ is the critical point that makes 
+\begin_inset Formula $\frac{\partial u_{1}}{\partial m_{1}}\frac{\partial u_{2}}{\partial m_{2}}-\frac{\partial u_{1}}{m_{2}}\frac{\partial u_{2}}{m_{1}}=0$
+\end_inset
+
+, or equivalently 
+\begin_inset Formula $\frac{\frac{\partial u_{1}}{\partial m_{1}}}{\frac{\partial u_{1}}{\partial b_{1}}}+\frac{\frac{\partial u_{2}}{\partial m_{1}}}{\frac{\partial u_{2}}{\partial b_{2}}}=\frac{\frac{\partial u_{2}}{\partial m_{2}}}{\frac{\partial u_{2}}{\partial b_{2}}}+\frac{\frac{\partial u_{1}}{\partial m_{2}}}{\frac{\partial u_{1}}{\partial b_{1}}}=0$
+\end_inset
+
+.
+ Therefore, if 
+\begin_inset Formula $\bar{w}^{m}>\left(\frac{9}{25}\right)^{\nicefrac{5}{4}}w^{b}$
+\end_inset
+
+, then 
+\begin_inset Formula $\frac{\partial u_{1}}{\partial m_{1}}\frac{\partial u_{2}}{\partial m_{2}}-\frac{\partial u_{1}}{m_{2}}\frac{\partial u_{2}}{m_{1}}<0$
+\end_inset
+
+, and any balanced allocation is Pareto inefficient.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part d, Section 2
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Case:
+\emph default
+ 
+\begin_inset Formula $w^{m}\leq\bar{w}^{m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $w^{m}<\bar{w}^{m}$
+\end_inset
+
+, then 
+\begin_inset Formula $\frac{\partial u_{1}}{\partial m_{1}}\frac{\partial u_{2}}{\partial m_{2}}-\frac{\partial u_{1}}{m_{2}}\frac{\partial u_{2}}{m_{1}}>0$
+\end_inset
+
+, and by Proposition 11.2.1, no Pareto optimal allocation requires destruction.
+ If 
+\begin_inset Formula $w^{m}=\bar{w}^{m}$
+\end_inset
+
+, then any allocation that satisfies the SMRS equality condition and the
+ balanced conditions 
+\begin_inset Formula $m_{1}+m_{2}=w^{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{1}+b_{2}=w^{b}$
+\end_inset
+
+ also satisfies 
+\begin_inset Formula $\frac{\partial u_{1}}{\partial m_{1}}\frac{\partial u_{2}}{\partial m_{2}}\geq\frac{\partial u_{1}}{m_{2}}\frac{\partial u_{2}}{m_{1}}$
+\end_inset
+
+, and thus it is a Pareto efficient allocation with no destruction.
+ Therefore, the set of interior Pareto efficient points is
+\begin_inset Formula 
+\[
+PO_{d}=\left\{ (x_{1},x_{2})\in X_{1}\times X_{2}:x_{1}+x_{2}=(w^{m},w^{b})^{\prime},\ \frac{b_{1}}{m_{1}}=\frac{b_{2}}{m_{2}}\right\} 
+\]
+
+\end_inset
+
+Note, this set is essentially equal to the set of Pareto optimal allocations
+ given in part a, i.e., 
+\begin_inset Formula $PO_{a}=PO_{d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Case: 
+\begin_inset Formula $w^{m}>\bar{w}^{m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $w^{m}>\bar{w}^{m}$
+\end_inset
+
+, then 
+\begin_inset Formula $\frac{\partial u_{1}}{\partial m_{1}}\frac{\partial u_{2}}{\partial m_{2}}-\frac{\partial u_{1}}{m_{2}}\frac{\partial u_{2}}{m_{1}}<0$
+\end_inset
+
+, and by Proposition 11.2.1, there is destruction in any Pareto efficient
+ allocation.
+ Therefore, the set of interior Pareto efficient points is
+\begin_inset Formula 
+\[
+PO_{d}=\left\{ (x_{1},x_{2})\in X_{1}\times X_{2}:\frac{b_{1}}{m_{1}}=\frac{b_{2}}{m_{2}},b_{1}+b_{2}=w^{b},m_{1}+m_{2}=w^{m}-D=\bar{w}^{m}\right\} 
+\]
+
+\end_inset
+
+where D is the amount of 
+\begin_inset Formula $w^{m}$
+\end_inset
+
+destroyed to achieve Pareto efficiency.
+\end_layout
+
+\begin_layout Standard
+Note, the set of Pareto optimal allocations has reduced compared to the
+ set given in part a, i.e., 
+\begin_inset Formula $PO_{d}\subseteq PO_{a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part d, Section 3
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $w_{1}=(\nicefrac{3}{2},\nicefrac{1}{2})$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}=(\nicefrac{1}{2},\nicefrac{3}{2})$
+\end_inset
+
+, then 
+\begin_inset Formula $w^{m}=2=w^{b}$
+\end_inset
+
+, and the competitive equilibrium will be the same as in part b.
+ However, 
+\begin_inset Formula $w^{m}=2>\left(\frac{9}{25}\right)^{\nicefrac{5}{4}}(2)=\bar{w}^{m}$
+\end_inset
+
+.
+ Thus, the competitive equilibrium allocation is not Pareto efficient unless
+ some music is taken away from the total endowment.
+\end_layout
+
+\begin_layout Problem
+Consider an economy with two consumers and two goods.
+ One of these goods, 
+\begin_inset Formula $y$
+\end_inset
+
+, is public, and the other good, 
+\begin_inset Formula $x$
+\end_inset
+
+, is private.
+ The consumer's preferences can be represented by 
+\begin_inset Formula $u_{1}(x,y)=x_{1}y$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{2}(x,y)=x_{2}y^{2}$
+\end_inset
+
+.
+ The public good can be produced by either consumer with the production
+ function 
+\begin_inset Formula $y=\frac{1}{2}v$
+\end_inset
+
+.
+ Consumer 1 has 20 units of 
+\begin_inset Formula $x$
+\end_inset
+
+, and consumer 2 has 
+\begin_inset Formula $20$
+\end_inset
+
+ units of 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ be the produciton of 
+\begin_inset Formula $y$
+\end_inset
+
+ by consumer 
+\begin_inset Formula $i$
+\end_inset
+
+, so 
+\begin_inset Formula $y_{i}=\frac{1}{2}v_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find the conditions for Pareto efficiency in this economy.
+ (These will be equations in 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+,
+\begin_inset Formula $y_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+, and the original endowments.)
+\end_layout
+
+\begin_layout Enumerate
+Assume that each consumer takes the other's production of 
+\begin_inset Formula $y$
+\end_inset
+
+ as given and then maximizes personal utility.
+ What is the Nash equilibrium? Is it Pareto efficient?
+\end_layout
+
+\begin_layout Enumerate
+Using the Lindahl mechanism, find the amounts of 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ produced by the economy in the previous exercise and the amounts 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Show that this production and allocation for the economy is Pareto efficient.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+The conditions for Pareto efficiency in the presence of public goods are
+ given by the feasibility constraints and the Lindahl-Samuelson condition:
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{i=1}^{n}\frac{\frac{\partial u_{i}}{\partial y}}{\frac{\partial u_{i}}{\partial x_{i}}} & = & \frac{1}{f^{\prime}(v)}\\
+\sum_{i=1}^{n}x_{i}+v & \leq & \sum_{i=1}^{n}w_{i}\\
+y & = & f(v)
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $y=y_{1}+y_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $v=v_{1}+v_{2}$
+\end_inset
+
+.
+ So, the conditions for Pareto efficiency in this economy are as follows
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{x_{1}}{y}+2\frac{x_{2}}{y} & = & 2\\
+x_{1}+v_{1} & = & 20\\
+x_{2}+v_{2} & = & 20\\
+y & = & \frac{1}{2}v
+\end{eqnarray*}
+
+\end_inset
+
+By combining these constraints together, we can obtain one general constraint
+ which characterizes the conditions for Pareto efficiency
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{1}+2x_{2} & = & 2(y_{1}+y_{2})\\
+x_{1}+2x_{2} & = & v_{1}+v_{2}\\
+x_{1}+2x_{2} & = & 20-x_{1}+20-x_{2}\\
+2x_{1}+3x_{2} & = & 40
+\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+Note, the utility functions can be rewritten as
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{1}(x_{1},y) & = & x_{1}y\\
+ & = & x_{1}(y_{1}+y_{2})\\
+ & = & x_{1}\left(\frac{1}{2}v_{1}\right)+x_{1}\left(\frac{1}{2}v_{2}\right)\\
+ & = & \frac{1}{2}x_{1}(20-x_{1})+\frac{1}{2}x_{1}(20-x_{2})\\
+ & = & 20x_{1}-\frac{1}{2}x_{1}^{2}-\frac{1}{2}x_{1}x_{2}\\
+ & = & u_{1}(x_{1},x_{2})
+\end{eqnarray*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{2}(x_{2},y) & = & x_{2}y^{2}\\
+ & = & x_{2}(y_{1}+y_{2})^{2}\\
+ & = & x_{2}\left(\frac{1}{2}v_{1}+\frac{1}{2}v_{2}\right)^{2}\\
+ & = & x_{2}\left(20-\frac{1}{2}x_{1}-\frac{1}{2}x_{2}\right)^{2}\\
+ & = & u_{2}(x_{2},x_{1})
+\end{eqnarray*}
+
+\end_inset
+
+In a Nash Equilibrium, each consumer takes the other agent's strategy as
+ given, and maximizes his payoffs.
+ So, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{1}^{*} & = & \arg{\displaystyle \max_{x_{1}}u_{1}(x_{1},x_{2}^{*})}\\
+x_{2}^{*} & = & \arg{\displaystyle \max_{x_{2}}u_{2}(x_{2},x_{1}^{*})}
+\end{eqnarray*}
+
+\end_inset
+
+Taking the derivative of agent 1's utility function with respect to 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ we obtain the first-order condition
+\begin_inset Formula 
+\begin{eqnarray*}
+20-x_{1}-\frac{1}{2}x_{2} & = & 0\\
+x_{2} & = & 40-2x_{1}
+\end{eqnarray*}
+
+\end_inset
+
+Taking the derivative of agent 2's utility funciton with respect to 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ we obtain the first-order condtion
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(20-\frac{1}{2}x_{1}-\frac{1}{2}x_{2}\right)^{2}-x_{2}\left(20-\frac{1}{2}x_{1}-\frac{1}{2}x_{2}\right) & = & 0\\
+\frac{3}{2}x_{2} & = & 20-\frac{1}{2}x_{1}\\
+x_{2} & = & \frac{40}{3}-\frac{x_{1}}{3}
+\end{eqnarray*}
+
+\end_inset
+
+Combining these two equations we have
+\begin_inset Formula 
+\begin{eqnarray*}
+40-2x_{1} & = & \frac{40}{3}-\frac{x_{1}}{3}\\
+120-6x_{1} & = & 40-x_{1}\\
+5x_{1} & = & 80\\
+x_{1} & = & 16
+\end{eqnarray*}
+
+\end_inset
+
+Also, 
+\begin_inset Formula $x_{2}=40-2(16)=8$
+\end_inset
+
+, 
+\begin_inset Formula $v_{1}=20-16=4$
+\end_inset
+
+, 
+\begin_inset Formula $v_{2}=20-8=12$
+\end_inset
+
+, 
+\begin_inset Formula $y_{1}=\frac{1}{2}4=2$
+\end_inset
+
+, and 
+\begin_inset Formula $y_{2}=\frac{1}{2}12=6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Is the Nash Equilibrium Pareto efficient?
+\begin_inset Formula 
+\begin{gather*}
+2x_{1}+3x_{2}=2(16)+3(8)=56\neq40
+\end{gather*}
+
+\end_inset
+
+Hence, more of good 
+\begin_inset Formula $x$
+\end_inset
+
+ is consumed under the Nash equilibrium than under Pareto efficiency.
+ Thus, the Nash equilibrium is not Pareto efficient.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+In a Lindahl mechanism, we apply different prices of the public good to
+ different consumers.
+ The idea of the Lindahl solution is that the consumption level of a public
+ good is the same to all consumers, but the price of the public good is
+ personalized to achieve the Lindahl-Samuelson condition.
+ For simplicity, we normalize the price of the private good to 1.
+\end_layout
+
+\begin_layout Standard
+Agent 1 wishes to maximize his utility subject to his budget constraint:
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & u_{1}(x_{1},y)=x_{1}y\\
+\mbox{s.t.} & x_{1}+q_{1}y=20
+\end{eqnarray*}
+
+\end_inset
+
+After substituting 
+\begin_inset Formula $y=\frac{20-x_{1}}{q_{1}}$
+\end_inset
+
+ into the utility function, we take the derivative of the function with
+ respect to 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ to derive the first-order condition
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{20}{q_{1}}-2\frac{x_{1}}{q_{1}} & = & 0\\
+x_{1} & = & 10
+\end{eqnarray*}
+
+\end_inset
+
+Agent 2 wishes to maximize his utility subject to his budget constraint:
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & u_{2}(x_{2},y_{2})=x_{2}y^{2}\\
+\mbox{s.t.} & x_{2}+q_{2}y=20
+\end{eqnarray*}
+
+\end_inset
+
+After substituting 
+\begin_inset Formula $y=\frac{20-x_{2}}{q_{2}}$
+\end_inset
+
+ into the utility function, we take the derivative of the function with
+ respect to 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ to derive the first-order condition
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\frac{20-x_{2}}{q_{2}}\right)^{2}-\frac{2}{q_{2}}x_{2}\left(\frac{20-x_{2}}{q_{2}}\right) & = & 0\\
+\frac{2}{q_{2}}x_{2} & = & \frac{20-x_{2}}{q_{2}}\\
+x_{2} & = & \frac{20}{3}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, the amount of 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ produced is
+\begin_inset Formula 
+\begin{gather*}
+y_{1}=\frac{1}{2}v_{1}=\frac{1}{2}(20-10)=5\\
+y_{2}=\frac{1}{2}v_{2}=\frac{1}{2}(20-\nicefrac{20}{3})=\frac{20}{3}
+\end{gather*}
+
+\end_inset
+
+
+\series bold
+\bar under
+Part d.
+\end_layout
+
+\begin_layout Standard
+This production and allocation satisfies the conditions for Pareto effiiciency
+ since
+\begin_inset Formula 
+\[
+2x_{1}+3x_{2}=2(10)+3(\nicefrac{20}{3})=40
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Consider an economy with two goods, a private (rivalrous) good 
+\begin_inset Formula $x$
+\end_inset
+
+, say leisure, and a public (non-rivalrous) good 
+\begin_inset Formula $y$
+\end_inset
+
+, say radio broadcase music.
+ Both goods are measured in hours per day.
+ There are two consumers, 1 and 2, and one firm.
+ The firm produces 
+\begin_inset Formula $y$
+\end_inset
+
+, using labor 
+\begin_inset Formula $v$
+\end_inset
+
+ as input.
+ (Labor is leisure given by a consumer to the firm; hence, if consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ supplies 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ units of labor to the firm, then the amount of leisure left to 
+\begin_inset Formula $i$
+\end_inset
+
+ is 
+\begin_inset Formula $x_{i}=w_{i}-v_{i}$
+\end_inset
+
+, where 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $i$
+\end_inset
+
+'s initial endowment of leisure.) Let the produciton function of the firm
+ be linear (constant returns to scale), with 
+\begin_inset Formula $k$
+\end_inset
+
+ units of 
+\begin_inset Formula $v$
+\end_inset
+
+ needed to produce one unit of 
+\begin_inset Formula $y$
+\end_inset
+
+ at any scale of output 
+\begin_inset Formula $(k>0)$
+\end_inset
+
+.
+ There is no free disposal.
+ The inital endowments 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ of 
+\begin_inset Formula $x$
+\end_inset
+
+ are positive, but the inital endowment of 
+\begin_inset Formula $y$
+\end_inset
+
+ is zero.
+\end_layout
+
+\begin_layout Problem
+Assume that each consumption set consists of all points 
+\begin_inset Formula $(x_{i},y)$
+\end_inset
+
+ such that 
+\begin_inset Formula $x_{i}\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $y\geq0$
+\end_inset
+
+, for 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+.
+ Furhtermore, for any 
+\begin_inset Formula $x_{i}\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $y\geq0$
+\end_inset
+
+, the utility function of consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ is givne by
+\begin_inset Formula 
+\[
+u_{i}=x_{i}+\phi_{i}(y)
+\]
+
+\end_inset
+
+where the valuation function 
+\begin_inset Formula $\phi_{i}(y)$
+\end_inset
+
+ is twice differetiable, 
+\begin_inset Formula $\phi_{i}^{\prime}(y)>0$
+\end_inset
+
+, and 
+\begin_inset Formula $\phi^{\prime\prime}(y)<0$
+\end_inset
+
+ for all 
+\begin_inset Formula $y\geq0$
+\end_inset
+
+, for 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+.
+ (Remember, it is assumed 
+\begin_inset Formula $w_{i}>0$
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Problem
+Suppose that each consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ voluntarily chooses to contribute an amount of labor 
+\begin_inset Formula $v_{i}\geq0$
+\end_inset
+
+ toward the production of the public good 
+\begin_inset Formula $y$
+\end_inset
+
+, with 
+\begin_inset Formula $v_{i}<w_{i}$
+\end_inset
+
+.
+ By definition, at a Nash equilibrium allocation, written 
+\begin_inset Formula $(\bar{x}_{1},\bar{x}_{2},\bar{v}_{1},\bar{v}_{2},y)$
+\end_inset
+
+, each consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ maximizes 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+, treating 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+ as given (for 
+\begin_inset Formula $j\neq i$
+\end_inset
+
+), and taking into acount the equality
+\begin_inset Formula 
+\[
+ky=v_{1}+v_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find the conditions that characterize Pareto efficient allocations (These
+ will be equations in 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+, and the originial endowments.)
+\end_layout
+
+\begin_layout Enumerate
+Suppose that, at a Nash equilibrium, consumer 2 contributes a positive amount
+ of labor, but is still left with positive amounts of leisure, i.e., 
+\begin_inset Formula $w_{2}>\bar{v}_{2}>0$
+\end_inset
+
+, while consumer 1 contributes nothing, i.e., 
+\begin_inset Formula $\bar{v}_{1}=0$
+\end_inset
+
+.
+ Could such an equilibrium be Pareto optimal?
+\end_layout
+
+\begin_layout Enumerate
+Suppose that, at a Nash equilibrium, both consumers contribute positive
+ amounts of labor, but are still left with positive amounts of leisure.
+ Could such an equilibrium be Pareto optimal?
+\end_layout
+
+\begin_layout Enumerate
+Suppose that, at a Nash equilibrium, neither consumer contributes any labor.
+ Could such an equilibrium be Pareto optimal?
+\end_layout
+
+\begin_layout Enumerate
+Define the Lindahl equilibrium and prove that every Lindahl equilibrium
+ is Pareto efficient under local non-satiation.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+The conditions for Pareto efficiency in the presence of public goods are
+ given by the feasibility constraints and the Lindahl-Samuelson condition:
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{i=1}^{n}\frac{\frac{\partial u_{i}}{\partial y}}{\frac{\partial u_{i}}{\partial x_{i}}} & = & \frac{1}{f^{\prime}(v)}\\
+\sum_{i=1}^{n}x_{i}+v & \leq & \sum_{i=1}^{n}w_{i}\\
+y & = & f(v)
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $y=y_{1}+y_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $v=v_{1}+v_{2}$
+\end_inset
+
+.
+ So, the conditions for Pareto efficiency in this economy are as follows
+\begin_inset Formula 
+\begin{gather*}
+\phi_{1}^{\prime}(y)+\phi_{2}^{\prime}(y)=k\\
+x_{1}+v_{1}=w_{1}\\
+x_{2}+v_{2}=w_{2}\\
+ky=v_{1}+v_{2}=(w_{1}-x_{1})+(w_{2}-x_{2})
+\end{gather*}
+
+\end_inset
+
+In this economy, note that the Pareto optimality condition depends only
+ on the aggregate amount of 
+\begin_inset Formula $y$
+\end_inset
+
+ produced.
+ It does not matter who contributes, so long as enough is contributed.
+ So, in the case of quasi-linear utility functions, 
+\begin_inset Formula $y$
+\end_inset
+
+ is uniquely determined.
+\end_layout
+
+\begin_layout Standard
+Now, let us find the Nash Equilibrium.
+ In a Nash Equilibrium, each consumer takes the other agent's strategy as
+ given, and maximizes his payoffs.
+ So, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\max_{x_{i}} & u_{i}=x_{i}+\phi_{i}(y)\\
+\mbox{s.t.} & y=\frac{1}{k}(v_{i}+v_{-i})\\
+ & x_{i}+v_{i}\leq w_{i}\\
+ & v_{i}\geq0
+\end{eqnarray*}
+
+\end_inset
+
+Setting up the Lagrangian we have
+\begin_inset Formula 
+\[
+L=x_{i}+\phi_{i}\left(\frac{1}{k}[v_{i}+v_{-i}]\right)+\lambda(w_{i}-x_{i}-v_{i})+\mu v_{i}
+\]
+
+\end_inset
+
+Taking partial derivatives we obtain the following first-order conditions
+\begin_inset Formula 
+\begin{eqnarray*}
+\lambda & = & 1\\
+\frac{1}{k}\phi_{i}^{\prime}(y)+\mu & = & \lambda\\
+\lambda(w_{i}-x_{i}-v_{i}) & = & 0\\
+\mu v_{i} & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+If 
+\begin_inset Formula $v_{i}>0$
+\end_inset
+
+, then 
+\begin_inset Formula $\mu=0$
+\end_inset
+
+, and this implies that 
+\begin_inset Formula $\phi_{i}^{\prime}(y)=k$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $v_{i}=0$
+\end_inset
+
+, then 
+\begin_inset Formula $\mu\geq0$
+\end_inset
+
+, and this implies that 
+\begin_inset Formula $\phi_{i}^{\prime}(y)\leq k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{v}_{1}=0$
+\end_inset
+
+, 
+\begin_inset Formula $w_{2}>\bar{v}_{2}>0$
+\end_inset
+
+, 
+\begin_inset Formula $y=\frac{\bar{v}_{2}}{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phi_{1}^{\prime}(y)\leq k$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi_{2}^{\prime}(y)=k$
+\end_inset
+
+.
+ This implies that 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\phi_{1}^{\prime}(y)+\phi_{2}^{\prime}(y)>k$
+\end_inset
+
+.
+ Thus, this type of equilibrium will not be Pareto optimal.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{v}_{1}>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{v}_{2}>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phi_{i}^{\prime}(y)=k$
+\end_inset
+
+, so 
+\begin_inset Formula $\phi_{1}^{\prime}(y)+\phi_{2}^{\prime}(y)=2k$
+\end_inset
+
+.
+ Also, 
+\begin_inset Formula $y=\frac{(\bar{v}_{1}+\bar{v}_{2})}{k}$
+\end_inset
+
+.
+ However, since 
+\begin_inset Formula $\phi_{i}^{\prime}(y)>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi_{i}^{\prime\prime}(y)<0$
+\end_inset
+
+, then this amount of 
+\begin_inset Formula $y$
+\end_inset
+
+ is too little.
+ Thus, this type of equilibrium will not be Pareto optimal.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part d.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{v}_{1}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{v}_{2}=0$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $y=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This implies that 
+\begin_inset Formula $\phi_{i}^{\prime}(0)\leq k$
+\end_inset
+
+.
+ So, it is possible 
+\begin_inset Formula $\phi_{1}^{\prime}(0)+\phi_{2}^{\prime}(0)=k$
+\end_inset
+
+.
+ Thus, this type of equilibrium can lead to Pareto efficiency.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part e.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+(Lindahl Equilibrium) 
+\series default
+An allocation 
+\begin_inset Formula $(x^{*},y^{*})\in\mathbb{R}^{3}$
+\end_inset
+
+ is a Lindahl equilibrium if it is feasible and there exists a price vector
+ 
+\begin_inset Formula $p^{*}\in\mathbb{R}_{+}$
+\end_inset
+
+ and personalized price vectors 
+\begin_inset Formula $q_{i}^{*}\in\mathbb{R}_{+}$
+\end_inset
+
+, one for each individual 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+, such that
+\end_layout
+
+\begin_layout Definition*
+(i) 
+\begin_inset Formula $p^{*}x_{i}^{*}+q_{i}^{*}y^{*}\leq p^{*}w_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+(ii) 
+\begin_inset Formula $(x_{i},y)\succ_{i}(x_{i}^{*},y^{*})$
+\end_inset
+
+ implies 
+\begin_inset Formula $p^{*}x_{i}+q_{i}^{*}y>p^{*}w_{i}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Definition*
+(iii) 
+\begin_inset Formula $q^{*}y^{*}-p^{*}v^{*}=0$
+\end_inset
+
+ where 
+\begin_inset Formula $v^{*}=\sum_{i=1}^{2}w_{i}-\sum_{i=1}^{2}x_{i}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum_{i=1}^{2}q_{i}^{*}=q^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+We call 
+\begin_inset Formula $(x^{*},y^{*},p^{*},q_{1}^{*},q_{2}^{*})$
+\end_inset
+
+ a Lindahl Equilibrium.
+\end_layout
+
+\begin_layout Standard
+Now, we prove that every Lindahl-Equilibrium is Pareto optimal under local
+ non-satiation.
+\end_layout
+
+\begin_layout Proof
+Suppose not.
+ Then, 
+\begin_inset Formula $ $
+\end_inset
+
+there exists a feasible allocation 
+\begin_inset Formula $(\hat{x}_{1},\hat{x}_{2},\hat{y})$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\ i=1,2:(\hat{x}_{i},\hat{y})\succsim_{i}(x_{i}^{*},y^{*})$
+\end_inset
+
+ and 
+\begin_inset Formula $\exists\ k\in\{1,2\}:(\hat{x}_{k},\hat{y})\succsim_{i}(x_{k}^{*},y^{*})$
+\end_inset
+
+.
+ By local non-satiation, 
+\begin_inset Formula $p^{*}\hat{x}_{i}+q_{i}^{*}\hat{y}\geq p^{*}w_{i}$
+\end_inset
+
+.
+ From the definition of a Lindahl-Equilibrium, 
+\begin_inset Formula $(\hat{x}_{k},\hat{y})\succ_{k}(x_{k}^{*},y^{*})\implies p^{*}\hat{x}_{k}+q_{k}^{*}\hat{y}>p^{*}w_{k}$
+\end_inset
+
+.
+ So, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{i=1}^{2}p^{*}\hat{x}_{i}+\sum_{i=1}^{2}q_{i}^{*}\hat{y} & > & \sum_{i=1}^{2}p^{*}w_{i}\\
+p^{*}\sum_{i=1}^{2}\hat{x}_{i}+q\hat{y} & > & p^{*}\sum_{i=1}^{2}w_{i}\\
+p^{*}\sum_{i=1}^{2}\hat{x}_{i}+p^{*}\hat{v} & > & p^{*}\sum_{i=1}^{2}w_{i}
+\end{eqnarray*}
+
+\end_inset
+
+since 
+\begin_inset Formula $q^{*}\hat{y}-p^{*}\hat{v}\leq q^{*}y^{*}-p^{*}v^{*}=0\iff q^{*}\hat{y}\leq p^{*}\hat{v}$
+\end_inset
+
+.
+ Thus,
+\begin_inset Formula 
+\[
+p^{*}\left[\sum_{i=1}^{2}\hat{x}_{i}+\hat{v}-\sum_{i=1}^{2}w_{i}\right]>0
+\]
+
+\end_inset
+
+which contradicts the fact that 
+\begin_inset Formula $(\hat{x},\hat{y})$
+\end_inset
+
+ is feasible.
+\end_layout
+
+\begin_layout Problem
+The Coase (
+\begin_inset Quotes eld
+\end_inset
+
+Invariance
+\begin_inset Quotes erd
+\end_inset
+
+) Theorem assets that property rights assignments or liability rules have
+ no effect on the equilibrium level of an externality (e.g., noise avoidance
+ or pollution).
+ Consider a two person, two good economy where one good is money, and the
+ other is music produces costlessly and enjoyed by person 
+\begin_inset Formula $A$
+\end_inset
+
+, but disliked by neighbor 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Both enjoy money.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What special assumpetions on the two agents preferences validate Coases
+ Invariance claim? Justify your answer by considering alternative assignments
+ of rights: (1) The musician has a right to play without the neighbor's
+ consent; (2) Neighbors consent is required.
+ (Compensation may be paid by one party to the other to achieve concesssions.)
+ Illustrate your answer by a well-explained diagram.
+\end_layout
+
+\begin_layout Enumerate
+Suppose both parties have Cobb-Douglas preferences (
+\begin_inset Formula $A$
+\end_inset
+
+ for money versus music, 
+\begin_inset Formula $B$
+\end_inset
+
+ for money versus absence of music.) Would then the Invariance claim be valid?
+ Illustrate your answer by a well-explained diagram.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+If preferences are quasi-linear in money 
+\begin_inset Formula $(c)$
+\end_inset
+
+, consumers can trade disutility of music 
+\begin_inset Formula $(m)$
+\end_inset
+
+ for money to maintain a given level of utility.
+\begin_inset Formula 
+\begin{gather*}
+u_{A}=c_{A}+v_{A}(m);\ v_{A}^{\prime}(m)>0\\
+u_{B}=c_{B}+v_{B}(m);\ v_{B}^{\prime}(m)<0
+\end{gather*}
+
+\end_inset
+
+In this case, everything has a monetary value.
+ We also assume decreasing marginal utility in music, i.e., 
+\begin_inset Formula $v_{i}^{\prime\prime}(m)<0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In general, the competitive equilibrium outcome is not Pareto optimal.
+ In order to maximize utility, agent 
+\begin_inset Formula $A$
+\end_inset
+
+ should choose music so that the interior solution satisfies 
+\begin_inset Formula $v_{A}^{\prime}(\bar{m})=0$
+\end_inset
+
+.
+ Even though agent 
+\begin_inset Formula $B$
+\end_inset
+
+'s utility depends on 
+\begin_inset Formula $m$
+\end_inset
+
+, he cannot affect the choice of 
+\begin_inset Formula $m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+On the other hand, the socially optimal level of 
+\begin_inset Formula $m$
+\end_inset
+
+ will maximize the sum of the consumers' utilities
+\begin_inset Formula 
+\[
+\max_{m}v_{A}(m)+v_{B}(m)
+\]
+
+\end_inset
+
+The first-order condition for an interior maximum is:
+\begin_inset Formula 
+\[
+v_{A}^{\prime}(m^{*})+v_{B}^{\prime}(m^{*})=0
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $m^{*}$
+\end_inset
+
+ is the Pareto optimal amount of 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Thus, the social optimum is where the sum of the marginal benefit of the
+ two consumers equals zero.
+ In the case where the externality is bad for consumer 
+\begin_inset Formula $B$
+\end_inset
+
+, the level of 
+\begin_inset Formula $\bar{m}>m^{*}$
+\end_inset
+
+.
+ So, too much 
+\begin_inset Formula $m$
+\end_inset
+
+ is produced.
+ Now, we show that, as long as property rights are clearly assigned, the
+ two parties will negotiate in such a way that the optimal level of the
+ externality-producing activity is implemented.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case 1: The musician has a right to play without the neighbor's consent
+\end_layout
+
+\begin_layout Standard
+Agent 
+\begin_inset Formula $A$
+\end_inset
+
+ has the right to play as much music as he likes.
+ However, this right is contractible.
+ Agent 
+\begin_inset Formula $A$
+\end_inset
+
+ can sell agent 
+\begin_inset Formula $B$
+\end_inset
+
+ the right to prohibit some of his production of music in exchange for some
+ transfer, 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+.
+ The two consumers will bargain both over the size of the transfer 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ and over the number of units of the externality good produced 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In order to determine the outcome of the bargaining, we first specify the
+ bargaining mechanism as follows:
+\end_layout
+
+\begin_layout Standard
+1.
+ Agent 
+\begin_inset Formula $B$
+\end_inset
+
+ offers agent 
+\begin_inset Formula $A$
+\end_inset
+
+ a take-it-or-leave-it contract specifying a payment 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ and an activity level 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2.
+ If agent 
+\begin_inset Formula $A$
+\end_inset
+
+ accepts the offer, than that outcome is implemented.
+ If agent 
+\begin_inset Formula $A$
+\end_inset
+
+ does not accept the offer, then agent 
+\begin_inset Formula $A$
+\end_inset
+
+ can produce as much music as he'd like, i.e., 
+\begin_inset Formula $m=\bar{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+To analyze this, begin by considering which offers 
+\begin_inset Formula $(m,T)$
+\end_inset
+
+ will be accepted by agent 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ In the absence of an agreement, agent 
+\begin_inset Formula $A$
+\end_inset
+
+ will produce 
+\begin_inset Formula $m=\bar{m}$
+\end_inset
+
+, so agent 
+\begin_inset Formula $A$
+\end_inset
+
+ will accept 
+\begin_inset Formula $(m_{1},T_{1})$
+\end_inset
+
+ if and only if it offers higher utility then 
+\begin_inset Formula $m=\bar{m}$
+\end_inset
+
+.
+ That is, agent 
+\begin_inset Formula $A$
+\end_inset
+
+ accepts if and only if
+\begin_inset Formula 
+\[
+v_{A}(m)+T\geq v_{A}(\bar{m})
+\]
+
+\end_inset
+
+Given this constraint on the set of acceptable offers, agent 
+\begin_inset Formula $B$
+\end_inset
+
+ will choose 
+\begin_inset Formula $(m_{1},T_{1})$
+\end_inset
+
+ in order to solve the following problem
+\begin_inset Formula 
+\begin{eqnarray*}
+\max_{m,T} & v_{B}(m)-T\\
+\mbox{s.t.} & v_{A}(m)+T\geq v_{A}(\bar{m})
+\end{eqnarray*}
+
+\end_inset
+
+Since agent 
+\begin_inset Formula $A$
+\end_inset
+
+ prefers higher 
+\begin_inset Formula $T$
+\end_inset
+
+, the constraint will bind at the optimum.
+ Thus, the problem becomes
+\begin_inset Formula 
+\[
+{\displaystyle \max_{m}}\ v_{B}(m)+v_{A}(\bar{m})-v_{A}(m)
+\]
+
+\end_inset
+
+The first-order condition for this problem is given by:
+\begin_inset Formula 
+\[
+v_{A}^{\prime}(m_{1})+v_{B}^{\prime}(m_{1})=0
+\]
+
+\end_inset
+
+This is the same condition that defines the socially optimal level of 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Therefore, agent 
+\begin_inset Formula $B$
+\end_inset
+
+ chooses 
+\begin_inset Formula $m_{1}=m^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{1}=v_{A}(\bar{m})-v_{A}(m^{*})$
+\end_inset
+
+, and the offer 
+\begin_inset Formula $(m_{1},T_{1})$
+\end_inset
+
+ is accepted by agent 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Case 2: The neighbor's conset is required to play music
+\end_layout
+
+\begin_layout Standard
+Agent 
+\begin_inset Formula $B$
+\end_inset
+
+ has the right to prohibit agent 
+\begin_inset Formula $A$
+\end_inset
+
+ from producing music 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ However, this right is contractible.
+ Agent 
+\begin_inset Formula $B$
+\end_inset
+
+ can sell agent 
+\begin_inset Formula $A$
+\end_inset
+
+ the right to undertake 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ units of activity 
+\begin_inset Formula $m$
+\end_inset
+
+ in exchange for some transfer, 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+.
+ The two consumers will bargain both over the size of the transfer 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ and over the number of units of the externality good produced, 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+1.
+ Agent 
+\begin_inset Formula $B$
+\end_inset
+
+ offers agent 
+\begin_inset Formula $A$
+\end_inset
+
+ a take-it-or-leave-it contract specifying a payment 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ and an activity level 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2.
+ If agent 
+\begin_inset Formula $A$
+\end_inset
+
+ accepts the offer, than that outcome is implemented.
+ If agent 
+\begin_inset Formula $A$
+\end_inset
+
+ does not accept the offer, then agent 
+\begin_inset Formula $A$
+\end_inset
+
+ cannot produce any music, i.e., 
+\begin_inset Formula $m=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+To analyze this, begin by considering which offers 
+\begin_inset Formula $(m,T)$
+\end_inset
+
+ will be accepted by agent 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ In the absence of an agreement, agent 
+\begin_inset Formula $A$
+\end_inset
+
+ must produce 
+\begin_inset Formula $m=0$
+\end_inset
+
+, so agent 
+\begin_inset Formula $A$
+\end_inset
+
+ will accept 
+\begin_inset Formula $(m_{2},T_{2})$
+\end_inset
+
+ if and only if it offers higher utility than 
+\begin_inset Formula $m=0$
+\end_inset
+
+.
+ That is, agent 
+\begin_inset Formula $A$
+\end_inset
+
+ accepts if and only if
+\begin_inset Formula 
+\[
+v_{A}(m)-T_{2}\geq v_{A}(0)
+\]
+
+\end_inset
+
+Given this constraint on the set of acceptable offers, agent 
+\begin_inset Formula $B$
+\end_inset
+
+ will choose 
+\begin_inset Formula $(m_{2},T_{2})$
+\end_inset
+
+ in order to solve the following problem:
+\begin_inset Formula 
+\begin{eqnarray*}
+\max_{m,T} & v_{B}(m)+T\\
+\mbox{s.t.} & v_{A}(m)-T\geq v_{A}(0)
+\end{eqnarray*}
+
+\end_inset
+
+Since agent 
+\begin_inset Formula $B$
+\end_inset
+
+ prefers higher 
+\begin_inset Formula $T$
+\end_inset
+
+, the constraint will bind at the optimum.
+ Thus, the problem becomes
+\begin_inset Formula 
+\[
+\max_{h}\ v_{B}(m)+v_{A}(m)-v_{A}(0)
+\]
+
+\end_inset
+
+The first-order condition for this problem is given by
+\begin_inset Formula 
+\[
+v_{A}^{\prime}(m_{2})+v_{B}^{\prime}(m_{2})=0
+\]
+
+\end_inset
+
+This is the same condition that defines the socially optimal level of 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Therefore, agent 
+\begin_inset Formula $B$
+\end_inset
+
+ chooses 
+\begin_inset Formula $m_{2}=m^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $T=v_{A}(m^{*})-v_{A}(0)$
+\end_inset
+
+, and the offer 
+\begin_inset Formula $(m_{2},T_{2})$
+\end_inset
+
+ is accepted by agent 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+Now, suppose that both parties have Cobb-Douglas preferences.
+ 
+\end_layout
+
+\begin_layout Standard
+For example, consider:
+\begin_inset Formula 
+\begin{gather*}
+u_{1}\left(c_{1},m\right)=c_{1}^{\alpha}m^{1-\alpha}\\
+u_{2}\left(c_{2},m\right)=c_{2}^{\gamma}m^{1-\gamma}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Unlike the previous case, consumers utility is no longer quasilinear in
+ money.
+ Consequently, the contract curve is no longer a horizontal line.
+ Accordingly, the alternate allocations decribed earlier will each result
+ in different equilibrium outcomes.
+ Therefore, the invariance theorem may not hold in this case.
+\end_layout
+
+\begin_layout Problem
+Consider an economy with two firms, one consumer, and three goods: labor
+ 
+\begin_inset Formula $l$
+\end_inset
+
+ and two produced goods 
+\begin_inset Formula $q_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $q_{2}$
+\end_inset
+
+.
+ Firm 1's prouciton funciton is 
+\begin_inset Formula $q_{1}=l_{1}$
+\end_inset
+
+.
+ Firm 2's proudciton function is 
+\begin_inset Formula $q_{2}=q_{1}l_{2}$
+\end_inset
+
+ , and it therefore has an externality with 
+\begin_inset Formula $q_{1}$
+\end_inset
+
+.
+ The consumer's utility is 
+\begin_inset Formula $u=q_{1}q_{2}$
+\end_inset
+
+, and the endowment of labor is 1.
+ Let the price of labor be 1.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find the competitive equilibrium for the economy.
+\end_layout
+
+\begin_layout Enumerate
+Find the unique Pareto efficient allocation for the economy.
+\end_layout
+
+\begin_layout Enumerate
+The government wishes to obtain Pareto efficiency by putting an excise tax
+ 
+\begin_inset Formula $t$
+\end_inset
+
+ on good 2 and giving the money collected back to the consumer as a lump-sum
+ subsidy 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ What 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+ should be used?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+\bar under
+Part a.
+\end_layout
+
+\begin_layout Standard
+To find the competitive equilibrium, we must find the firms' profit maximizing
+ decision and the consumer's utility maximizing decision.
+ Note, the price of labor has been normalized to one, and 
+\begin_inset Formula $l=l_{1}+l_{2}$
+\end_inset
+
+.
+ Both firms have linear production functions, so in equilibrium, they will
+ have zero profit.
+ So, if since 
+\begin_inset Formula $q_{1}=l_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $q_{2}=l_{1}l_{2}$
+\end_inset
+
+, then 
+\begin_inset Formula $p_{1}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{2}=\frac{1}{l_{1}}$
+\end_inset
+
+.
+ The consumer has Cobb-Douglas preferences, so his demand function is given
+ by
+\begin_inset Formula 
+\[
+x(p)=\left(\begin{array}{c}
+\frac{1}{2p_{1}}\\
+\frac{1}{2p_{2}}
+\end{array}\right)
+\]
+
+\end_inset
+
+By the market clearing condition, we have 
+\begin_inset Formula $q_{1}=x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $q_{2}=x_{2}$
+\end_inset
+
+.
+ Thus, the competitive equilibrium is given by
+\begin_inset Formula 
+\[
+\left[x^{*},y_{1}^{*},y_{2}^{*},p^{*}\right]=\left[\left(\begin{array}{c}
+\nicefrac{1}{2}\\
+\nicefrac{1}{2}\\
+0
+\end{array}\right),\left(\begin{array}{c}
+\nicefrac{1}{2}\\
+0\\
+-\nicefrac{1}{2}
+\end{array}\right),\left(\begin{array}{c}
+0\\
+\nicefrac{1}{2}\\
+-\nicefrac{1}{2}
+\end{array}\right),\left(\begin{array}{c}
+1\\
+2\\
+1
+\end{array}\right)\right]
+\]
+
+\end_inset
+
+
+\series bold
+\bar under
+Part b.
+\end_layout
+
+\begin_layout Standard
+To find the unique Pareto efficient allocation for the economy, we maximize
+ the consumer's utility subject to the feasibility constraints
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & u=q_{1}q_{2}\\
+\mbox{s.t.} & q_{1}=l_{1}\\
+ & q_{2}=q_{1}l_{2}\\
+ & l_{1}+l_{2}=1
+\end{eqnarray*}
+
+\end_inset
+
+The Lagrangian is given by
+\begin_inset Formula 
+\[
+L=l_{1}^{2}l_{2}+\lambda(1-l_{1}-l_{2})
+\]
+
+\end_inset
+
+and the first-order conditions are
+\begin_inset Formula 
+\begin{eqnarray*}
+2l_{1}l_{2} & = & \lambda\\
+l_{1}^{2} & = & \lambda
+\end{eqnarray*}
+
+\end_inset
+
+Combining these two equations we have
+\begin_inset Formula 
+\begin{eqnarray*}
+2l_{1}l_{2} & = & l_{1}^{2}\\
+2l_{2} & = & (1-l_{2})\\
+l_{2} & = & \frac{1}{3}\\
+l_{1} & = & \frac{2}{3}
+\end{eqnarray*}
+
+\end_inset
+
+Thus, for the Pareto efficient allocation, 
+\begin_inset Formula $l_{1}=q_{1}=\frac{2}{3}$
+\end_inset
+
+, 
+\begin_inset Formula $l_{2}=\frac{1}{3}$
+\end_inset
+
+, and 
+\begin_inset Formula $q_{2}=q_{1}l_{2}=\frac{2}{9}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Part c.
+\end_layout
+
+\begin_layout Standard
+The government wishes to obtain Pareto efficiency by putting an excise tax
+ 
+\begin_inset Formula $t$
+\end_inset
+
+ on good 2 and giving the money collected back to the consumer as a lump-sum
+ subsidy 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ So, the consumer's new constrained maximization problem is
+\begin_inset Formula 
+\begin{eqnarray*}
+\max & u_{1}=q_{1}q_{2}\\
+\mbox{s.t.} & p_{1}q_{1}+(p_{2}+t)q_{2}=1+s
+\end{eqnarray*}
+
+\end_inset
+
+Since the consumer's utility funciton is Cobb-Douglas, his demand for each
+ good is
+\begin_inset Formula 
+\begin{eqnarray*}
+q_{1} & = & \frac{(1+s)}{2p_{1}}\\
+q_{2} & = & \frac{(1+s)}{2p_{2}+2t}
+\end{eqnarray*}
+
+\end_inset
+
+Note, the Pareto optimal allocation has 
+\begin_inset Formula $q_{1}=\frac{2}{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $q_{2}=\frac{2}{9}$
+\end_inset
+
+, so
+\begin_inset Formula 
+\begin{gather*}
+\frac{2}{3}=\frac{(1+s)}{2p_{1}}\\
+\implies s=\frac{4p_{1}-3}{3}\\
+\frac{2}{9}=\frac{(1+s)}{2p_{2}+2t}
+\end{gather*}
+
+\end_inset
+
+As in part a, if 
+\begin_inset Formula $p_{1}<1$
+\end_inset
+
+, then 
+\begin_inset Formula $l_{1}=q_{1}=q_{2}=u=0$
+\end_inset
+
+, i.e., the consumer does not maximize his utility.
+ If 
+\begin_inset Formula $p_{1}>1$
+\end_inset
+
+, then 
+\begin_inset Formula $q_{1}=l_{1}=\infty$
+\end_inset
+
+, but this is not feasible.
+ So, 
+\begin_inset Formula $p=1$
+\end_inset
+
+, and 
+\begin_inset Formula $s=\frac{1}{3}$
+\end_inset
+
+.
+ Since the consumer receives a subside equal to the amount of tax he pays,
+\begin_inset Formula 
+\begin{eqnarray*}
+s & = & q_{2}t\\
+\frac{1}{3} & = & \frac{2}{9}t\\
+t & = & \frac{3}{2}
+\end{eqnarray*}
+
+\end_inset
+
+Finally, we can find 
+\begin_inset Formula $p_{2}=\frac{3}{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

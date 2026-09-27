@@ -1,0 +1,2818 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 9 
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Part*
+Economic Core, Fair Allocations, and Social Choice Theory
+\end_layout
+
+\begin_layout Section*
+9.1
+\begin_inset space \quad{}
+\end_inset
+
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this chapter, we briefly discuss some topics in the framework of general
+ equilibrium theory, namely economic core, fair allocations, and social
+ choice theory.
+ The theory of core is important because it gives an insight into how a
+ competitive equilibrium is achieved as a result of individual strategic
+ behavior instead of results of an auctioneer and the Walrasian tatonnement
+ mechanism.
+ It shows the necessity of adopting a market institution as long as individuals
+ behave self-interestedly.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We have also seen that Pareto optimality may be too weka a criterion to
+ be meaningful.
+ It does not address any question about income distribution and equity of
+ allocations.
+ Fairness is a notion to overcome this difficulty.
+ This is one way to restrict a set of Pareto optimum.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In a slightly different framework, suppose that a society is deciding the
+ social priority among finite alternatives.
+ Alternatives may be different from Pareto optimal allocations.
+ Let us think of a social 
+\begin_inset Quotes eld
+\end_inset
+
+rule
+\begin_inset Quotes erd
+\end_inset
+
+ to construct the social ordering (social welfare function) from many individual
+ orderings of different alternatives.
+ The question is: is it possible to construct a rule satisfying several
+ desirable properties? Both 
+\begin_inset Quotes eld
+\end_inset
+
+fairness
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+social welfare function
+\begin_inset Quotes erd
+\end_inset
+
+ address a question of social justice.
+\end_layout
+
+\begin_layout Section*
+9.2
+\begin_inset space \quad{}
+\end_inset
+
+The Core of Exchange Economies
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The use of a competitive (market) system is just one way to allocate resources.
+ What if we use some other social institution? Would we still end up with
+ an allocaiton that was 
+\begin_inset Quotes eld
+\end_inset
+
+close
+\begin_inset Quotes erd
+\end_inset
+
+ to a competitive equilibrium allocation? The answer will be that, if we
+ allow agents to form coalitions, the resulting allocaiton can only be a
+ competitive equilibrium allocaiton when the economy becomes large.
+ Such an allocation is called a core allocation and was originally considered
+ by Edgeworth.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The core is a concept in which every individual and every group agree to
+ accept an allocation instead of moving away from the social coalition.
+ There is some reason to think that the core is a meaningful political concept.
+ If a group of people find themselves able, using their own resources to
+ achieve a better life, it is not unreasonable to suppose that they will
+ try to enforce this threat against the rest of the community.
+ They may find themselves frustrated if the rest of the community resorts
+ to violence or force to prevent them from withdrawing.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The theory of the core is distinguished by its parsimony.
+ Its conceptual apparatus does not appeal to any specific trading mechanism,
+ nor does it assume any particular institutional setup.
+ Informally, the notion of competition that the theory explores is one in
+ which traders are well informed of the economic characteristics of other
+ traders, and in which the members of any group of traders can bind themselves
+ to any mutually advantageous agreement.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For simplicity, we consider exchange economies.
+ We say two agents are of the same type if they have the same preferences
+ and endowments.
+ The 
+\begin_inset Formula $r$
+\end_inset
+
+-replication of the original economy: there are 
+\begin_inset Formula $r$
+\end_inset
+
+ times as many agents of each type in the original economy.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+9.2.1 (Blocking Coalition).
+
+\series default
+ A group of agents 
+\begin_inset Formula $S$
+\end_inset
+
+ (a coalition) is said to block (improve upon) a given allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ if there is a Pareto imporvement with their own resources, that is, if
+ there is some allocation 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+it is feasible for 
+\begin_inset Formula $S$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\sum_{i\in S}x_{i}^{\prime}\leq\sum_{i\in S}w_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x_{i}^{\prime}\succsim_{i}x_{i}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i\in S$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{k}^{\prime}\succ_{k}x_{k}$
+\end_inset
+
+ for some 
+\begin_inset Formula $k\in S$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A 
+\emph on
+coalition
+\emph default
+ is a group of agents, and thus it is a subset of 
+\begin_inset Formula $n$
+\end_inset
+
+ agents.
+ If the original economy has 
+\begin_inset Formula $N$
+\end_inset
+
+ agents, then 
+\begin_inset Formula $2^{N}-1$
+\end_inset
+
+ possible coalitions can be formed.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+9.2.3 (Core).
+
+\series default
+ A feasible allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ is said to have the core property if it cannot be improved upon for any
+ coalition.
+ The core of an economy is the set of all feasible allocations that have
+ the core property, i.e., it is the set of allocations that have no blocking
+ coalitions.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 9.2.1.
+ 
+\series default
+Every allocation in the core is Pareto optimal (coalition by whole people),
+ but not every Pareto optimal allocation is in the core.
+ So, the set of core allocations is a subset of the set of Pareto efficient
+ allocations.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+9.2.3 (Individual Rationality).
+
+\series default
+ An allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ is individually rational if 
+\begin_inset Formula $x_{i}\succsim_{i}w_{i}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The individual rationality condition is also called the participation condition
+ which means that a person will not participate in the economic activity
+ if he is worse off than at the initial endowment.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 9.2.2.
+
+\series default
+ Every allocation in the core must be individually rational.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 9.2.3.
+
+\series default
+ When 
+\begin_inset Formula $n=2$
+\end_inset
+
+ and preference relations are weakly monotonic, an allocation is in the
+ core if and only if it is Pareto optimal and individually rational.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 9.2.4.
+
+\series default
+ Even though a Pareto optimal allocation is independent of individual endowments
+, an allocation in the core depends on individual endowments.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+What is the relationship between core allocaitons and competitive equilibrium
+ allocations?
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+9.2.1.
+
+\series default
+ 
+\emph on
+Under local non-satiation, if 
+\begin_inset Formula $(x,p)$
+\end_inset
+
+ is a competitive equilibrium, then 
+\begin_inset Formula $x$
+\end_inset
+
+ has the core property.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ satisfy local non-satiation.
+ Assume 
+\begin_inset Formula $(x,p)$
+\end_inset
+
+ is a competitive equilibrium.
+ Suppose for contradiction that 
+\begin_inset Formula $x$
+\end_inset
+
+ does not have the core property.
+ Then, there exists a group of agents 
+\begin_inset Formula $S$
+\end_inset
+
+ and an allocation 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sum_{i\in S}x_{i}^{\prime}\leq\sum_{i\in S}w_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}^{\prime}\succsim_{i}x_{i}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i\in S$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{k}^{\prime}\succ_{k}x_{k}$
+\end_inset
+
+ for some 
+\begin_inset Formula $k\in S$
+\end_inset
+
+.
+ By local non-satiation, 
+\begin_inset Formula $\forall\ i\in S:p\cdot x_{i}^{\prime}\geq p\cdot x_{i}$
+\end_inset
+
+.
+ By utility maximization, 
+\begin_inset Formula $\exists\ k\in S:p\cdot x_{k}^{\prime}>p\cdot x_{k}$
+\end_inset
+
+.
+ Taking summation, we have
+\begin_inset Formula 
+\[
+\sum_{i\in S}p\cdot x_{i}^{\prime}>\sum_{i\in S}p\cdot x_{i}=\sum_{i\in S}p\cdot w_{i}
+\]
+
+\end_inset
+
+However, this contradicts the fact that 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ is feasible for 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Therefore, the competitive equilibrium must be an allocation in the core.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We refer to the allocations in which consumers of the same type get the
+ same consumption bundles as 
+\emph on
+equal-treatment allocations
+\emph default
+.
+ It can be shown that any allocation in the core must be an equal-treatment
+ allocation.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+9.2.1 (Equal Treatment in the Core).
+ 
+\series default
+\emph on
+Suppose agents' preferences are strictly convex.
+ If 
+\begin_inset Formula $x$
+\end_inset
+
+ is an allocation in the r-core of a given economy, then any two agents
+ of the same type must receive the same bundle.
+\end_layout
+
+\begin_layout Proof
+Assume preferences are strictly convex.
+ Let 
+\begin_inset Formula $x$
+\end_inset
+
+ be an allocation in the core and index the 
+\begin_inset Formula $2r$
+\end_inset
+
+ agents using subscripts 
+\begin_inset Formula $A_{1},\ldots,A_{r}$
+\end_inset
+
+ and 
+\begin_inset Formula $B_{1},\ldots,B_{r}$
+\end_inset
+
+.
+ Suppose for contradiction that all agents of the same type do not get the
+ same allocation.
+ Then, there will be at least one person of each type who does strictly
+ worse than everyone else.
+ Denote the allocations of these two individuals as 
+\begin_inset Formula $x_{uA}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{uB}$
+\end_inset
+
+.
+ If there are ties, select any of the tied agents.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $\bar{x}_{A}=\frac{1}{r}\sum_{i=1}^{r}x_{A_{i}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{x}_{B}=\frac{1}{r}\sum_{i=1}^{r}x_{B_{i}}$
+\end_inset
+
+ be the average bundle of the type-
+\begin_inset Formula $A$
+\end_inset
+
+ and type-
+\begin_inset Formula $B$
+\end_inset
+
+ agents.
+ Since the allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ is feasible and every agent of the same type gets the same endowment, we
+ have
+\begin_inset Formula 
+\[
+\bar{x}_{A}+\bar{x}_{B}=\frac{1}{r}\sum_{i=1}^{r}x_{A_{i}}+\frac{1}{r}\sum_{i=1}^{r}x_{B_{i}}=\frac{1}{r}\sum_{i=1}^{r}w_{A_{i}}+\frac{1}{r}\sum_{i=1}^{r}w_{B_{i}}=\frac{1}{r}rw_{A}+\frac{1}{r}rw_{B}=w_{A}+w_{B}
+\]
+
+\end_inset
+
+So, 
+\begin_inset Formula $(\bar{x}_{A},\bar{x}_{B})$
+\end_inset
+
+ is feasible for the coalition consisting of the two underdogs.
+ Remember, we are assuming that at least one of the underdogs receives a
+ different bundle than the rest of the agents of the same type.
+ Without loss of generality, let the 
+\begin_inset Formula $A$
+\end_inset
+
+ underdog receive a different bundle than the rest of the 
+\begin_inset Formula $A$
+\end_inset
+
+ agents.
+ Since 
+\begin_inset Formula $\bar{x}_{A}$
+\end_inset
+
+ is the weighted average of bundles that are at least as good as 
+\begin_inset Formula $x_{uA}$
+\end_inset
+
+, then underdog 
+\begin_inset Formula $A$
+\end_inset
+
+ strictly prefers 
+\begin_inset Formula $\bar{x}_{A}$
+\end_inset
+
+ to 
+\begin_inset Formula $x_{uA}$
+\end_inset
+
+ by strict convexity of preferences.
+ Moreover, the 
+\begin_inset Formula $B$
+\end_inset
+
+ underdog finds 
+\begin_inset Formula $\bar{x}_{B}$
+\end_inset
+
+ at least as good as 
+\begin_inset Formula $x_{uB}$
+\end_inset
+
+.
+ Thus, underdog 
+\begin_inset Formula $A$
+\end_inset
+
+ and underdog 
+\begin_inset Formula $B$
+\end_inset
+
+ can form a coalition that can impove upon the allocation 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ However, this contradicts the fact that 
+\begin_inset Formula $x$
+\end_inset
+
+ has the core property.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Since any allocaiton in the core must award agents of the same type with
+ the same bundle, we can examine the cores of relicated two-agent economies
+ by use of the Edgeworth box diagram.
+ Instead of a point 
+\begin_inset Formula $x$
+\end_inset
+
+ in the core representing how much 
+\begin_inset Formula $A$
+\end_inset
+
+ gets and how much 
+\begin_inset Formula $B$
+\end_inset
+
+ gets, we can think of 
+\begin_inset Formula $x$
+\end_inset
+
+ as telling us how much each agent of type 
+\begin_inset Formula $A$
+\end_inset
+
+ getd and how much each agent of type 
+\begin_inset Formula $B$
+\end_inset
+
+ gets.
+ The above proposition tells us that all points in the 
+\begin_inset Formula $r$
+\end_inset
+
+-core can be represented in this manner.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The following theorem is a converse of Theorem 9.2.1 and shows that any allocation
+ that is not a market equilibrium allocation must eventually not be in the
+ 
+\begin_inset Formula $r$
+\end_inset
+
+-core of the economy.
+ This means that core allocations in large economies look just like Walrasian
+ equilibria.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+9.2.2 (Shrinking Core Theorem).
+
+\series default
+ 
+\emph on
+Suppose 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ are strictly convex and continuous.
+ Suppose 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+is a unique competitive equilibrium allocation.
+ If 
+\begin_inset Formula $y$
+\end_inset
+
+ is not a competitive equilibrium, then there is some replication 
+\begin_inset Formula $V$
+\end_inset
+
+ such that 
+\begin_inset Formula $y$
+\end_inset
+
+ is not in the 
+\begin_inset Formula $V$
+\end_inset
+
+-core.
+\end_layout
+
+\begin_layout Note*
+As we increase the 
+\begin_inset Formula $V$
+\end_inset
+
+ replication of the economy, any point originally in the core that is not
+ a CE will no longer be in the core as the economy grows.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ be strictly convex and continuous.
+ Suppose 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is a unique competitive equilibrium.
+ Assume 
+\begin_inset Formula $y$
+\end_inset
+
+ is not a competitive equilibrium allocation.
+ We want to show that there is a coalition such that the point 
+\begin_inset Formula $y$
+\end_inset
+
+ can be improved upon for 
+\begin_inset Formula $V$
+\end_inset
+
+-replication.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \quad{}
+\end_inset
+
+Since 
+\begin_inset Formula $y$
+\end_inset
+
+ is not a competitive equilibrium, the line segment through 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $w$
+\end_inset
+
+ must cut at least one agent's indifferenece curve through 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ If the line segment was tangent to both indifference curves at 
+\begin_inset Formula $y$
+\end_inset
+
+, then 
+\begin_inset Formula $y$
+\end_inset
+
+ would be a competitive equilibrium.
+ Without loss of generality, let the line segment cut through agent 
+\begin_inset Formula $A$
+\end_inset
+
+'s indifference curve through 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ So, by strict convexity and continuity of 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+, there are integers 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $T$
+\end_inset
+
+ with 
+\begin_inset Formula $0<T<V$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+g_{A}\equiv\frac{T}{V}w_{A}+(1-\frac{T}{V})y_{A}\succ_{A}y_{A}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Now, form a coalition consisting of 
+\begin_inset Formula $V$
+\end_inset
+
+ consumers of type 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $V-T$
+\end_inset
+
+ consumers of type 
+\begin_inset Formula $B$
+\end_inset
+
+ and consider the allocation 
+\begin_inset Formula $x=(g_{A},\ldots,g_{A},y_{B},\ldots,y_{B})$
+\end_inset
+
+.
+ We want to show that 
+\begin_inset Formula $x$
+\end_inset
+
+ is feasible for this coalition.
+ Note that 
+\begin_inset Formula $y_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{B}$
+\end_inset
+
+ are the allocations before the coalition.
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+Vg_{A}+(V-T)y_{B} & = & V\left[\frac{T}{V}w_{A}+(1-\frac{T}{V})y_{A}\right]+(V-T)y_{B}\\
+ & = & Tw_{A}+Vy_{A}-Ty_{A}+Vy_{B}-Ty_{B}\\
+ & = & Tw_{A}+(V-T)y_{A}+(V-T)y_{B}\\
+ & = & Tw_{A}+(V-T)(y_{A}+y_{B})\\
+ & = & Tw_{A}+(V-T)(w_{A}+w_{B})\\
+ & = & Vw_{A}+(V-T)w_{B}
+\end{eqnarray*}
+
+\end_inset
+
+Important to note, since 
+\begin_inset Formula $y$
+\end_inset
+
+ is in the core before replication, then it is Pareto optimal, and hence,
+ feasible.
+ So, 
+\begin_inset Formula $y_{A}+y_{B}=w_{A}+w_{B}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $x$
+\end_inset
+
+ is feasible in the coalition and 
+\begin_inset Formula $g_{A}\succ_{A}y_{A}$
+\end_inset
+
+ for all agents in type 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{B}\sim_{B}y_{B}$
+\end_inset
+
+ for all agents in type 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $y$
+\end_inset
+
+ is not in the 
+\begin_inset Formula $V$
+\end_inset
+
+-core for the 
+\begin_inset Formula $V$
+\end_inset
+
+-replication of the economy.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 9.2.5.
+
+\series default
+ Thus, as we increase the 
+\begin_inset Formula $V$
+\end_inset
+
+ replication of the economy, any point originally in the core that's not
+ a competitive equilibrium will, eventually, no longer be in the core as
+ the economy grows.
+ The shrinking core theorem then shows that the only allocations that are
+ in the core of a large economy are market equilibrium allocations, and
+ thus Walrasian equilibria are robust: even very weak equilibrium concepts,
+ like that of the core, tend to yield allocations that are close to Walrasian
+ equilibria for larger economies.
+ Thus, this theorem shows the essential importance of competition and full
+ economic freedom.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 9.2.6.
+
+\series default
+ Many of the restrictive assumptions in this proposition can be relaxed
+ such as strict monotonicity, convexity, uniqueness of competitive equilibrium,
+ and two types of agents.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+9.2.3 (Limit Theorem on the Core).
+
+\series default
+ 
+\emph on
+Under strict convexity and continuitiy, the core of a replicated two person
+ economy shrinks when the number of agents for each type increases, and
+ the core coincides with the competitive equilibrium allocation if the number
+ of agents goes to infinity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This result means that any allocation which is not a competitive equilibrium
+ allocation is not in the core for some 
+\begin_inset Formula $r$
+\end_inset
+
+- replication.
+\end_layout
+
+\begin_layout Section*
+9.3
+\begin_inset space \quad{}
+\end_inset
+
+Fairness of Allocations
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+9.3.1 (Envy).
+
+\series default
+ An agent 
+\begin_inset Formula $i$
+\end_inset
+
+ is said to envy agent 
+\begin_inset Formula $k$
+\end_inset
+
+ if agent 
+\begin_inset Formula $i$
+\end_inset
+
+ prefers agent 
+\begin_inset Formula $k$
+\end_inset
+
+'s consumption, i.e., 
+\begin_inset Formula $x_{k}\succ_{i}x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Pareto efficiency gives a criterion of how the goods are allocated efficiently,
+ but it may be too weak a criterion to be meaningful.
+ It does not address any questions about income distribution, and does not
+ give any 
+\begin_inset Quotes eld
+\end_inset
+
+equity
+\begin_inset Quotes erd
+\end_inset
+
+ implication.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+9.3.1.
+ (Envy).
+
+\series default
+ An agent 
+\begin_inset Formula $i$
+\end_inset
+
+ is said to envy agent 
+\begin_inset Formula $k$
+\end_inset
+
+ if agent 
+\begin_inset Formula $i$
+\end_inset
+
+ prefers agent 
+\begin_inset Formula $k$
+\end_inset
+
+'s consumption, i.e., 
+\begin_inset Formula $x_{k}\succ_{i}x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+What is the equitable allocation? How can we define the notion of an equitable
+ allocation?
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+9.3.2 (Envy-free, also known as Equitable).
+
+\series default
+ An allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ is envy-free, or equitable, if no one envies anyone else, i.e., 
+\begin_inset Formula $\forall\ i\in N,\forall\ k\in N:x_{i}\succsim_{i}x_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Fairness is a notion that may overcome the difficulty just described.
+ This is one way to restrict the whole set of Pareto efficient outcomes
+ to a small set of Pareto efficient outcomes that satisfy the other properties.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+9.3.3 (Fairness).
+
+\series default
+ An allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ is said to be fair if it is both Pareto optimal and equitable.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 9.3.1.
+
+\series default
+ By definition, the set of fair allocations is a subset of the set of Pareto
+ efficient allocations.
+ Therefore, fairness restricts the size of Pareto optimal allocations.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+9.3.4 (Strictly Envy-Free or Strictly Equitably).
+
+\series default
+ An allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ is strictly equitable, or strictly envy-free, if no one envies any other
+ coalition.
+\end_layout
+
+\begin_layout Standard
+An agent 
+\begin_inset Formula $i$
+\end_inset
+
+ envies a coalition 
+\begin_inset Formula $S$
+\end_inset
+
+ 
+\begin_inset Formula $(i\notin S)$
+\end_inset
+
+ at an allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ if 
+\begin_inset Formula $\bar{x}_{S}\succ_{i}x_{i}$
+\end_inset
+
+, where 
+\begin_inset Formula $\bar{x}_{S}=\frac{1}{|S|}\sum_{j\in S}x_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+9.3.4 (Strict Fairness).
+
+\series default
+ An allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ is said to be strictly fair if it is both Pareto optimal and strictly equitable.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 9.3.2.
+
+\series default
+ If an allocation is strictly envy-free, then it is envy-free.
+ The set of strictly fair allocations are a subset of the set of Pareto
+ optimal allocations.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 9.3.3.
+
+\series default
+ For a two person exchange economy, if 
+\begin_inset Formula $x$
+\end_inset
+
+ is Pareto optimal, then it is impossible for both persons to envy each
+ other.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 9.3.4.
+
+\series default
+ It is clear that every strictly fair allocation is a fair allocation, but
+ the converse may not be true.
+ However, when 
+\begin_inset Formula $n=2$
+\end_inset
+
+, a fair allocation is a strictly fair allocation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+How to test a fair allocation? Let us restrict an economy to a two-person
+ economy.
+ An easy way for agent 
+\begin_inset Formula $A$
+\end_inset
+
+ to compare his own allocation 
+\begin_inset Formula $x_{A}$
+\end_inset
+
+ with agent 
+\begin_inset Formula $B$
+\end_inset
+
+'s allocation 
+\begin_inset Formula $x_{B}$
+\end_inset
+
+ in the Edgeworth Box is to find a point symmetric of 
+\begin_inset Formula $x_{A}$
+\end_inset
+
+ against the center of the box.
+ That is, draw a line from 
+\begin_inset Formula $x_{A}$
+\end_inset
+
+ to the center of the box and extrapolate it to the other side by the same
+ length to find 
+\begin_inset Formula $x_{A}^{\prime}$
+\end_inset
+
+, and then make the comparison.
+ If the indifference curve through 
+\begin_inset Formula $x_{A}$
+\end_inset
+
+ cuts 
+\begin_inset Quotes eld
+\end_inset
+
+below
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $x_{A}^{\prime}$
+\end_inset
+
+ then 
+\begin_inset Formula $A$
+\end_inset
+
+ envies 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ So, we have the following way to test whether an allocation is a fair allocatio
+n:
+\end_layout
+
+\begin_layout Enumerate
+Is it Pareto optimal? If the answer is 
+\begin_inset Quotes eld
+\end_inset
+
+yes,
+\begin_inset Quotes erd
+\end_inset
+
+ then go to step 2.
+ If not, then stop.
+\end_layout
+
+\begin_layout Enumerate
+Construct a reflection point 
+\begin_inset Formula $(x_{B},x_{A})$
+\end_inset
+
+.
+ Not that 
+\begin_inset Formula $\frac{x_{A}+x_{B}}{2}$
+\end_inset
+
+ is the center of the Edgeworth Box.
+\end_layout
+
+\begin_layout Enumerate
+Compare 
+\begin_inset Formula $x_{B}$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{A}$
+\end_inset
+
+ for person 
+\begin_inset Formula $A$
+\end_inset
+
+ to see if 
+\begin_inset Formula $x_{B}\succ_{A}x_{A}$
+\end_inset
+
+ and compare 
+\begin_inset Formula $x_{A}$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{B}$
+\end_inset
+
+ for person 
+\begin_inset Formula $B$
+\end_inset
+
+ to see if 
+\begin_inset Formula $x_{A}\succ_{B}x_{B}$
+\end_inset
+
+.
+ If the answer is 
+\begin_inset Quotes eld
+\end_inset
+
+no
+\begin_inset Quotes erd
+\end_inset
+
+ for both persons, then it is a fair allocation.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We have given some desirable properties of 
+\begin_inset Quotes eld
+\end_inset
+
+fair
+\begin_inset Quotes erd
+\end_inset
+
+ allocations.
+ A question is whether it exists at all.
+ The following theorem provides one sufficient condition to guarantee the
+ existence of fairness.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+9.3.1.
+
+\series default
+ 
+\emph on
+Let 
+\begin_inset Formula $(x^{*},p^{*})$
+\end_inset
+
+ be a competitive equilibrium.
+ Under local non-satiation, if all individuals' income is the same, i.e.,
+ 
+\begin_inset Formula $p^{*}\cdot w_{1}=\cdots=p^{*}\cdot w_{n}$
+\end_inset
+
+, then 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is a strictly fair allocation.
+\end_layout
+
+\begin_layout Proof
+By local non-satiation, 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is Pareto efficient.
+ Now, we want to show 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is strictly equitable.
+ Suppose for contradiction that it is not.
+ Then, there exists an agent 
+\begin_inset Formula $i$
+\end_inset
+
+ and a coalition 
+\begin_inset Formula $S$
+\end_inset
+
+ with 
+\begin_inset Formula $i\notin S$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+\frac{1}{|S|}\sum_{j\in S}x_{j}^{*}\succ_{i}x_{i}^{*}
+\]
+
+\end_inset
+
+By utility maximizaiton and local non-satiation, we have that 
+\begin_inset Formula 
+\[
+\frac{1}{|S|}\sum_{j\in S}p\cdot x_{j}^{*}>p^{*}\cdot x_{i}^{*}=p^{*}\cdot w_{i}
+\]
+
+\end_inset
+
+However, this contradicts the fact that
+\begin_inset Formula 
+\[
+\frac{1}{|S|}\sum_{j\in S}p^{*}\cdot x_{j}^{*}=\frac{1}{|S|}\sum_{j\in S}p^{*}\cdot w_{j}=p^{*}\cdot w_{i}
+\]
+
+\end_inset
+
+since 
+\begin_inset Formula $p^{*}\cdot w_{1}=\cdots=p^{*}\cdot w_{n}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ must be a strictly fair allocation.
+\end_layout
+
+\begin_layout Note*
+Agents have an initial endowment 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ and then endowments are redistributed using transfer payments in such a
+ way that income is the same for all individuals.
+ After the redistribution, trading begins and we obtain a competitive equilibriu
+m allocation, which will be strictly fair.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+9.3.6.
+
+\series default
+ An allocation 
+\begin_inset Formula $x\in\mathbb{R}_{+}^{nL}$
+\end_inset
+
+ is an equal income Walrasian allocation if there exists a price vector
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $p\cdot x_{i}\leq p\cdot\bar{w}$
+\end_inset
+
+, where 
+\begin_inset Formula $\bar{w}=\frac{1}{n}\sum_{i=1}^{n}w_{i}$
+\end_inset
+
+ (average endowment)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x_{i}^{\prime}\succ_{i}x_{i}$
+\end_inset
+
+ implies 
+\begin_inset Formula $p\cdot x_{i}^{\prime}>p\cdot\bar{w}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum x_{i}\leq\sum w_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Notice that every equal income Walrasian allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ is a competitive equilibrium allocation with 
+\begin_inset Formula $w_{i}=\bar{w}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Note*
+Agents have an initial endowment 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+, and then it is redistributed using transfer payments such that 
+\begin_inset Formula $w_{i}=\bar{w}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ After this, trading begins and we obtain a CE allocation, which will be
+ strictly fair.
+\end_layout
+
+\begin_layout Corollary*
+
+\series bold
+\shape up
+9.3.1.
+
+\series default
+ 
+\emph on
+Under local non-satiation, every equal income Walrasian allocation is a
+ strictly fair allocation.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 9.3.5.
+
+\series default
+ An allocation that is an 
+\begin_inset Quotes eld
+\end_inset
+
+equal
+\begin_inset Quotes erd
+\end_inset
+
+ division of resources does not give 
+\begin_inset Quotes eld
+\end_inset
+
+fairness,
+\begin_inset Quotes erd
+\end_inset
+
+ but trading from 
+\begin_inset Quotes eld
+\end_inset
+
+equal
+\begin_inset Quotes erd
+\end_inset
+
+ position will result in a 
+\begin_inset Quotes eld
+\end_inset
+
+fair
+\begin_inset Quotes erd
+\end_inset
+
+ allocation.
+ This 
+\begin_inset Quotes eld
+\end_inset
+
+divide-and-choose
+\begin_inset Quotes erd
+\end_inset
+
+ recommendation implies that if the center of the box is chosen as the initial
+ endowment point, the competitive equilibrium allocation is fair.
+ A political implication of this remark is straightforward.
+ Consumption of equal bundles is not Pareto optimal if preferences are different.
+ However, an equal division of endowment plus competitive markets result
+ in fair allocations.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 9.3.6.
+
+\series default
+ A competitive equilibrium from an equitable (but not 
+\begin_inset Quotes eld
+\end_inset
+
+equal
+\begin_inset Quotes erd
+\end_inset
+
+ division) endowment is not necessarily fair.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 9.3.7.
+
+\series default
+ Fair allocations are defined without reference to initial endowments.
+ Since we are dealing with optimality concepts, initial endowments can be
+ redistributed among agents in a society.
+ Agents have an initial endowment 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+, and then it is redistributed using transfer payments such that 
+\begin_inset Formula $\forall\ i\in N:w_{i}=\bar{w}$
+\end_inset
+
+.
+ After the redistribution, trading begins and we obtain a competitive equilibriu
+m allocation, which will be strictly fair.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In general, there is no relationship between an allocation in the core and
+ a fair allocation.
+ However, when the social endowments are divided equally among two persons,
+ we have the following theorem.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+9.3.2.
+
+\series default
+ 
+\emph on
+In a two-person exchange economy, if 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ are convex, and if the total endowments are equally divided among individuals,
+ then the set of allocations in the core is a subset of (strictly) fair
+ allocations.
+\end_layout
+
+\begin_layout Proof
+We know that an allocation 
+\begin_inset Formula $x$
+\end_inset
+
+ in the core is Pareto optimal.
+ We only need to show that 
+\begin_inset Formula $x$
+\end_inset
+
+ is equitable.
+ Since 
+\begin_inset Formula $x$
+\end_inset
+
+ is a core allocation, then it is individually rational.
+ Suppose for contradiction that 
+\begin_inset Formula $x$
+\end_inset
+
+ is not equitable.
+ Then, there exists some agent 
+\begin_inset Formula $i$
+\end_inset
+
+, say agent 
+\begin_inset Formula $A$
+\end_inset
+
+, such that
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{B}\succ_{A}x_{A}\succsim_{A}w_{A} & = & \frac{1}{2}(w_{A}+w_{B})\\
+ & = & \frac{1}{2}(x_{A}+x_{B})
+\end{eqnarray*}
+
+\end_inset
+
+by noting that 
+\begin_inset Formula $w_{A}=w_{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+ is feasible.
+ Thus 
+\begin_inset Formula $x_{A}\succsim_{A}\frac{1}{2}(x_{A}+x_{B})$
+\end_inset
+
+.
+ But, on the other hand, since 
+\begin_inset Formula $\succsim_{A}$
+\end_inset
+
+ is convex, then 
+\begin_inset Formula $x_{B}\succ_{A}x_{A}$
+\end_inset
+
+ implies that 
+\begin_inset Formula $\frac{1}{2}(x_{A}+x_{B})\succ_{A}x_{A}$
+\end_inset
+
+, which is a contradiction.
+\end_layout
+
+\begin_layout Section*
+9.4
+\begin_inset space \quad{}
+\end_inset
+
+Social Choice Theory
+\end_layout
+
+\begin_layout Subsection*
+9.4.1
+\begin_inset space \quad{}
+\end_inset
+
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this section, we present a very brief summary and introduction of social
+ choice theory.
+ We analyze the extent to which individual preferences can be aggregated
+ into social preferences, or more directly into social decisions, in a 
+\begin_inset Quotes eld
+\end_inset
+
+satisfactory
+\begin_inset Quotes erd
+\end_inset
+
+ manner (in a manner compatible with the fulfilment of a variety of desirable
+ conditions).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+As was shown in the discussion of 
+\begin_inset Quotes eld
+\end_inset
+
+fairness,
+\begin_inset Quotes erd
+\end_inset
+
+ it is difficult to come up with a criterion (or a constitution) that determines
+ that society's choice.
+ Social choice theory aims at constructing such a rule, which could be allied
+ with not only Pareto efficient allocations, but also any alternative that
+ a society faces.
+ We will give some fundamental results of social choice theory: Arrow's
+ Impossibility Theorem, which states there does not exsts any non-dictatorial
+ social welfare function satisfying a number of 
+\begin_inset Quotes eld
+\end_inset
+
+reasonable
+\begin_inset Quotes erd
+\end_inset
+
+ assumptions.
+\end_layout
+
+\begin_layout Subsection*
+9.4.2
+\begin_inset space \quad{}
+\end_inset
+
+Basic Settings
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To simplify notation, 
+\begin_inset Formula $aP_{i}b$
+\end_inset
+
+ means that 
+\begin_inset Formula $i$
+\end_inset
+
+ strictly prefers 
+\begin_inset Formula $a$
+\end_inset
+
+ to 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ We assume that the individual preferences are all strict, in other words,
+ that there is never a situation of indifference.
+ For all 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+, one gets preference 
+\begin_inset Formula $aP_{i}b$
+\end_inset
+
+ or 
+\begin_inset Formula $bP_{i}a$
+\end_inset
+
+.
+ This hypothesis is not very restrictive if 
+\begin_inset Formula $X$
+\end_inset
+
+ is finite.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $N=\{1,\ldots,n\}$
+\end_inset
+
+: the set of individuals
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X=\{x_{1},\ldots,x_{m}\}$
+\end_inset
+
+, 
+\begin_inset Formula $(m\geq3)$
+\end_inset
+
+: the set of alternatives (outcomes)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P_{i}=\ \succ_{i}$
+\end_inset
+
+: the strict preference orderings of agent 
+\begin_inset Formula $i$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{P}_{i}$
+\end_inset
+
+: The class of allowed individual orderings; 
+\begin_inset Formula $P_{i}\in\mathcal{P}_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P=(P_{1},\ldots,P_{n})$
+\end_inset
+
+: a preference ordering profile
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+: the set of all profiles of individual orderings; 
+\begin_inset Formula $P\in\mathcal{P}=\mathcal{P}_{1}\times\cdots\times\mathcal{P}_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S(X)$
+\end_inset
+
+: the class of allowed social orderings.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Arrow's social welfare function:
+\begin_inset Formula 
+\[
+F:\mathcal{P}\rightarrow S(X)
+\]
+
+\end_inset
+
+which is a mapping from individual ordering profiles to social orderings
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Gibbard-Satterthwaite's social choice function (SCF) is a mapping from individua
+l preference orderings to the alternatives
+\begin_inset Formula 
+\[
+f:\mathcal{P}\rightarrow X
+\]
+
+\end_inset
+
+Note that even though individuals' preference orderings are transitive,
+ a social preference ordering may not be transitive.
+ To see this, consider the following example.
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+9.4.1.
+ (The Condorcet Paradox).
+
+\series default
+ Suppose a social choice is determined by the majority voting rule.
+ Does this determine a well-defined social welfare function? The answer
+ in in general no by the well-known Condorcet paradox.
+ Consider a society with three agents and three alternatives: 
+\begin_inset Formula $x,y,z$
+\end_inset
+
+.
+ Suppose each person's preferences is given by:
+\begin_inset Formula 
+\begin{gather*}
+x\succ_{1}y\succ_{1}z\ \mbox{(by person 1)}\\
+y\succ_{2}z\succ_{2}x\ \mbox{(by person 2)}\\
+z\succ_{3}x\succ_{3}y\ \mbox{(by person 3)}
+\end{gather*}
+
+\end_inset
+
+By the majority rule,
+\end_layout
+
+\begin_layout Example*
+For 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $xFy$
+\end_inset
+
+ (by social preference)
+\end_layout
+
+\begin_layout Example*
+For 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+, 
+\begin_inset Formula $yFz$
+\end_inset
+
+ (by social preference)
+\end_layout
+
+\begin_layout Example*
+For 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+, 
+\begin_inset Formula $zFx$
+\end_inset
+
+ (by social preference)
+\end_layout
+
+\begin_layout Example*
+\begin_inset space \quad{}
+\end_inset
+
+Then pairwise majority voting tells us that 
+\begin_inset Formula $x$
+\end_inset
+
+ must be socially preferred to 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+ must be socially preferred to 
+\begin_inset Formula $z$
+\end_inset
+
+, and 
+\begin_inset Formula $z$
+\end_inset
+
+ must be socially preferred to 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ This cyclic pattern means that social preference is not transitive.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The number of preference profiles can increase very rapidly with increase
+ in the number of alternatives.
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+9.4.2.
+
+\series default
+ 
+\begin_inset Formula $X=\{x,y,z\}$
+\end_inset
+
+, 
+\begin_inset Formula $n=3$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{gather*}
+x\succ y\succ z\\
+x\succ z\succ y\\
+y\succ x\succ z\\
+y\succ z\succ x\\
+z\succ x\succ y\\
+z\succ y\succ x
+\end{gather*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Thus, there are six possible individual orderings, i.e., 
+\begin_inset Formula $\left|\mathcal{P}_{i}\right|=6$
+\end_inset
+
+, and therefore there are 
+\begin_inset Formula $\left|\mathcal{P}_{1}\right|\times\left|\mathcal{P}_{2}\right|\times\left|\mathcal{P}_{3}\right|=216$
+\end_inset
+
+ possible combinations of 3-individual preference orderings on three alternative
+s.
+ The social welfare function is a mapping from each of these 216 entries
+ (cases) to one particular social ordering (among six possible social orderings
+ of three alternatives).
+ The social choice function is a mapping from each of these 216 cases to
+ one particular choice (among three alternatives).
+ A question we will investigate is what kinds of deriable conditions should
+ be imposed on these social welfare or choice functions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+You may think of a hypothetical case of sending a letting to your congressional
+ representative that lists your preference orderings, 
+\begin_inset Formula $P_{i}$
+\end_inset
+
+, on announced national projections (alternatives), such as reducing deficits,
+ expanding the medical program, reducing the social security program, increasing
+ the national defense budget, etc.
+ Congress convenes with a huge stake of letters 
+\begin_inset Formula $P$
+\end_inset
+
+ and tries to come up with national priorities 
+\begin_inset Formula $F(P)$
+\end_inset
+
+.
+ You want Congress to make a certain rule (i.e., the Constitution) to form
+ national priorities out of individual preference orderings.
+ This is a question addressed in social choice theory.
+\end_layout
+
+\begin_layout Subsection*
+9.4.3
+\begin_inset space \quad{}
+\end_inset
+
+Arrow's Impossibility Theorem
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Unrestriced Domain (UD):
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+9.4.1.
+ 
+\series default
+A class of allowed individual orderings 
+\begin_inset Formula $\mathcal{P}_{i}$
+\end_inset
+
+ consists of all possible orderings defined on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Pareto Principle (P):
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+9.4.2.
+ 
+\series default
+If for 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+, 
+\begin_inset Formula $xP_{i}y$
+\end_inset
+
+ for all 
+\begin_inset Formula $i\in N$
+\end_inset
+
+, then 
+\begin_inset Formula $xF(P)y$
+\end_inset
+
+ (social preferences).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Independence of Irrelevant Alternatives (IIA):
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+9.4.3.
+
+\series default
+ For any two alternatives 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+ and any two preference profiles 
+\begin_inset Formula $P,P^{\prime}\in\mathcal{P}$
+\end_inset
+
+, 
+\begin_inset Formula $xF(p)y$
+\end_inset
+
+ and 
+\begin_inset Formula $\{i:xP_{i}y\}=\{i:xP_{i}^{\prime}y\}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+ implies that 
+\begin_inset Formula $xF(P^{\prime})y$
+\end_inset
+
+.
+ That is, the social preference between any two alternatives depends only
+ on the profile of individual preferences over the same alternatives.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 9.4.1.
+
+\series default
+ IIA means that the ranking between 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ for any agent is equivalent in terms of 
+\begin_inset Formula $P$
+\end_inset
+
+ and 
+\begin_inset Formula $P^{\prime}$
+\end_inset
+
+ implies that the social ranking between 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ by 
+\begin_inset Formula $F(P)$
+\end_inset
+
+ and 
+\begin_inset Formula $F(P^{\prime})$
+\end_inset
+
+ is the same.
+ In other words, if two different preference profiles are the same on 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+, then the social order must be the same on 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark 9.4.2.
+
+\series default
+ By IIA, any change in preference ordering other than the ordering of 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ should not affect social ordering between 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+9.4.4 (Dictator).
+
+\series default
+ There is some agent 
+\begin_inset Formula $i\in N$
+\end_inset
+
+ such that 
+\begin_inset Formula $F(P)=P_{i}$
+\end_inset
+
+ for all 
+\begin_inset Formula $P\in\mathcal{P}^{n}$
+\end_inset
+
+, and agent 
+\begin_inset Formula $i$
+\end_inset
+
+ is called the dictator.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+9.4.1 (Arrow's Impossibility Theorem).
+
+\series default
+ 
+\emph on
+Any social welfare function that satisfies 
+\begin_inset Formula $m\geq3$
+\end_inset
+
+, UD, P, and IIA conditions is dictatorial.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The impact of Arrow's Impossibility Theorem has been quite substantial.
+ Obviously, the result of the theorem is a disappointment.
+ The most pessimistic reaction to it is to conclude that there is just no
+ acceptable way to aggregate individual preferences, and hence, no theoretical
+ basis for treating welfare issues.
+ A more moderate reaction, however, is to examine each of the assumptions
+ of the theorem to see which might be given up.
+ Conditions imposed on social welfare functions may be too restrictive.
+ Indeed, when some conditions are relaxed, then the results could be positive,
+ e.g., UD is usually relaxed.
+\end_layout
+
+\begin_layout Subsection*
+9.4.4
+\begin_inset space \quad{}
+\end_inset
+
+Some Positive Result: Restricted Domain
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When some of the assumptions imposed in Arrow's Impossibility Theorem are
+ removed, the result may be positive.
+ For instance, if alternatives have certain characteristics which could
+ be placed in a spectrum, preferences may show some patterns and may not
+ exhaust all possible orderings on 
+\begin_inset Formula $X$
+\end_inset
+
+, thus violated UD.
+ In the following setup, we consider the case of a restricted domain.
+ A famous example is a class of 
+\begin_inset Quotes eld
+\end_inset
+
+single-peaked
+\begin_inset Quotes erd
+\end_inset
+
+ preferences.
+ We show that under the assumption of single-peaked preferences, non-dictatorial
+ aggregation is possible.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+9.4.5.
+
+\series default
+ A binary relation 
+\begin_inset Formula $\geq$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+ is a 
+\emph on
+linear order
+\emph default
+ if 
+\begin_inset Formula $\geq$
+\end_inset
+
+ is reflexive 
+\begin_inset Formula $(x\geq x)$
+\end_inset
+
+, transitive 
+\begin_inset Formula $(x\geq y\geq z\implies x\geq z)$
+\end_inset
+
+, and total 
+\begin_inset Formula $(\mbox{for distinct}\ x,y\in X:x\geq y\ \vee\ y\geq x,\ \mbox{but not both})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $X=\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $x\geq y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+9.4.6.
+
+\series default
+ 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is said to be 
+\emph on
+single-peaked
+\emph default
+ with respect to the linear order 
+\begin_inset Formula $\geq$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+, if there is an alternative 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ such that 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is increasing with respect to 
+\begin_inset Formula $\geq$
+\end_inset
+
+ on the lower contour set 
+\begin_inset Formula $L(x)=\{y\in X:y\leq x\}$
+\end_inset
+
+ and decreasing with respect to 
+\begin_inset Formula $\geq$
+\end_inset
+
+ on the upper contour set 
+\begin_inset Formula $U(x)=\{y\in X:y\geq x\}$
+\end_inset
+
+.
+ That is
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $x\geq z>y\implies z\succ_{i}y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $y>z\geq x\implies z\succ_{i}y$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+In words, there is an alternative that represents a peak of satisfaction.
+ Moreover, satisfaction increases as we approach this peak so that, in particula
+r, there cannot be any other peak of satisfaction.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Given a profile of preference 
+\begin_inset Formula $(\succsim_{1},\ldots,\succsim_{n})$
+\end_inset
+
+, let 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ be the maximal alternative for 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ (we will say that 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is 
+\begin_inset Quotes eld
+\end_inset
+
+individual 
+\begin_inset Formula $i$
+\end_inset
+
+'s peak
+\begin_inset Quotes erd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Definition*
+
+\series bold
+9.4.7.
+
+\series default
+ Agent 
+\begin_inset Formula $h\in N$
+\end_inset
+
+ is a median agent for the profile 
+\begin_inset Formula $(\succsim_{1},\ldots,\succsim_{n})$
+\end_inset
+
+ if 
+\begin_inset Formula $\#\{i\in N:x_{i}\geq x_{h}\}\geq\frac{n}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\#\{i\in N:x_{h}\geq x_{i}\}\geq\frac{n}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+9.4.1.
+
+\series default
+ 
+\emph on
+Suppose that 
+\begin_inset Formula $\geq$
+\end_inset
+
+ is a linear order on 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ is single-peaked.
+ Let 
+\begin_inset Formula $h\in N$
+\end_inset
+
+ be a median agent, then the majority rule 
+\begin_inset Formula $\tilde{F}(\succsim)$
+\end_inset
+
+ is aggregatable:
+\begin_inset Formula 
+\[
+\forall\ y\in X:x_{h}\tilde{F}(\succsim)y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Take any 
+\begin_inset Formula $y\in X$
+\end_inset
+
+ and suppose that 
+\begin_inset Formula $x_{h}>y$
+\end_inset
+
+ (the argument is symmetric for 
+\begin_inset Formula $y>x_{h}$
+\end_inset
+
+).
+ We need to show that
+\begin_inset Formula 
+\[
+\#\{i\in N:x_{h}\succ_{i}y\}\geq\#\{i\in N:y\succ_{i}x_{h}\}
+\]
+
+\end_inset
+
+Consider the set of agents 
+\begin_inset Formula $S\subset N$
+\end_inset
+
+ that have peaks larger or equal to 
+\begin_inset Formula $x_{h}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $S=\#\{i\in N:x_{i}\geq x_{h}\}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\forall\ i\in S:x_{i}\geq x_{h}>y$
+\end_inset
+
+.
+ Hence, by single-peakness of 
+\begin_inset Formula $\succsim_{i}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\geq$
+\end_inset
+
+, 
+\begin_inset Formula $\forall\ i\in S:x_{h}\succ_{i}y$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\#S\leq\#\{i\in N:x_{h}\succ_{i}y\}$
+\end_inset
+
+.
+ On the other hand, because 
+\begin_inset Formula $h$
+\end_inset
+
+ is the median agent, we have that 
+\begin_inset Formula $\#S\geq\frac{n}{2}$
+\end_inset
+
+ and so
+\begin_inset Formula 
+\[
+\#\{i\in N:y\succ_{i}x_{h}\}\leq\#(N\backslash S)\leq\frac{n}{2}\leq\#S\leq\#\{i\in N:x_{h}\succ_{i}y\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, the peak 
+\begin_inset Formula $x_{h}$
+\end_inset
+
+ of the median agent is socially optimal, i.e., it cannot be defeated by any
+ other alternative, by majority voting.
+ Any alternative having this property is called a Condorcet winner.
+ Therefore, a Condorcet winner exists whenever the preferences of all agents
+ are single-peaked with respect to the same linear order.
+\end_layout
+
+\end_body
+\end_document

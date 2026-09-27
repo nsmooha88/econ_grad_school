@@ -1,0 +1,2707 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[T1]{fontenc}
+\usepackage{pslatex}
+\usepackage{lastpage}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{{Page }\thepage{ of} \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0 pt}
+\setlength{\mathindent}{15mm}
+\renewcommand{\theenumi}{\alph{enumi}} \renewcommand{\theenumii}{\arabic{enumii}} \renewcommand{\labelenumii}{\theenumii.}
+\end_preamble
+\options fleqn
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.5in
+\headsep 0.5in
+\footskip 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Chapter 11
+\end_layout
+
+\begin_layout Author
+Nathan Smooha
+\end_layout
+
+\begin_layout Part*
+Externalities
+\end_layout
+
+\begin_layout Section*
+11.1
+\begin_inset space \quad{}
+\end_inset
+
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In this chapter we deal with the case of externalities so that a market
+ equilibrium may lead to non-Pareto efficient allocations in general, and
+ thus there is a market failure.
+ The reason is that there are things that people care about that are not
+ priced.
+ An externality can happen in both cases of consumption and production.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Consumption Externality:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{i}(x_{i})$
+\end_inset
+
+ : without preference externality
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{i}(x_{1},\ldots,x_{n})$
+\end_inset
+
+ : with preference externality, in which other individuals' consumptions
+ effect an individual's utility.
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+11.1.1.
+
+\series default
+ (i) One person's quiet environment is disturbed by another person's local
+ stereo.
+\end_layout
+
+\begin_layout Example*
+(ii) Mr.
+ A hates Mr.
+ B smoking next to him
+\end_layout
+
+\begin_layout Example*
+(iii) Mr.
+ A's satisfaction decreases as Mr.
+ C's consumption level increases because Mr.
+ A envies Mr.
+ C's lifestyle.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Production Externality:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A firm's production includes arguments other than its own inputs.
+ For example, downstream fishing is adversely affected by pollutants emitted
+ from an upstream chemical plant.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This leads to an examination of various suggestions for alternative ways
+ to allocate resources that may lead to efficient outcomes.
+ Achieving an efficient allocation in the presence of externalities essentially
+ involves making sure that agents face the correct prices for their actions.
+ Ways of solving an externality problem included taxation, regulation, property
+ rights, merges, etc.
+\end_layout
+
+\begin_layout Section*
+11.2
+\begin_inset space \quad{}
+\end_inset
+
+Consumption Externalities
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+When there are no consumption externalities, agent 
+\begin_inset Formula $i$
+\end_inset
+
+'s utility function is a function of only his own consumption:
+\begin_inset Formula 
+\begin{equation}
+u_{i}(x_{i})
+\end{equation}
+
+\end_inset
+
+In this case, the first order conditions for the competitive equilibrium
+ are given by
+\begin_inset Formula 
+\[
+MRS_{xy}^{A}=\frac{p_{x}}{p_{y}}=MRS_{xy}^{B}
+\]
+
+\end_inset
+
+and the first-order conditions for Pareto efficiency are given by:
+\begin_inset Formula 
+\[
+MRS_{xy}^{A}=MRS_{xy}^{B}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Thus, because of price-taking behavior, every competitive equilibrium implies
+ Pareto efficiency if utility functions are quasi-concave.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The main purpose of this section is to show that a competitive equilibrium
+ allocation is not in general Pareto efficient when there exists an externality
+ in consumption.
+ We show this by examining that the first order conditions for a competitive
+ equilibrium are not in general the same as the first-order conditions for
+ Pareto efficient allocations in the presence of consumptions externalities.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Consider the following simple two-person and two-good exchange economy.
+\begin_inset Formula 
+\begin{gather}
+u_{A}(x_{A},x_{B},y_{A})\\
+u_{B}(x_{A},x_{B},y_{B})
+\end{gather}
+
+\end_inset
+
+which are assumed to be strictly increasing in his own goods consumption,
+ quasi-concave, and satisfies the Inada condition 
+\begin_inset Formula $\lim_{x_{i}\rightarrow0}\frac{\partial u}{\partial x_{i}}(x_{i})=+\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $\lim_{x_{i}\rightarrow+\infty}\frac{\partial u}{\partial x_{i}}(x_{i})=0$
+\end_inset
+
+ so it results in interior solutions.
+ We further assume that the gradient of 
+\begin_inset Formula $u_{i}(\cdot)$
+\end_inset
+
+ is nonzero at Pareto efficient allocations.
+ Here, good 
+\begin_inset Formula $x$
+\end_inset
+
+ results in consumption externalities.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The first-order conditions for the competitive equilibrium are the same
+ as before:
+\begin_inset Formula 
+\[
+MRS_{xy}^{A}=\frac{p_{x}}{p_{y}}=MRS_{xy}^{B}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+We now find the first order conditions for Pareto efficient allocations
+ in exchange economies with externalities.
+ Thus, Pareto efficient allocations 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ can be completely determined by the FOCs of the following problem
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{x\in\mathbb{R}_{++}^{4}}} & u_{B}(x_{A},x_{B},y_{B})\\
+\mbox{s.t.} & x_{A}+x_{B}\leq w_{x}\\
+ & y_{A}+y_{B}\leq w_{y}\\
+ & u_{A}(x_{A},x_{B},y_{A})\geq u_{A}(x_{A}^{*},x_{B}^{*},y_{A}^{*})
+\end{eqnarray*}
+
+\end_inset
+
+The first-order conditions are
+\begin_inset Formula 
+\begin{eqnarray}
+x_{A} & : & \frac{\partial u_{B}}{\partial x_{A}}-\lambda_{x}+\mu\frac{\partial u_{A}}{\partial x_{A}}=0\\
+y_{A} & : & -\lambda_{y}+\mu\frac{\partial u_{A}}{\partial y_{A}}=0\\
+x_{B} & : & \frac{\partial u_{B}}{\partial x_{B}}-\lambda_{x}+\mu\frac{\partial u_{A}}{\partial x_{B}}=0\\
+y_{B} & : & \frac{\partial u_{B}}{\partial y_{B}}-\lambda_{y}=0\\
+\lambda_{x} & : & w_{x}-x_{A}-x_{B}\geq0,\ \lambda_{x}\geq0,\ \lambda_{x}(w_{x}-x_{A}-x_{B})=0\\
+\lambda_{y} & : & w_{y}-y_{A}-y_{B}\geq0,\ \lambda_{y}\geq0,\ \lambda_{y}(w_{y}-y_{A}-y_{B})=0\\
+\mu & : & u_{A}-u_{A}^{*}\geq0,\ \mu\geq0,\ \mu(u_{A}-u_{A}^{*})=0
+\end{eqnarray}
+
+\end_inset
+
+By (7), 
+\begin_inset Formula $\lambda_{y}=\frac{\partial u_{B}}{\partial y_{B}}>0$
+\end_inset
+
+, and thus, by (9)
+\begin_inset Formula 
+\begin{equation}
+y_{A}+y_{B}=w_{y}
+\end{equation}
+
+\end_inset
+
+which means there is never destruction of the good which does not exhibit
+ a negative externality.
+ Also, by (5) and (7), we have
+\begin_inset Formula 
+\begin{equation}
+\mu=\frac{\frac{\partial u_{B}}{\partial y_{B}}}{\frac{\partial u_{A}}{\partial y_{A}}}
+\end{equation}
+
+\end_inset
+
+Then, by (4) and (5), we have
+\begin_inset Formula 
+\begin{equation}
+\frac{\lambda_{x}}{\lambda_{y}}=\left[\frac{\frac{\partial u_{A}}{\partial x_{A}}}{\frac{\partial u_{A}}{\partial y_{A}}}+\frac{\frac{\partial u_{B}}{\partial x_{A}}}{\frac{\partial u_{B}}{\partial y_{B}}}\right]
+\end{equation}
+
+\end_inset
+
+and by (6) and (7), we have
+\begin_inset Formula 
+\begin{equation}
+\frac{\lambda_{x}}{\lambda_{y}}=\left[\frac{\frac{\partial u_{B}}{\partial x_{B}}}{\frac{\partial u_{B}}{\partial y_{B}}}+\frac{\frac{\partial u_{A}}{\partial x_{B}}}{\frac{\partial u_{A}}{\partial y_{A}}}\right]
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+So, by (13) and (14), we have
+\begin_inset Formula 
+\begin{equation}
+\frac{\frac{\partial u_{A}}{\partial x_{A}}}{\frac{\partial u_{A}}{\partial y_{A}}}+\frac{\frac{\partial u_{B}}{\partial x_{A}}}{\frac{\partial u_{B}}{\partial y_{B}}}=\frac{\frac{\partial u_{B}}{\partial x_{B}}}{\frac{\partial u_{B}}{\partial y_{B}}}+\frac{\frac{\partial u_{A}}{\partial x_{B}}}{\frac{\partial u_{A}}{\partial y_{A}}}\geq0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $(SMRS_{A}=SMRS_{B})$
+\end_inset
+
+ which expreses the equality of the social marginal rates of substitution
+ for the two consumers at Pareto efficient points, i.e.,
+\begin_inset Formula 
+\[
+SMRS_{A}=SMRS_{B}
+\]
+
+\end_inset
+
+Thus, we immediately have the following conclusion: A competitive equilibrium
+ allocation may not be Pareto optimal because the first-order conditions
+ for competitive equilibrium and Pareto optimality are not the same.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+From the above marginal equality condition, we know that, in order to evaluate
+ the relevant marginal rates of substitution for the optimality conditions,
+ we must take into account both the direct and indirect effects of consumption
+ activities in the presence of externalities.
+ That is, to achieve Pareto optimality, when one consumer increases the
+ consumption of good 
+\begin_inset Formula $x$
+\end_inset
+
+, not only does the consumer's consumption of good 
+\begin_inset Formula $y$
+\end_inset
+
+ need to change, the other consumer's consumption of good 
+\begin_inset Formula $y$
+\end_inset
+
+ must also be changed.
+ Therefore, the social marginal rate of substitution of good 
+\begin_inset Formula $x$
+\end_inset
+
+ for good 
+\begin_inset Formula $y$
+\end_inset
+
+ by consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ equals
+\begin_inset Formula 
+\[
+\frac{\frac{\partial u_{i}}{\partial x_{i}}}{\frac{\partial u_{i}}{\partial y_{i}}}+\frac{\frac{\partial u_{j}}{\partial x_{i}}}{\frac{\partial u_{j}}{\partial y_{j}}}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Solving (4) and (6) for 
+\begin_inset Formula $\mu$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{x}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{equation}
+\mu=\frac{\frac{\partial u_{B}}{\partial x_{B}}-\frac{\partial u_{B}}{\partial x_{A}}}{\frac{\partial x_{A}}{\partial x_{A}}-\frac{\partial u_{A}}{\partial x_{B}}}>0
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+\lambda_{x}=\frac{\frac{\partial u_{A}}{\partial x_{A}}\frac{\partial u_{B}}{\partial x_{B}}-\frac{\partial u_{A}}{\partial x_{B}}\frac{\partial u_{B}}{\partial x_{A}}}{\frac{\partial u_{A}}{\partial x_{A}}-\frac{\partial u_{A}}{\partial x_{B}}}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+When the consumption externality is positive, from (13) or (14), we can
+ easily see that 
+\begin_inset Formula $\lambda_{x}$
+\end_inset
+
+ is always positive since
+\begin_inset Formula 
+\[
+\lambda_{y}=\frac{\partial u_{B}}{\partial y_{B}}>0
+\]
+
+\end_inset
+
+Also, when no externality or a one-sided externality exists
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Only one consumer imposes an externality on another consumer.
+\end_layout
+
+\end_inset
+
+, by either (13) or (14), 
+\begin_inset Formula $\lambda_{x}$
+\end_inset
+
+ is positive.
+ Thus, the marginal equality condition (15) and the balanced conditions
+ completely determine all Pareto efficient allocations for these cases.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+However, when there are negative externalities for both consumers, the Kuhn-Tuck
+er multiplier 
+\begin_inset Formula $\lambda_{x}$
+\end_inset
+
+ directly given by (17), or indirectly by (13) or (14), is the sum of a
+ negative and positive term, and thus the sign of 
+\begin_inset Formula $\lambda_{x}$
+\end_inset
+
+ may be indeterminate.
+ However, unlike the claim in some textbooks, the marginal equality condition,
+ (15), and the balanced conditions may not guarantee finding Pareto efficient
+ allocations correctly.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To guarantee that an allocation is Pareto efficient in the presence of negative
+ externalities, we must require 
+\begin_inset Formula $\lambda_{x}\geq0$
+\end_inset
+
+ (required for optimality) at efficient points, which in turn requires that
+ social marginal rates of substitution be nonnegative, that is
+\begin_inset Formula 
+\begin{equation}
+\frac{\frac{\partial u_{A}}{\partial x_{A}}}{\frac{\partial u_{A}}{\partial y_{A}}}+\frac{\frac{\partial u_{B}}{\partial x_{A}}}{\frac{\partial u_{B}}{\partial y_{B}}}=\frac{\frac{\partial u_{B}}{\partial x_{B}}}{\frac{\partial u_{B}}{\partial y_{B}}}+\frac{\frac{\partial u_{A}}{\partial x_{B}}}{\frac{\partial u_{A}}{\partial y_{A}}}\geq0
+\end{equation}
+
+\end_inset
+
+or equivalently requires both (15) and
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial u_{A}}{\partial x_{A}}\frac{\partial u_{B}}{\partial x_{B}}\geq\frac{\partial u_{A}}{\partial x_{B}}\frac{\partial u_{B}}{\partial x_{A}}
+\end{equation}
+
+\end_inset
+
+for all Pareto efficient points.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can interpret the term in the left-hand side of (19), 
+\begin_inset Formula $\frac{\partial u_{A}}{\partial x_{A}}\frac{\partial u_{B}}{\partial x_{B}}$
+\end_inset
+
+, as the joint marginal benefit of consuming good 
+\begin_inset Formula $x$
+\end_inset
+
+, and the term in the right-hand side, 
+\begin_inset Formula $\frac{\partial u_{A}}{\partial x_{B}}\frac{\partial u_{B}}{\partial x_{A}}$
+\end_inset
+
+, as the joint marginal cost of consuming good 
+\begin_inset Formula $x$
+\end_inset
+
+ because the negative externality hurts the consumers.
+ To consume the goods efficiently, a necessary condition is that the joint
+ marginal benefit of consuming good 
+\begin_inset Formula $x$
+\end_inset
+
+ should not be less than the joint cost of consuming good 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Thus the following conditions
+\begin_inset Formula 
+\[
+(PO)\left\{ \begin{array}{c}
+\frac{\frac{\partial u_{A}}{\partial x_{A}}}{\frac{\partial u_{A}}{\partial y_{A}}}+\frac{\frac{\partial u_{B}}{\partial x_{A}}}{\frac{\partial u_{B}}{\partial y_{B}}}=\frac{\frac{\partial u_{B}}{\partial x_{B}}}{\frac{\partial u_{B}}{\partial y_{B}}}+\frac{\frac{\partial u_{A}}{\partial x_{B}}}{\frac{\partial u_{A}}{\partial y_{A}}}\geq0\\
+y_{A}+y_{B}=w_{y}\\
+x_{A}+x_{B}\leq w_{x}\\
+\left(\frac{\partial u_{A}}{\partial x_{A}}\frac{\partial u_{B}}{\partial x_{B}}-\frac{\partial u_{A}}{\partial x_{B}}\frac{\partial u_{B}}{\partial x_{A}}\right)\left(w_{x}-x_{A}-x_{B}\right)=0
+\end{array}\right.
+\]
+
+\end_inset
+
+constitute a system 
+\begin_inset Formula $(PO)$
+\end_inset
+
+ from which all Pareto efficient allocations can be obtained.
+ We can do so by considering three cases.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Case 1.
+ When 
+\begin_inset Formula 
+\[
+\frac{\partial u_{A}}{\partial x_{A}}\frac{\partial u_{B}}{\partial x_{B}}\geq\frac{\partial u_{A}}{\partial x_{B}}\frac{\partial u_{B}}{\partial x_{A}}
+\]
+
+\end_inset
+
+or equivalently
+\begin_inset Formula 
+\[
+\frac{\frac{\partial u_{A}}{\partial x_{A}}}{\frac{\partial u_{A}}{\partial y_{A}}}+\frac{\frac{\partial u_{B}}{\partial x_{A}}}{\frac{\partial u_{B}}{\partial y_{B}}}=\frac{\frac{\partial u_{B}}{\partial x_{B}}}{\frac{\partial u_{B}}{\partial y_{B}}}+\frac{\frac{\partial u_{A}}{\partial x_{B}}}{\frac{\partial u_{A}}{\partial y_{A}}}>0,\ \lambda_{x}>0
+\]
+
+\end_inset
+
+and thus the last two conditions in the above system 
+\begin_inset Formula $(PO)$
+\end_inset
+
+ reduce to 
+\begin_inset Formula $x_{A}+x_{B}=w_{x}$
+\end_inset
+
+.
+ In this ase, there is no destruction.
+ Substituting 
+\begin_inset Formula $x_{A}+x_{B}=w_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{A}+y_{B}=w_{y}$
+\end_inset
+
+ into the marginal equality condition (15), it would give us a relationship
+ between 
+\begin_inset Formula $x_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{A}$
+\end_inset
+
+, which exactly defines the Pareto efficient allocaitons.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Case 2.
+ When the joint marginal benefit equals the joint marginal cost
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial u_{A}}{\partial x_{A}}\frac{\partial u_{B}}{\partial x_{B}}=\frac{\partial u_{A}}{\partial x_{B}}\frac{\partial u_{B}}{\partial x_{A}}
+\end{equation}
+
+\end_inset
+
+then
+\begin_inset Formula 
+\begin{equation}
+\frac{\frac{\partial u_{A}}{\partial x_{A}}}{\frac{\partial u_{A}}{\partial y_{A}}}+\frac{\frac{\partial u_{B}}{\partial x_{A}}}{\frac{\partial u_{B}}{\partial y_{B}}}=\frac{\frac{\partial u_{B}}{\partial x_{B}}}{\frac{\partial u_{B}}{\partial y_{B}}}+\frac{\frac{\partial u_{A}}{\partial x_{B}}}{\frac{\partial u_{A}}{\partial y_{A}}}=0
+\end{equation}
+
+\end_inset
+
+and thus 
+\begin_inset Formula $\lambda_{x}=0$
+\end_inset
+
+.
+ In this case, when 
+\begin_inset Formula $x_{A}+x_{B}\leq w_{x}$
+\end_inset
+
+, the necessity of destruction is indeterminant.
+ However, even when destruction is necessary, we can still determine the
+ set of Pareto efficient allocations by using 
+\begin_inset Formula $y_{A}+y_{B}=w_{y}$
+\end_inset
+
+ and the zero social marginal equality conditions (21).
+ Indeed, after substituting 
+\begin_inset Formula $y_{A}+y_{B}=w_{y}$
+\end_inset
+
+ into (21), we can solve for 
+\begin_inset Formula $x_{A}$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $y_{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Case 3.
+ When 
+\begin_inset Formula 
+\[
+\frac{\partial u_{A}}{\partial x_{A}}\frac{\partial u_{B}}{\partial x_{B}}<\frac{\partial u_{A}}{\partial x_{B}}\frac{\partial u_{B}}{\partial x_{A}}
+\]
+
+\end_inset
+
+for any allocations that satisfy 
+\begin_inset Formula $x_{A}+x_{B}=w_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{A}+y_{B}=w_{y}$
+\end_inset
+
+, and the marginal equality condition (15), the social marginal rates of
+ substitution must be negative.
+ Hence, the allocation will not be Pareto efficient.
+ In this case, there must be destruction for good 
+\begin_inset Formula $x$
+\end_inset
+
+ for Pareto efficiency, and a Pareto efficient allocation satisfies (21).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Summarizing, we have the following proposition that provides two categories
+ of sufficiency conditions for characterizing whether or not there should
+ be destruciton of endowment 
+\begin_inset Formula $w_{x}$
+\end_inset
+
+ in achieving Pareto efficient allocations.
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\shape up
+11.2.1.
+
+\series default
+ 
+\emph on
+For 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ pure exchange economies, suppose that utility functions 
+\begin_inset Formula $u_{i}(x_{A},x_{B},y_{i})$
+\end_inset
+
+ are continuously differentiable, strictly quasi-concave, and 
+\begin_inset Formula $\frac{\partial u_{i}(x_{A},x_{B},y_{i})}{\partial x_{i}}>0$
+\end_inset
+
+ for 
+\begin_inset Formula $i=A,B$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If the social marginal rates of substitution are positive at a Pareto efficient
+ allocation 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+As we discussed previously, this is true if the consumpiton externality
+ is positive, if there is no externality, or if there is only a one side
+ externality.
+\end_layout
+
+\end_inset
+
+, then there is no destruction of 
+\begin_inset Formula $w_{x}$
+\end_inset
+
+ in achieving Pareto efficient allocaiton 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If the social marginal rates of substitution are negative for any allocation
+ 
+\begin_inset Formula $(x_{A},x_{B})$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $x_{A}+x_{B}=w_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{A}+y_{B}=w_{y}$
+\end_inset
+
+, and the marginal equality condition (15), then there is destruciton of
+ 
+\begin_inset Formula $w_{x}$
+\end_inset
+
+ in achieving any Pareto efficient allocation 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+.
+ That is, 
+\begin_inset Formula $x_{A}^{*}+x_{B}^{*}<w_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is determined by 
+\begin_inset Formula $y_{A}+y_{B}=w_{y}$
+\end_inset
+
+ and (21).
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Thus, from the above proposition, we know that a sufficient condition for
+ destruction is that for any allocation 
+\begin_inset Formula $(x_{A},y_{A},x_{B},y_{B})$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{c}
+\frac{\frac{\partial u_{A}}{\partial x_{A}}}{\frac{\partial u_{A}}{\partial y_{A}}}+\frac{\frac{\partial u_{B}}{\partial x_{A}}}{\frac{\partial u_{B}}{\partial y_{B}}}=\frac{\frac{\partial u_{B}}{\partial x_{B}}}{\frac{\partial u_{B}}{\partial y_{B}}}+\frac{\frac{\partial u_{A}}{\partial x_{B}}}{\frac{\partial u_{A}}{\partial y_{A}}}\\
+x_{A}+x_{B}=w_{x}\\
+y_{A}+y_{B}=w_{y}
+\end{array}\right\} \implies\frac{\partial u_{A}}{\partial x_{A}}\frac{\partial u_{B}}{\partial x_{B}}<\frac{\partial u_{A}}{\partial x_{B}}\frac{\partial u_{B}}{\partial x_{A}}
+\end{equation}
+
+\end_inset
+
+A sufficient condition for all Pareto efficient allocations 
+\begin_inset Formula $(x_{A},y_{A},x_{B},y_{B})$
+\end_inset
+
+ for no destruction is
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{c}
+\frac{\frac{\partial u_{A}}{\partial x_{A}}}{\frac{\partial u_{A}}{\partial y_{A}}}+\frac{\frac{\partial u_{B}}{\partial x_{A}}}{\frac{\partial u_{B}}{\partial y_{B}}}=\frac{\frac{\partial u_{B}}{\partial x_{B}}}{\frac{\partial u_{B}}{\partial y_{B}}}+\frac{\frac{\partial u_{A}}{\partial x_{B}}}{\frac{\partial u_{A}}{\partial y_{A}}}\\
+x_{A}+x_{B}\leq w_{x}\\
+y_{A}+y_{B}=w_{y}
+\end{array}\right\} \implies\frac{\partial u_{A}}{\partial x_{A}}\frac{\partial u_{B}}{\partial x_{B}}\geq\frac{\partial u_{A}}{\partial x_{B}}\frac{\partial u_{B}}{\partial x_{A}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+11.2.1.
+
+\series default
+ Consider the following function:
+\begin_inset Formula 
+\[
+u_{i}(x_{A},x_{B},y_{i})=\sqrt{x_{i}y_{i}}-x_{j},\ i\in\{A,B\},\ j\in\{A,B\},\ j\neq i
+\]
+
+\end_inset
+
+By the marginal equality condition (15), we have
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\frac{1}{2}(x_{A}y_{A})^{-\frac{1}{2}}y_{A}}{\frac{1}{2}(x_{A}y_{A})^{-\frac{1}{2}}x_{A}}+\frac{-1}{\frac{1}{2}(x_{B}y_{B})^{-\frac{1}{2}}x_{B}} & = & \frac{\frac{1}{2}(x_{B}y_{B})^{-\frac{1}{2}}y_{B}}{\frac{1}{2}(x_{B}y_{B})^{-\frac{1}{2}}x_{B}}+\frac{-1}{\frac{1}{2}(x_{A}y_{A})^{-\frac{1}{2}}x_{A}}\nonumber \\
+\frac{y_{A}}{x_{A}}-2\frac{(x_{B}y_{B})^{\frac{1}{2}}}{x_{B}} & = & \frac{y_{B}}{x_{B}}-2\frac{(x_{A}y_{A})^{\frac{1}{2}}}{x_{A}}\nonumber \\
+\frac{y_{A}}{x_{A}}+2\sqrt{\frac{y_{A}}{x_{A}}}+1 & = & \frac{y_{B}}{x_{B}}+\sqrt{\frac{y_{B}}{x_{B}}}+1\nonumber \\
+\left(\sqrt{\frac{y_{A}}{x_{A}}}+1\right)^{2} & = & \left(\sqrt{\frac{y_{B}}{x_{B}}}+1\right)^{2}
+\end{eqnarray}
+
+\end_inset
+
+and thus
+\begin_inset Formula 
+\begin{equation}
+\frac{y_{A}}{x_{A}}=\frac{y_{B}}{x_{B}}
+\end{equation}
+
+\end_inset
+
+Let 
+\begin_inset Formula $x_{A}+x_{B}\equiv\bar{x}$
+\end_inset
+
+.
+ Substituting 
+\begin_inset Formula $x_{A}+x_{B}=\bar{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{A}+y_{B}=w_{y}$
+\end_inset
+
+ into (25), we have
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{y_{A}}{x_{A}} & = & \frac{y_{B}}{x_{B}}\nonumber \\
+\frac{y_{A}}{x_{A}} & = & \frac{(w_{y}-y_{A})}{(\bar{x}-x_{A})}\nonumber \\
+y_{A}\bar{x}-y_{A}x_{A} & = & x_{A}w_{y}-y_{A}x_{A}\nonumber \\
+y_{A}\bar{x}-x_{A}w_{y} & = & 0\nonumber \\
+\frac{y_{A}}{x_{A}}\bar{x}-w_{y} & = & 0\nonumber \\
+\frac{y_{A}}{x_{A}} & = & \frac{w_{y}}{\bar{x}}
+\end{eqnarray}
+
+\end_inset
+
+Then, by (25) and (26), we have
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial u_{A}}{\partial x_{A}}\frac{\partial u_{B}}{\partial x_{B}}=\frac{1}{4}\sqrt{\frac{y_{A}}{x_{A}}}\sqrt{\frac{y_{B}}{x_{B}}}=\frac{y_{A}}{4x_{A}}=\frac{w_{y}}{4\bar{x}}
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial u_{A}}{\partial x_{B}}\frac{\partial u_{B}}{\partial x_{A}}=1
+\end{equation}
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $\bar{x}=\frac{w_{y}}{4}$
+\end_inset
+
+ is the critical point that makes
+\begin_inset Formula 
+\[
+\frac{\partial u_{A}}{\partial x_{A}}\frac{\partial u_{B}}{\partial x_{B}}-\frac{\partial u_{A}}{\partial x_{B}}\frac{\partial u_{B}}{\partial x_{A}}=0
+\]
+
+\end_inset
+
+or equivalently
+\begin_inset Formula 
+\[
+\frac{\frac{\partial u_{A}}{\partial x_{A}}}{\frac{\partial u_{A}}{\partial y_{A}}}+\frac{\frac{\partial u_{B}}{\partial x_{A}}}{\frac{\partial u_{B}}{\partial y_{B}}}=\frac{\frac{\partial u_{B}}{\partial x_{B}}}{\frac{\partial u_{B}}{\partial y_{B}}}+\frac{\frac{\partial u_{A}}{\partial x_{B}}}{\frac{\partial u_{A}}{\partial y_{A}}}=0
+\]
+
+\end_inset
+
+Hence, if 
+\begin_inset Formula $w_{x}>\frac{w_{y}}{4}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\frac{\partial u_{A}}{\partial x_{A}}\frac{\partial u_{B}}{\partial x_{B}}-\frac{\partial u_{A}}{\partial x_{B}}\frac{\partial u_{B}}{\partial x_{A}}<0
+\]
+
+\end_inset
+
+ and thus, by (22), there is destruction in any Pareto efficient allocation.
+ If 
+\begin_inset Formula $w_{x}<\frac{w_{y}}{4}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\frac{\partial u_{A}}{\partial x_{A}}\frac{\partial u_{B}}{\partial x_{B}}-\frac{\partial u_{A}}{\partial x_{B}}\frac{\partial u_{B}}{\partial x_{A}}>0
+\]
+
+\end_inset
+
+and by (23), no Pareto optimal allocation requires destruction.
+ Finally, when 
+\begin_inset Formula $w_{x}=\frac{w_{y}}{4}$
+\end_inset
+
+, any allocation that satisfies the marginal equality condition (15) and
+ the balanced conditions 
+\begin_inset Formula $x_{A}+x_{B}=w_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{A}+y_{B}=w_{y}$
+\end_inset
+
+ also satisfies (19), and thus it is a Pareto efficient allocation with
+ no destruction.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, let us set out the sufficient conditions for destruction and non-destrucito
+n in detail.
+ Note that if the sufficient condition for non-destruciton holds, then 
+\begin_inset Formula $x_{A}+x_{B}=w_{x}$
+\end_inset
+
+ would also hold as an implication.
+ Thus, to apply both the sufficient conditions for non-destruction and destrucit
+on, one should use the following three conditions
+\begin_inset Formula 
+\[
+\left\{ \begin{array}{c}
+\frac{\frac{\partial u_{A}}{\partial x_{A}}}{\frac{\partial u_{A}}{\partial y_{A}}}+\frac{\frac{\partial u_{B}}{\partial x_{A}}}{\frac{\partial u_{B}}{\partial y_{B}}}=\frac{\frac{\partial u_{B}}{\partial x_{B}}}{\frac{\partial u_{B}}{\partial y_{B}}}+\frac{\frac{\partial u_{A}}{\partial x_{B}}}{\frac{\partial u_{A}}{\partial y_{A}}}\\
+x_{A}+x_{B}=w_{x}\\
+y_{A}+y_{B}=w_{y}
+\end{array}\right.
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+If any allocation also satisfies the condition
+\begin_inset Formula 
+\[
+\frac{\partial u_{A}}{\partial x_{A}}\frac{\partial u_{B}}{\partial x_{B}}\geq\frac{\partial u_{A}}{\partial x_{B}}\frac{\partial u_{B}}{\partial x_{A}}
+\]
+
+\end_inset
+
+then the allocation is Pareto efficient, and further there is no destruciton.
+ Otherwise, it is not Pareto efficient.
+ If this is true for all such non-Pareto allocations, all Pareto efficient
+ conditions must hold with destruction.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Note that since 
+\begin_inset Formula $\frac{\partial u_{A}}{\partial x_{A}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\partial u_{B}}{\partial x_{B}}$
+\end_inset
+
+ represent marginal benefit, they are usually diminishing in consumption
+ in good 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\frac{\partial u_{A}}{\partial x_{B}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\partial u_{B}}{\partial x_{A}}$
+\end_inset
+
+ are in the form of a marginal cost, their absolute values would be typically
+ increasing in the consumption of good 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Hence, when total endowment 
+\begin_inset Formula $w_{x}$
+\end_inset
+
+ is small, the social margianl benefit would exceed the social marginal
+ cost, so that there is no destruction.
+ As the total endowment of 
+\begin_inset Formula $w_{x}$
+\end_inset
+
+ increases, the social marginal cost will ultimately outweigh the marginal
+ social benefit, which results in the destruction of the endowment of 
+\begin_inset Formula $w_{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Alternatively, we can get the same result by using social marginal rates
+ of substitution.
+ When utilty functions are strictly quasi-concave, marginal rates of substitutio
+n are diminishing.
+ Therefore, in the presence of negative consumption externalities, social
+ marginal rates of substitution may become negative when the consumption
+ of good 
+\begin_inset Formula $x$
+\end_inset
+
+ becomes sufficiently large.
+ When this occurs, it is better to destroy some resources for good 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ As the destruction of good 
+\begin_inset Formula $x$
+\end_inset
+
+ increases, which will, in turn, decrease the consumption of good 
+\begin_inset Formula $x$
+\end_inset
+
+, social marginal rates of substitution will increase.
+ Eventually, they will become nonnegative.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The destruction issue is not only important in theory, but also relevant
+ to reality.
+ It can be used to explain a well-known puzzle of the happiness-income relations
+hip in the economic and psychology literatures: happiness rises with income
+ up to a point, but not beyond it.
+ For example, well-being declined over the last quarter of a century in
+ the U.S., and life satisfaction has run approximately flat across the same
+ time in Britain.
+ If we interpret income as a good, and if consumers envy each other in terms
+ of consumption levels, but our result, when the income reaches a certain
+ level, one may have to freely dispose of wealth to achieve Pareto efficient
+ allocations; otherwise the resulting allocations will be Pareto inefficient.
+ Therefore, economic growth does not raise well-being indeed by any social
+ welfare function once the critical income level is achieved.
+\end_layout
+
+\begin_layout Section*
+11.3
+\begin_inset space \quad{}
+\end_inset
+
+Production Externality
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We now show that allocation of resources may not be efficient also for the
+ case of externality in production.
+ To show this, consider a simple economy with two firms.
+ Firm 1 produces an output 
+\begin_inset Formula $x$
+\end_inset
+
+ which will be sold in a competitive market.
+ However, production of 
+\begin_inset Formula $x$
+\end_inset
+
+ imposes an externality cost denoted by 
+\begin_inset Formula $e(x)$
+\end_inset
+
+ to firm 2, which is assumed to be convex and strictly increasing.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $y$
+\end_inset
+
+ be the output produced by firm 2, which is sold in a competitive market.
+ Let 
+\begin_inset Formula $c_{x}(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{y}(y)$
+\end_inset
+
+ be the cost functions of firms 1 and 2 which are both convex and strictly
+ increasing.
+ The profits of the two firms:
+\begin_inset Formula 
+\begin{eqnarray}
+\pi_{1} & = & p_{x}x-c_{x}(x)\\
+\pi_{2} & = & p_{y}y-c_{y}(y)-e(x)
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $p_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{y}$
+\end_inset
+
+ are the prices of 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+, respectively.
+ Then, by the first-order conditions for a competitive equilibrium, we have
+ positive amounts of outputs
+\begin_inset Formula 
+\begin{eqnarray}
+p_{x} & = & c_{x}^{\prime}(x)\\
+p_{y} & = & c_{y}^{\prime}(y)
+\end{eqnarray}
+
+\end_inset
+
+However, the profit maximizing output 
+\begin_inset Formula $x_{c}$
+\end_inset
+
+ from the first order condition is too large from a social point of view.
+ The first firm only takes account of the private cost, the cost that is
+ imposed on itself, but it ignores the social cost, the private cost plus
+ the cost it imposes on the other firm.
+ What is the socially efficient output?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The social profit, 
+\begin_inset Formula $\pi_{1}+\pi_{2}$
+\end_inset
+
+, is not maximized at 
+\begin_inset Formula $x_{c}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{c}$
+\end_inset
+
+, which satisfy (31) and (32), respectively.
+ If the two firms merged so as to internalize the externality
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \max_{x,y}}\ p_{x}x+p_{y}y-c_{x}(x)-e(x)-c_{y}(y)
+\end{equation}
+
+\end_inset
+
+which gives the first order conditions
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{x} & = & c_{x}^{\prime}(x^{*})+e^{\prime}(x^{*})\\
+p_{y} & = & c^{\prime}(y^{*})
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is an efficient amount of output; it is characterized by price being equal
+ to the social cost.
+ Thus, production of 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ is less than the competitive output in the externality case by the convexity
+ of 
+\begin_inset Formula $e(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{x}(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+11.4
+\begin_inset space \quad{}
+\end_inset
+
+Solutions to Externalities
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+From the above discussion, we know that a competitive market in general
+ may not result in Pareto efficient outcome, one needs to seek some other
+ alternative mechanisms to solve the market failure problem.
+ In this section, we now introduce some remedies to this market failure
+ of externality such as:
+\end_layout
+
+\begin_layout Enumerate
+Pigovian taxes
+\end_layout
+
+\begin_layout Enumerate
+Voluntary negotiation (Coase Approach)
+\end_layout
+
+\begin_layout Enumerate
+Compensatory tax/subsidy
+\end_layout
+
+\begin_layout Enumerate
+Creating missing markets with property rights
+\end_layout
+
+\begin_layout Enumerate
+Direct intervention
+\end_layout
+
+\begin_layout Enumerate
+Merges
+\end_layout
+
+\begin_layout Enumerate
+Incentives mechanism design
+\end_layout
+
+\begin_layout Standard
+Any of the above solutions may result in Pareto efficient outcomes, but
+ may leed to different income distributions.
+ Also it is important to know what kind of information are required to implement
+ a solution listed above.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Most of the above proposed solutions need to make the following assumptions:
+\end_layout
+
+\begin_layout Enumerate
+The source and degree of the externality is identifiable.
+\end_layout
+
+\begin_layout Enumerate
+The recipients of the externality are identifiable.
+\end_layout
+
+\begin_layout Enumerate
+The causal relationship of the externality can be established objectively.
+\end_layout
+
+\begin_layout Enumerate
+The cost of prevening (by different methods) an externality are perfectly
+ known to everyone.
+\end_layout
+
+\begin_layout Enumerate
+The cost of implementing taxes and subsidies is negligible.
+\end_layout
+
+\begin_layout Enumerate
+The cost of voluntary negotiation is negligible.
+\end_layout
+
+\begin_layout Subsection*
+11.4.1
+\begin_inset space \quad{}
+\end_inset
+
+Pigovian Tax
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Set a tax rate, 
+\begin_inset Formula $t$
+\end_inset
+
+, such that 
+\begin_inset Formula $t=e^{\prime}(x^{*})$
+\end_inset
+
+.
+ This tax rate to firm 1 would internalize the externality
+\begin_inset Formula 
+\begin{equation}
+\pi_{1}=p_{x}x-c_{x}(x)-t\cdot x
+\end{equation}
+
+\end_inset
+
+The first-order conditions is
+\begin_inset Formula 
+\begin{equation}
+p_{x}=c^{\prime}(x)+t=c_{x}^{\prime}(x)+e^{\prime}(x^{*})
+\end{equation}
+
+\end_inset
+
+which is the same as the one for social optimality.
+ That is, when firm 1 faces the wrong price of its action, and a correction
+ tax 
+\begin_inset Formula $t=e^{\prime}(x^{*})$
+\end_inset
+
+ should be imposed that will lead to a social optimal outcome that is less
+ than that of competitive equilibrium outcome.
+ Such correction taxes are called Pigovian taxes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The problem with this solution is that it requires that the taxing authority
+ knows the externality cost 
+\begin_inset Formula $e(x)$
+\end_inset
+
+.
+ But, how does the authority know the externality and how do they estimate
+ the value of externality in real world? If the authority knows this information
+, it might as well just tell the firm how much to produce in the first place.
+ So, in most cases, it will not work well.
+\end_layout
+
+\begin_layout Subsection*
+11.4.2
+\begin_inset space \quad{}
+\end_inset
+
+Coase's Voluntary Negotiation and Enforceable Property Right Approach
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+A different approach to the externality problem relies on the parties to
+ negotiate a solution to the problem themselves.
+ The greatest novelty of Nobel Laureate Ronald Coase's contribution was
+ the systematic treatment of trade in property rights.
+ To solve the externality problem, Coase in a famous 1960 article, 
+\begin_inset Quotes eld
+\end_inset
+
+The Problem of Social Cost,
+\begin_inset Quotes erd
+\end_inset
+
+ argues that the success of such a system depends on making sure that property
+ rights are clearly assigned.
+ The so-called 
+\emph on
+Coases Theorem
+\emph default
+ assesses that as long as property rights are clearly assigned, the two
+ parties will negotiate in such a way that the optimal level of the externality-
+producing activity is implemented.
+ As a policy implication, a government should simply rearrange property
+ rights with appropriately designed property rights.
+ The market then could take care of externalities without direct government
+ intervention.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The Coase Theorem thus contains two claims.
+ One is that the level of the externality will be the same regardless of
+ the assignment of propety rights, which is called the 
+\emph on
+Coase Neutrality Theorem
+\emph default
+.
+ The second one is that voluntary negotiations over externalities will lead
+ to a Pareto-optimal outcome, which is called the 
+\emph on
+Coase Efficiency Theorem
+\emph default
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Firms
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Coase shows his propositions mainly by using examples of an economy with
+ only two agents and a detrimental externality.
+ Coase made an observation that in the presence of externalities, the victim
+ has an incentive to pay the firm to stop the produciton if the victim can
+ compensate the firm by paying 
+\begin_inset Formula $p_{x}-c_{x}^{\prime}(x^{*})$
+\end_inset
+
+.
+ The following example captures Coase's arguments.
+\end_layout
+
+\begin_layout Example*
+
+\series bold
+11.4.1.
+
+\series default
+ Two firms: One is a chemical factory that discharges chemicals into a river
+ and the other is the fisherman.
+ Suppose the river can produce a value of $50,000.
+ If the chemicals pollute the river, the fish cannot be eaten.
+ How does one solve the externality? Coase's method states that as long
+ as the property rights of the river are clearly assigned, it results in
+ efficient outcomes.
+ That is, the government should give the ownership of the lake either to
+ the chemical firm or to the fisherman, then it will yield an efficient
+ output.
+ To see this, assume that the cost of the filter is denoted by 
+\begin_inset Formula $c_{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+
+\emph on
+\begin_inset space \quad{}
+\end_inset
+
+Case 1
+\emph default
+: The lake is given to the factory.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $c_{f}<\$50,000$
+\end_inset
+
+.
+ The fisherman is willing to buy a filter for the factory.
+ The fisherman will pay for the filter so that the chemical cannot pollute
+ the lake.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $c_{f}>\$50,000$
+\end_inset
+
+.
+ The chemical is discharged into the lake.
+ The fisherman does not want to install any filter.
+\end_layout
+
+\end_deeper
+\begin_layout Example*
+\begin_inset space \quad{}
+\end_inset
+
+
+\emph on
+Case 2
+\emph default
+: The lake is given to the fisherman, and the firm's net product revenue
+ is greater than 
+\begin_inset Formula $c_{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $c_{f}<\$50,000$
+\end_inset
+
+.
+ The factory buys the filter so that the chemical cannot pollute the lake.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $c_{f}>\$50,000$
+\end_inset
+
+.
+ The firm pays $50,000 to the fisherman then the chemical is discharged
+ into the lake.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Like the above example, Coase's own examples supporting his claims use negotiati
+ons between firms and businesses rather than those between individuals.
+ This difference is important since firms maximize profits rather than utility,
+ and act as fiduciaries for individuals.
+ We have to make some restricted assumptions on consumers' utility functions
+ to make Coase's Theorem hold.
+\end_layout
+
+\begin_layout Subsubsection*
+Consumers
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now consider an economy with two consumers with 
+\begin_inset Formula $L$
+\end_inset
+
+ goods.
+ Further, consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ has initial wealth 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+.
+ Each consumer has preferences over both the commodities he consumes and
+ have some action 
+\begin_inset Formula $h$
+\end_inset
+
+ that is taken by consumer 1.
+ That is,
+\begin_inset Formula 
+\[
+u_{i}(x_{i1},\ldots,x_{iL},h)
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Activity 
+\begin_inset Formula $h$
+\end_inset
+
+ is something that has no direct monetary cost for person 1.
+ For example, 
+\begin_inset Formula $h$
+\end_inset
+
+ is the quantity of loud music played by person 1.
+ In order to play it, the consumer must purchase electricity, but electricity
+ can be captured as one of the componenets of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ From the point of view of consumer 2, 
+\begin_inset Formula $h$
+\end_inset
+
+ represents an external effect of consumer 1's action.
+ In the model, we assume that
+\begin_inset Formula 
+\[
+\frac{\partial u_{2}}{\partial h}\neq0
+\]
+
+\end_inset
+
+Thus the externality in this model lies in the fact that 
+\begin_inset Formula $h$
+\end_inset
+
+ affects consumer 2's utility, but it is not priced by the market.
+ Let 
+\begin_inset Formula $v_{i}(p,w_{i},h)$
+\end_inset
+
+ be consumer 
+\begin_inset Formula $i$
+\end_inset
+
+'s indirect utility function:
+\begin_inset Formula 
+\begin{gather*}
+v_{i}(p,w_{i},h)={\displaystyle \max_{x_{i}}}\ u_{i}(x_{i},h)\\
+\mbox{s.t.}\ px_{i}\leq w_{i}
+\end{gather*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+We assume that the preferences are quasi-linear with respect to some numeraire
+ commodity.
+ Thus, the consumer's indirect utility function takes the form:
+\begin_inset Formula 
+\[
+v_{i}(p,w_{i},h)=\phi_{i}(h)+w_{i}
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+We further assume that utility is strictly concave in 
+\begin_inset Formula $h$
+\end_inset
+
+: 
+\begin_inset Formula $\phi^{\prime\prime}(h)<0$
+\end_inset
+
+.
+ Again, the competitive equilibrium outcome, in general, is not Pareto optimal.
+ In order to maximize utility, consumer 1 should choose 
+\begin_inset Formula $h$
+\end_inset
+
+ in order to maximize 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ so that the interior solution satisfies 
+\begin_inset Formula $\phi_{1}^{\prime}(h^{*})=0$
+\end_inset
+
+.
+ Even though consumer 2's utility depends on 
+\begin_inset Formula $h$
+\end_inset
+
+, he cannot affect the choice of 
+\begin_inset Formula $h$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+One the other hand, the socially optimal level of 
+\begin_inset Formula $h$
+\end_inset
+
+ will maximize the sum of the consumers' utilities:
+\begin_inset Formula 
+\[
+{\displaystyle \max_{h}}\ \phi_{1}(h)+\phi_{2}(h)
+\]
+
+\end_inset
+
+The first-order condition for an interior maximum is:
+\begin_inset Formula 
+\[
+\phi_{1}^{\prime}(h^{**})+\phi_{2}^{\prime}(h^{**})=0
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $h^{**}$
+\end_inset
+
+ is the Pareto optimal amount of 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ Thus, the social optimum is where the sum of the marginal benefit of the
+ two consumers equal zero.
+ In the case where the externality is bad for consumer 2 (loud music), the
+ level of 
+\begin_inset Formula $h^{*}>h^{**}$
+\end_inset
+
+.
+ That is, too much 
+\begin_inset Formula $h$
+\end_inset
+
+ is produced.
+ In the case where the externality is good for consumer 2 (yard beautification),
+ too little will be provided, 
+\begin_inset Formula $h^{*}<h^{**}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, we show that as long as property rights are clearly assigned, the two
+ parties will negotiate in such a way that the optimal level of the externality-
+producing activity is implemented.
+ We first consider the case where consumer 2 has the right to prohibit consumer
+ 1 from undertaking activity 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ But, this right is contractible.
+ Consumer 2 can sell consumer 1 the right to undertake 
+\begin_inset Formula $h_{2}$
+\end_inset
+
+ units of activity 
+\begin_inset Formula $h$
+\end_inset
+
+ in exchange for some transfer, 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+.
+ The two consumers will bargain both over the size of the transfer 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+, and over the number of units of the externality good produced, 
+\begin_inset Formula $h_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In order to determine the outcome of the bargaining, we first specify the
+ bargaining mechansim as follows:
+\end_layout
+
+\begin_layout Enumerate
+Consumer 2 offers consumer 1 a take-it-or-leave it contract specifying a
+ payment 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ and an activity level 
+\begin_inset Formula $h_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If consumer 1 accepts the offer, that outcome is implemented.
+ If consumer 1 does not accept the offer, consumer 1 cannot produce any
+ of the externality good, i.e., 
+\begin_inset Formula $h=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+To analyze this, begin by considering which offers 
+\begin_inset Formula $(h,T)$
+\end_inset
+
+ will be accepted by consumer 1.
+ Since in the absence of agreement, consumer 1 must produce 
+\begin_inset Formula $h=0$
+\end_inset
+
+, consumer 1 will accept 
+\begin_inset Formula $(h_{2},T_{2})$
+\end_inset
+
+ if and only if it offers higher utility than 
+\begin_inset Formula $h=0$
+\end_inset
+
+.
+ That is, consumer 1 accepts if and only if
+\begin_inset Formula 
+\[
+\phi_{1}(h)-T_{2}\geq\phi_{1}(0)
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Give this constraint on the set of acceptable offers, consumer 2 will choose
+ 
+\begin_inset Formula $(h_{2},T_{2})$
+\end_inset
+
+ in order to solve the following problem:
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{h,T}} & \phi_{2}(h)+T_{2}\\
+\mbox{s.t.} & \phi_{1}(h)-T_{2}\geq\phi_{1}(0)
+\end{eqnarray*}
+
+\end_inset
+
+Since consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ prefers higher 
+\begin_inset Formula $T$
+\end_inset
+
+, then the constraint will bind at the optimum.
+ Thus, the problem becomes:
+\begin_inset Formula 
+\[
+{\displaystyle \max_{h}}\ \phi_{1}(h)+\phi_{2}(h)-\phi_{1}(0)
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+The first-order condition for this problem is given by:
+\begin_inset Formula 
+\[
+\phi_{1}^{\prime}(h_{2})+\phi_{2}^{\prime}(h_{2})=0
+\]
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+But, this is the same condition that defines the socially optimal level
+ of 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ Thus, consumer 2 chooses 
+\begin_inset Formula $h_{2}=h^{**}$
+\end_inset
+
+, and using the constraint, 
+\begin_inset Formula $T_{2}=\phi_{1}(h^{**})-\phi_{1}(0)$
+\end_inset
+
+.
+ As a result, the offer 
+\begin_inset Formula $(h_{2},T_{2})$
+\end_inset
+
+ is accepted by consumer 1, so this bargaining process implements the social
+ optimum.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Now, we consider the case where consumer 1 has the right to produce as much
+ externality as he wants.
+ We maintain the same bargianing mechanism.
+ Consumer 2 makes consumer 1 a take-it-or-leave-it offer 
+\begin_inset Formula $(h_{1},T_{1})$
+\end_inset
+
+, where the subscript indicates that consumer 1 has the property right in
+ this situation.
+ However, now, in the event that 1 rejects the offer, consumer 1 can choose
+ to produce as much of the externality as he wants, which means that he
+ will choose to produce 
+\begin_inset Formula $h^{*}$
+\end_inset
+
+.
+ Thus, the only change between this situation and the first case is what
+ happens in the event that no agreement is reached.
+ In this case, consumer 2's problem is:
+\begin_inset Formula 
+\begin{eqnarray*}
+{\displaystyle \max_{h,T}} & \phi_{2}(h)+T_{1}\\
+\mbox{s.t.} & \phi_{1}(h)-T_{1}\geq\phi_{1}(h^{*})
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+Again, we know that the constraint will bind, and so consumer 2 chooses
+ 
+\begin_inset Formula $h_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ in order to maximize
+\begin_inset Formula 
+\[
+\max\ \phi_{1}(h)+\phi_{2}(h)-\phi_{1}(h^{*})
+\]
+
+\end_inset
+
+which is also maximized at 
+\begin_inset Formula $h_{1}=h^{**}$
+\end_inset
+
+, since the first-order condition is the same.
+ The only differene is in the transfer.
+ Here, 
+\begin_inset Formula $T_{1}=\phi(h^{**})-\phi_{1}(h^{*})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+While both property-rights allocations implement 
+\begin_inset Formula $h^{**}$
+\end_inset
+
+, they have different distributional consequences.
+ The transfer is larger in the case where consumer 2 has the property rights
+ than when consumer 1 has the property rights.
+ The reason for this is that consumer 2 is in a better bargaining position
+ for the non-bargaining outcome when consumer 1 is forced to produce 0 units
+ of the externality good.
+ However, note that in the quasilinear framework, resdistribution of the
+ numeraire commodity has no effect on social welfare.
+ The fact that regardless of how the property rights are allocated, bargaining
+ leads to a Pareto optimal allocation is an example of the Coase Theorem:
+ If trade of the externality can occur, then bargaining will lead to an
+ efficient outcome no matter how property rights are allocated (as long
+ as they are clearly allocated).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Note that well-defined, enforceable property rights are essential for bargaining
+ to work.
+ If there is a dispute over who has the right to pollute (or not to pollute),
+ then bargaining may not lead to efficiency.
+ An additional requirment for efficiency is that the bargaining process
+ itself is costless.
+ Note that the government doesn't need to know about individual consumers
+ here, it only needs to define property rights.
+ However, it is critical that it does so clearly.
+ Thus, the Coase Theorem provides an argument in favor of having clear laws
+ and well-developed courts.
+\end_layout
+
+\begin_layout Subsubsection*
+The Coase Neutrality Theorem
+\end_layout
+
+\begin_layout Proposition*
+
+\series bold
+\emph on
+11.4.1 (Coase Neutrality Theorem).
+
+\series default
+\emph default
+ In a pollution economy considered in the chapter, suppose that the transaction
+ cost equals zero, and that the utility functions 
+\begin_inset Formula $U_{i}(x_{i},h)$
+\end_inset
+
+ are differentiable and such that 
+\begin_inset Formula $\nicefrac{\partial U_{i}}{\partial x_{i}}>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\nicefrac{\partial U_{1}}{\partial h}>0$
+\end_inset
+
+ but 
+\begin_inset Formula $\nicefrac{\partial U_{2}}{\partial h}<0$
+\end_inset
+
+ for 
+\begin_inset Formula $(x_{i},h)\in(0,\xi)\times(0,\eta),\ i=1,2$
+\end_inset
+
+.
+ Then, the level of pollution is independent of the assignments of property
+ rights if and only if the utility functions 
+\begin_inset Formula $U_{i}(x,h)$
+\end_inset
+
+ up to a monotonic transformation, have a function form given by
+\begin_inset Formula 
+\begin{equation}
+U_{i}(x_{i},h)=x_{i}\exp\left({\displaystyle \int}\psi(h)\right)+{\displaystyle \int}\exp\left({\displaystyle \int}\psi(h)\right)b_{i}(h)dh
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ are arbitrary functions such that the 
+\begin_inset Formula $U_{i}(x_{i},h)$
+\end_inset
+
+ are differentiable, 
+\begin_inset Formula $\nicefrac{\partial U_{i}}{\partial x_{i}}>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\nicefrac{\partial U_{1}}{\partial h}>0$
+\end_inset
+
+ but 
+\begin_inset Formula $\nicefrac{\partial U_{2}}{\partial h}<0$
+\end_inset
+
+ for 
+\begin_inset Formula $(x_{i},h)\in(0,\xi)\times(0,\eta),\ i=1,2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Although the above Coase Neutrality Theorem covers a wider class of preferences
+ than quasi-linear utility functions, it still puts a significant restriciton
+ on the domain of its validity due to the special functional forms of the
+ utility functions with respect to the private good.
+ Thus, the Coase Neutrality Theorem may be best applied to production externalit
+ies between firms, rather than consumption externalities.
+\end_layout
+
+\begin_layout Subsubsection*
+Problems with the Coase Theorem
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The problem of the Coase Neutrality Theorem is that costs of negotiations
+ and organization, in general, are not negligible, and the income effect
+ may not be zero.
+ Thus, a privatization is optimal only in cases of zero transaction costs,
+ no income effect, and perfect economic environments.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The problem of the Coase Efficiency Theorem is more serious.
+ The base postulate underlying Coase's theory appears to be that the process
+ of negotiation over property rights can be modelled as a cooperative game,
+ and this requires the assumption that each play know the preferences or
+ production functions of each of the other players.
+ When information is not complete or asymmetric, in general, we do not have
+ a Pareto optimal outcome.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+For instance, when there is one polluter and there are many pollutees, a
+ 
+\begin_inset Quotes eld
+\end_inset
+
+free-rider
+\begin_inset Quotes erd
+\end_inset
+
+ problem arises and there is an incentive for pollutees to misrepresent
+ their preferences.
+ Whether the polluter is liable or not, the pollutees may be expected to
+ overstate the amount they require to compensate for the externality.
+ Thus, we may need to design an incentive mechanism to solve the free-rider
+ problem.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Secondly, even if the information is complete, there are several circumstances
+ that have led a number of authors to question the conclusion in the Coase
+ Efficiency Theorem:
+\end_layout
+
+\begin_layout Enumerate
+The core may be empty, and hence no Pareto optimum exists.
+\end_layout
+
+\begin_layout Enumerate
+There may be a fundamental non-convexity that prevents a Pareto optimum
+ from being supported by a competitive equilibrium.
+\end_layout
+
+\begin_layout Enumerate
+When a agent possesses the right to pollute, there is a built-in incentive
+ for extortion.
+\end_layout
+
+\begin_layout Standard
+Thus, the hypothesis that negotiations over externalities will mimic trades
+ in a competitive equilibrium is as Coase himself conceded, not one that
+ can be logically derived from his assumptions, but must be regarded as
+ an empirical conjecture that may or may not be confirmed from the data.
+ A lot of theoretical work therefore will remains in order to provide Coasian
+ economics with the rigorous underpinning.
+\end_layout
+
+\begin_layout Subsection*
+11.4.3
+\begin_inset space \quad{}
+\end_inset
+
+Missing Market
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+We can regard externality as a lack of a market for an 
+\begin_inset Quotes eld
+\end_inset
+
+externality.
+\begin_inset Quotes erd
+\end_inset
+
+ For the previous example in Pigovian taxes, a missing market is a market
+ for pollution.
+ Adding a market for firm 2 to express its demand for pollution, or for
+ a reduction of pollution, will provided a mechanism for efficient allocations.
+ By adding this market, firm 1 can decide how much pollution it wants to
+ sell, and firm 2 can decide how much pollution it wants to buy.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Let 
+\begin_inset Formula $r$
+\end_inset
+
+ be the price of pollution.
+ 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ is the units of pollution that firm 1 wants to sell.
+ 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ is the units of pollution that firm 2 wants to buy.
+ Normalize the output of firm 1 to 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+.
+ The profit maximizaiton problems become
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi_{1} & = & p_{x}x_{1}+rx_{1}-c_{1}(x_{1})\\
+\pi_{2} & = & p_{y}y-rx_{2}-e_{2}(x_{2})-c_{y}(y)
+\end{eqnarray*}
+
+\end_inset
+
+The first-order conditions are
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{x}+r & = & c_{1}^{\prime}(x_{1})\\
+p_{y} & = & c_{y}^{\prime}(y)\\
+-r & = & e^{\prime}(x_{2})
+\end{eqnarray*}
+
+\end_inset
+
+At the market equilibrium, 
+\begin_inset Formula $x_{1}^{*}=x_{2}^{*}=x^{*}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+p_{x}=c_{1}^{\prime}(x^{*})+e^{\prime}(x^{*})
+\]
+
+\end_inset
+
+which results in a social optimal outcome.
+\end_layout
+
+\begin_layout Subsection*
+11.4.4
+\begin_inset space \quad{}
+\end_inset
+
+The Compensation Mechansim
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The Pigovian taes were not adequate in general to solve externalities due
+ to the information problem: the tax authority cannot know the cost imposed
+ by the externality.
+ How can onle sovle this incomplete information problem?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Varian proposed an incentive mechanism which encourages the firms to correctly
+ reveal the costs they impose on the other.
+ Here, we discuss the mechanism.
+ In brief, a mechanism consists of a message space and an outcome function
+ (rules of the game).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+The Strategy Space (Message Space): 
+\begin_inset Formula $M=M_{1}\times M_{2}$
+\end_inset
+
+ with 
+\begin_inset Formula $M_{1}=\left\{ \left(t_{1},x_{1}\right)\right\} $
+\end_inset
+
+, where 
+\begin_inset Formula $t_{1}$
+\end_inset
+
+ is interpreted as a Pigovian tax proposed by firm 1 and 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ is the proposed level of output by firm 
+\begin_inset Formula $1$
+\end_inset
+
+, and 
+\begin_inset Formula $t_{2}$
+\end_inset
+
+ is interpreted as a Pigovian tax proposed by firm 2 and 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ is the proposed level of output by firm 2.
+ The mechanism has two stages.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\emph on
+Stage 1 (Announcement Stage)
+\emph default
+: Firms 1 and 2 name Pigovian tax rates, 
+\begin_inset Formula $t_{i},\ i=1,2$
+\end_inset
+
+, which may or may not be the efficient level of such a tax rate.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\emph on
+State 2 (Choice Stage)
+\emph default
+: If firm 1 produces 
+\begin_inset Formula $x$
+\end_inset
+
+ units of pollution, firm 1 must pay 
+\begin_inset Formula $t_{2}x$
+\end_inset
+
+ to firm 2.
+ Thus, each firm takes the tax rate as given.
+ Firm 2 receives 
+\begin_inset Formula $t_{1}x$
+\end_inset
+
+ units as compensation.
+ Each firm pays a penalty, 
+\begin_inset Formula $(t_{1}-t_{2})^{2}$
+\end_inset
+
+, if they announce different tax rates.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+Thus, the payoffs of two firms are:
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi_{1}^{*} & = & {\displaystyle \max_{x}}\ p_{x}x-c_{x}(x)-t_{2}x-(t_{1}-t_{2})^{2}\\
+\pi_{2}^{*} & = & {\displaystyle \max_{y}}\ p_{y}y-c_{y}(y)+t_{1}x-e(x)-(t_{1}-t_{2})^{2}
+\end{eqnarray*}
+
+\end_inset
+
+Because this is a two-stage game, we may use the subgame perfect equilibrium,
+ i.e., an equilibrium in which each firm takes into account the repercussions
+ of its first-stage choice on the outcomes in the second stage.
+ As usual, we solve this game by looking at stage 2 first.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+At stage 2, firm 1 will choose 
+\begin_inset Formula $x(t_{2})$
+\end_inset
+
+ to satisfy the first-order condition:
+\begin_inset Formula 
+\begin{equation}
+p_{x}-c_{x}^{\prime}(x)-t_{2}=0
+\end{equation}
+
+\end_inset
+
+Note that, by the covexity of 
+\begin_inset Formula $c_{x}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $c_{x}^{\prime\prime}(x)>0$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{equation}
+x^{\prime}(t_{2})=-\frac{1}{c^{\prime\prime}(x)}<0
+\end{equation}
+
+\end_inset
+
+Firm 2 will choose 
+\begin_inset Formula $y$
+\end_inset
+
+ to satisfy 
+\begin_inset Formula $p_{y}=c_{y}^{\prime}(y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+
+\emph on
+Stage 1
+\emph default
+: Each firm will choose the tax rate 
+\begin_inset Formula $t_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $t_{2}$
+\end_inset
+
+ to maximize their payoffs.
+ For firm 1,
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \max_{t_{1}}}\ p_{x}x-c_{x}(x)-t_{2}x(t_{2})-(t_{1}-t_{2})^{2}
+\end{equation}
+
+\end_inset
+
+which gives us the first-order condition:
+\begin_inset Formula 
+\[
+2(t_{1}-t_{2})=0
+\]
+
+\end_inset
+
+so the optimal solution is
+\begin_inset Formula 
+\begin{equation}
+t_{1}^{*}=t_{2}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+For firm 2,
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \max_{t_{2}}}\ p_{y}y-c_{y}(y)+t_{1}x(t_{2})-e(x(t_{2}))-(t_{1}-t_{2})^{2}
+\end{equation}
+
+\end_inset
+
+so that the first-order condition is
+\begin_inset Formula 
+\[
+t_{1}x_{2}^{\prime}(t_{2})-e^{\prime}(x(t_{2}))x^{\prime}(t_{2})+2(t_{1}-t_{2})=0
+\]
+
+\end_inset
+
+and thus
+\begin_inset Formula 
+\begin{equation}
+\left[t_{1}-e^{\prime}(x(t_{2}))\right]x^{\prime}(t_{2})+2(t_{1}-t_{2})=0
+\end{equation}
+
+\end_inset
+
+By (38), (40), and (42), we have
+\begin_inset Formula 
+\begin{equation}
+t^{*}=e^{\prime}(x(t^{*}))
+\end{equation}
+
+\end_inset
+
+with 
+\begin_inset Formula $t^{*}=t_{1}^{*}=t_{2}^{*}$
+\end_inset
+
+.
+ Substituting the equilibrium tax rate 
+\begin_inset Formula $t^{*}=e^{\prime}(x(t^{*}))$
+\end_inset
+
+ into (37) we have
+\begin_inset Formula 
+\begin{equation}
+p_{x}=c_{x}^{\prime}(x^{*})+e^{\prime}(x^{*})
+\end{equation}
+
+\end_inset
+
+which is the condition for social efficiency of produciton.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+This mechansim works by setting opposing incentives for two agents.
+ Firm 1 always has an incentive to match the announcement of firm 2.
+ But consider firm 2's incentive.
+ If firm 2 thinks that firm 1 will propose a large compensation rate 
+\begin_inset Formula $t_{1}$
+\end_inset
+
+ for him, he wants firm 1 to be taxed as little as possible so that firm
+ 1 will produce as much as possible.
+ On the other hand, if firm 2 thinks firm 1 will propose a small 
+\begin_inset Formula $t_{1}$
+\end_inset
+
+, it wants firm 1 to be taxed as much as possible.
+ Thus, the only point where firm 2 is indifferent about the level of production
+ of firm 1 is where firm 2 is exactly compensated for the cost of the externalit
+y.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \quad{}
+\end_inset
+
+In general, the individual's objective is different from the social goal.
+ However, we may be able to construct an appropriate mechanism so that the
+ individual's profit maximizing goal is consistent with the social goal
+ such as efficient allocations.
+\end_layout
+
+\end_body
+\end_document
